@@ -589,7 +589,7 @@
     "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
     "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
     "fullClientAndWorldAccepted": true,
-    "scope": "Measured singleplayer content only; real Steam/network remains an open task."
+    "scope": "Measured singleplayer532 content only; later successful Original422 Steam session is a separate receipt; Modified uses code/shared-platform analogy, not an actual two-client content test."
   },
   "historicalUserSteamDeferral": {
     "wasExplicitlyDeferred": true,
@@ -597,13 +597,18 @@
     "notCurrentAcceptancePolicy": true
   },
   "currentNetworkAcceptance": {
-    "status": "OPEN",
-    "goalClosureRequiresRealSteamFixAndAcceptance": true,
-    "latestFreshSteamPreLoginCmeHadFullStack": false,
-    "directLanSuccessObservedSeparately": true,
-    "directLanSuccessIsSteamPass": false,
-    "modifiedSteamOrSelectedSkinPassClaimed": false,
-    "preciseCauseEstablished": false
+    "status": "PASS_ONE_ORIGINAL_STEAM_SESSION_MODIFIED_CODE_ANALOGY_ONLY",
+    "proofPath": "tools/qa/original-steam-422.json",
+    "proofSha256": "d32258f1311df7488e9f991d81e6b91d5ad92ce66db58c7b35c72b1682e40c3f",
+    "originalSteamSessionObserved": true,
+    "both422": true,
+    "hostAdmissionToLastEvidenceSeconds": 446,
+    "guestWorldOpenToLastHostEvidenceSeconds": 332,
+    "disconnectsInObservedWindow": 0,
+    "historicalCmeOrAioobeOriginProven": false,
+    "cmeBypassOrHandshakeTimeoutRelaxationApplied": false,
+    "actualModifiedTwoClientRuntimePass": false,
+    "additionalModifiedRuntimeGateIntroducedByThisReport": false
   },
   "measuredLauncherReference": {
     "sha256": "bcb994f7e5b95597b22df4cdd7f1e61d5b255826be9e29d1f8961a7e4241a599",
@@ -617,13 +622,41 @@
   },
   "launcherSourceAuditScope": "Immutable421 source/permalink baseline. Future422 network/UI changes are not byte-pinned as published by this audit.",
   "launcher422AtDocumentSnapshot": {
-    "date": "2026-11-01",
-    "mandatoryReleaseCheckInProgress": true,
-    "publicExeVerifiedByThisReport": false,
-    "networkDisconnectFixOrPassClaimed": false,
+    "sourceRevision": "78a6eb55e2c895d8b301713b85efdc5084651ae3",
+    "workflowId": 41327272016,
+    "ciConclusion": "success",
+    "mandatoryReleasePassed": 513,
+    "adapterPassed": 297,
+    "skips": 0,
+    "publicProofSha256": "39fc51ecd4ac047231add936c2b4b60a34401e07cec29e2595818231a349ed5b",
+    "publicExeSha256": "9a041a4a0c612db9bbaa195a7b938b3d5d1f61a2b86a9d5c5780df60e8fbc624",
+    "publicExeSizeBytes": 168832429,
+    "delta421To422ByteExact": true,
+    "realOriginalSteamSessionSeparateProof": true,
+    "nativeTargetChecks": 125,
+    "supportedProfiles": 6,
+    "historicalCmePermanentFixClaimed": false,
     "emptyRangeScrollPaintFixProved": true,
-    "liveOverflowRootCauseEstablished": false,
-    "boundedNumericScrollDiagnosticsPrepared": true
+    "liveOverflowRootCauseEstablished": true,
+    "boundedNumericScrollDiagnosticsPrepared": true,
+    "actualLibraryScrollResolved": false,
+    "actualNumericEvidenceSha256": "f6c05de86b2622ca9ad35e6ecac5054613a13a1dfb4613c5a8edbe22cb542447",
+    "actualRootLayoutClipping": {
+      "rootActual": [
+        770,
+        1579
+      ],
+      "rootClip": [
+        770,
+        482
+      ],
+      "catalogueViewportHeight": 1519,
+      "catalogueExtentHeight": 669,
+      "catalogueRange": 0,
+      "barLeftX": 798,
+      "rootClipRightX": 794
+    },
+    "launcher423FixInProgressNotAccepted": true
   },
   "originalCurrentConnectionDiagnosticPublication": {
     "proofSha256": "ade209c146e109a127301635d3baee4f214d3ef962aa424019279de16b12e4df",
@@ -642,5 +675,81 @@
     "tools/decisions.json": "b3b9ddf03a7ee3261585c376ebff558db8a81befd6329cbc88d49704e7fae477",
     "tools/qa/soul-eater-removal.json": "460a96a9674656881bf099427078c8a690518a95b87772cca331a7c1837c4829",
     "tools/keybinds/stock.json": "b4329c5b422e9c85ac1b84c1e59e489eaab17e86097d14cb89f78e6cc5db4d1d"
+  },
+  "userReportedOriginalSkinObservation": {
+    "bothSelfAndPeerSelectedLauncherSkinsConfirmed": true,
+    "scope": "Separate explicit user confirmation in current Original world; not automated visual assessment, not Modified visual PASS.",
+    "frozenLogOnlySteamProofChanged": false
+  },
+  "current532Migration": {
+    "status": "PASS_STATE_AND_LEGACY_TEST_FIXTURES",
+    "aggregateSha256": "0fe0a47f461f55849cf31abd73977ab6c80f397e0ba1d2d7f832ad46e9c4cfa4",
+    "freezeSha256": "776610e82bc0f2a550361e6701cba1e365c299a131467180e497832c286d5bcf",
+    "preflightSha256": "bd4f8242ca6df9f0f2ebd96020c6c70da4ae81105affa953eadaff7f2cd7ee67",
+    "sixModeReports": {
+      "state": {
+        "migration": {
+          "status": "PASS",
+          "sha256": "97d9fe6fee6736b771c3cdc112145baa5bc296f9ba0fd85f6b5ab994044e278d"
+        },
+        "history": {
+          "status": "PASS",
+          "sha256": "323446b3ff4688a554727bb551a8da061ba349ee06d24902efa6841cf6d0acbd"
+        },
+        "retiredArtifacts": {
+          "status": "PASS",
+          "sha256": "16b1afc0b530aae49f25259faa74363983ce048bca013fc06e49fae2e60cc715"
+        }
+      },
+      "legacy": {
+        "migration": {
+          "status": "PASS",
+          "sha256": "50b33fc3154640684e5099718e6396d466ed456c59ba01cdde943ac3d59b3de0"
+        },
+        "history": {
+          "status": "PASS",
+          "sha256": "323446b3ff4688a554727bb551a8da061ba349ee06d24902efa6841cf6d0acbd"
+        },
+        "retiredArtifacts": {
+          "status": "PASS",
+          "sha256": "16b1afc0b530aae49f25259faa74363983ce048bca013fc06e49fae2e60cc715"
+        }
+      }
+    },
+    "sourceAndDistributionReverifiedAfter": true,
+    "sourceRuntimeFiles": 1915,
+    "sourceJars": 532,
+    "originalReferenceFiles": 3938,
+    "originalReferenceBytes": 4000295544,
+    "originalMismatchBeforeAndAfter": 0,
+    "personalWorldsReadOrCopied": false,
+    "nativeGameStarted": false,
+    "public422ExeByteIdentityClaimed": false,
+    "referenceConfiguration": "Debug",
+    "referenceFileVersion": "1.0.421.0",
+    "referenceDllSha256": "29ae5080430610b9b3f259530884bcf571d209860f4bb2abc62308bf464d1a43"
+  },
+  "currentGoalStatus": "OPEN_PENDING_PUBLICATION_AND_EXISTING_LAUNCHER_SCROLL_REQUEST",
+  "sourceOnlyPublicationFollowup": {
+    "runtimeLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+    "runtimeContentChanged": false,
+    "cause": "Equivalent ForgeCDN numeric file-ID segment representation024/24; author JAR SHA unchanged.",
+    "guardChangeIsJarModification": false,
+    "sourceValidatorUnitCasesReportedPassed": 192,
+    "guardChangeWeakensJarHashOrSizeChecksClaimed": false,
+    "publicSourceFollowupReceiptClaimedByThisAudit": false
+  },
+  "responsibilitiesMarkdown": {
+    "path": "tools/qa/pack-launcher-responsibilities.md",
+    "sha256": "c61d12af0c56cc02b6c3ad1f3b2ce14f0af836735c519dfcbf082b311bd22075",
+    "relativeLocalLinkTargets": [
+      "failed-runtime-533.md",
+      "final-runtime-532.md",
+      "native-source-acceptance.json",
+      "original-native-title-421.json",
+      "original-steam-422.json"
+    ],
+    "allLocalLinksResolveRelativeToDestination": true,
+    "externalUrlsUnchangedByLinkCorrection": true
   }
 }

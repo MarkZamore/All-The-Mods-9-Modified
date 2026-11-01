@@ -125,7 +125,11 @@ def source_url(row: dict, *, url=None, filename=None) -> str:
         require(isinstance(file_id, int) and not isinstance(file_id, bool) and file_id > 0
                 and isinstance(project_id, int) and not isinstance(project_id, bool) and project_id > 0,
                 "CurseForge files require exact numeric project/file IDs: " + row["path"])
-        require(parsed.path.startswith(f"/files/{file_id // 1000}/{file_id % 1000:03d}/"),
+        # Official redirects normalize e.g. /7065/024/ to /7065/24/.
+        # Accept only those two spellings of this exact pinned numeric ID.
+        prefixes = {f"/files/{file_id // 1000}/{file_id % 1000:03d}/",
+                    f"/files/{file_id // 1000}/{file_id % 1000}/"}
+        require(any(parsed.path.startswith(prefix) for prefix in prefixes),
                 "CurseForge URL does not match the pinned file ID: " + row["path"])
     elif parsed.hostname == "cdn.modrinth.com":
         require(isinstance(project_id, str) and re.fullmatch(r"[A-Za-z0-9]+", project_id)
