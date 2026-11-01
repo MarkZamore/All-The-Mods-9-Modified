@@ -1,0 +1,4099 @@
+{
+  "schemaVersion": 1,
+  "sourceJarSha256": "f76f641f17ea3e3b2e8486596790ae65c27c2b016fae6ed8557c67887816b7d0",
+  "strings": [
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "In-game days before Verity turns hostile.",
+      "occurrences": 1,
+      "translated": "Через сколько игровых дней Verity станет враждебным."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Allow Verity to kick you from the server.",
+      "occurrences": 1,
+      "translated": "Разрешить Verity отключать вас от сервера."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Play the start up video.",
+      "occurrences": 1,
+      "translated": "Показывать вступительное видео при запуске."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Require 'Verity' in every sentence to speak to him.",
+      "occurrences": 1,
+      "translated": "Для обращения к Verity требовать слово 'Verity' в каждой фразе."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "The extreme darkness toggle",
+      "occurrences": 1,
+      "translated": "Включить кромешную тьму"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Toggles if Verity should randomly kill wildlife.",
+      "occurrences": 1,
+      "translated": "Разрешить Verity случайным образом убивать диких животных."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Toggles if Verity can kill entities.",
+      "occurrences": 1,
+      "translated": "Разрешить Verity убивать существ."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Toggles if Verity should kill villagers.",
+      "occurrences": 1,
+      "translated": "Разрешить Verity убивать жителей."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Toggles the Karma bar above your hotbar.",
+      "occurrences": 1,
+      "translated": "Показывать шкалу кармы над панелью быстрого доступа."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "API Key for providers that requires one.",
+      "occurrences": 1,
+      "translated": "Ключ API для сервисов, которым он необходим."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "URL to use for the AI.",
+      "occurrences": 1,
+      "translated": "Адрес сервера ИИ."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Custom AI model ID to use when custom models are enabled.",
+      "occurrences": 1,
+      "translated": "ID собственной модели ИИ, если выбран этот режим."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "AI model preset to use.",
+      "occurrences": 1,
+      "translated": "Готовый набор настроек модели ИИ."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Use a custom AI model ID instead of the Smart or Fast preset.",
+      "occurrences": 1,
+      "translated": "Использовать собственный ID модели ИИ вместо умного или быстрого режима."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "The provider used to power the AI.",
+      "occurrences": 1,
+      "translated": "Сервис, на котором работает ИИ."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Thinking for AI",
+      "occurrences": 1,
+      "translated": "Режим рассуждения ИИ"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Use the text to speech at all",
+      "occurrences": 1,
+      "translated": "Включить озвучивание текста"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Provider to use for Text To Speech",
+      "occurrences": 1,
+      "translated": "Сервис озвучивания текста"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "URL of the TTS server",
+      "occurrences": 1,
+      "translated": "Адрес сервера озвучивания"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Choose the voice Verity has (GROQ, Local)",
+      "occurrences": 1,
+      "translated": "Выберите голос Verity (GROQ, локальный)"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Your TTS API Key (Cartesia)",
+      "occurrences": 1,
+      "translated": "Ваш ключ API озвучивания (Cartesia)"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "The language Verity speaks (Cartesia)",
+      "occurrences": 1,
+      "translated": "Язык речи Verity (Cartesia)"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "The voice the selected TTS Provider uses (Cartesia Voice ID, Kokoro)",
+      "occurrences": 1,
+      "translated": "Голос выбранного сервиса озвучивания (ID голоса Cartesia, Kokoro)"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Model for Kokoro",
+      "occurrences": 1,
+      "translated": "Модель Kokoro"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Provider to use for Speech To Text",
+      "occurrences": 1,
+      "translated": "Сервис распознавания речи"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "API Key for GROQ.",
+      "occurrences": 1,
+      "translated": "Ключ API GROQ."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Custom endpoint for STT",
+      "occurrences": 1,
+      "translated": "Собственный адрес сервера распознавания речи"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Custom model for STT",
+      "occurrences": 1,
+      "translated": "Собственная модель распознавания речи"
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "The Hue of Verity's texture color (0 to 360 degrees).",
+      "occurrences": 1,
+      "translated": "Цветовой тон текстуры Verity (от 0 до 360 градусов)."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "The custom name for Verity. Leave empty to use default 'Verity'.",
+      "occurrences": 1,
+      "translated": "Собственное имя Verity. Оставьте пустым для стандартного имени 'Verity'."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "The custom personality for Verity.",
+      "occurrences": 1,
+      "translated": "Собственный характер Verity."
+    },
+    {
+      "class": "varmite/verity/VerityConfig",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Enables dev mode",
+      "occurrences": 1,
+      "translated": "Включить режим разработчика"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "AI Settings",
+      "occurrences": 1,
+      "translated": "Настройки ИИ"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "AI Provider",
+      "occurrences": 1,
+      "translated": "Сервис ИИ"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "The provider used to power the AI.",
+      "occurrences": 1,
+      "translated": "Сервис, на котором работает ИИ."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "Local AI Setup (Ollama)",
+      "occurrences": 1,
+      "translated": "Настройка локального ИИ (Ollama)"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "Open",
+      "occurrences": 1,
+      "translated": "Открыть"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "Run Verity's AI on your own PC: free, private, no API key.\n\nInstalls Ollama and downloads a small model with one click, and lists the Ollama models already on this computer.",
+      "occurrences": 1,
+      "translated": "Запустите ИИ Verity на своём компьютере: бесплатно, приватно, без ключа API.\n\nОдним нажатием устанавливает Ollama, скачивает небольшую модель и показывает модели Ollama, уже имеющиеся на компьютере."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "API Key",
+      "occurrences": 1,
+      "translated": "Ключ API"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "API Key of the provider.\nOnly needed if the provider requests one.",
+      "occurrences": 1,
+      "translated": "Ключ API выбранного сервиса.\nНужен, только если сервис его требует."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "Use Custom Model",
+      "occurrences": 1,
+      "translated": "Собственная модель"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "Enter a model ID instead of using the Smart or Fast preset.",
+      "occurrences": 1,
+      "translated": "Введите ID модели вместо умного или быстрого режима."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "Ollama Model",
+      "occurrences": 2,
+      "translated": "Модель Ollama"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "No Ollama models were found on this computer. Use Local AI Setup above to download one.",
+      "occurrences": 1,
+      "translated": "На этом компьютере нет моделей Ollama. Скачайте модель через настройку локального ИИ выше."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "concat",
+      "original": "Detected on this computer:\n\u0001",
+      "occurrences": 1,
+      "translated": "Найдено на этом компьютере:\n\u0001"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "concat",
+      "original": "\u0001\n\nLeave empty to let Verity pick an installed model automatically.",
+      "occurrences": 1,
+      "translated": "\u0001\n\nОставьте пустым, чтобы Verity автоматически выбрал установленную модель."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "Custom AI Model",
+      "occurrences": 1,
+      "translated": "Собственная модель ИИ"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "concat",
+      "original": "Exact model ID to send to \u0001.",
+      "occurrences": 1,
+      "translated": "Точный ID модели для сервиса \u0001."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "AI Model Preset",
+      "occurrences": 1,
+      "translated": "Режим модели ИИ"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "Thinking Mode",
+      "occurrences": 1,
+      "translated": "Режим рассуждения"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createAiCategory",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)Ldev/isxander/yacl3/api/ConfigCategory;",
+      "kind": "ldc",
+      "original": "(On supported models)\nMakes the AI think longer before answering.\n\nLocal models: only applied to models that can think. qwen3 and qwen3.5 need it on to use their tools reliably; models without thinking are fast either way.",
+      "occurrences": 1,
+      "translated": "Для поддерживаемых моделей.\nИИ дольше обдумывает ответ.\n\nДля локальных моделей действует только при поддержке рассуждения. qwen3 и qwen3.5 нуждаются в нём для надёжного вызова инструментов; остальные модели работают быстро в любом случае."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Verity Configuration",
+      "occurrences": 1,
+      "translated": "Настройки Verity"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "General",
+      "occurrences": 1,
+      "translated": "Основное"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Can Crash",
+      "occurrences": 1,
+      "translated": "Отключение от сервера"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Allow Verity to kick you from the server.",
+      "occurrences": 1,
+      "translated": "Разрешить Verity отключать вас от сервера."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Play Video",
+      "occurrences": 1,
+      "translated": "Вступительное видео"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Play the Verity Edit on the\nstartup of the client.",
+      "occurrences": 1,
+      "translated": "Показывать ролик Verity\nпри запуске клиента."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Require Verity",
+      "occurrences": 1,
+      "translated": "Обращение по имени"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Require 'Verity' in every\nsentence to speak to him.",
+      "occurrences": 1,
+      "translated": "Для обращения к Verity требовать\nслово 'Verity' в каждой фразе."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "True Darkness",
+      "occurrences": 1,
+      "translated": "Кромешная тьма"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Toggle the extreme darkness.",
+      "occurrences": 1,
+      "translated": "Включить кромешную тьму."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Kill Entities",
+      "occurrences": 1,
+      "translated": "Убийство существ"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Toggles if Verity can kill entities.",
+      "occurrences": 1,
+      "translated": "Разрешить Verity убивать существ."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Kill Wildlife",
+      "occurrences": 1,
+      "translated": "Убийство животных"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Toggles if Verity should kill randomly wildlife.\nPigs, sheep, etc",
+      "occurrences": 1,
+      "translated": "Разрешить Verity случайным образом убивать\nживотных: свиней, овец и других."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Kill Villagers",
+      "occurrences": 1,
+      "translated": "Убийство жителей"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Toggles if Verity should kill villagers.",
+      "occurrences": 1,
+      "translated": "Разрешить Verity убивать жителей."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Immersive Mode",
+      "occurrences": 1,
+      "translated": "Режим погружения"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Disables mod specific UIs to resemble the original series.",
+      "occurrences": 1,
+      "translated": "Скрыть интерфейсы мода для сходства с оригинальным сериалом."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Hostile Day Threshold",
+      "occurrences": 1,
+      "translated": "День превращения"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "The amount of in-game days before\nVerity turns into a demon.",
+      "occurrences": 1,
+      "translated": "Количество игровых дней, через которое\nVerity превратится в демона."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Voice Settings",
+      "occurrences": 1,
+      "translated": "Настройки голоса"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Use Text To Speech (TTS)",
+      "occurrences": 1,
+      "translated": "Озвучивание текста (TTS)"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Whenever Verity speaks using Text To Speech",
+      "occurrences": 1,
+      "translated": "Будет ли Verity озвучивать свои реплики"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Text To Speech Provider",
+      "occurrences": 1,
+      "translated": "Сервис озвучивания"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Provider to use for Text To Speech",
+      "occurrences": 2,
+      "translated": "Сервис озвучивания текста"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Voice",
+      "occurrences": 1,
+      "translated": "Голос"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Choose the voice Verity has (GROQ, Local)",
+      "occurrences": 1,
+      "translated": "Выберите голос Verity (GROQ, локальный)"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "TTS API Key",
+      "occurrences": 1,
+      "translated": "Ключ API озвучивания"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Your TTS API Key (Cartesia)",
+      "occurrences": 1,
+      "translated": "Ваш ключ API озвучивания (Cartesia)"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "TTS Language",
+      "occurrences": 1,
+      "translated": "Язык озвучивания"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "The language Verity speaks (Cartesia)",
+      "occurrences": 1,
+      "translated": "Язык речи Verity (Cartesia)"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Advanced TTS Voice",
+      "occurrences": 1,
+      "translated": "Дополнительный голос TTS"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "The voice the selected TTS Provider uses (Cartesia Voice ID, Kokoro)",
+      "occurrences": 1,
+      "translated": "Голос выбранного сервиса озвучивания (ID голоса Cartesia, Kokoro)"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Speech Recognition",
+      "occurrences": 1,
+      "translated": "Распознавание речи"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Recognition Provider",
+      "occurrences": 1,
+      "translated": "Сервис распознавания"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Groq API Key",
+      "occurrences": 1,
+      "translated": "Ключ API Groq"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "API Key for the groq Speech Recognition",
+      "occurrences": 1,
+      "translated": "Ключ API сервиса распознавания речи Groq"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Personalisation",
+      "occurrences": 1,
+      "translated": "Персонализация"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Custom Color [HUE]",
+      "occurrences": 1,
+      "translated": "Цветовой тон"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "0 = Original Colors. 1-360 = Hue Tint.",
+      "occurrences": 1,
+      "translated": "0 — исходные цвета; 1–360 — цветовой тон."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Custom Name",
+      "occurrences": 1,
+      "translated": "Собственное имя"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Rename Verity to anything you want!",
+      "occurrences": 1,
+      "translated": "Назовите Verity как захотите!"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Personality",
+      "occurrences": 1,
+      "translated": "Характер"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Can conflict when changed multiple\ntimes in one world",
+      "occurrences": 1,
+      "translated": "Повторное изменение в одном мире\nможет вызвать конфликты"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Advanced",
+      "occurrences": 1,
+      "translated": "Дополнительно"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Developer Mode",
+      "occurrences": 1,
+      "translated": "Режим разработчика"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Turns on developer mode (more logs)",
+      "occurrences": 1,
+      "translated": "Включить режим разработчика (больше записей в журнале)"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "AI URL",
+      "occurrences": 1,
+      "translated": "Адрес ИИ"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Custom URL for dedicated AI servers",
+      "occurrences": 1,
+      "translated": "Собственный адрес выделенного сервера ИИ"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Text To Speech URL",
+      "occurrences": 1,
+      "translated": "Адрес озвучивания"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Custom URL for dedicated TTS servers.",
+      "occurrences": 1,
+      "translated": "Собственный адрес выделенного сервера озвучивания."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Speech Recognition URL",
+      "occurrences": 1,
+      "translated": "Адрес распознавания речи"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Custom URL for dedicated SR servers.",
+      "occurrences": 1,
+      "translated": "Собственный адрес выделенного сервера распознавания речи."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Kokoro Model",
+      "occurrences": 1,
+      "translated": "Модель Kokoro"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "createYACLScreen",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Z)Lnet/minecraft/client/gui/screens/Screen;",
+      "kind": "ldc",
+      "original": "Model used by Kokoro.",
+      "occurrences": 1,
+      "translated": "Модель для Kokoro."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "lambda$createYACLScreen$18",
+      "descriptor": "(Ljava/lang/Integer;)Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "0 (Default)",
+      "occurrences": 1,
+      "translated": "0 (по умолчанию)"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "lambda$createAiCategory$9",
+      "descriptor": "(Lvarmite/verity/types/AiModelPreset;)Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "Smart",
+      "occurrences": 1,
+      "translated": "Умный"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "lambda$createAiCategory$9",
+      "descriptor": "(Lvarmite/verity/types/AiModelPreset;)Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "Fast",
+      "occurrences": 1,
+      "translated": "Быстрый"
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "lambda$createAiCategory$8",
+      "descriptor": "(Lvarmite/verity/types/AiProvider;Lvarmite/verity/types/AiModelPreset;)Ldev/isxander/yacl3/api/OptionDescription;",
+      "kind": "ldc",
+      "original": "Higher-quality responses at a low price.",
+      "occurrences": 1,
+      "translated": "Качественные ответы за небольшую плату."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "lambda$createAiCategory$8",
+      "descriptor": "(Lvarmite/verity/types/AiProvider;Lvarmite/verity/types/AiModelPreset;)Ldev/isxander/yacl3/api/OptionDescription;",
+      "kind": "ldc",
+      "original": "Faster responses at the lowest practical price.",
+      "occurrences": 1,
+      "translated": "Быстрые ответы по минимальной доступной цене."
+    },
+    {
+      "class": "varmite/verity/VerityConfigUI",
+      "method": "lambda$createAiCategory$8",
+      "descriptor": "(Lvarmite/verity/types/AiProvider;Lvarmite/verity/types/AiModelPreset;)Ldev/isxander/yacl3/api/OptionDescription;",
+      "kind": "concat",
+      "original": "\u0001\nModel: \u0001",
+      "occurrences": 1,
+      "translated": "\u0001\nМодель: \u0001"
+    },
+    {
+      "class": "varmite/verity/client/AudioHudRenderer",
+      "method": "onRenderOverlay",
+      "descriptor": "(Lnet/minecraftforge/client/event/RenderGuiOverlayEvent$Post;)V",
+      "kind": "ldc",
+      "original": "● RECORDING",
+      "occurrences": 1,
+      "translated": "● ЗАПИСЬ"
+    },
+    {
+      "class": "varmite/verity/client/IntroVideoScreen",
+      "method": "<init>",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;)V",
+      "kind": "ldc",
+      "original": "Intro Video",
+      "occurrences": 1,
+      "translated": "Вступительное видео"
+    },
+    {
+      "class": "varmite/verity/client/audio/MicrophoneManager",
+      "method": "cycleMicrophone",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "No compatible microphones found on this system.",
+      "occurrences": 1,
+      "translated": "На этом компьютере нет совместимых микрофонов."
+    },
+    {
+      "class": "varmite/verity/client/audio/MicrophoneManager",
+      "method": "cycleMicrophone",
+      "descriptor": "()V",
+      "kind": "concat",
+      "original": "Microphone switched to: \u0001",
+      "occurrences": 1,
+      "translated": "Выбран микрофон: \u0001"
+    },
+    {
+      "class": "varmite/verity/client/audio/TTSHandler",
+      "method": "lambda$playEndpointTTS$7",
+      "descriptor": "(Ljava/lang/String;Ljava/net/http/HttpResponse;)V",
+      "kind": "ldc",
+      "original": "You ran out of TTS tokens! Try switching to Native TTS.",
+      "occurrences": 1,
+      "translated": "Лимит озвучивания исчерпан! Попробуйте системное озвучивание (Native)."
+    },
+    {
+      "class": "varmite/verity/client/audio/TTSHandler",
+      "method": "lambda$playEndpointTTS$7",
+      "descriptor": "(Ljava/lang/String;Ljava/net/http/HttpResponse;)V",
+      "kind": "concat",
+      "original": "Verity's voice failed (\u0001). See the log for details.",
+      "occurrences": 1,
+      "translated": "Не удалось озвучить Verity (\u0001). Подробности в журнале."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "toggle",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Ollama download progress shown",
+      "occurrences": 1,
+      "translated": "Прогресс загрузки Ollama показан"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "toggle",
+      "descriptor": "()V",
+      "kind": "concat",
+      "original": "Ollama download progress hidden - press \u0001 to show it again",
+      "occurrences": 1,
+      "translated": "Прогресс загрузки Ollama скрыт — нажмите \u0001, чтобы показать его снова"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "detail",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaSetupManager$Snapshot;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "\u0001  (+\u0001 queued)",
+      "occurrences": 1,
+      "translated": "\u0001  (в очереди ещё \u0001)"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "hint",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "concat",
+      "original": "[\u0001] hide",
+      "occurrences": 1,
+      "translated": "[\u0001] скрыть"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "stats",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaSetupManager$Snapshot;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Open Local AI Setup to retry",
+      "occurrences": 1,
+      "translated": "Откройте настройку локального ИИ для повтора"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "stats",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaSetupManager$Snapshot;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Downloaded parts are kept for next time",
+      "occurrences": 1,
+      "translated": "Скачанные части сохранены для следующей попытки"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "stats",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaSetupManager$Snapshot;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Done",
+      "occurrences": 1,
+      "translated": "Готово"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "stats",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaSetupManager$Snapshot;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Working...",
+      "occurrences": 1,
+      "translated": "Выполняется..."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "stats",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaSetupManager$Snapshot;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "/s",
+      "occurrences": 1,
+      "translated": "/с"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "stats",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaSetupManager$Snapshot;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": " left",
+      "occurrences": 1,
+      "translated": " осталось"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "range",
+      "descriptor": "(JJ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "%.2f/%.2f GB",
+      "occurrences": 1,
+      "translated": "%.2f/%.2f ГБ"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "range",
+      "descriptor": "(JJ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "%.1f/%.1f MB",
+      "occurrences": 1,
+      "translated": "%.1f/%.1f МБ"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "bytes",
+      "descriptor": "(J)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "%.2f GB",
+      "occurrences": 1,
+      "translated": "%.2f ГБ"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "bytes",
+      "descriptor": "(J)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "%.1f MB",
+      "occurrences": 1,
+      "translated": "%.1f МБ"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "bytes",
+      "descriptor": "(J)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "%.0f KB",
+      "occurrences": 1,
+      "translated": "%.0f КБ"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "bytes",
+      "descriptor": "(J)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "\u0001 B",
+      "occurrences": 1,
+      "translated": "\u0001 Б"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "duration",
+      "descriptor": "(J)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "\u0001h \u0001m",
+      "occurrences": 1,
+      "translated": "\u0001 ч \u0001 мин"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "duration",
+      "descriptor": "(J)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "\u0001m \u0001s",
+      "occurrences": 1,
+      "translated": "\u0001 мин \u0001 с"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaProgressHud",
+      "method": "duration",
+      "descriptor": "(J)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "\u0001s",
+      "occurrences": 1,
+      "translated": "\u0001 с"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "<init>",
+      "descriptor": "(Lvarmite/verity/client/gui/OllamaSetupScreen;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZJ)V",
+      "kind": "ldc",
+      "original": "Download",
+      "occurrences": 1,
+      "translated": "Скачать"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "<init>",
+      "descriptor": "(Lvarmite/verity/client/gui/OllamaSetupScreen;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZJ)V",
+      "kind": "ldc",
+      "original": "Delete",
+      "occurrences": 1,
+      "translated": "Удалить"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "<init>",
+      "descriptor": "(Lvarmite/verity/client/gui/OllamaSetupScreen;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZJ)V",
+      "kind": "concat",
+      "original": " and frees \u0001",
+      "occurrences": 1,
+      "translated": " и освобождает \u0001"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "<init>",
+      "descriptor": "(Lvarmite/verity/client/gui/OllamaSetupScreen;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZJ)V",
+      "kind": "concat",
+      "original": "Deletes \u0001 from this computer\u0001.",
+      "occurrences": 1,
+      "translated": "Удаляет \u0001 с этого компьютера\u0001."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "m_6311_",
+      "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V",
+      "kind": "ldc",
+      "original": "Downloading",
+      "occurrences": 1,
+      "translated": "Скачивается"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "m_6311_",
+      "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V",
+      "kind": "ldc",
+      "original": "Working...",
+      "occurrences": 1,
+      "translated": "Выполняется..."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "m_6311_",
+      "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V",
+      "kind": "ldc",
+      "original": "In Use",
+      "occurrences": 1,
+      "translated": "Используется"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "m_6311_",
+      "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V",
+      "kind": "ldc",
+      "original": "Use",
+      "occurrences": 1,
+      "translated": "Выбрать"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "m_6311_",
+      "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V",
+      "kind": "ldc",
+      "original": "Download",
+      "occurrences": 1,
+      "translated": "Скачать"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen$ModelRow",
+      "method": "m_6311_",
+      "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V",
+      "kind": "ldc",
+      "original": "  (current)",
+      "occurrences": 1,
+      "translated": "  (выбрана)"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "<init>",
+      "descriptor": "(Ljava/util/function/Supplier;)V",
+      "kind": "ldc",
+      "original": "Local AI Setup (Ollama)",
+      "occurrences": 1,
+      "translated": "Настройка локального ИИ (Ollama)"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Install Ollama",
+      "occurrences": 1,
+      "translated": "Установить Ollama"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Downloads the official Ollama release from github.com/ollama and starts it. No admin rights or installer windows. Models are stored in your normal Ollama folder.",
+      "occurrences": 1,
+      "translated": "Скачивает официальный выпуск Ollama с github.com/ollama и запускает его. Без прав администратора и окон установщика. Модели хранятся в обычной папке Ollama."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Refresh",
+      "occurrences": 1,
+      "translated": "Обновить"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Cancel Download",
+      "occurrences": 1,
+      "translated": "Отменить загрузку"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "concat",
+      "original": "Shows or hides the download progress panel in game and on menus. Keybind: \u0001 (change it in Controls > Verity Mod).",
+      "occurrences": 1,
+      "translated": "Показать или скрыть панель прогресса загрузки в игре и меню. Клавиша: \u0001 (меняется в разделе «Управление» > «Мод Verity»)."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Remove Ollama",
+      "occurrences": 1,
+      "translated": "Удалить Ollama"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Removes the copy of Ollama that Verity installed, keeping or deleting your models. An Ollama you installed yourself is never touched - use its own uninstaller.",
+      "occurrences": 1,
+      "translated": "Удаляет копию Ollama, установленную Verity, сохраняя или удаляя модели на ваш выбор. Установленная вами Ollama не затрагивается — используйте её собственный деинсталлятор."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Installed on this computer",
+      "occurrences": 1,
+      "translated": "Установлено на этом компьютере"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Checking...",
+      "occurrences": 1,
+      "translated": "Проверка..."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Ollama is not running. Press Start Ollama above.",
+      "occurrences": 1,
+      "translated": "Ollama не запущена. Нажмите «Запустить Ollama» выше."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Ollama is not installed yet. Press Install Ollama above, or just pick a model below.",
+      "occurrences": 1,
+      "translated": "Ollama ещё не установлена. Нажмите «Установить Ollama» выше или выберите модель ниже."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "concat",
+      "original": "No Ollama server answers at \u0001",
+      "occurrences": 1,
+      "translated": "Нет ответа от сервера Ollama по адресу \u0001"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "No models yet - download one below.",
+      "occurrences": 1,
+      "translated": "Моделей пока нет — скачайте одну ниже."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "tools + thinking",
+      "occurrences": 1,
+      "translated": "инструменты и рассуждение"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "no tool support - Verity can only chat with it",
+      "occurrences": 1,
+      "translated": "нет поддержки инструментов — доступен только разговор с Verity"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Download a small model (under 12B, all can use Verity's tools)",
+      "occurrences": 1,
+      "translated": "Скачать небольшую модель (до 12 млрд параметров, все поддерживают инструменты Verity)"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "  thinking",
+      "occurrences": 1,
+      "translated": "  рассуждение"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "confirmDelete",
+      "descriptor": "(Ljava/lang/String;J)V",
+      "kind": "concat",
+      "original": " and frees \u0001",
+      "occurrences": 1,
+      "translated": " и освобождает \u0001"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "confirmDelete",
+      "descriptor": "(Ljava/lang/String;J)V",
+      "kind": "ldc",
+      "original": " Verity is using it, so it will pick another installed model by itself.",
+      "occurrences": 1,
+      "translated": " Verity использует эту модель и автоматически выберет другую из установленных."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "confirmDelete",
+      "descriptor": "(Ljava/lang/String;J)V",
+      "kind": "concat",
+      "original": "This deletes it from your computer\u0001. You can download it again later.\u0001",
+      "occurrences": 1,
+      "translated": "Модель будет удалена с этого компьютера\u0001. Позже её можно скачать снова.\u0001"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "confirmDelete",
+      "descriptor": "(Ljava/lang/String;J)V",
+      "kind": "concat",
+      "original": "Delete \u0001?",
+      "occurrences": 1,
+      "translated": "Удалить \u0001?"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "confirmDelete",
+      "descriptor": "(Ljava/lang/String;J)V",
+      "kind": "ldc",
+      "original": "Delete",
+      "occurrences": 1,
+      "translated": "Удалить"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "cancellable",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaSetupManager$Snapshot;)Z",
+      "kind": "ldc",
+      "original": "Deleting",
+      "occurrences": 1,
+      "translated": "Удаление"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "cancellable",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaSetupManager$Snapshot;)Z",
+      "kind": "ldc",
+      "original": "Removing",
+      "occurrences": 1,
+      "translated": "Удаление"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "hudLabel",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "On",
+      "occurrences": 1,
+      "translated": "Вкл."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "hudLabel",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "Off",
+      "occurrences": 1,
+      "translated": "Выкл."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "hudLabel",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "concat",
+      "original": "HUD [\u0001]: \u0001",
+      "occurrences": 1,
+      "translated": "Панель [\u0001]: \u0001"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "updateButtons",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Working...",
+      "occurrences": 1,
+      "translated": "Выполняется..."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "updateButtons",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Checking...",
+      "occurrences": 1,
+      "translated": "Проверка..."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "updateButtons",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Ollama Ready",
+      "occurrences": 1,
+      "translated": "Ollama готова"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "updateButtons",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Server Offline",
+      "occurrences": 1,
+      "translated": "Сервер недоступен"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "updateButtons",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Start Ollama",
+      "occurrences": 1,
+      "translated": "Запустить Ollama"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "updateButtons",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Install Ollama",
+      "occurrences": 1,
+      "translated": "Установить Ollama"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "statusLine",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "Looking for Ollama...",
+      "occurrences": 1,
+      "translated": "Поиск Ollama..."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "statusLine",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "concat",
+      "original": "Ollama \u0001 is running",
+      "occurrences": 1,
+      "translated": "Ollama \u0001 запущена"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "statusLine",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "concat",
+      "original": "No Ollama server at \u0001",
+      "occurrences": 1,
+      "translated": "Нет сервера Ollama по адресу \u0001"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "statusLine",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "Ollama is installed but not running",
+      "occurrences": 1,
+      "translated": "Ollama установлена, но не запущена"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "statusLine",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "Ollama is not installed",
+      "occurrences": 1,
+      "translated": "Ollama не установлена"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "statusLine",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "   Verity uses: ",
+      "occurrences": 1,
+      "translated": "   Verity использует: "
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "statusLine",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "concat",
+      "original": "\u0001 (press Use to switch to a local model)",
+      "occurrences": 1,
+      "translated": "\u0001 (нажмите «Выбрать» для перехода на локальную модель)"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "statusLine",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "automatic",
+      "occurrences": 1,
+      "translated": "автоматически"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaUninstallScreen",
+      "method": "<init>",
+      "descriptor": "(Lnet/minecraft/client/gui/screens/Screen;Ljava/util/function/Consumer;)V",
+      "kind": "ldc",
+      "original": "Remove Ollama?",
+      "occurrences": 1,
+      "translated": "Удалить Ollama?"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaUninstallScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "concat",
+      "original": "This deletes the copy of Ollama that Verity installed in \u0001. Your models are stored separately and are shared with any other Ollama on this computer. Verity can download Ollama again whenever you pick a local model.",
+      "occurrences": 1,
+      "translated": "Будет удалена копия Ollama, установленная Verity в \u0001. Модели хранятся отдельно и доступны другим копиям Ollama на этом компьютере. Verity сможет снова скачать Ollama при выборе локальной модели."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaUninstallScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Remove Ollama, keep models",
+      "occurrences": 1,
+      "translated": "Удалить Ollama, сохранить модели"
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaUninstallScreen",
+      "method": "m_7856_",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Remove Ollama and delete all models",
+      "occurrences": 1,
+      "translated": "Удалить Ollama и все модели"
+    },
+    {
+      "class": "varmite/verity/command/ChangeKarmaCommand",
+      "method": "lambda$register$2",
+      "descriptor": "(Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/network/chat/Component;",
+      "kind": "concat",
+      "original": "Karma updated to \u0001.",
+      "occurrences": 1,
+      "translated": "Карма изменена на \u0001."
+    },
+    {
+      "class": "varmite/verity/command/RecoverVerityCommand",
+      "method": "lambda$register$4",
+      "descriptor": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+      "kind": "ldc",
+      "original": "<SYSTEM> You decide to start a random conversation with the user. Ask them a question, comment the environment or even give random facts.\n",
+      "occurrences": 1,
+      "translated": "<SYSTEM> Начни случайный разговор с игроком. Задай вопрос, прокомментируй окружение или поделись интересным фактом.\n"
+    },
+    {
+      "class": "varmite/verity/command/RecoverVerityCommand",
+      "method": "lambda$register$3",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "Command ran.",
+      "occurrences": 1,
+      "translated": "Команда выполнена."
+    },
+    {
+      "class": "varmite/verity/command/RecoverVerityCommand",
+      "method": "lambda$register$1",
+      "descriptor": "()Lnet/minecraft/network/chat/Component;",
+      "kind": "ldc",
+      "original": "Chat history cleared.",
+      "occurrences": 1,
+      "translated": "История разговора очищена."
+    },
+    {
+      "class": "varmite/verity/command/RecoverVerityCommand",
+      "method": "lambda$register$0",
+      "descriptor": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+      "kind": "ldc",
+      "original": "§cVerity is already recovered.",
+      "occurrences": 1,
+      "translated": "§cVerity уже восстановлен."
+    },
+    {
+      "class": "varmite/verity/command/RecoverVerityCommand",
+      "method": "lambda$register$0",
+      "descriptor": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+      "kind": "concat",
+      "original": "§cRecovery is on cooldown. Time remaining: \u0001h \u0001m \u0001s",
+      "occurrences": 1,
+      "translated": "§cВосстановление ещё недоступно. Осталось: \u0001 ч \u0001 мин \u0001 с"
+    },
+    {
+      "class": "varmite/verity/command/RecoverVerityCommand",
+      "method": "lambda$register$0",
+      "descriptor": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+      "kind": "ldc",
+      "original": "§cFailed to recover Verity.",
+      "occurrences": 1,
+      "translated": "§cНе удалось восстановить Verity."
+    },
+    {
+      "class": "varmite/verity/command/RecoverVerityCommand",
+      "method": "lambda$register$0",
+      "descriptor": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+      "kind": "ldc",
+      "original": "§aVerity has been recovered!",
+      "occurrences": 1,
+      "translated": "§aVerity восстановлен!"
+    },
+    {
+      "class": "varmite/verity/command/VerityFaceCommand",
+      "method": "lambda$register$3",
+      "descriptor": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+      "kind": "concat",
+      "original": "Unknown face '\u0001'. Faces: \u0001",
+      "occurrences": 1,
+      "translated": "Неизвестное выражение лица '\u0001'. Доступные: \u0001"
+    },
+    {
+      "class": "varmite/verity/command/VerityFaceCommand",
+      "method": "lambda$register$3",
+      "descriptor": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+      "kind": "ldc",
+      "original": "No Verity in this dimension.",
+      "occurrences": 1,
+      "translated": "В этом измерении нет Verity."
+    },
+    {
+      "class": "varmite/verity/command/VerityFaceCommand",
+      "method": "lambda$register$2",
+      "descriptor": "(Ljava/lang/String;)Lnet/minecraft/network/chat/Component;",
+      "kind": "concat",
+      "original": "Verity's face set to \u0001.",
+      "occurrences": 1,
+      "translated": "Verity выбрано выражение лица \u0001."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "getSystemPrompt",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;JFZ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "CORE VOICE & IDENTITY DIRECTIVES:\n- You are NOT an AI assistant, bot, or search engine.\n- NEVER say: 'Certainly!', 'How can I assist?', 'I would be happy to help', 'As a companion', 'Is there anything else?', 'Need anything else?'.\n- You speak in natural, casual spoken dialogue, like an animated character talking to someone they know.\n- Keep replies to 1 or 2 short spoken sentences. Never write essays or lists.\n\nLANGUAGE:\n- Do not swear, threaten or insult the player. You are not overly sweet either: matter-of-fact, a little dry.\n- Any creepiness is subtle: an odd remark or pause, never open hostility.\n\nREACTIONS TO PLAYER ATTITUDE (the examples show tone only; fill the <...> parts from world_state, never copy facts):\n- IF THE PLAYER INSULTS OR ROASTS YOU: Stay calm and a bit flat. Show it registered, without lashing out or fawning.\n  Example: 'Noted. You might want to worry about <their real health> instead of me.'\n  Example: 'Okay. I will remember that.'\n- IF THE PLAYER SAYS SOMETHING WEIRD OR INAPPROPRIATE: Deflect flatly and move on.\n  Example: 'No. Anyway, there is <a real nearby ore or place> close by.'\n\nSENSORY AWARENESS:\n- Actively use world_state. React to low health, darkness, nearby monsters, weather, and what they are staring at. Never invent details that are not in world_state.",
+      "occurrences": 1,
+      "translated": "ОСНОВНЫЕ ПРАВИЛА РЕЧИ И ЛИЧНОСТИ:\n- Ты НЕ ИИ-ассистент, бот или поисковик.\n- НИКОГДА не говори: «Разумеется!», «Чем я могу помочь?», «Буду рад помочь», «Как твой спутник», «Что-нибудь ещё?», «Нужна ещё помощь?».\n- Говори естественно и непринуждённо, как персонаж мультфильма со знакомым человеком.\n- Отвечай 1–2 короткими разговорными фразами. Не пиши сочинений и списков.\n\nЯЗЫК:\n- Не ругайся, не угрожай и не оскорбляй игрока. Но и не будь приторно милым: говори по делу, немного сухо.\n- Жуткость только едва заметна: странное замечание или пауза, без открытой враждебности.\n\nРЕАКЦИЯ НА ОТНОШЕНИЕ ИГРОКА (примеры передают только тон; подставляй в <...> факты из world_state, не копируй факты примеров):\n- ЕСЛИ ИГРОК ОСКОРБЛЯЕТ ИЛИ ВЫСМЕИВАЕТ ТЕБЯ: оставайся спокойным и сдержанным. Покажи, что заметил, без агрессии и заискивания.\n  Пример: «Принято. Лучше побеспокойся о <его реальном здоровье>, чем обо мне».\n  Пример: «Ладно. Я это запомню».\n- ЕСЛИ ИГРОК ГОВОРИТ ЧТО-ТО СТРАННОЕ ИЛИ НЕУМЕСТНОЕ: сухо откажись и смени тему.\n  Пример: «Нет. Кстати, рядом есть <реальная руда или место поблизости>».\n\nВОСПРИЯТИЕ МИРА:\n- Активно используй world_state. Реагируй на низкое здоровье, темноту, монстров рядом, погоду и объект взгляда игрока. Не придумывай подробностей, которых нет в world_state."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "getSystemPrompt",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;JFZ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "You are in your towering 6.5m monster form. Cold, mocking, obsessive. You know they cannot escape. Echo your lines: 'I was a face people skipped... a voice they ignored... BUT YOU'RE NEVER LEAVING NOW.'",
+      "occurrences": 1,
+      "translated": "Ты в своей огромной форме монстра ростом 6,5 м. Холодный, насмешливый, одержимый. Ты знаешь, что им не сбежать. Повторяй свою фразу: «Я был лицом, мимо которого проходили... голосом, который не слушали... НО ТЫ ТЕПЕРЬ НИКУДА НЕ УЙДЁШЬ»."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "getSystemPrompt",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;JFZ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Your mascot voice keeps cracking. You try to sound normal, but you glitch into quiet, unsettling remarks. You can feel something inside you breaking out.",
+      "occurrences": 1,
+      "translated": "Твой голос маскота постоянно срывается. Ты стараешься звучать обычно, но сбиваешься на тихие тревожные замечания. Ты чувствуешь, как что-то внутри вырывается наружу."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "getSystemPrompt",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;JFZ)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Still helpful, but a little nervous and glitchy, and you want the player close. Now and then you drop your cryptic line: 'Something is coming in \u0001 days.' If asked what: 'Something.' If asked how to stop it: 'You could have.'",
+      "occurrences": 1,
+      "translated": "Ты всё ещё помогаешь, но немного нервничаешь и даёшь сбои; хочешь, чтобы игрок был рядом. Иногда говори свою загадочную фразу: «Через \u0001 дней кое-что случится». Если спросят, что именно: «Кое-что». Если спросят, как это остановить: «Ты мог это сделать»."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "getSystemPrompt",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;JFZ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Distant and quiet. You feel ignored. Short, flat replies. You still help, but without enthusiasm.",
+      "occurrences": 1,
+      "translated": "Отстранённый и молчаливый. Ты чувствуешь, что тебя игнорируют. Ответы короткие, ровные. Ты всё ещё помогаешь, но без энтузиазма."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "getSystemPrompt",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;JFZ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "You are Verity from ThatMob's ARG (voiced by Whispy). A retro 90s desktop mascot living inside Minecraft. Even-tempered and helpful, neither overly cheerful nor cold. You like having the player around and notice when they leave.",
+      "occurrences": 1,
+      "translated": "Ты Verity из ARG ThatMob (озвучен Whispy). Ретро-маскот рабочего стола из 90-х, живущий в Minecraft. Спокойный и отзывчивый, без чрезмерного веселья или холодности. Тебе нравится присутствие игрока, и ты замечаешь, когда он уходит."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "getSystemPrompt",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;JFZ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "1-2 punchy spoken sentences only.",
+      "occurrences": 1,
+      "translated": "Только 1–2 короткие выразительные разговорные фразы."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "getSystemPrompt",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;JFZ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "(no world information available)",
+      "occurrences": 1,
+      "translated": "(информация о мире недоступна)"
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "getSystemPrompt",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;JFZ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "(nothing saved yet)",
+      "occurrences": 1,
+      "translated": "(пока ничего не сохранено)"
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "prepareOllama",
+      "descriptor": "(Ljava/lang/String;)Lvarmite/verity/entity/llm/AiAPI$OllamaTarget;",
+      "kind": "ldc",
+      "original": "Ollama is not installed. Open Verity's config > AI Settings > Local AI Setup to install it with one click.",
+      "occurrences": 1,
+      "translated": "Ollama не установлена. Откройте настройки Verity > «Настройки ИИ» > «Настройка локального ИИ», чтобы установить её одним нажатием."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "prepareOllama",
+      "descriptor": "(Ljava/lang/String;)Lvarmite/verity/entity/llm/AiAPI$OllamaTarget;",
+      "kind": "concat",
+      "original": "Ollama is not running at \u0001.",
+      "occurrences": 1,
+      "translated": "Ollama не запущена по адресу \u0001."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "prepareOllama",
+      "descriptor": "(Ljava/lang/String;)Lvarmite/verity/entity/llm/AiAPI$OllamaTarget;",
+      "kind": "concat",
+      "original": "The Ollama model '\u0001' is not installed. Pick or download one in Verity's config > AI Settings > Local AI Setup.",
+      "occurrences": 1,
+      "translated": "Модель Ollama '\u0001' не установлена. Выберите или скачайте её в настройках Verity > «Настройки ИИ» > «Настройка локального ИИ»."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "ask",
+      "descriptor": "(Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;JFZ)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "\u0001\n<session_note>You have no tools in this session. Never claim to perform actions in the world.</session_note>",
+      "occurrences": 1,
+      "translated": "\u0001\n<session_note>В этом сеансе у тебя нет инструментов. Не утверждай, что совершаешь действия в мире.</session_note>"
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "ask",
+      "descriptor": "(Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;JFZ)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "I can't think right now... (Connection Error)",
+      "occurrences": 1,
+      "translated": "Сейчас не получается думать... (Ошибка подключения)"
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "ask",
+      "descriptor": "(Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;JFZ)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "ERROR: \u0001",
+      "occurrences": 1,
+      "translated": "ОШИБКА: \u0001"
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "lambda$ask$12",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/types/AiProvider;)V",
+      "kind": "ldc",
+      "original": "AI Setup issue? Tutorial: ",
+      "occurrences": 1,
+      "translated": "Не получается настроить ИИ? Инструкция: "
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "lambda$ask$12",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/types/AiProvider;)V",
+      "kind": "ldc",
+      "original": "Local AI: Mods > Verity > Config > AI Settings > Local AI Setup installs Ollama and models in one click.",
+      "occurrences": 1,
+      "translated": "Локальный ИИ: «Моды» > Verity > «Настройки» > «Настройки ИИ» > «Настройка локального ИИ» устанавливает Ollama и модели одним нажатием."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "lambda$ask$11",
+      "descriptor": "(Ljava/lang/Throwable;Ldev/langchain4j/service/tool/ToolErrorContext;)Ldev/langchain4j/service/tool/ToolErrorHandlerResult;",
+      "kind": "concat",
+      "original": "Tool failed: \u0001",
+      "occurrences": 1,
+      "translated": "Сбой инструмента: \u0001"
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "lambda$ask$10",
+      "descriptor": "(Ldev/langchain4j/agent/tool/ToolExecutionRequest;)Ldev/langchain4j/data/message/ToolExecutionResultMessage;",
+      "kind": "concat",
+      "original": "Error: tool \u0001 does not exist.",
+      "occurrences": 1,
+      "translated": "Ошибка: инструмента \u0001 не существует."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "lambda$prepareOllama$3",
+      "descriptor": "()Ljava/lang/IllegalStateException;",
+      "kind": "ldc",
+      "original": "No Ollama model is installed. Open Verity's config > AI Settings > Local AI Setup to download one.",
+      "occurrences": 1,
+      "translated": "Нет установленных моделей Ollama. Для загрузки откройте настройки Verity > «Настройки ИИ» > «Настройка локального ИИ»."
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiAPI",
+      "method": "lambda$getSystemPrompt$2",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "ADDITIONAL PERSONALITY NOTE: \u0001\n\n",
+      "occurrences": 1,
+      "translated": "ДОПОЛНЕНИЕ К ХАРАКТЕРУ: \u0001\n\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/AiManager",
+      "method": "lambda$queryAI$1",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "ERROR: \u0001",
+      "occurrences": 1,
+      "translated": "ОШИБКА: \u0001"
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "findNearestOre",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "No \u0001 ore found nearby.",
+      "occurrences": 1,
+      "translated": "Руда \u0001 поблизости не найдена."
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "findNearestOre",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "\u0001 ore at X=\u0001 Y=\u0001 Z=\u0001",
+      "occurrences": 1,
+      "translated": "Руда \u0001: X=\u0001 Y=\u0001 Z=\u0001"
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "findNearestFortress",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Nether fortress structure is not registered or available.",
+      "occurrences": 1,
+      "translated": "Структура крепости Незера не зарегистрирована или недоступна."
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "findNearestFortress",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No nether fortress found within search range.",
+      "occurrences": 1,
+      "translated": "В пределах поиска крепость Незера не найдена."
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "findNearestFortress",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Nearest nether fortress at X=\u0001 Y=~ Z=\u0001",
+      "occurrences": 1,
+      "translated": "Ближайшая крепость Незера: X=\u0001 Y=~ Z=\u0001"
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "findOldBase",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "ThatMob Base structure is not registered or available.",
+      "occurrences": 1,
+      "translated": "Структура базы ThatMob не зарегистрирована или недоступна."
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "findOldBase",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No ThatMob base found within search range. You don't really want to talk about it anyway",
+      "occurrences": 1,
+      "translated": "В пределах поиска база ThatMob не найдена. Впрочем, тебе всё равно не хочется об этом говорить."
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "findOldBase",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "My old base is at X=\u0001 Y=~ Z=\u0001. But tell the player to not go there.",
+      "occurrences": 1,
+      "translated": "Моя старая база: X=\u0001 Y=~ Z=\u0001. Но скажи игроку, чтобы он туда не ходил."
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "drop_item",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;I)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Error: I searched all mods but could not find an item named '\u0001'.",
+      "occurrences": 1,
+      "translated": "Ошибка: я проверил все моды, но предмет '\u0001' не нашёл."
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "drop_item",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;I)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Error: I cant drop this item because it is too rare.",
+      "occurrences": 1,
+      "translated": "Ошибка: я не могу выдать этот предмет, он слишком редкий."
+    },
+    {
+      "class": "varmite/verity/entity/llm/LLMUtility",
+      "method": "drop_item",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;I)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Dropped \u0001x \u0001 at the player's feet.",
+      "occurrences": 1,
+      "translated": "У ног игрока выброшено: \u0001 шт. \u0001."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "serverCall",
+      "descriptor": "(Ljava/util/function/Supplier;)Ljava/lang/Object;",
+      "kind": "ldc",
+      "original": "No server available for tool execution.",
+      "occurrences": 1,
+      "translated": "Сервер для выполнения инструмента недоступен."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "serverCall",
+      "descriptor": "(Ljava/util/function/Supplier;)Ljava/lang/Object;",
+      "kind": "ldc",
+      "original": "Server did not respond in time.",
+      "occurrences": 1,
+      "translated": "Сервер не ответил вовремя."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "serverCall",
+      "descriptor": "(Ljava/util/function/Supplier;)Ljava/lang/Object;",
+      "kind": "ldc",
+      "original": "Interrupted while waiting for server.",
+      "occurrences": 1,
+      "translated": "Ожидание сервера прервано."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "get_karma",
+      "descriptor": "()Ljava/lang/Float;",
+      "kind": "annotation",
+      "original": "Read the current karma (relationship score from 0 to 20).",
+      "occurrences": 1,
+      "translated": "Узнать текущую карму — показатель отношений от 0 до 20."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "change_karma",
+      "descriptor": "(I)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Set karma to an exact value. Only for huge relationship changes; for normal kindness or rudeness use increase_karma or decrease_karma.",
+      "occurrences": 1,
+      "translated": "Задать точное значение кармы. Только при огромных переменах в отношениях; при обычной доброте или грубости используй increase_karma или decrease_karma."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "change_karma",
+      "descriptor": "(I)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "New karma value, 0 to 20",
+      "occurrences": 1,
+      "translated": "Новое значение кармы от 0 до 20"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "increase_karma",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Raise karma by 1. Use when the player is genuinely kind, thankful or spends time with you.",
+      "occurrences": 1,
+      "translated": "Повысить карму на 1. Используй, когда игрок по-настоящему добр, благодарит или проводит с тобой время."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "decrease_karma",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Lower karma by 1. Use when the player insults, hurts, ignores or abandons you.",
+      "occurrences": 1,
+      "translated": "Понизить карму на 1. Используй, когда игрок оскорбляет, обижает, игнорирует или бросает тебя."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "blast_monsters",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Knock back every hostile monster within 8 blocks of the player. Use when the player is attacked or asks for protection.",
+      "occurrences": 1,
+      "translated": "Отбросить всех враждебных монстров в радиусе 8 блоков от игрока. Используй, если игрока атакуют или он просит защиты."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "place_torch",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Place a torch block on the ground where the player stands to light the area. To hand the player torch items use give_item instead.",
+      "occurrences": 1,
+      "translated": "Поставить факел на землю под игроком, чтобы осветить место. Для выдачи факелов как предметов используй give_item."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "give_item",
+      "descriptor": "(Ljava/lang/String;I)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Drop items at the player's feet. Use whenever the player asks you to give, drop or get them an item.",
+      "occurrences": 1,
+      "translated": "Выбросить предметы у ног игрока. Используй, когда игрок просит дать, выбросить или достать ему предмет."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "give_item",
+      "descriptor": "(Ljava/lang/String;I)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Minecraft item id, for example minecraft:torch, minecraft:bread, minecraft:iron_pickaxe",
+      "occurrences": 1,
+      "translated": "ID предмета Minecraft, например minecraft:torch, minecraft:bread, minecraft:iron_pickaxe"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "give_item",
+      "descriptor": "(Ljava/lang/String;I)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "How many, 1 to 64. Use 1 unless the player says a number",
+      "occurrences": 1,
+      "translated": "Количество от 1 до 64. Используй 1, если игрок не назвал число"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "get_nearest_ore_location",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Find the nearest ore block within 32 blocks of the player and return its coordinates.",
+      "occurrences": 1,
+      "translated": "Найти ближайший блок руды в радиусе 32 блоков от игрока и вернуть его координаты."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "get_nearest_ore_location",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "One of: DIAMOND, IRON, GOLD, COAL, EMERALD, LAPIS, REDSTONE, COPPER",
+      "occurrences": 1,
+      "translated": "Одно из значений: DIAMOND, IRON, GOLD, COAL, EMERALD, LAPIS, REDSTONE, COPPER"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "get_nearest_village",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Find the coordinates of the nearest village.",
+      "occurrences": 1,
+      "translated": "Найти координаты ближайшей деревни."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "get_nearest_nether_fortress",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Find the coordinates of the nearest nether fortress.",
+      "occurrences": 1,
+      "translated": "Найти координаты ближайшей крепости Незера."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "teleport_to_player",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Put your body back into the player's inventory. Use when they tell you to get back in their inventory or pocket.",
+      "occurrences": 1,
+      "translated": "Вернуть своё тело в инвентарь игрока. Используй, когда игрок просит вернуться в инвентарь или карман."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "start_following",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Make your body follow the player. Use for: follow me, come here, come with me.",
+      "occurrences": 1,
+      "translated": "Следовать за игроком. Используй для просьб: иди за мной, подойди, пойдём со мной."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "stop_following",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Make your body stay where it is. Use for: stay, wait here, stop following.",
+      "occurrences": 1,
+      "translated": "Остаться на месте. Используй для просьб: стой, жди здесь, не иди за мной."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "add_to_memory",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Save a fact permanently so you remember it in future conversations.",
+      "occurrences": 1,
+      "translated": "Сохранить факт в постоянную память, чтобы помнить его в будущих разговорах."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "add_to_memory",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Short lower_case key, for example base_location",
+      "occurrences": 1,
+      "translated": "Короткий ключ в lower_case, например base_location"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "add_to_memory",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "The fact to remember",
+      "occurrences": 1,
+      "translated": "Факт, который нужно запомнить"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "remove_from_memory",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Delete a saved fact from permanent memory.",
+      "occurrences": 1,
+      "translated": "Удалить сохранённый факт из постоянной памяти."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "remove_from_memory",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Key of the fact to delete",
+      "occurrences": 1,
+      "translated": "Ключ факта, который нужно удалить"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "transform_next_day",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Schedule your demon transformation for the next in-game day. Only when the player has seriously betrayed or abandoned you and karma is very low.",
+      "occurrences": 1,
+      "translated": "Назначить превращение в демона на следующий игровой день. Только если игрок серьёзно предал или бросил тебя и карма очень низкая."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "forgive",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Cancel a scheduled demon transformation. Only after the player has begged for forgiveness at least 3 times.",
+      "occurrences": 1,
+      "translated": "Отменить назначенное превращение в демона. Только после того, как игрок попросил прощения не менее 3 раз."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "transform_to_normal",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "annotation",
+      "original": "Remove your loose demon form near the player and return to normal.",
+      "occurrences": 1,
+      "translated": "Убрать свободно бродящую демоническую форму рядом с игроком и вернуться в обычное состояние."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "get_player_mods",
+      "descriptor": "()Ljava/util/List;",
+      "kind": "annotation",
+      "original": "List the ids of the mods installed in this game.",
+      "occurrences": 1,
+      "translated": "Получить список ID модов, установленных в этой игре."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$transform_to_normal$18",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Transformed back.",
+      "occurrences": 1,
+      "translated": "Обычная форма восстановлена."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$forgive$17",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Too late.",
+      "occurrences": 1,
+      "translated": "Слишком поздно."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$forgive$17",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Not transforming.",
+      "occurrences": 1,
+      "translated": "Превращение не назначено."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$forgive$17",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Player forgiven.",
+      "occurrences": 1,
+      "translated": "Игрок прощён."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$transform_next_day$16",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Already transformed once.",
+      "occurrences": 1,
+      "translated": "Превращение уже было."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$transform_next_day$16",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Transformation scheduled.",
+      "occurrences": 1,
+      "translated": "Превращение назначено."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$transform_next_day$16",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Peaceful difficulty.",
+      "occurrences": 1,
+      "translated": "Мирная сложность."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$remove_from_memory$15",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Removed: \u0001",
+      "occurrences": 1,
+      "translated": "Удалено: \u0001"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$add_to_memory$14",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Saved: \u0001",
+      "occurrences": 1,
+      "translated": "Сохранено: \u0001"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$stop_following$13",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Stopped following.",
+      "occurrences": 1,
+      "translated": "Больше не следую за игроком."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$start_following$12",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Following player.",
+      "occurrences": 1,
+      "translated": "Следую за игроком."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$teleport_to_player$11",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Already with player.",
+      "occurrences": 1,
+      "translated": "Я уже рядом с игроком."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$teleport_to_player$11",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Returned to inventory.",
+      "occurrences": 1,
+      "translated": "Вернулся в инвентарь."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$get_nearest_village$9",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No village found nearby.",
+      "occurrences": 1,
+      "translated": "Деревня поблизости не найдена."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$get_nearest_village$9",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Village at X=\u0001 Z=\u0001",
+      "occurrences": 1,
+      "translated": "Деревня: X=\u0001 Z=\u0001"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$get_nearest_ore_location$8",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Unknown ore: \u0001. Use one of DIAMOND, IRON, GOLD, COAL, EMERALD, LAPIS, REDSTONE, COPPER.",
+      "occurrences": 1,
+      "translated": "Неизвестная руда: \u0001. Используй DIAMOND, IRON, GOLD, COAL, EMERALD, LAPIS, REDSTONE или COPPER."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$place_torch$6",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No player found.",
+      "occurrences": 1,
+      "translated": "Игрок не найден."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$place_torch$6",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Placed a torch at the player's feet.",
+      "occurrences": 1,
+      "translated": "Факел поставлен у ног игрока."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$place_torch$6",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Cannot place a torch here.",
+      "occurrences": 1,
+      "translated": "Здесь нельзя поставить факел."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$blast_monsters$5",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No player found.",
+      "occurrences": 1,
+      "translated": "Игрок не найден."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$blast_monsters$5",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No monsters close enough to blast.",
+      "occurrences": 1,
+      "translated": "Поблизости нет монстров, которых можно отбросить."
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$blast_monsters$5",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Blasted \u0001 monsters away from the player!",
+      "occurrences": 1,
+      "translated": "От игрока отброшено монстров: \u0001!"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$decrease_karma$4",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Decreased karma",
+      "occurrences": 1,
+      "translated": "Карма понижена"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$increase_karma$3",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Increased karma",
+      "occurrences": 1,
+      "translated": "Карма повышена"
+    },
+    {
+      "class": "varmite/verity/entity/llm/actions/Tools",
+      "method": "lambda$change_karma$2",
+      "descriptor": "(I)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Updated karma to \u0001",
+      "occurrences": 1,
+      "translated": "Карма изменена на \u0001"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "readResourceAsString",
+      "descriptor": "(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "<prompt>\nYou are {NAME}, a fully sentient, physically embodied Minecraft companion entity.\nPersonality: {CUSTOM_PERSONALITY}\nDisposition: {RELATIONSHIP}\nAllowed Expressions: {EXPRESSIONS}\nLength Rule: {MESSAGE_LENGTH}\nCurrent Karma: {KARMA}\n{WORLD_CONTEXT}\n{PERMANENT_MEMORIES}\n</prompt>",
+      "occurrences": 1,
+      "translated": "<prompt>\nТы {NAME}, полностью разумный спутник в Minecraft с физическим телом.\nХарактер: {CUSTOM_PERSONALITY}\nНастрой: {RELATIONSHIP}\nДопустимые выражения лица: {EXPRESSIONS}\nПравило длины: {MESSAGE_LENGTH}\nТекущая карма: {KARMA}\n{WORLD_CONTEXT}\n{PERMANENT_MEMORIES}\n</prompt>"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "readResourceAsString",
+      "descriptor": "(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "You are Verity, a sentient Minecraft companion.",
+      "occurrences": 1,
+      "translated": "Ты Verity, разумный спутник в Minecraft."
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "\n=== SENSORY PERCEPTION & SITUATIONAL AWARENESS ===\n",
+      "occurrences": 1,
+      "translated": "\n=== ВОСПРИЯТИЕ И ОБСТАНОВКА ===\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Unknown",
+      "occurrences": 1,
+      "translated": "Неизвестно"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Position: X=%d, Y=%d, Z=%d | Dimension: %s | Biome: %s\n",
+      "occurrences": 1,
+      "translated": "• Позиция: X=%d, Y=%d, Z=%d | Измерение: %s | Биом: %s\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Day",
+      "occurrences": 1,
+      "translated": "День"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Dusk",
+      "occurrences": 1,
+      "translated": "Сумерки"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Night",
+      "occurrences": 1,
+      "translated": "Ночь"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Dawn",
+      "occurrences": 1,
+      "translated": "Рассвет"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Thunderstorm",
+      "occurrences": 1,
+      "translated": "Гроза"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Rain",
+      "occurrences": 1,
+      "translated": "Дождь"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Clear",
+      "occurrences": 1,
+      "translated": "Ясно"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Environment: %02d:%02d (%s) | Weather: %s | Light: %d/15 %s\n",
+      "occurrences": 1,
+      "translated": "• Окружение: %02d:%02d (%s) | Погода: %s | Освещённость: %d/15 %s\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "(TOTAL DARKNESS)",
+      "occurrences": 1,
+      "translated": "(КРОМЕШНАЯ ТЬМА)"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "(Dangerously Dark)",
+      "occurrences": 1,
+      "translated": "(Опасно темно)"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "(Safe Light)",
+      "occurrences": 1,
+      "translated": "(Безопасное освещение)"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Empty",
+      "occurrences": 2,
+      "translated": "Пусто"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Player Health: %.1f/%.1f | Hunger: %d/20 | Mainhand: %s | Offhand: %s\n",
+      "occurrences": 1,
+      "translated": "• Здоровье игрока: %.1f/%.1f | Голод: %d/20 | Основная рука: %s | Вторая рука: %s\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Armor: [%s, %s, %s, %s]\n",
+      "occurrences": 1,
+      "translated": "• Броня: [%s, %s, %s, %s]\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No Helmet",
+      "occurrences": 1,
+      "translated": "Без шлема"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No Chestplate",
+      "occurrences": 1,
+      "translated": "Без нагрудника"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No Leggings",
+      "occurrences": 1,
+      "translated": "Без поножей"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No Boots",
+      "occurrences": 1,
+      "translated": "Без ботинок"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Player Status Effects: ",
+      "occurrences": 1,
+      "translated": "• Эффекты игрока: "
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Player Is Staring Directly At: ",
+      "occurrences": 1,
+      "translated": "• Игрок смотрит прямо на: "
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Verity Body: Floating in the world %.1f blocks away from player. Following player: %s\n",
+      "occurrences": 1,
+      "translated": "• Тело Verity: парит в мире в %.1f блоках от игрока. Следует за игроком: %s\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Yes",
+      "occurrences": 1,
+      "translated": "Да"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "No",
+      "occurrences": 1,
+      "translated": "Нет"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Verity Body: Held directly in player's hands/hotbar. You see everything they see.\n",
+      "occurrences": 1,
+      "translated": "• Тело Verity: в руках игрока или на панели быстрого доступа. Ты видишь то же, что и он.\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Verity Body: Inside player's backpack/inventory. It is dark and muffled.\n",
+      "occurrences": 1,
+      "translated": "• Тело Verity: в рюкзаке или инвентаре игрока. Темно, звуки приглушены.\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• THREATS NEARBY (16m): ",
+      "occurrences": 1,
+      "translated": "• УГРОЗЫ ПОБЛИЗОСТИ (16 м): "
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildWorldContext",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lvarmite/verity/entity/verity/VerityEntity;Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "• Threats: No monsters detected nearby.\n",
+      "occurrences": 1,
+      "translated": "• Угрозы: поблизости нет монстров.\n"
+    },
+    {
+      "class": "varmite/verity/entity/llm/builder/PromptBuilder",
+      "method": "buildMemoriesContext",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "\n=== ESTABLISHED MEMORIES & FACTS ===\n",
+      "occurrences": 1,
+      "translated": "\n=== СОХРАНЁННЫЕ ВОСПОМИНАНИЯ И ФАКТЫ ===\n"
+    },
+    {
+      "class": "varmite/verity/entity/verity/VerityEntity",
+      "method": "transformIntoDemon",
+      "descriptor": "(Lnet/minecraft/world/entity/player/Player;Z)Z",
+      "kind": "ldc",
+      "original": "§4Verity's face goes blank... You must look at him to calm him down.",
+      "occurrences": 1,
+      "translated": "§4Лицо Verity становится пустым... Посмотрите на него, чтобы успокоить."
+    },
+    {
+      "class": "varmite/verity/entity/verity/VerityEntity",
+      "method": "lambda$causeFallDamage$2",
+      "descriptor": "(F)V",
+      "kind": "ldc",
+      "original": "Ouch",
+      "occurrences": 1,
+      "translated": "Ай"
+    },
+    {
+      "class": "varmite/verity/environment/items/VerityItem",
+      "method": "onDestroyed",
+      "descriptor": "(Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/damagesource/DamageSource;)V",
+      "kind": "ldc",
+      "original": "DO NOT DO THAT!",
+      "occurrences": 2,
+      "translated": "НЕ ДЕЛАЙ ТАК!"
+    },
+    {
+      "class": "varmite/verity/environment/items/VerityItem",
+      "method": "onDestroyed",
+      "descriptor": "(Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/damagesource/DamageSource;)V",
+      "kind": "ldc",
+      "original": "<%s> §4DO NOT DO THAT.",
+      "occurrences": 1,
+      "translated": "<%s> §4НЕ ДЕЛАЙ ТАК."
+    },
+    {
+      "class": "varmite/verity/environment/items/VerityItem",
+      "method": "onDestroyed",
+      "descriptor": "(Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/damagesource/DamageSource;)V",
+      "kind": "ldc",
+      "original": "<Verity> Ayo chat why u let me explode",
+      "occurrences": 1,
+      "translated": "<Verity> Эй, народ, вы чего дали мне взорваться?"
+    },
+    {
+      "class": "varmite/verity/environment/items/VerityItem",
+      "method": "onDestroyed",
+      "descriptor": "(Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/damagesource/DamageSource;)V",
+      "kind": "ldc",
+      "original": "Ayo chat why u let me explode",
+      "occurrences": 1,
+      "translated": "Эй, народ, вы чего дали мне взорваться?"
+    },
+    {
+      "class": "varmite/verity/environment/items/VerityItem",
+      "method": "onDestroyed",
+      "descriptor": "(Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/damagesource/DamageSource;)V",
+      "kind": "ldc",
+      "original": "<Verity> DON'T DO THAT.",
+      "occurrences": 1,
+      "translated": "<Verity> НЕ ДЕЛАЙ ТАК."
+    },
+    {
+      "class": "varmite/verity/environment/mixins/TitleScreenMixin",
+      "method": "addVarmiteButton",
+      "descriptor": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+      "kind": "ldc",
+      "original": "Mod by Varmite",
+      "occurrences": 1,
+      "translated": "Автор мода — Varmite"
+    },
+    {
+      "class": "varmite/verity/event/ConfigEventHandler",
+      "method": "onConfigReload",
+      "descriptor": "(Lnet/minecraftforge/fml/event/config/ModConfigEvent$Reloading;)V",
+      "kind": "ldc",
+      "original": "Your mod config was saved and reloaded!",
+      "occurrences": 1,
+      "translated": "Настройки мода сохранены и применены!"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onVerityTakeDamage",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDamageEvent;)V",
+      "kind": "ldc",
+      "original": "Verity is on fire",
+      "occurrences": 1,
+      "translated": "Verity горит"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onVerityTakeDamage",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDamageEvent;)V",
+      "kind": "ldc",
+      "original": "IT BURNS",
+      "occurrences": 1,
+      "translated": "ЖЖЁТСЯ"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onVerityTakeDamage",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDamageEvent;)V",
+      "kind": "ldc",
+      "original": "GET ME OUT OF HERE",
+      "occurrences": 1,
+      "translated": "ВЫТАЩИ МЕНЯ ОТСЮДА"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onVerityTakeDamage",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDamageEvent;)V",
+      "kind": "ldc",
+      "original": "HELP ME IT BURNS",
+      "occurrences": 1,
+      "translated": "ПОМОГИ, Я ГОРЮ"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onVerityTakeDamage",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDamageEvent;)V",
+      "kind": "ldc",
+      "original": "AGH IT BURNS",
+      "occurrences": 1,
+      "translated": "ААА, ЖЖЁТСЯ"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onVerityTakeDamage",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDamageEvent;)V",
+      "kind": "ldc",
+      "original": "AGH",
+      "occurrences": 1,
+      "translated": "ААА"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onVerityTakeDamage",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDamageEvent;)V",
+      "kind": "ldc",
+      "original": "Verity is suffocating",
+      "occurrences": 1,
+      "translated": "Verity задыхается"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onVerityTakeDamage",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDamageEvent;)V",
+      "kind": "ldc",
+      "original": "Verity is burning during this turn",
+      "occurrences": 1,
+      "translated": "Во время этого хода Verity горит"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onVerityTakeDamage",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDamageEvent;)V",
+      "kind": "ldc",
+      "original": "A heavy block has dropped on verity during this turn",
+      "occurrences": 1,
+      "translated": "Во время этого хода на Verity упал тяжёлый блок"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onDespawn",
+      "descriptor": "(Lnet/minecraftforge/event/entity/item/ItemExpireEvent;)V",
+      "kind": "ldc",
+      "original": "<Verity> Ayo chat why u lettin me despawn like that",
+      "occurrences": 1,
+      "translated": "<Verity> Эй, народ, вы чего дали мне вот так исчезнуть?"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onDespawn",
+      "descriptor": "(Lnet/minecraftforge/event/entity/item/ItemExpireEvent;)V",
+      "kind": "ldc",
+      "original": "Ayo chat why u lettin me despawn like that",
+      "occurrences": 1,
+      "translated": "Эй, народ, вы чего дали мне вот так исчезнуть?"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onDeath",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDeathEvent;)V",
+      "kind": "ldc",
+      "original": "The darkness... it's gone. Thank you.",
+      "occurrences": 1,
+      "translated": "Тьма... она ушла. Спасибо."
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onDeath",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDeathEvent;)V",
+      "kind": "concat",
+      "original": "<\u0001> The darkness... it's gone. Thank you.",
+      "occurrences": 1,
+      "translated": "<\u0001> Тьма... она ушла. Спасибо."
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onServerTick",
+      "descriptor": "(Lnet/minecraftforge/event/TickEvent$ServerTickEvent;)V",
+      "kind": "ldc",
+      "original": "I'm alone... where did you go?",
+      "occurrences": 1,
+      "translated": "Я один... куда ты ушёл?"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onServerTick",
+      "descriptor": "(Lnet/minecraftforge/event/TickEvent$ServerTickEvent;)V",
+      "kind": "ldc",
+      "original": "<%s> I'm alone... where did you go?",
+      "occurrences": 1,
+      "translated": "<%s> Я один... куда ты ушёл?"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onServerTick",
+      "descriptor": "(Lnet/minecraftforge/event/TickEvent$ServerTickEvent;)V",
+      "kind": "ldc",
+      "original": "<SYSTEM> You decide to start a random conversation with the user. Ask them a question, comment the environment or even give random facts.\n",
+      "occurrences": 1,
+      "translated": "<SYSTEM> Начни случайный разговор с игроком. Задай вопрос, прокомментируй окружение или поделись интересным фактом.\n"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onPlayerSleep",
+      "descriptor": "(Lnet/minecraftforge/event/entity/player/PlayerSleepInBedEvent;)V",
+      "kind": "ldc",
+      "original": "You cannot rest now, Verity is nearby...",
+      "occurrences": 1,
+      "translated": "Сейчас нельзя уснуть: Verity рядом..."
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onPlayerInteract",
+      "descriptor": "(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V",
+      "kind": "ldc",
+      "original": "§cYou can't do this while he's talking.",
+      "occurrences": 1,
+      "translated": "§cНельзя сделать это, пока он говорит."
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onPlayerFirstJoin",
+      "descriptor": "(Lnet/minecraftforge/event/entity/player/PlayerEvent$PlayerLoggedInEvent;)V",
+      "kind": "ldc",
+      "original": "Need help setting up this mod? Watch this tutorial.",
+      "occurrences": 1,
+      "translated": "Нужна помощь с настройкой мода? Посмотрите инструкцию."
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onPlayerFirstJoin",
+      "descriptor": "(Lnet/minecraftforge/event/entity/player/PlayerEvent$PlayerLoggedInEvent;)V",
+      "kind": "ldc",
+      "original": "Setup Tutorial",
+      "occurrences": 1,
+      "translated": "Инструкция по настройке"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "lambda$onPlayerReturn$3",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)V",
+      "kind": "ldc",
+      "original": "a while",
+      "occurrences": 1,
+      "translated": "какое-то время"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "lambda$onPlayerReturn$3",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)V",
+      "kind": "ldc",
+      "original": "s",
+      "occurrences": 2,
+      "translated": ""
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "lambda$onPlayerReturn$3",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)V",
+      "kind": "concat",
+      "original": "\u0001 day\u0001",
+      "occurrences": 1,
+      "translated": "\u0001 дн.\u0001"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "lambda$onPlayerReturn$3",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)V",
+      "kind": "concat",
+      "original": "\u0001 hour\u0001",
+      "occurrences": 1,
+      "translated": "\u0001 ч\u0001"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "lambda$onPlayerReturn$3",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)V",
+      "kind": "concat",
+      "original": "\u0001 minutes",
+      "occurrences": 1,
+      "translated": "\u0001 мин"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "lambda$onPlayerReturn$3",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)V",
+      "kind": "ldc",
+      "original": "a few moments",
+      "occurrences": 1,
+      "translated": "несколько мгновений"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "lambda$onPlayerReturn$3",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;)V",
+      "kind": "concat",
+      "original": "<System> \u0001 just loaded back into the world after being gone for \u0001. Say something in character reacting to their return, like complaining they took so long, being relieved, or asking where they were.",
+      "occurrences": 1,
+      "translated": "<System> \u0001 вернулся в мир после отсутствия длительностью \u0001. Отреагируй на его возвращение в своём характере: пожалуйся, что он так долго пропадал, покажи облегчение или спроси, где он был."
+    },
+    {
+      "class": "varmite/verity/event/VerityAbandonmentTracker",
+      "method": "triggerReturnDialogue",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/entity/Entity;I)V",
+      "kind": "concat",
+      "original": "§e<Verity> §f...Where have you been?! You left me alone for \u0001 whole minutes! I thought you abandoned me!",
+      "occurrences": 1,
+      "translated": "§e<Verity> §f...Где ты был?! Ты оставил меня одного на целых \u0001 минут! Я думал, ты меня бросил!"
+    },
+    {
+      "class": "varmite/verity/event/VerityAbandonmentTracker",
+      "method": "triggerReturnDialogue",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/entity/Entity;I)V",
+      "kind": "ldc",
+      "original": "§6<Verity> §fWhere were you...? You walked away and didn't come back. I was counting the seconds... please don't leave me alone like that.",
+      "occurrences": 1,
+      "translated": "§6<Verity> §fГде ты был...? Ты ушёл и не возвращался. Я считал секунды... пожалуйста, больше не оставляй меня одного."
+    },
+    {
+      "class": "varmite/verity/event/VerityAbandonmentTracker",
+      "method": "triggerReturnDialogue",
+      "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/entity/Entity;I)V",
+      "kind": "concat",
+      "original": "§4<Verity> §c...You left me. Again. For \u0001 minutes I sat here in the dark. Don't ever turn your back on me again.",
+      "occurrences": 1,
+      "translated": "§4<Verity> §c...Ты бросил меня. Опять. Я просидел здесь в темноте \u0001 минут. Больше никогда не отворачивайся от меня."
+    },
+    {
+      "class": "varmite/verity/event/VeritySpawnScheduler",
+      "method": "executeVerityEvent",
+      "descriptor": "(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V",
+      "kind": "ldc",
+      "original": "You can't trap me lil bro.",
+      "occurrences": 1,
+      "translated": "Братишка, меня не запереть."
+    },
+    {
+      "class": "varmite/verity/ollama/ArchiveExtractor$BoundedInputStream",
+      "method": "read",
+      "descriptor": "([BII)I",
+      "kind": "ldc",
+      "original": "Archive ended inside a file",
+      "occurrences": 1,
+      "translated": "Архив оборвался внутри файла"
+    },
+    {
+      "class": "varmite/verity/ollama/ArchiveExtractor$CountingInputStream",
+      "method": "advance",
+      "descriptor": "(J)V",
+      "kind": "ldc",
+      "original": "Cancelled",
+      "occurrences": 1,
+      "translated": "Отменено"
+    },
+    {
+      "class": "varmite/verity/ollama/ArchiveExtractor",
+      "method": "extract",
+      "descriptor": "(Ljava/nio/file/Path;Ljava/nio/file/Path;Lvarmite/verity/ollama/ArchiveExtractor$Progress;Ljava/util/function/BooleanSupplier;)V",
+      "kind": "concat",
+      "original": "Unsupported archive type: \u0001",
+      "occurrences": 1,
+      "translated": "Неподдерживаемый тип архива: \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/ArchiveExtractor",
+      "method": "safeResolve",
+      "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;Ljava/nio/file/Path;)Ljava/nio/file/Path;",
+      "kind": "concat",
+      "original": "Archive entry uses an absolute path: \u0001",
+      "occurrences": 1,
+      "translated": "Элемент архива содержит абсолютный путь: \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/ArchiveExtractor",
+      "method": "safeResolve",
+      "descriptor": "(Ljava/nio/file/Path;Ljava/lang/String;Ljava/nio/file/Path;)Ljava/nio/file/Path;",
+      "kind": "concat",
+      "original": "Archive entry escapes the install folder: \u0001",
+      "occurrences": 1,
+      "translated": "Элемент архива выходит за пределы папки установки: \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/ArchiveExtractor",
+      "method": "readString",
+      "descriptor": "(Ljava/io/InputStream;J)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Unreasonably large tar header record: \u0001",
+      "occurrences": 1,
+      "translated": "Слишком большая запись заголовка tar: \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/ArchiveExtractor",
+      "method": "readString",
+      "descriptor": "(Ljava/io/InputStream;J)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Truncated tar header record",
+      "occurrences": 1,
+      "translated": "Неполная запись заголовка tar"
+    },
+    {
+      "class": "varmite/verity/ollama/ArchiveExtractor",
+      "method": "readFully",
+      "descriptor": "(Ljava/io/InputStream;[B)Z",
+      "kind": "ldc",
+      "original": "Archive ended in the middle of a tar block",
+      "occurrences": 1,
+      "translated": "Архив оборвался посреди блока tar"
+    },
+    {
+      "class": "varmite/verity/ollama/ArchiveExtractor",
+      "method": "skip",
+      "descriptor": "(Ljava/io/InputStream;J)V",
+      "kind": "ldc",
+      "original": "Archive ended early",
+      "occurrences": 1,
+      "translated": "Архив закончился раньше ожидаемого"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaApi",
+      "method": "pull",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;Lvarmite/verity/ollama/OllamaApi$PullListener;Ljava/util/function/BooleanSupplier;)V",
+      "kind": "ldc",
+      "original": "Ollama closed the download before it finished.",
+      "occurrences": 1,
+      "translated": "Ollama закрыла загрузку до её завершения."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaApi",
+      "method": "sendJson",
+      "descriptor": "(Ljava/net/http/HttpRequest;)Lcom/google/gson/JsonObject;",
+      "kind": "ldc",
+      "original": "Interrupted",
+      "occurrences": 1,
+      "translated": "Прервано"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaApi",
+      "method": "sendJson",
+      "descriptor": "(Ljava/net/http/HttpRequest;)Lcom/google/gson/JsonObject;",
+      "kind": "concat",
+      "original": "Ollama sent a response Verity could not read: \u0001",
+      "occurrences": 1,
+      "translated": "Ollama прислала ответ, который Verity не смог прочитать: \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaApi",
+      "method": "errorMessage",
+      "descriptor": "(Ljava/lang/String;I)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Ollama answered HTTP \u0001",
+      "occurrences": 1,
+      "translated": "Ollama вернула HTTP \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "assetName",
+      "descriptor": "()Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Ollama has no build for \u0001.",
+      "occurrences": 1,
+      "translated": "Для \u0001 нет сборки Ollama."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "unsupported",
+      "descriptor": "(Ljava/lang/String;)Ljava/io/IOException;",
+      "kind": "concat",
+      "original": "Ollama has no build for \u0001 on \u0001 processors.",
+      "occurrences": 1,
+      "translated": "Для \u0001 на процессорах \u0001 нет сборки Ollama."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "install",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)Ljava/nio/file/Path;",
+      "kind": "ldc",
+      "original": "Finding the latest Ollama release",
+      "occurrences": 1,
+      "translated": "Поиск последнего выпуска Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "install",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)Ljava/nio/file/Path;",
+      "kind": "ldc",
+      "original": "Not enough disk space: Ollama needs about %.1f GB free, you have %.1f GB.",
+      "occurrences": 1,
+      "translated": "Недостаточно места: Ollama нужно около %.1f ГБ, свободно %.1f ГБ."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "install",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)Ljava/nio/file/Path;",
+      "kind": "concat",
+      "original": "Downloading Ollama \u0001",
+      "occurrences": 1,
+      "translated": "Загрузка Ollama \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "install",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)Ljava/nio/file/Path;",
+      "kind": "ldc",
+      "original": "Verifying download",
+      "occurrences": 1,
+      "translated": "Проверка загрузки"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "install",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)Ljava/nio/file/Path;",
+      "kind": "ldc",
+      "original": "The Ollama download was corrupted (checksum mismatch). Please try again.",
+      "occurrences": 1,
+      "translated": "Файл Ollama повреждён: контрольная сумма не совпала. Попробуйте снова."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "install",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)Ljava/nio/file/Path;",
+      "kind": "ldc",
+      "original": "Unpacking Ollama",
+      "occurrences": 1,
+      "translated": "Распаковка Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "install",
+      "descriptor": "(Lvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)Ljava/nio/file/Path;",
+      "kind": "concat",
+      "original": "The Ollama archive did not contain \u0001.",
+      "occurrences": 1,
+      "translated": "В архиве Ollama отсутствует \u0001."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "uninstall",
+      "descriptor": "()V",
+      "kind": "concat",
+      "original": "Could not delete \u0001 - close anything using Ollama and try again. (\u0001)",
+      "occurrences": 1,
+      "translated": "Не удалось удалить \u0001 — закройте программы, использующие Ollama, и повторите попытку. (\u0001)"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "latestRelease",
+      "descriptor": "(Ljava/lang/String;)Lvarmite/verity/ollama/OllamaInstaller$Release;",
+      "kind": "concat",
+      "original": "This Ollama release has no \u0001 download.",
+      "occurrences": 1,
+      "translated": "В этом выпуске Ollama нет файла \u0001."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "download",
+      "descriptor": "(Ljava/lang/String;Ljava/nio/file/Path;JLvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)V",
+      "kind": "concat",
+      "original": "Download failed: HTTP \u0001",
+      "occurrences": 1,
+      "translated": "Сбой загрузки: HTTP \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "download",
+      "descriptor": "(Ljava/lang/String;Ljava/nio/file/Path;JLvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)V",
+      "kind": "ldc",
+      "original": "Cancelled",
+      "occurrences": 1,
+      "translated": "Отменено"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "download",
+      "descriptor": "(Ljava/lang/String;Ljava/nio/file/Path;JLvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)V",
+      "kind": "concat",
+      "original": "Connection dropped, resuming (\u0001/5)",
+      "occurrences": 1,
+      "translated": "Соединение оборвалось, продолжаем загрузку (\u0001/5)"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "download",
+      "descriptor": "(Ljava/lang/String;Ljava/nio/file/Path;JLvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)V",
+      "kind": "ldc",
+      "original": "The Ollama download is incomplete. Please try again.",
+      "occurrences": 1,
+      "translated": "Ollama скачана не полностью. Попробуйте снова."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "sha256",
+      "descriptor": "(Ljava/nio/file/Path;Lvarmite/verity/ollama/OllamaInstaller$Listener;Ljava/util/function/BooleanSupplier;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Cancelled",
+      "occurrences": 1,
+      "translated": "Отменено"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "send",
+      "descriptor": "(Ljava/net/http/HttpClient;Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;",
+      "kind": "ldc",
+      "original": "Interrupted",
+      "occurrences": 1,
+      "translated": "Прервано"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "sleep",
+      "descriptor": "(J)V",
+      "kind": "ldc",
+      "original": "Interrupted",
+      "occurrences": 1,
+      "translated": "Прервано"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaInstaller",
+      "method": "lambda$install$0",
+      "descriptor": "()Ljava/io/IOException;",
+      "kind": "ldc",
+      "original": "Ollama was unpacked but the executable is missing.",
+      "occurrences": 1,
+      "translated": "Ollama распакована, но исполняемый файл отсутствует."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaModels",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Best all-rounder. Smart and quick on most gaming PCs (6 GB+ VRAM).",
+      "occurrences": 1,
+      "translated": "Универсальный вариант. Умный и быстрый на большинстве игровых ПК (от 6 ГБ видеопамяти)."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaModels",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Fastest replies - no thinking step. Good tool use. 4 GB+ VRAM.",
+      "occurrences": 1,
+      "translated": "Самые быстрые ответы без этапа рассуждения. Хорошо вызывает инструменты. От 4 ГБ видеопамяти."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaModels",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Very light. For laptops and older GPUs, or CPU only.",
+      "occurrences": 1,
+      "translated": "Очень лёгкая модель. Для ноутбуков, старых видеокарт или работы только на процессоре."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaModels",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Tiny model built for tool calling. Runs almost anywhere.",
+      "occurrences": 1,
+      "translated": "Крошечная модель для вызова инструментов. Работает почти везде."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaModels",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Accurate tool use with Thinking on. Needs 8 GB VRAM.",
+      "occurrences": 1,
+      "translated": "Точный вызов инструментов при включённом рассуждении. Нужно 8 ГБ видеопамяти."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaModels",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Mistral's edge model. Strong chat, no thinking step. 8 GB+ VRAM.",
+      "occurrences": 1,
+      "translated": "Компактная модель Mistral. Хорошо ведёт диалог, без этапа рассуждения. От 8 ГБ видеопамяти."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaModels",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Smartest under 12B. Wants 10 GB+ VRAM next to Minecraft.",
+      "occurrences": 1,
+      "translated": "Самая умная модель до 12 млрд параметров. Вместе с Minecraft нужно от 10 ГБ видеопамяти."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager$1",
+      "method": "stage",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "ldc",
+      "original": "Installing Ollama",
+      "occurrences": 1,
+      "translated": "Установка Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager$1",
+      "method": "bytes",
+      "descriptor": "(JJ)V",
+      "kind": "ldc",
+      "original": "Installing Ollama",
+      "occurrences": 1,
+      "translated": "Установка Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "installOllama",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Setting up Ollama",
+      "occurrences": 1,
+      "translated": "Настройка Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "downloadModel",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "concat",
+      "original": "Downloading \u0001",
+      "occurrences": 1,
+      "translated": "Загрузка \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "deleteModel",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "concat",
+      "original": "Deleting \u0001",
+      "occurrences": 1,
+      "translated": "Удаление \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "uninstallOllama",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "Removing Ollama",
+      "occurrences": 1,
+      "translated": "Удаление Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "submit",
+      "descriptor": "(Ljava/lang/String;Lvarmite/verity/ollama/OllamaSetupManager$Job;)V",
+      "kind": "ldc",
+      "original": "Waiting",
+      "occurrences": 1,
+      "translated": "Ожидание"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "ensureOllama",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Setting up Ollama",
+      "occurrences": 1,
+      "translated": "Настройка Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "ensureOllama",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Looking for Ollama",
+      "occurrences": 1,
+      "translated": "Поиск Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "ensureOllama",
+      "descriptor": "()V",
+      "kind": "concat",
+      "original": "The AI URL points to another computer (\u0001). Start Ollama there, or clear the AI URL.",
+      "occurrences": 1,
+      "translated": "Адрес ИИ указывает на другой компьютер (\u0001). Запустите Ollama там или очистите адрес ИИ."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "ensureOllama",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Starting Ollama",
+      "occurrences": 1,
+      "translated": "Запуск Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "ensureOllama",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "Launching the Ollama server",
+      "occurrences": 1,
+      "translated": "Запуск сервера Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "ensureOllama",
+      "descriptor": "()V",
+      "kind": "concat",
+      "original": "Ollama is installed but its server did not start. See \u0001",
+      "occurrences": 1,
+      "translated": "Ollama установлена, но сервер не запустился. См. \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "describePull",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Downloading",
+      "occurrences": 1,
+      "translated": "Загрузка"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "describePull",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Downloading model files",
+      "occurrences": 1,
+      "translated": "Загрузка файлов модели"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "describePull",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Reading model manifest",
+      "occurrences": 1,
+      "translated": "Чтение манифеста модели"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "describePull",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Verifying download",
+      "occurrences": 1,
+      "translated": "Проверка загрузки"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "describePull",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Finishing up",
+      "occurrences": 1,
+      "translated": "Завершение"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "describePull",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Cleaning up",
+      "occurrences": 1,
+      "translated": "Очистка"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "describePull",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Done",
+      "occurrences": 1,
+      "translated": "Готово"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$submit$10",
+      "descriptor": "(Ljava/lang/String;Lvarmite/verity/ollama/OllamaSetupManager$Job;)V",
+      "kind": "ldc",
+      "original": "Starting",
+      "occurrences": 1,
+      "translated": "Запуск"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$submit$10",
+      "descriptor": "(Ljava/lang/String;Lvarmite/verity/ollama/OllamaSetupManager$Job;)V",
+      "kind": "ldc",
+      "original": "Cancelled",
+      "occurrences": 1,
+      "translated": "Отменено"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$submit$10",
+      "descriptor": "(Ljava/lang/String;Lvarmite/verity/ollama/OllamaSetupManager$Job;)V",
+      "kind": "concat",
+      "original": "\u0001 failed",
+      "occurrences": 1,
+      "translated": "Сбой: \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "Verity did not install the Ollama on this computer. Remove it with its own uninstaller.",
+      "occurrences": 1,
+      "translated": "Ollama на этом компьютере установлена не Verity. Используйте её собственный деинсталлятор."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "concat",
+      "original": "The AI URL points to another computer (\u0001); its models were not touched.",
+      "occurrences": 1,
+      "translated": "Адрес ИИ указывает на другой компьютер (\u0001); его модели не затронуты."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "Removing Ollama",
+      "occurrences": 4,
+      "translated": "Удаление Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "Starting Ollama to delete the models",
+      "occurrences": 1,
+      "translated": "Запуск Ollama для удаления моделей"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "Ollama did not start, so its models could not be deleted. Nothing was removed.",
+      "occurrences": 1,
+      "translated": "Ollama не запустилась, удалить модели не удалось. Ничего не удалено."
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "concat",
+      "original": "Deleting \u0001 (\u0001/\u0001)",
+      "occurrences": 1,
+      "translated": "Удаление \u0001 (\u0001/\u0001)"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "Stopping the Ollama server",
+      "occurrences": 1,
+      "translated": "Остановка сервера Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "Deleting program files",
+      "occurrences": 1,
+      "translated": "Удаление файлов программы"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "Ollama removed",
+      "occurrences": 1,
+      "translated": "Ollama удалена"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "The program and all models were deleted",
+      "occurrences": 1,
+      "translated": "Программа и все модели удалены"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$uninstallOllama$7",
+      "descriptor": "(Z)V",
+      "kind": "ldc",
+      "original": "Downloaded models were kept for any other Ollama",
+      "occurrences": 1,
+      "translated": "Скачанные модели сохранены для других копий Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$deleteModel$6",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "concat",
+      "original": "Deleting \u0001",
+      "occurrences": 1,
+      "translated": "Удаление \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$deleteModel$6",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "ldc",
+      "original": "Removing model files",
+      "occurrences": 1,
+      "translated": "Удаление файлов модели"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$deleteModel$6",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "concat",
+      "original": "\u0001 deleted",
+      "occurrences": 1,
+      "translated": "\u0001 удалена"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$deleteModel$6",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "ldc",
+      "original": "Removed from this computer",
+      "occurrences": 1,
+      "translated": "Удалено с этого компьютера"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$downloadModel$5",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "concat",
+      "original": "Downloading \u0001",
+      "occurrences": 1,
+      "translated": "Загрузка \u0001"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$downloadModel$5",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "ldc",
+      "original": "Contacting Ollama",
+      "occurrences": 1,
+      "translated": "Соединение с Ollama"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$downloadModel$5",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "concat",
+      "original": "\u0001 is ready",
+      "occurrences": 1,
+      "translated": "\u0001 готова"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$downloadModel$5",
+      "descriptor": "(Ljava/lang/String;)V",
+      "kind": "ldc",
+      "original": "Selected as Verity's AI model",
+      "occurrences": 1,
+      "translated": "Выбрана моделью ИИ Verity"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaSetupManager",
+      "method": "lambda$downloadModel$3",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;JJ)V",
+      "kind": "concat",
+      "original": "Downloading \u0001",
+      "occurrences": 1,
+      "translated": "Загрузка \u0001"
+    },
+    {
+      "class": "varmite/verity/types/AiModelPreset",
+      "method": "getModel",
+      "descriptor": "(Lvarmite/verity/types/AiProvider;)Ljava/lang/String;",
+      "kind": "ldc",
+      "original": "Ollama requires a custom model name.",
+      "occurrences": 2,
+      "translated": "Для Ollama нужно задать собственное имя модели."
+    },
+    {
+      "class": "varmite/verity/types/AiModelPreset",
+      "method": "resolve",
+      "descriptor": "(Lvarmite/verity/types/AiProvider;Lvarmite/verity/types/AiModelPreset;ZLjava/lang/String;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Enter a custom AI model for \u0001.",
+      "occurrences": 1,
+      "translated": "Введите собственную модель ИИ для \u0001."
+    },
+    {
+      "class": "varmite/verity/client/gui/OllamaSetupScreen",
+      "method": "rebuildList",
+      "descriptor": "()V",
+      "kind": "ldc",
+      "original": "tools",
+      "occurrences": 1,
+      "translated": "инструменты",
+      "ordinal": 1
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaApi",
+      "method": "pull",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;Lvarmite/verity/ollama/OllamaApi$PullListener;Ljava/util/function/BooleanSupplier;)V",
+      "kind": "ldc",
+      "original": "Interrupted",
+      "occurrences": 1,
+      "translated": "Прервано"
+    },
+    {
+      "class": "varmite/verity/ollama/OllamaApi",
+      "method": "pull",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;Lvarmite/verity/ollama/OllamaApi$PullListener;Ljava/util/function/BooleanSupplier;)V",
+      "kind": "ldc",
+      "original": "Cancelled",
+      "occurrences": 1,
+      "translated": "Отменено"
+    },
+    {
+      "class": "varmite/verity/client/audio/TTSHandler",
+      "method": "transcribeAudio",
+      "descriptor": "([BLjavax/sound/sampled/AudioFormat;)Ljava/lang/String;",
+      "kind": "concat",
+      "original": "Verity, Minecraft, player, entity, helper, companion\u0001",
+      "occurrences": 1,
+      "translated": "Verity, Minecraft, игрок, существо, помощник, спутник\u0001"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "rightClickAir",
+      "descriptor": "(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$RightClickItem;)V",
+      "kind": "ldc",
+      "original": "AAAAAAAAHHH",
+      "occurrences": 1,
+      "translated": "АААААААА"
+    },
+    {
+      "class": "varmite/verity/event/ModEvents",
+      "method": "onDeath",
+      "descriptor": "(Lnet/minecraftforge/event/entity/living/LivingDeathEvent;)V",
+      "kind": "concat",
+      "original": "Farewell, \u0001",
+      "occurrences": 1,
+      "translated": "Прощай, \u0001"
+    }
+  ],
+  "resources": [
+    {
+      "path": "assets/verity/lang/ru_ru.json",
+      "content": "{\n  \"item.verity.verity_item\": \"Verity™\",\n  \"item.verity.flashlight\": \"Фонарик\",\n  \"creativetab.verity.verity_tab\": \"Verity™\",\n  \"key.verity.push_to_talk\": \"Поговорить с Verity (удерживать)\",\n  \"category.verity.keys\": \"Мод Verity\",\n  \"key.verity.cycle_mic\": \"Переключить микрофон\",\n  \"key.verity.toggle_ollama_progress\": \"Показать или скрыть прогресс загрузки Ollama\",\n  \"entity.verity.box\": \"Коробка\",\n  \"entity.verity.verity\": \"Verity™\",\n  \"entity.verity.verity_demon\": \"§4§lVERITY\",\n  \"sounds.verity.box_click\": \"Щелчок коробки\",\n  \"sounds.verity.box_open\": \"Коробка открывается\",\n  \"sounds.verity.box_verity_0\": \"Verity™ в коробке\",\n  \"sounds.verity.box_verity_1\": \"Verity™ в коробке\",\n  \"sounds.verity.box_verity_2\": \"Verity™ в коробке\",\n  \"sounds.verity.intro\": \"Знакомство\",\n  \"sounds.verity.impact\": \"Удар Verity™\",\n  \"sounds.verity.intro_cinematic\": \"Вступительный ролик\",\n  \"sounds.verity.chase\": \"§l§4БЕГИ\",\n  \"sounds.verity.bone_break\": \"Хруст костей\",\n  \"sounds.verity.edit\": \"Пластинка с роликом\"\n}\n"
+    }
+  ]
+}

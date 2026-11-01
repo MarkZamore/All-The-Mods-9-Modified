@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "provider": "ollama",
+  "model": "qwen3:1.7b",
+  "modId": "verity",
+  "modPath": "mods/verity-6.0.0-ru.1.jar",
+  "modSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+  "reserveMemoryMb": 3072,
+  "language": "ru",
+  "recipeFile": "launcher/ollama-recipe.json",
+  "recipeSha256": "cee8f1ad0e81cd13f6977eb1dba15131264388f4702b37a6f162b220d34b39e4"
+}

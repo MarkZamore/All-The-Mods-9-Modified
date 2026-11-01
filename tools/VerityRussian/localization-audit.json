@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "status": "FROZEN_JAR_AND_OFFLINE_NATIVE_QA_PASS_CLIENT_ACCEPTANCE_PENDING",
+  "authorSha256": "f76f641f17ea3e3b2e8486596790ae65c27c2b016fae6ed8557c67887816b7d0",
+  "derivativeSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+  "derivativeSize": 288260277,
+  "version": "6.0.0-ru.1",
+  "modId": "verity",
+  "freshProvenance": "Official author file9300987 freshly downloaded; official Maven ASM and Sherpa/Piper models freshly downloaded; new inventory/translations/offline patcher. No previous Modified helpers, source, model cache or patches used to produce this derivative.",
+  "jvmVerification": {
+    "XverifyAll": true,
+    "gameplayMethodsStructurallyInvariant": 531,
+    "changedOriginalClasses": 39,
+    "displayNameMethodsAdded": 4,
+    "requiredNameMethodAdded": 1,
+    "newExecutableClasses": 0,
+    "positiveAndNegativeRussianLatinCustomNameCases": true,
+    "enumSerializationIdentity": true,
+    "evidence": "verify-patch.log"
+  },
+  "reproducibleRebuild": {
+    "firstSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+    "secondSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+    "size": 288260277,
+    "exactByteRebuild": true,
+    "negativeChecks": [
+      {
+        "check": "source-preservation",
+        "result": "PASS",
+        "reason": "The immutable author source and derivative output must be separate files"
+      },
+      {
+        "check": "wrong-source-hash",
+        "result": "PASS",
+        "reason": "Only exact official Verity 6.0.0 file9300987 is supported"
+      }
+    ]
+  },
+  "localization": {
+    "freshTranslationKeys": 454,
+    "nativeResourceKeys": 21,
+    "sourcePromptStructureAndPlaceholdersPreserved": true,
+    "uiEnumLabelsLocalizedWithoutChangingEnumNames": true,
+    "cyrillicSpeechNamesAndTypedChatAliases": true,
+    "technicalIdsToolNamesRegistryIdsAndConfigKeysPreserved": true,
+    "rawExternalErrorTextAndDeveloperDiagnostics": "May remain in original language; not presented as full translation of third-party exception messages."
+  },
+  "nativeSpeech": {
+    "assetsExtractedFromFinalJarAndMatchedToOfficialPins": {
+      "jarSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+      "checks": [
+        {
+          "path": "piper/ru_RU-denis-medium.onnx",
+          "size": 63201422,
+          "sha256": "f0129d8cbd0fef7df16a101d0cd302b25a8fd8bbda7b11af885b1e9f3e974dcf",
+          "matchesOfficialPin": true
+        },
+        {
+          "path": "piper/tokens.txt",
+          "size": 907,
+          "sha256": "2619c1a9de1bcf928162f40c583caf39368cfd6b2340c7bcad51dc634411ec36",
+          "matchesOfficialPin": true
+        },
+        {
+          "path": "piper/MODEL_CARD-ru-denis",
+          "size": 275,
+          "sha256": "f037c8ec8b6574de644bf9e5916c749e83d4ff297facd97895b56d733f6ba3fe",
+          "matchesOfficialPin": true
+        },
+        {
+          "path": "whisper/base-encoder.int8.onnx",
+          "size": 29120534,
+          "sha256": "0b8fb1304b6109976038efff5ace81720e00386f3ff6b54ee8c75291ca0a1e11",
+          "matchesOfficialPin": true
+        },
+        {
+          "path": "whisper/base-decoder.int8.onnx",
+          "size": 130672026,
+          "sha256": "9759d217388a01b3a4c7c15533201067b48ae819c4daafc8624e64b9409dc02d",
+          "matchesOfficialPin": true
+        },
+        {
+          "path": "whisper/base-tokens.txt",
+          "size": 816730,
+          "sha256": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126",
+          "matchesOfficialPin": true
+        }
+      ],
+      "nativeTtsAndStt": true,
+      "microphone": false,
+      "playback": false,
+      "cloud": false
+    },
+    "actualTts": [
+      {
+        "kind": "TTS",
+        "file": "line-0",
+        "text": "Привет! Это проверка русской речи.",
+        "samples": 50707,
+        "sampleRate": 22050
+      }
+    ],
+    "actualStt": [
+      {
+        "kind": "STT",
+        "file": "sapi-independent.wav",
+        "text": " Привет Я верите поставь факел возле дома Найди железную руду в пещере",
+        "samples": 160932,
+        "sampleRate": 16000
+      },
+      {
+        "kind": "STT",
+        "file": "box_verity_0.ogg",
+        "text": " Привет!",
+        "samples": 25603,
+        "sampleRate": 16000
+      },
+      {
+        "kind": "STT",
+        "file": "box_verity_2.ogg",
+        "text": " Кто-нибудь здесь?",
+        "samples": 33461,
+        "sampleRate": 16000
+      },
+      {
+        "kind": "STT",
+        "file": "intro.ogg",
+        "text": " Привет! Я верите твой личный друг и помощник. Прошивая, чем угодно. Я знаю все!",
+        "samples": 105379,
+        "sampleRate": 16000
+      }
+    ],
+    "independentFixtureReference": "Привет! Я Верити. Поставь факел возле дома. Найди железную руду в пещере.",
+    "independentFixtureSource": "Installed Microsoft Irina Desktop SAPI voice, synthesized locally into a private QA WAV; no microphone",
+    "limitations": "Raw recognition sometimes spells Verity as верите; actual patched native normalizer maps it. Piper roundtrip can contain word errors. No error-free speech or human listening PASS is claimed.",
+    "microphone": false,
+    "cloud": false,
+    "playback": false
+  },
+  "microphoneClassProof": [
+    {
+      "class": "varmite/verity/client/audio/MicrophoneRecorder.class",
+      "oldSha256": "feaf54de33b7ddedb978d67a891441726f8a1cc63763d5d761a307793c0701cb",
+      "newSha256": "feaf54de33b7ddedb978d67a891441726f8a1cc63763d5d761a307793c0701cb",
+      "byteIdentical": true
+    },
+    {
+      "class": "varmite/verity/client/audio/MicrophoneManager.class",
+      "oldSha256": "0a9b3c0beaffd297cf58f44a5b096d23cec66c10499a802da894f5c2fca633db",
+      "newSha256": "8cd67e05681acc4f6cd863424547e884b4dcbdaef4dbf747047b005b902bd188",
+      "byteIdentical": false
+    },
+    {
+      "class": "varmite/verity/client/KeybindHandler.class",
+      "oldSha256": "1b9a3e6173daac5f79f97990768acc31475dee183cb2ee083dd8b843a605c95b",
+      "newSha256": "1b9a3e6173daac5f79f97990768acc31475dee183cb2ee083dd8b843a605c95b",
+      "byteIdentical": true
+    },
+    {
+      "class": "varmite/verity/client/KeybindRegistry.class",
+      "oldSha256": "098debd1cb85b294a99264c33a70999a65ed6b91708d574cb9c67100eacb2a7f",
+      "newSha256": "098debd1cb85b294a99264c33a70999a65ed6b91708d574cb9c67100eacb2a7f",
+      "byteIdentical": true
+    }
+  ],
+  "authoredAudio": [
+    {
+      "path": "assets/verity/sounds/box_verity_0.ogg",
+      "oldSize": 9936,
+      "newSize": 7190,
+      "oldSha256": "bd454db908bc53f367ae0e5ae32de0e4aca8b3cb6af7bfbc6a753b98c6c0ddd1",
+      "newSha256": "877c7430564adaf05c767e1ac586cb1efc685bba4e53bc04acac2862a3c92156",
+      "unchanged": false
+    },
+    {
+      "path": "assets/verity/sounds/box_verity_1.ogg",
+      "oldSize": 7217,
+      "newSize": 7217,
+      "oldSha256": "9960e852b4f888ab8f32c367b9513e87aab205a75e39a570f321ec55b3557844",
+      "newSha256": "9960e852b4f888ab8f32c367b9513e87aab205a75e39a570f321ec55b3557844",
+      "unchanged": true
+    },
+    {
+      "path": "assets/verity/sounds/box_verity_2.ogg",
+      "oldSize": 9470,
+      "newSize": 10090,
+      "oldSha256": "d0b81a4409a4b0591f74ceff5f992cf4257eeb6bccf8dbb276cd7d3d4713df6c",
+      "newSha256": "a3d56ad206db633da94716c031c88031d95966c5968825c7f1692504b6c9a91c",
+      "unchanged": false
+    },
+    {
+      "path": "assets/verity/sounds/intro.ogg",
+      "oldSize": 106163,
+      "newSize": 37468,
+      "oldSha256": "9cc93d969c13496fa2ec647eb2b45a9650b7de9b5793fafdab8bc41b7c30ffb7",
+      "newSha256": "5854f7c20aff09e4272a48c28928aea2853af1765c1b726f88e037257455a31c",
+      "unchanged": false
+    },
+    {
+      "path": "assets/verity/sounds/intro_video_audio.ogg",
+      "oldSize": 107273,
+      "newSize": 107273,
+      "oldSha256": "cc5668f18e4edb265ed2583b7d7c9618dec9fb31ac2029f1e5d6b179913975dc",
+      "newSha256": "cc5668f18e4edb265ed2583b7d7c9618dec9fb31ac2029f1e5d6b179913975dc",
+      "unchanged": true
+    }
+  ],
+  "audioAdaptation": "User-authorized context adaptation for box0/box2; intro translated by meaning of clear original. Non-speech boxed/cinematic effects and all other music retained.",
+  "video": {
+    "frames": 248,
+    "allOriginalFrameHashesPreserved": true,
+    "visualReview": "All248frames examined in analysis contact sheet plus six original-resolution samples. Only character animation and Verity JE brand appear; no English instructions/dialogue found.",
+    "brandTranslated": false,
+    "evidence": "video-review/all248-analysis-contact-sheet.jpg"
+  },
+  "unchangedOriginalEntryCount": 513,
+  "sourceFiles": [
+    {
+      "path": "tools/VerityRussian/audio/box_verity_0.ogg",
+      "sha256": "877c7430564adaf05c767e1ac586cb1efc685bba4e53bc04acac2862a3c92156",
+      "size": 7190
+    },
+    {
+      "path": "tools/VerityRussian/audio/box_verity_2.ogg",
+      "sha256": "a3d56ad206db633da94716c031c88031d95966c5968825c7f1692504b6c9a91c",
+      "size": 10090
+    },
+    {
+      "path": "tools/VerityRussian/audio/intro.ogg",
+      "sha256": "5854f7c20aff09e4272a48c28928aea2853af1765c1b726f88e037257455a31c",
+      "size": 37468
+    },
+    {
+      "path": "tools/VerityRussian/audio.json",
+      "sha256": "b24c66af4f34b235a90db7514e66bda0db114012f918b90a3d073ef8509b3ae8",
+      "size": 2003
+    },
+    {
+      "path": "tools/VerityRussian/lib/asm-9.8.jar",
+      "sha256": "876eab6a83daecad5ca67eb9fcabb063c97b5aeb8cf1fca7a989ecde17522051",
+      "size": 126113
+    },
+    {
+      "path": "tools/VerityRussian/lib/asm-tree-9.8.jar",
+      "sha256": "14b7880cb7c85eed101e2710432fc3ffb83275532a6a894dc4c4095d49ad59f1",
+      "size": 51934
+    },
+    {
+      "path": "tools/VerityRussian/licenses/ASM-BSD3.txt",
+      "sha256": "5425882150ac9e047570c80b947f8064fc4c93c4d5e8aca6a927673dc623ddb5",
+      "size": 1594
+    },
+    {
+      "path": "tools/VerityRussian/licenses/Piper-Denis-MODEL_CARD.txt",
+      "sha256": "f037c8ec8b6574de644bf9e5916c749e83d4ff297facd97895b56d733f6ba3fe",
+      "size": 275
+    },
+    {
+      "path": "tools/VerityRussian/licenses/Whisper-MIT.txt",
+      "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d",
+      "size": 1063
+    },
+    {
+      "path": "tools/VerityRussian/README.md",
+      "sha256": "3715f6629768e2e8e3c581b0b0992b0cd25284d4955d6b41855b1d60b8176c01",
+      "size": 5463
+    },
+    {
+      "path": "tools/VerityRussian/speech-pins.json",
+      "sha256": "d2b61ada896c8fbfe603de0645e5ea36dccb4669e60f5e1ae429aeae1927cc27",
+      "size": 2685
+    },
+    {
+      "path": "tools/VerityRussian/translations.json",
+      "sha256": "041714a6e7f2ace66b5694501061d1054dbf1c1405e184c21e67bec5b705ca69",
+      "size": 181357
+    },
+    {
+      "path": "tools/VerityRussian/VerifyPatch.java",
+      "sha256": "5681895d60aebbc11b98adca639ed3787979cf00e44b84b6e11c66f75df71633",
+      "size": 7936
+    },
+    {
+      "path": "tools/VerityRussian/VerifySpeech.java",
+      "sha256": "4394608a3fc6fc096d2642f341d41010ad36f2a66e8b7f697a4695c6a23055d6",
+      "size": 5899
+    },
+    {
+      "path": "tools/VerityRussian/verity.xml",
+      "sha256": "df8126ce82289eefd4e8ff6b6ba73e5ef517764f3efc98944421f04ad6c79620",
+      "size": 17110
+    },
+    {
+      "path": "tools/VerityRussian/VerityBinaryPatch.java",
+      "sha256": "64ed834b2a41acfb2e336911e08f32f31314367015b61b357f21481804c82185",
+      "size": 15082
+    },
+    {
+      "path": "tools/verity_russian.py",
+      "sha256": "398ad6329144ddf1a683e5c3dad24bc18c74866b0c82ad8ab5ed1b47ad5b06f6",
+      "size": 17124
+    }
+  ],
+  "pending": [
+    "Full final client and new test world launch with this exact JAR; review logs/crash reports against baseline.",
+    "Native Verity Ollama chat inference and game-owned backend lifetime acceptance with launcher provisioning.",
+    "Native Minecraft pack.mcmeta serializer proof in final client (pack.mcmeta bytes are exact author format15)."
+  ]
+}

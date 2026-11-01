@@ -1,0 +1,2074 @@
+{
+  "schemaVersion": 1,
+  "basis": "Clean original ATM9 1.1.1; no previous Modified payload or implementation reused",
+  "baseReplacements": [
+    {
+      "path": "config/ftbquests/quests/chapters/ad_astra.snbt",
+      "originalSha256": "efcde3776d67d8723191730ed3b8ca969eff391b73610706289a04f265096c77",
+      "originalSizeBytes": 21721,
+      "sha256": "29d4f232e47fb1f8a7435c0e6ffd40f2922380111935249925e2d2cc336e5d60",
+      "sizeBytes": 22351,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/alchemistry.snbt",
+      "originalSha256": "71e849daff6c134dfa71e99e9b329e029bce84fbe734ee79e9a437ada5605bb3",
+      "originalSizeBytes": 66652,
+      "sha256": "98d974dbb394d839da5ebbec870c57507e354598b010709dad9065e83e286b96",
+      "sizeBytes": 66644,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/apotheosis.snbt",
+      "originalSha256": "64be61b4ea2085b84cf555fe3607525024026c7eb59068ca369a00a65af02769",
+      "originalSizeBytes": 22899,
+      "sha256": "3f5724af51b98feb3864487c44ef078626df96113383cdf71bd75479e77def7b",
+      "sizeBytes": 23002,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/apotheosis_2.snbt",
+      "originalSha256": "27017a81ecc3940fae0279e99349668e512530db2b7da3414215a05114a3370c",
+      "originalSizeBytes": 10494,
+      "sha256": "f19106055e30ccfaf4fed204143acefa534e247e40adb56c46def39451e6867a",
+      "sizeBytes": 10525,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/apotheosis_gear.snbt",
+      "originalSha256": "6205bb6d365dfca999e06e84ff78758ed8fa3dd96e9b2cc59066f6ec8842c37a",
+      "originalSizeBytes": 14039,
+      "sha256": "600cd7be8f64e2d74b2923574585088a989407feec7148814ac0073d15006964",
+      "sizeBytes": 14059,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/applied_energistics_2.snbt",
+      "originalSha256": "6bfcf65a89cd4729df963a91af17ab60b0b15731c58ed2d4e3a8629f1ab9996d",
+      "originalSizeBytes": 44715,
+      "sha256": "7cacaf747ccffe8a72d0448764d85c1e8f5a7f3c4fa7ee7b2a1439b50ccdbe1d",
+      "sizeBytes": 45354,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/basic_power.snbt",
+      "originalSha256": "a27f3a1c41c807801b5613763bbb16f8a58b32ed31ecfcbfcae06e52c87963d5",
+      "originalSizeBytes": 19757,
+      "sha256": "d415d42f7337e6e5c2a2cda7c48ca1e3d35f02ebfdaa3d563de19843bbd34611",
+      "sizeBytes": 19935,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/bounty_board.snbt",
+      "originalSha256": "23a98196b6a64e043b9a998c2f6f53c751e5795add8c8690b1008a6a899718c0",
+      "originalSizeBytes": 26484,
+      "sha256": "f59bbd7d2273dba6f255668ce79bd4d22b035a2e6df7ac53c86cd4cbca5661c3",
+      "sizeBytes": 27510,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/cataclysm.snbt",
+      "originalSha256": "bfd19cf5ffd03d46b69810838802b120ff097c7ba3ae9f139966c44b2f4b5bf0",
+      "originalSizeBytes": 28778,
+      "sha256": "de7995c68b409e3e7bb35cd88cc5afba1406f69cbfe5ec5c4541b33121abf59e",
+      "sizeBytes": 28806,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/chapter_2.snbt",
+      "originalSha256": "8cd4a6b47f02af7f2bb150a786f4bca7c631a119ed80b498bc93c0bcf8255eec",
+      "originalSizeBytes": 73271,
+      "sha256": "8ac165014326f1392c7fdd39f6411f00fbc1632a016e4fb9e556bb1ccae077c4",
+      "sizeBytes": 73661,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/creative.snbt",
+      "originalSha256": "7c50e72dea7100382891e6616297085da462ce7a109e4ef91789b76f0b15060b",
+      "originalSizeBytes": 10371,
+      "sha256": "517e585d6e309dcb7324f3d71a43fb48f31dae1bc6138635ef6658dd66e64efe",
+      "sizeBytes": 10469,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/deep_resonance.snbt",
+      "originalSha256": "6a4aacb78cb9b6ff1c097c0d1188e0b0ff7cc2a6b150fa73c34128b28da51095",
+      "originalSizeBytes": 16373,
+      "sha256": "dd9d807c3487430073ceeef41e65d5ff0084296b618ae95d96732d09d8e230fb",
+      "sizeBytes": 16392,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/draconic_evolution.snbt",
+      "originalSha256": "787bba05c4dfeaa942d909d8f7b71e53ed3aa02497c69ad165301b0cd20d280a",
+      "originalSizeBytes": 86035,
+      "sha256": "64e2248528a54e9ec6c1055476779b95aa059d2904b4cc31845ead184cec3b12",
+      "sizeBytes": 86142,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/extreme_reactors.snbt",
+      "originalSha256": "6a32f4fff96795812d3f3f299b22d444c16854fe72fefc2f597c3fb63eb24e68",
+      "originalSizeBytes": 35949,
+      "sha256": "e2efc35086e9b836b58a64244bd438b7bbb8679251f8ac0e291c1c30bd233cf6",
+      "sizeBytes": 35974,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/extreme_voltage.snbt",
+      "originalSha256": "8087c8a5453724bba4a6236653263484241358a7cf3db05a2730897bf5b92d6e",
+      "originalSizeBytes": 25577,
+      "sha256": "aaf671d1bdb594ca7672a825a185c2a1fe727bb284b0b1500bbdeb03f7634808",
+      "sizeBytes": 25656,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/food_and_farming.snbt",
+      "originalSha256": "274bbfbc412661f4b535f3a48c6dcdc70691bf1088da4bdb9e36d6821e71db78",
+      "originalSizeBytes": 26408,
+      "sha256": "73c1aa968a5bcbb43c1f0fc0288609fc9eb4c51377ac3bbfa79eaf4d900b48fe",
+      "sizeBytes": 26520,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/high_voltage.snbt",
+      "originalSha256": "703f3726b5fba69e072ad3870261901ebbbd48cc871ff7ea2271591930b981f8",
+      "originalSizeBytes": 26597,
+      "sha256": "7e8a9ae0df92f6b893c0e3ae048833c148d34eb3b2971322be19a7f85d375655",
+      "sizeBytes": 26716,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/insane_voltage.snbt",
+      "originalSha256": "d3f06cbb2f21d8a21ed1a8d2857d08584d6d8ab400d471ed0077aeb8646ca43b",
+      "originalSizeBytes": 58630,
+      "sha256": "d8a213319e692b1aca1e68905c4e8dc0ba0406f0712305fdc5ddeeae48638686",
+      "sizeBytes": 58747,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/iron_spells_and_spellbooks.snbt",
+      "originalSha256": "10639e57f625c79f508f0dfcdd52ac9c1e56ca00e835ff8278b71a987bfad05f",
+      "originalSizeBytes": 51619,
+      "sha256": "c587b2524cd6b82507f55ccbb651e52f96f27f50937138e454e1c0b4c09a6128",
+      "sizeBytes": 52073,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/low_voltage.snbt",
+      "originalSha256": "25d7b2cd3c0e2395f8ce8b6c8d00c80b742c12a84796d69b64a2a8d4e08729f6",
+      "originalSizeBytes": 27595,
+      "sha256": "437706a9a5bebfaa545d5818fd7f395c1de422eb20ae44b1fced8e780cd5d39c",
+      "sizeBytes": 27848,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/ludicrous_voltage.snbt",
+      "originalSha256": "1fc31fc39e0663fd5feeb841b7aaff1b88a6294d39de4bb787bfa592f0033783",
+      "originalSizeBytes": 50800,
+      "sha256": "e70bb41f00c59ccc1987740c9dab7443f620ef95dec8463c760593337bc9c74a",
+      "sizeBytes": 50842,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/mainquestline_part_1.snbt",
+      "originalSha256": "31b5856e1bac096472f8a4275d89a8a6eea8f43ebff4ed4b6d451500c46c1ac6",
+      "originalSizeBytes": 58661,
+      "sha256": "2b5ced1e34e3d983ab7bed56b6fade7f68394b5ab4a561b44103ab221ef24cea",
+      "sizeBytes": 59702,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/medium_voltage.snbt",
+      "originalSha256": "73ec83ece8ef99395faf36f5ed3550ba7b6917f8c6d0f1598b12ba6b1371ddf6",
+      "originalSizeBytes": 37228,
+      "sha256": "a799a8346500e7a27e41899f63d6da71fae8a4054629f9cbdf10ea2cb96d6d0d",
+      "sizeBytes": 37428,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/mystical_ag.snbt",
+      "originalSha256": "d20d93f00ced5ab1381f91827ed9f6b981b268921f1ca319b5950e582aa2ea7d",
+      "originalSizeBytes": 76470,
+      "sha256": "7b23cbf119e4408037110311a800bbf2ea07b49cf9f603012deff32a6d2b87fa",
+      "sizeBytes": 76652,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/pneumaticcraft.snbt",
+      "originalSha256": "1d20a7634e602f3b4d898a7184a1be2f323de616d2dd5d81c5cf942123c87688",
+      "originalSizeBytes": 80705,
+      "sha256": "2c5bca048f72ac272853fa753ca46a7226693d6dc19c7eae9db91faf2b55d44f",
+      "sizeBytes": 80736,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/productive_trees.snbt",
+      "originalSha256": "b7d06327cc355d9f5bc30ace1162c4264715f8681addcb26c01d48e46eefe677",
+      "originalSizeBytes": 68887,
+      "sha256": "46376647a28231c0c2f2b5dc5d9d5e87df5cd556a70e9be62790e83169dbf49a",
+      "sizeBytes": 68904,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/railcraft.snbt",
+      "originalSha256": "7e66c8ef75dbe0533b7d79e573bbb2ea7b625b0fa8bc8bb22eab8caa4b3cf061",
+      "originalSizeBytes": 41649,
+      "sha256": "a1d9f1f6298195c2c4f73ea46829730889816cee6f5cf629f0a2d1fb48608d34",
+      "sizeBytes": 42374,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/silent_gear.snbt",
+      "originalSha256": "22292dd34770349b0a569235784edf17227f84135cb6c3edca5a6f14d45e9aed",
+      "originalSizeBytes": 29894,
+      "sha256": "c98af9c21dc72e9d7dcb18e8615c6dae01cb8e03d6152cf0989f61807827c939",
+      "sizeBytes": 29974,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/storage.snbt",
+      "originalSha256": "aa464d72d4020eb47aa0b170530a52a9c1987e13ebce472ba8be390b1366caf2",
+      "originalSizeBytes": 54357,
+      "sha256": "fc5c7d0a0a50977559493d4e9a8121ff584f3434813f7c3afb9c6bbb6324b8e8",
+      "sizeBytes": 54280,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/tips_and_tricks.snbt",
+      "originalSha256": "33860f669347c636408d934f90d46cc1dc323f7949dcb561ccfcd4edf48d2f92",
+      "originalSizeBytes": 12907,
+      "sha256": "7f4da0b67420d8daa4182bf669124b980d9eb8fcc3c92c7bc90bbb2ccbbfbf22",
+      "sizeBytes": 13126,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/ultimate_voltage.snbt",
+      "originalSha256": "4ef9e88a6060604b73a35931ad016fe62818d116a2e3046939cea003f7cff5b0",
+      "originalSizeBytes": 44111,
+      "sha256": "e00e0f65e77c1e891bcc94e9f33a40a05f20e231d69b3bd8c69e70d5ae40b6f8",
+      "sizeBytes": 44118,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/ultra_high_voltage.snbt",
+      "originalSha256": "8bad32b9f3f30869d9cd9137bfee1d79f942086c4d1bfc5d8eaa49c472ffe998",
+      "originalSizeBytes": 32611,
+      "sha256": "e7c5951fe42aaa58ab1ba95fb2764da29cb6fc79b7aa26fb1d2918d451765f7c",
+      "sizeBytes": 32454,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/welcome.snbt",
+      "originalSha256": "2d9f3c301d5d91b7eef8824290c4aa7c6ba6f0c855e586629b2d1726e2738790",
+      "originalSizeBytes": 5105,
+      "sha256": "bf2311a8ea4b17e35e68285cc9aa78884d6025f9438f3acc7b43a37129390c75",
+      "sizeBytes": 5229,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/EssenceBag.snbt",
+      "originalSha256": "a765a65f6f319b7a1c024ad8d5430529672c199bcdf1c27e80b395c3dc6fd06e",
+      "originalSizeBytes": 1852,
+      "sha256": "dcb636a38e6883a3c1f6460a9b0f067efd18d685d6340bb6ba0d365a08e003ba",
+      "sizeBytes": 1889,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/Rune_loot.snbt",
+      "originalSha256": "7f2a1a659c4aa7dbbac6bf44df654d8ee9879fdf8e76a6088ea666b5357bbeaa",
+      "originalSizeBytes": 296,
+      "sha256": "db22517bebe040f49713bb2e3aa69dd1cb936effc655c6d4a22f7ff7f76d24ff",
+      "sizeBytes": 327,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/ThermalLootBag.snbt",
+      "originalSha256": "2e4d1d6f599b598851fc3ee1e35e878b72aad99669121aceb47a3b8f268e0455",
+      "originalSizeBytes": 2031,
+      "sha256": "ad7df86adcbd950368ce6fc21696f31536e18315bcfc9d237d3e85736612fd32",
+      "sizeBytes": 2063,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/Tier1_Seed Bag.snbt",
+      "originalSha256": "2235ea30dc0dc820cb1161756b1012cb083985f4a94ce0484d80760c17325745",
+      "originalSizeBytes": 2162,
+      "sha256": "212432de7d36655ca438815cc0c3704644469a4b9ded489e17b99f735d11c535",
+      "sizeBytes": 2195,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/Tier2_Seed Bag.snbt",
+      "originalSha256": "bf16b6867fe63ccec4223d06a32388c863f200d07ac8b5e67599c1220329628c",
+      "originalSizeBytes": 2167,
+      "sha256": "3285e20a1426262f89762f1bda7f532e79a6edf027152a470ed4d851cb9b32a6",
+      "sizeBytes": 2200,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/Tier3_Seed Bag.snbt",
+      "originalSha256": "41cb1ea2cef1ad908ed12be45f1c7370a01a192a068856213563697adcaaa1c5",
+      "originalSizeBytes": 2117,
+      "sha256": "41538bfb994deacece97df7b52b8e29301a67c566a01fd681294ec296085706d",
+      "sizeBytes": 2150,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/Tier4_SeedBag.snbt",
+      "originalSha256": "1dabdbf5d63267e325d72f133e935a106831eb5bcde3f5a01fcb7dabb5638274",
+      "originalSizeBytes": 1940,
+      "sha256": "681132675bae8faefa0de014f2541930bd630afa962d40aedc2dc4cffb7d668c",
+      "sizeBytes": 1973,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/Tier5_SeedBag.snbt",
+      "originalSha256": "91f0ae02f35076587a43dbef7b398daf61834a3b1cac69f541885a1e51cae2e9",
+      "originalSizeBytes": 1470,
+      "sha256": "3ffe3da7c3cbf5a5f2d6364bfb8003269af510837dc78b81511d4db59d49b253",
+      "sizeBytes": 1503,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/Tier6Seed Bag.snbt",
+      "originalSha256": "593d70d89a76c28ee64c37d5caec045b707b18247eb335f30c2ccd8c8e565172",
+      "originalSizeBytes": 1628,
+      "sha256": "3c3c6a74f8ac025fee7f4cfcca6d21e2d9ecc11183123ceb17196af8ca668c2a",
+      "sizeBytes": 1661,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/ae2_basic_reward_table.snbt",
+      "originalSha256": "2396eb80810ca4dfb42bcc8be890424aaa715802321091c566f8e9eed570a819",
+      "originalSizeBytes": 890,
+      "sha256": "32a422296d124216ecf68ad152e048354fe343fde7e3cfaf4721540087ebc9da",
+      "sizeBytes": 919,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/ae2_basic_rewards.snbt",
+      "originalSha256": "8c042c0f40e411523125505b3dfac77bf49f4a1ba71f35ee3c2110ea9fda6400",
+      "originalSizeBytes": 477,
+      "sha256": "9d90e061139d1e125c24721d5cf7a268a2e3daa57614c6cc63ae68946cffa953",
+      "sizeBytes": 510,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/amekanismr_dadvanced_loot_boxr.snbt",
+      "originalSha256": "b3c77b268bba51588a3044dac69d68295e6bf7c298190102e69f12fb8a056050",
+      "originalSizeBytes": 3283,
+      "sha256": "5f4ca76475d95fb7890744e248969c8eea53be9fbf4ebf433539b78e06f57a2f",
+      "sizeBytes": 3298,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/ars_nouveau_rewards.snbt",
+      "originalSha256": "d2a4808ab81a78c7529733c95af6b3904008896aec5481b280946a48b2b85a89",
+      "originalSizeBytes": 1040,
+      "sha256": "5bdc245288d950a99f8ecde16a5ce0b705ed50ca5e84792bfac468b681cdbb1e",
+      "sizeBytes": 1071,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/atm9_books.snbt",
+      "originalSha256": "17e7d3879814084ae544c8a855e03f83a07e6afed37ed46373a732f6b6b31da4",
+      "originalSizeBytes": 2871,
+      "sha256": "ef933272ca942c95bdd42260cc4ac863355c1736b98a83647477b6ad37e79cdb",
+      "sizeBytes": 2911,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/basic_elements.snbt",
+      "originalSha256": "aab4ccd39f3b84a22ce2a6c20f760fe7e719733790f402f8011b4be8c251fcf0",
+      "originalSizeBytes": 771,
+      "sha256": "a83ef9848c2d2198b499396e069fd5dd9b59b77a68271d13d3b5bc33ea053c6b",
+      "sizeBytes": 807,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/blood_magic_loot_bag.snbt",
+      "originalSha256": "eb3c9f1ee302d1d0b635070b5f26d1bca5f285b17a811956ed6c8c37799ea97b",
+      "originalSizeBytes": 1469,
+      "sha256": "b26384f59fd37b1614b4708d6f0261a01ab188e2870536eb7b3992c0eb377a10",
+      "sizeBytes": 1497,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/botania_flowers.snbt",
+      "originalSha256": "190703b5bbf46253a6203989ae7422cc6b60606f36ee162a330d6e20efbf9ae1",
+      "originalSizeBytes": 995,
+      "sha256": "3feb208b58c97946122c940d172267857607f57c77ae20305d08510a238e2622",
+      "sizeBytes": 1030,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/common.snbt",
+      "originalSha256": "670a892c8aa34ea7ae416640ee4749fdf5427dd87df4ac28aea41e32b404f016",
+      "originalSizeBytes": 8083,
+      "sha256": "baf547180dbbcfab6f18e48a301f9335555767eaf271a88294414d0f420c7773",
+      "sizeBytes": 8120,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/common_gem_bag.snbt",
+      "originalSha256": "2c811f962dd94b766e885b047ad858022029872d4eeeee8f4eacdfdf9dc3a643",
+      "originalSizeBytes": 2715,
+      "sha256": "73cd5c88cd7d75b8126c7f81ed66041d80df3d41079bf0927d1bfa5349b36669",
+      "sizeBytes": 2751,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/de_basic.snbt",
+      "originalSha256": "a6fd5d40516b9d1683086744737ecdd76b13fb9c18725ca3649cca1da88798b1",
+      "originalSizeBytes": 404,
+      "sha256": "170ce6123be8dc81e9737ffc991c98f01d1f819e28e514f4e976fbf20907fc08",
+      "sizeBytes": 446,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/de_basic_2.snbt",
+      "originalSha256": "ee168df9b6ed49af2befe1e1a713361ba0432c8361e55ca539ab74792c0afc48",
+      "originalSizeBytes": 397,
+      "sha256": "b0b0b7fef35853fd4fa19beb0c94a887bc7b7efdc57b6471e89c708439f26b66",
+      "sizeBytes": 438,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/de_basic_3.snbt",
+      "originalSha256": "e656ea72a6e9447771c1a8f737a2a535e28259415067c9cec779c434a9b828aa",
+      "originalSizeBytes": 424,
+      "sha256": "39304d435d0599c8740249888e5de1bab7d943bdb576ed8542ad764f7845b335",
+      "sizeBytes": 463,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/de_basic_4.snbt",
+      "originalSha256": "227e2f8ffa947bdb69e3fc883211deb74ef1ffd000ed0d56be63ea300dc25684",
+      "originalSizeBytes": 434,
+      "sha256": "3851bcf9976e66b67362a861d65fd3b5b0849c31950f748d5da6601df60fb02f",
+      "sizeBytes": 474,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/elven_loot.snbt",
+      "originalSha256": "2ff162e6ea711d8c413bab55c6b1ec8c01c7125d695699ffe685ac4ccf68b3b2",
+      "originalSizeBytes": 596,
+      "sha256": "edfd132f62be0a890c13ceecbb8beec779c5de3fc8b6f9103bc91d0a720eba62",
+      "sizeBytes": 628,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/epic.snbt",
+      "originalSha256": "bef7fe0d34084f7843cf3e758ab1bfc57610729f23df676f6b1981dc0708f532",
+      "originalSizeBytes": 1944,
+      "sha256": "b30396cae9ca95279ec24b426644603da21589f73c39fb398c443a7d5545f2e3",
+      "sizeBytes": 1981,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/epic_gem_bag.snbt",
+      "originalSha256": "4d610c248fecf755ffb3627307105ed997ed3079ff6fba882d4e31dbd702e694",
+      "originalSizeBytes": 4371,
+      "sha256": "55c476856be6c0b8de33e9d9e0fcfcc0dd5f438130764024b8bd7795395c2e9a",
+      "sizeBytes": 4409,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/evilcraft_basic_reward.snbt",
+      "originalSha256": "7a58f365b06df649476e904316eefb448413ae3527d83cb3b26e05017f1ed885",
+      "originalSizeBytes": 2146,
+      "sha256": "dcc96bfd6fb350f8ebae0b10d033ab3941c2c6d2034914ad854c8fb13d7658c6",
+      "sizeBytes": 2174,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/flower_petal_loot.snbt",
+      "originalSha256": "188bb1f02d0eda13e20d18c429a376dee66b4918a54d4961d1e2841781d321e1",
+      "originalSizeBytes": 904,
+      "sha256": "e76da35357fd200bbb03116e4edc77590a9717c42851beded9abee89e504e631",
+      "sizeBytes": 933,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_ev_basic_rewards.snbt",
+      "originalSha256": "c05a15b5c64ad36bec821ca32365d1b2a62706ecac1e2ef9b48bd6348d4e6c6a",
+      "originalSizeBytes": 1907,
+      "sha256": "3097e645d483723f8e74f381d4e635c889cdae00cf7c1eb7da3c2f5be0e51fc2",
+      "sizeBytes": 1938,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_hv_basic_rewards.snbt",
+      "originalSha256": "2d43c90853667d881d2188b33cbc9c8cdb08bf0de1f92b48c4c40123e09ec571",
+      "originalSizeBytes": 2063,
+      "sha256": "2b3f91c125b674f5417f9b03670632cef8170f82b6fea3c9de87ccb9af155abf",
+      "sizeBytes": 2094,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_iv_basic_rewards.snbt",
+      "originalSha256": "4c2aba8a5f6ebb81df5a6d94d244164a3a53203133b8d43e3c6744bbf6958b42",
+      "originalSizeBytes": 2108,
+      "sha256": "3af05bf3e2cf98aae7263746a794e565ebd43089a667194b07fb5358abf44e11",
+      "sizeBytes": 2139,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_luv_rewards.snbt",
+      "originalSha256": "489c89600016f688b6512804d9949492b6d47aaeeac905713d6642a89245dc9c",
+      "originalSizeBytes": 2150,
+      "sha256": "187248d19494eac917539abdab8056c22ca370d72709a607c6a1a4dfba9683be",
+      "sizeBytes": 2180,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_lv_basic_rewards.snbt",
+      "originalSha256": "db049bdf030885b1b70715543bfcd0a24ee5e3739fe50092387d4b5034fb131e",
+      "originalSizeBytes": 1667,
+      "sha256": "81310170cd2cced03f8b1e757cbdcbaaf8021a9895960484e425619c0776b505",
+      "sizeBytes": 1698,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_mv_basic_rewards.snbt",
+      "originalSha256": "654f4507d088eaf155685dda7cc0594b5ec4c0ee57da5d0e9914bd8fcf5a6c41",
+      "originalSizeBytes": 1638,
+      "sha256": "9a87b936e5a83074abdf0f9088e8a52fe85d4bc952e1e18d478cc21976d97cc5",
+      "sizeBytes": 1669,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_steam_basic_rewards.snbt",
+      "originalSha256": "bfa2da7028f72553168eed13699bfc8209cb62b164dc269fffc50aefebd5ff24",
+      "originalSizeBytes": 959,
+      "sha256": "684ed5321d3008e081833a4935f6f746cdb8042152bd959f9bb56ef570e18c63",
+      "sizeBytes": 987,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_uhv_basic_rewards.snbt",
+      "originalSha256": "4f73cd687c42aa8285ec17e547a9a632ea396c5144ec5cbada92973e10366d66",
+      "originalSizeBytes": 1832,
+      "sha256": "8a7bc2e4652e0578afb7698e69cc706c9a73c6419fa53564778a2935c423a08e",
+      "sizeBytes": 1862,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_uv_basic_rewards.snbt",
+      "originalSha256": "a0416ca214694e72b1f1d2a88db66d5c5970fd48d1e4dbb063f1b3b776d1a140",
+      "originalSizeBytes": 2291,
+      "sha256": "1aa0b03402ec8077e95a22a6cee7073a1fd11a95f16e8033fc6c32d3b51d500d",
+      "sizeBytes": 2322,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_zpm.snbt",
+      "originalSha256": "c5e19ec101cda51776455e736ea1292f4c54020d8b5b7ee5d41d9d4bf635773f",
+      "originalSizeBytes": 2302,
+      "sha256": "01e4c4d7e5980f9b15751d414fad7c8d26a6aa0d8919e2a224e326bcd9371630",
+      "sizeBytes": 2332,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/gt_zpm_rewards.snbt",
+      "originalSha256": "30255f3f277c241aec3bf3bf9d3ae9f2c493d0eaac995e8b0d3f6a41bc989de1",
+      "originalSizeBytes": 2302,
+      "sha256": "a270165255b22a8cd63059707331ea5fee2c705b578d65f328975be3fa7c0a99",
+      "sizeBytes": 2332,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/industrial_foregoing_advanced_bag.snbt",
+      "originalSha256": "7e04579fbecbadfaf23f761ba830512e3f9157297bae6b87ed96407694647138",
+      "originalSizeBytes": 1083,
+      "sha256": "0d07714b2a2b630665813b35deda243ad6de352374f346830ae229fb9df29668",
+      "sizeBytes": 1092,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/industrial_foregoing_plastic_bag.snbt",
+      "originalSha256": "ef64c1ee0d40e745d30e1f75d7f2fd1da4b0c975d25fc90d4432f78568bc8c60",
+      "originalSizeBytes": 1074,
+      "sha256": "3c5e62379d10a0f6599d8c39deb51944bc74086add4d36f473cf6c9bbd1a5f25",
+      "sizeBytes": 1088,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/legendary.snbt",
+      "originalSha256": "06765f80f4399a7ddfeea3d6c76c466ca1c9410973f17dda1f2be13f41da7296",
+      "originalSizeBytes": 2167,
+      "sha256": "1f2af3eec9e217b976ed93ddc9bd716244fead801d4fdb1d03d0eaabec0fd6ef",
+      "sizeBytes": 2199,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/legendary_gem_bag.snbt",
+      "originalSha256": "e7573cf8ea350944a071227a436f02d3449926505113e217e57ff6e83473fb38",
+      "originalSizeBytes": 4416,
+      "sha256": "0d8891aea68a168948dc4a4f6953a2196e6939b08481c3903e07475f7705de84",
+      "sizeBytes": 4449,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/legendary_gt_rewards.snbt",
+      "originalSha256": "883ae0398b8a07304bfd45a64ac4a3fede64c5bddd4935d04e83c18656dce4b9",
+      "originalSizeBytes": 890,
+      "sha256": "3731149a8492c609ac28a9b7bfa0dd9b0d537ed634e5a4024eb0635913b769e4",
+      "sizeBytes": 920,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/legendary_mana_loot.snbt",
+      "originalSha256": "c19ca5c59f002b0df0182ad7b2bf34d4b7bc127eafca7d193be95acd89e46b29",
+      "originalSizeBytes": 765,
+      "sha256": "9a063d21b1c97993c26c7a44c4bb2c58e2a79dddfb87cd574e473c7d247964af",
+      "sizeBytes": 788,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/living_loot.snbt",
+      "originalSha256": "984ef931cad20d10567787d48bdbe9839d9e3477bbd2797825d83e22938666c4",
+      "originalSizeBytes": 224,
+      "sha256": "0031e364bdc11877cefa166b2df3adcd00a16ba49f4ab3e2e1ffa5eb7e0cd5c9",
+      "sizeBytes": 253,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/mana_materials.snbt",
+      "originalSha256": "c49fb5eacd0ec5ceb94bb19502511314686433b5371321490ab6af4f6ebabd42",
+      "originalSizeBytes": 638,
+      "sha256": "1c19d7e86f98d8423d8c688db7d1f5d78c7b529fe6f61c3bebf6031f41282957",
+      "sizeBytes": 654,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/mekanism.snbt",
+      "originalSha256": "158eba8678d42dc78eecbe0cc3ba737efa3a27ded36d51bbc468d673360ffa7d",
+      "originalSizeBytes": 531,
+      "sha256": "779b02402007d68c42ef74a5978b1aaeb2004f918074824e60dd19c27e13973b",
+      "sizeBytes": 558,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/mythic.snbt",
+      "originalSha256": "af89bac83cd5071d00610f82aa485f69a6994a8a18a484b58d3557402f7b96b0",
+      "originalSizeBytes": 7813,
+      "sha256": "afe39cb33a121e1015a61ec611079ad24dda3634cea04f0b49ff874aec4ae1f3",
+      "sizeBytes": 7848,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/mythic_gt_rewards.snbt",
+      "originalSha256": "d668795410b4711645f440e2606858d67371d62fc6861a99a632a5f0e914ef13",
+      "originalSizeBytes": 1048,
+      "sha256": "573beef823475ade30ab094f2715b6e3fe5a7b03d298da814ad869e2f45795bc",
+      "sizeBytes": 1081,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/perfect_gem_bag.snbt",
+      "originalSha256": "0b9837a368f444acfeb6e14590601d469627412a1659cf0e7c3106fdc8f89978",
+      "originalSizeBytes": 4446,
+      "sha256": "e6e1092d2b48f71d7eb16705cd4744645924a8f02f570aa1af9b32094b4526f4",
+      "sizeBytes": 4481,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/pnc_advanced_tier.snbt",
+      "originalSha256": "c3582747dbb4848c7d574e6b560f0e10f197830d50fc15fea7a5e8a8a313691e",
+      "originalSizeBytes": 950,
+      "sha256": "5fbda6d277d5ed74715d57df7516490ec5fddf87a5ea776a819269cd1e4ad35c",
+      "sizeBytes": 982,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/pnc_basic_tier.snbt",
+      "originalSha256": "3dfdc858295bdf8323a01ee22a076f5ee9e9b9712985423674a3dedc6cf3614e",
+      "originalSizeBytes": 3097,
+      "sha256": "dc16450765a42baabdbfbd2946a4d78e4710da0ee5fee37a97fb49306716b180",
+      "sizeBytes": 3132,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/pnc_pcb_tier.snbt",
+      "originalSha256": "805e9c6d90bff22fb4b5a0ffedd8cfecfc3e50396a2621f60f2270c0c965c366",
+      "originalSizeBytes": 745,
+      "sha256": "64ac62e835e18cb8f64d933bd1cf2db44bc37ec428ca944d91bfcdf1e4be44e9",
+      "sizeBytes": 782,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/pnc_plastic_tier.snbt",
+      "originalSha256": "5590a15c9252ed00f27a79ba5c6d863f787ab0147b1cd59abfa07f660fb20dbc",
+      "originalSizeBytes": 2154,
+      "sha256": "f98aff4c28508d22e4e00aba3d7ccdc45d65aa878a32e9fccae22e2872e742d4",
+      "sizeBytes": 2187,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/powah_basic_loot.snbt",
+      "originalSha256": "0bbb78b5a509cb8f91f68acd650c3de27e1bae02af3234d07c9ed6eb5f015c3e",
+      "originalSizeBytes": 811,
+      "sha256": "be2cb29855258df3138993bd955f06849a7b52e7bee53787901e60414929d57e",
+      "sizeBytes": 837,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/powah_blazing.snbt",
+      "originalSha256": "84258a10246742dc181aded79122d1585fc521f25678e8717a0fd4f5481d3a7c",
+      "originalSizeBytes": 732,
+      "sha256": "d269de1c2c9e172808991798ff25aad09650a237040c28c00a36864456f568bc",
+      "sizeBytes": 756,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/powah_hardened.snbt",
+      "originalSha256": "1cec7fe0e504bdfe4e62a2706558c585a4a43cf3d4f54a80ac9fe01ecb9a747f",
+      "originalSizeBytes": 696,
+      "sha256": "5db3f8cd007845e8055407c125e16ba1ed5c01e2e3704c3658c2acc49d244f12",
+      "sizeBytes": 719,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/powah_mats.snbt",
+      "originalSha256": "eabb384a5d32046ea0e93d98aafcabc7eb323dba2be65678d949b8339af34dba",
+      "originalSizeBytes": 570,
+      "sha256": "4a63abadfd572971d01e75e958318fde42b8082211938ee4fb41a07ec08eec4c",
+      "sizeBytes": 604,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/powah_niotic.snbt",
+      "originalSha256": "ec524abf727554c2de70c979821a5fcaf7e458e3ef425bbc984b4f8965a5dca3",
+      "originalSizeBytes": 699,
+      "sha256": "6e47b8f2f5e4f064f209871dac6a5eee147c511eb0228b25097d0cae6b7e6b90",
+      "sizeBytes": 724,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/powah_nitro.snbt",
+      "originalSha256": "b87aaebe52ed3245803f57209dbbbaab0d050f6bbd9f5a085e4ed3c4c650ca35",
+      "originalSizeBytes": 676,
+      "sha256": "60ab7fdaa94a99a6452494e6536e93c8b1aebc67b6310db622524a89c2412303",
+      "sizeBytes": 702,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/powah_orb.snbt",
+      "originalSha256": "dbd03c2df8389a74644ea156c72cdaaadaabdbc4d4f0bf794b16af2bfd639b9f",
+      "originalSizeBytes": 611,
+      "sha256": "fc6c002822cc1a4fa16f0277de213185c63b947723f0506cd899e376c70c2aa7",
+      "sizeBytes": 642,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/powah_spirited.snbt",
+      "originalSha256": "bc36b3b0fda2f934dfce9f97eee181d0fbaaf5f9640e85c6623d9d50e4c9d4ea",
+      "originalSizeBytes": 695,
+      "sha256": "774c0c6da2704f24a618673dd4de022b7eee857329e95a2233f7c2a2ea1b643a",
+      "sizeBytes": 718,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/random_tier_1_glyph.snbt",
+      "originalSha256": "aaa5b4746456aa1f0c62aafbdebaaa776ebd3257c8f99caf9b6f3c858c163228",
+      "originalSizeBytes": 1239,
+      "sha256": "a9d75e18cd5468236d25c44fb284adbfc81b1fe94eddf160280df39df00a1bc9",
+      "sizeBytes": 1270,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/rare.snbt",
+      "originalSha256": "683267f26b781fdb8cc5ab822d656f3ccd840f1e3fed7ac0050708b57e6d407b",
+      "originalSizeBytes": 2994,
+      "sha256": "444813f93fe073fe1fc3127898da1c42bdcc0e52bb6516bcb6ee62d6b3a7b529",
+      "sizeBytes": 3031,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/rare_gem_bag.snbt",
+      "originalSha256": "b5f8a4fe335a1c01dbd97dc19247a11a5fe25ca113028767faf5075191c14ef5",
+      "originalSizeBytes": 3988,
+      "sha256": "4b20dec43eb3e6a7b98868c3c1adac0f1bc4ec8f8d7671a766865ef3e0f81dda",
+      "sizeBytes": 4026,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/rare_mana_loot.snbt",
+      "originalSha256": "c937a4499db166bddce651e1bcd8a54dfb2959619297397066d0d278f8721d3d",
+      "originalSizeBytes": 637,
+      "sha256": "82dedf4e0e3e42d5230eb002fa951fbc37c6ff8bbccd742597971dc1663b19ad",
+      "sizeBytes": 655,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/refined_storage_base_materials.snbt",
+      "originalSha256": "05172eb111bed1dd97ffa28cac613477b14373eeadf47487b01479eac9de2c8a",
+      "originalSizeBytes": 297,
+      "sha256": "ea06e7bd05a723e2e2f7517918ccea4347fa461543e5fba86e6587b906478412",
+      "sizeBytes": 317,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/refined_storage_parts.snbt",
+      "originalSha256": "ddcd6d67de49e1afca7fed9e97b3674e1aaf4d73d1fe767d98499adeb9ac3913",
+      "originalSizeBytes": 362,
+      "sha256": "970e17ff0c44198498fe28fcd6ad7532da6ce319bbfa0840cb2e4f5b50693531",
+      "sizeBytes": 385,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/rs_advanced_parts.snbt",
+      "originalSha256": "798b95a3a6c114255f45fa638f76654477d5261724ec15cab8b8187eeafac5c2",
+      "originalSizeBytes": 283,
+      "sha256": "2d8de780c190580dc14fdb381e61a0efafb21f9efc42971c8e66374484926403",
+      "sizeBytes": 316,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/rs_random_storage_parts.snbt",
+      "originalSha256": "218e1b92e233bcb454661908d72e711171d7acf7a5dc997add51d8da4ce5a548",
+      "originalSizeBytes": 368,
+      "sha256": "267f26f5f8ffa75c9af3a0f3e79b51d3663e4d0ba6189ee7c15a2453bb7082d7",
+      "sizeBytes": 395,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/twilight_forest_loot_bag.snbt",
+      "originalSha256": "801dc9e7eae5f75e2bb9ee45bc7e8621d17f5a6e59cb06ae642f64a36ddebecc",
+      "originalSizeBytes": 1682,
+      "sha256": "8a5574ef09da343e6986f2fd5f643c0c6b5b96e15dc623e1c95c95c34c21a096",
+      "sizeBytes": 1708,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "config/ftbquests/quests/reward_tables/uncommon.snbt",
+      "originalSha256": "202cdf9e7d5609e1e8c73a743df13200e8d849ced5fefc58a06685b05e6178ba",
+      "originalSizeBytes": 8720,
+      "sha256": "8e3c66e4932325c7258bc2efbfdba5ee54b089c3628a8180ba05d42bba980ecc",
+      "sizeBytes": 8753,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    },
+    {
+      "path": "kubejs/assets/kubejs/lang/en_us.json",
+      "originalSha256": "d86cdd2de8f46640f59fd5fb43f3c0fb89b9e05b7d242b4e8206973d280d5231",
+      "originalSizeBytes": 983855,
+      "sha256": "b3c666c3db9b74f687b0bb29f5318d8236d7f8523638fc3ecccba26dd7d3be13",
+      "sizeBytes": 1010274,
+      "kind": "quest-localization",
+      "reason": "Explicitly approved Russian FTB display localization and append-only English compatibility keys"
+    }
+  ],
+  "requests": [
+    {
+      "name": "Alex's Mobs",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/alexs-mobs",
+      "status": "selected",
+      "modIds": [
+        "alexsmobs"
+      ],
+      "version": "1.22.9",
+      "sha256": "16bc5bcc19db9029c24f951346ec71098e6f5b0afef96e61894a2e9407aad37c"
+    },
+    {
+      "name": "Alone in the Dark",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/alone-in-the-dark",
+      "status": "selected",
+      "modIds": [
+        "alone_in_the_dark"
+      ],
+      "version": "1.3.0",
+      "sha256": "9632f17707472387ccd677198256eec9e85708c45befc1010b599b619858d934"
+    },
+    {
+      "name": "Alpha Below",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/theworldbelow",
+      "status": "excluded-by-user",
+      "reason": "User chose removal on 2026-10-30 and preserved original ATM9 settings. All three official Forge releases force resolution of the complete ModernFix model registry; the current 1.0.3 call is confirmed in final05. No native ModernFix override is applied."
+    },
+    {
+      "name": "AmbientSounds",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/ambientsounds",
+      "status": "selected",
+      "modIds": [
+        "ambientsounds"
+      ],
+      "version": "6.3.11",
+      "sha256": "63a4ea6ea11fa63982325306ae09268080c296633b6bfbf72dbd7c8514d4f114"
+    },
+    {
+      "name": "AmbiHorror",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/ambi-horror-ambience",
+      "status": "selected",
+      "modIds": [
+        "ambihorror"
+      ],
+      "version": "1.0.0",
+      "sha256": "246a89ddc1ea5f9a779820f056004b9d891113198785e19998dde2c588b3c083"
+    },
+    {
+      "name": "Anomaly Rephased",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-anomaly",
+      "status": "selected",
+      "modIds": [
+        "anomaly_rephased"
+      ],
+      "version": "2.0.032",
+      "sha256": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c"
+    },
+    {
+      "name": "Antlers",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/antlers-the-wendigo",
+      "status": "selected",
+      "modIds": [
+        "antlers"
+      ],
+      "version": "1.0.0",
+      "sha256": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b"
+    },
+    {
+      "name": "Apex Arcana",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/apex-arcana-irons-spells-n-spellbooks-addon",
+      "status": "selected",
+      "modIds": [
+        "grandsigil"
+      ],
+      "version": "1.4.0",
+      "sha256": "a09ea66d0ff8985503d9fffde45279fa9f522d3598b3b7efa17cfa904ea0b739"
+    },
+    {
+      "name": "Apex Arcana: Tides",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/apex-arcana-tides-t-o-magic-n-extras-addon",
+      "status": "excluded",
+      "modIds": [
+        "apextides"
+      ],
+      "version": "1.0.0",
+      "sha256": "de407029416b86d9926e0c0f98e3cfb01ec2af94def4ecd3d16554b4ca01830e",
+      "reason": "User approved exclusion after Original/Modified log comparison on 2026-10-30; details tools/approved-removals-20261030.json."
+    },
+    {
+      "name": "Apollyon",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/apollyon",
+      "status": "selected",
+      "modIds": [
+        "apollyon"
+      ],
+      "version": "1.1.1",
+      "sha256": "a7e0ffb994b93e2068579c65cf782e518a75f4c1f4d83fdaf3518a6f08ccc01d"
+    },
+    {
+      "name": "Arthropod Phobia Expansions",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/arphex",
+      "status": "selected",
+      "modIds": [
+        "arphex"
+      ],
+      "version": "5.0.2",
+      "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc"
+    },
+    {
+      "name": "Attack On Block: Season Two",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/attack-on-block",
+      "status": "excluded-by-user",
+      "reason": "User chose removal of malformed geometry-in-animations resource conflicting with AzureLib; declined new data-only override. FromAnotherWorld retained."
+    },
+    {
+      "name": "Biomancy 2",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/biomancy",
+      "status": "selected",
+      "modIds": [
+        "biomancy"
+      ],
+      "version": "2.8.19.0",
+      "sha256": "69c5ea80dba2aaec70a5fdf6b6f29977374eb1d73398e4bd69548d87dd3c4149"
+    },
+    {
+      "name": "Black Sun",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/black-sun",
+      "status": "selected",
+      "modIds": [
+        "blacksun"
+      ],
+      "version": "1.1.0",
+      "sha256": "55a4590646f8b259019d7caa886f2dcfa7b892ea6843e6338def8e294c918268"
+    },
+    {
+      "name": "BleachCraft (kojima_here)",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/bleachcraft",
+      "status": "excluded-by-user",
+      "reason": "User requested removal on 2026-10-30 after exact author icon_combat.png, ComabtUIOverlay and ShowSkillBodyGuiOverlay identified the Physical Attack fist HUD. Not present in original ATM9."
+    },
+    {
+      "name": "Boiled One Reimagined",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-boiled-one-reimagined",
+      "status": "selected",
+      "modIds": [
+        "boiled_reimagined"
+      ],
+      "version": "1.0.12",
+      "sha256": "afbcc1deaa7ae801c78359540cd8bf8ba5f60b84a5548cc31b4e5f97e6cc7ed8"
+    },
+    {
+      "name": "Born in Chaos",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/born-in-chaos",
+      "status": "excluded",
+      "modIds": [
+        "born_in_chaos_v1"
+      ],
+      "version": "1.7.5",
+      "sha256": "9f242f4f3330f3d0d985f5f3ce9a92fe09016ff9c6162252f201d17009b28d7d",
+      "reason": "User approved exclusion after Original/Modified log comparison on 2026-10-30; details tools/approved-removals-20261030.json."
+    },
+    {
+      "name": "Burnt Basic",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/burnt-basic",
+      "status": "selected",
+      "modIds": [
+        "burnt"
+      ],
+      "version": "1.10.5.3",
+      "sha256": "79c2cc67a738795a793a9bb3e25482f6fed85489ee1a1c0f7905fa4d70f2ef66"
+    },
+    {
+      "name": "Capybara's Liminal Spaces",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/capybaras-liminal-spaces",
+      "status": "selected",
+      "modIds": [
+        "capybaras_liminal_spaces"
+      ],
+      "version": "1.4.1",
+      "sha256": "2005cab8db57a050d000800885bb6427f1fd98fbc784fcb6500c33983000ca8a"
+    },
+    {
+      "name": "Cave Dweller Evolved",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/cave-dweller-evolved",
+      "status": "selected",
+      "modIds": [
+        "cave_dweller"
+      ],
+      "version": "1.7.0",
+      "sha256": "3841b74166a8af0c81f73571daa151cb188791844a2ccb76a0e15cf1f40d658b"
+    },
+    {
+      "name": "Celestisynth",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/celestisynth",
+      "status": "selected",
+      "modIds": [
+        "celestisynth"
+      ],
+      "version": "1.20.1-1.3.4",
+      "sha256": "d16e4bda6f2f493364d36026905dfcdaf4f042f12b919fa7c04c6030c09000b7"
+    },
+    {
+      "name": "Chainsaw Man",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/chainsaw-man-mod",
+      "status": "excluded-by-user",
+      "reason": "User requested removal on 2026-10-30 after identifying its unconditional player-tick Health Boost grant for 99999999 ticks. This supersedes the earlier choice to retain Chainsaw Man when Mine Piece was excluded. Not present in original ATM9."
+    },
+    {
+      "name": "Cracker's Wither Storm Mod",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/crackers-wither-storm-mod",
+      "status": "selected",
+      "modIds": [
+        "witherstormmod"
+      ],
+      "version": "4.2.1",
+      "sha256": "a23c019b1465c87ba506ada49aa815866e5353ebdc2be3284d9087ff080018ac"
+    },
+    {
+      "name": "Creepy Horror Sounds",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/creepy-horror-sounds",
+      "status": "selected",
+      "modIds": [
+        "creepymod"
+      ],
+      "version": "1.2",
+      "sha256": "d7abb5d6b4ba569191f47c7f8cf4e5dae4c8721f9e8c8bb431f771af33438b98"
+    },
+    {
+      "name": "Cult of Azazel",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/cult-of-azazel",
+      "status": "selected",
+      "modIds": [
+        "netherman"
+      ],
+      "version": "1.1.4.12",
+      "sha256": "92b7eb590241b4c6fbd478f53529807127a2a9bdc5c28f062342df62484b8ed7"
+    },
+    {
+      "name": "Cursed Fate",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/cursed-fate",
+      "status": "selected",
+      "modIds": [
+        "cursedfate"
+      ],
+      "version": "1.0.0",
+      "sha256": "21d7fba264f1be6ed8edfa174156d070fa05138686b83026fb5110ebffd057f7"
+    },
+    {
+      "name": "Dandadan",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/dandadan",
+      "status": "selected",
+      "modIds": [
+        "dandadan"
+      ],
+      "version": "2.0",
+      "sha256": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd"
+    },
+    {
+      "name": "Deep Dark: Regrowth",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/deep-dark-regrowth",
+      "status": "selected",
+      "modIds": [
+        "deep_dark_regrowth"
+      ],
+      "version": "1.2.6.1",
+      "sha256": "3a2d487db40e1fe13307f8203ca69627787aede9bd332cf8bb2c29b41ec3fe88"
+    },
+    {
+      "name": "DimensionalDoors",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/dimensionaldoors",
+      "status": "excluded",
+      "modIds": [
+        "dimdoors"
+      ],
+      "version": "5.4.4",
+      "sha256": "ee8193a36d07827e52d540a81d07460e3b47a0bda6366adef1873d9b02a83b52",
+      "reason": "User approved exclusion on 2026-10-30 after the error comparison; tools/approved-removals-20261030.json."
+    },
+    {
+      "name": "Distant Friends",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/distant-friends",
+      "status": "selected",
+      "modIds": [
+        "distantfriends"
+      ],
+      "version": "0.5.6",
+      "sha256": "5965acaf5e2ed24542777ff0ec309085332d6c9255903eddc644822a61e851cf"
+    },
+    {
+      "name": "Doomsday Arsenal",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/doomsday-arsenal",
+      "status": "selected",
+      "modIds": [
+        "doomsday"
+      ],
+      "version": "1.0.0",
+      "sha256": "c5a7a99d0515f1456e3c0525bb53250f3bee2393ffac3d1434e41ec809de338d"
+    },
+    {
+      "name": "Door Knocker (Horror)",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/door-knocker-horror",
+      "status": "selected",
+      "modIds": [
+        "door_knocker"
+      ],
+      "version": "1.3",
+      "sha256": "7171d91d9639d96b3cae7bc83caf9419522a28de511680f2fb459bf3b50a5ccf"
+    },
+    {
+      "name": "Dreamshift",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/dreamshift",
+      "status": "excluded-by-user",
+      "reason": "User excluded Dreamshift after its forced traversal of ModernFix lazy models left the test at the loading overlay after 24 minutes. Original ModernFix dynamic_resources=true is preserved. The main Mushoku mod and its addon, restored at that time, were both excluded by a later explicit user request on 2026-10-30."
+    },
+    {
+      "name": "Dusk Mod",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/dusk",
+      "status": "excluded-by-user",
+      "reason": "Dusk4.2 requires missing Cupboard RegistryLookup; user chose removal over author3.7 feature downgrade. BaseCupboard2.7 preserved."
+    },
+    {
+      "name": "Echoes of Nowhere",
+      "websiteUrl": "https://modrinth.com/mod/echoes-of-nowhere",
+      "status": "selected",
+      "modIds": [
+        "echoes_of_nowhere"
+      ],
+      "version": "1.0.1",
+      "sha256": "6d94d837d4eef447123fff77c8576055a426b71b73bcc8bf5534c1ae6d61a449"
+    },
+    {
+      "name": "Enhanced Celestials",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/enhanced-celestials",
+      "status": "selected",
+      "modIds": [
+        "enhancedcelestials"
+      ],
+      "version": "5.0.0.4",
+      "sha256": "674d747b80c9a9df0bd745ac6648ec336bc1c15d32fa16ffca3a5eb7b83ac76e"
+    },
+    {
+      "name": "Eyes in the Darkness",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/eyes-in-the-darkness",
+      "status": "selected",
+      "modIds": [
+        "eyesinthedarkness"
+      ],
+      "version": "1.3.10",
+      "sha256": "1ed5d3fc36b792b955a83afc6a1334e71a4bf9450f78898e6936c916dc7c3916"
+    },
+    {
+      "name": "Fairy Mine",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/fairy-mine",
+      "status": "selected",
+      "modIds": [
+        "fairy_mine"
+      ],
+      "version": "2.6.5",
+      "sha256": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034"
+    },
+    {
+      "name": "Frieren - Singularity",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/frieren-spells-zoltraak-singularity-irons-spells",
+      "status": "excluded-by-user",
+      "reason": "User chose original Irons3.4.0.11 instead of updating the base for3.16.x addons."
+    },
+    {
+      "name": "From Another World",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/from-another-world",
+      "status": "selected",
+      "modIds": [
+        "fromanotherworld"
+      ],
+      "version": "1.2A.1-forge",
+      "sha256": "075e94963901abbf903c50150872c01abcdf6cd352c3c7497a8d33abd5c007dd"
+    },
+    {
+      "name": "From The Fog",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/from-the-fog",
+      "status": "excluded",
+      "modIds": [
+        "watching"
+      ],
+      "version": "1.9.2",
+      "sha256": "385bddf654c6edefd35cd7f47ce7dffff0610d29ed9efd49927f488dec919fb1",
+      "reason": "User approved exclusion on 2026-10-30 after the error comparison; tools/approved-removals-20261030.json."
+    },
+    {
+      "name": "Gachiakuta",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/gachiakuta",
+      "status": "excluded",
+      "modIds": [
+        "gachiakuta"
+      ],
+      "version": "1.0.0",
+      "sha256": "135c5b4c38ddfcd6c3571a85cb081dbfa51e10aef093848ac619292cb62d7293",
+      "reason": "User approved exclusion on 2026-10-30 after the error comparison; tools/approved-removals-20261030.json."
+    },
+    {
+      "name": "God Wand",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/god-wand",
+      "status": "selected",
+      "modIds": [
+        "godwand"
+      ],
+      "version": "1.2.0",
+      "sha256": "f1d4fd87c576da7f5191a7cdb0228477586e007b3ea155bf2e35bc2df3277b27"
+    },
+    {
+      "name": "Horror Element Mod",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/horror-elements-mod",
+      "status": "selected",
+      "modIds": [
+        "horror_element_mod"
+      ],
+      "version": "1.6.3",
+      "sha256": "3caa31c97003a57a1204aa31eedf31782fe7fceeff5f6832b20faf828972a1f9"
+    },
+    {
+      "name": "HSR Phainon",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/hsr-phainon",
+      "status": "selected",
+      "modIds": [
+        "hsrphainon"
+      ],
+      "version": "1.2.3",
+      "sha256": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1"
+    },
+    {
+      "name": "Jujutsu Craft",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sorceryfight",
+      "status": "selected",
+      "modIds": [
+        "jujutsucraft"
+      ],
+      "version": "51",
+      "sha256": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af"
+    },
+    {
+      "name": "Kimetsunoyaiba",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/demonslayer",
+      "status": "excluded-by-user",
+      "reason": "User requested removal on 2026-10-30 of the pictured cyan backstep arrow and five-square HUD. Pixel-exact icon anchors relative to the independently matched Bleach fist agree with Kimetsu OverlayCooldownTimeOverlay at GUI scale2, not the similar Jujutsu overlay. Not present in original ATM9. Jujutsu Craft remains selected."
+    },
+    {
+      "name": "Liminality",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/liminal-reality",
+      "status": "selected",
+      "modIds": [
+        "liminality"
+      ],
+      "version": "1.0.0",
+      "sha256": "81f861e3f837427880c37f6ef39b2be8f042f8087d2e48b996f319a10892e903"
+    },
+    {
+      "name": "Meulti's Backrooms",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/meultis-backrooms",
+      "status": "selected",
+      "modIds": [
+        "mbackrooms"
+      ],
+      "version": "1.4.0",
+      "sha256": "562bade0fc1f3055c45c0dcf62446cf6498e843080ded615f5c4a92d7a5ddc52"
+    },
+    {
+      "name": "Mine Mine no Mi",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/mine-mine-no-mi",
+      "status": "selected",
+      "modIds": [
+        "mineminenomi"
+      ],
+      "version": "0.11.6",
+      "sha256": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc"
+    },
+    {
+      "name": "Mine Piece",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/mine-piece",
+      "status": "excluded-by-user",
+      "reason": "User excluded Mine Piece on 2026-10-30 after its Skill removal callback re-entered the active effect map by adding Slowness during Chainsaw clear-all, causing ConcurrentModificationException. Current and nearest older official releases retain the callbacks; no author configuration fix was found. Chainsaw Man was separately excluded by a later user request; Mine Piece remains excluded and Mine Mine no Mi remains selected."
+    },
+    {
+      "name": "Mushoku Tensei (Wiwar)",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/mushoku-tensei-mod",
+      "status": "excluded-by-user",
+      "reason": "User requested removal on 2026-10-30 after identifying the author ClassPickGUIScreen (Choose a Class, Mage/Swordsman) in the added main Mushoku Tensei mod. Not present in original ATM9. The dependent Mushoku Tensei Addon is excluded with its required parent."
+    },
+    {
+      "name": "Mushoku Tensei Addon",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/mushoku-tensei-addon",
+      "status": "excluded-by-user",
+      "reason": "Excluded with the main Mushoku Tensei mod after the user requested removal of the added class-selection screen on 2026-10-30. This supersedes the earlier decision to restore the addon when Dreamshift was removed."
+    },
+    {
+      "name": "Nostalgia",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/nostalgia-liminal-spaces",
+      "status": "selected",
+      "modIds": [
+        "nostalgia"
+      ],
+      "version": "1.2.0",
+      "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2"
+    },
+    {
+      "name": "Null Presence",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/null-presence",
+      "status": "excluded",
+      "modIds": [
+        "null_presence"
+      ],
+      "version": "1.6.19-forge-1.20.1-director-rng-trim",
+      "sha256": "c52a7caa1094d10fa0c17818e128b31b62389ef02afc0b47b2ed48a684cfc941",
+      "reason": "User approved exclusion after Original/Modified log comparison on 2026-10-30; details tools/approved-removals-20261030.json."
+    },
+    {
+      "name": "Nyctophobia",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/nyctophobia-forge",
+      "status": "selected",
+      "modIds": [
+        "nyctophobia"
+      ],
+      "version": "2.0.0+mc1.20.1",
+      "sha256": "34a5fa7d9a4da18bc38e6a4281ff393f35a3e1039a38110da2efd4989631a11b"
+    },
+    {
+      "name": "Nyf's Spiders",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/nyfs-spiders",
+      "status": "selected",
+      "modIds": [
+        "nyfsspiders"
+      ],
+      "version": "3.0.2",
+      "sha256": "31adf31057c0f4a45866e29396ab4a382865a45b4923287358b4a2abb4a27c16"
+    },
+    {
+      "name": "Orbital Railgun Forge",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/orbital-railgun-reforged",
+      "status": "selected",
+      "modIds": [
+        "orbital_railgun"
+      ],
+      "version": "1.4.2",
+      "sha256": "259c9ee45468dc33dcbea36517caaa679f60c8bebc216f67ec6f47c181fc5242"
+    },
+    {
+      "name": "Playmate",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/playmate",
+      "status": "selected",
+      "modIds": [
+        "knock_knock"
+      ],
+      "version": "1.0.0",
+      "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04"
+    },
+    {
+      "name": "Presence Footsteps (Forge)",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
+      "status": "selected",
+      "modIds": [
+        "presencefootsteps"
+      ],
+      "version": "1.20.1-1.9.1-beta.1",
+      "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98"
+    },
+    {
+      "name": "Rats",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rats",
+      "status": "selected",
+      "modIds": [
+        "rats"
+      ],
+      "version": "1.20.1-8.1.3",
+      "sha256": "9a73aa327f8d48a06208bb6f47f03799e061eac8714f09301df0ef5d34ca5f3c"
+    },
+    {
+      "name": "ReMorphed",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/remorphed",
+      "status": "selected",
+      "modIds": [
+        "remorphed"
+      ],
+      "version": "4.2",
+      "sha256": "7a5002430661a93d5e1d99d946a5a9866448abf12c28a15a440203493785eae4"
+    },
+    {
+      "name": "Retail 3008",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/retail-3008",
+      "status": "selected",
+      "modIds": [
+        "retail"
+      ],
+      "version": "1.0.6",
+      "sha256": "632e65ae6cea9ee8538798fe28335842a90592a2d03a24ff119102ce8eccf555"
+    },
+    {
+      "name": "Revervox",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/revervox",
+      "status": "selected",
+      "modIds": [
+        "revervox_mod"
+      ],
+      "version": "2.1",
+      "sha256": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6"
+    },
+    {
+      "name": "Rolling Giant: Oldest View",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rolling-giant-oldest-view",
+      "status": "selected",
+      "modIds": [
+        "rolling_giant_oldest_view"
+      ],
+      "version": "1.0.0",
+      "sha256": "72f3a15a8bf7b1ec92629a231a952d68fc636ce9d7b4ac4c8c7a887df12997f4"
+    },
+    {
+      "name": "Rotten Creatures",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rotten-creatures",
+      "status": "selected",
+      "modIds": [
+        "rottencreatures"
+      ],
+      "version": "1.1.0",
+      "sha256": "cbf97ceeb4378b493884fc49fb668098edaca135dad81db548dea6f4c324e81b"
+    },
+    {
+      "name": "Roundabout",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/roundabout-the-jojo-mod",
+      "status": "excluded",
+      "modIds": [
+        "roundabout"
+      ],
+      "version": "3.6.2",
+      "sha256": "5f27650d19f20c4e4b0cddbe947a304328a3767bc3f1ad7c8f6ad7382daf050b",
+      "reason": "User approved exclusion after Original/Modified log comparison on 2026-10-30; details tools/approved-removals-20261030.json."
+    },
+    {
+      "name": "Sanity: Descent Into Madness",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sanity-descent-into-madness",
+      "status": "selected",
+      "modIds": [
+        "sanitydim"
+      ],
+      "version": "1.1.0",
+      "sha256": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a"
+    },
+    {
+      "name": "SAO MOD",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sword-art-online-expansion",
+      "status": "selected",
+      "modIds": [
+        "sao_mod"
+      ],
+      "version": "1.0.0",
+      "sha256": "c8c781f789c5ac032e160981eec7d30d5632123979ac30bbd6dde08682ddebdf"
+    },
+    {
+      "name": "SCP:Overtime",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/scp-overtime",
+      "status": "selected",
+      "modIds": [
+        "scpo"
+      ],
+      "version": "3.1.2",
+      "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752"
+    },
+    {
+      "name": "Siren Head",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/siren-head-the-arrival",
+      "status": "selected",
+      "modIds": [
+        "siren_head"
+      ],
+      "version": "1.1.4",
+      "sha256": "7df77358092deed2fcded6c895975891eeaf70ae3bf4fba26bce1553cdce85fa"
+    },
+    {
+      "name": "Solo Craft: Reawakening",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/solo-craft-reawakening",
+      "status": "excluded",
+      "modIds": [
+        "sololeveling"
+      ],
+      "version": "1.2.0",
+      "sha256": "9ba7d5a63e2aedd96dfb763ff207d60e2b7e7d53234d9af35a3dcdc2b161c9cf",
+      "reason": "User approved exclusion on 2026-10-30 after the error comparison; tools/approved-removals-20261030.json."
+    },
+    {
+      "name": "Sons of Sins",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sons-of-sins",
+      "status": "selected",
+      "modIds": [
+        "sons_of_sins"
+      ],
+      "version": "2.2.1",
+      "sha256": "b8b126443432ff0c475d925a5b208e262df2d1a627548324b7fc1e2a1a46438b"
+    },
+    {
+      "name": "Soul Eater",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/soul-eater-mc",
+      "status": "selected",
+      "modIds": [
+        "soul_eater"
+      ],
+      "version": "1.25.11",
+      "sha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536"
+    },
+    {
+      "name": "Sound of Fear",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sound-of-fear-horror-sounds",
+      "status": "selected",
+      "modIds": [
+        "sound_of_fear"
+      ],
+      "version": "1.0.0",
+      "sha256": "242f06126cb351706fec8e3423942ba2703604f4c3afca4960de3c09e748614a"
+    },
+    {
+      "name": "Sound Physics Remastered",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
+      "status": "selected",
+      "modIds": [
+        "sound_physics_remastered"
+      ],
+      "version": "1.20.1-1.4.10",
+      "sha256": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1"
+    },
+    {
+      "name": "Sounds of the Forest",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sounds-of-the-forest",
+      "status": "selected",
+      "modIds": [
+        "sounds_of_the_forest"
+      ],
+      "version": "1.0.2",
+      "sha256": "caa98fef71bf6945954acf7ae1ca3b0cfb70ef859ca69021fa8573754e9df74d"
+    },
+    {
+      "name": "Tenshō: Eclipse Legacy",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/tensho-spellbooks-destruction-spells",
+      "status": "excluded-by-user",
+      "reason": "User chose original Irons3.4.0.11 instead of updating the base for3.16.x addons."
+    },
+    {
+      "name": "The After",
+      "websiteUrl": "https://modrinth.com/mod/the-after",
+      "status": "selected",
+      "modIds": [
+        "the_after"
+      ],
+      "version": "0.1.2",
+      "sha256": "f43700d5c7e2e55c59f42954fa4e67be057b5de97369b36efee73bf253217d6e"
+    },
+    {
+      "name": "The Backwoods",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/backwoods/files/8093908",
+      "status": "selected",
+      "modIds": [
+        "the_backwoods"
+      ],
+      "version": "1.6.0",
+      "sha256": "9f24cecad4e4467aca091a8b148e6fe47576e5ec812098b68b5d910ecdae97e6"
+    },
+    {
+      "name": "The End of Herobrine",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/endofherobrine",
+      "status": "selected",
+      "modIds": [
+        "endofherobrine"
+      ],
+      "version": "1.20.1-1.0.8.2",
+      "sha256": "f3c296d7166c11c8a129e8a137bb496f6f2b59b352fa0259a4a87332edb19fb3"
+    },
+    {
+      "name": "The Final Goatman",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-final-goatman",
+      "status": "selected",
+      "modIds": [
+        "goatman"
+      ],
+      "version": "4.3.0",
+      "sha256": "62fa70d78a265d6d162062a746f3c0f0e3391cd6db194dcb19f784d1fa2ed748"
+    },
+    {
+      "name": "The Graveyard",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-graveyard-forge",
+      "status": "selected",
+      "modIds": [
+        "graveyard"
+      ],
+      "version": "4.0.1+mc1.20.1",
+      "sha256": "e25cd81622f36875cc2a9cda69da91211989e6fbcc8ce48b3f29344a4b889957"
+    },
+    {
+      "name": "The Hordes",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-hordes",
+      "status": "selected",
+      "modIds": [
+        "hordes"
+      ],
+      "version": "1.6.3g",
+      "sha256": "f3f7cb25540cb0b86eb5ccea220b8684953e56fea3764b0dcd7678aadd4276c7"
+    },
+    {
+      "name": "The Knocker",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-knocker",
+      "status": "excluded",
+      "modIds": [
+        "the_knocker"
+      ],
+      "version": "1.5.2",
+      "sha256": "43af17f0400ed38bfc98be7bcc27c29c76a38f7472970bf83496c548abdec94e",
+      "reason": "User approved exclusion on 2026-10-30 after the error comparison; tools/approved-removals-20261030.json."
+    },
+    {
+      "name": "The Midnight",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-midnight",
+      "status": "selected",
+      "modIds": [
+        "midnight"
+      ],
+      "version": "0.6.7",
+      "sha256": "252ad68dac3dbc8b1f7885edccb563becb26ce2fe4abf4f2713a3869b9bff820"
+    },
+    {
+      "name": "The Midnight Lurker",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-midnight-lurker",
+      "status": "selected",
+      "modIds": [
+        "midnightlurker"
+      ],
+      "version": "3.3.7",
+      "sha256": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9"
+    },
+    {
+      "name": "The Mimicer",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-mimicer",
+      "status": "selected",
+      "modIds": [
+        "themimic_er"
+      ],
+      "version": "1.7.0",
+      "sha256": "88516636609e3c84212c510a9e1d478e5f8affa2171d04165e34090c01843d7f"
+    },
+    {
+      "name": "The Obsessed",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/obsessed",
+      "status": "selected",
+      "modIds": [
+        "the_obsessed"
+      ],
+      "version": "1.5.2",
+      "sha256": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb"
+    },
+    {
+      "name": "The One Who Watches",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-one-who-watches",
+      "status": "selected",
+      "modIds": [
+        "the_one_who_watches"
+      ],
+      "version": "1.4.4",
+      "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696"
+    },
+    {
+      "name": "The Onlooker",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-onlooker",
+      "status": "selected",
+      "modIds": [
+        "anta"
+      ],
+      "version": "4.7.1-alpha",
+      "sha256": "e037615bde9810e139bd3cf7e73070c1417d094f87074aff2e8373d0c22d72c0"
+    },
+    {
+      "name": "The Shooting Star (Demo)",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-demo",
+      "status": "selected",
+      "modIds": [
+        "shooting_star_demo"
+      ],
+      "version": "1.4.4-demo",
+      "sha256": "c95777d06233b12f0172ff92925fc2521a5c7a04acdd899fe81acde888dd4fcf"
+    },
+    {
+      "name": "The Shooting Star Addition",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-addition",
+      "status": "excluded-by-user",
+      "reason": "User chose removal of author static Sun/Moon Redirect defect, including Halley/Luna. Main Shooting Star Demo remains. Vocaloid was separately excluded by a later explicit user decision."
+    },
+    {
+      "name": "The Shooting Star: SS-21 Quasar",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-addition-ss-21-quasar",
+      "status": "excluded-by-user",
+      "reason": "Author1.7.1 lacks HUD refmap; user excluded Quasar and kept current Shooting Star Demo rather than a matched older suite. Vocaloid was separately excluded by a later explicit user decision."
+    },
+    {
+      "name": "The Singing Villager",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-crying-villager",
+      "status": "selected",
+      "modIds": [
+        "singing_villagers"
+      ],
+      "version": "3.5.0",
+      "sha256": "2cafbd7b58244901ed5ca53d495591a4db03beda1a69759415924f1b82efdeca"
+    },
+    {
+      "name": "True Darkness",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/true-darkness-forge-updated-fork",
+      "status": "selected",
+      "modIds": [
+        "darkness"
+      ],
+      "version": "2.0.103",
+      "sha256": "6a1e7db25ad3eeb48642ac2fa3d5a61043e32493c9fda7f0631ba4f3f4cc3fd4"
+    },
+    {
+      "name": "Type 95",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/type-95-sniper-rifle",
+      "status": "selected",
+      "modIds": [
+        "tanya_demo"
+      ],
+      "version": "1.0.2+forge-1.20.1",
+      "sha256": "8f0aca5fb5ab9772028e5839e89ba6861c2ef7eb781e517162cb6054ed07c439"
+    },
+    {
+      "name": "Ultimate Elemental Swords",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/ultimate-elemental-swords",
+      "status": "selected",
+      "modIds": [
+        "ultimate_elemental_swords"
+      ],
+      "version": "1.0.0-1.20.1",
+      "sha256": "b504897bb8a7fc7f9847bc978bec883f3f34bae07650209dd2490a6a16a0187b"
+    },
+    {
+      "name": "Verity JE",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/verity-je",
+      "status": "selected",
+      "modIds": [
+        "verity"
+      ],
+      "version": "6.0.0-ru.1",
+      "sha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8"
+    },
+    {
+      "name": "Vocaloid Stars",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/miku-star-a-shooting-star-addon",
+      "status": "excluded-by-user",
+      "reason": "User chose exclusion of the entire addon on 2026-10-30 after native shader-link failure in the new Stellar Remote decorative tooltip of author 1.4.4.2. Official 1.4.4.1 would preserve preexisting gameplay but omit new tooltip decoration; user chose removal instead. Main Shooting Star Demo remains."
+    },
+    {
+      "name": "Void Manifestations: Iron's Spellbooks",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/void-manifestations-spells-addon",
+      "status": "excluded-by-user",
+      "reason": "User chose original Irons3.4.0.11 instead of updating the base for3.16.x addons."
+    },
+    {
+      "name": "Whisperwoods",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/whisperwoods",
+      "status": "selected",
+      "modIds": [
+        "whisperwoods"
+      ],
+      "version": "1.20.1-2.1.2",
+      "sha256": "211f99245543494e063ce64a8d4f964a0999df6adb53304d259d97413406358c"
+    },
+    {
+      "name": "Woodwalkers",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/woodwalkers",
+      "status": "selected",
+      "modIds": [
+        "walkers"
+      ],
+      "version": "5.8.13",
+      "sha256": "032edf9ea5cddfe082e863362eb155c9e5f6b225712e1b4e8dba934c76ed633a"
+    },
+    {
+      "name": "Zombie Awareness",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/zombie-awareness",
+      "status": "selected",
+      "modIds": [
+        "zombieawareness"
+      ],
+      "version": "1.20.1-1.13.1",
+      "sha256": "4f5104f7d29e1d065364d2483885f3751da2bef09a734cead2fce81c82c46586"
+    },
+    {
+      "name": "Zombie Nightmare Expansions",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/zoniex",
+      "status": "selected",
+      "modIds": [
+        "zoniex"
+      ],
+      "version": "1.2.1",
+      "sha256": "57a71e8680009a18b8f2a76f337e83b0ac99dab9fbe07aea03a47b396ec2e1c5"
+    },
+    {
+      "name": "Grotesque Steve",
+      "websiteUrl": "https://saskez.gumroad.com/l/stevegrotesque",
+      "status": "selected",
+      "modIds": [
+        "grotesque_steve"
+      ],
+      "version": "1.4.2-quiet.1",
+      "sha256": "ffa7df6fb07e54217757436b566fa0073b460c5fa4b695cfd2d4d40692208052",
+      "reason": "Explicit user-approved quiet derivative; exact source and reproducible transformation are pinned separately."
+    }
+  ],
+  "selectedRequestedProjects": 81,
+  "dependencyJars": 19,
+  "authorCompatibilitySelections": [
+    {
+      "project": "AzureLib",
+      "version": "2.0.41",
+      "sha256": "25a95a495c586b72f80bf8b65fd1892b2e21a2d9d2e072808e663aa0938401f6",
+      "previousVersion": "1.0.34",
+      "previousSha256": "9aca62c9caf1266617d2734e49204b1b2fe119ca58b0579dde47fb1c8f39a206",
+      "classification": "NEW dependency; not a baseline replacement",
+      "reason": "Official author update supports unchanged HSR Phainon 1.2.3 Dawnmaker geometry format 1.21.110. Native AzureLibCache.loadModels and all 190 direct From Another World API member references checked. No model edits or native guard bypass; integrated runtime is reported separately."
+    }
+  ],
+  "explicitException": {
+    "project": "Verity JE",
+    "version": "6.0.0-ru.1",
+    "authorization": "User explicitly requested direct Russian JAR editing and no future updates.",
+    "derivativeSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8"
+  },
+  "nativeVerityCompatibility": {
+    "details": "tools/verity-native-compatibility.json",
+    "userApprovedDisableSpawnTimeKills": true,
+    "appliedBy": "pack-owned KubeJS lifecycle and tag data",
+    "launcherSpecificFlag": false,
+    "jarPatched": false,
+    "runtimeVerified": true,
+    "runtimeVerificationScope": "Current lock214b native POST_INIT master killEntities=false and actual AI provider/model/think/context were observed; full client/new world/normal exit and real Russian AI response accepted. Tag final contents were not freshly enumerated; no all-abilities claim. See tools/qa/final-runtime-post-removals-420.json and tools/qa/native-source-acceptance.json."
+  },
+  "questLocalization": {
+    "manifestPath": "tools/atm9_ru_quests/manifest.json",
+    "manifestSha256": "9ebb5aca30cc15ecdd231e534fc1a77d8af6377943ef9b76b6143e848725fde6",
+    "patchTool": "tools/atm9_ru_quests.py",
+    "patchToolSha256": "8be48f103b2f20aebb53c986ff9c1f2dd458c34f8673e9f25c851e3b00bf2cc7",
+    "userAuthorization": "User requested downloading, verifying and completing Russian FTB quest translations for ATM9 and Modified on 2026-10-30.",
+    "details": "library/ru-quests-provenance.md",
+    "nativeDisplayChanges": 327,
+    "baseResourceFilesChanged": 107,
+    "baseJarChanges": 0,
+    "questIdsTasksRewardsDependenciesAndProgressSchemaChanged": false,
+    "runtimeVerification": "Current lock214b full client/new world/normal exit accepted: tools/qa/final-runtime-post-removals-420.json. Prior native structural/I18n proof remains separate:145 SNBT AST,327 display changes,80167 other leaves unchanged,7538 RU keys; QA13 had5 native Russian samples. Current run is not a fresh all-key I18n/locale-toggle replay; no all-quests or visual-quality claim."
+  },
+  "requestedWarningRemoval": {
+    "project": "Meulti's Backrooms",
+    "version": "1.4.0",
+    "details": "tools/photosensitivity-removal.json",
+    "nativeStartupAcknowledgement": true,
+    "dedicatedLoadingWarningImageOverriddenWithUnchangedAuthorEmptyImage": true,
+    "effectsDisabled": [],
+    "jarModified": false,
+    "runtimeVerified": false,
+    "runtimeVerification": "Current lock214b full client/world passed. Prior QA13 native resource observation selected the exact author-transparent warning PNG; current PNG bytes are unchanged. No fresh current visual/UI observation was performed, so runtimeVerified stays false rather than claiming a current visual PASS. See tools/photosensitivity-removal.json and tools/qa/final-runtime-post-removals-420.json.",
+    "visualVerificationClaimed": false
+  },
+  "baseJarOverrides": [
+    {
+      "modId": "alltheleaks",
+      "original": {
+        "path": "mods/alltheleaks-1.0.7+1.20.1-forge.jar",
+        "sha256": "9df833a1e3fb0cc8e4fe43fd2637d5d7745edfe38356a13baaa69457982d4de6",
+        "sizeBytes": 1173400,
+        "version": "1.0.7+1.20.1-forge"
+      },
+      "replacement": {
+        "path": "mods/alltheleaks-1.1.4+1.20.1-forge.jar",
+        "fileName": "alltheleaks-1.1.4+1.20.1-forge.jar",
+        "sha256": "fb72063a7d17df97740d24355444ef2f95eab97728e1256c639bb432c61b7716",
+        "sizeBytes": 1274164,
+        "sourceUrl": "https://mediafilez.forgecdn.net/files/9188/826/alltheleaks-1.1.4%2B1.20.1-forge.jar",
+        "projectId": 1091339,
+        "fileId": 9188826,
+        "version": "1.1.4+1.20.1-forge",
+        "modIds": [
+          "alltheleaks"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/alltheleaks"
+      },
+      "reason": "User-approved compatible AllTheLeaks1.1.4 BASE exception; retain this exact pin across author pack imports until separately reviewed.",
+      "updatePolicy": "retain-pinned-compatible-jar"
+    }
+  ],
+  "grotesqueQuiet": {
+    "authorization": "User approved disabling entry text/sounds/automatic guide and correcting the separate invalid manualgiver command on 2026-10-30.",
+    "originalSha256": "7edde5b1506a69a725412769525ba16122b1dd4c38e35f3edc5c015eef3a6f63",
+    "shippedSha256": "ffa7df6fb07e54217757436b566fa0073b460c5fa4b695cfd2d4d40692208052",
+    "shippedVersion": "1.4.2-quiet.1",
+    "transformation": {
+      "kind": "grotesque-steve-quiet",
+      "patchTool": "tools/grotesque_steve_quiet.py",
+      "patchToolSha256": "7ffd540ddefa641f5bb897760002ed45de15a194c6def473865e27e9de3688a0",
+      "originalPath": "tools/GrotesqueSteve/source/grotesque_steve-1.4.2-forge-1.20.1.jar",
+      "originalSha256": "7edde5b1506a69a725412769525ba16122b1dd4c38e35f3edc5c015eef3a6f63",
+      "originalSizeBytes": 22223025,
+      "reason": "User-approved suppression of the two login text/sound/autobook callbacks and native manualgiver command syntax correction; all remaining author entries preserved."
+    },
+    "newRuntimePending": false,
+    "runtimeVerification": "Exact quiet JAR included in accepted current lock214b full client/new world/normal exit. Separate native Java17 callback/parser proof and four-entry invariance: tools/GrotesqueSteve/native-report.json and preparation-report.json. Previous manualgiver error absent in current log; no physical-input/audio/visual login test claimed. See tools/qa/final-runtime-post-removals-420.json."
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "status": "CURRENT_FINAL_214B_COMPLETED_NATIVE_RUN_WITH_EXPLICIT_RESIDUAL_ERRORS",
+  "frozenAtUtc": "2026-10-30T06:07:29.204364+00:00",
+  "overallAcceptanceDecidedByThisReport": false,
+  "activePackLocksLibraryOrPublicationChangedByThisReport": false,
+  "provenance": {
+    "sourceLockSha256": "214b22b429d73f9b68b88c32021253cde056d10e137199a373b92b810e2fcf09",
+    "totalShippedJars": 531,
+    "baseSlots": 431,
+    "requestedJars": 81,
+    "newDependencyJars": 19,
+    "supportFiles": 16,
+    "unmodifiedAuthorJars": 529,
+    "unchangedOriginalBaseJarHashes": 430,
+    "baseAuthorOverride": {
+      "modId": "alltheleaks",
+      "originalVersion": "1.0.7+1.20.1-forge",
+      "originalSha256": "9df833a1e3fb0cc8e4fe43fd2637d5d7745edfe38356a13baaa69457982d4de6",
+      "officialReplacementVersion": "1.1.4+1.20.1-forge",
+      "officialReplacementSha256": "fb72063a7d17df97740d24355444ef2f95eab97728e1256c639bb432c61b7716",
+      "userApproved": true
+    },
+    "newUserApprovedDerivedJars": [
+      {
+        "modId": "verity",
+        "version": "6.0.0-ru.1",
+        "originalAuthorSha256": "f76f641f17ea3e3b2e8486596790ae65c27c2b016fae6ed8557c67887816b7d0",
+        "shippedSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+        "scope": "Previously approved Russian localization of frozen author6.0.0; this run is not a new whole-method invariance test."
+      },
+      {
+        "modId": "grotesque_steve",
+        "version": "1.4.2-quiet.1",
+        "originalAuthorSha256": "7edde5b1506a69a725412769525ba16122b1dd4c38e35f3edc5c015eef3a6f63",
+        "shippedSha256": "ffa7df6fb07e54217757436b566fa0073b460c5fa4b695cfd2d4d40692208052",
+        "scope": "User-approved entry message/sound and auto-guide callbacks disabled; leading slash in manual-giver function corrected. Prior exact four-entry/native parser/callback proof is separate from this full run."
+      }
+    ],
+    "runtimeJarsIncludingManagedInfrastructure": 532,
+    "all532RuntimeJarHashesEqualBeforeAfterAnd531SourceJarsMatch": true,
+    "postExitJarMapProofSha256": "05d979055ec2606ebd6a79632ea96b047cdfeb2b082ba2d7d8377e4005b16332",
+    "actualNativeModListEntriesIncludingPlatform": 559,
+    "nativeModListObservationSha256": "efcdd0306defbf2f70841452008b12c29aec36fdcca1c89d17791d0e4c6532be",
+    "productionLauncherVersion": 420,
+    "launcherSourceRevision": "b130ef14f0fd9c8dfdca9e3dcc3bb916e1b8d8dc",
+    "testedIsolatedDebugLauncherAssemblySha256": "b3862b052ab9d51e13e81e7f8b5f5b5685c12316b04d6075e3786f3b896a3d20",
+    "publicReleaseExeByteIdentityClaimed": false,
+    "privateCliSha256": "01ad7f0835165e883614269671b9350165d6a2cead3428db066accd553c8e010",
+    "privateReadOnlyAgentSha256": "758f27290e815a433e76cf926bc842435fe4dc1fcb31074924a6158db6b5b8f2",
+    "managedE4Sha256": "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40",
+    "productionIdentityAdapterSha256": "d442cb2b5f6a3fe4f51fc8f117c426844f03b0a5830953f2047d4001186640c5"
+  },
+  "nativeConditions": {
+    "minecraft": "1.20.1",
+    "forge": "47.4.0",
+    "java": "17.0.20.1",
+    "heapMiB": 12288,
+    "freshNativePrivateIntegratedWorld": true,
+    "seed": "-921803102721574764",
+    "structures": true,
+    "bonusChest": false,
+    "savedLevelDatSha256": "c319fcfa24be5809eb83d75bf430de52641b89087629010095764006e02af6a2",
+    "privateRussianLocale": true,
+    "privatePauseOnLostFocus": false,
+    "privateNoFastThrow": true,
+    "initializedTechnicalOptionsRouteNotFirstBoot": true,
+    "graphicsDistanceAudioDeviceSettingsChangedByQa": false,
+    "additionalSynchronousGlAlFieldBoxAbilityPttOrMicrophoneProbeUsed": false,
+    "instrumentationNotDeliveredAsPackContent": true
+  },
+  "nativeHealthAndLifecycle": {
+    "titleThreeSamplesAtUtc": "2026-10-30T05:37:12.188112300Z",
+    "worldThreeSamplesAtUtc": "2026-10-30T05:41:05.784893400Z",
+    "noInputHealthySecondsBeforeSeparateAiPhase": 308.894114,
+    "noInputHealthyObservations": 95,
+    "nativeInputRequestsBeforeMarker": 0,
+    "lastHealthyWorldObservationUtc": "2026-10-30T05:54:15.956430100Z",
+    "healthySecondsToLastObservation": 790.171537,
+    "nativeQuitRequestedAtUtc": "2026-10-30T05:54:19.206673100Z",
+    "forcedKill": false,
+    "normalExitCode": 0,
+    "nativeExitAtUtc": "2026-10-30T05:54:29.9315044+00:00",
+    "dimensionSavingMessages": 83,
+    "allDimensionsSavedLocalTime": "10:54:21",
+    "ownedMinecraftCrashAssistantOllamaRunnerProcessesAbsentAfterExit": true,
+    "ownedBackendReadOnlyTagsHttp200BeforeQuitAndConnectionRefusedAfterQuit": true,
+    "afterExitBackendWinerror": 10061,
+    "emptyNetTcpResultsNotUsedAsPortClosureProof": true
+  },
+  "controls": {
+    "actualProductionApplyEvaluateInvoked": true,
+    "nativeOptionsMappings": 642,
+    "presetMappings": 642,
+    "nativeMatches": 642,
+    "persistedActiveBindingsMatches": 642,
+    "missingOrChangedActiveBindings": 0,
+    "unregisteredOldTechnicalSeedRowsRetainedInOptionsFile": 40,
+    "oldRowsAbsentFromCurrentNativeOptionsAndCurrentSourcePreset": true,
+    "exact642TotalOptionsFileRowsOrFirstBootRestartClaimed": false,
+    "stockDefaultSettingsKeysUnchanged": true,
+    "nativeInventorySha256": "4c10060ca684cb2d8668a0db1f039884084cb43cbdcb14a19dc81bb8d30f81a8",
+    "sourcePresetSha256": "73c4ed9b08666e758fa00b5f305afda7b9704068cf747af7555be28e83fdd603",
+    "postExitOptionsSha256": "0f5a5dd9e421fd63ced98872e9733e8bfb631da5e937eefdc0f03e9927da45cd"
+  },
+  "separateCurrentNativeAiPhase": {
+    "beganAfterFrozenNoInputComparisonPhase": true,
+    "oneNativeItemGiveAndOneNativeRussianChat": true,
+    "giveAtUtc": "2026-10-30T05:46:50.501945400Z",
+    "chatAtUtc": "2026-10-30T05:47:39.251418800Z",
+    "nativeDispatchServerEffectFlagWasFalseNotRewritten": true,
+    "serverGiveFeedbackAndAuthorChatHandlerWereSeparatelyObserved": true,
+    "actualOwnedBackendApiChatHttpStatus": 200,
+    "actualRussianClientResponse": "Верити — это имя, которое я получил при прибытии в мир. Как тебя зовут?",
+    "fixedPrePromptItemMessageExcludedFromAiResponse": true,
+    "russianLanguageVerifiedNotExactOneSentencePromptCompliance": true,
+    "directHttpGenerationByQa": false,
+    "pttOrMicrophoneActionByQa": false,
+    "systemWideOllamaInstallationWasNotUsedAsTheOwnedBackend": true,
+    "cleanOtherComputerInstallationNotTested": true
+  },
+  "completeLogAudit": {
+    "bytes": 7806518,
+    "sha256": "8caa25571668ea8bd1973a9f8a30df9841152457909804de5ee4ca7c2a1505e0",
+    "completeExportEqualsNativeClosedLog": true,
+    "olderRollsNotPrepended": true,
+    "bothNativeHeaderLayoutsParsed": true,
+    "unmatchedTimestampHeaders": 0,
+    "severityCounts": {
+      "INFO": 5075,
+      "WARN": 18625,
+      "ERROR": 902
+    },
+    "fatalCount": 0,
+    "noNewCrashObservedInMeasuredCurrentRun": true,
+    "noInputErrors": 109,
+    "afterMarkerBeforeQuitErrors": 792,
+    "shutdownErrors": 1,
+    "noInputErrorClassification": {
+      "sharedOriginalOrGtCounterSemanticBackground": 89,
+      "newOwnedMetadataOrPatreonNetwork": 6,
+      "baseBloodMagicUnknownNewTrigger": 2,
+      "intentionalJeiAndGrandSigilDiagnostics": 12
+    },
+    "afterMarkerErrorClassification": {
+      "knownVerityTriggeredForgeNonEventDiscoveryDiagnostics": 790,
+      "lateBasePlaceboGearSetHeadersWithUnknownNewCausality": 2
+    },
+    "shutdownGrandSigilDiagnosticHeaders": 1,
+    "genericGl173538523Occurrences": 0,
+    "jadeGtceuNullBlockPosSignatureOccurrences": 0,
+    "sharedNativeGlInfoMessages": {
+      "shaderLink": 2,
+      "unlinkedProgramUniform": 42
+    },
+    "allTheLeaksCitadelConstructorDataMapErrorOccurrences": 0,
+    "removedModAnimationLootTagFunctionErrorFamiliesObserved": false,
+    "sameCountsAreNotExpectedRatesOrNumbersOfBrokenFeatures": true
+  },
+  "list1NewModsOwnObservedErrorsAbsentFromMatchedOriginal": [
+    {
+      "logger": "mixin",
+      "signature": "Mixin config azurelib.mixins.json does not specify \"minVersion\" property",
+      "count": 1,
+      "classification": "NEW-owned Mixin metadata omission; native minimum-version absence permits continue; mandatory injections not proven failed"
+    },
+    {
+      "logger": "mixin",
+      "signature": "Mixin config azurelib.forge.mixins.json does not specify \"minVersion\" property",
+      "count": 1,
+      "classification": "NEW-owned Mixin metadata omission; native minimum-version absence permits continue; mandatory injections not proven failed"
+    },
+    {
+      "logger": "mixin",
+      "signature": "Mixin config celestisynth.mixins.json does not specify \"minVersion\" property",
+      "count": 1,
+      "classification": "NEW-owned Mixin metadata omission; native minimum-version absence permits continue; mandatory injections not proven failed"
+    },
+    {
+      "logger": "mixin",
+      "signature": "Mixin config mixins.mbackrooms.json does not specify \"minVersion\" property",
+      "count": 1,
+      "classification": "NEW-owned Mixin metadata omission; native minimum-version absence permits continue; mandatory injections not proven failed"
+    },
+    {
+      "logger": "mixin",
+      "signature": "Mixin config yacl.mixins.json does not specify \"minVersion\" property",
+      "count": 1,
+      "classification": "NEW-owned Mixin metadata omission; native minimum-version absence permits continue; mandatory injections not proven failed"
+    },
+    {
+      "logger": "tocraft.craftedcore.CraftedCore",
+      "signature": "Couldn't get patreons from https://raw.githubusercontent.com/ToCraft/craftedcore/main/common/src/main/resources/patreons.txt",
+      "count": 1,
+      "classification": "NEW CraftedCore Patreon network fetch404; known cached/built-in fallback; not transformation failure proof"
+    }
+  ],
+  "list2AttributedNewModsTriggeringBaseLoggedErrors": [
+    {
+      "newMod": "Verity JE6.0.0-ru.1",
+      "baseComponent": "Forge EventBus6.0.5 EventSubclassTransformer",
+      "headers": 790,
+      "uniqueChildParentPairs": 395,
+      "onlyAfterSeparateAiChatPhase": true,
+      "currentPairsExactlyMatchPriorNativeProof": true,
+      "current395VerityChildClassBytesExactlyMatchPriorNativeProof": true,
+      "nativeTransformerProofSha256": "5587008534483ca536cdea505e4ed3bc19cf52d3b3077ea46f467af335a905fe",
+      "currentClassByteApplicabilityProofSha256": "3bec622c098bcd07d9a0bde9205dea9a92c0d04745a06d659a4079d03ab2cef7",
+      "impact": "Caught parent discovery failures for395 non-Forge-Event Jackson/LangChain classes under the wrong context AppClassLoader. Prior exact native catch path returned the unchanged ClassNode; complete-loader path skipped the same non-events. Current real native Russian answer succeeded. This is not evidence of395 lost Forge Event handlers.",
+      "newNativeAsmRerunOrWholeCurrentProviderRescanClaimed": false,
+      "logsSuppressedOrClassLoaderGloballyChanged": false
+    }
+  ],
+  "baseLoggedFailuresWithoutProvenNewModCulprit": [
+    {
+      "component": "BloodMagic/Curios chat_panel overlay",
+      "headers": 2,
+      "scope": "Optional.get/empty Curios capability on initial overlay, absent in measured matchedOriginal and persistent in prior Roundabout-only removal A/B. Actual NEW trigger remains unproved; officialATL update did not fix this initial-join failure."
+    },
+    {
+      "component": "Placebo/Apotheosis gear-set selection",
+      "headers": 2,
+      "localTime": "10:52:53",
+      "predicate": "#irons_spellbooks",
+      "staticMechanism": "Byte-identical BASE Iron necromancer boss predicate requests #irons_spellbooks. Authored magician gear remains in legacy boss_gear/, while current Placebo reads gear_sets/. Relevant current archives and loose data contained no matching loaded gear_sets tag. Native selection logs the two headers and falls back to an unfiltered random gear set without throwing.",
+      "scope": "Late current server messages after the AI response, outside the frozen no-input comparison. Not observed in the measured matchedOriginal window. Exact live initiator and NEW mod causality are unknown; neither Verity nor a NEW mod is blamed solely from temporal proximity or logger ownership."
+    }
+  ],
+  "matchedOriginalAndHistoricalInterpretation": {
+    "matchedOriginalSourceRevision": "0555209ec4e4b1ad9953471bbbecc22a17c0acb8",
+    "matchedOriginalLogSha256": "ab89da7cf2ca0452fbbfe741e616deda82d691184ceaea5b9d2aba9984eff324",
+    "matchedOriginalErrors": 96,
+    "matchedOriginalFatals": 0,
+    "sharedOpenAlDeleteBufferErrorWasActuallyObservedInOriginal": true,
+    "currentOpenAlDeleteBufferHeaders": 0,
+    "absenceInThisOneCurrentRunIsNotAnAudioFixClaim": true,
+    "sharedNoncriticalBaselineAcceptedByExplicitUserDecision": true,
+    "baselinePresenceIsNotProofOfAuthorIntentOrHarmlessness": true,
+    "gtFourBreweryCounterSuffixDifferencesAreSharedSemanticFamilies": true,
+    "jeiTimersAndGrandSigilWatchdogAreProvenIntentionalDiagnosticsNotCulpritProof": true,
+    "historicalRoundaboutOnlyAbRemovedGenericGlAndJadeNotBloodMagic": true,
+    "historicalQa11BoxAioobeWasNotReproducedOrFixedByThisFinalRun": true,
+    "older134Or145ErrorSnapshotsAreHistoricalNotCurrentCompositionAcceptance": true
+  },
+  "limits": [
+    "Final overall acceptance and publication belong to the root owner, not this report.",
+    "No zero-ERROR, all-abilities, two-client LAN, selected-skin, first-boot, restart or visual-quality PASS.",
+    "Current full native run has one new private world; no personal-world migration or registry-loss guarantee.",
+    "Prior positive Box CPU animation-entry clocks are not full GPU draw proof; no Box probe was run here.",
+    "No effects, shaders, animations, format guards or logging were disabled to pass this run."
+  ],
+  "evidencePins": {
+    "nativeClosedAuditSha256": "b8be4aae34a3c24ad1a548f3f65b1b171204ade58af88cae8a8cd2783fbaa1ea",
+    "noInputSnapshotSha256": "7121020a552d302b6e2078506814ceeea5aa89803646d45dbd5f7d897b6cc49f",
+    "noInputPhaseMarkerSha256": "dfd53ab67e9fef5cceec876b1d576fbce0aba5b7a3cd22d88214eac51a2c6d93",
+    "postAiBeforeQuitSnapshotSha256": "75fdc8eeb00d27c253439fb5a56243ae84ca2a02b22034cbbe1e2c2736ca7511",
+    "currentAiProofSha256": "8ed9e088f6f603626884faa4a0e44891745a30daf45659c82c7547b0198cfa60",
+    "ownedProcessAbsenceSnapshotSha256": "2f3c57973a22434352f6352988de61265de18b82819bf39bd71f0697dba493e4",
+    "savedNativeWorldOptionsReadOnlyProofSha256": "275b363006902f6c06828e496af7dc4c39284d9232721b30ab9f93e360bc8418",
+    "independentClosedAttributionSha256": "56fd2bac8bf36fc75ca3b6856d538ca8f474baf5fd2e241a6f81d4117618b715",
+    "placeboBaseResourceAndFallbackProofSha256": "75be46bcc5b0e270b86d485ada9e6f4016ab10808425827ba7efa79beff041f2"
+  }
+}

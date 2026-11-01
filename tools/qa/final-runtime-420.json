@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 2,
+  "status": "HISTORICAL_QA13_PLUS_SUPERSEDING_COMPARISONS_ONLY",
+  "overallAcceptanceSetByThisReport": false,
+  "scope": "Historical QA13 full-composition snapshot at lock2f48, supplemented by current matched Original and private one-JAR Roundabout A/B. These data do not verify the any subsequently changed composition.",
+  "provenance": {
+    "sourceLockSha256": "2f48c9e63e105ccd8fc82239b0a6504c14e6678f135f3d0732b709e57f586599",
+    "sourceSnapshotTreeSha256": "7e42177de36e656400bd67a26476a78a7198f466898610df485e5f184d648176",
+    "minecraft": "1.20.1",
+    "forge": "47.4.0",
+    "originalBaseAuthorJars": 431,
+    "requestedJars": 90,
+    "newDependencyJars": 20,
+    "totalShippedJars": 541,
+    "unmodifiedAuthorJars": 540,
+    "all431OriginalBaseAuthorJarHashesUnchanged": true,
+    "authorizedTranslatedNewModDerivative": {
+      "modId": "verity",
+      "authorVersion": "6.0.0",
+      "shippedVersion": "6.0.0-ru.1",
+      "authorJarSha256": "f76f641f17ea3e3b2e8486596790ae65c27c2b016fae6ed8557c67887816b7d0",
+      "shippedJarSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+      "baseModReplacement": false,
+      "userAuthorizedJarLocalization": true,
+      "priorNativeStructuralVerificationGameplayMethodsInvariant": 531,
+      "scope": "One NEW-mod translated derivative, explicitly replacing its author input; not an unmodified author JAR. Gameplay-method structural invariance is the prior bounded native verification, not an all-abilities runtime test."
+    },
+    "runtimeTopLevelJarsIncludingInfrastructure": 542,
+    "allRuntimeJarHashesUnchangedDuringRun": true,
+    "launcherReleaseSource": 420,
+    "launcherSourceRevision": "b130ef14f0fd9c8dfdca9e3dcc3bb916e1b8d8dc",
+    "launcherAssemblySha256": "b3862b052ab9d51e13e81e7f8b5f5b5685c12316b04d6075e3786f3b896a3d20",
+    "launcherBuildKind": "Isolated Debug build of published 420 source; not public EXE byte identity",
+    "privateQaAgentSha256": "758f27290e815a433e76cf926bc842435fe4dc1fcb31074924a6158db6b5b8f2",
+    "privateAgentProtocol": 7,
+    "bytecodeTransformerAdded": false
+  },
+  "privateQaDifferencesDisclosed": {
+    "isolatedOfflineOnePlayerWorld": true,
+    "nativeCreativeCommandsEnabled": true,
+    "russianLocale": true,
+    "pauseOnLostFocus": false,
+    "fullExceptionStacksNoFastThrow": true,
+    "exactNativeSeed": "-921803102721574764",
+    "generateStructures": true,
+    "bonusChest": false,
+    "nativeFreshWorldNotQuickPlay": true,
+    "worldCopiedOrNbtTemplatePatched": false,
+    "productionControlsPresetAppliedToInitializedPrivateOptions": true,
+    "oneExactAuthorizedNativeCommand": "summon verity:box ^ ^ ^3",
+    "temporarySynchronousGlDebugOnlyAfterWorldHealth": true,
+    "productionGameFilesOrEffectsChangedByDiagnostics": false,
+    "graphicsDistanceAudioOrMicrophoneOptionsChangedByDiagnostics": false,
+    "diagnosticAgentShippedAsPackMod": false
+  },
+  "nativeAcceptanceEvidence": {
+    "titleConsecutiveHealthySamples": 3,
+    "worldConsecutiveHealthySamples": 3,
+    "actualRussianTranslationSamples": 5,
+    "actualWarningResourceSha256": "581b9352f1c1b0af5ce7bfb36e5db6ea55bc6b409f722db965abcd2ee0b0a76b",
+    "nativeGpuMaximumTextureSize": 16384,
+    "gpu": "Intel Arc B390",
+    "nativeKeyRegistryCount": 696,
+    "nativeOptionsKeyCount": 682,
+    "nativeTitlePresetMatches": 682,
+    "postExitSavedPresetMatches": 682,
+    "presetBindingMismatches": 0,
+    "firstLaunchPresetPersistenceVerified": false,
+    "naturalBoxExistingRenderAnimationPathObserved": true,
+    "explicitBoxNewServerEntityVerified": true,
+    "explicitBoxExistingModelAndEntityManagerAdvancingSamples": 3,
+    "explicitBoxClockSamples": [
+      63.55987483263016,
+      128.67987471818924,
+      193.5598754286766
+    ],
+    "stableHealthyWorldSecondsAfterThirdBoxSample": 256.889785,
+    "fullVertexSubmissionOrGpuDrawVerified": false,
+    "historicalQa11BoxArrayExceptionReproduced": false,
+    "historicalQa11BoxArrayExceptionFixedClaimed": false,
+    "ordinaryNativeQuit": true,
+    "allDimensionsSaved": true,
+    "nativeJavaExitCode": 0,
+    "nativeExitedAtUtc": "2026-10-30T02:36:36.5633143+00:00",
+    "ownedGameAndAiBackendProcessesAbsentAfterExit": true,
+    "ownedBackendPortClosedAfterExit": true,
+    "forcedTerminationUsed": false
+  },
+  "completeLog": {
+    "sha256": "d5f665d725304008d18b81cd98262339ccff8bdbbb6177fdfd94d05474c5351f",
+    "bytes": 25011017,
+    "beginsWithCurrentLauncherStartupAndEndsAfterNativeSave": true,
+    "currentLogRequiredNoRolloverReconstruction": true,
+    "olderStoppedStagingGzExcluded": true,
+    "unmatchedTimestampHeaders": 0,
+    "errorHeaders": 134,
+    "fatalHeaders": 0,
+    "nativePhaseErrors": {
+      "startup": 100,
+      "worldLoad": 4,
+      "joined": 29,
+      "shutdown": 1
+    },
+    "countsAreNotRates": true,
+    "newExactErrorSignaturesVersusPriorFullDiag12": 3,
+    "newExactErrorScope": "Three headers from one transient Realms HTTP 502 HTML response/JSON parsing before Title; not a new gameplay crash.",
+    "allErrorsClaimedInheritedOrHarmless": false
+  },
+  "gl": {
+    "generic173538523InfoCallbacks": 30475,
+    "nativeSynchronousCaptureAttempts": 12,
+    "capturedUniqueStacks": 1,
+    "targetMessagesDuringBoundedProbe": 84,
+    "actualCaptureSeconds": 3.206004,
+    "maximumConfiguredProbeSeconds": 90,
+    "specificSynchronousCaller": "GL30C.glBlitFramebuffer -> RenderTarget.copyDepthFrom (SRG m_83945_, line94) -> LevelRenderer.roundabout$setDepthbuffer -> roundabout$renderShaders2",
+    "sameNativeCallbackAndRenderThreadVerified": true,
+    "originalSynchronousState": false,
+    "originalSynchronousStateRestored": true,
+    "originalCallbackPointerUnchanged": true,
+    "neutralLoggingTapRemoved": true,
+    "cleanupVerifiedBeforeExplicitBoxCommand": true,
+    "sourceDestinationFboIdsFormatsSamplesDimensionsMeasured": false,
+    "allGenericCallbacksAssignedToCapturedCaller": false,
+    "additionalShaderLinkInfoCallbacks": 1,
+    "additionalUnlinkedUniformInfoCallbacks": 21,
+    "shaderLinkAndUniformExactSignaturesObservedInOriginalBaseline": true,
+    "genericSignatureObservedInOriginalBaseline": false,
+    "productionEffectOrFormatGuardDisableApplied": false,
+    "supersedingSingleRemovalAbGenericCallbacks": 0,
+    "supersedingMatchedOriginalShaderSignaturesShared": true,
+    "scope": "The30475callbacks and synchronous capture remain historical QA13 facts; later private Roundabout deletion removed the observed Generic family in that run. This is not runtime acceptance of the later changed composition."
+  },
+  "remainingErrorFamilies": [
+    {
+      "family": "Blood Magic Curios overlay",
+      "errorHeaders": 2,
+      "exactNativeCaller": "CuriosCompat.getCuriosInventory:26 -> Optional.get -> ElementDemonAura.shouldRender -> minecraft:chat_panel",
+      "baselineRelation": "Base JAR unchanged; these two exact runtime signatures were absent from measured original baseline and present in Modified diag12 and this run.",
+      "scope": "Caught overlay failure at initial join; continued world health does not prove correct overlay output. Superseding one-JAR A/B still logged the same two Blood Magic/Curios headers; no causal new-mod removal recommendation is established for this family."
+    },
+    {
+      "family": "Jade breaking-progress null BlockPos",
+      "errorHeaders": 3,
+      "exactNativeCaller": "JadeClient.drawBreakingProgress:242 -> Level.gtceu$getBlockStateOffThread -> null BlockPos",
+      "baselineRelation": "Absent from both measured Original windows, present in QA13, absent in the private one-JAR Roundabout A/B.",
+      "scope": "Superseding method proof plus one-JAR A/B supports Roundabout attribution for these conditions: native getter consumes f105191, Roundabout overwrites it with null; without Roundabout six initial values were non-null and Jade error headers were0. No universal all-HUD or visual claim."
+    },
+    {
+      "family": "OpenAL stream-buffer deletion",
+      "errorHeaders": 1,
+      "exactMessage": "Deleting stream buffers: Invalid operation.",
+      "baselineRelation": "Superseded: the later matched current Original reproduced the exact error at08:40:12 before quit; shared-observed accepted baseline background by explicit user decision.",
+      "scope": "Historical QA13 had one error; later A/B had two paired native ModernFix cache-eviction resources (minecart/base.ogg and bee/loop4.ogg). Exact AL attachment/sticky state is not proved. No new-mod removal or fix claim for this family."
+    },
+    {
+      "family": "Born in Chaos and Solo Craft animation parsing",
+      "errorHeaders": 12,
+      "nativeLoggerCounts": {
+        "AzureLib": 6,
+        "GeckoLib": 6
+      },
+      "baselineRelation": "Introduced author resources, absent from original baseline; unchanged from Modified diag12.",
+      "nativeResourceProof": {
+        "BornInChaos": {
+          "malformedAnimationKeys": 4,
+          "reachableAttackAnimation": 1,
+          "oldIdleResourceKeysWithoutDirectCurrentCaller": 3
+        },
+        "SoloCraft": {
+          "malformedAnimationKeys": 2,
+          "keys": [
+            "idle",
+            "walk"
+          ],
+          "defaultKaiselinLocomotionReferencesValidFlyAnimation": true
+        }
+      },
+      "scope": "Both native libraries report the six malformed keys. Static current-model/controller references establish one active Born attack defect; three old Born idle resources lack direct current references. Solo default fly is valid; dynamic ability animation use was not individually exercised. No compatible official fix was found in the previously audited releases; no downgrade/resource patch applied."
+    },
+    {
+      "family": "Other explicit source/data/config/network/JEI diagnostics",
+      "scope": "Full private bounded comparison retains all134ERROR headers. Shared original-source paths are called baseline only where exact signatures/contexts were measured; tags, loot/functions, client scripts and new integration errors are not collectively declared harmless."
+    }
+  ],
+  "priorAiChatProofKeptSeparate": {
+    "chatTestIssuedThisRun": false,
+    "priorDiag12RussianChatAnswerObserved": true,
+    "prior790ForgeDiagnosticsRetriggeredThisRun": false,
+    "prior790ForgeDiagnosticsFixedClaimed": false,
+    "priorNarrowNativeClassification": "395 paired parent-discovery/transform diagnostics for uniquely provided non-Event classes. Exact native transformer returns unchanged ClassNode on the caught AppClassLoader path; complete loader skips all395 non-events without mutation. No log suppression."
+  },
+  "notClaimed": [
+    "Historical Box bug fixed",
+    "full GPU draw or visual quality",
+    "all abilities",
+    "first-launch preset persistence",
+    "restart coverage",
+    "two-client Steam/LAN",
+    "all remaining ERROR resolved",
+    "all generic GL messages share one origin",
+    "Runtime acceptance of the later changed composition",
+    "Production publication by this report"
+  ],
+  "publicationClaimed": false,
+  "historicalQa13Status": "EVIDENCE_COMPLETE_ROOT_ACCEPTANCE_REVIEW_PENDING",
+  "nativeEvidenceAppliesToHistoricalQa13Only": true,
+  "qa13CountsRetainedWithoutRewriting": {
+    "errorHeaders": 134,
+    "fatalHeaders": 0,
+    "generic173538523InfoCallbacks": 30475,
+    "sourceLockSha256": "2f48c9e63e105ccd8fc82239b0a6504c14e6678f135f3d0732b709e57f586599"
+  },
+  "userPolicy": {
+    "sharedObservedNoncriticalBaseline": "accepted-background-by-explicit-user-decision",
+    "baselinePresenceOrPopularityDoesNotProveIntentionalOrHarmless": true,
+    "provenIntentionalAuthorDiagnosticsExempt": true,
+    "introducedFunctionalFailuresIncludingBaseAffectedByNewModsRemainSeparate": true
+  },
+  "supersedingMatchedOriginal": {
+    "sourceRevision": "0555209ec4e4b1ad9953471bbbecc22a17c0acb8",
+    "all431BaseJarHashesMatch": true,
+    "sameJavaForgeHeapImmutable420AndNativeSeed": true,
+    "nativeTitleAndFreshWorldThreeSamples": true,
+    "nativeHealthyWorldSeconds": 510.496559,
+    "normalQuitAllDimensionsSavedExitCode": 0,
+    "errorHeaders": 96,
+    "fatalHeaders": 0,
+    "completeLogSha256": "ab89da7cf2ca0452fbbfe741e616deda82d691184ceaea5b9d2aba9984eff324",
+    "completeLogBytes": 4002097,
+    "exactOpenAlDeletionErrorReproduced": true,
+    "openAlErrorLocalTime": "08:40:12",
+    "nativeQuitLocalTime": "08:43:55",
+    "openAlIsNotExclusiveToModified": true,
+    "all96ErrorsClaimedIntentionalOrHarmless": false,
+    "audioDeviceDifference": "Matched Original used Razer BT headphones; earlier QA13 used Cirrus output, both selected default. No hardware/device settings were changed by QA. Positive BASE reproduction remains valid.",
+    "sameGtceuFourSemanticFamiliesWithGeneratedCounterSuffixes": true,
+    "exactOriginalGtceuSuffixes": [
+      165,
+      166,
+      167,
+      168
+    ],
+    "exactQa13GtceuSuffixes": [
+      169,
+      170,
+      171,
+      172
+    ]
+  },
+  "supersedingSingleRemovalAb": {
+    "soleRemovedJar": {
+      "name": "Roundabout-forge-1.20.1-3.6.2.jar",
+      "sha256": "5f27650d19f20c4e4b0cddbe947a304328a3767bc3f1ad7c8f6ad7382daf050b"
+    },
+    "declaredMandatoryDependentsRemoved": 0,
+    "other1926SourceFilesByteIdentical": true,
+    "totalPrivateShippedJars": 540,
+    "nativeHealthyWorldSeconds": 543.536065,
+    "nativeTitleAndWorldThreeSamples": true,
+    "normalQuitAllDimensionsSavedExitCode": 0,
+    "nativeExitedAtUtc": "2026-10-30T04:21:23.0321012+00:00",
+    "ownedGameAndAiBackendCleanupVerified": true,
+    "completeLogSha256": "914ad1c78e9333fab8dc6c6dcd3f1b1adb0820d5552d9c65a6b3eeecb7f5b36d",
+    "completeLogBytes": 23680186,
+    "errorHeaders": 145,
+    "fatalHeaders": 0,
+    "countsAreNotRates": true,
+    "newNormalizedErrorSignaturesVsQa13": [],
+    "normalization": [
+      "runtime object identity",
+      "JEI elapsed seconds"
+    ],
+    "generic173538523InfoCallbacks": 0,
+    "jadeNullBlockPosErrorHeaders": 0,
+    "bloodMagicCuriosErrorHeaders": 2,
+    "bloodMagicResolvedByRoundaboutRemoval": false,
+    "initialNativeDestroyPositionNonNullSamples": 6,
+    "exactSingletonOrSentinelCoordinatesRead": false,
+    "openAlDeletionErrorHeaders": 2,
+    "nativeModernFixEvictionLogRows": 210,
+    "nativeEvictionResourceCorrelations": [
+      {
+        "time": "09:16:52",
+        "resource": "minecraft:sounds/minecart/base.ogg"
+      },
+      {
+        "time": "09:18:56",
+        "resource": "minecraft:sounds/mob/bee/loop4.ogg"
+      }
+    ],
+    "openAlAttachmentOrStickyErrorStateProved": false,
+    "diagnosticDifferences": [
+      "Author-native ModernFix sound-cache eviction logging only",
+      "Six read-only initial native field samples"
+    ],
+    "noAdditionalAlQueriesOrGlSynchronousFlag": true,
+    "productionCompositionChangeOrOverallAcceptanceClaimed": false
+  },
+  "methodEvidenceAndBinaryCrossChecks": {
+    "roundaboutGl": "Prior synchronous JNI stack: glBlitFramebuffer -> RenderTarget.copyDepthFrom -> Roundabout setDepthbuffer/renderShaders2; one observed caller, no FBO format measurements.",
+    "jadeMethods": "Exact native Jade getter reads MultiPlayerGameMode.f105191 before Level.getBlockState; Roundabout stopDestroyBlock overwrite assigns null. The private A/B observed six non-null values and no Jade NPE.",
+    "readonlyFieldScope": "Null/present and runtime class only; no coordinate/singleton identity measurement or game-field mutation.",
+    "runtimeJarCrossCheck": {
+      "parentRuntimeJars": 542,
+      "abRuntimeJars": 541,
+      "removed": [
+        "mods/Roundabout-forge-1.20.1-3.6.2.jar"
+      ],
+      "otherRuntimeJarDifferences": [],
+      "all541RemainingJarBytesIncludingInfrastructureIdentical": true
+    },
+    "e4SteamIncludedInAllRemaining541ByteHashComparison": true,
+    "authorizedVerityMethodCheckIsSeparate": "The earlier 531 gameplay-method structural-invariance check concerns the authorized Verity localization, not the E4Steam/runtime whole-JAR hash comparison or an all-abilities gameplay test."
+  },
+  "laterCompositionChangesNotTestedHere": {
+    "packAndLockOwnerIsRoot": true,
+    "nativeRuntimePassForAnyLaterCompositionClaimed": false,
+    "nextExactFrozenCompositionNativeRunRequiredSeparately": true
+  }
+}

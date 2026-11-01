@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "status": "STATIC_REVIEW_COMPLETE_NATIVE_FULL_CLIENT_QA_PENDING",
+  "activePackChangedByAuditor": false,
+  "scope": "Official complete JAR comparison, recursive embedded JVM JAR inventory, actual javap bodies and current-target field checks. No game, attach, build, configuration or production writes.",
+  "authorizationBoundary": "Root owns Modified-only AllTheLeaks override and retention policy. Original author431 BASE remains untouched. Audit does not activate update.",
+  "officialProject": {
+    "projectId": 1091339,
+    "author": "Uncandango",
+    "projectUrl": "https://www.curseforge.com/minecraft/mc-mods/alltheleaks",
+    "sourceUrl": "https://github.com/pietro-lopes/AllTheLeaks"
+  },
+  "base": {
+    "version": "1.0.7+1.20.1-forge",
+    "fileId": 7065024,
+    "sizeBytes": 1173400,
+    "sha256": "9df833a1e3fb0cc8e4fe43fd2637d5d7745edfe38356a13baaa69457982d4de6",
+    "sourceUrl": "https://edge.forgecdn.net/files/7065/024/alltheleaks-1.0.7%2B1.20.1-forge.jar"
+  },
+  "candidate": {
+    "version": "1.1.4+1.20.1-forge",
+    "fileId": 9188826,
+    "sizeBytes": 1274164,
+    "sha256": "fb72063a7d17df97740d24355444ef2f95eab97728e1256c639bb432c61b7716",
+    "artifactRelativePath": "artifacts/atm9-modified/research/citadel-alltheleaks-impact-20261030/alltheleaks-1.1.4+1.20.1-forge.jar",
+    "releaseUrl": "https://www.curseforge.com/minecraft/mc-mods/alltheleaks/files/9188826",
+    "sourceUrl": "https://edge.forgecdn.net/files/9188/826/alltheleaks-1.1.4%2B1.20.1-forge.jar"
+  },
+  "declarations": {
+    "topLevelModIdsUnchanged": [
+      "alltheleaks"
+    ],
+    "loader": "javafml",
+    "loaderRange": "[47,)",
+    "mandatoryDependenciesUnchanged": {
+      "forge": "[47.2.0,)",
+      "minecraft": "[1.20.1,1.20.2)"
+    },
+    "optionalDependenciesUnchanged": {
+      "geckolib": "[4.4.8,)",
+      "moonlight": "[1.20-2.13.32,)"
+    },
+    "allDependencySides": "BOTH",
+    "packMcmetaUnchanged": {
+      "pack": {
+        "description": "All The Leaks",
+        "pack_format": 15
+      }
+    },
+    "topLevelClassesJava17": {
+      "old": 308,
+      "new": 332
+    },
+    "newEmbeddedLibrariesJava17ClassCount": 33,
+    "newMandatoryExternalDownloadOrModId": false
+  },
+  "contentComparison": {
+    "oldEntries": 318,
+    "newEntries": 345,
+    "addedEntries": 28,
+    "removedEntries": 1,
+    "changedEntries": 29,
+    "unchangedEntries": 288,
+    "topLevelAddedClasses": 25,
+    "topLevelRemovedClasses": 1,
+    "topLevelChangedClasses": 24,
+    "recursiveClassCounts": {
+      "old": 875,
+      "new": 932
+    },
+    "recursiveAddedClasses": 58,
+    "recursiveRemovedClasses": 1,
+    "recursiveChangedClasses": 24,
+    "recursiveUnchangedClasses": 850
+  },
+  "nestedLibraries": {
+    "new": [
+      "gcpath-api-0.1.0-SNAPSHOT.jar",
+      "gcpath-capture-0.1.0-SNAPSHOT.jar",
+      "gcpath-protocol-0.1.0-SNAPSHOT.jar"
+    ],
+    "unchangedByteExact": [
+      "mixinextras-forge-0.5.0.jar",
+      "mixinsquared-forge-0.3.6-beta.1.jar"
+    ],
+    "newLibraryClassesHaveMinecraftForgeWorldRegistryCalls": false,
+    "diagnosticReachability": "New GCPath classes provide explicit client print_gc_roots diagnostic: HotSpot heap dump and MAT worker process. No automatic capture call found; registration lambda calls capture only when that command executes. Not exercised by auditor."
+  },
+  "configuration": {
+    "samePath": "config/alltheleaks.json",
+    "oldSixKeysAndDefaultsPreserved": true,
+    "addedDefaults": {
+      "memoryUsageWarningPercentage": 90,
+      "debugThreadsStuck": false
+    },
+    "missingNewKeysUseDefaults": true,
+    "manualConfigMigrationRequiredByInspectedLoadCode": false,
+    "frozenOriginalPackHasAllTheLeaksConfigOverride": false,
+    "debugJfr": "DebugThreadsStuck RecordingStream daemon is gated by author debugThreadsStuck setting, default false."
+  },
+  "mixinDeclarationDelta": {
+    "added": [
+      "main.BuilderEntityRenderForwarderMixin",
+      "main.EntityMixin",
+      "main.EntityMixin2",
+      "main.EntityMixin3",
+      "main.ForgeServerSparkPluginMixin",
+      "main.RandomizableContainerBlockEntityMixin",
+      "main.WrapperWorldMixin"
+    ],
+    "removed": [],
+    "existingHeaderUnchanged": {
+      "required": false,
+      "compatibilityLevel": "JAVA_17",
+      "minVersion": "0.8",
+      "defaultRequire": 0,
+      "mixinextrasMinVersion": "0.5.0"
+    },
+    "selection": "Author IssueManager annotation version gates and existing plugin decide actual application. This report does not declare runtime injection success. MTS target absent in reviewed roster, so its WrapperWorld/BuilderEntity mixins are not expected to be selected there."
+  },
+  "importantBehaviorChanges": [
+    {
+      "path": "Citadel common Issue001",
+      "change": "Range [2.5.4,) becomes [2.5.4,2.6.3); exact current Citadel2.6.3 is excluded before Class.forName/static initialization. Old absent static dataMap lookup is no longer queued. Separate client Citadel handler remains independent.",
+      "worldImpact": "Obsolete ServerStopping static-map cleanup skipped, no Citadel content removal."
+    },
+    {
+      "path": "PlayerReviveFix + EntityMixin3 + common GameBusEvent",
+      "change": "HIGHEST Clone toggles IS_BEING_CLONED; Entity.revive redirects to reviveCaps only during clone unless playerrevive is installed; LOWEST invalidates original player caps and resets flag.",
+      "worldImpact": "Player capability lifecycle changes; no terrain write. Not evidence of fixing unrelated first-join BM Optional failure."
+    },
+    {
+      "path": "EntityMixin / EntityMixin2 / RandomizableContainerBlockEntityMixin",
+      "change": "Initial fluid-map capacity0, fast iteration for fluid-type predicate and loop-based container isEmpty query.",
+      "worldImpact": "No fluid edits or inventory clear in inspected methods."
+    },
+    {
+      "path": "AE2 / Powah / Irons cache handlers",
+      "change": "Remove unloaded-world FakePlayer/cache entries or clear old client spell-selection references on Clone/LoggingOut. Exact current AE2.FAKE_PLAYERS WeakHashMap, Powah.loadedCables Map, Irons SpellBarOverlay.lastSelection SpellSelectionManager fields exist with expected static descriptors.",
+      "worldImpact": "Reference/cache cleanup; no ItemStack removal or block mutation seen."
+    },
+    {
+      "path": "Spark ForgeServerSparkPluginMixin",
+      "change": "TAIL disable nulls server and inherited platform; server shadow marked Final+Mutable. Current Spark1.10.53 declares disable() and matching fields.",
+      "worldImpact": "Server shutdown ownership cleanup; normal close needs runtime verification."
+    },
+    {
+      "path": "Forge Issue10684",
+      "change": "Renames old UntrackedIssue004; all439 symbolic instruction lines identical after own-class rename/whitespace normalization. FML dangling-JAR cleanup existed already.",
+      "worldImpact": "Not a newly introduced cleanup phase."
+    },
+    {
+      "path": "Forge Issue39",
+      "change": "Replaces old UntrackedIssue003 event-cache rebuild; retains ServerStopped cleanup, narrows Forge range [47.2,47.4.16), skips EventBus>=6.2.26 after inspecting native implementation version and logs duration.",
+      "worldImpact": "Existing event-bus cleanup with updated compatibility guard."
+    },
+    {
+      "path": "ClearLeakedLevelChunks",
+      "change": "Existing ticker-list cleanup checks null ticker and owning chunk not in level before removeIf.",
+      "worldImpact": "Runtime ticker references, not setBlock/destroyBlock/inventory clear."
+    }
+  ],
+  "registryImpact": {
+    "assetsOrDataResourcesInEitherJar": false,
+    "scope": "All875old/932new recursive class bytes inspected for registration/SavedData references; exact direct references reviewed. RegistryObject.get/getKey/RegistryAccess.lookup are lookups, not registration. AllTheLeaks and ModEvent initialization paths inspected.",
+    "newContentRegistryRegistrationFound": false,
+    "removedOrRenamedContentRegistryIdFound": false,
+    "newEmbeddedModIdFound": false,
+    "interpretation": "No content registry-ID migration is identified by this update. This is a bounded static finding, not a guarantee for arbitrary old worlds or every reflective runtime path."
+  },
+  "safetyReview": {
+    "classification": "alltheleaks remains original BASE mod ID despite approved replacement; new dependencies do not get falsely reclassified as BASE.",
+    "newWorldMutationPath": {
+      "command": "/atl place_all_block_entities",
+      "implementation": "Queues native execute-in-dimension run setblock commands through Commands.performPrefixedCommand on level END ticks; does change terrain if deliberately enabled/executed.",
+      "authorGate": "AllTheLeaks.INDEV && server.isSingleplayer()",
+      "indevInitializer": "Boolean.getBoolean(\"alltheleaks.indev\")",
+      "defaultEnabled": false,
+      "productionJvmArgsPath": "artifacts/atm9-modified/rebuild-20261028/pack/launcher/jvm-args.txt",
+      "productionJvmArgsSha256": "a1f3a734e672681e16e8db9a35ece57236720f99f95a85bac9eb2caac1e19d3c",
+      "productionJvmArgsContent": "-Dlog4j.configurationFile=config/log4j2.xml",
+      "flagAbsentFromReviewedProductionFile": true,
+      "autorunSearch": "No exact place_all_block_entities/alltheleaks.indev/print_gc_roots strings found in pack kubejs/config/launcher selected JS/JSON/TXT/TOML/properties source files.",
+      "permissionLimit": "Do not describe this as a protected player ability. Keep development flag absent; no command run by auditor."
+    },
+    "recommendation": "No new NEW-ability Safety action module justified by inspected automatic paths; record approved BASE SHA replacement and keep existing BASE-source policy. If any exact-hash metadata includes AllTheLeaks, update that pin under root ownership. New developer-only terrain path explicitly disclosed, not hidden or tested as protected.",
+    "fullSafetyRuntimePassClaimed": false
+  },
+  "compatibilityAssessment": {
+    "staticResult": "No changed loader/dependency/version/side requirement blocks Forge47.4.0 Minecraft1.20.1 Java17; current relevant mod targets and new reflective fields checked. Citadel fix is concretely proved.",
+    "remainingRisk": "Official update changes capability, cache, mixin and shutdown behavior beyond Citadel. Static symbol/range checks cannot prove target/invoke compatibility or long-session RAM/FPS.",
+    "mustUseExistingNativeFullClientGate": [
+      "Actual final JAR hash and ModList version",
+      "Title + fresh integrated world + requested stable observation",
+      "Startup and close dependency/reflection/mixin ERROR comparison; missing Citadel dataMap no longer emitted",
+      "Native Verity request phase remains separate from clone capability inference",
+      "Normal save/close and portable backend shutdown"
+    ],
+    "notPerformed": [
+      "No game launch or attach by auditor",
+      "No heap capture/GC root command/debug block command/JFR recording",
+      "No RAM retention/FPS/duration or client/dedicated compatibility PASS"
+    ]
+  },
+  "evidence": {
+    "whole-jar-entry-comparison.json": "ad3e68f9d09925f40c1c6e38b3edaacdfad44fdfaf56dd410e69a1fd33653910",
+    "recursive-class-registry-scan.json": "a04b5da40b915244f6fea7b93b19792afdb952256b97fcef9958b4bf95984db3",
+    "nested-jars-audit.json": "b83fd8d5e77875833949cadb38afd5acbd701f31cf1c88291106f9c78176a92a",
+    "content-registration-extended-scan.json": "525b3f27b98711ec21042307ff94832a3311dbb82fa45c17cf798cff27d45385",
+    "registry-and-world-lifecycle-references.json": "dab06e6e669ee98cb9b281db1e9558818f2ff4c5cf7b57fbe48172d81bc8af45",
+    "new-handler-installed-symbol-checks.json": "a1980136ef60507f2d4e9e4e76b2412a1d80c475dae2cecb61464ae0b886ce9a",
+    "renamed-forge-issue-method-comparison.json": "96439811e95f47d5599429b7362bfa0e68c630d68b8621cd6e436bfc24f7ec0a",
+    "installed-mod-target-snapshot.json": "2776b2812c934c1504cd4f05b732fec36d632275215fcb51b80ea714c8835eaf"
+  }
+}

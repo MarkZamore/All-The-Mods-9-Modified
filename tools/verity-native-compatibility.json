@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "modPin": {
+    "path": "mods/verity-6.0.0-ru.1.jar",
+    "sha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+    "version": "6.0.0-ru.1"
+  },
+  "mechanism": "Existing author KubeJS APIs in this pack; no launcher content rule or added executable JAR",
+  "nativeConfiguration": {
+    "authorization": "User explicitly chose keeping Verity with automatic spawn-time kills disabled, then required pack-side implementation.",
+    "hook": "StartupEvents.postInit after Forge CONFIG_LOAD",
+    "api": "varmite.verity.VerityConfig.KILL_ENTITIES.set(false)",
+    "nativeField": "GeneralSettings.killEntities",
+    "preservesAllOtherConfigValues": true,
+    "scope": "Automatic animal/villager deaths during entity appearance/loading; other AI and combat handlers are not changed.",
+    "rollback": "Removing the script does not undo the native autosaved false value; an explicit native config change is required to restore true."
+  },
+  "tagData": {
+    "reason": "Author tag requires two IDs absent from its item registry; the invalid shared tag breaks base Botania and new Biomancy dependent tags.",
+    "api": "ServerEvents.tags(item) raw-entry remove before Forge TagLoader.build",
+    "tag": "minecraft:music_discs",
+    "removedUnregisteredIds": [
+      "verity:verity_disc",
+      "verity:verity_edit_disc"
+    ],
+    "replacesWholeTag": false,
+    "preservesOtherContributions": true,
+    "nativeForgeJsonRemoveWasTestedAndInsufficient": true
+  },
+  "files": [
+    {
+      "path": "kubejs/assets/mbackrooms/textures/gui/photosensitivity_warning/title.png",
+      "sha256": "581b9352f1c1b0af5ce7bfb36e5db6ea55bc6b409f722db965abcd2ee0b0a76b",
+      "sizeBytes": 350,
+      "kind": "resource"
+    },
+    {
+      "path": "kubejs/server_scripts/atm9_modified_verity_music_discs.js",
+      "sha256": "d54a4c555094ab8ad3f0fef39433d994711708eef0302667476487707e22046b",
+      "sizeBytes": 324,
+      "kind": "configuration"
+    },
+    {
+      "path": "kubejs/startup_scripts/atm9_modified_verity_ai.js",
+      "sha256": "d3e17ed4981dbd800b66b3237dd436f12acf80fb233ce8d0113516c19cd9998f",
+      "sizeBytes": 1417,
+      "kind": "configuration"
+    },
+    {
+      "path": "kubejs/startup_scripts/atm9_modified_verity_config.js",
+      "sha256": "f4e7c78cf2b1815d5bb15ea7aa150f75e35c80b50a4a89bc139b78f356a82870",
+      "sizeBytes": 299,
+      "kind": "configuration"
+    },
+    {
+      "path": "launcher/launch-context.json",
+      "sha256": "697feb6c846d63c6d35509a1c0e3c684833b362266bdb0c390d69c9cc30cced5",
+      "sizeBytes": 61,
+      "kind": "configuration"
+    },
+    {
+      "path": "launcher/local-ai.json",
+      "sha256": "a5fdc93fa30c2ea8f978c8ac0df4160c8929f7535f0719473f58d4f2a4d9f126",
+      "sizeBytes": 413,
+      "kind": "configuration"
+    },
+    {
+      "path": "launcher/ollama-recipe.json",
+      "sha256": "cee8f1ad0e81cd13f6977eb1dba15131264388f4702b37a6f162b220d34b39e4",
+      "sizeBytes": 1727,
+      "kind": "configuration"
+    }
+  ],
+  "basePayloadReplacements": [],
+  "jarChanges": [],
+  "runtimeVerification": {
+    "status": "Current lock214b full client/new world, native POST_INIT master killEntities=false and normal exit accepted.",
+    "passClaimed": true,
+    "scope": "Native configuration/lifecycle and actual Russian AI route only; not every gameplay ability or fresh final tag-membership enumeration.",
+    "currentReport": "tools/qa/final-runtime-post-removals-420.json",
+    "rootAcceptance": "tools/qa/native-source-acceptance.json",
+    "freshFinalTagContentsEnumerated": false,
+    "preWorldNativePolicyProofSha256": "b1a4008d9b68ff458ea5943a0b4bc7bef2e32afaba230041c0a4b8ded0bd294e"
+  },
+  "aiConfiguration": {
+    "appliedBy": "pack-owned KubeJS startup evaluation before Forge COMMON CONFIG_LOAD",
+    "staticValues": {
+      "AISettings.aiProvider": "OLLAMA",
+      "AISettings.aiModel": "qwen3:1.7b",
+      "AISettings.aiThink": false
+    },
+    "dynamicValue": {
+      "field": "AISettings.aiEndpoint",
+      "from": "launcher-runtime/launch-context.json:values.localAi.endpoint"
+    },
+    "nativeWriter": "NightConfig CommentedFileConfig; normal native write is not guaranteed atomic",
+    "preservesOtherConfigValues": true,
+    "malformedConfig": "Native parser rejects before save; source probe preserves original malformed bytes. A script exception is not claimed to stop the entire client.",
+    "nativeFirstReader": "Verity client-setup initOllamaSetup reads endpoint before KubeJS postInit",
+    "voiceConfiguration": "Unmodified native defaults and existing player choices; no seeding by launcher",
+    "recipe": "launcher/ollama-recipe.json",
+    "runtimeVerification": "Current exact-source startup completed without KubeJS error; actual native OLLAMA/qwen3:1.7b/think=false and current-context endpoint matched before world; author handler obtained owned-backend HTTP200 and a real Russian chat response. See tools/qa/final-runtime-post-removals-420.json.",
+    "rhinoOverloadSelection": {
+      "builder": "builder(java.lang.String)",
+      "setter": "set(java.lang.String,java.lang.Object)",
+      "reason": "Actual KubeJS builtin String/File/Path/List coercion makes bare overloaded calls ambiguous; explicit public method signatures select the reviewed native APIs without bypassing the class filter.",
+      "negativeControls": "Both the bare builder and builder-only fix reproduce their respective native KubeJS ambiguities.",
+      "preparationProbe": "Full native BuiltinKubeJSForgePlugin wrapper registration; four AI fields only. Separate current lock214b native first-consumer path and full client/world completed; see tools/qa/final-runtime-post-removals-420.json."
+    }
+  }
+}

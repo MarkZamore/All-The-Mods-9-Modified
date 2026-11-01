@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "baseLauncherCommit": "585bfc36c7e9b451426e1296214009878c9fe6ef",
+  "patchSha256": "17873957dc9a7a2bd49a6c8a6a54e52dde9b061427a2dddec92efd0a841a9562",
+  "applyCheckOnCleanFullCheckout": true,
+  "allAffectedFilesByteIdenticalAfterApply": true,
+  "checkoutWorkingTreeLineEndings": "Windows CRLF, core.autocrlf=true",
+  "onlyQaToolingChanged": true,
+  "files": [
+    {
+      "path": "tools/Atm9OriginalQa/Build-Agent.ps1",
+      "sha256": "6b4eb83aa8e6530ab4e6bff85eabbc3181a619ca8fb4eb19c9183f5503beea43"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/Program.cs",
+      "sha256": "fc631b1a0a27a1442b2b54d10ff506e97932281060719f3b026d6590cf7aeb29"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/QaLifecycleAgent.java",
+      "sha256": "b5c775dd4009cf4253c1098733908416345ce36d13224a38bab5045ad39cd59f"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/QaProcessIdentity.cs",
+      "sha256": "4a3e653311a348a3b42240e8fa637bec12b074c0d0b956876eda69e458dba57c"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/README.md",
+      "sha256": "4b8ea78aaf4c39db5f17a25470c6fde105d5eaf6aa62c2af2e2d7b4408ba4413"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/Test-AgentSafety.ps1",
+      "sha256": "1360351e534594f1ea804a0211c0188e3d07dc471f279376563d0ee10be997d1"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/tests/QaAgentSafetyTest.java",
+      "sha256": "39d79ab9b9067052f1d2b3126448eb5250abd600d98e4e381ac5cb0b6769ac8c"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/tests/net/minecraft/client/gui/screens/TitleScreen.java",
+      "sha256": "ac951bb1edfdfc34019a8efd026fd29513e3af95de6a00bceefda4c191e0113f"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/tests/net/minecraft/resources/ResourceLocation.java",
+      "sha256": "d25bc584d57c5584e31c1da9823003306887a1a171f606da53f9a2c6d533aa88"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/tests/org/lwjgl/QaGpuTracker.java",
+      "sha256": "30f32e16234afb5375616e3ab6911d79e9a5ba5a16842ccdc14f94f3f545178f"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/tests/org/lwjgl/glfw/GLFW.java",
+      "sha256": "ddae7b14f20fddd116f1d757fdb1868546ff3ef231fe6cc5300f9299b0d0d9de"
+    },
+    {
+      "path": "tools/Atm9OriginalQa/tests/org/lwjgl/opengl/GL11.java",
+      "sha256": "d80e2a67b5087536e80645b0e5651235e4ffca90a74c70e3805fe726313134a0"
+    }
+  ],
+  "agent": {
+    "protocol": 4,
+    "sha256": "8b71e68ab1ed398d338020da41c8611578d927ba1c9cd1bf1ce444a9ece31c42",
+    "testOnly": true,
+    "bytecodeTransformation": false,
+    "classesEqualActualJdk17SafetyTestCompilation": [
+      {
+        "path": "QaLifecycleAgent$HealthSamples.class",
+        "sha256": "379931cf0cb621eb63affb556a0f88b52e8d0d9902706eb2143f4735d5739616"
+      },
+      {
+        "path": "QaLifecycleAgent$InitializationGate.class",
+        "sha256": "be3bef5251af4c611aebd8fc28b3253398d2ab0b13903fc08a4095b1a1d53d4a"
+      },
+      {
+        "path": "QaLifecycleAgent$NativeGpuProbe.class",
+        "sha256": "393ad55dba0000d481c56eba3e40c2e7335b9eb726510f218b877fa5f6d880c8"
+      },
+      {
+        "path": "QaLifecycleAgent$NativeResourceProbe.class",
+        "sha256": "f35ea97cc0d00652f29c20e28691bdf5a83176d622a18ecdd7e3ec7d5ee502da"
+      },
+      {
+        "path": "QaLifecycleAgent.class",
+        "sha256": "cca95885daef1b16907c59fb44891b5222b98f88eec2b83a17ea777f97bd4fe4"
+      }
+    ]
+  },
+  "jdkSafetyTest": {
+    "status": "PASS",
+    "javaExecutableSha256": "1977f302375adbb920d41dac65c7e22eb9c2ed8e1e8d6258964154ff16f14406",
+    "javaCompilerSha256": "9c71eee841aeebb723bfc2cceca7d72c6c1988fb679402f4123aa4d0e86aa549",
+    "agentSourceSha256": "b5c775dd4009cf4253c1098733908416345ce36d13224a38bab5045ad39cd59f",
+    "testSourceSha256": "39d79ab9b9067052f1d2b3126448eb5250abd600d98e4e381ac5cb0b6769ac8c",
+    "result": {
+      "status": "PASS",
+      "javaFeature": 17,
+      "javaRuntimeVersion": "17.0.20.1+1",
+      "javaVendor": "Eclipse Adoptium",
+      "checks": 367,
+      "coldInitializerCalls": 1,
+      "inProgressInitializerCalls": 1,
+      "failedInitializerCalls": 1,
+      "gameInteraction": false
+    },
+    "runningGameInteraction": false
+  },
+  "processIdentitySelfTest": {
+    "status": "PASS",
+    "checks": 16,
+    "ownProcessMetadataUsed": true,
+    "JavaIdentityCasesArePureFixtures": true,
+    "validTerminalPreventsPidLookup": true,
+    "gameStartedOrAttached": false,
+    "processControlledOrKilled": false
+  },
+  "qaHarnessAssemblySha256": "b86e48a510fa02380b73b5d72570939dea1287d89f649410608c9b98e1b497ba",
+  "nativeResourceSignatures": {
+    "clientSrgJarSha256": "e2e940fe7ca0a9fba5a5c11ad2cf3e2f7df91bbf51d12af22cdde7af18adc344",
+    "verifiedUsing": "actual game JDK17 javap, offline",
+    "minecraftResourceManager": "m_91098_()",
+    "getResource": "m_213713_(ResourceLocation)",
+    "sourcePackId": "m_215506_()",
+    "openStream": "m_215507_()",
+    "resourceLocationConstructor": "ResourceLocation(String)"
+  },
+  "launcherAssembly": {
+    "releaseNumber": 417,
+    "sourceCommit": "585bfc36c7e9b451426e1296214009878c9fe6ef",
+    "sha256": "715816c2b4911e92dc20d42fa055cc7fcfd7b19b5705da4f699da741a4e9b97d"
+  },
+  "runningGameInteractedWithDuringPreparation": false,
+  "nativeClientOrWorldRuntimePassClaimed": false
+}

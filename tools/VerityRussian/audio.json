@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "encoder": {
+    "pythonSoundfile": "0.13.1",
+    "libsndfile": "1.2.2"
+  },
+  "recordings": [
+    {
+      "file": "box_verity_0.ogg",
+      "sha256": "877c7430564adaf05c767e1ac586cb1efc685bba4e53bc04acac2862a3c92156",
+      "size": 7190,
+      "durationSeconds": 0.6001814058956916,
+      "sampleRate": 22050,
+      "russianText": "Привет!",
+      "translationBasis": "role/context adaptation of short original box call, not asserted exact transcript",
+      "source": "Fresh native Sherpa1.13.3 + official Piper Denis ru_RU medium, no cloud or microphone"
+    },
+    {
+      "file": "box_verity_2.ogg",
+      "sha256": "a3d56ad206db633da94716c031c88031d95966c5968825c7f1692504b6c9a91c",
+      "size": 10090,
+      "durationSeconds": 1.0913378684807256,
+      "sampleRate": 22050,
+      "russianText": "Кто-нибудь здесь?",
+      "translationBasis": "role/context adaptation of short original box call, not asserted exact transcript",
+      "source": "Fresh native Sherpa1.13.3 + official Piper Denis ru_RU medium, no cloud or microphone"
+    },
+    {
+      "file": "intro.ogg",
+      "sha256": "5854f7c20aff09e4272a48c28928aea2853af1765c1b726f88e037257455a31c",
+      "size": 37468,
+      "durationSeconds": 5.586213151927438,
+      "sampleRate": 22050,
+      "russianText": "Привет! Я Верити, твой личный друг и помощник. Спрашивай о чём угодно. Я знаю всё.",
+      "translationBasis": "meaning of clearly transcribed original introduction",
+      "source": "Fresh native Sherpa1.13.3 + official Piper Denis ru_RU medium, no cloud or microphone"
+    }
+  ],
+  "preserved": [
+    "box_verity_1.ogg (nonverbal uncertain short effect)",
+    "intro_video_audio.ogg (cinematic music/effects)",
+    "all other SFX and author music",
+    "all248 author intro frames; inspected samples show character and Verity JE brand, no translated instructions"
+  ]
+}

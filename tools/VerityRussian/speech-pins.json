@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "origin": "Fresh official model API metadata on 2026-10-28; previous Modified assets not used",
+  "files": [
+    {
+      "repo": "csukuangfj/vits-piper-ru_RU-denis-medium",
+      "revision": "1e2f78fc13100abc60bf56264dc2ee254b4c5f8e",
+      "name": "ru_RU-denis-medium.onnx",
+      "url": "https://huggingface.co/csukuangfj/vits-piper-ru_RU-denis-medium/resolve/1e2f78fc13100abc60bf56264dc2ee254b4c5f8e/ru_RU-denis-medium.onnx",
+      "size": 63201422,
+      "sha256": "f0129d8cbd0fef7df16a101d0cd302b25a8fd8bbda7b11af885b1e9f3e974dcf"
+    },
+    {
+      "repo": "csukuangfj/vits-piper-ru_RU-denis-medium",
+      "revision": "1e2f78fc13100abc60bf56264dc2ee254b4c5f8e",
+      "name": "tokens.txt",
+      "url": "https://huggingface.co/csukuangfj/vits-piper-ru_RU-denis-medium/resolve/1e2f78fc13100abc60bf56264dc2ee254b4c5f8e/tokens.txt",
+      "size": 907,
+      "sha256": "2619c1a9de1bcf928162f40c583caf39368cfd6b2340c7bcad51dc634411ec36"
+    },
+    {
+      "repo": "csukuangfj/vits-piper-ru_RU-denis-medium",
+      "revision": "1e2f78fc13100abc60bf56264dc2ee254b4c5f8e",
+      "name": "MODEL_CARD",
+      "url": "https://huggingface.co/csukuangfj/vits-piper-ru_RU-denis-medium/resolve/1e2f78fc13100abc60bf56264dc2ee254b4c5f8e/MODEL_CARD",
+      "size": 275,
+      "sha256": "f037c8ec8b6574de644bf9e5916c749e83d4ff297facd97895b56d733f6ba3fe"
+    },
+    {
+      "repo": "csukuangfj/sherpa-onnx-whisper-base",
+      "revision": "bb53ee204431c90d314c1cc08d28d23e5b7927cc",
+      "name": "base-encoder.int8.onnx",
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/bb53ee204431c90d314c1cc08d28d23e5b7927cc/base-encoder.int8.onnx",
+      "size": 29120534,
+      "sha256": "0b8fb1304b6109976038efff5ace81720e00386f3ff6b54ee8c75291ca0a1e11"
+    },
+    {
+      "repo": "csukuangfj/sherpa-onnx-whisper-base",
+      "revision": "bb53ee204431c90d314c1cc08d28d23e5b7927cc",
+      "name": "base-decoder.int8.onnx",
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/bb53ee204431c90d314c1cc08d28d23e5b7927cc/base-decoder.int8.onnx",
+      "size": 130672026,
+      "sha256": "9759d217388a01b3a4c7c15533201067b48ae819c4daafc8624e64b9409dc02d"
+    },
+    {
+      "repo": "csukuangfj/sherpa-onnx-whisper-base",
+      "revision": "bb53ee204431c90d314c1cc08d28d23e5b7927cc",
+      "name": "base-tokens.txt",
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/bb53ee204431c90d314c1cc08d28d23e5b7927cc/base-tokens.txt",
+      "size": 816730,
+      "sha256": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126"
+    }
+  ]
+}

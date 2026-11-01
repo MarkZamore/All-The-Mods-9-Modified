@@ -1,0 +1,95 @@
+{
+  "status": "CONTROLLED_PRIVATE_SINGLE_JAR_AB_COMPLETE",
+  "productionCompositionOrLocksChanged": false,
+  "parentModifiedSourceLockSha256": "2f48c9e63e105ccd8fc82239b0a6504c14e6678f135f3d0732b709e57f586599",
+  "soleRemovedFile": {
+    "name": "Roundabout-forge-1.20.1-3.6.2.jar",
+    "sha256": "5f27650d19f20c4e4b0cddbe947a304328a3767bc3f1ad7c8f6ad7382daf050b"
+  },
+  "declaredMandatoryDependentsRemoved": 0,
+  "other1926SourceFilesByteIdentical": true,
+  "totalPrivateShippedJars": 540,
+  "all431BaseJarsPreserved": true,
+  "runtimeJarsIncludingInfrastructureUnchangedDuringRun": 541,
+  "nativeTitleAndWorldThreeHealthySamples": true,
+  "nativeHealthyWorldSecondsAfterThreeSamples": 543.536065,
+  "normalNativeQuit": true,
+  "allDimensionsSaved": true,
+  "nativeExitCode": 0,
+  "nativeExitedAtUtc": "2026-10-30T04:21:23.0321012+00:00",
+  "ownedJavaAndAiBackendStoppedAndPortClosed": true,
+  "sameSeed": "-921803102721574764",
+  "freshWorldNoCopy": true,
+  "sameImmutable420DebugSourceAssemblySha256": "b3862b052ab9d51e13e81e7f8b5f5b5685c12316b04d6075e3786f3b896a3d20",
+  "privateAgentSha256": "4f57cba0dab62f1c52aac3c11a1ecee50dad00e203afd42d899a6aca3433e217",
+  "privateCliSha256": "5fb6ac6b56931b3f4f6c900865044e1375834867255010d344348a57c24ccad6",
+  "privateDiagnosticDifferences": [
+    "Author-native ModernFix sound-cache eviction logging only",
+    "Six read-only initial native field samples"
+  ],
+  "noGlSyncOrQualityOrAudioHardwareChange": true,
+  "noAiChatPttInputOrMicrophoneTest": true,
+  "actualOpenAlDevice": "OpenAL Soft on Razer Barracuda X (BT) headphones; same as matched current Original, differs from older Modified13 Cirrus output",
+  "completeLogSha256": "914ad1c78e9333fab8dc6c6dcd3f1b1adb0820d5552d9c65a6b3eeecb7f5b36d",
+  "completeLogBytes": 23680186,
+  "completeLogSeverityCounts": {
+    "INFO": 94510,
+    "WARN": 21432,
+    "ERROR": 145
+  },
+  "countsAreNotRates": true,
+  "newNormalizedErrorSignaturesVersusFullModified13b": [],
+  "normalization": [
+    "runtime object identity",
+    "JEI elapsed seconds"
+  ],
+  "shaderLinkInfoCallbacks": 2,
+  "unlinkedUniformInfoCallbacks": 42,
+  "remainingGlSignaturesMatchCurrentOriginalBaseline": true,
+  "observedChanges": {
+    "genericGl173538523": {
+      "withRoundabout": 30475,
+      "withoutRoundabout": 0,
+      "additionalEvidence": "Previous native synchronous JNI stack points to Roundabout depth blit; no actual FBO formats were captured."
+    },
+    "jadeNullBlockPosErrorHeaders": {
+      "withRoundabout": 3,
+      "withoutRoundabout": 0,
+      "nativeInitialGameModeDestroyPosNonNullSamplesWithoutRoundabout": 6,
+      "sentinelCoordinatesOrExactSingletonIdentityRead": false,
+      "additionalEvidence": "Native Jade getter reads f105191; exact Roundabout stopDestroyBlock overwrite assigns null. All other game JAR/config/resource inputs retained."
+    },
+    "bloodMagicCuriosOptionalErrorHeaders": {
+      "withRoundabout": 2,
+      "withoutRoundabout": 2,
+      "roundaboutRemovalResolvedThisFamily": false,
+      "newModCulpritEstablished": false
+    }
+  },
+  "openAl": {
+    "acceptedSharedBaselineByExplicitUserDecision": true,
+    "nativeDeletionErrorHeaders": 2,
+    "nativeModernFixEvictionLogs": 210,
+    "sameThreadImmediateNativeEvictionCorrelations": [
+      {
+        "time": "09:16:52",
+        "resource": "minecraft:sounds/minecart/base.ogg"
+      },
+      {
+        "time": "09:18:56",
+        "resource": "minecraft:sounds/mob/bee/loop4.ogg"
+      }
+    ],
+    "scope": "Resource correlation establishes which ModernFix eviction callback reported the deletion error. It does not prove attached-buffer state or rule out a preexisting sticky OpenAL error. No alGetError or other AL probe was added.",
+    "newModRemovalRecommendedForSharedFamily": false
+  },
+  "recommendationScope": "Removing Roundabout is supported for the observed Generic GL and Jade failures in these controlled conditions. Blood Magic and other introduced resource/config families remain separate. This is not a guarantee of baseline-only errors or a production change.",
+  "notClaimed": [
+    "All new errors resolved",
+    "Historical Box crash fixed",
+    "Full GPU draw/visual quality",
+    "All abilities",
+    "Two-client LAN/Steam",
+    "Universal absence on other machines"
+  ]
+}

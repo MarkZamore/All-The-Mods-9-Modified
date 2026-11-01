@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "scope": "Active exact embedded author JAR provenance and official project links, selected by current parent JAR hashes; runtime acceptance is reported separately.",
+  "runtimeVerified": false,
+  "pages": [
+    {
+      "id": "awcapi",
+      "name": "Advanced Wall Climber API",
+      "version": "1.0.3",
+      "url": "https://www.curseforge.com/minecraft/mc-mods/advanced-wall-climber-api",
+      "available": true,
+      "parentJar": "nyfsspiders-Forge-1.20.1-3.0.2.jar",
+      "parentSha256": "31adf31057c0f4a45866e29396ab4a382865a45b4923287358b4a2abb4a27c16",
+      "embeddedEntry": "META-INF/jarjar/awcapi-neoforge-1.20.1-1.0.3.jar",
+      "embeddedSha256": "49e8ac5769f7b23532ffdcc1a4bb9f7da97b31c663554d0a95d2b72f9d2e4bd1",
+      "embeddedSizeBytes": 95444,
+      "embeddedAuthors": "Nyfaria",
+      "selectionReason": "The same Nyfaria project, exact standalone Forge 1.20.1 version 1.0.3; fresh official CF download is byte-identical to the library embedded in Nyf's Spiders. No extra top-level JAR is needed.",
+      "exception": null,
+      "evidenceUrls": [
+        "https://www.curseforge.com/api/v1/mods/1425144/files/9013802",
+        "https://www.curseforge.com/minecraft/mc-mods/advanced-wall-climber-api/files/9013802",
+        "https://github.com/Nyfaria/AdvancedWallClimberAPI"
+      ],
+      "checkedUtc": "2026-10-28T12:46:50.397436+00:00"
+    },
+    {
+      "id": "cryptic_registry",
+      "name": "Cryptic Registry",
+      "version": "2.0.0-beta.11",
+      "url": "https://www.curseforge.com/minecraft/mc-mods/cryptic-registry",
+      "available": true,
+      "parentJar": "midnight-1.20.1-0.6.7.jar",
+      "parentSha256": "252ad68dac3dbc8b1f7885edccb563becb26ce2fe4abf4f2713a3869b9bff820",
+      "embeddedEntry": "META-INF/jarjar/registry-1.20.1-2.0.0-beta.11.jar",
+      "embeddedSha256": "93279c663090ba1d648ed8b848f6bc8bd6841a75b9d544cacc1cd6bb4b146de0",
+      "embeddedSizeBytes": 730153,
+      "embeddedAuthors": "Jonathing",
+      "selectionReason": "The same Cryptic Mushroom/Jonathing project explicitly describes Jar-in-Jar use. Embedded beta.11 originates from the freshly downloaded official Midnight 0.6.7. Standalone CF exposes beta.10, so no claim is made that its standalone download matches beta.11, and no downgrade/duplicate JAR is installed.",
+      "exception": null,
+      "evidenceUrls": [
+        "https://www.curseforge.com/minecraft/mc-mods/cryptic-registry",
+        "https://www.curseforge.com/api/v1/mods/886112/files?pageSize=50",
+        "https://gitlab.com/cryptic-mushroom/minecraft/cryptic-registry"
+      ],
+      "checkedUtc": "2026-10-28T12:46:50.397436+00:00"
+    },
+    {
+      "id": "crackerslib",
+      "name": "CrackersLib",
+      "version": "1.20.1-0.4.1",
+      "url": "https://github.com/nonamecrackers2/crackerslib",
+      "available": true,
+      "parentJar": "witherstormmod-1.20.1-4.2.1-all.jar",
+      "parentSha256": "a23c019b1465c87ba506ada49aa815866e5353ebdc2be3284d9087ff080018ac",
+      "embeddedEntry": "META-INF/jarjar/crackerslib-forge-1.20.1-0.4.1.jar",
+      "embeddedSha256": "70703b15f95411285b4a6a4e46928dde1e606d82189062834b650886672448c0",
+      "embeddedSizeBytes": 182229,
+      "embeddedAuthors": "nonamecrackers2",
+      "selectionReason": "Authors and specification vendor are nonamecrackers2; exact embedded 0.4.1 bytes are pinned to the freshly fetched official Wither Storm 4.2.1 parent.",
+      "exception": {
+        "type": "official-author-repository",
+        "reason": "No standalone CurseForge or Modrinth project for this author library was found. The author repository documents its Maven distribution and Jar-in-Jar use by Wither Storm; use that repository, never a different mod page."
+      },
+      "evidenceUrls": [
+        "https://github.com/nonamecrackers2/crackerslib",
+        "https://github.com/nonamecrackers2/crackerslib/tree/1.20.1",
+        "https://www.curseforge.com/minecraft/mc-mods/crackers-wither-storm-mod/files/5619741"
+      ],
+      "checkedUtc": "2026-10-28T12:46:50.397436+00:00"
+    }
+  ],
+  "exactHashProofs": {
+    "awcapi": {
+      "officialProjectId": 1425144,
+      "officialFileId": 9013802,
+      "metadataUrl": "https://www.curseforge.com/api/v1/mods/1425144/files/9013802",
+      "downloadUrl": "https://edge.forgecdn.net/files/9013/802/awcapi-neoforge-1.20.1-1.0.3.jar",
+      "authorFromOfficialFile": {
+        "username": "thenyfaria",
+        "id": 606859,
+        "twitchAvatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/a71dd514-1745-4cba-b1d5-b5a798e5b1b6-profile_image-150x150.png",
+        "displayName": "Nyfaria"
+      },
+      "canonicalDownloadSha256": "49e8ac5769f7b23532ffdcc1a4bb9f7da97b31c663554d0a95d2b72f9d2e4bd1",
+      "canonicalBytesMatchEmbedded": true
+    },
+    "crackerslib": {
+      "officialMavenUrl": "https://maven.nonamecrackers2.dev/releases/nonamecrackers2/crackerslib-forge/1.20.1-0.4.1/crackerslib-forge-1.20.1-0.4.1.jar",
+      "canonicalDownloadSha256": "70703b15f95411285b4a6a4e46928dde1e606d82189062834b650886672448c0",
+      "canonicalBytesMatchEmbedded": true,
+      "canonicalSizeBytes": 182229
+    }
+  },
+  "rejectedSubstitutions": [],
+  "availabilityNote": "Selected active target pages were verified through primary web/API sources at the recorded check times. A crawler error or direct Python403 is not classified as an unavailable author page."
+}

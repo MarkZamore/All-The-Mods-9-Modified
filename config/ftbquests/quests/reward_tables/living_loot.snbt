@@ -1,0 +1,11 @@
+{
+	id: "28A9C4EA22B6DBD7"
+	loot_size: 1
+	order_index: 43
+	rewards: [
+		{ count: 4, item: "botania:livingrock" }
+		{ count: 4, item: "botania:livingwood_log" }
+	]
+	title: "{atm9.translation.inline.2435960893943eaa8f9cad41}"
+	use_title: true
+}

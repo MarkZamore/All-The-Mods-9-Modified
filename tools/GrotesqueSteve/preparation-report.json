@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "status": "STANDALONE_VERIFIED_FULL_CLIENT_RECORDED_SEPARATELY",
+  "scope": "Native Java/Forge/Minecraft class, serializer and command syntax preparation checks; this is not a full-client or visual/two-client result.",
+  "transformation": {
+    "kind": "grotesque-steve-quiet",
+    "patchTool": "tools/grotesque_steve_quiet.py",
+    "patchToolSha256": "7ffd540ddefa641f5bb897760002ed45de15a194c6def473865e27e9de3688a0",
+    "originalPath": "tools/GrotesqueSteve/source/grotesque_steve-1.4.2-forge-1.20.1.jar",
+    "originalSha256": "7edde5b1506a69a725412769525ba16122b1dd4c38e35f3edc5c015eef3a6f63",
+    "originalSizeBytes": 22223025,
+    "reason": "User approved disabling entry actionbar/wind/fart and automatic guide; correct only the independent manualgiver leading slash while retaining book content and native manual availability."
+  },
+  "version": "1.4.2-quiet.1",
+  "modIds": [
+    "grotesque_steve"
+  ],
+  "outputFileName": "grotesque_steve-1.4.2-quiet.1-forge-1.20.1.jar",
+  "outputSha256": "ffa7df6fb07e54217757436b566fa0073b460c5fa4b695cfd2d4d40692208052",
+  "outputSizeBytes": 26240866,
+  "entryProof": {
+    "sourceSha256": "7edde5b1506a69a725412769525ba16122b1dd4c38e35f3edc5c015eef3a6f63",
+    "sourceSizeBytes": 22223025,
+    "version": "1.4.2-quiet.1",
+    "outputSha256": "ffa7df6fb07e54217757436b566fa0073b460c5fa4b695cfd2d4d40692208052",
+    "outputSizeBytes": 26240866,
+    "entryCount": 2499,
+    "changedEntries": [
+      "META-INF/mods.toml",
+      "data/minecraft/functions/manualgiver.mcfunction",
+      "net/mde/grotesquesteve/procedures/AdvancementtriggerProcedure.class",
+      "net/mde/grotesquesteve/procedures/GrotesqueMessageProcedure.class"
+    ],
+    "unchangedEntries": 2495,
+    "onlyTwoCodeAttributesChanged": true,
+    "sourceOnlyToolNotLoadedByGame": true,
+    "newClassesOrEntries": [],
+    "nativePackFormat": 15,
+    "entryPins": {
+      "META-INF/mods.toml": {
+        "beforeSha256": "b6402b3aafaac4e7bc1b31a8a9b84fd287f1c5fff818bf46c0400ad2f100c950",
+        "afterSha256": "7c1d812011294874873d334f7bc6ff196133ab8bcb18c8d9c61791ae48e05deb"
+      },
+      "data/minecraft/functions/manualgiver.mcfunction": {
+        "beforeSha256": "2ddd98f6441ca02d402a3e299a8b7d109b0d84f28436bca7811e200b3808df1a",
+        "afterSha256": "181abf44fc42207b639b280ca3234567d39902a54f10df241024064eb1ad414f"
+      },
+      "net/mde/grotesquesteve/procedures/AdvancementtriggerProcedure.class": {
+        "beforeSha256": "458d58fe861f847c9101d418218bffb222bcb12ea15150b0269ba60e07001505",
+        "afterSha256": "474cb3c6e28c03554d1335aab995fa5df0e5f38a51f191c68385087e389a1b57"
+      },
+      "net/mde/grotesquesteve/procedures/GrotesqueMessageProcedure.class": {
+        "beforeSha256": "312ee6123303d6750fb181f851a93595494c79a3b3423c6298b9baa3f482c47e",
+        "afterSha256": "c9ac70cd9d5f5a294374079649e9c67ebc229da158888fe199646120f7ff5b4f"
+      }
+    }
+  },
+  "checks": {
+    "pythonTestsPassed": 13,
+    "pythonTestsFailed": 0,
+    "repeatedBuildByteIdentical": true,
+    "nativeReport": {
+      "status": "PASS",
+      "jvm": "actual technical-game Java17",
+      "gameStarted": false,
+      "realForgeAndMinecraftClasses": true,
+      "testStubClasses": 0,
+      "nativePackFormat": 15,
+      "commandCheckScope": "Actual Minecraft CommandFunction leading-slash validation with a minimal Brigadier give/greedy-string registration; no mod item-registry resolution claimed.",
+      "quietCallbacks": "Both original full classes invoked through exact Forge PlayerLoggedInEvent descriptor with null event; returned without dereference. -Xverify:all.",
+      "authorNegative": "Both original handlers throw NullPointerException for the same null event; author manualgiver is rejected by native leading-slash check.",
+      "sourceJarsSha256": {
+        "forge-1.20.1-47.4.0-client.jar": "010adc332f19b05fb24383954ec7a88694666216e480a6824ff0cbc4740c3c66",
+        "client-1.20.1-20230612.114412-srg.jar": "e2e940fe7ca0a9fba5a5c11ad2cf3e2f7df91bbf51d12af22cdde7af18adc344"
+      }
+    },
+    "reportAliasingInputOrOutputRefusedBeforeMutation": true
+  },
+  "autoguide": {
+    "selfAndResourceReferences": {
+      "AdvancementtriggerProcedure": [
+        "net/mde/grotesquesteve/procedures/AdvancementtriggerProcedure.class"
+      ],
+      "Advancementtrigger3Procedure": [
+        "net/mde/grotesquesteve/procedures/Advancementtrigger3Procedure.class"
+      ],
+      "grotesque_hello": [
+        "assets/grotesque_steve/lang/en_us.json",
+        "assets/grotesque_steve/lang/ru_ru.json",
+        "data/grotesque_steve/advancements/grotesque_hello.json",
+        "net/mde/grotesquesteve/procedures/Advancementtrigger3Procedure.class",
+        "net/mde/grotesquesteve/procedures/AdvancementtriggerProcedure.class"
+      ],
+      "manualgiver": []
+    },
+    "advancement": {
+      "criteria": {
+        "grotesque_hello_0": {
+          "trigger": "minecraft:changed_dimension",
+          "conditions": {
+            "from": "minecraft:overworld"
+          }
+        },
+        "grotesque_hello_1": {
+          "trigger": "minecraft:impossible"
+        }
+      },
+      "rewards": {
+        "experience": 0,
+        "function": "grotesque_steve:give"
+      }
+    },
+    "requirements": "requirements omitted: native default AND of all criteria; one minecraft:impossible criterion cannot be satisfied by an automatic event. Changed_dimension alone does not complete both.",
+    "remainingManualPath": "Valid grotesque_steve:give resource remains byte-exact; ordinary manual/operator give remains possible."
+  },
+  "advancementtrigger3AnnotationProof": "Exact javap-v: interfaces0,fields0,methods2,attributes1(SourceFile); no runtime annotation, SubscribeEvent, EventBusSubscriber or callback. Constructor + execute(Entity) only.",
+  "safetyScope": "No new world-editing procedure or runtime injector. All existing gameplay/ability bytecode preserved. Login callbacks removed; repaired manualbook function remains subject to ordinary server function execution permissions. No Safety implementation/profile edits by producer.",
+  "fullClientEvidence": "../qa/final-runtime-post-removals-420.json"
+}

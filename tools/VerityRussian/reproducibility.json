@@ -1,0 +1,18 @@
+{
+  "firstSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+  "secondSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+  "size": 288260277,
+  "exactByteRebuild": true,
+  "negativeChecks": [
+    {
+      "check": "source-preservation",
+      "result": "PASS",
+      "reason": "The immutable author source and derivative output must be separate files"
+    },
+    {
+      "check": "wrong-source-hash",
+      "result": "PASS",
+      "reason": "Only exact official Verity 6.0.0 file9300987 is supported"
+    }
+  ]
+}

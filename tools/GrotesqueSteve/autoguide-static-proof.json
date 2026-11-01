@@ -1,0 +1,62 @@
+{
+  "scope": "STATIC_AUTHOR_PATH_ONLY_NOT_FRESH_WORLD_PASS",
+  "authorJarSha256": "7edde5b1506a69a725412769525ba16122b1dd4c38e35f3edc5c015eef3a6f63",
+  "sourceReferences": {
+    "AdvancementtriggerProcedure": [
+      "net/mde/grotesquesteve/procedures/AdvancementtriggerProcedure.class"
+    ],
+    "Advancementtrigger3Procedure": [
+      "net/mde/grotesquesteve/procedures/Advancementtrigger3Procedure.class"
+    ],
+    "grotesque_hello": [
+      "assets/grotesque_steve/lang/en_us.json",
+      "assets/grotesque_steve/lang/ru_ru.json",
+      "data/grotesque_steve/advancements/grotesque_hello.json",
+      "net/mde/grotesquesteve/procedures/Advancementtrigger3Procedure.class",
+      "net/mde/grotesquesteve/procedures/AdvancementtriggerProcedure.class"
+    ],
+    "manualgiver": []
+  },
+  "advancement": {
+    "criteria": {
+      "grotesque_hello_0": {
+        "trigger": "minecraft:changed_dimension",
+        "conditions": {
+          "from": "minecraft:overworld"
+        }
+      },
+      "grotesque_hello_1": {
+        "trigger": "minecraft:impossible"
+      }
+    },
+    "rewards": {
+      "experience": 0,
+      "function": "grotesque_steve:give"
+    }
+  },
+  "defaultRequirementsProof": {
+    "nativeJar": "client-1.20.1-20230612.114412-srg.jar",
+    "nativeJarSha256": "e2e940fe7ca0a9fba5a5c11ad2cf3e2f7df91bbf51d12af22cdde7af18adc344",
+    "method": "net.minecraft.advancements.Advancement$Builder.m_138380_",
+    "bytecodeOffsets": "233-310",
+    "behavior": "When requirements array is empty/omitted, build one singleton group for each criteria key (AND), not one OR group."
+  },
+  "impossibleCriterion": "minecraft:impossible has no normal automatic trigger; changing dimension cannot satisfy both required groups.",
+  "spareProcedure": {
+    "entry": "net/mde/grotesquesteve/procedures/Advancementtrigger3Procedure.class",
+    "sha256": "88395b02799e12eede28deecbe0fd5647c4ccefe0acf950dbe3b026d7966bb1b",
+    "interfaces": 0,
+    "fields": 0,
+    "methods": [
+      "<init>()V",
+      "execute(Entity)V"
+    ],
+    "classAttributes": [
+      "SourceFile"
+    ],
+    "runtimeAnnotations": [],
+    "forgeSubscriberAnnotations": [],
+    "outsideOwnerStaticCallersFoundInAuthorJar": []
+  },
+  "remainingManualResource": "grotesque_steve:give remains byte-identical and available; explicit administrator grants/dynamic commands are not blocked."
+}

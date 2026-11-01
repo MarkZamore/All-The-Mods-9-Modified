@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-30",
+  "userApproved": true,
+  "parentSourceLockSha256": "2f48c9e63e105ccd8fc82239b0a6504c14e6678f135f3d0732b709e57f586599",
+  "allRemovedFilesAreNewNotBase": true,
+  "activeFilesContainNoHistoricalExcludedEntries": true,
+  "removedFiles": [
+    {
+      "fileName": "Roundabout-forge-1.20.1-3.6.2.jar",
+      "sha256": "5f27650d19f20c4e4b0cddbe947a304328a3767bc3f1ad7c8f6ad7382daf050b",
+      "sizeBytes": 49368229,
+      "sourceUrl": "https://edge.forgecdn.net/files/9336/805/Roundabout-forge-1.20.1-3.6.2.jar",
+      "projectId": 1115305,
+      "fileId": 9336805,
+      "path": "mods/Roundabout-forge-1.20.1-3.6.2.jar",
+      "kind": "requested",
+      "version": "3.6.2",
+      "modIds": [
+        "roundabout"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/roundabout-the-jojo-mod",
+      "name": "Roundabout"
+    },
+    {
+      "fileName": "apextides-1.20.1-forge-1.0.0.jar",
+      "sha256": "de407029416b86d9926e0c0f98e3cfb01ec2af94def4ecd3d16554b4ca01830e",
+      "sizeBytes": 65326,
+      "sourceUrl": "https://edge.forgecdn.net/files/9206/808/apextides-1.20.1-forge-1.0.0.jar",
+      "projectId": 1748192,
+      "fileId": 9206808,
+      "path": "mods/apextides-1.20.1-forge-1.0.0.jar",
+      "kind": "requested",
+      "version": "1.0.0",
+      "modIds": [
+        "apextides"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/apex-arcana-tides-t-o-magic-n-extras-addon",
+      "name": "Apex Arcana: Tides"
+    },
+    {
+      "fileName": "born_in_chaos_[Forge]1.20.1_1.7.5.jar",
+      "sha256": "9f242f4f3330f3d0d985f5f3ce9a92fe09016ff9c6162252f201d17009b28d7d",
+      "sizeBytes": 11839865,
+      "sourceUrl": "https://edge.forgecdn.net/files/7917/933/born_in_chaos_%5BForge%5D1.20.1_1.7.5.jar",
+      "projectId": 686437,
+      "fileId": 7917933,
+      "path": "mods/born_in_chaos_[Forge]1.20.1_1.7.5.jar",
+      "kind": "requested",
+      "version": "1.7.5",
+      "modIds": [
+        "born_in_chaos_v1"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/born-in-chaos",
+      "name": "Born in Chaos"
+    },
+    {
+      "fileName": "np-1.0.2-forge-1.20.1(1).jar",
+      "sha256": "c52a7caa1094d10fa0c17818e128b31b62389ef02afc0b47b2ed48a684cfc941",
+      "sizeBytes": 4597798,
+      "sourceUrl": "https://edge.forgecdn.net/files/8293/308/np-1.0.2-forge-1.20.1%281%29.jar",
+      "projectId": 1583186,
+      "fileId": 8293308,
+      "path": "mods/np-1.0.2-forge-1.20.1(1).jar",
+      "kind": "requested",
+      "version": "1.6.19-forge-1.20.1-director-rng-trim",
+      "modIds": [
+        "null_presence"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/null-presence",
+      "name": "Null Presence"
+    },
+    {
+      "fileName": "traveloptics-6.0.0-1.20.1.jar",
+      "sha256": "fcbee832bfc7bdbe8b513d2525d1877ff80e7b83a216011a8f094f63df759447",
+      "sizeBytes": 27495067,
+      "sourceUrl": "https://edge.forgecdn.net/files/7358/354/traveloptics-6.0.0-1.20.1.jar",
+      "projectId": 1046916,
+      "fileId": 7358354,
+      "path": "mods/traveloptics-6.0.0-1.20.1.jar",
+      "kind": "dependency",
+      "version": "6.0.0-1.20.1",
+      "modIds": [
+        "traveloptics"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/to-tweaks-irons-spells",
+      "name": "T.O Magic 'n Extras - Iron's Spells Addon"
+    },
+    {
+      "fileName": "From-The-Fog-1.20-v1.9.2-Forge-Fabric.jar",
+      "sha256": "385bddf654c6edefd35cd7f47ce7dffff0610d29ed9efd49927f488dec919fb1",
+      "sizeBytes": 4749752,
+      "sourceUrl": "https://edge.forgecdn.net/files/4603/882/From-The-Fog-1.20-v1.9.2-Forge-Fabric.jar",
+      "projectId": 852533,
+      "fileId": 4603882,
+      "path": "mods/From-The-Fog-1.20-v1.9.2-Forge-Fabric.jar",
+      "kind": "requested",
+      "version": "1.9.2",
+      "modIds": [
+        "watching"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/from-the-fog",
+      "name": "From The Fog"
+    },
+    {
+      "fileName": "Gachiakuta_1.20.1_ver14.jar",
+      "sha256": "135c5b4c38ddfcd6c3571a85cb081dbfa51e10aef093848ac619292cb62d7293",
+      "sizeBytes": 1457023,
+      "sourceUrl": "https://edge.forgecdn.net/files/8875/888/Gachiakuta_1.20.1_ver14.jar",
+      "projectId": 1063768,
+      "fileId": 8875888,
+      "path": "mods/Gachiakuta_1.20.1_ver14.jar",
+      "kind": "requested",
+      "version": "1.0.0",
+      "modIds": [
+        "gachiakuta"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/gachiakuta",
+      "name": "Gachiakuta"
+    },
+    {
+      "fileName": "SLR1.2.0.jar",
+      "sha256": "9ba7d5a63e2aedd96dfb763ff207d60e2b7e7d53234d9af35a3dcdc2b161c9cf",
+      "sizeBytes": 42150422,
+      "sourceUrl": "https://edge.forgecdn.net/files/8583/869/SLR1.2.0.jar",
+      "projectId": 1003429,
+      "fileId": 8583869,
+      "path": "mods/SLR1.2.0.jar",
+      "kind": "requested",
+      "version": "1.2.0",
+      "modIds": [
+        "sololeveling"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/solo-craft-reawakening",
+      "name": "Solo Craft: Reawakening"
+    },
+    {
+      "fileName": "dimdoors-5.4.4-1.20.1-forge.jar",
+      "sha256": "ee8193a36d07827e52d540a81d07460e3b47a0bda6366adef1873d9b02a83b52",
+      "sizeBytes": 17827316,
+      "sourceUrl": "https://edge.forgecdn.net/files/6421/500/dimdoors-5.4.4-1.20.1-forge.jar",
+      "projectId": 284876,
+      "fileId": 6421500,
+      "path": "mods/dimdoors-5.4.4-1.20.1-forge.jar",
+      "kind": "requested",
+      "version": "5.4.4",
+      "modIds": [
+        "dimdoors"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/dimensionaldoors",
+      "name": "DimensionalDoors"
+    },
+    {
+      "fileName": "the_knocker-1.5.2-forge-1.20.1.jar",
+      "sha256": "43af17f0400ed38bfc98be7bcc27c29c76a38f7472970bf83496c548abdec94e",
+      "sizeBytes": 1621054,
+      "sourceUrl": "https://edge.forgecdn.net/files/8252/116/the_knocker-1.5.2-forge-1.20.1.jar",
+      "projectId": 1001299,
+      "fileId": 8252116,
+      "path": "mods/the_knocker-1.5.2-forge-1.20.1.jar",
+      "kind": "requested",
+      "version": "1.5.2",
+      "modIds": [
+        "the_knocker"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-knocker",
+      "name": "The Knocker"
+    }
+  ],
+  "reasons": {
+    "roundabout": "New Generic GL and Jade failures; controlled single-removal run removes both observed families.",
+    "born_in_chaos_v1": "Malformed author animation resources include a directly requested Scarlet attack.",
+    "null_presence": "Two malformed functions have active scenario callers.",
+    "traveloptics": "Invalid additional loot with its own modifier caller.",
+    "apextides": "Mandatory dependent addon of removed TravelOptics.",
+    "dimdoors": "User chose exclusion after new palette-frame diagnostics in BASE Moonlight/Amendments.",
+    "sololeveling": "User chose exclusion after two malformed animation clips; default fly was valid.",
+    "the_knocker": "Invalid shared durability tag points to absent knife item.",
+    "gachiakuta": "Invalid additional loot table points to unregistered item.",
+    "watching": "Invalid watching:check function; ordinary current caller was not established."
+  },
+  "mandatoryClosure": "No external mandatory dependent of any of the ten removed providers; ApexTides -> TravelOptics removed together.",
+  "safetyReview": "Removal introduces no new world-changing path or pinned JAR update; no Safety expansion. No BASE mod is removed or patched.",
+  "runtimeAcceptanceClaimed": false,
+  "intermediateSourceLockSha256": "bb61a5f7e0c0837f670e9d048b3ec613974ed1da02c076f9eb05c219817c045e"
+}

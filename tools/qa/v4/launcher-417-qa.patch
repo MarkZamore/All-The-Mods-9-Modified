@@ -1,0 +1,1161 @@
+diff --git a/tools/Atm9OriginalQa/Build-Agent.ps1 b/tools/Atm9OriginalQa/Build-Agent.ps1
+index 264059f..d07765e 100644
+--- a/tools/Atm9OriginalQa/Build-Agent.ps1
++++ b/tools/Atm9OriginalQa/Build-Agent.ps1
+@@ -21,7 +21,7 @@ New-Item -ItemType Directory -Path $qaClasses -Force | Out-Null
+ & $qaJavac --release 17 -encoding UTF-8 -d $qaClasses (Join-Path $PSScriptRoot 'QaLifecycleAgent.java')
+ if ($LASTEXITCODE -ne 0) { throw 'QA agent compilation failed.' }
+ $qaManifest = Join-Path $qaOutput 'MANIFEST.MF'
+-[IO.File]::WriteAllText($qaManifest, "Manifest-Version: 1.0`nPremain-Class: QaLifecycleAgent`n`n", [Text.UTF8Encoding]::new($false))
++[IO.File]::WriteAllText($qaManifest, "Manifest-Version: 1.0`nPremain-Class: QaLifecycleAgent`nLANMinecraft-QA-Protocol: 4`n`n", [Text.UTF8Encoding]::new($false))
+ $qaAgentPath = Join-Path $qaOutput 'atm9-original-qa-agent.jar'
+ & $qaJar --create --file $qaAgentPath --manifest $qaManifest -C $qaClasses .
+ if ($LASTEXITCODE -ne 0) { throw 'QA agent packaging failed.' }
+diff --git a/tools/Atm9OriginalQa/Program.cs b/tools/Atm9OriginalQa/Program.cs
+index 06c748a..224aae6 100644
+--- a/tools/Atm9OriginalQa/Program.cs
++++ b/tools/Atm9OriginalQa/Program.cs
+@@ -1,6 +1,7 @@
+ using System.Diagnostics;
+ using System.Globalization;
+ using System.IO;
++using System.IO.Compression;
+ using System.Net.Http;
+ using System.Security.Cryptography;
+ using System.Runtime.InteropServices;
+@@ -15,8 +16,9 @@ using Minecraft;
+ // a marked independent fixture. No personal instance/world is an input.
+ if (args.Length < 2) throw new ArgumentException(
+     "Usage: prepare <fixture-root> --source <pack> [--cache-root <installation>] [--mode baseline|integrated]; " +
+-    "launch <fixture-root> --label <new-label> --agent <qa-agent.jar> [--heap 10240] [--world ATM9Qa...] [--fresh-world ATM9Qa...] [--mixin-export]; " +
+-    "adopt <migration-installation> --cache-root <prepared-qa-installation>; ready|stop|audit <fixture-root> --label <label>");
++    "launch <fixture-root> --label <new-label> --agent <qa-agent.jar> [--heap 10240] [--world ATM9Qa...] [--fresh-world ATM9Qa...] [--mixin-export] [--qa-timeout-minutes 45] [--resource-probe namespace:path]; " +
++    "adopt <migration-installation> --cache-root <prepared-qa-installation>; observe|ready|stop|audit <fixture-root> --label <label>; " +
++    "self-test-process-identity <new-artifacts-output>");
+ var command = args[0];
+ var root = FixturePath(args[1]);
+ var options = ParseOptions(args.Skip(2).ToArray());
+@@ -29,6 +31,14 @@ var label = options.GetValueOrDefault("label", "run-01");
+ if (!System.Text.RegularExpressions.Regex.IsMatch(label, "^[A-Za-z0-9_-]{1,64}$"))
+     throw new ArgumentException("Invalid evidence label.");
+ 
++if (command == "self-test-process-identity")
++{
++    var result = QaProcessIdentity.SelfTest(root);
++    Write(Path.Combine(root, "process-identity-self-test.json"), result);
++    Console.WriteLine(JsonSerializer.Serialize(result, json));
++    return;
++}
++
+ if (command == "adopt")
+ {
+     // Only the migration runner's already verified synthetic installation can
+@@ -181,23 +191,43 @@ if (command == "prepare-integration")
+     var adapterArguments = await identity.PrepareJvmArgumentsAsync(runtime, stageInstance.GameDirectory, timeout.Token);
+     if (!adapterArguments.Any(argument => argument.StartsWith("-javaagent:", StringComparison.Ordinal)))
+         throw new IOException("Production identity/LAN adapter was not prepared.");
++    var stageHome = Path.Combine(root, "java-home");
++    Directory.CreateDirectory(stageHome);
++    var stageLocalAi = await new LocalAiProvisioningService(paths).PrepareAsync(
++        stageInstance.PackDirectory, stageInstance.GameDirectory, stageHome, Progress(), timeout.Token);
++    if (stageLocalAi is not null)
++    {
++        var requirements = LocalAiProvisioningService.ReadRequirements(stageInstance.PackDirectory)!;
++        Write(Path.Combine(root, "local-ai-preparation-files.json"), new
++        {
++            provider = "ollama", requirements.Model, requirements.Language,
++            modPath = requirements.ModPath, modSha256 = requirements.ModSha256,
++            endpoint = stageLocalAi.Endpoint.AbsoluteUri,
++            stageLocalAi.ModelsDirectory, stageLocalAi.RuntimeExecutable,
++            productionFilesPrepared = true, nativeBackendStartedByHarness = false,
++            nativeBackendReadinessVerified = false, gameBackendLifetimeVerified = false,
++            microphoneActivatedByHarness = false, gameStarted = false,
++            launcherAssemblySha256 = Hash(typeof(PackRuntimeService).Assembly.Location)
++        });
++    }
+     Write(Path.Combine(root, "integration-preparation.json"), new
+     {
+         preparedAtUtc = DateTimeOffset.UtcNow, runtime.Descriptor, runtime.ProfileId,
+         launcherAssemblySha256 = Hash(typeof(PackRuntimeService).Assembly.Location),
+         productionAdapterPrepared = true, e4steamPrepared = true, gameDirectory = stageInstance.GameDirectory,
+         mods = Snapshot(stageInstance.GameDirectory).Where(file => file.Path.StartsWith("mods/", StringComparison.OrdinalIgnoreCase)),
+-        gameStarted = false
++        localAiFilesPrepared = stageLocalAi is not null, nativeAiBackendStarted = false, gameStarted = false
+     });
+     Console.WriteLine("INTEGRATION_PREPARED gameStarted=false");
+     return;
+ }
+ var evidence = Path.Combine(root, "evidence", label);
+-if (command is "ready" or "stop" or "audit")
++if (command is "observe" or "ready" or "stop" or "audit")
+ {
+     var run = Read<Run>(Path.Combine(evidence, "run.json"));
+     if (command == "audit")
+     {
++        var processStatus = QaProcessIdentity.Read(run, evidence);
+         // Keep full logs local. The bounded report contains exact error families,
+         // timestamps and evidence flags; it does not assert visual/Steam PASS.
+         var errors = new List<object>();
+@@ -228,7 +258,7 @@ if (command is "ready" or "stop" or "audit")
+         var result = new
+         {
+             mode = fixture.Mode, label, checkedAtUtc = DateTimeOffset.UtcNow,
+-            processStillRunning = IsRunning(run.ProcessId), latestLogExists = File.Exists(log),
++            processStillRunning = processStatus.IsRunning, processIdentity = processStatus, latestLogExists = File.Exists(log),
+             errorEvents = errors, errorEventCount, errorFamilies = errorFamilies.Values,
+             errorReportLimit = 300, uniqueErrorFamilyLimit = 1000,
+             observations = ReadJsonLines(Path.Combine(evidence, "observations.jsonl")),
+@@ -240,9 +270,17 @@ if (command is "ready" or "stop" or "audit")
+     }
+     else
+     {
+-        if (!IsRunning(run.ProcessId)) throw new IOException("The recorded QA process has exited.");
+-        File.WriteAllText(Path.Combine(evidence, command == "ready" ? "ready.flag" : "stop.flag"), DateTimeOffset.UtcNow.ToString("O"));
+-        Console.WriteLine(command == "ready" ? "READY_MARKER_WRITTEN" : "NATIVE_SHUTDOWN_REQUESTED");
++        if (command == "observe")
++        {
++            using var launchEvidence = JsonDocument.Parse(File.ReadAllText(Path.Combine(evidence, "launch-evidence.json")));
++            if (!launchEvidence.RootElement.TryGetProperty("qaAgentProtocol", out var protocol) || protocol.GetInt32() < 3)
++                throw new IOException("This launched QA agent does not support native observation. It cannot be upgraded in place; use a fresh launch with the rebuilt v3 agent.");
++        }
++        var processStatus = QaProcessIdentity.Read(run, evidence);
++        if (!processStatus.IsRunning) throw new IOException($"No marker written: the recorded QA Java process is not active ({processStatus.State}, {processStatus.Authority}).");
++        var markerName = command switch { "observe" => "observe.flag", "ready" => "ready.flag", _ => "stop.flag" };
++        File.WriteAllText(Path.Combine(evidence, markerName), DateTimeOffset.UtcNow.ToString("O"));
++        Console.WriteLine(command switch { "observe" => "OBSERVATION_PERMISSION_WRITTEN readinessClaimed=false", "ready" => "READY_MARKER_WRITTEN", _ => "NATIVE_SHUTDOWN_REQUESTED" });
+     }
+     return;
+ }
+@@ -263,6 +301,20 @@ foreach (var name in new[] { world, freshWorld }.OfType<string>())
+ var agent = Path.GetFullPath(Required("agent"));
+ RejectLinks(agent);
+ if (!File.Exists(agent)) throw new FileNotFoundException("Build the test-only QA agent first.", agent);
++var qaAgentProtocol = ReadAgentProtocol(agent);
++var resourceProbe = options.GetValueOrDefault("resource-probe");
++if (resourceProbe is not null)
++{
++    var resourceParts = resourceProbe.Split(':');
++    if (resourceProbe.Length > 256 || resourceParts.Length != 2 ||
++        !System.Text.RegularExpressions.Regex.IsMatch(resourceProbe, "^[a-z0-9_.-]+:[a-z0-9_./-]+$") ||
++        resourceParts[1].Split('/').Any(part => part is "" or "." or ".."))
++        throw new ArgumentException("Resource probe must be a safe namespace:path ID.");
++    if (qaAgentProtocol < 4) throw new ArgumentException("The optional bounded resource probe requires the v4 QA agent; use a fresh launch with that agent.");
++}
++var qaObservationTimeoutMinutes = int.Parse(options.GetValueOrDefault("qa-timeout-minutes", "45"), CultureInfo.InvariantCulture);
++if (qaObservationTimeoutMinutes is < 1 or > 120) throw new ArgumentException("QA observation timeout must be 1..120 minutes.");
++if (qaAgentProtocol < 3 && qaObservationTimeoutMinutes != 45) throw new ArgumentException("The legacy QA agent has a fixed 45-minute deadline; rebuild v3 for a configurable timeout.");
+ Directory.CreateDirectory(evidence);
+ var launchLogger = new Logger(paths.LogFile);
+ using var runtimeService = new PackRuntimeService(paths, launchLogger);
+@@ -396,15 +448,18 @@ var arguments = new List<string>
+     "-Dfile.encoding=UTF-8", "-Duser.home=" + home, "-Djava.io.tmpdir=" + temporary,
+     "-XX:ErrorFile=" + Path.Combine(evidence, "hs_err_pid%p.log"),
+     "-Dlanminecraft.qa.root=" + root, "-Dlanminecraft.qa.game=" + instance.GameDirectory,
+-    "-Dlanminecraft.qa.evidence=" + evidence, "-javaagent:" + agent
++    "-Dlanminecraft.qa.evidence=" + evidence, "-Dlanminecraft.qa.timeoutMinutes=" + qaObservationTimeoutMinutes,
++    "-javaagent:" + agent
+ };
+ if (freshWorld is not null) arguments.Add("-Dlanminecraft.qa.freshWorld=" + freshWorld);
++if (resourceProbe is not null) arguments.Add("-Dlanminecraft.qa.resourceProbe=" + resourceProbe);
+ if (options.ContainsKey("mixin-export"))
+ {
+     // Standard Mixin diagnostics only. Export the actual runtime BoatItem after
+     // the normal mixin chain; no QA transformer or replacement class is added.
+     arguments.Add("-Dmixin.debug.export=true");
+     arguments.Add("-Dmixin.debug.export.filter=net.minecraft.world.item.BoatItem");
++    arguments.Add("-Dmixin.dumpTargetOnFailure=true");
+ }
+ if (skinRegistryPath is not null) arguments.Add("-Dminecraft.portable.skin.registry=" + skinRegistryPath);
+ if (fixture.Mode == "integrated")
+@@ -461,12 +516,15 @@ void Record(string? value) { if (value is not null) lock (outputGate) output.Wri
+ process.OutputDataReceived += (_, e) => Record(e.Data); process.ErrorDataReceived += (_, e) => Record(e.Data);
+ var started = DateTimeOffset.UtcNow;
+ process.Start(); process.BeginOutputReadLine(); process.BeginErrorReadLine();
+-Write(Path.Combine(evidence, "run.json"), new Run(process.Id, started, instance.GameDirectory, fixture.Mode, label));
++var qaRun = new Run(process.Id, started, instance.GameDirectory, fixture.Mode, label,
++    new DateTimeOffset(process.StartTime.ToUniversalTime()), Path.GetFileNameWithoutExtension(prepared.JavaPath));
++Write(Path.Combine(evidence, "run.json"), qaRun);
+ Write(Path.Combine(evidence, "launch-evidence.json"), new
+ {
+     fixture.Mode, player, session.UUID, heapMiB = heap, world, freshWorld,
+     localPlayerUuid = fixture.Mode == "integrated" ? MinecraftProcessService.PlayingHere(session.UUID) : null,
+     prepared.Descriptor, prepared.ProfileId, qaAgentSha256 = Hash(agent),
++    qaAgentProtocol, qaObservationTimeoutMinutes, qaRun.ProcessCreatedAtUtc, qaRun.ExpectedProcessName, resourceProbe,
+     launcherAssemblySha256 = Hash(typeof(PackRuntimeService).Assembly.Location),
+     productionAdapterPrepared = fixture.Mode == "integrated", e4steamPrepared = fixture.Mode == "integrated",
+     authorOptionsEditedByHarness = false, ramAdvisoryDisabled = false,
+@@ -481,6 +539,7 @@ Write(Path.Combine(evidence, "launch-evidence.json"), new
+     nativeAiBackendReadinessVerified = false,
+     mixinDebugExport = options.ContainsKey("mixin-export"),
+     mixinDebugExportFilter = options.ContainsKey("mixin-export") ? "net.minecraft.world.item.BoatItem" : null,
++    mixinDumpTargetOnFailure = options.ContainsKey("mixin-export"),
+     note = "Isolated offline QA identity. Native observation/creation/stop agent is test instrumentation, never a shipped mod."
+ });
+ Console.WriteLine($"CLIENT_STARTED pid={process.Id} mode={fixture.Mode} label={label}");
+@@ -497,7 +556,21 @@ void Write(string path, object value) { Directory.CreateDirectory(Path.GetDirect
+ T Read<T>(string path) => JsonSerializer.Deserialize<T>(File.ReadAllText(path), json) ?? throw new IOException("Empty evidence.");
+ bool HasLiveQaClient() => Directory.Exists(Path.Combine(root, "evidence")) &&
+     Directory.EnumerateFiles(Path.Combine(root, "evidence"), "run.json", SearchOption.AllDirectories)
+-        .Select(Read<Run>).Any(run => IsRunning(run.ProcessId));
++        .Any(path => QaProcessIdentity.Read(Read<Run>(path), Path.GetDirectoryName(path)!).IsRunning);
++static int ReadAgentProtocol(string path)
++{
++    using var archive = ZipFile.OpenRead(path);
++    var manifest = archive.GetEntry("META-INF/MANIFEST.MF") ?? throw new IOException("QA agent manifest is missing.");
++    using var reader = new StreamReader(manifest.Open(), Encoding.UTF8);
++    while (reader.ReadLine() is { } line)
++        if (line.StartsWith("LANMinecraft-QA-Protocol: ", StringComparison.Ordinal))
++        {
++            if (!int.TryParse(line["LANMinecraft-QA-Protocol: ".Length..], NumberStyles.None, CultureInfo.InvariantCulture, out var protocol) || protocol is < 2 or > 4)
++                throw new IOException("Unknown QA agent protocol.");
++            return protocol;
++        }
++    return 2;
++}
+ static IProgress<RuntimePreparationProgress> Progress() => new Progress<RuntimePreparationProgress>(p => Console.WriteLine(p.Stage + ": " + p.Message));
+ static Dictionary<string, string> ParseOptions(string[] values)
+ {
+@@ -535,7 +608,6 @@ static void RejectLinks(string path)
+             throw new IOException("Linked paths are forbidden in the QA fixture.");
+ }
+ static bool IsWithin(string path, string parent) => Path.GetFullPath(path).StartsWith(Path.GetFullPath(parent).TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase) || string.Equals(Path.GetFullPath(path), Path.GetFullPath(parent), StringComparison.OrdinalIgnoreCase);
+-static bool IsRunning(int pid) { try { return !Process.GetProcessById(pid).HasExited; } catch (ArgumentException) { return false; } }
+ static string Hash(string file) { using var stream = File.OpenRead(file); return Convert.ToHexString(SHA256.HashData(stream)).ToLowerInvariant(); }
+ static List<FileRecord> CopyTree(string source, string destination, bool skipInfrastructure)
+ {
+@@ -585,7 +657,6 @@ static IEnumerable<string> ReadSharedLines(string path)
+ }
+ record Fixture(string Mode, string PackName, DateTimeOffset CreatedAtUtc);
+ record FileRecord(string Path, long SizeBytes, string Sha256);
+-record Run(int ProcessId, DateTimeOffset StartedAtUtc, string GameDirectory, string Mode, string Label);
+ record ErrorFamily(string Family, long Count, string FirstTime, string LastTime);
+ static class WindowsArguments
+ {
+diff --git a/tools/Atm9OriginalQa/QaLifecycleAgent.java b/tools/Atm9OriginalQa/QaLifecycleAgent.java
+index 7a90e10..53f0a94 100644
+--- a/tools/Atm9OriginalQa/QaLifecycleAgent.java
++++ b/tools/Atm9OriginalQa/QaLifecycleAgent.java
+@@ -1,20 +1,29 @@
+ import java.io.File;
+ import java.io.IOException;
++import java.io.InputStream;
+ import java.lang.instrument.Instrumentation;
++import java.lang.invoke.MethodHandle;
++import java.lang.invoke.MethodHandles;
++import java.lang.invoke.MethodType;
+ import java.lang.reflect.*;
+ import java.nio.charset.StandardCharsets;
+ import java.nio.file.*;
+ import java.time.Instant;
++import java.security.MessageDigest;
+ import java.util.*;
+ import java.util.concurrent.*;
+ import java.util.function.Function;
+ 
+ /** Test-only native lifecycle/observation requests. No bytecode transformation. */
+ public final class QaLifecycleAgent {
+-    private final Path root, game, evidence, ready, stop;
++    private final Path root, game, evidence, ready, observe, stop;
+     private final String freshWorld;
+-    private boolean created, modsRecorded;
+-    private int menuSamples;
++    private final String resourceProbe;
++    private final int timeoutMinutes;
++    private boolean created, modsRecorded, gpuRecorded;
++    private boolean titleHealthRecorded, worldHealthRecorded;
++    private boolean titleResourceRecorded, worldResourceRecorded;
++    private final HealthSamples health = new HealthSamples();
+ 
+     private QaLifecycleAgent() throws Exception {
+         root = Path.of(required("root")).toRealPath();
+@@ -24,15 +33,19 @@ public final class QaLifecycleAgent {
+         if (!Files.isRegularFile(root.resolve(".atm9-original-qa.json")))
+             throw new SecurityException("Not a marked original ATM9 QA fixture");
+         game = child(required("game")); evidence = child(required("evidence"));
+-        ready = evidence.resolve("ready.flag"); stop = evidence.resolve("stop.flag");
++        ready = evidence.resolve("ready.flag"); observe = evidence.resolve("observe.flag"); stop = evidence.resolve("stop.flag");
++        timeoutMinutes = observationTimeout(System.getProperty("lanminecraft.qa.timeoutMinutes", "45"));
++        resourceProbe = System.getProperty("lanminecraft.qa.resourceProbe");
++        if (resourceProbe != null && !NativeResourceProbe.validResourceId(resourceProbe)) throw new IllegalArgumentException("Invalid resource probe ID");
+         freshWorld = System.getProperty("lanminecraft.qa.freshWorld");
+         if (freshWorld != null && !freshWorld.matches("ATM9Qa[A-Za-z0-9_-]{0,48}"))
+             throw new SecurityException("Unsafe QA world name");
+         if (freshWorld != null && Files.exists(game.resolve("saves").resolve(freshWorld), LinkOption.NOFOLLOW_LINKS))
+             throw new SecurityException("Fresh QA world already exists");
+-        if (Files.exists(ready) || Files.exists(stop)) throw new SecurityException("Use fresh evidence markers");
++        if (Files.exists(ready) || Files.exists(observe) || Files.exists(stop)) throw new SecurityException("Use fresh evidence markers");
+         event("waiting_for_coordinator", Map.of("classTransformation", false,
+-            "gameReflectionBeforeReady", false, "freshWorldRequested", freshWorld != null));
++            "gameReflectionBeforePermission", false, "nativeObservationProtocol", 4,
++            "observationTimeoutMinutes", timeoutMinutes, "freshWorldRequested", freshWorld != null));
+     }
+ 
+     public static void premain(String ignored, Instrumentation instrumentation) {
+@@ -47,25 +60,49 @@ public final class QaLifecycleAgent {
+         var originalContext = Thread.currentThread().getContextClassLoader();
+         try {
+             Class<?> minecraft = null;
+-            long deadline = System.nanoTime() + TimeUnit.MINUTES.toNanos(45);
++            MethodHandle getInstance = null;
++            InitializationGate initialization = null;
++            boolean permissionRecorded = false, initializationPendingRecorded = false, instancePendingRecorded = false;
++            long deadline = System.nanoTime() + TimeUnit.MINUTES.toNanos(timeoutMinutes);
+             while (System.nanoTime() < deadline) {
+-                // Instrumentation enumeration and game lookup happen only after
+-                // the coordinator has observed a fully loaded native title menu.
+-                if (!Files.isRegularFile(ready, LinkOption.NOFOLLOW_LINKS)) { Thread.sleep(1000); continue; }
++                // Neither marker is synthesized by a loading log or timeout.
++                // observe grants observation only; ready preserves the legacy
++                // visual-coordinator route. Native health is measured below.
++                boolean legacyReady = Files.isRegularFile(ready, LinkOption.NOFOLLOW_LINKS);
++                if (!legacyReady && !Files.isRegularFile(observe, LinkOption.NOFOLLOW_LINKS)) { Thread.sleep(1000); continue; }
++                if (!permissionRecorded) {
++                    initialization = new InitializationGate();
++                    event("observation_enabled", Map.of("permission", legacyReady ? "legacy_visual_ready" : "explicit_observe",
++                        "coordinatorClaimedReadiness", legacyReady, "nativeHealthAlreadyEstablished", false,
++                        "alreadyLoadedClassesOnly", true, "fullyInitializedClassCheck", "sun.misc.Unsafe.shouldBeInitialized"));
++                    permissionRecorded = true;
++                }
+                 if (minecraft == null) {
+                     for (Class<?> loaded : instrumentation.getAllLoadedClasses())
+                         if (loaded.getName().equals("net.minecraft.client.Minecraft")) {
+-                            Thread.currentThread().setContextClassLoader(loaded.getClassLoader());
+                             minecraft = loaded; break;
+                         }
+                 }
+-                if (minecraft != null) {
+-                    Object client = method(minecraft, "m_91087_").invoke(null);
++                if (minecraft != null && !initialization.isInitialized(minecraft)) {
++                    if (!initializationPendingRecorded) {
++                        event("minecraft_initialization_pending", Map.of("classInitializationTriggeredByAgent", false));
++                        initializationPendingRecorded = true;
++                    }
++                } else if (minecraft != null) {
++                    if (getInstance == null) {
++                        // Resolve only this signature, after the JDK has proved
++                        // full initialization. Do not enumerate all Minecraft
++                        // method signatures during bootstrap.
++                        Thread.currentThread().setContextClassLoader(minecraft.getClassLoader());
++                        getInstance = MethodHandles.publicLookup().findStatic(minecraft, "m_91087_", MethodType.methodType(minecraft));
++                    }
++                    Object client = getInstance.invoke();
+                     if (client != null) {
+                         var result = new CompletableFuture<Boolean>();
+                         ((Executor) client).execute(() -> {
+                             var previous = Thread.currentThread().getContextClassLoader();
+                             try {
++                                if (System.nanoTime() >= deadline) { result.complete(false); return; }
+                                 Thread.currentThread().setContextClassLoader(client.getClass().getClassLoader());
+                                 result.complete(inspect(client));
+                             } catch (Throwable failure) { result.completeExceptionally(failure); }
+@@ -79,6 +116,9 @@ public final class QaLifecycleAgent {
+                             Thread.sleep(250);
+                         }
+                         if (result.get()) return;
++                    } else if (!instancePendingRecorded) {
++                        event("minecraft_instance_pending", Map.of("classFullyInitialized", true, "instanceExists", false));
++                        instancePendingRecorded = true;
+                     }
+                 }
+                 Thread.sleep(3000);
+@@ -118,7 +158,50 @@ public final class QaLifecycleAgent {
+         }
+         state.put("actualSteamGuestConnectionVerified", false);
+         event("client_state", state);
+-        if (!modsRecorded) {
++        String stage = healthStage(player, level, screen, overlay, server);
++        health.accept(stage);
++        if (health.stableTitle() && !titleHealthRecorded) {
++            event("native_health_observed", Map.of("stage", "title", "consecutiveSamples", health.titleSamples,
++                "screenClass", className(screen), "overlayAbsent", true, "activeWorldAbsent", true,
++                "visualVerificationClaimed", false, "worldOrSteamPassClaimed", false));
++            titleHealthRecorded = true;
++        }
++        if (health.stableWorld() && !worldHealthRecorded) {
++            event("native_health_observed", Map.of("stage", "integrated_world", "consecutiveSamples", health.worldSamples,
++                "playerPresent", true, "levelPresent", true, "integratedServerPresent", true,
++                "overlayAbsent", true, "screenAbsent", true, "visualVerificationClaimed", false,
++                "worldOrSteamPassClaimed", false));
++            worldHealthRecorded = true;
++        }
++        if (!gpuRecorded && (health.stableTitle() || health.stableWorld())) {
++            try {
++                var gpu = NativeGpuProbe.sampleIfHealthy(health, mc.getClassLoader());
++                gpu.put("observedAfterNativeHealth", stage);
++                gpu.put("probeBackend", "LWJGL GL11 on native client executor");
++                gpu.put("earlierGlDebugSynchronousModeEstablished", false);
++                event("native_gpu_capabilities", gpu);
++            } catch (ReflectiveOperationException | RuntimeException failure) {
++                event("native_gpu_probe_failed", Map.of("exception", failure.getClass().getName(),
++                    "message", String.valueOf(failure.getMessage()), "gpuLimitVerified", false,
++                    "gpuStateChanged", false, "visualVerificationClaimed", false));
++            }
++            gpuRecorded = true;
++        }
++        if (resourceProbe != null && ((health.stableTitle() && !titleResourceRecorded) || (health.stableWorld() && !worldResourceRecorded))) {
++            try {
++                var resource = NativeResourceProbe.sampleIfHealthy(health, client, resourceProbe);
++                resource.put("observedAfterNativeHealth", stage);
++                event("native_resource_probe", resource);
++            } catch (Exception failure) {
++                while (failure instanceof InvocationTargetException && failure.getCause() instanceof Exception nested) failure = nested;
++                event("native_resource_probe_failed", Map.of("resourceId", resourceProbe, "observedAfterNativeHealth", stage,
++                    "exception", failure.getClass().getName(), "message", String.valueOf(failure.getMessage()),
++                    "byteLimit", NativeResourceProbe.BYTE_LIMIT, "resourceChanged", false));
++            }
++            if (health.stableTitle()) titleResourceRecorded = true;
++            if (health.stableWorld()) worldResourceRecorded = true;
++        }
++        if (!modsRecorded && (health.stableTitle() || health.stableWorld())) {
+             Class<?> modList = Class.forName("net.minecraftforge.fml.ModList", false, mc.getClassLoader());
+             Object list = modList.getMethod("get").invoke(null);
+             var ids = new TreeMap<String, String>();
+@@ -130,14 +213,124 @@ public final class QaLifecycleAgent {
+             event("loaded_mod_ids", Map.of("count", ids.size(), "ids", ids)); modsRecorded = true;
+         }
+         if (freshWorld == null || created) return false;
+-        boolean title = screen != null && Class.forName("net.minecraft.client.gui.screens.TitleScreen", false, mc.getClassLoader()).isInstance(screen);
+-        if (!title || overlay != null) { menuSamples = 0; return false; }
++        if (!health.stableTitle()) return false;
+         if (player != null || level != null || server != null) throw new SecurityException("Refusing fresh creation with active world");
+-        if (++menuSamples < 3) return false;
+         createFresh(client);
+         return false;
+     }
+ 
++    // Inspect the hierarchy of an existing instance; no Class.forName, game
++    // constructor or static initializer is needed to recognize native screens.
++    static String healthStage(Object player, Object level, Object screen, Object overlay, Object server) {
++        if (overlay != null) return "none";
++        if (player == null && level == null && server == null && hasType(screen, "net.minecraft.client.gui.screens.TitleScreen")) return "title";
++        if (player != null && level != null && server != null && screen == null) return "integrated_world";
++        return "none";
++    }
++
++    private static boolean hasType(Object value, String name) {
++        if (value == null) return false;
++        for (Class<?> type = value.getClass(); type != null; type = type.getSuperclass())
++            if (type.getName().equals(name)) return true;
++        return false;
++    }
++
++    static final class HealthSamples {
++        int titleSamples, worldSamples;
++        void accept(String stage) {
++            titleSamples = stage.equals("title") ? titleSamples + 1 : 0;
++            worldSamples = stage.equals("integrated_world") ? worldSamples + 1 : 0;
++        }
++        boolean stableTitle() { return titleSamples >= 3; }
++        boolean stableWorld() { return worldSamples >= 3; }
++    }
++
++    static int observationTimeout(String value) {
++        int minutes = Integer.parseInt(value);
++        if (minutes < 1 || minutes > 120) throw new IllegalArgumentException("QA observation timeout must be 1..120 minutes");
++        return minutes;
++    }
++
++    /** JDK metadata query only: true exclusively after successful full clinit. */
++    static final class InitializationGate {
++        private final Object unsafe;
++        private final Method shouldBeInitialized;
++        InitializationGate() throws ReflectiveOperationException {
++            Class<?> type = Class.forName("sun.misc.Unsafe");
++            Field singleton = type.getDeclaredField("theUnsafe"); singleton.setAccessible(true);
++            unsafe = singleton.get(null); shouldBeInitialized = type.getMethod("shouldBeInitialized", Class.class);
++        }
++        boolean isInitialized(Class<?> type) throws ReflectiveOperationException {
++            return !((Boolean) shouldBeInitialized.invoke(unsafe, type));
++        }
++    }
++
++    /** Read-only and called on the render executor only after native health. */
++    static final class NativeGpuProbe {
++        static Map<String, Object> sampleIfHealthy(HealthSamples samples, ClassLoader loader) throws ReflectiveOperationException {
++            if (!samples.stableTitle() && !samples.stableWorld()) return null;
++            var result = new LinkedHashMap<String, Object>();
++            result.put("gpuStateChanged", false);
++            result.put("visualVerificationClaimed", false);
++            Class<?> glfw = Class.forName("org.lwjgl.glfw.GLFW", false, loader);
++            long context = (Long) glfw.getMethod("glfwGetCurrentContext").invoke(null);
++            result.put("nativeCurrentContextPresent", context != 0);
++            if (context == 0) { result.put("gpuLimitVerified", false); return result; }
++            Class<?> gl11 = Class.forName("org.lwjgl.opengl.GL11", false, loader);
++            Method integer = gl11.getMethod("glGetInteger", int.class);
++            Method string = gl11.getMethod("glGetString", int.class);
++            int maximum = (Integer) integer.invoke(null, 3379); // GL_MAX_TEXTURE_SIZE
++            String vendor = (String) string.invoke(null, 7936); // GL_VENDOR
++            String renderer = (String) string.invoke(null, 7937); // GL_RENDERER
++            String version = (String) string.invoke(null, 7938); // GL_VERSION
++            result.put("maxTextureSize", maximum);
++            result.put("vendor", String.valueOf(vendor)); result.put("renderer", String.valueOf(renderer));
++            result.put("version", String.valueOf(version));
++            result.put("gpuLimitVerified", maximum > 0 && vendor != null && renderer != null && version != null);
++            return result;
++        }
++    }
++
++    /** Optional bounded read of the actual selected client resource, no files written. */
++    static final class NativeResourceProbe {
++        static final int BYTE_LIMIT = 1024 * 1024;
++        static boolean validResourceId(String value) {
++            if (value == null || value.length() > 256 || !value.matches("[a-z0-9_.-]+:[a-z0-9_./-]+")) return false;
++            String path = value.substring(value.indexOf(':') + 1);
++            if (path.startsWith("/")) return false;
++            for (String segment : path.split("/", -1)) if (segment.isEmpty() || segment.equals(".") || segment.equals("..")) return false;
++            return true;
++        }
++        static Map<String, Object> sampleIfHealthy(HealthSamples samples, Object client, String id) throws Exception {
++            if (!samples.stableTitle() && !samples.stableWorld()) return null;
++            if (!validResourceId(id)) throw new IllegalArgumentException("Invalid resource probe ID");
++            var result = new LinkedHashMap<String, Object>();
++            result.put("resourceId", id); result.put("byteLimit", BYTE_LIMIT); result.put("resourceChanged", false);
++            // These exact 1.20.1 SRG signatures are verified with javap on the
++            // pinned client JAR. No early bootstrap resource class lookup.
++            Object manager = method(client.getClass(), "m_91098_").invoke(client);
++            Class<?> location = Class.forName("net.minecraft.resources.ResourceLocation", false, client.getClass().getClassLoader());
++            Object name = location.getConstructor(String.class).newInstance(id);
++            Optional<?> found = (Optional<?>) manager.getClass().getMethod("m_213713_", location).invoke(manager, name);
++            result.put("resourceFound", found.isPresent());
++            if (found.isEmpty()) return result;
++            Object resource = found.get();
++            String pack = String.valueOf(resource.getClass().getMethod("m_215506_").invoke(resource));
++            // Pack IDs are diagnostic names, not permission to print a local path.
++            if (pack.matches("^[A-Za-z]:[\\\\/].*") || pack.startsWith("/") || pack.contains("\\"))
++                result.put("sourcePackIdRedactedAsPath", true);
++            else result.put("sourcePackId", pack.length() <= 512 ? pack : "<oversized pack ID>");
++            byte[] bytes;
++            try (InputStream input = (InputStream) resource.getClass().getMethod("m_215507_").invoke(resource)) {
++                bytes = input.readNBytes(BYTE_LIMIT + 1);
++                if (bytes.length > BYTE_LIMIT) throw new IOException("Resource probe exceeds " + BYTE_LIMIT + " byte limit");
++            }
++            result.put("sizeBytes", bytes.length);
++            result.put("sha256", HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(bytes)));
++            return result;
++        }
++    }
++
+     private void createFresh(Object client) throws Exception {
+         if (Files.exists(game.resolve("saves").resolve(freshWorld), LinkOption.NOFOLLOW_LINKS))
+             throw new SecurityException("Fresh world collision before native creation");
+diff --git a/tools/Atm9OriginalQa/README.md b/tools/Atm9OriginalQa/README.md
+index ecca126..5707bec 100644
+--- a/tools/Atm9OriginalQa/README.md
++++ b/tools/Atm9OriginalQa/README.md
+@@ -31,12 +31,46 @@ the harness. File preparation may perform the same large first-run downloads
+ as the production Play action.
+ 
+ The Java agent is launch-only test instrumentation, never a Forge mod or a
+-distribution file. It performs no bytecode transformation. Until a coordinator
+-writes the ready marker after observing a fully loaded title menu, it does not
+-enumerate Minecraft classes or reflect into game code. Later native reads,
+-optional fresh-world creation and normal `Minecraft.stop` execute on the client
+-executor with the game classloader context. Its fixed symbols are for Minecraft
+-1.20.1 Forge, whose exact prepared profile/JAR hashes remain in the evidence.
++distribution file. It performs no bytecode transformation. Agent protocol 3
++supports a separate explicit `observe` permission; this is not a readiness
++claim and needs no visual coordinator. Until `observe` or the legacy `ready`
++marker exists, it does not enumerate Minecraft classes or reflect into game
++code. It then looks only through `Instrumentation.getAllLoadedClasses` and
++checks the existing Minecraft class with JDK17
++`sun.misc.Unsafe.shouldBeInitialized`. It does not load or initialize Minecraft
++to obtain an observation. A class whose initialization is pending, in progress
++or failed is never invoked. Only after successful full initialization does a
++single-signature method handle obtain the existing client instance and queue
++inspection on its native executor.
++
++Inspection records loading/error screens without treating them as healthy. It
++requires three consecutive actual TitleScreen (including PackMenu subclasses)
++samples with no loading overlay and no active world before declaring native
++title health. For QuickPlay, three samples with player, level, integrated server,
++no overlay and no screen establish the equivalent native joined-world
++observation. Only then is the actual Forge ModList recorded. Fresh-world
++creation retains its no-existing-world/no-active-world guards and requires the
++native title condition. None of these observations claims visual quality,
++Steam connectivity or complete mod functionality. Native reads, optional
++creation and normal `Minecraft.stop` use the client executor and game classloader
++context. Fixed symbols are for Minecraft 1.20.1 Forge, with exact prepared
++profile/JAR hashes retained in the evidence.
++
++Agent protocol 4 additionally records the real GPU limit only after that native
++health condition, on the client/render executor. It reads the current GLFW
++context and only `GL_MAX_TEXTURE_SIZE`, vendor, renderer and version. It changes
++no GL state, framebuffer binding, effect or quality setting. An absent context
++or failed probe is explicitly unverified. It does not establish synchronous
++debug output during earlier GL errors.
++
++A fresh v4 launch can also pass one optional
++`--resource-probe namespace:path`. After healthy title and again after healthy
++integrated-world samples it reads the actual selected ResourceManager winner,
++source pack ID, length and SHA256. It never changes a resource or prints its
++bytes/filesystem path. Resource IDs are validated, streams are closed and a
++resource larger than 1 MiB is rejected. Missing resources and probe failures are
++recorded without claiming the expected hash. The exact ResourceManager SRG
++signatures are pinned to Minecraft 1.20.1; older agents reject this CLI option.
+ 
+ From the repository root, build after other launcher builds have finished:
+ 
+@@ -51,6 +85,18 @@ dotnet $qa prepare $fixture --source .\artifacts\atm9-original\pack --cache-root
+ dotnet $qa launch $fixture --label baseline-01 --agent $agent --heap 10240 --fresh-world ATM9QaFresh
+ ```
+ 
++Validate the initialization gate on the actual complete game JDK17 before using
++the v3 agent. This standalone tiny JVM checks cold classes, an initializer held
++in progress on another thread, successful and failed initialization, native
++health conditions and consecutive-sample resets. Fake GLFW/GL11/resource classes
++verify the post-health guard, exact read-only query list, absent-context behavior
++and bounded resource stream handling. It neither attaches to nor starts a game.
++All synthetic screen/GL/resource test classes are absent from the agent JAR.
++
++```powershell
++.\tools\Atm9OriginalQa\Test-AgentSafety.ps1 -JdkHome <game-jdk17-home> -OutputDirectory .\artifacts\atm9-original\agent-safety
++```
++
+ When validating a different clean launcher worktree, pass
+ `-p:LauncherProject=<absolute-path-to-that-Program/Minecraft.csproj>` to the
+ harness build. After that worktree's full Java/launcher build has completed,
+@@ -67,7 +113,9 @@ launcher assembly hash must belong to the selected isolated launcher worktree.
+ For a focused runtime mixin diagnostic, append the standalone `--mixin-export`
+ flag to `launch`. It passes the standard Mixin export setting with the filter
+ `net.minecraft.world.item.BoatItem`; the resulting native transformed class is
+-under the fixture game's `.mixin.out` directory. The flag introduces no
++under the fixture game's `.mixin.out` directory. It also enables the standard
++`mixin.dumpTargetOnFailure` diagnostic to preserve an unmodified target dump if
++a mixin fails before the menu. The flag introduces no
+ transformer or payload injection, changes no mixin requirements, and grants no
+ compatibility PASS. Preserve the class and relevant startup warning for caller
+ analysis. Export files remain private QA evidence, not pack content.
+@@ -84,15 +132,47 @@ not source settings, private paths or account IDs. HTTP verification is separate
+ from the coordinator's visual check; another player's skin remains unverified.
+ 
+ The launch command remains alive, recording output until normal game exit.
+-Use another terminal for control commands. Once the actual client reaches a
+-healthy title menu, explicitly allow native observation/creation:
++Use another terminal for control commands. For an authorized protocol-3 run,
++explicitly grant observation; this marker itself makes no readiness claim:
+ 
+ ```powershell
+-dotnet $qa ready $fixture --label baseline-01
++dotnet $qa observe $fixture --label baseline-01
+ dotnet $qa audit $fixture --label baseline-01
+ dotnet $qa stop $fixture --label baseline-01
+ ```
+ 
++`observe` is a separate QA operation, never an automatic workaround for a stopped
++UI action. The existing `ready` command remains available when a coordinator has
++actually observed a healthy title menu. Never create `ready.flag` merely from
++loading logs, elapsed time or an error screen. The harness records the agent
++protocol in launch evidence and rejects `observe` for a launch made with the old
++v2 agent; rebuilding a JAR cannot upgrade an already running JVM. Use a fresh
++launch label with the rebuilt v3 agent for that route.
++
++The observation deadline defaults to 45 minutes from agent startup. A fresh v3
++launch can set `--qa-timeout-minutes <1..120>`; both launcher and agent enforce
++the bound. Expiry records a timeout, grants no PASS and never kills the game.
++An already started native creation request is not forcibly aborted on expiry;
++a queued inspection checks the deadline before it starts. A legacy v2 launch
++retains its fixed 45-minute deadline.
++
++Control commands, the live-fixture guard and audits use the same process identity
++check. A matching `exit.json` is terminal without looking up its historical PID;
++Windows may reuse that PID or retain its terminated process object. An exit
++record with a conflicting PID/time or malformed JSON is an actionable evidence
++error, never an active-process assumption. Without terminal evidence the process
++must be Java/javaw and match its recorded OS creation time. New launches retain
++the actual creation time (1 ms tolerance); old records stamped just before
++CreateProcess use a 2-second tolerance. A name/start mismatch never receives a
++control marker. Metadata access failures require retry/review rather than
++claiming that a process has ended. The read-only standalone self-test uses its
++own CLI process metadata plus pure Java identity fixtures; it starts/attaches to
++no game and controls or kills no process:
++
++```powershell
++dotnet $qa self-test-process-identity .\artifacts\atm9-original\process-identity-test
++```
++
+ `--fresh-world ATM9QaFresh` requests native creative/normal world creation
+ using the current registry's NORMAL preset and a native random seed. It refuses
+ an existing target, active world or loading overlay. A returned creation request
+@@ -100,8 +180,9 @@ does not establish a joined world: require repeated actual `client_state`
+ observations with player, level and integrated server, then normal save logs and
+ an exit result. After normal save/exit, `--world ATM9QaFresh` re-enters that same
+ disposable world through ordinary QuickPlay. Omit both options to create a world
+-through the ordinary native UI instead. A fresh evidence label is mandatory for
+-every launch. The ready marker is required again after each restart.
++through the ordinary native UI instead. A fresh evidence label and explicit
++observation permission (`observe` or the legacy visual `ready` route) are
++required again after every restart.
+ 
+ Create a separate fresh root with `--mode integrated` for the comparison.
+ `--cache-root` reads and verifies existing launcher caches into independent
+@@ -118,10 +199,12 @@ technical copy and adds independent runtime caches. The synthetic sentinel
+ its two exact text files, adoption moves it to `migration-sentinels` outside
+ `saves`, retaining the migration proof without a false world-scanner error.
+ Create a distinct reserved `ATM9Qa...` world for the runtime test instead.
+-`prepare-integration <fixture-root>` prepares the real instance, pinned transport
+-and production adapter without starting Java, allowing title/preflight inspection
+-while another smoke run owns the GPU. `launch` repeats those same production
+-services before starting the client, preserving their normal order.
++`prepare-integration <fixture-root>` prepares the real instance, pinned transport,
++production adapter and optional file-only local AI provisioning without starting
++the game or an AI backend. `local-ai-preparation-files.json` records the latter
++separately from native readiness and lifetime. This supports file preflight while
++another smoke run owns the GPU. `launch` repeats the same production services
++before starting the client, preserving their normal order.
+ 
+ Compare ERROR/FATAL messages by exact family and matching startup/world time
+ windows with `python tools/Atm9OriginalQa/compare_logs.py --baseline <baseline-latest.log>
+diff --git a/tools/Atm9OriginalQa/QaProcessIdentity.cs b/tools/Atm9OriginalQa/QaProcessIdentity.cs
+new file mode 100644
+index 0000000..0bbccfc
+--- /dev/null
++++ b/tools/Atm9OriginalQa/QaProcessIdentity.cs
+@@ -0,0 +1,116 @@
++using System.Diagnostics;
++using System.IO;
++using System.Text.Json;
++
++record Run(int ProcessId, DateTimeOffset StartedAtUtc, string GameDirectory, string Mode, string Label,
++    DateTimeOffset? ProcessCreatedAtUtc = null, string? ExpectedProcessName = null);
++record QaExit(int ProcessId, int ExitCode, DateTimeOffset ExitedAtUtc);
++record QaProcessSnapshot(string Name, DateTimeOffset CreatedAtUtc, bool HasExited);
++record QaProcessStatus(bool IsRunning, string State, string Authority,
++    DateTimeOffset? ObservedCreatedAtUtc = null, string? ObservedProcessName = null);
++
++// Read-only process metadata. No attach, input, termination or process-tree operations.
++static class QaProcessIdentity
++{
++    private static readonly JsonSerializerOptions Json = new() { PropertyNameCaseInsensitive = true };
++
++    public static QaProcessStatus Read(Run run, string evidence)
++    {
++        var exitPath = Path.Combine(evidence, "exit.json");
++        QaExit? terminal = null;
++        if (File.Exists(exitPath))
++        {
++            try { terminal = JsonSerializer.Deserialize<QaExit>(File.ReadAllText(exitPath), Json) ?? throw new JsonException("Empty exit record."); }
++            catch (JsonException failure) { throw new IOException("QA exit.json is incomplete or malformed. Wait for its writer or review this fixture; no control marker was written.", failure); }
++        }
++        return Evaluate(run, terminal, DateTimeOffset.UtcNow, ReadProcess);
++    }
++
++    internal static QaProcessStatus Evaluate(Run run, QaExit? terminal, DateTimeOffset now, Func<int, QaProcessSnapshot?> resolve)
++    {
++        if (run.ProcessId <= 0 || run.StartedAtUtc == default || run.StartedAtUtc > now.AddMinutes(1))
++            throw new IOException("QA run.json has an invalid process ID or launch timestamp; review this fixture before controlling it.");
++        if (terminal is not null)
++        {
++            if (terminal.ProcessId != run.ProcessId || terminal.ExitedAtUtc < (run.ProcessCreatedAtUtc ?? run.StartedAtUtc) || terminal.ExitedAtUtc > now.AddMinutes(1))
++                throw new IOException("QA exit.json does not match run.json process ID/time. Review the conflicting evidence; no control marker was written.");
++            // Do not query a historical PID: Windows may have reused it or may
++            // retain a terminated process object while another reader holds it.
++            return new(false, "terminal", "matching exit.json");
++        }
++        var actual = resolve(run.ProcessId);
++        if (actual is null) return new(false, "absent", "process metadata");
++        if (!IsJava(actual.Name) || (run.ExpectedProcessName is not null &&
++            !actual.Name.Equals(run.ExpectedProcessName, StringComparison.OrdinalIgnoreCase)))
++            return new(false, "process-name-mismatch", "PID is not the recorded QA Java", actual.CreatedAtUtc, actual.Name);
++        var expectedStart = run.ProcessCreatedAtUtc ?? run.StartedAtUtc;
++        // New records retain the actual OS creation time. Legacy records were
++        // stamped just before CreateProcess and need a small launch tolerance.
++        var tolerance = run.ProcessCreatedAtUtc is null ? TimeSpan.FromSeconds(2) : TimeSpan.FromMilliseconds(1);
++        if ((actual.CreatedAtUtc - expectedStart).Duration() > tolerance)
++            return new(false, "process-start-mismatch", "PID is not the recorded QA Java", actual.CreatedAtUtc, actual.Name);
++        return new(!actual.HasExited, actual.HasExited ? "exited" : "active", "matching Java name and OS creation time", actual.CreatedAtUtc, actual.Name);
++    }
++
++    private static bool IsJava(string name) => name.Equals("java", StringComparison.OrdinalIgnoreCase) || name.Equals("javaw", StringComparison.OrdinalIgnoreCase);
++
++    private static QaProcessSnapshot? ReadProcess(int pid)
++    {
++        Process process;
++        try { process = Process.GetProcessById(pid); }
++        catch (ArgumentException) { return null; }
++        using (process)
++        {
++            try { return new(process.ProcessName, new DateTimeOffset(process.StartTime.ToUniversalTime()), process.HasExited); }
++            catch (Exception failure) when (failure is InvalidOperationException or System.ComponentModel.Win32Exception)
++            {
++                throw new IOException("Cannot verify the recorded QA Java process identity. Retry the same fixture or inspect its exit evidence; no control marker was written.", failure);
++            }
++        }
++    }
++
++    public static object SelfTest(string output)
++    {
++        if (Directory.Exists(output)) throw new IOException("Use a new artifacts output for the process identity self-test.");
++        Directory.CreateDirectory(output);
++        using var own = Process.GetCurrentProcess();
++        var now = DateTimeOffset.UtcNow;
++        var ownStart = new DateTimeOffset(own.StartTime.ToUniversalTime());
++        var run = new Run(own.Id, ownStart, "standalone CLI self-test", "self-test", "identity");
++        var ownSnapshot = new QaProcessSnapshot(own.ProcessName, ownStart, own.HasExited);
++        var checks = 0;
++        void Check(bool condition, string reason) { checks++; if (!condition) throw new InvalidOperationException(reason); }
++        void Reject(Action action, string reason)
++        {
++            var rejected = false;
++            try { action(); } catch (IOException) { rejected = true; }
++            Check(rejected, reason);
++        }
++        Check(!Evaluate(run, null, now, _ => ownSnapshot).IsRunning, "Own dotnet test process must not be accepted as QA Java.");
++        var javaFixture = new QaProcessSnapshot("javaw", ownStart, false);
++        Check(Evaluate(run, null, now, _ => javaFixture).IsRunning, "Matching legacy Java identity rejected.");
++        Check(!Evaluate(run, null, now, _ => javaFixture with { CreatedAtUtc = ownStart.AddSeconds(3) }).IsRunning, "Reused PID with different start time accepted.");
++        Check(!Evaluate(run, null, now, _ => javaFixture with { Name = "unrelated" }).IsRunning, "Reused PID with different image accepted.");
++        Check(!Evaluate(run, null, now, _ => null).IsRunning, "Missing PID accepted as active.");
++        var exact = run with { ProcessCreatedAtUtc = ownStart, ExpectedProcessName = "javaw" };
++        Check(Evaluate(exact, null, now, _ => javaFixture).IsRunning, "Matching exact creation time rejected.");
++        Check(!Evaluate(exact, null, now, _ => javaFixture with { CreatedAtUtc = ownStart.AddMilliseconds(2) }).IsRunning, "Different exact creation time accepted.");
++        Check(!Evaluate(exact, null, now, _ => javaFixture with { Name = "java" }).IsRunning, "Different recorded Java executable name accepted.");
++        var exit = new QaExit(own.Id, 0, now);
++        var lookups = 0;
++        var terminal = Evaluate(run, exit, now, _ => { lookups++; throw new InvalidOperationException("Historical PID must never be resolved."); });
++        Check(!terminal.IsRunning && terminal.State == "terminal" && lookups == 0, "Matching exit did not take precedence over a potentially reused PID.");
++        Reject(() => Evaluate(run, exit with { ProcessId = own.Id + 1 }, now, _ => javaFixture), "Mismatched terminal PID accepted.");
++        Reject(() => Evaluate(run, exit with { ExitedAtUtc = ownStart.AddTicks(-1) }, now, _ => javaFixture), "Terminal timestamp preceding launch accepted.");
++        Reject(() => Evaluate(exact with { ProcessCreatedAtUtc = ownStart.AddMilliseconds(20) }, exit with { ExitedAtUtc = ownStart.AddMilliseconds(10) }, now, _ => javaFixture), "Terminal timestamp preceding actual OS creation accepted.");
++        Reject(() => Evaluate(run, exit with { ExitedAtUtc = now.AddMinutes(2) }, now, _ => javaFixture), "Future terminal timestamp accepted.");
++        Reject(() => Evaluate(run with { ProcessId = 0 }, null, now, _ => javaFixture), "Invalid run PID accepted.");
++        var disk = Path.Combine(output, "matching-terminal"); Directory.CreateDirectory(disk);
++        File.WriteAllText(Path.Combine(disk, "exit.json"), JsonSerializer.Serialize(exit));
++        Check(Read(run, disk).State == "terminal", "Actual matching terminal file was not honored for own live non-Java PID.");
++        File.WriteAllText(Path.Combine(disk, "exit.json"), "{");
++        Reject(() => Read(run, disk), "Malformed terminal evidence was silently treated as active/absent.");
++        return new { status = "PASS", checks, ownProcessMetadataUsed = true, JavaIdentityCasesArePureFixtures = true,
++            validTerminalPreventsPidLookup = true, gameStartedOrAttached = false, processControlledOrKilled = false };
++    }
++}
+diff --git a/tools/Atm9OriginalQa/Test-AgentSafety.ps1 b/tools/Atm9OriginalQa/Test-AgentSafety.ps1
+new file mode 100644
+index 0000000..0e8d7e5
+--- /dev/null
++++ b/tools/Atm9OriginalQa/Test-AgentSafety.ps1
+@@ -0,0 +1,39 @@
++param(
++    [Parameter(Mandatory = $true)][string]$JdkHome,
++    [Parameter(Mandatory = $true)][string]$OutputDirectory
++)
++$ErrorActionPreference = 'Stop'
++$qaSafetyOutput = [IO.Path]::GetFullPath($OutputDirectory)
++if (($qaSafetyOutput -split '[\\/]') -notcontains 'artifacts') { throw 'QA test output must stay under artifacts.' }
++$qaSafetyAncestor = $qaSafetyOutput
++while ($qaSafetyAncestor) {
++    if ((Test-Path -LiteralPath $qaSafetyAncestor) -and
++        ((Get-Item -LiteralPath $qaSafetyAncestor -Force).Attributes -band [IO.FileAttributes]::ReparsePoint)) { throw 'Linked QA paths are forbidden.' }
++    $qaSafetyAncestor = [IO.Path]::GetDirectoryName($qaSafetyAncestor)
++}
++$qaSafetyJava = Join-Path $JdkHome 'bin/java.exe'
++$qaSafetyJavac = Join-Path $JdkHome 'bin/javac.exe'
++if (-not (Test-Path -LiteralPath $qaSafetyJava) -or -not (Test-Path -LiteralPath $qaSafetyJavac)) { throw 'A complete game JDK17 is required.' }
++New-Item -ItemType Directory -Path $qaSafetyOutput -Force | Out-Null
++$qaSafetyClasses = Join-Path $qaSafetyOutput 'classes'
++New-Item -ItemType Directory -Path $qaSafetyClasses -Force | Out-Null
++$qaSafetySources = @(Get-ChildItem -LiteralPath (Join-Path $PSScriptRoot 'tests') -Filter '*.java' -Recurse | ForEach-Object { $_.FullName })
++& $qaSafetyJavac --release 17 -encoding UTF-8 -d $qaSafetyClasses (Join-Path $PSScriptRoot 'QaLifecycleAgent.java') $qaSafetySources
++if ($LASTEXITCODE -ne 0) { throw 'QA safety test compilation failed.' }
++$qaSafetyLines = & $qaSafetyJava -cp $qaSafetyClasses QaAgentSafetyTest
++if ($LASTEXITCODE -ne 0) { throw 'QA safety test failed.' }
++$qaSafetyResult = $qaSafetyLines | ConvertFrom-Json
++if ($qaSafetyResult.status -ne 'PASS' -or $qaSafetyResult.javaFeature -ne 17 -or $qaSafetyResult.gameInteraction) { throw 'Invalid QA safety test result.' }
++$qaSafetyReport = [ordered]@{
++    checkedAtUtc = [DateTimeOffset]::UtcNow.ToString('o')
++    status = 'PASS'
++    javaExecutableSha256 = (Get-FileHash -LiteralPath $qaSafetyJava -Algorithm SHA256).Hash.ToLowerInvariant()
++    javaCompilerSha256 = (Get-FileHash -LiteralPath $qaSafetyJavac -Algorithm SHA256).Hash.ToLowerInvariant()
++    agentSourceSha256 = (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot 'QaLifecycleAgent.java') -Algorithm SHA256).Hash.ToLowerInvariant()
++    testSourceSha256 = (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot 'tests/QaAgentSafetyTest.java') -Algorithm SHA256).Hash.ToLowerInvariant()
++    result = $qaSafetyResult
++    runningGameInteraction = $false
++}
++$qaSafetyJson = $qaSafetyReport | ConvertTo-Json -Depth 5
++[IO.File]::WriteAllText((Join-Path $qaSafetyOutput 'safety-report.json'), $qaSafetyJson + "`n", [Text.UTF8Encoding]::new($false))
++$qaSafetyJson
+diff --git a/tools/Atm9OriginalQa/tests/QaAgentSafetyTest.java b/tools/Atm9OriginalQa/tests/QaAgentSafetyTest.java
+new file mode 100644
+index 0000000..0577bc7
+--- /dev/null
++++ b/tools/Atm9OriginalQa/tests/QaAgentSafetyTest.java
+@@ -0,0 +1,199 @@
++import java.lang.invoke.MethodHandles;
++import java.lang.invoke.MethodType;
++import java.util.concurrent.CountDownLatch;
++import java.util.concurrent.TimeUnit;
++import java.util.concurrent.atomic.AtomicInteger;
++
++/** Runs in a separate tiny JVM; no game, attach API, flags or GUI are used. */
++public final class QaAgentSafetyTest {
++    static final class Tracker {
++        static final AtomicInteger cold = new AtomicInteger();
++        static final AtomicInteger progress = new AtomicInteger();
++        static final AtomicInteger failed = new AtomicInteger();
++        static final CountDownLatch entered = new CountDownLatch(1);
++        static final CountDownLatch release = new CountDownLatch(1);
++        static volatile boolean failNow = true;
++    }
++
++    public static final class Cold {
++        static { Tracker.cold.incrementAndGet(); }
++        public static int value() { return Tracker.cold.get(); }
++    }
++
++    static final class InProgress {
++        static {
++            Tracker.progress.incrementAndGet(); Tracker.entered.countDown();
++            try {
++                if (!Tracker.release.await(10, TimeUnit.SECONDS)) throw new AssertionError("Initializer release timed out");
++            } catch (InterruptedException failure) { throw new AssertionError(failure); }
++        }
++    }
++
++    static final class Failed {
++        static {
++            Tracker.failed.incrementAndGet();
++            if (Tracker.failNow) throw new IllegalStateException("Expected failing initializer");
++        }
++    }
++
++    static final class ExtendedMenuScreen extends net.minecraft.client.gui.screens.TitleScreen { }
++    static final class LoadingScreen { }
++    static final class ErrorScreen { }
++
++    public static final class FakeResourceClient {
++        final FakeResourceManager manager = new FakeResourceManager();
++        int managerQueries;
++        public Object m_91098_() { managerQueries++; return manager; }
++    }
++    public static final class FakeResourceManager {
++        FakeResource resource;
++        int queries;
++        public java.util.Optional<FakeResource> m_213713_(net.minecraft.resources.ResourceLocation id) {
++            queries++; return java.util.Optional.ofNullable(resource);
++        }
++    }
++    public static final class FakeResource {
++        final byte[] bytes;
++        final String pack;
++        boolean closed;
++        FakeResource(byte[] bytes, String pack) { this.bytes = bytes; this.pack = pack; }
++        public String m_215506_() { return pack; }
++        public java.io.InputStream m_215507_() {
++            return new java.io.ByteArrayInputStream(bytes) {
++                @Override public void close() throws java.io.IOException { closed = true; super.close(); }
++            };
++        }
++    }
++
++    private static int checks;
++    private static void check(boolean value, String message) {
++        checks++;
++        if (!value) throw new AssertionError(message);
++    }
++
++    public static void main(String[] args) throws Throwable {
++        check(Runtime.version().feature() == 17, "Safety validation must use the actual game JDK17");
++        var gate = new QaLifecycleAgent.InitializationGate();
++        check(Tracker.cold.get() == 0, "Cold fixture initialized before test");
++        Class<?> cold = Cold.class;
++        for (int i = 0; i < 100; i++) check(!gate.isInitialized(cold), "Cold class incorrectly treated as initialized");
++        check(Tracker.cold.get() == 0, "Initialized-state query ran cold clinit");
++        var getter = MethodHandles.publicLookup().findStatic(cold, "value", MethodType.methodType(int.class));
++        check(!gate.isInitialized(cold) && Tracker.cold.get() == 0, "Single-signature method lookup initialized cold class");
++        Class.forName(cold.getName(), true, cold.getClassLoader());
++        check(gate.isInitialized(cold) && Tracker.cold.get() == 1, "Successful clinit was not recognized");
++        check((int) getter.invokeExact() == 1 && Tracker.cold.get() == 1, "Guarded method invoked clinit a second time");
++
++        Class<?> progress = InProgress.class;
++        check(!gate.isInitialized(progress) && Tracker.progress.get() == 0, "Progress fixture initialized before request");
++        var initializerFailure = new java.util.concurrent.atomic.AtomicReference<Throwable>();
++        Thread initializer = new Thread(() -> {
++            try { Class.forName(progress.getName(), true, progress.getClassLoader()); }
++            catch (Throwable failure) { initializerFailure.set(failure); }
++        }, "QA-initialization-test");
++        initializer.start();
++        try {
++            check(Tracker.entered.await(5, TimeUnit.SECONDS), "In-progress initializer did not start");
++            for (int i = 0; i < 100; i++) check(!gate.isInitialized(progress), "In-progress clinit incorrectly treated as complete");
++            check(Tracker.progress.get() == 1 && initializer.isAlive(), "Query advanced or repeated in-progress clinit");
++        } finally { Tracker.release.countDown(); initializer.join(5000); }
++        check(!initializer.isAlive() && initializerFailure.get() == null, "Initializer did not finish cleanly");
++        check(gate.isInitialized(progress) && Tracker.progress.get() == 1, "Finished initializer was not recognized");
++
++        Class<?> failed = Failed.class;
++        check(!gate.isInitialized(failed) && Tracker.failed.get() == 0, "Failure fixture initialized before request");
++        boolean failedAsExpected = false;
++        try { Class.forName(failed.getName(), true, failed.getClassLoader()); }
++        catch (ExceptionInInitializerError expected) { failedAsExpected = true; }
++        check(failedAsExpected && Tracker.failed.get() == 1, "Failure fixture did not fail exactly once");
++        for (int i = 0; i < 100; i++) check(!gate.isInitialized(failed), "Failed clinit incorrectly treated as successful");
++        check(Tracker.failed.get() == 1, "Query retried a failed initializer");
++
++        Object title = new ExtendedMenuScreen(), loading = new LoadingScreen(), error = new ErrorScreen();
++        Object player = new Object(), level = new Object(), server = new Object(), overlay = new Object();
++        check(QaLifecycleAgent.healthStage(null, null, title, null, null).equals("title"), "Title subclass not recognized");
++        check(QaLifecycleAgent.healthStage(null, null, title, overlay, null).equals("none"), "Title with loading overlay counted healthy");
++        check(QaLifecycleAgent.healthStage(null, null, loading, null, null).equals("none"), "Loading screen counted healthy");
++        check(QaLifecycleAgent.healthStage(null, null, error, null, null).equals("none"), "Error screen counted healthy");
++        check(QaLifecycleAgent.healthStage(null, null, null, null, null).equals("none"), "Missing screen/instance state counted healthy");
++        check(QaLifecycleAgent.healthStage(player, level, title, null, server).equals("none"), "Title with active world counted healthy");
++        check(QaLifecycleAgent.healthStage(player, level, null, null, server).equals("integrated_world"), "Joined integrated world not recognized");
++        check(QaLifecycleAgent.healthStage(player, level, loading, null, server).equals("none"), "World loading screen counted healthy");
++        check(QaLifecycleAgent.healthStage(player, level, error, null, server).equals("none"), "World error screen counted healthy");
++        check(QaLifecycleAgent.healthStage(player, level, null, overlay, server).equals("none"), "World overlay counted healthy");
++        check(QaLifecycleAgent.healthStage(player, null, null, null, server).equals("none"), "Missing world level counted healthy");
++        check(QaLifecycleAgent.healthStage(player, level, null, null, null).equals("none"), "Missing integrated server counted healthy");
++
++        var samples = new QaLifecycleAgent.HealthSamples();
++        samples.accept("title"); samples.accept("title");
++        check(!samples.stableTitle(), "Two title observations counted as three");
++        samples.accept("none"); samples.accept("title"); samples.accept("title");
++        check(!samples.stableTitle(), "Loading/error interruption did not reset title samples");
++        samples.accept("title");
++        check(samples.stableTitle() && !samples.stableWorld(), "Three native title samples not accepted");
++        samples.accept("integrated_world"); samples.accept("integrated_world");
++        check(!samples.stableTitle() && !samples.stableWorld(), "Transition retained stale native health");
++        samples.accept("none"); samples.accept("integrated_world"); samples.accept("integrated_world");
++        check(!samples.stableWorld(), "Loading/error interruption did not reset world samples");
++        samples.accept("integrated_world");
++        check(samples.stableWorld(), "Three joined-world samples not accepted");
++
++        check(QaLifecycleAgent.observationTimeout("1") == 1 && QaLifecycleAgent.observationTimeout("120") == 120, "Deadline bounds rejected");
++        for (String invalid : new String[] { "0", "121", "-1", "NaN" }) {
++            boolean rejected = false;
++            try { QaLifecycleAgent.observationTimeout(invalid); }
++            catch (IllegalArgumentException expected) { rejected = true; }
++            check(rejected, "Invalid observation deadline accepted: " + invalid);
++        }
++        var gpuHealth = new QaLifecycleAgent.HealthSamples();
++        ClassLoader testLoader = QaAgentSafetyTest.class.getClassLoader();
++        check(org.lwjgl.QaGpuTracker.glfwInitializers == 0 && org.lwjgl.QaGpuTracker.gl11Initializers == 0, "Fake GL initialized before any probe");
++        check(QaLifecycleAgent.NativeGpuProbe.sampleIfHealthy(gpuHealth, testLoader) == null, "GPU read before native health");
++        gpuHealth.accept("title"); gpuHealth.accept("title");
++        check(QaLifecycleAgent.NativeGpuProbe.sampleIfHealthy(gpuHealth, testLoader) == null, "GPU read after only two title samples");
++        gpuHealth.accept("none");
++        check(QaLifecycleAgent.NativeGpuProbe.sampleIfHealthy(gpuHealth, testLoader) == null, "GPU read on loading/error interruption");
++        check(org.lwjgl.QaGpuTracker.glfwInitializers == 0 && org.lwjgl.QaGpuTracker.gl11Initializers == 0 && org.lwjgl.QaGpuTracker.contextQueries == 0, "GPU class load/query escaped health guard");
++        gpuHealth.accept("title"); gpuHealth.accept("title"); gpuHealth.accept("title");
++        var noContext = QaLifecycleAgent.NativeGpuProbe.sampleIfHealthy(gpuHealth, testLoader);
++        check(noContext.get("nativeCurrentContextPresent").equals(false) && noContext.get("gpuLimitVerified").equals(false), "Absent native context incorrectly verified");
++        check(org.lwjgl.QaGpuTracker.contextQueries == 1 && org.lwjgl.QaGpuTracker.gl11Initializers == 0, "GL11 loaded without a current context");
++        check(org.lwjgl.QaGpuTracker.integerQueries == 0 && org.lwjgl.QaGpuTracker.stringQueries == 0, "GL queries ran without context");
++        org.lwjgl.QaGpuTracker.context = 42;
++        var gpu = QaLifecycleAgent.NativeGpuProbe.sampleIfHealthy(gpuHealth, testLoader);
++        check(gpu.get("nativeCurrentContextPresent").equals(true) && gpu.get("gpuLimitVerified").equals(true), "Current context not recognized");
++        check(gpu.get("maxTextureSize").equals(16384) && gpu.get("vendor").equals("standalone fake vendor"), "Authorized GPU metadata not read");
++        check(org.lwjgl.QaGpuTracker.integerQueries == 1 && org.lwjgl.QaGpuTracker.stringQueries == 3, "GPU probe issued extra/missing enum queries");
++        check(gpu.get("gpuStateChanged").equals(false) && gpu.get("visualVerificationClaimed").equals(false), "GPU read claimed a state/visual change");
++        for (String invalid : new String[] { "../secret", "x:../a", "x:/a", "x:a//b", "X:a", "x:a/./b", "C:\\secret" })
++            check(!QaLifecycleAgent.NativeResourceProbe.validResourceId(invalid), "Unsafe resource ID accepted: " + invalid);
++        check(QaLifecycleAgent.NativeResourceProbe.validResourceId("fixture:textures/gui/title.png"), "Valid generic resource ID rejected");
++        var resourceHealth = new QaLifecycleAgent.HealthSamples();
++        var resourceClient = new FakeResourceClient();
++        check(org.lwjgl.QaGpuTracker.resourceLocationInitializers == 0, "Resource fixture initialized before probe");
++        check(QaLifecycleAgent.NativeResourceProbe.sampleIfHealthy(resourceHealth, resourceClient, "fixture:test") == null, "Resource query ran before health");
++        resourceHealth.accept("title"); resourceHealth.accept("title");
++        check(QaLifecycleAgent.NativeResourceProbe.sampleIfHealthy(resourceHealth, resourceClient, "fixture:test") == null, "Resource query ran after only two samples");
++        check(resourceClient.managerQueries == 0 && org.lwjgl.QaGpuTracker.resourceLocationInitializers == 0, "Resource class/query escaped health gate");
++        resourceHealth.accept("title");
++        var missing = QaLifecycleAgent.NativeResourceProbe.sampleIfHealthy(resourceHealth, resourceClient, "fixture:test");
++        check(missing.get("resourceFound").equals(false) && !missing.containsKey("sha256"), "Missing resource claimed a hash/winner");
++        resourceClient.manager.resource = new FakeResource("abc".getBytes(java.nio.charset.StandardCharsets.UTF_8), "standalone native pack");
++        var resource = QaLifecycleAgent.NativeResourceProbe.sampleIfHealthy(resourceHealth, resourceClient, "fixture:test");
++        check(resource.get("sourcePackId").equals("standalone native pack") && resource.get("sizeBytes").equals(3), "Actual selected resource source/length not read");
++        check(resource.get("sha256").equals("ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"), "Bounded resource SHA256 incorrect");
++        check(resourceClient.manager.resource.closed, "Resource stream not closed");
++        resourceClient.manager.resource = new FakeResource(new byte[QaLifecycleAgent.NativeResourceProbe.BYTE_LIMIT + 1], "standalone native pack");
++        boolean overLimit = false;
++        try { QaLifecycleAgent.NativeResourceProbe.sampleIfHealthy(resourceHealth, resourceClient, "fixture:test"); }
++        catch (java.io.IOException expected) { overLimit = true; }
++        check(overLimit && resourceClient.manager.resource.closed, "Oversized resource accepted or stream left open");
++        resourceClient.manager.resource = new FakeResource(new byte[] { 1 }, "C:\\private\\resource-pack");
++        var redacted = QaLifecycleAgent.NativeResourceProbe.sampleIfHealthy(resourceHealth, resourceClient, "fixture:test");
++        check(redacted.get("sourcePackIdRedactedAsPath").equals(true) && !redacted.containsKey("sourcePackId"), "Filesystem source path leaked");
++        System.out.println("{\"status\":\"PASS\",\"javaFeature\":17,\"javaRuntimeVersion\":\"" + Runtime.version() +
++            "\",\"javaVendor\":\"" + System.getProperty("java.vendor").replace("\\", "\\\\").replace("\"", "\\\"") + "\",\"checks\":" + checks +
++            ",\"coldInitializerCalls\":" + Tracker.cold.get() + ",\"inProgressInitializerCalls\":" + Tracker.progress.get() +
++            ",\"failedInitializerCalls\":" + Tracker.failed.get() + ",\"gameInteraction\":false}");
++    }
++}
+diff --git a/tools/Atm9OriginalQa/tests/net/minecraft/client/gui/screens/TitleScreen.java b/tools/Atm9OriginalQa/tests/net/minecraft/client/gui/screens/TitleScreen.java
+new file mode 100644
+index 0000000..01f5bfa
+--- /dev/null
++++ b/tools/Atm9OriginalQa/tests/net/minecraft/client/gui/screens/TitleScreen.java
+@@ -0,0 +1,4 @@
++package net.minecraft.client.gui.screens;
++
++/** Standalone test fixture only; never packaged in the QA agent. */
++public class TitleScreen { }
+diff --git a/tools/Atm9OriginalQa/tests/net/minecraft/resources/ResourceLocation.java b/tools/Atm9OriginalQa/tests/net/minecraft/resources/ResourceLocation.java
+new file mode 100644
+index 0000000..fb9beb7
+--- /dev/null
++++ b/tools/Atm9OriginalQa/tests/net/minecraft/resources/ResourceLocation.java
+@@ -0,0 +1,10 @@
++package net.minecraft.resources;
++
++import org.lwjgl.QaGpuTracker;
++
++/** Standalone resource-probe fixture, never packaged in the agent. */
++public final class ResourceLocation {
++    static { QaGpuTracker.resourceLocationInitializers++; }
++    public final String id;
++    public ResourceLocation(String id) { this.id = id; QaGpuTracker.resourceLocationConstructions++; }
++}
+diff --git a/tools/Atm9OriginalQa/tests/org/lwjgl/QaGpuTracker.java b/tools/Atm9OriginalQa/tests/org/lwjgl/QaGpuTracker.java
+new file mode 100644
+index 0000000..f4d52b9
+--- /dev/null
++++ b/tools/Atm9OriginalQa/tests/org/lwjgl/QaGpuTracker.java
+@@ -0,0 +1,8 @@
++package org.lwjgl;
++
++/** Fake GPU metadata for the standalone JVM test, never an agent dependency. */
++public final class QaGpuTracker {
++    public static int glfwInitializers, gl11Initializers, contextQueries, integerQueries, stringQueries;
++    public static long context;
++    public static int resourceLocationInitializers, resourceLocationConstructions;
++}
+diff --git a/tools/Atm9OriginalQa/tests/org/lwjgl/glfw/GLFW.java b/tools/Atm9OriginalQa/tests/org/lwjgl/glfw/GLFW.java
+new file mode 100644
+index 0000000..450e456
+--- /dev/null
++++ b/tools/Atm9OriginalQa/tests/org/lwjgl/glfw/GLFW.java
+@@ -0,0 +1,9 @@
++package org.lwjgl.glfw;
++
++import org.lwjgl.QaGpuTracker;
++
++/** No native graphics calls; standalone test fixture only. */
++public final class GLFW {
++    static { QaGpuTracker.glfwInitializers++; }
++    public static long glfwGetCurrentContext() { QaGpuTracker.contextQueries++; return QaGpuTracker.context; }
++}
+diff --git a/tools/Atm9OriginalQa/tests/org/lwjgl/opengl/GL11.java b/tools/Atm9OriginalQa/tests/org/lwjgl/opengl/GL11.java
+new file mode 100644
+index 0000000..9af5e9e
+--- /dev/null
++++ b/tools/Atm9OriginalQa/tests/org/lwjgl/opengl/GL11.java
+@@ -0,0 +1,21 @@
++package org.lwjgl.opengl;
++
++import org.lwjgl.QaGpuTracker;
++
++/** Only the authorized read-only enum queries exist in this fake API. */
++public final class GL11 {
++    static { QaGpuTracker.gl11Initializers++; }
++    public static int glGetInteger(int name) {
++        if (name != 3379) throw new AssertionError("Unauthorized GL integer enum: " + name);
++        QaGpuTracker.integerQueries++; return 16384;
++    }
++    public static String glGetString(int name) {
++        QaGpuTracker.stringQueries++;
++        return switch (name) {
++            case 7936 -> "standalone fake vendor";
++            case 7937 -> "standalone fake renderer";
++            case 7938 -> "standalone fake version";
++            default -> throw new AssertionError("Unauthorized GL string enum: " + name);
++        };
++    }
++}

@@ -1,0 +1,53 @@
+{
+  "scope": "User-approved pinned JAR updates: this is the preparatory static Safety scope audit, not an all-abilities test. Later accepted full-client evidence is recorded separately.",
+  "AllTheLeaks": {
+    "classification": "BASE remains BASE",
+    "original": {
+      "path": "mods/alltheleaks-1.0.7+1.20.1-forge.jar",
+      "sha256": "9df833a1e3fb0cc8e4fe43fd2637d5d7745edfe38356a13baaa69457982d4de6",
+      "sizeBytes": 1173400,
+      "version": "1.0.7+1.20.1-forge"
+    },
+    "replacement": {
+      "path": "mods/alltheleaks-1.1.4+1.20.1-forge.jar",
+      "fileName": "alltheleaks-1.1.4+1.20.1-forge.jar",
+      "sha256": "fb72063a7d17df97740d24355444ef2f95eab97728e1256c639bb432c61b7716",
+      "sizeBytes": 1274164,
+      "sourceUrl": "https://mediafilez.forgecdn.net/files/9188/826/alltheleaks-1.1.4%2B1.20.1-forge.jar",
+      "projectId": 1091339,
+      "fileId": 9188826,
+      "version": "1.1.4+1.20.1-forge",
+      "modIds": [
+        "alltheleaks"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/alltheleaks"
+    },
+    "contentRegistryIdChangesIdentified": false,
+    "officialNewLifecycleAndCacheFixes": true,
+    "developmentWorldEditCommand": "place_all_block_entities queues setblock, gated by alltheleaks.indev && singleplayer; property absent/default false.",
+    "newDestructiveAbilitySafetyModuleRequired": false,
+    "reason": "No automatic NEW-mod terrain/inventory removal path added; exact official BASE update, developer-only native gate retained."
+  },
+  "GrotesqueSteve": {
+    "classification": "NEW remains NEW",
+    "transformation": {
+      "kind": "grotesque-steve-quiet",
+      "patchTool": "tools/grotesque_steve_quiet.py",
+      "patchToolSha256": "7ffd540ddefa641f5bb897760002ed45de15a194c6def473865e27e9de3688a0",
+      "originalPath": "tools/GrotesqueSteve/source/grotesque_steve-1.4.2-forge-1.20.1.jar",
+      "originalSha256": "7edde5b1506a69a725412769525ba16122b1dd4c38e35f3edc5c015eef3a6f63",
+      "originalSizeBytes": 22223025,
+      "reason": "User-approved suppression of the two login text/sound/autobook callbacks and native manualgiver command syntax correction; all remaining author entries preserved."
+    },
+    "newGameplayClasses": 0,
+    "changedEntries": [
+      "META-INF/mods.toml",
+      "data/minecraft/functions/manualgiver.mcfunction",
+      "net/mde/grotesquesteve/procedures/AdvancementtriggerProcedure.class",
+      "net/mde/grotesquesteve/procedures/GrotesqueMessageProcedure.class"
+    ],
+    "newDestructiveAbilitySafetyModuleRequired": false,
+    "reason": "Only two login callbacks removed and existing manualbook command syntax corrected; other gameplay code and ordinary server function permission boundary unchanged."
+  },
+  "laterNativeAcceptance": "tools/qa/native-source-acceptance.json"
+}

@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "gameStarted": false,
+  "testStubClasses": 0,
+  "javaVersion": "openjdk version \"17.0.20.1\" 2026-08-18",
+  "javacVersion": "javac 25.0.2",
+  "nativePackFormat": 15,
+  "realForgeAndMinecraftClasses": true,
+  "sourceJarsSha256": {
+    "forge-1.20.1-47.4.0-client.jar": "010adc332f19b05fb24383954ec7a88694666216e480a6824ff0cbc4740c3c66",
+    "client-1.20.1-20230612.114412-srg.jar": "e2e940fe7ca0a9fba5a5c11ad2cf3e2f7df91bbf51d12af22cdde7af18adc344",
+    "forge-1.20.1-47.4.0-universal.jar": "2b0e97b22fd4d043dbbcc8e0a44ef0d58915689ed9224e4cd28d5c4976a16bcc"
+  },
+  "author": {
+    "sizeBytes": 22223025,
+    "sha256": "7edde5b1506a69a725412769525ba16122b1dd4c38e35f3edc5c015eef3a6f63"
+  },
+  "quiet": {
+    "version": "1.4.2-quiet.1",
+    "sizeBytes": 26240866,
+    "sha256": "ffa7df6fb07e54217757436b566fa0073b460c5fa4b695cfd2d4d40692208052"
+  },
+  "checks": {
+    "java-version": {
+      "exitCode": 0,
+      "expectedObservations": []
+    },
+    "javac-version": {
+      "exitCode": 0,
+      "expectedObservations": []
+    },
+    "compile-native": {
+      "exitCode": 0,
+      "expectedObservations": []
+    },
+    "quiet-native-parsers": {
+      "exitCode": 0,
+      "expectedObservations": [
+        "NATIVE_PACK_METADATA_FORMAT 15",
+        "NATIVE_FUNCTION_LINE_ACCEPTED give @p grotesque_steve:manualbook"
+      ]
+    },
+    "quiet-native-callbacks": {
+      "exitCode": 0,
+      "expectedObservations": [
+        "QUIET_CALLBACK_RETURNED GrotesqueMessageProcedure",
+        "QUIET_CALLBACK_RETURNED AdvancementtriggerProcedure"
+      ]
+    },
+    "author-native-parsers": {
+      "exitCode": 0,
+      "expectedObservations": [
+        "NATIVE_PACK_METADATA_FORMAT 15",
+        "NATIVE_AUTHOR_LEADING_SLASH_REJECTED"
+      ]
+    },
+    "author-native-callbacks": {
+      "exitCode": 0,
+      "expectedObservations": [
+        "AUTHOR_NULL_EVENT_DEREFERENCE GrotesqueMessageProcedure",
+        "AUTHOR_NULL_EVENT_DEREFERENCE AdvancementtriggerProcedure"
+      ]
+    }
+  },
+  "commandCheckScope": "Real Minecraft CommandFunction leading-slash validation with minimal Brigadier give/greedy-string registration; no full item-registry resolution claimed.",
+  "callbackScope": "Real full author/quiet classes, exact Forge callback descriptor, null event negative control, Java17 -Xverify:all; no actual login/world/UI/audio test.",
+  "advancementScope": "Static author JSON/bytecode proof: changed_dimension and impossible are AND criteria; no remaining native automatic completion after login callback RETURN. A full fresh-world check is separate.",
+  "privateDiagnosticsNotForPublication": true
+}

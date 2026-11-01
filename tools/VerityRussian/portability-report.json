@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "status": "LOCAL_CROSS_PLATFORM_REBUILD_PASS_FROZEN_PAYLOAD_UNCHANGED",
+  "frozenJarSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+  "frozenJarSize": 288260277,
+  "fixedSource": {
+    "path": "tools/verity_russian.py",
+    "sha256": "26ce10c358d1a2b913e9484c0b4a53aca888b9e1b6ea333fcc5c873e4a24c718",
+    "size": 17714
+  },
+  "readmeSha256": "67bfae373f9870e86705bb44992304ebb278359286706e045f8311a77d3854f4",
+  "bugsFixed": [
+    {
+      "issue": "ZipInfo.create_system inherited0Windows/3Unix",
+      "fix": "Explicit create_system=0 in shared outer/nested ZIP writer",
+      "frozenBytesPreserved": true
+    },
+    {
+      "issue": "JAVA_HOME path always appended java.exe/javac.exe",
+      "fix": "Use.exe only on Windows, regular java/javac on POSIX",
+      "frozenBytesPreserved": true
+    },
+    {
+      "issue": "Embedded text byte line endings could depend on checkout",
+      "fix": "Canonical LF XML/notices except frozen ASM notice CRLF; verified current frozen metadata",
+      "frozenBytesPreserved": true
+    }
+  ],
+  "rebuilds": [
+    {
+      "evidenceDirectory": "windows-fixed",
+      "os": "Windows11",
+      "python": "CPython3.12.10",
+      "zlibRuntime": "1.3.1",
+      "jdk": "WindowsJDK25.0.2",
+      "fullOfficialAuthorToDerivativeRebuild": true,
+      "sha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+      "size": 288260277,
+      "zipCreatorValue": 0,
+      "result": "PASS"
+    },
+    {
+      "evidenceDirectory": "linux-full",
+      "os": "WSL2 Linux / glibc2.43",
+      "python": "CPython3.14.4",
+      "zlibRuntime": "1.3.1",
+      "jdk": "Official Temurin25.0.2+10 Linux",
+      "fullOfficialAuthorToDerivativeRebuild": true,
+      "sha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+      "size": 288260277,
+      "zipCreatorValue": 0,
+      "result": "PASS"
+    },
+    {
+      "evidenceDirectory": "linux-actions-python312",
+      "os": "WSL2 Linux / glibc2.43",
+      "python": "Official actions/python-versions Ubuntu24 CPython3.12.16",
+      "zlibRuntime": "1.3.1",
+      "jdk": "Official Temurin25.0.2+10 Linux",
+      "fullOfficialAuthorToDerivativeRebuild": true,
+      "sha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+      "size": 288260277,
+      "zipCreatorValue": 0,
+      "result": "PASS"
+    },
+    {
+      "evidenceDirectory": "linux-actions312-ubuntu24-native-zlib13",
+      "os": "WSL2 Linux / glibc2.43",
+      "python": "Official actions/python-versions Ubuntu24 CPython3.12.16",
+      "zlibRuntime": "1.3 (official Ubuntu noble zlib1g package)",
+      "jdk": "Official Temurin25.0.2+10 Linux",
+      "fullOfficialAuthorToDerivativeRebuild": true,
+      "sha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+      "size": 288260277,
+      "zipCreatorValue": 0,
+      "result": "PASS"
+    }
+  ],
+  "officialToolSources": {
+    "linuxJdk": {
+      "url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_linux_hotspot_25.0.2_10.tar.gz",
+      "sha256": "987387933b64b9833846dee373b640440d3e1fd48a04804ec01a6dbf718e8ab8",
+      "size": 140949044,
+      "version": "Temurin25.0.2+10",
+      "source": "Fresh official release, portability QA only"
+    },
+    "actionsPython": {
+      "version": "3.12.16",
+      "stable": true,
+      "releaseUrl": "https://github.com/actions/python-versions/releases/tag/3.12.16-40260402378",
+      "assets": [
+        {
+          "filename": "python-3.12.16-linux-22.04-x64.tar.gz",
+          "arch": "x64",
+          "platform": "linux",
+          "platform_version": "22.04",
+          "download_url": "https://github.com/actions/python-versions/releases/download/3.12.16-40260402378/python-3.12.16-linux-22.04-x64.tar.gz"
+        },
+        {
+          "filename": "python-3.12.16-linux-24.04-x64.tar.gz",
+          "arch": "x64",
+          "platform": "linux",
+          "platform_version": "24.04",
+          "download_url": "https://github.com/actions/python-versions/releases/download/3.12.16-40260402378/python-3.12.16-linux-24.04-x64.tar.gz"
+        }
+      ],
+      "download": {
+        "asset": {
+          "filename": "python-3.12.16-linux-24.04-x64.tar.gz",
+          "arch": "x64",
+          "platform": "linux",
+          "platform_version": "24.04",
+          "download_url": "https://github.com/actions/python-versions/releases/download/3.12.16-40260402378/python-3.12.16-linux-24.04-x64.tar.gz"
+        },
+        "sha256": "dec61ed20cd3e71143f1642ef9966945dea8ae4f3e96b306205a710da4f2191a",
+        "size": 95253860,
+        "officialDigestVerified": true
+      }
+    },
+    "ubuntu24Zlib": {
+      "Package": "zlib1g",
+      "Architecture": "amd64",
+      "Version": "1:1.3.dfsg-3.1ubuntu2",
+      "Multi-Arch": "same",
+      "Priority": "required",
+      "Section": "libs",
+      "Source": "zlib",
+      "Origin": "Ubuntu",
+      "Maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "Original-Maintainer": "Mark Brown <broonie@debian.org>",
+      "Bugs": "https://bugs.launchpad.net/ubuntu/+filebug",
+      "Installed-Size": "162",
+      "Provides": "libz1",
+      "Depends": "libc6 (>= 2.14)",
+      "Conflicts": "zlib1 (<= 1:1.0.4-7)",
+      "Breaks": "libxml2 (<< 2.7.6.dfsg-2), texlive-binaries (<< 2023.20230311.66589-8)",
+      "Filename": "pool/main/z/zlib/zlib1g_1.3.dfsg-3.1ubuntu2_amd64.deb",
+      "Size": "62784",
+      "MD5sum": "cf95e224720703234e058ef36e77c75b",
+      "SHA1": "d5007b51e9019fdd147a048260709113470c5999",
+      "SHA256": "0b93d16d7498f092fa3070fbbad28cdbc6b3d640f1a7681b96fc37f20d1219f1",
+      "SHA512": "367189ce7e2fb0b6a461d7d808574df134e3ba735403ce246a418a6d0d7b93a2451d32aa4127efcec26f9cb4f549d6aa944367ada6ce6f0e4235a48fc74d6a8e",
+      "Homepage": "http://zlib.net/",
+      "Description": "compression library - runtime",
+      "Task": "cloud-minimal, minimal, server-minimal",
+      "Description-md5": "567f396aeeb2b2b63295099aed237057"
+    }
+  },
+  "limitations": [
+    "Linux execution used local WSL2, not a completed remote GitHub Actions workflow.",
+    "PythonUbuntu24 asset and zlibUbuntu24 package ran on the WSL glibc2.43 host.",
+    "Additional future compression versions must still satisfy the published exact output SHA."
+  ],
+  "packCopyOwner": "Synchronized into pack/tools: tools/verity_russian.py matches fixedSource SHA256/size and tools/VerityRussian/README.md matches readmeSha256; both also match their preparation sources. Frozen active game JAR matches frozenJarSha256/frozenJarSize and is unchanged. This copy verification does not expand the historical local rebuild scope or claim game acceptance."
+}

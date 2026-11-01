@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "authorization": "User explicitly requested removing Photosensitivity Warning before game start and during world loading. Only native author acknowledgement and the dedicated GUI warning image override are prepared.",
+  "modPin": {
+    "path": "mods/mbackrooms-1.4.0.jar",
+    "version": "1.4.0",
+    "sha256": "562bade0fc1f3055c45c0dcf62446cf6498e843080ded615f5c4a92d7a5ddc52",
+    "sizeBytes": 16241808,
+    "officialSource": "https://www.curseforge.com/minecraft/mc-mods/meultis-backrooms/files/6890920"
+  },
+  "supportFiles": [
+    {
+      "path": "config/mbackrooms/Mbackrooms-Config-Common.toml",
+      "kind": "configuration",
+      "sha256": "6303f72e29904d154d40098f291f0093862ad8c9e1f3b5d277a3585f887f6c93",
+      "sizeBytes": 2377,
+      "reason": "Native Meulti1.4.0 acknowledgement photosensitivityWarningDisplayed=true removes only the startup warning gate. All other author default COMMON values, including enabled flash and jumpscare effects, are retained. This COMMON file is managed pack configuration."
+    },
+    {
+      "path": "kubejs/assets/mbackrooms/textures/gui/photosensitivity_warning/title.png",
+      "kind": "resource",
+      "sha256": "581b9352f1c1b0af5ce7bfb36e5db6ea55bc6b409f722db965abcd2ee0b0a76b",
+      "sizeBytes": 350,
+      "reason": "User-requested removal of only the Meulti world-loading warning image through the existing native KubeJS asset pack. Exact unchanged fully transparent empty.png bytes from the same author JAR are used. No gameplay flash, jumpscare, effect, shader or mod class is changed."
+    }
+  ],
+  "configSemanticChanges": [
+    {
+      "path": [
+        "PHOTOSENSITIVITY WARNING !!!",
+        "photosensitivityWarningDisplayed"
+      ],
+      "old": false,
+      "new": true
+    }
+  ],
+  "flashEnabled": true,
+  "jumpscareEnabled": true,
+  "commonConfigOwnership": "The full author COMMON config becomes managed pack configuration under existing config/** ownership. This does not promise to preserve every personal override in that new mod COMMON file on subsequent Play. Unshipped Verity voice choices remain separate.",
+  "authorWarningImage": {
+    "entry": "assets/mbackrooms/textures/gui/photosensitivity_warning/title.png",
+    "sha256": "5359b3a3d8f18a65b75b6d4dce1aa9cee2703e526310b8e4224a16f8061c2c78",
+    "sizeBytes": 69366,
+    "dimensions": [
+      1009,
+      168
+    ]
+  },
+  "copiedAuthorEmptyImage": {
+    "entry": "assets/mbackrooms/textures/misc/empty.png",
+    "sha256": "581b9352f1c1b0af5ce7bfb36e5db6ea55bc6b409f722db965abcd2ee0b0a76b",
+    "sizeBytes": 350,
+    "dimensions": [
+      1,
+      1
+    ],
+    "rgbaExtrema": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "unchangedBytes": true
+  },
+  "basePayloadReplacements": [],
+  "jarEdits": [],
+  "offlineEvidence": {
+    "wholeConfigSemanticDiffOnlyOneField": true,
+    "nativeMinecraftResourceManager": true,
+    "pngDecoders": [
+      "Java ImageIO",
+      "Pillow"
+    ],
+    "nativeKubeJsFilesystemMappingReviewed": true,
+    "observedPackOrder": [
+      "mod_resources",
+      "KubeJS Resource Pack [assets]",
+      "ldlib"
+    ],
+    "laterLdlibHasNoMbackroomsOverride": true,
+    "winnerMatchesUnchangedAuthorTransparentPng": true
+  },
+  "runtimeVerification": {
+    "status": "Current lock214b full client/world passed. The prior QA13 native resource observation selected these unchanged author-transparent PNG bytes; no fresh current visual/UI or resource-winner replay was performed.",
+    "visualVerificationClaimed": false,
+    "freshCurrentResourceWinnerObservationClaimed": false,
+    "priorExactResourceObservation": "tools/qa/final-runtime-420.json:nativeAcceptanceEvidence.actualWarningResourceSha256",
+    "currentFullClientReport": "tools/qa/final-runtime-post-removals-420.json",
+    "rootAcceptance": "tools/qa/native-source-acceptance.json",
+    "scope": "Acknowledgement config and resource-only mechanism; does not claim effects disabled or pixel/UI testing."
+  }
+}
