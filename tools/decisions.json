@@ -1664,12 +1664,13 @@
     {
       "name": "Soul Eater",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/soul-eater-mc",
-      "status": "selected",
+      "status": "excluded-user-approved-native-crash",
       "modIds": [
         "soul_eater"
       ],
       "version": "1.25.11",
-      "sha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536"
+      "sha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536",
+      "reason": "Free Ice Sphere delayed attack re-reads a null current target after40 server ticks; official ver35 crashes the server. User explicitly approved removal on2026-11-01."
     },
     {
       "name": "Sound of Fear",
@@ -1972,9 +1973,29 @@
       "version": "1.4.2-quiet.1",
       "sha256": "ffa7df6fb07e54217757436b566fa0073b460c5fa4b695cfd2d4d40692208052",
       "reason": "Explicit user-approved quiet derivative; exact source and reproducible transformation are pinned separately."
+    },
+    {
+      "name": "Weather, Storms & Tornadoes",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/weather-storms-tornadoes",
+      "modIds": [
+        "weather2"
+      ],
+      "version": "1.20.1-2.8.3",
+      "sha256": "5eb828f93b2eb370d7f38ad1893739caf7655f32d58dbbdaabae6075ede635db",
+      "status": "selected"
+    },
+    {
+      "name": "Draconic Evolution Render Patcher",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/draconic-evolution-render-patcher",
+      "modIds": [
+        "derenderpatcher"
+      ],
+      "version": "1.3.0",
+      "sha256": "a59d110b3a0f8ade8c6c4bd9e7c6d6cf265f84391bce89de87ef92de5498d4ef",
+      "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 81,
+  "selectedRequestedProjects": 82,
   "dependencyJars": 19,
   "authorCompatibilitySelections": [
     {
@@ -2000,7 +2021,7 @@
     "launcherSpecificFlag": false,
     "jarPatched": false,
     "runtimeVerified": true,
-    "runtimeVerificationScope": "Current lock214b native POST_INIT master killEntities=false and actual AI provider/model/think/context were observed; full client/new world/normal exit and real Russian AI response accepted. Tag final contents were not freshly enumerated; no all-abilities claim. See tools/qa/final-runtime-post-removals-420.json and tools/qa/native-source-acceptance.json."
+    "runtimeVerificationScope": "Current532 measured singleplayer new world, actual own-backend HTTP200/Russian question-echo and normal saved exit0 accepted: tools/qa/final-runtime-532.json and tools/qa/native-source-acceptance.json. Prior214b POST_INIT killEntities=false/provider/model/think/context observation remains historical; those exact fields and final tag contents were not freshly re-enumerated in532. No all-abilities, semantic self-name or Steam PASS."
   },
   "questLocalization": {
     "manifestPath": "tools/atm9_ru_quests/manifest.json",
@@ -2013,7 +2034,7 @@
     "baseResourceFilesChanged": 107,
     "baseJarChanges": 0,
     "questIdsTasksRewardsDependenciesAndProgressSchemaChanged": false,
-    "runtimeVerification": "Current lock214b full client/new world/normal exit accepted: tools/qa/final-runtime-post-removals-420.json. Prior native structural/I18n proof remains separate:145 SNBT AST,327 display changes,80167 other leaves unchanged,7538 RU keys; QA13 had5 native Russian samples. Current run is not a fresh all-key I18n/locale-toggle replay; no all-quests or visual-quality claim."
+    "runtimeVerification": "Current532 full singleplayer client/new world/normal exit accepted in tools/qa/final-runtime-532.json. Actual RU UI was observed, not a fresh full quest-book/all-key/locale-toggle replay. Prior structural/I18n evidence remains separate:145 SNBT AST,327 display changes,80167 other leaves unchanged,7538 RU keys; QA13 had5 native Russian samples. No all-quests, visual or Steam PASS."
   },
   "requestedWarningRemoval": {
     "project": "Meulti's Backrooms",
@@ -2024,7 +2045,7 @@
     "effectsDisabled": [],
     "jarModified": false,
     "runtimeVerified": false,
-    "runtimeVerification": "Current lock214b full client/world passed. Prior QA13 native resource observation selected the exact author-transparent warning PNG; current PNG bytes are unchanged. No fresh current visual/UI observation was performed, so runtimeVerified stays false rather than claiming a current visual PASS. See tools/photosensitivity-removal.json and tools/qa/final-runtime-post-removals-420.json.",
+    "runtimeVerification": "Current532 full singleplayer content accepted in tools/qa/final-runtime-532.json. Earlier QA13 native resource observation selected the exact author-transparent warning PNG; current PNG bytes are unchanged. No fresh current visual/UI warning observation was performed, so runtimeVerified remains false. Native resource proof and tools/photosensitivity-removal.json remain separate; no Steam PASS.",
     "visualVerificationClaimed": false
   },
   "baseJarOverrides": [
@@ -2069,6 +2090,144 @@
       "reason": "User-approved suppression of the two login text/sound/autobook callbacks and native manualgiver command syntax correction; all remaining author entries preserved."
     },
     "newRuntimePending": false,
-    "runtimeVerification": "Exact quiet JAR included in accepted current lock214b full client/new world/normal exit. Separate native Java17 callback/parser proof and four-entry invariance: tools/GrotesqueSteve/native-report.json and preparation-report.json. Previous manualgiver error absent in current log; no physical-input/audio/visual login test claimed. See tools/qa/final-runtime-post-removals-420.json."
+    "runtimeVerification": "Exact quiet JAR included in accepted current532 singleplayer client/new world/normal exit: tools/qa/final-runtime-532.json. Prior native Java17 callback/parser proof and four-entry invariance remain in tools/GrotesqueSteve/native-report.json and preparation-report.json. No physical-input/audio/visual login/all-abilities or Steam PASS is claimed."
+  },
+  "weather2Addition": {
+    "authorization": "User explicitly requested the popular clustered-cloud tornado/wind/rain mod on 2026-11-01.",
+    "source": "tools/qa/weather2-2.8.3-static.json",
+    "requestedModId": "weather2",
+    "newDependencyJars": 0,
+    "existingCoroUtilVersion": "1.20.1-1.3.7",
+    "gameplayPolicy": "Author defaults retained. Tornado block grabbing is enabled; the optional cancellable Forge BreakEvent is disabled by the author by default. Queued destruction/fire/snow/sand are not proven protected by FTB claims.",
+    "safetyBoundary": "User prohibits a custom Safety/framework. No helper, hidden damage-disable policy or claim-protection promise is introduced. Static terrain/permission paths are disclosed in the exact-version audit.",
+    "runtimeVerification": "Current532 singleplayer content accepted by tools/qa/native-source-acceptance.json; tools/qa/final-runtime-532.json reports no own Weather2 ERROR/FATAL in the measured new world,393.470-second healthy window, actual model exchange and normal exit0. This is not all-weather-mechanics, FTB-claim protection, visual or Steam acceptance. Historical531/failed533 remain separate."
+  },
+  "draconicRenderPatcher": {
+    "authorization": "User explicitly requested the official Render Patcher for ATM9 and Modified and waived separate in-game runs for this fix on 2026-11-01.",
+    "source": "tools/qa/derenderpatcher-1.3.0-static.json",
+    "modId": "derenderpatcher",
+    "version": "1.3.0",
+    "authorJarUnmodified": true,
+    "baseJarsChanged": 0,
+    "additionalDependencies": 0,
+    "scope": "Official client render/buffer compatibility hooks retain 3D models and the existing fancyToolModels setting. Exact native target/API sites were audited; no new visual or all-injection runtime PASS is claimed.",
+    "side": "Client only; the author deliberately rejects dedicated-server loading. Integrated LAN host uses CLIENT distribution.",
+    "authorBetaNoticePreserved": true,
+    "currentRuntimeObservation": {
+      "report": {
+        "path": "tools/qa/final-runtime-532.json",
+        "sha256": "b6ee6f3d2067c64496c04ba342703e2ce2421ef7b8819c7ad519e22823cf75e5"
+      },
+      "singleplayerReceipt": {
+        "path": "tools/qa/native-source-acceptance.json",
+        "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
+        "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+        "scope": "Measured singleplayer content only; Steam/network acceptance remains open; no applied-preset/physical-input/restart/all-abilities or visual PASS."
+      },
+      "observedOwnErrorOrFatalHeaders": 0,
+      "dedicatedInGameOrVisualTestUserWaived": true,
+      "allInjectionOrVisualPassClaimed": false
+    }
+  },
+  "nativeMemoryWarningPolicy": {
+    "authorization": "User requires suppressing the author upper-memory warning in ATM9/Modified and retaining this pack-owned change across author imports.",
+    "runtimeScript": {
+      "path": "kubejs/client_scripts/lanmc_memory_warning_policy.js",
+      "sizeBytes": 421,
+      "sha256": "68b42fde0072ce3f366605a7619931cb6388575230ca7a910c23580b58cbaeab",
+      "kind": "configuration",
+      "reason": "Pack-owned client KubeJS native Memory Settings disableWarnings=true before its initial game-menu check. Suppresses the requested upper-memory panel without rewriting personal JSON or changing the selected heap. Earlier low-heap Swing/constructor logs are outside this client stage."
+    },
+    "sourceWorkflow": "tools/client-policy/README.md",
+    "personalJsonRewritten": false,
+    "authorJsonBytesUnchanged": true,
+    "standaloneNativeProof": "tools/client-policy/native-proof.json",
+    "newFinalNativeFlagObservation": "Observed actual already-loaded Memory Settings disableWarnings=true at current532 native title/world. Canonical report tools/qa/final-runtime-532.json and singleplayer receipt tools/qa/native-source-acceptance.json; early low-heap Swing/constructor behavior, personal JSON preservation and API proof retain their separate scopes. No new heap/render policy or Steam PASS.",
+    "noLauncherContentRule": true
+  },
+  "soulEaterRemoval": {
+    "removedFile": {
+      "fileName": "SoulEater_1.20.1_ver35.jar",
+      "sha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536",
+      "sizeBytes": 3071805,
+      "sourceUrl": "https://edge.forgecdn.net/files/9060/739/SoulEater_1.20.1_ver35.jar",
+      "projectId": 803147,
+      "fileId": 9060739,
+      "path": "mods/SoulEater_1.20.1_ver35.jar",
+      "kind": "requested",
+      "version": "1.25.11",
+      "modIds": [
+        "soul_eater"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/soul-eater-mc",
+      "name": "Soul Eater"
+    },
+    "userApproved": true,
+    "historicalFailedReport": "tools/qa/failed-runtime-533.json",
+    "retiredExactLegacyRow": {
+      "path": "mods/SoulEater_1.20.1_ver35.jar",
+      "sizeBytes": 3071805,
+      "sha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536"
+    },
+    "otherDependencyJarsRemoved": 0,
+    "remainingKeyMappings": 638,
+    "nativeVerification": "Current532 fresh-world singleplayer recheck accepted: Soul Eater absent,393.470-second healthy no-harness-input window, actual Russian model exchange, normal saved exit0,899ERROR/0FATAL, no repeat Soul Eater critical fault in that measured window. See tools/qa/final-runtime-532.json and native-source-acceptance.json. Historical533 remains failed; permanent exclusion is independent of future attribution. Steam acceptance remains open.",
+    "retentionPolicy": "User explicitly reaffirmed permanent exclusion even if later crash attribution changes. Do not re-add for diagnostics or routine updates; a new explicit user request is required."
+  },
+  "verityCommunityResourcePack": {
+    "path": "kubejs/assets/Verity-JE-RU.zip",
+    "sizeBytes": 383380,
+    "sha256": "de15104f3ea81fe2ba50116c65f3d74e29692cefbc6ef68192244a7c64740b68",
+    "kind": "resource",
+    "reason": "User-requested untouched PAGODI Verity JE Russian Translation resource pack, CF1774624/file9375140, loaded through existing KubeJS native top-level assets ZIP support. Adds a partial ru_ru layer; approved Russian Verity JAR and personal resource-pack selection remain unchanged.",
+    "projectId": 1774624,
+    "fileId": 9375140,
+    "version": "Verity JE-RU-1.20.1-v6.0.0",
+    "fileName": "Verity-JE-RU.zip",
+    "websiteUrl": "https://www.curseforge.com/minecraft/texture-packs/verity-je-russian-translation-rusifikator",
+    "sourceUrl": "https://mediafilez.forgecdn.net/files/9375/140/Verity-JE-RU.zip",
+    "license": "All Rights Reserved",
+    "nativeActivation": "Existing KubeJS GeneratedClientResourcePack ZIP injection, no new script or launcher policy.",
+    "nativeProof": "tools/qa/verity-je-ru-resourcepack-native.json",
+    "approvedRussianVerityJarUnchanged": true,
+    "additionalGameForResourceOnlyDelta": "WAIVED_BY_USER",
+    "currentNativeResourceObservation": {
+      "report": {
+        "path": "tools/qa/final-runtime-532.json",
+        "sha256": "b6ee6f3d2067c64496c04ba342703e2ce2421ef7b8819c7ad519e22823cf75e5"
+      },
+      "singleplayerReceipt": {
+        "path": "tools/qa/native-source-acceptance.json",
+        "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
+        "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+        "scope": "Measured singleplayer content only; Steam/network acceptance remains open; no applied-preset/physical-input/restart/all-abilities or visual PASS."
+      },
+      "stages": [
+        "title",
+        "integrated-world"
+      ],
+      "resourceId": "verity:lang/ru_ru.json",
+      "winner": "Verity-JE-RU.zip",
+      "sizeBytes": 1938,
+      "sha256": "e67fc9015cc3d0c011a09bca50d56f2a0dce7a0535ff8399a69f136cb7e97328",
+      "allUiCallersOrVisualPassClaimed": false
+    }
+  },
+  "currentSingleplayerContentAcceptance": {
+    "receipt": {
+      "path": "tools/qa/native-source-acceptance.json",
+      "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
+      "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+      "scope": "Measured singleplayer content only; Steam/network acceptance remains open; no applied-preset/physical-input/restart/all-abilities or visual PASS."
+    },
+    "report": {
+      "path": "tools/qa/final-runtime-532.json",
+      "sha256": "b6ee6f3d2067c64496c04ba342703e2ce2421ef7b8819c7ad519e22823cf75e5"
+    },
+    "status": "PASS_MEASURED_SINGLEPLAYER_CONTENT_ONLY",
+    "remainingErrorHeaders": 899,
+    "fatalHeaders": 0,
+    "realSteamAcceptance": "OPEN",
+    "migrationAndPublicationEstablishedByThisReceipt": false
   }
 }

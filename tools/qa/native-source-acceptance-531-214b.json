@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "atm9-modified-native-source-acceptance",
+  "status": "PASS",
+  "fullClientAndWorldAccepted": true,
+  "acceptedAtUtc": "2026-11-01T12:00:14.216696+00:00",
+  "sourceLockSha256": "214b22b429d73f9b68b88c32021253cde056d10e137199a373b92b810e2fcf09",
+  "scope": "Root accepts the completed measured full client/new integrated world, health interval, real Russian Verity response and normal save/exit under the explicitly agreed residual-ERROR acceptance.",
+  "runtimeReport": {
+    "path": "tools/qa/final-runtime-post-removals-420.json",
+    "sha256": "35f2130e4dc51355a60411c2d22af2448c2c52b855427f6be23b63301463cd18"
+  },
+  "independentAttributionSha256": "56fd2bac8bf36fc75ca3b6856d538ca8f474baf5fd2e241a6f81d4117618b715",
+  "closedNativeLogSha256": "8caa25571668ea8bd1973a9f8a30df9841152457909804de5ee4ca7c2a1505e0",
+  "normalExitCode": 0,
+  "shippedJars": 531,
+  "nativeModListEntries": 559,
+  "nativePackModIds": 556,
+  "presetActiveMappingsMatchedAndPersisted": 642,
+  "remainingErrorHeaders": 902,
+  "fatalHeaders": 0,
+  "errorWindows": {
+    "noInput": 109,
+    "afterSeparateAiMarkerBeforeQuit": 792,
+    "shutdown": 1
+  },
+  "remainingNewOwnHeaders": 6,
+  "verityToForgeDiscoveryDiagnosticHeaders": 790,
+  "baseBloodMagicAndPlaceboHeadersWithoutProvenNewInitiator": 4,
+  "limitations": [
+    "Not zero ERROR; accepted common background and disclosed residuals.",
+    "Not all abilities, first boot/restart, two-client Steam/LAN, selected-skin or visual-quality acceptance.",
+    "No personal-world compatibility or registry-loss guarantee; native fixture is a new technical world.",
+    "Publication and file-migration verification are separate and are not claimed here."
+  ]
+}

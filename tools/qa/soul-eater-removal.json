@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "user-approved-soul-eater-removal",
+  "status": "REMOVED_CURRENT532_SINGLEPLAYER_RECHECK_ACCEPTED_NETWORK_OPEN",
+  "removedJar": {
+    "path": "mods/SoulEater_1.20.1_ver35.jar",
+    "sizeBytes": 3071805,
+    "sha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536"
+  },
+  "crashSha256": "5940e55c9c68b7267db677b56ad29332d35b3c4960b355a102066490b5947ebb",
+  "cause": {
+    "class": "net.mcreator.souleater.procedures.FreeOnEntityTickUpdateProcedure",
+    "method": "lambda$execute$9",
+    "sourceLine": 190,
+    "delayServerTicks": 40,
+    "missingObject": "Current Mob.getTarget() result when Free Ice Sphere delayed callback reads getX() without a null guard; why target was lost in that run is unknown."
+  },
+  "officialNewerFixFound": false,
+  "officialFile": "https://www.curseforge.com/minecraft/mc-mods/soul-eater-mc/files/9060739",
+  "userApprovedRemoval": true,
+  "otherDependencyJarsRemoved": 0,
+  "sharedDependencyRetained": "Kleiders Custom Renderer remains required by CursedFate; playerAnimator is BASE and shared.",
+  "removedKeys": [
+    "key.soul_eater.weapon_form",
+    "key.soul_eater.skill_rotate",
+    "key.soul_eater.resonate",
+    "key.soul_eater.soul_perception_activate"
+  ],
+  "strictGameruleScriptOrOrphanConfigReferencesFound": false,
+  "historicalFailedReport": "tools/qa/failed-runtime-533.json",
+  "historicalFailureNotRelabelledAsSuccess": true,
+  "newSourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+  "unconditionalUserExclusion": true,
+  "readditionRequiresNewExplicitUserRequest": true,
+  "currentNativeRecheck": {
+    "receipt": {
+      "path": "tools/qa/native-source-acceptance.json",
+      "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
+      "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+      "scope": "Measured singleplayer content only; Steam/network acceptance remains open; no applied-preset/physical-input/restart/all-abilities or visual PASS."
+    },
+    "report": {
+      "path": "tools/qa/final-runtime-532.json",
+      "sha256": "b6ee6f3d2067c64496c04ba342703e2ce2421ef7b8819c7ad519e22823cf75e5"
+    },
+    "soulEaterAbsent": true,
+    "newWorldAndNormalExitAccepted": true,
+    "criticalSoulEaterFaultRepeatedInMeasuredWindow": false,
+    "futureAttributionDoesNotAutomaticallyReadd": true,
+    "realSteamAcceptance": "OPEN"
+  }
+}

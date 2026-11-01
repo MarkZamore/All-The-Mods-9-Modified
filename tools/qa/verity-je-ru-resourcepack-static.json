@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "user-requested-third-party-russian-resource-layer",
+  "status": "STATIC_AND_STANDALONE_NATIVE_RESOURCE_CHECKS_PASS_GAME_WAIVED",
+  "provenance": {
+    "projectName": "Verity JE Russian Translation / Русификатор",
+    "author": "PAGODI",
+    "projectId": 1774624,
+    "fileId": 9375140,
+    "version": "Verity JE-RU-1.20.1-v6.0.0",
+    "uploadedDate": "2026-10-30",
+    "minecraftVersions": [
+      "1.20.1"
+    ],
+    "releaseType": "Release",
+    "websiteUrl": "https://www.curseforge.com/minecraft/texture-packs/verity-je-russian-translation-rusifikator",
+    "filePage": "https://www.curseforge.com/minecraft/texture-packs/verity-je-russian-translation-rusifikator/files/9375140",
+    "sourceUrl": "https://mediafilez.forgecdn.net/files/9375/140/Verity-JE-RU.zip",
+    "license": "All Rights Reserved",
+    "licenseSource": "CurseForge project page",
+    "relationship": "Third-party community resource pack by PAGODI; not the Verity mod author VarmiteYT and not a replacement Verity JAR."
+  },
+  "archive": {
+    "fileName": "Verity-JE-RU.zip",
+    "sizeBytes": 383380,
+    "sha256": "de15104f3ea81fe2ba50116c65f3d74e29692cefbc6ef68192244a7c64740b68",
+    "fileCount": 3,
+    "totalUncompressedBytes": 383849,
+    "packFormat": 15,
+    "packIconDimensions": [
+      512,
+      512
+    ],
+    "entries": [
+      {
+        "path": "assets/verity/lang/ru_ru.json",
+        "sizeBytes": 1938,
+        "sha256": "e67fc9015cc3d0c011a09bca50d56f2a0dce7a0535ff8399a69f136cb7e97328"
+      },
+      {
+        "path": "pack.mcmeta",
+        "sizeBytes": 151,
+        "sha256": "85057132e6342c4fc1558f51999e1c11276a60ed04f24398b8d93c65f37a8fcd"
+      },
+      {
+        "path": "pack.png",
+        "sizeBytes": 381760,
+        "sha256": "26b700366ade32693cf53a1e14dd89b25cda55b5d910050e9db13c215e7bde80"
+      }
+    ],
+    "codeScriptsDatapacksShadersSoundsOrWorldTexturesPresent": false,
+    "originalArchiveBytesUnchanged": true
+  },
+  "translation": {
+    "externalRussianKeys": 29,
+    "approvedJarRussianKeys": 21,
+    "overlappingKeys": 19,
+    "identicalOverlappingValues": 6,
+    "differentOverlappingValues": 13,
+    "newLayerKeys": 10,
+    "approvedKeysAbsentFromLayer": 2,
+    "combinedRussianKeyUnion": 31,
+    "approvedJar": "mods/verity-6.0.0-ru.1.jar",
+    "approvedJarSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+    "approvedJarChanged": false,
+    "language": "Only assets/verity/lang/ru_ru.json; no English locale in added pack.",
+    "coverageLimit": "This archive is a 29-key language layer. It cannot translate Java-coded screens/dialogue/voice and does not replace the approved fuller Russian binary translation. Some new keys are legacy/config aliases; their appearance in the file is not proof of a current UI caller.",
+    "changedNameChoice": "The author layer changes several localized proper-name values from Verity to Истина. These are resource-level labels in Russian; Java-coded dialogue remains the approved derivative.",
+    "nonVerityKey": "minecraft:key.categories.multiplayer (literal key string in the verity resource namespace; no key registration)",
+    "printfSafety": {
+      "overlappingValuesChecked": 19,
+      "changedValuesChecked": 13,
+      "percentMarkersInBothVersions": 0,
+      "placeholderMismatchCount": 0,
+      "nativeStringFormatCasesPassed": 29
+    }
+  },
+  "activation": {
+    "targetPath": "kubejs/assets/Verity-JE-RU.zip",
+    "newActivationScripts": 0,
+    "newModJars": 0,
+    "defaultSettingsChanged": false,
+    "personalOptionsOrSelectedPackListWritten": false,
+    "newLauncherRule": false,
+    "nativeProvider": "kubejs-forge-2001.6.5-build.16.jar",
+    "providerSha256": "3de6b7267d3aab981848ed54d3afe7edf20532fa4060631fd6fffcd99ac5f3d5",
+    "exactMethods": [
+      "KubeJSPaths.<clinit>: ASSETS = DIRECTORY.resolve(\"assets\"), DIRECTORY is game/kubejs",
+      "MinecraftClientMixin.kjs$loadPacks(List): existing ModifyExpressionValue on constructor and reloadResourcePacks(Z), PackRepository.openAllSelected() result -> GeneratedClientResourcePack.inject",
+      "GeneratedClientResourcePack.inject(Minecraft,List): copies existing list, scans kubejs/assets top-level .zip files, creates native FilePackResources(name,file,false), inserts alongside generated KubeJS assets"
+    ],
+    "nativePriority": "Insertion boundary is the first FilePackResources (ZIP) from index1; otherwise end of selected list. Selected ZIP packs after that boundary keep priority. Directory packs represented by PathPackResources are not recognized by this boundary: do not promise universal personal-directory-pack precedence. No personal selection/order file is rewritten.",
+    "inheritedNativeMechanismNotNewMixin": true,
+    "actualNewZipMixinLifecycleVerified": false,
+    "sourceRestore": "Support resource must be committed in Git and verified before restore_modified; restore does not download missing support files. Current .gitignore does not ignore kubejs/assets/*.zip; git check-ignore returned1. * -text keeps byte content."
+  },
+  "nativeProof": {
+    "path": "tools/qa/verity-je-ru-resourcepack-native.json",
+    "status": "NATIVE_RESOURCE_METADATA_AND_LANGUAGE_PASS",
+    "realClasses": [
+      "FilePackResources",
+      "PackMetadataSectionSerializer",
+      "MultiPackResourceManager",
+      "ClientLanguage",
+      "Language",
+      "java.util.Formatter via String.format"
+    ],
+    "checks": [
+      "Original ZIP native pack metadata format15 accepted",
+      "All29 external RU values win over mod JAR at native resource layer",
+      "Two approved RU keys absent from archive remain available",
+      "Selected en_us equals approved JAR English values",
+      "29 native String.format calls complete"
+    ],
+    "gameStarted": false,
+    "limits": "Standalone native serializer/resource/language process; not a full client/Mixin/pixel/runtime acceptance."
+  },
+  "composition": {
+    "jarCountChanged": false,
+    "supportFilesDelta": 1,
+    "runtimePayloadFilesDelta": 1,
+    "finalLockAndCountsOwnedByRoot": true,
+    "soulEaterRemovalIndependent": true
+  },
+  "safety": {
+    "newWorldMutationPaths": false,
+    "reason": "Three data-only client-resource entries: localized strings, pack metadata and selection icon. No classes, scripts, server data, registry or world/inventory mutation paths.",
+    "ownSafetyAdded": false
+  },
+  "scope": {
+    "userWaivedAdditionalGameForThisResourceOnlyDelta": true,
+    "source533HistoricalNativeRunIsNotNewResourcePackRuntimePass": true,
+    "soulEaterCrashFixedByThisResource": false,
+    "activePackOrLockEditedByAudit": false
+  }
+}

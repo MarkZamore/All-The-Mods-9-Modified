@@ -5,8 +5,8 @@
     "type": "forge",
     "version": "47.4.0"
   },
-  "evidenceUtc": "2026-10-30T05:37:12.192709200Z",
-  "observationSha256": "efcdd0306defbf2f70841452008b12c29aec36fdcca1c89d17791d0e4c6532be",
+  "evidenceUtc": "2026-11-01T14:40:53.476336300Z",
+  "observationSha256": "120f42c09c86718991e4e845ebf394069fd84786a568b97286ab6d1b9847249d",
   "sourceJars": {
     "mods/[1.20.1] SecurityCraft v1.10.0.1.jar": "db2f56d0b37006e0de24d53fe94a38d9fd1d10eadf384a719a37c8d15bbb88dc",
     "mods/[forge]ctov-3.4.14.jar": "c4b0326efa655b180cc2b9d87994ca639ee4415debbf45788f665e9f4f864d3c",
@@ -162,6 +162,7 @@
     "mods/deepresonance-1.20-5.0.4.jar": "b50636d0e03d39744af1d081b4a483992e3ff0142a58523717b62c33face4185",
     "mods/DefaultSettings-1.20.x-4.0.7-Forge.jar": "ae6a2d15d4c73805b1bfc5fdb6f44a5592918ab645e1ebd80e0aacfdf22ff8a0",
     "mods/Delightful-1.20.1-3.7.6.jar": "6d56981342f6d3f3ed16f9a65fbda23bf7e68ef65abaf4ebc59f777be74463fe",
+    "mods/derenderpatcher-1.20.1-1.3.0-forge.jar": "a59d110b3a0f8ade8c6c4bd9e7c6d6cf265f84391bce89de87ef92de5498d4ef",
     "mods/DimStorage-1.20.1-8.0.1.jar": "3335ba63290f5a698dde0a6f73e125b1fc732ce39205783ce7ebb2ee88cfa90a",
     "mods/Ding-1.20.1-Forge-1.4.1.jar": "1ccbef92cda4c71f824a4f239ca46459d5476e7712c6c0affdb80cded6c66d96",
     "mods/DistantFriends-forge-1.20.1-0.5.6.jar": "5965acaf5e2ed24542777ff0ec309085332d6c9255903eddc644822a61e851cf",
@@ -443,7 +444,6 @@
     "mods/sophisticatedbackpacks-1.20.1-3.24.9.1391.jar": "fd7464b56e96d24c509da7d701ef7704876476b19dcf7145719cd6435771be4b",
     "mods/sophisticatedcore-1.20.1-1.2.105.1230.jar": "3a9aea835f7a4162681d5cf58199c4b1ad735d0c26cc8e903abc4c8254c6cf68",
     "mods/sophisticatedstorage-1.20.1-1.4.11.1344.jar": "33a288e2d5ad2975ec4e9f9fbc4abc18a0a26720fc78ae00408c2af3b50f2620",
-    "mods/SoulEater_1.20.1_ver35.jar": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536",
     "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
     "mods/sound_of_fear-0.4.0-forge-1.20.1.jar.jar": "242f06126cb351706fec8e3423942ba2703604f4c3afca4960de3c09e748614a",
     "mods/sounds_of_the_forest-1.0.2-forge-1.20.1.jar": "caa98fef71bf6945954acf7ae1ca3b0cfb70ef859ca69021fa8573754e9df74d",
@@ -516,6 +516,7 @@
     "mods/voidtotem-forge-1.20-3.0.1.jar": "6578e2f4322c7bf0ede69f118d6f601481e1e319ef790b097be8e724b9391947",
     "mods/walkers-5.8.13.jar": "032edf9ea5cddfe082e863362eb155c9e5f6b225712e1b4e8dba934c76ed633a",
     "mods/waystones-forge-1.20.1-14.1.17.jar": "079aa58d6e95bee3caff622e10dcb6504efef43b803c7c21e2551201bd1ca78c",
+    "mods/weather2-1.20.1-2.8.3.jar": "5eb828f93b2eb370d7f38ad1893739caf7655f32d58dbbdaabae6075ede635db",
     "mods/whisperwoods-1.20.1-2.1.2-forge.jar": "211f99245543494e063ce64a8d4f964a0999df6adb53304d259d97413406358c",
     "mods/wirelesschargers-1.0.10-forge-mc1.20.4.jar": "a031a42bf47bb5e1d7e40147bbd7d7f4c64ff58fe22b05724e53fccbb015aca6",
     "mods/WitherSkeletonTweaks-1.20.1-9.1.0.jar": "40b492f768ec92b1c91fbe29df7bc53b7b5ef31b1c34acc6d07f5f5ba2315f2d",
@@ -1375,6 +1376,11 @@
       "id": "delightful",
       "name": "Delightful",
       "version": "3.7.6"
+    },
+    {
+      "id": "derenderpatcher",
+      "name": "Draconic Evolution Render Patcher",
+      "version": "1.3.0"
     },
     {
       "id": "despawntimers",
@@ -2897,11 +2903,6 @@
       "version": "1.4.11.1344"
     },
     {
-      "id": "soul_eater",
-      "name": "Soul Eater",
-      "version": "1.25.11"
-    },
-    {
       "id": "sound_of_fear",
       "name": "Sound of Fear",
       "version": "1.0.0"
@@ -3252,6 +3253,11 @@
       "version": "14.1.17"
     },
     {
+      "id": "weather2",
+      "name": "Weather2",
+      "version": "1.20.1-2.8.3"
+    },
+    {
       "id": "whisperwoods",
       "name": "Whisperwoods",
       "version": "1.20.1-2.1.2"
@@ -3339,8 +3345,8 @@
     "actualLoadedIds": {
       "e4steam": "0.3.4"
     },
-    "actualAllLoadedIdCount": 559,
-    "actualPackModIdCount": 556,
+    "actualAllLoadedIdCount": 560,
+    "actualPackModIdCount": 557,
     "platformIds": {
       "minecraft": "1.20.1",
       "forge": "47.4.0"

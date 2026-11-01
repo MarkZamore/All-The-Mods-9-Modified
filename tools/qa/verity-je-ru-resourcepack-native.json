@@ -1,0 +1,16 @@
+{
+  "status": "NATIVE_RESOURCE_METADATA_AND_LANGUAGE_PASS",
+  "minecraftVersion": "1.20.1",
+  "packFormat": 15,
+  "packSha256": "de15104f3ea81fe2ba50116c65f3d74e29692cefbc6ef68192244a7c64740b68",
+  "approvedJarSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+  "externalRussianKeys": 29,
+  "approvedRussianKeys": 21,
+  "retainedApprovedKeysNotInExternal": 2,
+  "externalLayerValuesMatched": true,
+  "selectedEnglishUnaffected": true,
+  "nativeStringFormatCasesPassed": 29,
+  "actualKubeJsInjectionOrFullClientVerified": false,
+  "gameClientWindowOrMinecraftMainStarted": false,
+  "limits": "Actual native FilePackResources/PackMetadataSection serializer/MultiPackResourceManager/ClientLanguage. Pack order here matches inspected KubeJS insertion before personal packs; actual Mixin lifecycle and rendered pixels are unrun."
+}

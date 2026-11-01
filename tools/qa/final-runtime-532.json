@@ -1,0 +1,1455 @@
+{
+  "schemaVersion": 1,
+  "status": "CLOSED_CURRENT_532_NATIVE_COMPLETED_WITH_EXPLICIT_RESIDUAL_ERRORS",
+  "plannedSourceFiles": [
+    "tools/qa/final-runtime-532.json",
+    "tools/qa/final-runtime-532.md"
+  ],
+  "frozenAtUtc": "2026-11-01T14:55:39.9114865+00:00",
+  "overallAcceptanceDecidedByThisReport": false,
+  "activePackLocksLibraryOrPublicationChangedByThisReport": false,
+  "provenance": {
+    "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+    "totalShippedJars": 532,
+    "baseSlots": 431,
+    "requestedJars": 82,
+    "newDependencyJars": 19,
+    "supportFiles": 18,
+    "runtimeFiles": 1915,
+    "unmodifiedAuthorJars": 530,
+    "unchangedOriginalBaseJarHashes": 430,
+    "actualNativeModListEntriesIncludingPlatform": 560,
+    "nativePackModIds": 557,
+    "managedE4Sha256": "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40",
+    "verityJarSha256": "45fc05ee600c24e989a5a2c17fab099fa5bd15415ee9d848e73885e8f42b85d8",
+    "sourceAndRuntimeAfterExitByteGuard": {
+      "all1915SourceRuntimeFilesStillExact": true,
+      "all532SourceJarsMatchRuntime": true,
+      "all533RuntimeJarsIncludingE4Exact": true,
+      "communityResourceZipGameExact": true,
+      "privateQaSeedOnlyTwoLanguageFocusFields": true,
+      "controlsSeedUnchanged": true,
+      "proofSha256": "5107a3cdf801aad89d798d409c8cd5f37af23c89cdc7030e02acaafb105f16d7"
+    },
+    "currentPublicLauncherVersionAtAudit": 421,
+    "measuredLauncherReference": {
+      "sha256": "bcb994f7e5b95597b22df4cdd7f1e61d5b255826be9e29d1f8961a7e4241a599",
+      "configuration": "Debug",
+      "fileVersion": "1.0.1.0",
+      "productVersion": "1.0.1+b130ef14f0fd9c8dfdca9e3dcc3bb916e1b8d8dc",
+      "sourceBaseRevision": "b130ef14f0fd9c8dfdca9e3dcc3bb916e1b8d8dc",
+      "workingSourceContainsReviewed421PreflightFix": true,
+      "public421OrFuture422ExeByteIdentityClaimed": false,
+      "scope": "Pre-commit candidate code with reviewed native preflight changes; exact frozen assembly is identified by SHA, not relabelled as a released EXE."
+    }
+  },
+  "nativeConditions": {
+    "world": "One newly created private QA world for this532 cohort; not the previous failed533 world",
+    "firstBootSensitiveErrorsNotHiddenByReusing533World": true,
+    "privateQaLanguageFocusSeed": "Bounded RU/focus selector applied after production prepare; no personal world or active pack changes",
+    "actualNativeRussianTranslationObserved": true,
+    "personalWorldsUsed": false,
+    "physicalInputOrVisualAssessmentClaimed": false
+  },
+  "nativeHealthAndLifecycle": {
+    "fiveMinuteNoInputWindow": {
+      "schemaVersion": 1,
+      "kind": "native-no-harness-input-world-health",
+      "status": "PASS_MEASURED_UNPAUSED_WINDOW",
+      "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+      "startUtc": "2026-11-01T14:44:56.594647100Z",
+      "lastHealthySampleUtc": "2026-11-01T14:51:30.065091800Z",
+      "capturedAtUtc": "2026-11-01T14:51:30.439926+00:00",
+      "durationSeconds": 393.470444,
+      "healthySamples": 122,
+      "badSamples": 0,
+      "nativeHarnessInputRequests": 0,
+      "actualPhysicalInputMonitoringClaimed": false,
+      "nativeWorldPublished": false,
+      "frozenLogPrefixBytes": 5653640,
+      "frozenLogPrefixSha256": "f1a03690241a762f78c5faacad02343699164bd1e206a4cb754c4a1e495989c7",
+      "errorHeaders": 108,
+      "fatalHeaders": 0,
+      "phaseIsBeforeAnyGiveOrAiChat": true
+    },
+    "normalExitCode": 0,
+    "normalSaveAndExitPassed": true,
+    "allDimensionsSavedMessages": 1,
+    "observedExitUtc": "2026-11-01T14:55:39.9114865+00:00",
+    "dimensionSaveMessages": 82,
+    "crashReports": 0,
+    "forcedKill": false,
+    "ownedGameAndBackendProcessesAbsentAfterExit": true,
+    "ownedBackendEndpointClosedAfterExit": true,
+    "postAiHealthyNativeSampleUtc": "2026-11-01T14:55:24.192619500Z",
+    "fullSessionFinalAcceptanceBelongsToRoot": true
+  },
+  "controls": {
+    "actualNativeOptionsKeys": 638,
+    "actualNativeRegistryKeys": 652,
+    "nativeInventoryReadOnly": true,
+    "inputOrBindingsWritten": false,
+    "all638NativeMappingsPersistedAfterExit": true,
+    "presetWasActuallyAppliedOrRestartTestedByThisRun": false
+  },
+  "separateCurrentNativeAiPhase": {
+    "actualNativeRequests": 2,
+    "nativeGiveUtc": "2026-11-01T14:51:33.367271800Z",
+    "nativeChatUtc": "2026-11-01T14:51:56.105957800Z",
+    "giveServerEffectVerified": false,
+    "ownLocalBackendApiChatHttpStatus": 200,
+    "apiChatDurationSeconds": 41.8,
+    "actualRussianNativeChatResponseObserved": true,
+    "responseDistinctFromStaticGreeting": true,
+    "actualResponseMeaning": "Russian generated question/echo: Верити, как тебя зовут?",
+    "semanticSelfNameAccuracyVerified": false,
+    "historical531ProofUsedAsCurrentAiPass": false,
+    "ownBackendLogPrefixBytes": 22972,
+    "ownBackendLogPrefixSha256": "f54672cf566cb65d873a9eb93a3c3da963d2e1f49cacc4a1de59c5b5b480b3ca"
+  },
+  "completeLogAudit": {
+    "noNewCrashObservedInMeasuredCurrentRun": true,
+    "errorHeaders": 899,
+    "fatalHeaders": 0,
+    "logBytes": 7850399,
+    "logSha256": "8c45fa00dfc1aad859d0e630ca06356576627272b2b8f9bd13a455233a1639b6",
+    "noInputPrefixErrorHeaders": 108,
+    "noInputPrefixFatalHeaders": 0,
+    "postPrefixBeforeQuitErrorHeaders": 790,
+    "shutdownErrorHeaders": 1,
+    "categoryCounts": {
+      "newOwnErrors": 6,
+      "sharedAcceptedBackground": 87,
+      "baseFailuresWithUnknownNewTrigger": 2,
+      "intentionalDiagnostics": 14,
+      "verityToForgeDiscoveryDiagnostic": 790
+    },
+    "prefixCategoryCounts": {
+      "newOwnErrors": 6,
+      "sharedAcceptedBackground": 87,
+      "baseFailuresWithUnknownNewTrigger": 2,
+      "intentionalDiagnostics": 13
+    },
+    "allHeadersParsed": true,
+    "nonDiscoveryErrorFamilies": [
+      {
+        "logger": "mixin",
+        "signature": "Mixin config azurelib.mixins.json does not specify \"minVersion\" property",
+        "count": 1,
+        "lines": [
+          665
+        ],
+        "rawMessageSha256": [
+          "199f235ec0b76a48ebea6ff606519adf8f48f4312de035b200472d0987026f64"
+        ],
+        "first": "19:38:09",
+        "last": "19:38:09",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mixin",
+        "signature": "Mixin config azurelib.forge.mixins.json does not specify \"minVersion\" property",
+        "count": 1,
+        "lines": [
+          666
+        ],
+        "rawMessageSha256": [
+          "6bcd92b367fedcab02f6d11af467e5ab9bb3d4aba3e6a2a6f941f08376c3359d"
+        ],
+        "first": "19:38:09",
+        "last": "19:38:09",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mixin",
+        "signature": "Mixin config celestisynth.mixins.json does not specify \"minVersion\" property",
+        "count": 1,
+        "lines": [
+          667
+        ],
+        "rawMessageSha256": [
+          "a64924682f43c212d19a832dac1d6b659eb35d43a3b9464d27a9f84c7623b078"
+        ],
+        "first": "19:38:09",
+        "last": "19:38:09",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mixin",
+        "signature": "Mixin config mixins.mbackrooms.json does not specify \"minVersion\" property",
+        "count": 1,
+        "lines": [
+          668
+        ],
+        "rawMessageSha256": [
+          "db0d2f55c875e9263dc2591b2112da58a5b9d7e9c9acdca226bb97591c8c7e1e"
+        ],
+        "first": "19:38:10",
+        "last": "19:38:10",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mixin",
+        "signature": "Mixin config yacl.mixins.json does not specify \"minVersion\" property",
+        "count": 1,
+        "lines": [
+          669
+        ],
+        "rawMessageSha256": [
+          "ceb47376d535a59349f438b44e8ed5b41ca45bec48c4d7dcf64c18c164f67528"
+        ],
+        "first": "19:38:10",
+        "last": "19:38:10",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.coremod.transformer.CoreModBaseTransformer",
+        "signature": "Error occurred applying transform of coremod coremods/field_to_method.js function biome",
+        "count": 2,
+        "lines": [
+          710,
+          1008
+        ],
+        "rawMessageSha256": [
+          "adf03ec1b195b9e680477285f21d08cf705679bea570984881627c62374f3fe9"
+        ],
+        "first": "19:38:12",
+        "last": "19:38:23",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "net.minecraft.client.Minecraft",
+        "signature": "Failed to verify authentication",
+        "count": 1,
+        "lines": [
+          1052
+        ],
+        "rawMessageSha256": [
+          "304cdd140172b7e9fc5c67a64f64ce8ea57c8f9ee54c3c14b5eb4b3814a13910"
+        ],
+        "first": "19:38:26",
+        "last": "19:38:26",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "Embeddium-MixinTaintDetector",
+        "signature": "Mod mixin into Embeddium internals detected. This instance is now tainted. The Embeddium team does not provide any guarantee of support for issues encountered while such mods are installed.",
+        "count": 1,
+        "lines": [
+          1121
+        ],
+        "rawMessageSha256": [
+          "f9649e3bb0c8941204cc305a8d5afa5a6fb7ea2fc2f2e1624ecfe926897b4329"
+        ],
+        "first": "19:38:27",
+        "last": "19:38:27",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "structurize",
+        "signature": "----------------------------------------------------------------- ",
+        "count": 1,
+        "lines": [
+          1331
+        ],
+        "rawMessageSha256": [
+          "f4d49bc2b4df9347367e0c3d20f2dfb6e3c65f58820c10f89ac7f5009c3180f7"
+        ],
+        "first": "19:38:31",
+        "last": "19:38:31",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "signature": "'CenterSearch' is not a valid config key for config category 'advanced'.",
+        "count": 1,
+        "lines": [
+          1645
+        ],
+        "rawMessageSha256": [
+          "27fcdeedc66a8d0d4d1dd41704e7c4bfb2dea84481486f4cdd2aac537a875de8"
+        ],
+        "first": "19:38:42",
+        "last": "19:38:42",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "signature": "'CheatToHotbarUsingHotkeysEnabled' is not a valid config key for config category 'advanced'.",
+        "count": 1,
+        "lines": [
+          1650
+        ],
+        "rawMessageSha256": [
+          "cfe341ed850562a55d054a3cf327329c962410a47a519372cb40d9be8e1a29d6"
+        ],
+        "first": "19:38:42",
+        "last": "19:38:42",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "signature": "'AddBookmarksToFrontEnabled' is not a valid config key for config category 'advanced'.",
+        "count": 1,
+        "lines": [
+          1655
+        ],
+        "rawMessageSha256": [
+          "87115546f8d012fe6cd173d527e3722d50023f23cba04feb85e054864fd66b76"
+        ],
+        "first": "19:38:42",
+        "last": "19:38:42",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "signature": "'LookupFluidContents' is not a valid config key for config category 'advanced'.",
+        "count": 1,
+        "lines": [
+          1660
+        ],
+        "rawMessageSha256": [
+          "8fd2b653446f91f97068e6684357cf81bad6b865c45af8f524f00d668438aaa9"
+        ],
+        "first": "19:38:42",
+        "last": "19:38:42",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "signature": "'GiveMode' is not a valid config key for config category 'advanced'.",
+        "count": 1,
+        "lines": [
+          1665
+        ],
+        "rawMessageSha256": [
+          "ef39f7cdf2dfa23d59f63e6e51a8eed77fcd81a98433fe2765fd769d5a9a860c"
+        ],
+        "first": "19:38:42",
+        "last": "19:38:42",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "signature": "'RecipeGuiHeight' is not a valid config key for config category 'advanced'.",
+        "count": 1,
+        "lines": [
+          1670
+        ],
+        "rawMessageSha256": [
+          "b82c5de89b9c98327fd6aac8d9024658ef75870be13cadc78dd8af2ed47c0b48"
+        ],
+        "first": "19:38:42",
+        "last": "19:38:42",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "tocraft.craftedcore.CraftedCore",
+        "signature": "Couldn't get patreons from https://raw.githubusercontent.com/ToCraft/craftedcore/main/common/src/main/resources/patreons.txt",
+        "count": 1,
+        "lines": [
+          2667
+        ],
+        "rawMessageSha256": [
+          "2bd12fb29c6ef7a0fec7e4c298f533a3a60efa5068ce2a3bd1cff59161805d8b"
+        ],
+        "first": "19:38:50",
+        "last": "19:38:50",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraft.client.multiplayer.AccountProfileKeyPairManager",
+        "signature": "Failed to retrieve profile key pair",
+        "count": 2,
+        "lines": [
+          4272,
+          4286
+        ],
+        "rawMessageSha256": [
+          "3d8fcd8839422eb4dcea8c3a2e6aaa95298f9d2e0125266dc3625d257168d090"
+        ],
+        "first": "19:39:33",
+        "last": "19:39:34",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "Moonlight",
+        "signature": "Palette mask cataclysm:item/music_disc_maledictus needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask to match the texture size",
+        "count": 2,
+        "lines": [
+          4299,
+          12837
+        ],
+        "rawMessageSha256": [
+          "372c7781a1699a8eddd964d00dec2176f5945ec4dd0ebb304c8a08be3bf6f7d6"
+        ],
+        "first": "19:39:35",
+        "last": "19:40:18",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "Moonlight",
+        "signature": "Respriter was given less palettes than needed!",
+        "count": 8,
+        "lines": [
+          4374,
+          4375,
+          4376,
+          4449,
+          12912,
+          12913,
+          12914,
+          12987
+        ],
+        "rawMessageSha256": [
+          "075e43e904e4486b6162e5191137493ebd1cad57036ed897d6f753d9e32fc96e"
+        ],
+        "first": "19:39:35",
+        "last": "19:40:18",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "patchouli",
+        "signature": "Failed to load book rebornstorage:rs_book defined by mod rebornstorage, skipping",
+        "count": 1,
+        "lines": [
+          9141
+        ],
+        "rawMessageSha256": [
+          "cde001a133522ccff28747fa6c582db80f887c5ca2c11266bdd0849a0eb8541c"
+        ],
+        "first": "19:39:43",
+        "last": "19:39:43",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "bloodmagic",
+        "signature": "MysticalAgriculture integration cancelled: unable to find a class: com.blakebr0.mysticalagriculture.api.crop.ICrop",
+        "count": 1,
+        "lines": [
+          9403
+        ],
+        "rawMessageSha256": [
+          "7a4164e3ead092dbe238889d00f53ed13c65a7b1b0cea2aeb114596838ac9797"
+        ],
+        "first": "19:39:56",
+        "last": "19:39:56",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "KubeJS Client",
+        "signature": "dev.latvian.mods.rhino.WrappedException: Wrapped java.lang.UnsupportedOperationException: Disabled due ponder is now without create (client_scripts:ponder/corail.js#111) [dev.latvian.mods.rhino.WrappedException]",
+        "count": 8,
+        "lines": [
+          9444,
+          9495,
+          9546,
+          9597,
+          9648,
+          9699,
+          9750,
+          9801
+        ],
+        "rawMessageSha256": [
+          "ba210d63488d8cd475e0c33b0e8d7b902e1a8025e8f745ff6dec0de7a8193972"
+        ],
+        "first": "19:39:56",
+        "last": "19:39:56",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "ponderjs",
+        "signature": "Wrapped java.lang.UnsupportedOperationException: Disabled due ponder is now without create (client_scripts:ponder/corail.js#111)",
+        "count": 8,
+        "lines": [
+          9445,
+          9496,
+          9547,
+          9598,
+          9649,
+          9700,
+          9751,
+          9802
+        ],
+        "rawMessageSha256": [
+          "15878abe5ff7fa1d17d03e08814b0bdbe6dd3170a53a9d85732fea885888907e"
+        ],
+        "first": "19:39:56",
+        "last": "19:39:56",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true
+      },
+      {
+        "logger": "pneumaticcraft",
+        "signature": "detected someone trying to get recipes for PneumaticCraftRecipeType[pneumaticcraft:fuel_quality] with no world available - returning empty recipe list",
+        "count": 12,
+        "lines": [
+          16210,
+          16211,
+          16212,
+          16213,
+          16214,
+          16215,
+          16216,
+          16217,
+          16218,
+          16219,
+          16220,
+          16221
+        ],
+        "rawMessageSha256": [
+          "ba2de1477dbc9531295443b6ac9011e3383c4db2ccac26407cb9f452d76a6e7c"
+        ],
+        "first": "19:40:57",
+        "last": "19:40:57",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "GregTechCEu",
+        "signature": "Recipe duration must be non negative, id: gtceu:create_creative_blaze_cake",
+        "count": 1,
+        "lines": [
+          16222
+        ],
+        "rawMessageSha256": [
+          "291a96eaa405ed711b15445f9313ee59aec9472473ac253176fe911622cde6c1"
+        ],
+        "first": "19:40:57",
+        "last": "19:40:57",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraft.tags.TagLoader",
+        "signature": "Couldn't load tag ctov:wares/sealed_delivery_agreement as it is missing following references: wares:sealed_delivery_agreement (from [forge]ctov-3.4.14.jar)",
+        "count": 1,
+        "lines": [
+          16392
+        ],
+        "rawMessageSha256": [
+          "e06d258879ef8c720ac460b1ab05eb93c1f17eba26d949a9ec2b7f0cba361639"
+        ],
+        "first": "19:41:04",
+        "last": "19:41:04",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraft.tags.TagLoader",
+        "signature": "Couldn't load tag ctov:wares/cardboard_box as it is missing following references: wares:cardboard_box (from [forge]ctov-3.4.14.jar)",
+        "count": 1,
+        "lines": [
+          16393
+        ],
+        "rawMessageSha256": [
+          "175120fa21a2aae4948e4f19f6f0726fb241bcdae986787b15b1d0ba3ed22c11"
+        ],
+        "first": "19:41:04",
+        "last": "19:41:04",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:megacells:blocks/mega_emc_interface",
+        "count": 1,
+        "lines": [
+          16407
+        ],
+        "rawMessageSha256": [
+          "ea175ac191af2d1a9850b8e8b5916fccf842178b79ffd7bed0088827ddabe20b"
+        ],
+        "first": "19:41:05",
+        "last": "19:41:05",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:expatternprovider:blocks/ex_emc_interface",
+        "count": 1,
+        "lines": [
+          16459
+        ],
+        "rawMessageSha256": [
+          "caa9dd6c43aab1b44b86a552095c120dd6124932f4085c408bdb5448a6e9a444"
+        ],
+        "first": "19:41:05",
+        "last": "19:41:05",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:twilightdelight:blocks/glacier_cake",
+        "count": 1,
+        "lines": [
+          16512
+        ],
+        "rawMessageSha256": [
+          "7eab2ddca44e0f2191e99ffd08f5fac579a3be1f917a28ea0f2845274aca2e02"
+        ],
+        "first": "19:41:05",
+        "last": "19:41:05",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener",
+        "signature": "Couldn't parse data file occultism:miner/ores/thorium_ore from occultism:recipes/miner/ores/thorium_ore.json",
+        "count": 2,
+        "lines": [
+          16564,
+          16589
+        ],
+        "rawMessageSha256": [
+          "f295dc8688cf3a856780054182e63c379e4658d6db9ce097728956df4d066444"
+        ],
+        "first": "19:41:05",
+        "last": "19:41:05",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:twilightdelight:blocks/phytochemical_cake",
+        "count": 1,
+        "lines": [
+          16619
+        ],
+        "rawMessageSha256": [
+          "62e6b147395fa105a10d4535c41687610f3dc2c97c2e665b3ebd7ffc16430418"
+        ],
+        "first": "19:41:06",
+        "last": "19:41:06",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:twilightdelight:blocks/aurora_cake",
+        "count": 1,
+        "lines": [
+          16673
+        ],
+        "rawMessageSha256": [
+          "052ad36ae390df41a13c97a268456d5f4f79c29e44494260cbc6cf7815a44f6e"
+        ],
+        "first": "19:41:06",
+        "last": "19:41:06",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_iv",
+        "count": 1,
+        "lines": [
+          16726
+        ],
+        "rawMessageSha256": [
+          "be5ff9f652214897f90bb04d1ca801423b66277c94be0882afe4e0b5d3f0cc6d"
+        ],
+        "first": "19:41:06",
+        "last": "19:41:06",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_hv",
+        "count": 1,
+        "lines": [
+          16778
+        ],
+        "rawMessageSha256": [
+          "3f95fdc5ed68a84f72f8ce2b37d694b10a834ba770f24b10833d3b0d78c7aa5d"
+        ],
+        "first": "19:41:06",
+        "last": "19:41:06",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_ev",
+        "count": 1,
+        "lines": [
+          16830
+        ],
+        "rawMessageSha256": [
+          "89efd10ae3d8c082964894eea6f9c92e1a2792e1d83a9d15ead61a656b4d9b0e"
+        ],
+        "first": "19:41:06",
+        "last": "19:41:06",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:twilightdelight:blocks/torchberry_cake",
+        "count": 1,
+        "lines": [
+          16882
+        ],
+        "rawMessageSha256": [
+          "f8dcdf559260c6e047e81ff6ff6039b895cc668deefe4c86d544b3103818aa5b"
+        ],
+        "first": "19:41:06",
+        "last": "19:41:06",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_mv",
+        "count": 1,
+        "lines": [
+          16934
+        ],
+        "rawMessageSha256": [
+          "137c3c95ea64d5e2b7fd4cfaa13cf32af7c4148dc168d13999aa63d41b322012"
+        ],
+        "first": "19:41:06",
+        "last": "19:41:06",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_lv",
+        "count": 1,
+        "lines": [
+          16986
+        ],
+        "rawMessageSha256": [
+          "84a47c000331157771e17d9f2e2eaf92cd042866e4e3d87ee00c861c2ab9aa1d"
+        ],
+        "first": "19:41:06",
+        "last": "19:41:06",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraft.server.ServerAdvancementManager",
+        "signature": "Parsing error loading custom advancement sob:get_prickly_pear: Expected item to be an item, was unknown string 'sob:prickly_pear'",
+        "count": 1,
+        "lines": [
+          17448
+        ],
+        "rawMessageSha256": [
+          "0848cf0e2583fce95b0715fabe2ff8970338a9df5b3718711b55646c1d2993fe"
+        ],
+        "first": "19:41:32",
+        "last": "19:41:32",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "slimeknights.tconstruct.library.materials.stats.MaterialStatsManager",
+        "signature": "The material stat of type 'tconstruct:extra' has not been registered",
+        "count": 3,
+        "lines": [
+          17465,
+          17466,
+          17467
+        ],
+        "rawMessageSha256": [
+          "13657824f1ecc05bad80af5f8aa341dd5989fe18672563a79a4189dfa5448cfc"
+        ],
+        "first": "19:41:34",
+        "last": "19:41:34",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "noobanidus.mods.lootr.api.LootrAPI",
+        "signature": "There are over 100 entries in the conversion list without aggressive mode enabled. This may cause TPS issues. If TPS issues persist after first launch, consider enabling aggressive mode in the configuration.",
+        "count": 1,
+        "lines": [
+          22977
+        ],
+        "rawMessageSha256": [
+          "e015c892308e12e12eac497bca400d9ced255c3b95c5dd486f5af32d0555b9e6"
+        ],
+        "first": "19:41:59",
+        "last": "19:41:59",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "dan200.computercraft.core.asm.GenericMethod",
+        "signature": "GenericSource method class de.srendi.advancedperipherals.common.addons.powah.ReactorIntegration.getName has no parameters.",
+        "count": 1,
+        "lines": [
+          23047
+        ],
+        "rawMessageSha256": [
+          "70ba007275c288ff7e7a31ebf1e9a52a09b4bd04c6ca1ddbfacf1537a5a01fcd"
+        ],
+        "first": "19:42:27",
+        "last": "19:42:27",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "dan200.computercraft.core.asm.GenericMethod",
+        "signature": "GenericSource method class de.srendi.advancedperipherals.common.addons.powah.EnergyCellIntegration.getName has no parameters.",
+        "count": 1,
+        "lines": [
+          23048
+        ],
+        "rawMessageSha256": [
+          "e512a767ea871803d21c2b372c9c5747b4a7d905c179148eb85b4acdfde7756b"
+        ],
+        "first": "19:42:27",
+        "last": "19:42:27",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "dan200.computercraft.core.asm.GenericMethod",
+        "signature": "GenericSource method class de.srendi.advancedperipherals.common.addons.powah.FurnatorIntegration.getName has no parameters.",
+        "count": 1,
+        "lines": [
+          23049
+        ],
+        "rawMessageSha256": [
+          "d2f8d0e937df0407d7c54466910e638975a4c4a3079fa1a4cae8c22ce3c99638"
+        ],
+        "first": "19:42:27",
+        "last": "19:42:27",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.eventbus.EventBus",
+        "signature": "Exception caught during firing event: No value present",
+        "count": 1,
+        "lines": [
+          23356
+        ],
+        "rawMessageSha256": [
+          "f127a6f467a02b74c31c3b7c2e2d3124f3f781aa60fe2c50a103944575b77670"
+        ],
+        "first": "19:43:06",
+        "last": "19:43:06",
+        "classification": "baseFailuresWithUnknownNewTrigger",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "net.minecraftforge.client.gui.overlay.ForgeGui",
+        "signature": "Error rendering overlay 'minecraft:chat_panel'",
+        "count": 1,
+        "lines": [
+          23450
+        ],
+        "rawMessageSha256": [
+          "6f887c7a612517a39657366c5f0deccf13cb6f5eb9eb160a9dbd2eeeea677e54"
+        ],
+        "first": "19:43:06",
+        "last": "19:43:06",
+        "classification": "baseFailuresWithUnknownNewTrigger",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "Moonlight",
+        "signature": "Failed to restore original behavior for item: lunch_basket, net.mehvahdjukaar.moonlight.api.util.DispenserHelper$PlaceBlockDispenseBehavior@<runtime-address>",
+        "count": 1,
+        "lines": [
+          23508
+        ],
+        "rawMessageSha256": [
+          "8d195b2429bf2027a7ca92f24b58f6cc56f79536135b8869e6ba943351775776"
+        ],
+        "first": "19:43:07",
+        "last": "19:43:07",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "Grand Sigil",
+        "signature": "",
+        "count": 3,
+        "lines": [
+          24001,
+          30895,
+          49725
+        ],
+        "rawMessageSha256": [
+          "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        ],
+        "first": "19:43:12",
+        "last": "19:55:34",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering ingredients: jei:minecraft is running and has taken 5.100 seconds so far",
+        "count": 1,
+        "lines": [
+          24285
+        ],
+        "rawMessageSha256": [
+          "fb607dac1e21c8a52839036710e58817981984b35c406ffbd0d794d8e5c73e7a"
+        ],
+        "first": "19:43:17",
+        "last": "19:43:17",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCaller",
+        "signature": "Caught an error from mod plugin: class de.melanx.utilitix.compat.jei.UtiliJei utilitix:jeiplugin",
+        "count": 2,
+        "lines": [
+          24611,
+          30777
+        ],
+        "rawMessageSha256": [
+          "bb587fd477d1bfe1c56164c0a863c958a97dd0f5086e79fe655127d416a23089"
+        ],
+        "first": "19:43:20",
+        "last": "19:43:56",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCaller",
+        "signature": "Caught an error from mod plugin: class cy.jdkdigital.generatorgalore.integrations.JeiPlugin generatorgalore:generatorgalore",
+        "count": 3,
+        "lines": [
+          24657,
+          24723,
+          30837
+        ],
+        "rawMessageSha256": [
+          "0fc841e1bd4a0fcb9fecf1aa8568b230265574dfdefb328e899da5de37e41a91"
+        ],
+        "first": "19:43:20",
+        "last": "19:43:58",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering recipes: jei:minecraft is running and has taken 5.001 seconds so far",
+        "count": 1,
+        "lines": [
+          25355
+        ],
+        "rawMessageSha256": [
+          "33d65ff0815bebe5feb43d94c92c56edf9471baac4b4c61f9acdfea9c82a6393"
+        ],
+        "first": "19:43:26",
+        "last": "19:43:26",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering recipes: minecraft:minecolonies is running and has taken 5.070 seconds so far",
+        "count": 1,
+        "lines": [
+          30764
+        ],
+        "rawMessageSha256": [
+          "a3779c77b048eeede7553721fdcaa28e1288caabe2096627bba1234b2ae5292e"
+        ],
+        "first": "19:43:39",
+        "last": "19:43:39",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering recipes: minecraft:minecolonies is running and has taken 10.07 seconds so far",
+        "count": 1,
+        "lines": [
+          30765
+        ],
+        "rawMessageSha256": [
+          "3bc4528449a7eb322bc3975b3713285f2d82c89f0821afaa4262ccffa72ef1b4"
+        ],
+        "first": "19:43:44",
+        "last": "19:43:44",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering recipes: irons_spellbooks:jei_plugin is running and has taken 5.006 seconds so far",
+        "count": 1,
+        "lines": [
+          30775
+        ],
+        "rawMessageSha256": [
+          "3860ff1b51acb16519eaaa275a81f47c137f847fd7f31382a1b6d30571ad01ca"
+        ],
+        "first": "19:43:54",
+        "last": "19:43:54",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering recipes: create:jei_plugin is running and has taken 5.021 seconds so far",
+        "count": 1,
+        "lines": [
+          30888
+        ],
+        "rawMessageSha256": [
+          "80bdda28cd98d72e7b0e58301d2cb28f8284fee25dcd429478f549143776faaf"
+        ],
+        "first": "19:44:03",
+        "last": "19:44:03",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering recipes: gtceu:jei_plugin is running and has taken 5.009 seconds so far",
+        "count": 1,
+        "lines": [
+          30894
+        ],
+        "rawMessageSha256": [
+          "28ed1af3fafd21a810f59dd21a90942787ffd6b77fea9b23810e5dee5de06020"
+        ],
+        "first": "19:44:11",
+        "last": "19:44:11",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "GregTechCEu",
+        "signature": "Input item 0 of recipe gtceu:potion_vanilla_quark.resilience_169 is empty",
+        "count": 1,
+        "lines": [
+          31178
+        ],
+        "rawMessageSha256": [
+          "d3e5ff8e29e2e50ac0d54101541c492511208d615a7f4ddf25b8747aa3388d58"
+        ],
+        "first": "19:44:14",
+        "last": "19:44:14",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "GregTechCEu",
+        "signature": "Input item 0 of recipe gtceu:potion_vanilla_mundane_170 is empty",
+        "count": 1,
+        "lines": [
+          31179
+        ],
+        "rawMessageSha256": [
+          "d04eccfdf980de23048aeb4e2634aba9e881e5a28071ebfbf5d8ec7feefc3237"
+        ],
+        "first": "19:44:14",
+        "last": "19:44:14",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "GregTechCEu",
+        "signature": "Input item 0 of recipe gtceu:potion_vanilla_quark.resilience_171 is empty",
+        "count": 1,
+        "lines": [
+          31180
+        ],
+        "rawMessageSha256": [
+          "5149df3223e32d8230fe0d239761c9063f98313bb06d0374d1e8a1bb684a1ae6"
+        ],
+        "first": "19:44:14",
+        "last": "19:44:14",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "GregTechCEu",
+        "signature": "Input item 0 of recipe gtceu:potion_vanilla_quark.resilience_172 is empty",
+        "count": 1,
+        "lines": [
+          31181
+        ],
+        "rawMessageSha256": [
+          "a7093fb4a4fc954025464719639d6c81f91b61c7cd8647cc40a49866d458de15"
+        ],
+        "first": "19:44:14",
+        "last": "19:44:14",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering Runtime: jei:forge_gui is running and has taken 5.096 seconds so far",
+        "count": 1,
+        "lines": [
+          31204
+        ],
+        "rawMessageSha256": [
+          "9b989d5e4915aaf1dc9485cadf605ec9543fb03e265e2b224f8eca8e162b9871"
+        ],
+        "first": "19:44:21",
+        "last": "19:44:21",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering Runtime: jei:forge_gui is running and has taken 10.10 seconds so far",
+        "count": 1,
+        "lines": [
+          31205
+        ],
+        "rawMessageSha256": [
+          "31dfd49a11acc4acedb0a677b814eb6387ae1fc7b500da8db0532eb71b0088ef"
+        ],
+        "first": "19:44:26",
+        "last": "19:44:26",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering Runtime: jei:forge_gui is running and has taken 15.10 seconds so far",
+        "count": 1,
+        "lines": [
+          31206
+        ],
+        "rawMessageSha256": [
+          "fec7b4ddf9b277572356f485cfbedfa3f29e35fc811193a865dc805666055079"
+        ],
+        "first": "19:44:31",
+        "last": "19:44:31",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "signature": "Registering Runtime: jei:forge_gui is running and has taken 20.10 seconds so far",
+        "count": 1,
+        "lines": [
+          31207
+        ],
+        "rawMessageSha256": [
+          "3400abba417ba1a29b367eea88341e86814f07a04724bdf6761e07e111c4da2b"
+        ],
+        "first": "19:44:36",
+        "last": "19:44:36",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false
+      }
+    ],
+    "verityDiscovery": {
+      "headers": 790,
+      "parentChildPairs": 395,
+      "handlerDiagnosticHeaders": 395,
+      "sameExactParentChildMultisetAsHistorical531": true,
+      "parentChildPairsSha256": "6db8ed18e3c223174b57700301b422d2e6c52e0d4cb270ad15091c0d29a72e17",
+      "parentChildPairsDifferingFromHistorical531": 0,
+      "meaning": "Runtime AI class discovery causes Forge to inspect unchanged embedded non-Event classes. Prior exact native transformer proof returns unchanged ClassNode; this is not proof of395 lost handlers or a current functional failure."
+    }
+  },
+  "list1NewModsOwnObservedErrorsAbsentFromMatchedOriginal": [
+    {
+      "mod": "AzureLib2.0.41",
+      "errorHeaders": 2,
+      "kind": "Mixin minVersion metadata omission"
+    },
+    {
+      "mod": "Celestisynth1.3.4",
+      "errorHeaders": 1,
+      "kind": "Mixin minVersion metadata omission"
+    },
+    {
+      "mod": "MeultiBackrooms1.4.0",
+      "errorHeaders": 1,
+      "kind": "Mixin minVersion metadata omission"
+    },
+    {
+      "mod": "YACL3.6.6",
+      "errorHeaders": 1,
+      "kind": "Mixin minVersion metadata omission"
+    },
+    {
+      "mod": "CraftedCore5.8.2",
+      "errorHeaders": 1,
+      "kind": "Author Patreon metadata fetch failure with prior fallback proof"
+    },
+    {
+      "mod": "Grand Sigil",
+      "errorHeaders": 3,
+      "kind": "NEW-owned intentional author watchdog diagnostic, not a proven frame-stall cause",
+      "categoryInPartition": "intentionalDiagnostics",
+      "startupHeaders": 2,
+      "afterQuitRequestedHeaders": 1,
+      "notIncludedInSixMetadataNetworkMessagesOr87SharedHeaders": true
+    }
+  ],
+  "list2AttributedNewModsTriggeringBaseLoggedErrors": [
+    {
+      "mod": "Verity",
+      "baseLogger": "Forge EventSubclassTransformer",
+      "errorHeaders": 790,
+      "causeProvenAtScope": "AI discovery of the same395 embedded parent/child classes as historical531; exact Verity JAR unchanged",
+      "functionalLimit": "No failed current native chat response established; actual own backend200 and Russian response observed. This does not prove all Verity abilities or semantic answer accuracy."
+    }
+  ],
+  "baseLoggedFailuresWithoutProvenNewModCulprit": [
+    {
+      "modFamily": "BloodMagic/Curios chat overlay",
+      "errorHeaders": 2,
+      "specificNewInitiator": null,
+      "sameHistorical531AndFailed533Signature": true,
+      "headers": [
+        "Exception caught during firing event: No value present",
+        "Error rendering overlay 'minecraft:chat_panel'"
+      ]
+    }
+  ],
+  "intentionalAuthorDiagnostics": {
+    "grandSigilWatchdogErrorHeaders": 3,
+    "includingAfterQuitRequested": 1,
+    "jeiProgressTimerErrorHeaders": 11,
+    "doNotProveCauseOfStallOrFrameLoss": true
+  },
+  "weatherRenderRamAndResource": {
+    "observedOwnErrorOrFatalHeaders": 0,
+    "weatherJarSha256": "5eb828f93b2eb370d7f38ad1893739caf7655f32d58dbbdaabae6075ede635db",
+    "renderPatcherJarSha256": "a59d110b3a0f8ade8c6c4bd9e7c6d6cf265f84391bce89de87ef92de5498d4ef",
+    "memoryScriptSha256": "68b42fde0072ce3f366605a7619931cb6388575230ca7a910c23580b58cbaeab",
+    "nativeAlreadyLoadedMemoryDisableWarnings": true,
+    "nativeMemoryMinimumClientMiB": 8192,
+    "nativeMemoryMaximumClientMiB": 14336,
+    "translationResourceId": "verity:lang/ru_ru.json",
+    "actualResourceWinnerAtTitleAndWorld": "Verity-JE-RU.zip",
+    "actualWinningResourceBytes": 1938,
+    "actualWinningResourceSha256": "e67fc9015cc3d0c011a09bca50d56f2a0dce7a0535ff8399a69f136cb7e97328",
+    "notAVisualOrCompleteMechanicsPass": true
+  },
+  "matchedOriginalAndHistoricalInterpretation": {
+    "currentOriginalTitleErrorHeaders": 41,
+    "historicalMatchedOriginalFullErrorHeaders": 96,
+    "historical531FullErrorHeaders": 902,
+    "exactHeaderAndSourceFamilyComparisonNotTotalsOnly": true,
+    "currentNewFailureSignaturesBeyondHistoricalFamilies": 0,
+    "timerElapsedValuesRemainExactAndVaryNaturally": true,
+    "glDebugInfoMessages": 44,
+    "glShaderLinkMessages": 2,
+    "glUniformMessages": 42,
+    "glFamiliesMatchCurrentOriginalAfterContextProgramHandleNormalization": true,
+    "openAlErrorRows": 0,
+    "openAlFixOrShutdownRaceProven": false,
+    "placeboIronGearSetErrorRows": 0,
+    "placeboRepairClaimed": false,
+    "historical533SoulEaterCrashPreserved": true,
+    "soulEaterRemovedByExplicitUserInstruction": true,
+    "soulEaterRestorationSuggestedByThisReport": false
+  },
+  "limits": [
+    "Overall current source acceptance, migration acceptance and publication are Root decisions; this report is not their receipt.",
+    "No zero-ERROR, all-mechanics, all-abilities, two-client LAN/Steam, selected-skin, physically applied controls, restart or visual-quality PASS.",
+    "Full native exchange proves actual model communication and Russian response, not correct self-name semantics.",
+    "No OpenAL or Placebo gear failure observed in this session is an absence within this window, not a source fix or universal absence.",
+    "Shared author baseline errors are reported explicitly; their presence is not evidence that every ERROR was intentionally authored or harmless.",
+    "No logger suppression, effects/shader/animation disable or render-distance change was made by this audit.",
+    "Fresh private world acceptance does not guarantee personal-world registry migration without losses.",
+    "This is the measured singleplayer content cohort; current real two-client ATM9 connection failures and later launcher changes are separate work, not a Steam or released-EXE PASS here."
+  ],
+  "evidencePins": [
+    {
+      "role": "latest.log",
+      "sizeBytes": 7850399,
+      "sha256": "8c45fa00dfc1aad859d0e630ca06356576627272b2b8f9bd13a455233a1639b6"
+    },
+    {
+      "role": "exit.json",
+      "sizeBytes": 99,
+      "sha256": "b9d11fe6c5007fde9a382247ee715047ad8c3c9bf38398d8ca4c5ebc347ad455"
+    },
+    {
+      "role": "no-input-baseline.latest.log",
+      "sizeBytes": 5653640,
+      "sha256": "f1a03690241a762f78c5faacad02343699164bd1e206a4cb754c4a1e495989c7"
+    },
+    {
+      "role": "no-input-phase.json",
+      "sizeBytes": 801,
+      "sha256": "2e6347c1099d96a28715b0432413309fd1d4e98a3703c6b4ea80d9a63162087d"
+    },
+    {
+      "role": "ai-phase-marker.private.json",
+      "sizeBytes": 432,
+      "sha256": "a9613614c81215849951103d387396547f718c6db7d8ab68150011bb6b2aaedd"
+    },
+    {
+      "role": "ai-exchange-proof.private.json",
+      "sizeBytes": 2861,
+      "sha256": "01190372cffaec9ca88b3f094110338d4c207d75f77c653ec93ebeedcae698fc"
+    },
+    {
+      "role": "ollama-server-before-quit.log",
+      "sizeBytes": 22972,
+      "sha256": "f54672cf566cb65d873a9eb93a3c3da963d2e1f49cacc4a1de59c5b5b480b3ca"
+    },
+    {
+      "role": "title-loaded-mods.observations.jsonl",
+      "sizeBytes": 14638,
+      "sha256": "120f42c09c86718991e4e845ebf394069fd84786a568b97286ab6d1b9847249d"
+    },
+    {
+      "role": "key-inventory.json",
+      "sizeBytes": 577446,
+      "sha256": "2934ebb083144da1e88e3024aab147847edec60132e4d534c2906d113651f8bc"
+    },
+    {
+      "role": "managed-infrastructure-pins.json",
+      "sizeBytes": 985,
+      "sha256": "c5b0be726d6f3e452a293422a0da154e661bf64699342f9d34cb4a457c3fc399"
+    },
+    {
+      "role": "final-native-lifecycle.private.json",
+      "sizeBytes": 7274,
+      "sha256": "b9dd3a3ae3adc70703ba3d0c9dad0c5e3860670f9b19d44ec61b90b8b0300469"
+    },
+    {
+      "role": "post-exit-byte-proof.private.json",
+      "sizeBytes": 1186,
+      "sha256": "5107a3cdf801aad89d798d409c8cd5f37af23c89cdc7030e02acaafb105f16d7"
+    }
+  ],
+  "referenceEvidencePins": [
+    {
+      "role": "currentOriginalTitleClosed41",
+      "sizeBytes": 34503,
+      "sha256": "a93ba2cd230d11d2b99cd4b4f625bf5cb88a3b838498660b12c772be2f053c4b"
+    },
+    {
+      "role": "historical531Closed902ExactContexts",
+      "sizeBytes": 3049918,
+      "sha256": "b8be4aae34a3c24ad1a548f3f65b1b171204ade58af88cae8a8cd2783fbaa1ea"
+    },
+    {
+      "role": "historical531NoInputAttributionAndMatchedOriginal96",
+      "sizeBytes": 199949,
+      "sha256": "2c3529508bfae4b60074040c2b4e3ec98df0d3be55c0be8e8adb4e2ad22b2913"
+    },
+    {
+      "role": "historical531SourceReadyAttribution",
+      "sizeBytes": 6389,
+      "sha256": "56fd2bac8bf36fc75ca3b6856d538ca8f474baf5fd2e241a6f81d4117618b715"
+    },
+    {
+      "role": "same395VerityClassBytesHistoricalProof",
+      "sizeBytes": 762,
+      "sha256": "3bec622c098bcd07d9a0bde9205dea9a92c0d04745a06d659a4079d03ab2cef7"
+    },
+    {
+      "role": "basePlaceboIronSourceProof",
+      "sizeBytes": 3327,
+      "sha256": "75be46bcc5b0e270b86d485ada9e6f4016ab10808425827ba7efa79beff041f2"
+    },
+    {
+      "role": "weatherAndRenderPatcherExactJarStaticLogCatalog",
+      "sizeBytes": 11330,
+      "sha256": "631e97685abef57f4719cac393b51960d54a3a776a3d135ead3d30fd40625b10"
+    },
+    {
+      "role": "historical533FailureSourceCandidate",
+      "sizeBytes": 60110,
+      "sha256": "1265b1d4921cf32e87303919bc024793fc69227e7157412267000dd10ae985eb"
+    }
+  ]
+}

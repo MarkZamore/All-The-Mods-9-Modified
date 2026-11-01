@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "status": "NO_NEW_KEYMAPPINGS_FOUND_IN_EXACT_AUTHOR_JAR",
+  "weatherModId": "weather2",
+  "weatherVersion": "1.20.1-2.8.3",
+  "newKeyMappingRegistrations": 0,
+  "keyNames": [],
+  "defaultsContextsOrRoles": [],
+  "jars": [
+    {
+      "jar": "weather2-1.20.1-2.8.3.jar",
+      "sha256": "5eb828f93b2eb370d7f38ad1893739caf7655f32d58dbbdaabae6075ede635db",
+      "classesScanned": 140,
+      "keyMappingReferenceHits": [],
+      "keyTranslationKeys": []
+    },
+    {
+      "jar": "coroutil-forge-1.20.1-1.3.7.jar",
+      "sha256": "11448808a42c17425cf2ea39701841008683d6ad6e2838a34eef0253251a870f",
+      "classesScanned": 44,
+      "keyMappingReferenceHits": [],
+      "keyTranslationKeys": []
+    }
+  ],
+  "officialVersionSource": "https://github.com/Corosauce/weather2/tree/2b2edd2c5ec98decb23981eb71a22876210b69e0",
+  "sourceReview": "All sourceJava searched for KeyMapping/KeyBinding/RegisterKey/registerKeyBinding/keyBind/GLFW_KEY/InputConstants:0matches. Weather constructor/common and clientSetup/EventHandlerForge/ClientTickHandler/ClientRegistry inspected; registration routes are configs/commands/renderers/particles, no keys.",
+  "authorFaq": "EZ Config retired for1.18/1.20; no F6/O-era control expected.",
+  "current642PresetMayKeepSameNamespaceStatically": true,
+  "limits": [
+    "Full new client must recapture actual native mappings to prove finalnamespace642; staticabsence does not replace runtime inventory.",
+    "No active preset/stock/lock/library edits."
+  ]
+}

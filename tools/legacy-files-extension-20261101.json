@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Exact-hash retirement extension after user-approved Soul Eater removal; no path-only deletion authority. Historical initial provenance and its row indexes are not relabelled as the new sorted union.",
+  "priorUnion": {
+    "path": "tools/qa/legacy-files-533-before-soul-removal.json",
+    "sha256": "1d3f198fb1776aed0326d9798edb93934044ff61d0958fd6f159cf442a4eeee5",
+    "rows": 2009,
+    "sourceRevision": "7298dafc4ee1b1fa2802737ace1749e1a1fb0cb4"
+  },
+  "currentUnion": {
+    "path": "tools/legacy-files.json",
+    "sha256": "1c8a2f0774c93f75536446e0799479e58ddca3d9db9e52cd072e333a964729b2",
+    "rows": 2012
+  },
+  "addedExactRows": [
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 12994,
+      "sha256": "1a4311327f0513b8d717595a262dc6dc44835b8fda47f121c8da43da2fb48d01"
+    },
+    {
+      "path": "launcher/controls-preset.txt",
+      "sizeBytes": 35738,
+      "sha256": "73c4ed9b08666e758fa00b5f305afda7b9704068cf747af7555be28e83fdd603"
+    },
+    {
+      "path": "mods/SoulEater_1.20.1_ver35.jar",
+      "sizeBytes": 3071805,
+      "sha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536"
+    }
+  ],
+  "authority": "Soul Eater official JAR bytes are pinned in tools/qa/modified-lock-533-failed.json. The two previous controls rows are exact tracked files of sourceRevision7298daf; their replacements remove only Soul Eater keys and update guide counts. Unknown changed personal bytes do not match these triples."
+}

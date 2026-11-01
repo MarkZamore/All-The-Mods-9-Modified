@@ -513,7 +513,6 @@
   "scpo": "https://www.curseforge.com/minecraft/mc-mods/scp-overtime",
   "siren_head": "https://www.curseforge.com/minecraft/mc-mods/siren-head-the-arrival",
   "sons_of_sins": "https://www.curseforge.com/minecraft/mc-mods/sons-of-sins",
-  "soul_eater": "https://www.curseforge.com/minecraft/mc-mods/soul-eater-mc",
   "sound_of_fear": "https://www.curseforge.com/minecraft/mc-mods/sound-of-fear-horror-sounds",
   "sound_physics_remastered": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
   "sounds_of_the_forest": "https://www.curseforge.com/minecraft/mc-mods/sounds-of-the-forest",
@@ -562,5 +561,7 @@
   "crackerslib": "https://github.com/nonamecrackers2/crackerslib",
   "verity": "https://www.curseforge.com/minecraft/mc-mods/verity-je",
   "yet_another_config_lib_v3": "https://www.curseforge.com/minecraft/mc-mods/yacl",
-  "kurolib": "https://www.curseforge.com/minecraft/mc-mods/kurolib"
+  "kurolib": "https://www.curseforge.com/minecraft/mc-mods/kurolib",
+  "weather2": "https://www.curseforge.com/minecraft/mc-mods/weather-storms-tornadoes",
+  "derenderpatcher": "https://www.curseforge.com/minecraft/mc-mods/draconic-evolution-render-patcher"
 }

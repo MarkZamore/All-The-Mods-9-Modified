@@ -1,0 +1,1436 @@
+{
+  "schemaVersion": 1,
+  "status": "HISTORICAL_533_FAIL_SERVER_TICK_CRASH_NOT_ACCEPTED",
+  "frozenAtUtc": "2026-11-01T14:14:56.3519797Z",
+  "overallAcceptanceDecidedByThisReport": false,
+  "activePackLocksLibraryOrPublicationChangedByThisReport": false,
+  "provenance": {
+    "sourceLockSha256": "36859e8f9b67789407e976436bb99070428b2a53cd6b75831861f3ffee145265",
+    "totalShippedJars": 533,
+    "baseSlots": 431,
+    "requestedJars": 83,
+    "newDependencyJars": 19,
+    "supportFiles": 17,
+    "unmodifiedAuthorJars": 531,
+    "unchangedOriginalBaseJarHashes": 430,
+    "actualNativeModListEntriesIncludingPlatform": 561,
+    "nativePackModIds": 558,
+    "productionLauncherVersion": 421,
+    "sourceInventoryAfterCrashProof": "Recorded separately by native-run owner; not inferred from log parsing"
+  },
+  "nativeConditions": {
+    "sessionsAnalyzedSeparately": 2,
+    "run01": "First creation of a new private QA world, then normal saved exit0; firstboot Default Settings changed requested private RU/focus selectors to EN/pause=true; only87.8s continuous health, no AI prompt, not five-minute acceptance",
+    "run02": "Same private QA world reopened; bounded private RU/focus seed applied after production preparation; actual native Russian translation probe and loaded Memory flag observed",
+    "personalWorldsUsed": false,
+    "controlsOrGameplayManuallyExercised": false
+  },
+  "nativeHealthAndLifecycle": {
+    "fiveMinuteNoInputWindow": {
+      "schemaVersion": 1,
+      "kind": "native-no-harness-input-world-health",
+      "status": "PASS_MEASURED_UNPAUSED_WINDOW",
+      "sourceLockSha256": "36859e8f9b67789407e976436bb99070428b2a53cd6b75831861f3ffee145265",
+      "startUtc": "2026-11-01T14:06:01.230301700Z",
+      "lastHealthySampleUtc": "2026-11-01T14:11:36.377277300Z",
+      "capturedAtUtc": "2026-11-01T14:11:37.952035+00:00",
+      "durationSeconds": 335.146976,
+      "healthySamples": 103,
+      "badSamples": 0,
+      "nativeHarnessInputRequests": 0,
+      "actualPhysicalInputMonitoringClaimed": false,
+      "nativeWorldPublished": false,
+      "frozenLogPrefixBytes": 4055002,
+      "frozenLogPrefixSha256": "d5df3648a985e17461cf91868ffbd1355655ee44981a39eb512491e47a5a5eda",
+      "errorHeaders": 103,
+      "fatalHeaders": 0,
+      "phaseIsBeforeAnyGiveOrAiChat": true
+    },
+    "normalExitCode": -1,
+    "normalSaveAndExitPassed": false,
+    "serverTickCrashUtc": "2026-11-01T14:14:44Z",
+    "observedProcessExitUtc": "2026-11-01T14:14:56.3519797Z",
+    "fullSessionAccepted": false
+  },
+  "separateCurrentNativeAiPhase": {
+    "plannedMarkerDoesNotProveExecution": true,
+    "giveNativeCallReturnedUtc": "2026-11-01T14:14:15.768116100Z",
+    "giveServerEffectVerified": false,
+    "chatFileQueuedUtc": "2026-11-01T14:14:49Z",
+    "chatQueuedAfterServerCrash": true,
+    "nativeChatExecuted": false,
+    "apiChatHttpRows": 0,
+    "actualAiResponsePassed": false,
+    "staticVerityDialogueIsNotAiResponse": true,
+    "prior531NativeAiSuccessIsHistoricalOnly": true
+  },
+  "completeLogAudit": {
+    "noNewCrashObservedInMeasuredCurrentRun": false,
+    "run01": {
+      "errorHeaders": 108,
+      "fatalHeaders": 0,
+      "categoryCounts": {
+        "newOwnErrors": 6,
+        "sharedAcceptedBackground": 86,
+        "baseFailuresWithUnknownNewTrigger": 2,
+        "intentionalDiagnostics": 14
+      },
+      "glDebugInfoMessages": 44,
+      "openAlErrorRows": 0
+    },
+    "run02": {
+      "errorHeaders": 108,
+      "fatalHeaders": 2,
+      "categoryCountsIncludingFatal": {
+        "newOwnErrors": 6,
+        "sharedAcceptedBackground": 81,
+        "baseFailuresWithUnknownNewTrigger": 4,
+        "intentionalDiagnostics": 14,
+        "newSoulEaterCrashCascade": 5
+      },
+      "glDebugInfoMessages": 22,
+      "openAlErrorRows": 0
+    },
+    "run02NoInputPrefix": {
+      "errorHeaders": 103,
+      "fatalHeaders": 0,
+      "categoryCounts": {
+        "newOwnErrors": 6,
+        "sharedAcceptedBackground": 81,
+        "baseFailuresWithUnknownNewTrigger": 2,
+        "intentionalDiagnostics": 14
+      }
+    },
+    "afterFrozenPrefix": {
+      "errorHeaders": 5,
+      "fatalHeaders": 2,
+      "composition": "Placebo/Iron gear2; one Soul Eater callback crash reported as3 ERROR and2 FATAL headers"
+    },
+    "allHeadersParsed": true,
+    "run02ErrorAndFatalFamilies": [
+      {
+        "logger": "mixin",
+        "count": 1,
+        "lines": [
+          666
+        ],
+        "first": "19:00:36",
+        "last": "19:00:36",
+        "level": "ERROR",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Mixin config azurelib.mixins.json does not specify \"minVersion\" property",
+        "signature": "Mixin config azurelib.mixins.json does not specify \"minVersion\" property"
+      },
+      {
+        "logger": "mixin",
+        "count": 1,
+        "lines": [
+          667
+        ],
+        "first": "19:00:36",
+        "last": "19:00:36",
+        "level": "ERROR",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Mixin config azurelib.forge.mixins.json does not specify \"minVersion\" property",
+        "signature": "Mixin config azurelib.forge.mixins.json does not specify \"minVersion\" property"
+      },
+      {
+        "logger": "mixin",
+        "count": 1,
+        "lines": [
+          668
+        ],
+        "first": "19:00:36",
+        "last": "19:00:36",
+        "level": "ERROR",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Mixin config celestisynth.mixins.json does not specify \"minVersion\" property",
+        "signature": "Mixin config celestisynth.mixins.json does not specify \"minVersion\" property"
+      },
+      {
+        "logger": "mixin",
+        "count": 1,
+        "lines": [
+          669
+        ],
+        "first": "19:00:36",
+        "last": "19:00:36",
+        "level": "ERROR",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Mixin config mixins.mbackrooms.json does not specify \"minVersion\" property",
+        "signature": "Mixin config mixins.mbackrooms.json does not specify \"minVersion\" property"
+      },
+      {
+        "logger": "mixin",
+        "count": 1,
+        "lines": [
+          670
+        ],
+        "first": "19:00:36",
+        "last": "19:00:36",
+        "level": "ERROR",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Mixin config yacl.mixins.json does not specify \"minVersion\" property",
+        "signature": "Mixin config yacl.mixins.json does not specify \"minVersion\" property"
+      },
+      {
+        "logger": "net.minecraftforge.coremod.transformer.CoreModBaseTransformer",
+        "count": 2,
+        "lines": [
+          711,
+          1009
+        ],
+        "first": "19:00:39",
+        "last": "19:00:51",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "Error occurred applying transform of coremod coremods/field_to_method.js function biome",
+        "signature": "Error occurred applying transform of coremod coremods/field_to_method.js function biome"
+      },
+      {
+        "logger": "net.minecraft.client.Minecraft",
+        "count": 1,
+        "lines": [
+          1053
+        ],
+        "first": "19:00:53",
+        "last": "19:00:53",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "Failed to verify authentication",
+        "signature": "Failed to verify authentication"
+      },
+      {
+        "logger": "Embeddium-MixinTaintDetector",
+        "count": 1,
+        "lines": [
+          1121
+        ],
+        "first": "19:00:54",
+        "last": "19:00:54",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "Mod mixin into Embeddium internals detected. This instance is now tainted. The Embeddium team does not provide any guarantee of support for issues encountered while such mods are installed.",
+        "signature": "Mod mixin into Embeddium internals detected. This instance is now tainted. The Embeddium team does not provide any guarantee of support for issues encountered while such mods are installed."
+      },
+      {
+        "logger": "structurize",
+        "count": 1,
+        "lines": [
+          1218
+        ],
+        "first": "19:00:58",
+        "last": "19:00:58",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "----------------------------------------------------------------- ",
+        "signature": "----------------------------------------------------------------- "
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "count": 1,
+        "lines": [
+          1359
+        ],
+        "first": "19:01:08",
+        "last": "19:01:08",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "'CenterSearch' is not a valid config key for config category 'advanced'.",
+        "signature": "'CenterSearch' is not a valid config key for config category 'advanced'."
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "count": 1,
+        "lines": [
+          1364
+        ],
+        "first": "19:01:08",
+        "last": "19:01:08",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "'CheatToHotbarUsingHotkeysEnabled' is not a valid config key for config category 'advanced'.",
+        "signature": "'CheatToHotbarUsingHotkeysEnabled' is not a valid config key for config category 'advanced'."
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "count": 1,
+        "lines": [
+          1369
+        ],
+        "first": "19:01:08",
+        "last": "19:01:08",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "'AddBookmarksToFrontEnabled' is not a valid config key for config category 'advanced'.",
+        "signature": "'AddBookmarksToFrontEnabled' is not a valid config key for config category 'advanced'."
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "count": 1,
+        "lines": [
+          1374
+        ],
+        "first": "19:01:08",
+        "last": "19:01:08",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "'LookupFluidContents' is not a valid config key for config category 'advanced'.",
+        "signature": "'LookupFluidContents' is not a valid config key for config category 'advanced'."
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "count": 1,
+        "lines": [
+          1379
+        ],
+        "first": "19:01:08",
+        "last": "19:01:08",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "'GiveMode' is not a valid config key for config category 'advanced'.",
+        "signature": "'GiveMode' is not a valid config key for config category 'advanced'."
+      },
+      {
+        "logger": "mezz.jei.common.config.file.ConfigSerializer",
+        "count": 1,
+        "lines": [
+          1384
+        ],
+        "first": "19:01:08",
+        "last": "19:01:08",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "'RecipeGuiHeight' is not a valid config key for config category 'advanced'.",
+        "signature": "'RecipeGuiHeight' is not a valid config key for config category 'advanced'."
+      },
+      {
+        "logger": "tocraft.craftedcore.CraftedCore",
+        "count": 1,
+        "lines": [
+          2150
+        ],
+        "first": "19:01:17",
+        "last": "19:01:17",
+        "level": "ERROR",
+        "classification": "newOwnErrors",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't get patreons from https://raw.githubusercontent.com/ToCraft/craftedcore/main/common/src/main/resources/patreons.txt",
+        "signature": "Couldn't get patreons from https://raw.githubusercontent.com/ToCraft/craftedcore/main/common/src/main/resources/patreons.txt"
+      },
+      {
+        "logger": "net.minecraft.client.multiplayer.AccountProfileKeyPairManager",
+        "count": 2,
+        "lines": [
+          3694,
+          3708
+        ],
+        "first": "19:01:58",
+        "last": "19:01:59",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "Failed to retrieve profile key pair",
+        "signature": "Failed to retrieve profile key pair"
+      },
+      {
+        "logger": "Moonlight",
+        "count": 1,
+        "lines": [
+          3723
+        ],
+        "first": "19:02:01",
+        "last": "19:02:01",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "Palette mask cataclysm:item/music_disc_maledictus needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask to match the texture size",
+        "signature": "Palette mask cataclysm:item/music_disc_maledictus needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask to match the texture size"
+      },
+      {
+        "logger": "Moonlight",
+        "count": 4,
+        "lines": [
+          3798,
+          3799,
+          3800,
+          3873
+        ],
+        "first": "19:02:01",
+        "last": "19:02:02",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "Respriter was given less palettes than needed!",
+        "signature": "Respriter was given less palettes than needed!"
+      },
+      {
+        "logger": "patchouli",
+        "count": 1,
+        "lines": [
+          4437
+        ],
+        "first": "19:02:08",
+        "last": "19:02:08",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "Failed to load book rebornstorage:rs_book defined by mod rebornstorage, skipping",
+        "signature": "Failed to load book rebornstorage:rs_book defined by mod rebornstorage, skipping"
+      },
+      {
+        "logger": "bloodmagic",
+        "count": 1,
+        "lines": [
+          4770
+        ],
+        "first": "19:02:20",
+        "last": "19:02:20",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "MysticalAgriculture integration cancelled: unable to find a class: com.blakebr0.mysticalagriculture.api.crop.ICrop",
+        "signature": "MysticalAgriculture integration cancelled: unable to find a class: com.blakebr0.mysticalagriculture.api.crop.ICrop"
+      },
+      {
+        "logger": "KubeJS Client",
+        "count": 8,
+        "lines": [
+          4814,
+          4865,
+          4916,
+          4967,
+          5018,
+          5069,
+          5120,
+          5171
+        ],
+        "first": "19:02:21",
+        "last": "19:02:21",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "dev.latvian.mods.rhino.WrappedException: Wrapped java.lang.UnsupportedOperationException: Disabled due ponder is now without create (client_scripts:ponder/corail.js#111) [dev.latvian.mods.rhino.WrappedException]",
+        "signature": "dev.latvian.mods.rhino.WrappedException: Wrapped java.lang.UnsupportedOperationException: Disabled due ponder is now without create (client_scripts:ponder/corail.js#111) [dev.latvian.mods.rhino.WrappedException]"
+      },
+      {
+        "logger": "ponderjs",
+        "count": 8,
+        "lines": [
+          4815,
+          4866,
+          4917,
+          4968,
+          5019,
+          5070,
+          5121,
+          5172
+        ],
+        "first": "19:02:21",
+        "last": "19:02:21",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": true,
+        "publicSignature": "Wrapped java.lang.UnsupportedOperationException: Disabled due ponder is now without create (client_scripts:ponder/corail.js#111)",
+        "signature": "Wrapped java.lang.UnsupportedOperationException: Disabled due ponder is now without create (client_scripts:ponder/corail.js#111)"
+      },
+      {
+        "logger": "pneumaticcraft",
+        "count": 12,
+        "lines": [
+          8178,
+          8179,
+          8180,
+          8181,
+          8182,
+          8183,
+          8184,
+          8185,
+          8186,
+          8187,
+          8188,
+          8189
+        ],
+        "first": "19:02:42",
+        "last": "19:02:42",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "detected someone trying to get recipes for PneumaticCraftRecipeType[pneumaticcraft:fuel_quality] with no world available - returning empty recipe list",
+        "signature": "detected someone trying to get recipes for PneumaticCraftRecipeType[pneumaticcraft:fuel_quality] with no world available - returning empty recipe list"
+      },
+      {
+        "logger": "GregTechCEu",
+        "count": 1,
+        "lines": [
+          8190
+        ],
+        "first": "19:02:42",
+        "last": "19:02:42",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Recipe duration must be non negative, id: gtceu:create_creative_blaze_cake",
+        "signature": "Recipe duration must be non negative, id: gtceu:create_creative_blaze_cake"
+      },
+      {
+        "logger": "net.minecraft.tags.TagLoader",
+        "count": 1,
+        "lines": [
+          8361
+        ],
+        "first": "19:02:50",
+        "last": "19:02:50",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't load tag ctov:wares/sealed_delivery_agreement as it is missing following references: wares:sealed_delivery_agreement (from [forge]ctov-3.4.14.jar)",
+        "signature": "Couldn't load tag ctov:wares/sealed_delivery_agreement as it is missing following references: wares:sealed_delivery_agreement (from [forge]ctov-3.4.14.jar)"
+      },
+      {
+        "logger": "net.minecraft.tags.TagLoader",
+        "count": 1,
+        "lines": [
+          8363
+        ],
+        "first": "19:02:50",
+        "last": "19:02:50",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't load tag ctov:wares/cardboard_box as it is missing following references: wares:cardboard_box (from [forge]ctov-3.4.14.jar)",
+        "signature": "Couldn't load tag ctov:wares/cardboard_box as it is missing following references: wares:cardboard_box (from [forge]ctov-3.4.14.jar)"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8377
+        ],
+        "first": "19:02:51",
+        "last": "19:02:51",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:megacells:blocks/mega_emc_interface",
+        "signature": "Couldn't parse element loot_tables:megacells:blocks/mega_emc_interface"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8429
+        ],
+        "first": "19:02:51",
+        "last": "19:02:51",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:expatternprovider:blocks/ex_emc_interface",
+        "signature": "Couldn't parse element loot_tables:expatternprovider:blocks/ex_emc_interface"
+      },
+      {
+        "logger": "net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener",
+        "count": 2,
+        "lines": [
+          8482,
+          8507
+        ],
+        "first": "19:02:51",
+        "last": "19:02:51",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse data file occultism:miner/ores/thorium_ore from occultism:recipes/miner/ores/thorium_ore.json",
+        "signature": "Couldn't parse data file occultism:miner/ores/thorium_ore from occultism:recipes/miner/ores/thorium_ore.json"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8532
+        ],
+        "first": "19:02:51",
+        "last": "19:02:51",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:twilightdelight:blocks/glacier_cake",
+        "signature": "Couldn't parse element loot_tables:twilightdelight:blocks/glacier_cake"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8589
+        ],
+        "first": "19:02:51",
+        "last": "19:02:51",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:twilightdelight:blocks/phytochemical_cake",
+        "signature": "Couldn't parse element loot_tables:twilightdelight:blocks/phytochemical_cake"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8643
+        ],
+        "first": "19:02:51",
+        "last": "19:02:51",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:twilightdelight:blocks/aurora_cake",
+        "signature": "Couldn't parse element loot_tables:twilightdelight:blocks/aurora_cake"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8696
+        ],
+        "first": "19:02:52",
+        "last": "19:02:52",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_iv",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_iv"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8748
+        ],
+        "first": "19:02:52",
+        "last": "19:02:52",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_hv",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_hv"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8800
+        ],
+        "first": "19:02:52",
+        "last": "19:02:52",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_ev",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_ev"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8852
+        ],
+        "first": "19:02:52",
+        "last": "19:02:52",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:twilightdelight:blocks/torchberry_cake",
+        "signature": "Couldn't parse element loot_tables:twilightdelight:blocks/torchberry_cake"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8904
+        ],
+        "first": "19:02:52",
+        "last": "19:02:52",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_mv",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_mv"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeHooks",
+        "count": 1,
+        "lines": [
+          8956
+        ],
+        "first": "19:02:52",
+        "last": "19:02:52",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_lv",
+        "signature": "Couldn't parse element loot_tables:advgenerators:blocks/eu_output_lv"
+      },
+      {
+        "logger": "net.minecraft.server.ServerAdvancementManager",
+        "count": 1,
+        "lines": [
+          9419
+        ],
+        "first": "19:03:18",
+        "last": "19:03:18",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Parsing error loading custom advancement sob:get_prickly_pear: Expected item to be an item, was unknown string 'sob:prickly_pear'",
+        "signature": "Parsing error loading custom advancement sob:get_prickly_pear: Expected item to be an item, was unknown string 'sob:prickly_pear'"
+      },
+      {
+        "logger": "slimeknights.tconstruct.library.materials.stats.MaterialStatsManager",
+        "count": 3,
+        "lines": [
+          9436,
+          9437,
+          9438
+        ],
+        "first": "19:03:20",
+        "last": "19:03:20",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "The material stat of type 'tconstruct:extra' has not been registered",
+        "signature": "The material stat of type 'tconstruct:extra' has not been registered"
+      },
+      {
+        "logger": "dan200.computercraft.core.asm.GenericMethod",
+        "count": 1,
+        "lines": [
+          10523
+        ],
+        "first": "19:03:33",
+        "last": "19:03:33",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "GenericSource method class de.srendi.advancedperipherals.common.addons.powah.ReactorIntegration.getName has no parameters.",
+        "signature": "GenericSource method class de.srendi.advancedperipherals.common.addons.powah.ReactorIntegration.getName has no parameters."
+      },
+      {
+        "logger": "dan200.computercraft.core.asm.GenericMethod",
+        "count": 1,
+        "lines": [
+          10524
+        ],
+        "first": "19:03:33",
+        "last": "19:03:33",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "GenericSource method class de.srendi.advancedperipherals.common.addons.powah.EnergyCellIntegration.getName has no parameters.",
+        "signature": "GenericSource method class de.srendi.advancedperipherals.common.addons.powah.EnergyCellIntegration.getName has no parameters."
+      },
+      {
+        "logger": "dan200.computercraft.core.asm.GenericMethod",
+        "count": 1,
+        "lines": [
+          10525
+        ],
+        "first": "19:03:33",
+        "last": "19:03:33",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "GenericSource method class de.srendi.advancedperipherals.common.addons.powah.FurnatorIntegration.getName has no parameters.",
+        "signature": "GenericSource method class de.srendi.advancedperipherals.common.addons.powah.FurnatorIntegration.getName has no parameters."
+      },
+      {
+        "logger": "net.minecraftforge.eventbus.EventBus",
+        "count": 1,
+        "lines": [
+          10763
+        ],
+        "first": "19:04:10",
+        "last": "19:04:10",
+        "level": "ERROR",
+        "classification": "baseFailuresWithUnknownNewTrigger",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Exception caught during firing event: No value present",
+        "signature": "Exception caught during firing event: No value present"
+      },
+      {
+        "logger": "net.minecraftforge.client.gui.overlay.ForgeGui",
+        "count": 1,
+        "lines": [
+          10857
+        ],
+        "first": "19:04:10",
+        "last": "19:04:10",
+        "level": "ERROR",
+        "classification": "baseFailuresWithUnknownNewTrigger",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Error rendering overlay 'minecraft:chat_panel'",
+        "signature": "Error rendering overlay 'minecraft:chat_panel'"
+      },
+      {
+        "logger": "Moonlight",
+        "count": 1,
+        "lines": [
+          10915
+        ],
+        "first": "19:04:10",
+        "last": "19:04:10",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Failed to restore original behavior for item: lunch_basket, net.mehvahdjukaar.moonlight.api.util.DispenserHelper$PlaceBlockDispenseBehavior@<runtime-address>",
+        "signature": "Failed to restore original behavior for item: lunch_basket, net.mehvahdjukaar.moonlight.api.util.DispenserHelper$PlaceBlockDispenseBehavior@<runtime-address>"
+      },
+      {
+        "logger": "Grand Sigil",
+        "count": 2,
+        "lines": [
+          11395,
+          18310
+        ],
+        "first": "19:04:16",
+        "last": "19:05:16",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "",
+        "signature": ""
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          11692
+        ],
+        "first": "19:04:21",
+        "last": "19:04:21",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering ingredients: jei:minecraft is running and has taken 5.002 seconds so far",
+        "signature": "Registering ingredients: jei:minecraft is running and has taken 5.002 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCaller",
+        "count": 2,
+        "lines": [
+          12027,
+          18193
+        ],
+        "first": "19:04:29",
+        "last": "19:05:02",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Caught an error from mod plugin: class de.melanx.utilitix.compat.jei.UtiliJei utilitix:jeiplugin",
+        "signature": "Caught an error from mod plugin: class de.melanx.utilitix.compat.jei.UtiliJei utilitix:jeiplugin"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCaller",
+        "count": 3,
+        "lines": [
+          12072,
+          12137,
+          18252
+        ],
+        "first": "19:04:29",
+        "last": "19:05:03",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Caught an error from mod plugin: class cy.jdkdigital.generatorgalore.integrations.JeiPlugin generatorgalore:generatorgalore",
+        "signature": "Caught an error from mod plugin: class cy.jdkdigital.generatorgalore.integrations.JeiPlugin generatorgalore:generatorgalore"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          12771
+        ],
+        "first": "19:04:34",
+        "last": "19:04:34",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering recipes: jei:minecraft is running and has taken 5.001 seconds so far",
+        "signature": "Registering recipes: jei:minecraft is running and has taken 5.001 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18180
+        ],
+        "first": "19:04:46",
+        "last": "19:04:46",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering recipes: minecraft:minecolonies is running and has taken 5.043 seconds so far",
+        "signature": "Registering recipes: minecraft:minecolonies is running and has taken 5.043 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18182
+        ],
+        "first": "19:04:51",
+        "last": "19:04:51",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering recipes: minecraft:minecolonies is running and has taken 10.04 seconds so far",
+        "signature": "Registering recipes: minecraft:minecolonies is running and has taken 10.04 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18191
+        ],
+        "first": "19:04:59",
+        "last": "19:04:59",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering recipes: irons_spellbooks:jei_plugin is running and has taken 5.096 seconds so far",
+        "signature": "Registering recipes: irons_spellbooks:jei_plugin is running and has taken 5.096 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18304
+        ],
+        "first": "19:05:09",
+        "last": "19:05:09",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering recipes: create:jei_plugin is running and has taken 5.004 seconds so far",
+        "signature": "Registering recipes: create:jei_plugin is running and has taken 5.004 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18592
+        ],
+        "first": "19:05:17",
+        "last": "19:05:17",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering recipes: gtceu:jei_plugin is running and has taken 5.073 seconds so far",
+        "signature": "Registering recipes: gtceu:jei_plugin is running and has taken 5.073 seconds so far"
+      },
+      {
+        "logger": "GregTechCEu",
+        "count": 1,
+        "lines": [
+          18593
+        ],
+        "first": "19:05:22",
+        "last": "19:05:22",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Input item 0 of recipe gtceu:potion_vanilla_quark.resilience_169 is empty",
+        "signature": "Input item 0 of recipe gtceu:potion_vanilla_quark.resilience_169 is empty"
+      },
+      {
+        "logger": "GregTechCEu",
+        "count": 1,
+        "lines": [
+          18594
+        ],
+        "first": "19:05:22",
+        "last": "19:05:22",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Input item 0 of recipe gtceu:potion_vanilla_mundane_170 is empty",
+        "signature": "Input item 0 of recipe gtceu:potion_vanilla_mundane_170 is empty"
+      },
+      {
+        "logger": "GregTechCEu",
+        "count": 1,
+        "lines": [
+          18595
+        ],
+        "first": "19:05:22",
+        "last": "19:05:22",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Input item 0 of recipe gtceu:potion_vanilla_quark.resilience_171 is empty",
+        "signature": "Input item 0 of recipe gtceu:potion_vanilla_quark.resilience_171 is empty"
+      },
+      {
+        "logger": "GregTechCEu",
+        "count": 1,
+        "lines": [
+          18596
+        ],
+        "first": "19:05:22",
+        "last": "19:05:22",
+        "level": "ERROR",
+        "classification": "sharedAcceptedBackground",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Input item 0 of recipe gtceu:potion_vanilla_quark.resilience_172 is empty",
+        "signature": "Input item 0 of recipe gtceu:potion_vanilla_quark.resilience_172 is empty"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18597
+        ],
+        "first": "19:05:22",
+        "last": "19:05:22",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering recipes: gtceu:jei_plugin is running and has taken 10.07 seconds so far",
+        "signature": "Registering recipes: gtceu:jei_plugin is running and has taken 10.07 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18620
+        ],
+        "first": "19:05:29",
+        "last": "19:05:29",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering Runtime: jei:forge_gui is running and has taken 5.096 seconds so far",
+        "signature": "Registering Runtime: jei:forge_gui is running and has taken 5.096 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18621
+        ],
+        "first": "19:05:34",
+        "last": "19:05:34",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering Runtime: jei:forge_gui is running and has taken 10.10 seconds so far",
+        "signature": "Registering Runtime: jei:forge_gui is running and has taken 10.10 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18622
+        ],
+        "first": "19:05:39",
+        "last": "19:05:39",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering Runtime: jei:forge_gui is running and has taken 15.10 seconds so far",
+        "signature": "Registering Runtime: jei:forge_gui is running and has taken 15.10 seconds so far"
+      },
+      {
+        "logger": "mezz.jei.library.load.PluginCallerTimerRunnable",
+        "count": 1,
+        "lines": [
+          18623
+        ],
+        "first": "19:05:44",
+        "last": "19:05:44",
+        "level": "ERROR",
+        "classification": "intentionalDiagnostics",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Registering Runtime: jei:forge_gui is running and has taken 20.10 seconds so far",
+        "signature": "Registering Runtime: jei:forge_gui is running and has taken 20.10 seconds so far"
+      },
+      {
+        "logger": "placebo",
+        "count": 1,
+        "lines": [
+          25568
+        ],
+        "first": "19:12:11",
+        "last": "19:12:11",
+        "level": "ERROR",
+        "classification": "baseFailuresWithUnknownNewTrigger",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Failed to locate any gear sets matching the following predicates: ",
+        "signature": "Failed to locate any gear sets matching the following predicates: "
+      },
+      {
+        "logger": "placebo",
+        "count": 1,
+        "lines": [
+          25569
+        ],
+        "first": "19:12:11",
+        "last": "19:12:11",
+        "level": "ERROR",
+        "classification": "baseFailuresWithUnknownNewTrigger",
+        "sameExactCanonicalHeaderAsHistorical531": true,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "SetPredicate[#irons_spellbooks]",
+        "signature": "SetPredicate[#irons_spellbooks]"
+      },
+      {
+        "logger": "net.minecraftforge.eventbus.EventBus",
+        "count": 1,
+        "lines": [
+          25765
+        ],
+        "first": "19:14:44",
+        "last": "19:14:44",
+        "level": "ERROR",
+        "classification": "newSoulEaterCrashCascade",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Exception caught during firing event: Cannot invoke \"net.minecraft.world.entity.Entity.m_20185_()\"",
+        "signature": "Exception caught during firing event: Cannot invoke \"net.minecraft.world.entity.Entity.m_20185_()\""
+      },
+      {
+        "logger": "net.minecraft.server.MinecraftServer",
+        "count": 1,
+        "lines": [
+          25918
+        ],
+        "first": "19:14:44",
+        "last": "19:14:44",
+        "level": "ERROR",
+        "classification": "newSoulEaterCrashCascade",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Encountered an unexpected exception",
+        "signature": "Encountered an unexpected exception"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeMod",
+        "count": 1,
+        "lines": [
+          25934
+        ],
+        "first": "19:14:44",
+        "last": "19:14:44",
+        "level": "FATAL",
+        "classification": "newSoulEaterCrashCascade",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Preparing crash report with UUID <per-report UUID>",
+        "signature": "Preparing crash report with UUID <per-report UUID>"
+      },
+      {
+        "logger": "net.minecraft.server.MinecraftServer",
+        "count": 1,
+        "lines": [
+          25936
+        ],
+        "first": "19:14:47",
+        "last": "19:14:47",
+        "level": "ERROR",
+        "classification": "newSoulEaterCrashCascade",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "This crash report has been saved to: <private crash-report path>",
+        "signature": "This crash report has been saved to: <private crash-report path>"
+      },
+      {
+        "logger": "net.minecraftforge.common.ForgeMod",
+        "count": 1,
+        "lines": [
+          25963
+        ],
+        "first": "19:14:47",
+        "last": "19:14:47",
+        "level": "FATAL",
+        "classification": "newSoulEaterCrashCascade",
+        "sameExactCanonicalHeaderAsHistorical531": false,
+        "sameExactCanonicalHeaderAsCurrentOriginalTitle": false,
+        "publicSignature": "Preparing crash report with UUID <per-report UUID>",
+        "signature": "Preparing crash report with UUID <per-report UUID>"
+      }
+    ]
+  },
+  "list1NewModsOwnObservedErrorsAbsentFromMatchedOriginal": [
+    {
+      "mod": "AzureLib2.0.41",
+      "errorHeaders": 2,
+      "kind": "Mixin minVersion metadata omission"
+    },
+    {
+      "mod": "Celestisynth1.3.4",
+      "errorHeaders": 1,
+      "kind": "Mixin minVersion metadata omission"
+    },
+    {
+      "mod": "MeultiBackrooms1.4.0",
+      "errorHeaders": 1,
+      "kind": "Mixin minVersion metadata omission"
+    },
+    {
+      "mod": "YACL3.6.6",
+      "errorHeaders": 1,
+      "kind": "Mixin minVersion metadata omission"
+    },
+    {
+      "mod": "CraftedCore5.8.2",
+      "errorHeaders": 1,
+      "kind": "Author Patreon metadata fetch failure with prior fallback proof"
+    },
+    {
+      "mod": "Soul Eater",
+      "version": "ver35 / modVersion1.25.11",
+      "sha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536",
+      "critical": true,
+      "directSite": "FreeOnEntityTickUpdateProcedure.lambda$execute$9:190",
+      "caller": "SoulEaterMod.lambda$tick$2 / tick:89 delayed queue",
+      "exception": "NullPointerException invoking Entity.m_20185_() / getX",
+      "result": "Integrated server tick loop crashed and client exited-1",
+      "rootTriggerNotEstablished": true
+    }
+  ],
+  "list2AttributedNewModsTriggeringBaseLoggedErrors": [
+    {
+      "mod": "Soul Eater",
+      "baseLoggingComponents": [
+        "Forge EventBus",
+        "MinecraftServer",
+        "ForgeMod crash-report generation"
+      ],
+      "errorHeaders": 3,
+      "fatalHeaders": 2,
+      "singleCrashRepeatedThroughLoggingWrappers": true,
+      "proof": "Direct Soul Eater callback and delayed queue top frames in the frozen log/crash report; EventBus listener index32",
+      "notIndependentAdditionalBugs": true,
+      "upstreamReasonForNullEntityNotEstablished": true
+    },
+    {
+      "mod": "Verity",
+      "currentRunObservedDiscoveryErrorHeaders": 0,
+      "historical531DiscoveryErrorHeaders": 790,
+      "historicalOnly": "395 parent/child discovery pairs; unchanged non-Event transformer fallback proved previously",
+      "absenceHereExplainedByScope": "No native AI chat/API execution, not evidence that historical diagnostic was fixed"
+    }
+  ],
+  "baseLoggedFailuresWithoutProvenNewModCulprit": [
+    {
+      "modFamily": "BloodMagic/Curios chat overlay",
+      "run01ErrorHeaders": 2,
+      "run02ErrorHeaders": 2,
+      "sameHistorical531Family": true,
+      "specificNewInitiator": null
+    },
+    {
+      "modFamily": "Placebo/Apotheosis/Iron spells gear sets",
+      "run01ErrorHeaders": 0,
+      "run02ErrorHeaders": 2,
+      "run02LocalTime": "19:12:11",
+      "sameHistorical531Family": true,
+      "sourceProof": "BASE Iron3.4.0.11 tag request versus legacy boss_gear resources and BASE Placebo8.6.3 native unfiltered fallback",
+      "specificNewInitiator": null
+    }
+  ],
+  "newWeatherRenderAndRamMessages": {
+    "weatherJarSha256": "5eb828f93b2eb370d7f38ad1893739caf7655f32d58dbbdaabae6075ede635db",
+    "renderPatcherJarSha256": "a59d110b3a0f8ade8c6c4bd9e7c6d6cf265f84391bce89de87ef92de5498d4ef",
+    "memoryScriptSha256": "68b42fde0072ce3f366605a7619931cb6388575230ca7a910c23580b58cbaeab",
+    "observedOwnErrorOrFatalHeaders": 0,
+    "normalMessages": [
+      "Patcher loaded and reapplied46 DE models after Forge/final model bake",
+      "Weather Got IMC[]",
+      "Burnt Weather2 wind bridge",
+      "KubeJS loaded RAM policy",
+      "Native author Patcher beta login notice"
+    ],
+    "firstbootWarnings": "Native Forge config-default corrections occurred in run01; no config corruption or crash attribution follows from defaults alone",
+    "memoryNativeLoadedDisableWarnings": true,
+    "limits": "No own failure header observed does not prove all Weather, render, abilities or world-mutation paths safe; presence in EventBus listener list alone is not causality"
+  },
+  "matchedOriginalAndHistoricalInterpretation": {
+    "currentOriginalTitleErrorHeaders": 41,
+    "historicalMatchedOriginalFullErrorHeaders": 96,
+    "historical531FullErrorHeaders": 902,
+    "comparisonUsesExactCanonicalHeadersAndSourceAttributionNotTotalsAlone": true,
+    "glDebug": "Run01 2 shader-link+42 uniform INFO; run02 1+21. Both exact GL families match current Original after per-context program-handle normalization; fewer repeated model loads is not a repair or visual-quality claim",
+    "openAl": "No OpenAL failure in either533 session. Historical531 buffer deletion failure occurred before quit; its shared signature and absent current observation do not establish a shutdown race or a fix",
+    "intentionalDiagnostics": "Each533 session has2 Grand Sigil watchdog headers+12 JEI progress-timer headers; these do not identify the cause of stalls"
+  },
+  "limits": [
+    "Historical failed533 cohort only; Root has authorized subsequent Soul Eater removal, which requires its own current cohort verification.",
+    "335.147s healthy no-input prefix is preserved and cannot override later critical crash.",
+    "AI chat was queued after crash and never executed; no LLM inference caused this crash. The earlier give alone does not prove a specific upstream trigger.",
+    "No current full-session, native AI, normal exit, LAN/Steam, two-client, selected-skin, abilities or visual-quality PASS.",
+    "No author-native warnings/errors were suppressed and no effects, shader, animation or render-distance policy changed by this audit.",
+    "Original title41 covers startup only; historical Original96 and source proofs supply separate world-family context. Error totals are not comparable rates."
+  ],
+  "evidencePins": [
+    {
+      "role": "final-weather-421-01/latest.log",
+      "sizeBytes": 5733894,
+      "sha256": "31b6432415200cbdc853c8b6ee793286f52b02344ba8b07a0b5827b4dfbbe0e2"
+    },
+    {
+      "role": "final-weather-421-01/initial-firstboot-history.private.json",
+      "sizeBytes": 1055,
+      "sha256": "7ab8e61efec14c4b1612ad84b0d782fbaa5eab0181df21399ebd2ab55fca5ac5"
+    },
+    {
+      "role": "final-weather-421-02/latest.log",
+      "sizeBytes": 5003413,
+      "sha256": "92744edcb0d4549bd582a207fa761f50bb246b0403c2b3ce88334217655e8973"
+    },
+    {
+      "role": "final-weather-421-02/crash-2026-11-01_19.14.44-server.txt",
+      "sizeBytes": 116874,
+      "sha256": "5940e55c9c68b7267db677b56ad29332d35b3c4960b355a102066490b5947ebb"
+    },
+    {
+      "role": "final-weather-421-02/failed-run-lifecycle.private.json",
+      "sizeBytes": 4411,
+      "sha256": "648c10705da00fb74344f3db9e50689df2aaf9a874d057c9ee0b143148044092"
+    },
+    {
+      "role": "final-weather-421-02/no-input-baseline.latest.log",
+      "sizeBytes": 4055002,
+      "sha256": "d5df3648a985e17461cf91868ffbd1355655ee44981a39eb512491e47a5a5eda"
+    },
+    {
+      "role": "final-weather-421-02/no-input-phase.json",
+      "sizeBytes": 801,
+      "sha256": "69d94b0947097a3de9e77eb35503e7b00a02fbddf45ddeb048119d91d968ef2d"
+    },
+    {
+      "role": "final-weather-421-02/ai-phase-marker.private.json",
+      "sizeBytes": 637,
+      "sha256": "38b66ca7f13cc763716f30cdb0e0602c007d916cbe51421482bda6716c70c5e5"
+    }
+  ],
+  "referenceEvidencePins": [
+    {
+      "role": "currentOriginalTitleClosed41",
+      "sizeBytes": 34503,
+      "sha256": "a93ba2cd230d11d2b99cd4b4f625bf5cb88a3b838498660b12c772be2f053c4b"
+    },
+    {
+      "role": "historical531Closed902ExactContexts",
+      "sizeBytes": 3049918,
+      "sha256": "b8be4aae34a3c24ad1a548f3f65b1b171204ade58af88cae8a8cd2783fbaa1ea"
+    },
+    {
+      "role": "historical531NoInputAttributionAndMatchedOriginal96",
+      "sizeBytes": 199949,
+      "sha256": "2c3529508bfae4b60074040c2b4e3ec98df0d3be55c0be8e8adb4e2ad22b2913"
+    },
+    {
+      "role": "historical531SourceReadyAttribution",
+      "sizeBytes": 6389,
+      "sha256": "56fd2bac8bf36fc75ca3b6856d538ca8f474baf5fd2e241a6f81d4117618b715"
+    },
+    {
+      "role": "same395VerityClassBytesHistoricalProof",
+      "sizeBytes": 762,
+      "sha256": "3bec622c098bcd07d9a0bde9205dea9a92c0d04745a06d659a4079d03ab2cef7"
+    },
+    {
+      "role": "basePlaceboIronSourceProof",
+      "sizeBytes": 3327,
+      "sha256": "75be46bcc5b0e270b86d485ada9e6f4016ab10808425827ba7efa79beff041f2"
+    },
+    {
+      "role": "weatherAndRenderPatcherExactJarStaticLogCatalog",
+      "sizeBytes": 11330,
+      "sha256": "631e97685abef57f4719cac393b51960d54a3a776a3d135ead3d30fd40625b10"
+    }
+  ]
+}

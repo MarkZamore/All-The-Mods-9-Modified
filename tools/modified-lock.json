@@ -969,342 +969,6 @@
   ],
   "files": [
     {
-      "fileName": "AmbientSounds_FORGE_v6.3.11_mc1.20.1.jar",
-      "sha256": "63a4ea6ea11fa63982325306ae09268080c296633b6bfbf72dbd7c8514d4f114",
-      "sizeBytes": 53432741,
-      "sourceUrl": "https://edge.forgecdn.net/files/9254/806/AmbientSounds_FORGE_v6.3.11_mc1.20.1.jar",
-      "projectId": 254284,
-      "fileId": 9254806,
-      "path": "mods/AmbientSounds_FORGE_v6.3.11_mc1.20.1.jar",
-      "kind": "requested",
-      "version": "6.3.11",
-      "modIds": [
-        "ambientsounds"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/ambientsounds",
-      "name": "AmbientSounds"
-    },
-    {
-      "fileName": "Apollyon, Act Two v1.0.0 (1.20.1).jar",
-      "sha256": "a7e0ffb994b93e2068579c65cf782e518a75f4c1f4d83fdaf3518a6f08ccc01d",
-      "sizeBytes": 13240466,
-      "sourceUrl": "https://edge.forgecdn.net/files/7180/425/Apollyon%2C%20Act%20Two%20v1.0.0%20%281.20.1%29.jar",
-      "projectId": 971482,
-      "fileId": 7180425,
-      "path": "mods/Apollyon, Act Two v1.0.0 (1.20.1).jar",
-      "kind": "requested",
-      "version": "1.1.1",
-      "modIds": [
-        "apollyon"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/apollyon",
-      "name": "Apollyon"
-    },
-    {
-      "fileName": "ArPhEx-5.0.2-forge-1.20.1.jar",
-      "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
-      "sizeBytes": 13527755,
-      "sourceUrl": "https://edge.forgecdn.net/files/7466/434/ArPhEx-5.0.2-forge-1.20.1.jar",
-      "projectId": 967672,
-      "fileId": 7466434,
-      "path": "mods/ArPhEx-5.0.2-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "5.0.2",
-      "modIds": [
-        "arphex"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/arphex",
-      "name": "Arthropod Phobia Expansions"
-    },
-    {
-      "fileName": "Atlas Lib-1.20.1-1.1.12.jar",
-      "sha256": "8cc9b5b46e65affed0c38aa54da6870ec4e820364c654c4dd2bb70a94ba39c50",
-      "sizeBytes": 124436,
-      "sourceUrl": "https://edge.forgecdn.net/files/5254/550/Atlas%20Lib-1.20.1-1.1.12.jar",
-      "projectId": 463826,
-      "fileId": 5254550,
-      "path": "mods/Atlas Lib-1.20.1-1.1.12.jar",
-      "kind": "dependency",
-      "version": "1.1.12",
-      "modIds": [
-        "atlaslib"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/atlas-lib",
-      "name": "atlas-lib"
-    },
-    {
-      "fileName": "CreativeCore_FORGE_v2.12.40_mc1.20.1.jar",
-      "sha256": "936de62489c0d6fbe74202486cbe2b191b8629b02bab1d480acfdb03690f33f4",
-      "sizeBytes": 1144290,
-      "sourceUrl": "https://edge.forgecdn.net/files/8947/229/CreativeCore_FORGE_v2.12.40_mc1.20.1.jar",
-      "projectId": 257814,
-      "fileId": 8947229,
-      "path": "mods/CreativeCore_FORGE_v2.12.40_mc1.20.1.jar",
-      "kind": "dependency",
-      "version": "2.12.40",
-      "modIds": [
-        "creativecore"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/creativecore",
-      "name": "CreativeCore"
-    },
-    {
-      "fileName": "Deep Dark Regrowth 1.2.6.1 - 1.20.1.jar",
-      "sha256": "3a2d487db40e1fe13307f8203ca69627787aede9bd332cf8bb2c29b41ec3fe88",
-      "sizeBytes": 16188290,
-      "sourceUrl": "https://edge.forgecdn.net/files/5308/579/Deep%20Dark%20Regrowth%201.2.6.1%20-%201.20.1.jar",
-      "projectId": 827619,
-      "fileId": 5308579,
-      "path": "mods/Deep Dark Regrowth 1.2.6.1 - 1.20.1.jar",
-      "kind": "requested",
-      "version": "1.2.6.1",
-      "modIds": [
-        "deep_dark_regrowth"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/deep-dark-regrowth",
-      "name": "Deep Dark: Regrowth"
-    },
-    {
-      "fileName": "DistantFriends-forge-1.20.1-0.5.6.jar",
-      "sha256": "5965acaf5e2ed24542777ff0ec309085332d6c9255903eddc644822a61e851cf",
-      "sizeBytes": 52436,
-      "sourceUrl": "https://edge.forgecdn.net/files/8489/193/DistantFriends-forge-1.20.1-0.5.6.jar",
-      "projectId": 839197,
-      "fileId": 8489193,
-      "path": "mods/DistantFriends-forge-1.20.1-0.5.6.jar",
-      "kind": "requested",
-      "version": "0.5.6",
-      "modIds": [
-        "distantfriends"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/distant-friends",
-      "name": "Distant Friends"
-    },
-    {
-      "fileName": "Enhanced_Celestials-forge-1.20.1-5.0.0.4.jar",
-      "sha256": "674d747b80c9a9df0bd745ac6648ec336bc1c15d32fa16ffca3a5eb7b83ac76e",
-      "sizeBytes": 1656994,
-      "sourceUrl": "https://edge.forgecdn.net/files/5317/331/Enhanced_Celestials-forge-1.20.1-5.0.0.4.jar",
-      "projectId": 438447,
-      "fileId": 5317331,
-      "path": "mods/Enhanced_Celestials-forge-1.20.1-5.0.0.4.jar",
-      "kind": "requested",
-      "version": "5.0.0.4",
-      "modIds": [
-        "enhancedcelestials"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/enhanced-celestials",
-      "name": "Enhanced Celestials"
-    },
-    {
-      "fileName": "EyesInTheDarkness-1.20.1-1.3.10.jar",
-      "sha256": "1ed5d3fc36b792b955a83afc6a1334e71a4bf9450f78898e6936c916dc7c3916",
-      "sizeBytes": 279244,
-      "sourceUrl": "https://edge.forgecdn.net/files/4722/765/EyesInTheDarkness-1.20.1-1.3.10.jar",
-      "projectId": 304719,
-      "fileId": 4722765,
-      "path": "mods/EyesInTheDarkness-1.20.1-1.3.10.jar",
-      "kind": "requested",
-      "version": "1.3.10",
-      "modIds": [
-        "eyesinthedarkness"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/eyes-in-the-darkness",
-      "name": "Eyes in the Darkness"
-    },
-    {
-      "fileName": "FromAnotherLibrary-forge-1.20.1-1.0.2.jar",
-      "sha256": "376d60dac85e1e1418ca0d19879916444803e30743dcf51be525f1be7110197c",
-      "sizeBytes": 82896,
-      "sourceUrl": "https://edge.forgecdn.net/files/4798/023/FromAnotherLibrary-forge-1.20.1-1.0.2.jar",
-      "projectId": 921324,
-      "fileId": 4798023,
-      "path": "mods/FromAnotherLibrary-forge-1.20.1-1.0.2.jar",
-      "kind": "dependency",
-      "version": "1.0.2",
-      "modIds": [
-        "fromanotherlibrary"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/fromanotherlibrary",
-      "name": "FromAnotherLibrary"
-    },
-    {
-      "fileName": "JujutsuCraft-ver51-forge-1.20.1.jar",
-      "sha256": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
-      "sizeBytes": 16810987,
-      "path": "mods/JujutsuCraft-ver51-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "51",
-      "modIds": [
-        "jujutsucraft"
-      ],
-      "name": "Jujutsu Craft",
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sorceryfight",
-      "sourceUrl": "https://edge.forgecdn.net/files/9146/690/JujutsuCraft-ver51-forge-1.20.1.jar",
-      "projectId": 471288,
-      "fileId": 9146690
-    },
-    {
-      "fileName": "Pehkui-3.8.2+1.20.1-forge.jar",
-      "sha256": "54210f454c166f65a1bcbbfe4ea52e6f73e07844a793c7132f1af4076a0f42fc",
-      "sizeBytes": 671605,
-      "sourceUrl": "https://edge.forgecdn.net/files/5393/101/Pehkui-3.8.2%2B1.20.1-forge.jar",
-      "projectId": 319596,
-      "fileId": 5393101,
-      "path": "mods/Pehkui-3.8.2+1.20.1-forge.jar",
-      "kind": "dependency",
-      "version": "3.8.2+1.20.1-forge",
-      "modIds": [
-        "pehkui"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/pehkui",
-      "name": "Pehkui"
-    },
-    {
-      "fileName": "Platform-forge-1.20.1-1.4.2.jar",
-      "sha256": "90a8dbe620614f4be677e43071cfaf01bbad382ad3354088d6caaf182fca7166",
-      "sizeBytes": 1197800,
-      "sourceUrl": "https://edge.forgecdn.net/files/9318/515/Platform-forge-1.20.1-1.4.2.jar",
-      "projectId": 997634,
-      "fileId": 9318515,
-      "path": "mods/Platform-forge-1.20.1-1.4.2.jar",
-      "kind": "dependency",
-      "version": "1.4.2",
-      "modIds": [
-        "platform"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/platform",
-      "name": "platform"
-    },
-    {
-      "fileName": "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
-      "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
-      "sizeBytes": 7080698,
-      "sourceUrl": "https://edge.forgecdn.net/files/5015/286/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
-      "projectId": 433068,
-      "fileId": 5015286,
-      "path": "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
-      "kind": "requested",
-      "version": "1.20.1-1.9.1-beta.1",
-      "modIds": [
-        "presencefootsteps"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
-      "name": "Presence Footsteps (Forge)"
-    },
-    {
-      "fileName": "Rats-1.20.1-8.1.3.jar",
-      "sha256": "9a73aa327f8d48a06208bb6f47f03799e061eac8714f09301df0ef5d34ca5f3c",
-      "sizeBytes": 8437611,
-      "sourceUrl": "https://edge.forgecdn.net/files/5904/296/Rats-1.20.1-8.1.3.jar",
-      "projectId": 323596,
-      "fileId": 5904296,
-      "path": "mods/Rats-1.20.1-8.1.3.jar",
-      "kind": "requested",
-      "version": "1.20.1-8.1.3",
-      "modIds": [
-        "rats"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rats",
-      "name": "Rats"
-    },
-    {
-      "fileName": "RollingGiantOldestView-forge-1.20.1-1.3.jar",
-      "sha256": "72f3a15a8bf7b1ec92629a231a952d68fc636ce9d7b4ac4c8c7a887df12997f4",
-      "sizeBytes": 1305843,
-      "sourceUrl": "https://edge.forgecdn.net/files/7550/674/RollingGiantOldestView-forge-1.20.1-1.3.jar",
-      "projectId": 1277781,
-      "fileId": 7550674,
-      "path": "mods/RollingGiantOldestView-forge-1.20.1-1.3.jar",
-      "kind": "requested",
-      "version": "1.0.0",
-      "modIds": [
-        "rolling_giant_oldest_view"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rolling-giant-oldest-view",
-      "name": "Rolling Giant: Oldest View"
-    },
-    {
-      "fileName": "Siren_head v1.1.4-1.20.1.jar",
-      "sha256": "7df77358092deed2fcded6c895975891eeaf70ae3bf4fba26bce1553cdce85fa",
-      "sizeBytes": 11279970,
-      "sourceUrl": "https://edge.forgecdn.net/files/5571/439/Siren_head%20v1.1.4-1.20.1.jar",
-      "projectId": 1013669,
-      "fileId": 5571439,
-      "path": "mods/Siren_head v1.1.4-1.20.1.jar",
-      "kind": "requested",
-      "version": "1.1.4",
-      "modIds": [
-        "siren_head"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/siren-head-the-arrival",
-      "name": "Siren Head"
-    },
-    {
-      "fileName": "SoulEater_1.20.1_ver35.jar",
-      "sha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536",
-      "sizeBytes": 3071805,
-      "sourceUrl": "https://edge.forgecdn.net/files/9060/739/SoulEater_1.20.1_ver35.jar",
-      "projectId": 803147,
-      "fileId": 9060739,
-      "path": "mods/SoulEater_1.20.1_ver35.jar",
-      "kind": "requested",
-      "version": "1.25.11",
-      "modIds": [
-        "soul_eater"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/soul-eater-mc",
-      "name": "Soul Eater"
-    },
-    {
-      "fileName": "The-Hordes-1.20.1-1.6.3i-all.jar",
-      "sha256": "f3f7cb25540cb0b86eb5ccea220b8684953e56fea3764b0dcd7678aadd4276c7",
-      "sizeBytes": 619598,
-      "sourceUrl": "https://edge.forgecdn.net/files/8843/034/The-Hordes-1.20.1-1.6.3i-all.jar",
-      "projectId": 485779,
-      "fileId": 8843034,
-      "path": "mods/The-Hordes-1.20.1-1.6.3i-all.jar",
-      "kind": "requested",
-      "version": "1.6.3g",
-      "modIds": [
-        "hordes"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-hordes",
-      "name": "The Hordes"
-    },
-    {
-      "fileName": "TheOneWhoWatches-V1.4.4-1.20.1.jar",
-      "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696",
-      "sizeBytes": 5493144,
-      "sourceUrl": "https://edge.forgecdn.net/files/7608/035/TheOneWhoWatches-V1.4.4-1.20.1.jar",
-      "projectId": 940557,
-      "fileId": 7608035,
-      "path": "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar",
-      "kind": "requested",
-      "version": "1.4.4",
-      "modIds": [
-        "the_one_who_watches"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-one-who-watches",
-      "name": "The One Who Watches"
-    },
-    {
-      "fileName": "ZoNiEx-1.2.1-forge-1.20.1.jar",
-      "sha256": "57a71e8680009a18b8f2a76f337e83b0ac99dab9fbe07aea03a47b396ec2e1c5",
-      "sizeBytes": 894750,
-      "sourceUrl": "https://edge.forgecdn.net/files/6276/844/ZoNiEx-1.2.1-forge-1.20.1.jar",
-      "projectId": 1171163,
-      "fileId": 6276844,
-      "path": "mods/ZoNiEx-1.2.1-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "1.2.1",
-      "modIds": [
-        "zoniex"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/zoniex",
-      "name": "Zombie Nightmare Expansions"
-    },
-    {
       "fileName": "alexscaves-2.0.2.jar",
       "sha256": "131e205ce3eed384d701b336d8a0d4a671108ed56b6eff6014f0e407db2997f0",
       "sizeBytes": 74871657,
@@ -1353,6 +1017,22 @@
       "name": "Alone in the Dark"
     },
     {
+      "fileName": "AmbientSounds_FORGE_v6.3.11_mc1.20.1.jar",
+      "sha256": "63a4ea6ea11fa63982325306ae09268080c296633b6bfbf72dbd7c8514d4f114",
+      "sizeBytes": 53432741,
+      "sourceUrl": "https://edge.forgecdn.net/files/9254/806/AmbientSounds_FORGE_v6.3.11_mc1.20.1.jar",
+      "projectId": 254284,
+      "fileId": 9254806,
+      "path": "mods/AmbientSounds_FORGE_v6.3.11_mc1.20.1.jar",
+      "kind": "requested",
+      "version": "6.3.11",
+      "modIds": [
+        "ambientsounds"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/ambientsounds",
+      "name": "AmbientSounds"
+    },
+    {
       "fileName": "ambihorror-forge-1.0.0.jar",
       "sha256": "246a89ddc1ea5f9a779820f056004b9d891113198785e19998dde2c588b3c083",
       "sizeBytes": 13825523,
@@ -1399,6 +1079,54 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/antlers-the-wendigo",
       "name": "Antlers"
+    },
+    {
+      "fileName": "Apollyon, Act Two v1.0.0 (1.20.1).jar",
+      "sha256": "a7e0ffb994b93e2068579c65cf782e518a75f4c1f4d83fdaf3518a6f08ccc01d",
+      "sizeBytes": 13240466,
+      "sourceUrl": "https://edge.forgecdn.net/files/7180/425/Apollyon%2C%20Act%20Two%20v1.0.0%20%281.20.1%29.jar",
+      "projectId": 971482,
+      "fileId": 7180425,
+      "path": "mods/Apollyon, Act Two v1.0.0 (1.20.1).jar",
+      "kind": "requested",
+      "version": "1.1.1",
+      "modIds": [
+        "apollyon"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/apollyon",
+      "name": "Apollyon"
+    },
+    {
+      "fileName": "ArPhEx-5.0.2-forge-1.20.1.jar",
+      "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
+      "sizeBytes": 13527755,
+      "sourceUrl": "https://edge.forgecdn.net/files/7466/434/ArPhEx-5.0.2-forge-1.20.1.jar",
+      "projectId": 967672,
+      "fileId": 7466434,
+      "path": "mods/ArPhEx-5.0.2-forge-1.20.1.jar",
+      "kind": "requested",
+      "version": "5.0.2",
+      "modIds": [
+        "arphex"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/arphex",
+      "name": "Arthropod Phobia Expansions"
+    },
+    {
+      "fileName": "Atlas Lib-1.20.1-1.1.12.jar",
+      "sha256": "8cc9b5b46e65affed0c38aa54da6870ec4e820364c654c4dd2bb70a94ba39c50",
+      "sizeBytes": 124436,
+      "sourceUrl": "https://edge.forgecdn.net/files/5254/550/Atlas%20Lib-1.20.1-1.1.12.jar",
+      "projectId": 463826,
+      "fileId": 5254550,
+      "path": "mods/Atlas Lib-1.20.1-1.1.12.jar",
+      "kind": "dependency",
+      "version": "1.1.12",
+      "modIds": [
+        "atlaslib"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/atlas-lib",
+      "name": "atlas-lib"
     },
     {
       "fileName": "azurelib-neo-1.20.1-2.0.41.jar",
@@ -1577,6 +1305,22 @@
       "name": "crafted-core"
     },
     {
+      "fileName": "CreativeCore_FORGE_v2.12.40_mc1.20.1.jar",
+      "sha256": "936de62489c0d6fbe74202486cbe2b191b8629b02bab1d480acfdb03690f33f4",
+      "sizeBytes": 1144290,
+      "sourceUrl": "https://edge.forgecdn.net/files/8947/229/CreativeCore_FORGE_v2.12.40_mc1.20.1.jar",
+      "projectId": 257814,
+      "fileId": 8947229,
+      "path": "mods/CreativeCore_FORGE_v2.12.40_mc1.20.1.jar",
+      "kind": "dependency",
+      "version": "2.12.40",
+      "modIds": [
+        "creativecore"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/creativecore",
+      "name": "CreativeCore"
+    },
+    {
       "fileName": "creepyhorrorsounds1.20x_1.2.jar",
       "sha256": "d7abb5d6b4ba569191f47c7f8cf4e5dae4c8721f9e8c8bb431f771af33438b98",
       "sizeBytes": 438100,
@@ -1657,6 +1401,54 @@
       "name": "True Darkness"
     },
     {
+      "fileName": "Deep Dark Regrowth 1.2.6.1 - 1.20.1.jar",
+      "sha256": "3a2d487db40e1fe13307f8203ca69627787aede9bd332cf8bb2c29b41ec3fe88",
+      "sizeBytes": 16188290,
+      "sourceUrl": "https://edge.forgecdn.net/files/5308/579/Deep%20Dark%20Regrowth%201.2.6.1%20-%201.20.1.jar",
+      "projectId": 827619,
+      "fileId": 5308579,
+      "path": "mods/Deep Dark Regrowth 1.2.6.1 - 1.20.1.jar",
+      "kind": "requested",
+      "version": "1.2.6.1",
+      "modIds": [
+        "deep_dark_regrowth"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/deep-dark-regrowth",
+      "name": "Deep Dark: Regrowth"
+    },
+    {
+      "path": "mods/derenderpatcher-1.20.1-1.3.0-forge.jar",
+      "fileName": "derenderpatcher-1.20.1-1.3.0-forge.jar",
+      "sha256": "a59d110b3a0f8ade8c6c4bd9e7c6d6cf265f84391bce89de87ef92de5498d4ef",
+      "sizeBytes": 75598,
+      "sourceUrl": "https://mediafilez.forgecdn.net/files/8408/406/derenderpatcher-1.20.1-1.3.0-forge.jar",
+      "projectId": 1383702,
+      "fileId": 8408406,
+      "version": "1.3.0",
+      "modIds": [
+        "derenderpatcher"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/draconic-evolution-render-patcher",
+      "name": "Draconic Evolution Render Patcher",
+      "kind": "requested"
+    },
+    {
+      "fileName": "DistantFriends-forge-1.20.1-0.5.6.jar",
+      "sha256": "5965acaf5e2ed24542777ff0ec309085332d6c9255903eddc644822a61e851cf",
+      "sizeBytes": 52436,
+      "sourceUrl": "https://edge.forgecdn.net/files/8489/193/DistantFriends-forge-1.20.1-0.5.6.jar",
+      "projectId": 839197,
+      "fileId": 8489193,
+      "path": "mods/DistantFriends-forge-1.20.1-0.5.6.jar",
+      "kind": "requested",
+      "version": "0.5.6",
+      "modIds": [
+        "distantfriends"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/distant-friends",
+      "name": "Distant Friends"
+    },
+    {
       "fileName": "doomsday-1.0.0.jar",
       "sha256": "c5a7a99d0515f1456e3c0525bb53250f3bee2393ffac3d1434e41ec809de338d",
       "sizeBytes": 34770827,
@@ -1721,6 +1513,38 @@
       "name": "The End of Herobrine"
     },
     {
+      "fileName": "Enhanced_Celestials-forge-1.20.1-5.0.0.4.jar",
+      "sha256": "674d747b80c9a9df0bd745ac6648ec336bc1c15d32fa16ffca3a5eb7b83ac76e",
+      "sizeBytes": 1656994,
+      "sourceUrl": "https://edge.forgecdn.net/files/5317/331/Enhanced_Celestials-forge-1.20.1-5.0.0.4.jar",
+      "projectId": 438447,
+      "fileId": 5317331,
+      "path": "mods/Enhanced_Celestials-forge-1.20.1-5.0.0.4.jar",
+      "kind": "requested",
+      "version": "5.0.0.4",
+      "modIds": [
+        "enhancedcelestials"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/enhanced-celestials",
+      "name": "Enhanced Celestials"
+    },
+    {
+      "fileName": "EyesInTheDarkness-1.20.1-1.3.10.jar",
+      "sha256": "1ed5d3fc36b792b955a83afc6a1334e71a4bf9450f78898e6936c916dc7c3916",
+      "sizeBytes": 279244,
+      "sourceUrl": "https://edge.forgecdn.net/files/4722/765/EyesInTheDarkness-1.20.1-1.3.10.jar",
+      "projectId": 304719,
+      "fileId": 4722765,
+      "path": "mods/EyesInTheDarkness-1.20.1-1.3.10.jar",
+      "kind": "requested",
+      "version": "1.3.10",
+      "modIds": [
+        "eyesinthedarkness"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/eyes-in-the-darkness",
+      "name": "Eyes in the Darkness"
+    },
+    {
       "fileName": "fairy_mine-2.6.5-forge-1.20.1.jar",
       "sha256": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
       "sizeBytes": 4067262,
@@ -1751,6 +1575,22 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/from-another-world",
       "name": "From Another World"
+    },
+    {
+      "fileName": "FromAnotherLibrary-forge-1.20.1-1.0.2.jar",
+      "sha256": "376d60dac85e1e1418ca0d19879916444803e30743dcf51be525f1be7110197c",
+      "sizeBytes": 82896,
+      "sourceUrl": "https://edge.forgecdn.net/files/4798/023/FromAnotherLibrary-forge-1.20.1-1.0.2.jar",
+      "projectId": 921324,
+      "fileId": 4798023,
+      "path": "mods/FromAnotherLibrary-forge-1.20.1-1.0.2.jar",
+      "kind": "dependency",
+      "version": "1.0.2",
+      "modIds": [
+        "fromanotherlibrary"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/fromanotherlibrary",
+      "name": "FromAnotherLibrary"
     },
     {
       "fileName": "godwand-forge-1.20.1-1.2.0.jar",
@@ -1860,6 +1700,22 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/hsr-phainon",
       "name": "HSR Phainon"
+    },
+    {
+      "fileName": "JujutsuCraft-ver51-forge-1.20.1.jar",
+      "sha256": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
+      "sizeBytes": 16810987,
+      "path": "mods/JujutsuCraft-ver51-forge-1.20.1.jar",
+      "kind": "requested",
+      "version": "51",
+      "modIds": [
+        "jujutsucraft"
+      ],
+      "name": "Jujutsu Craft",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sorceryfight",
+      "sourceUrl": "https://edge.forgecdn.net/files/9146/690/JujutsuCraft-ver51-forge-1.20.1.jar",
+      "projectId": 471288,
+      "fileId": 9146690
     },
     {
       "fileName": "kleiders_custom_renderer-7.4.1-forge-1.20.1.jar",
@@ -2051,6 +1907,22 @@
       "name": "Orbital Railgun Forge"
     },
     {
+      "fileName": "Pehkui-3.8.2+1.20.1-forge.jar",
+      "sha256": "54210f454c166f65a1bcbbfe4ea52e6f73e07844a793c7132f1af4076a0f42fc",
+      "sizeBytes": 671605,
+      "sourceUrl": "https://edge.forgecdn.net/files/5393/101/Pehkui-3.8.2%2B1.20.1-forge.jar",
+      "projectId": 319596,
+      "fileId": 5393101,
+      "path": "mods/Pehkui-3.8.2+1.20.1-forge.jar",
+      "kind": "dependency",
+      "version": "3.8.2+1.20.1-forge",
+      "modIds": [
+        "pehkui"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/pehkui",
+      "name": "Pehkui"
+    },
+    {
       "fileName": "photon-forge-1.20.1-1.1.17.jar",
       "sha256": "3bd09a759744e9e3b3e7315eaafa9dcd27945ef13331148e8b8169950560e5fb",
       "sizeBytes": 5078005,
@@ -2067,6 +1939,22 @@
       "name": "Photon"
     },
     {
+      "fileName": "Platform-forge-1.20.1-1.4.2.jar",
+      "sha256": "90a8dbe620614f4be677e43071cfaf01bbad382ad3354088d6caaf182fca7166",
+      "sizeBytes": 1197800,
+      "sourceUrl": "https://edge.forgecdn.net/files/9318/515/Platform-forge-1.20.1-1.4.2.jar",
+      "projectId": 997634,
+      "fileId": 9318515,
+      "path": "mods/Platform-forge-1.20.1-1.4.2.jar",
+      "kind": "dependency",
+      "version": "1.4.2",
+      "modIds": [
+        "platform"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/platform",
+      "name": "platform"
+    },
+    {
       "fileName": "playmate 1.1.2 1.20.1.jar",
       "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
       "sizeBytes": 4419554,
@@ -2081,6 +1969,38 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/playmate",
       "name": "Playmate"
+    },
+    {
+      "fileName": "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+      "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
+      "sizeBytes": 7080698,
+      "sourceUrl": "https://edge.forgecdn.net/files/5015/286/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+      "projectId": 433068,
+      "fileId": 5015286,
+      "path": "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+      "kind": "requested",
+      "version": "1.20.1-1.9.1-beta.1",
+      "modIds": [
+        "presencefootsteps"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
+      "name": "Presence Footsteps (Forge)"
+    },
+    {
+      "fileName": "Rats-1.20.1-8.1.3.jar",
+      "sha256": "9a73aa327f8d48a06208bb6f47f03799e061eac8714f09301df0ef5d34ca5f3c",
+      "sizeBytes": 8437611,
+      "sourceUrl": "https://edge.forgecdn.net/files/5904/296/Rats-1.20.1-8.1.3.jar",
+      "projectId": 323596,
+      "fileId": 5904296,
+      "path": "mods/Rats-1.20.1-8.1.3.jar",
+      "kind": "requested",
+      "version": "1.20.1-8.1.3",
+      "modIds": [
+        "rats"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rats",
+      "name": "Rats"
     },
     {
       "fileName": "remorphed-4.2.jar",
@@ -2145,6 +2065,22 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rimulib",
       "name": "rimulib"
+    },
+    {
+      "fileName": "RollingGiantOldestView-forge-1.20.1-1.3.jar",
+      "sha256": "72f3a15a8bf7b1ec92629a231a952d68fc636ce9d7b4ac4c8c7a887df12997f4",
+      "sizeBytes": 1305843,
+      "sourceUrl": "https://edge.forgecdn.net/files/7550/674/RollingGiantOldestView-forge-1.20.1-1.3.jar",
+      "projectId": 1277781,
+      "fileId": 7550674,
+      "path": "mods/RollingGiantOldestView-forge-1.20.1-1.3.jar",
+      "kind": "requested",
+      "version": "1.0.0",
+      "modIds": [
+        "rolling_giant_oldest_view"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rolling-giant-oldest-view",
+      "name": "Rolling Giant: Oldest View"
     },
     {
       "fileName": "rottencreatures-forge-1.20.1-1.1.0.jar",
@@ -2227,6 +2163,22 @@
       "name": "The Singing Villager"
     },
     {
+      "fileName": "Siren_head v1.1.4-1.20.1.jar",
+      "sha256": "7df77358092deed2fcded6c895975891eeaf70ae3bf4fba26bce1553cdce85fa",
+      "sizeBytes": 11279970,
+      "sourceUrl": "https://edge.forgecdn.net/files/5571/439/Siren_head%20v1.1.4-1.20.1.jar",
+      "projectId": 1013669,
+      "fileId": 5571439,
+      "path": "mods/Siren_head v1.1.4-1.20.1.jar",
+      "kind": "requested",
+      "version": "1.1.4",
+      "modIds": [
+        "siren_head"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/siren-head-the-arrival",
+      "name": "Siren Head"
+    },
+    {
       "fileName": "sons_of_sins-2.2.1-forge-1.20.1.jar",
       "sha256": "b8b126443432ff0c475d925a5b208e262df2d1a627548324b7fc1e2a1a46438b",
       "sizeBytes": 5283097,
@@ -2289,6 +2241,22 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sounds-of-the-forest",
       "name": "Sounds of the Forest"
+    },
+    {
+      "fileName": "The-Hordes-1.20.1-1.6.3i-all.jar",
+      "sha256": "f3f7cb25540cb0b86eb5ccea220b8684953e56fea3764b0dcd7678aadd4276c7",
+      "sizeBytes": 619598,
+      "sourceUrl": "https://edge.forgecdn.net/files/8843/034/The-Hordes-1.20.1-1.6.3i-all.jar",
+      "projectId": 485779,
+      "fileId": 8843034,
+      "path": "mods/The-Hordes-1.20.1-1.6.3i-all.jar",
+      "kind": "requested",
+      "version": "1.6.3g",
+      "modIds": [
+        "hordes"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-hordes",
+      "name": "The Hordes"
     },
     {
       "fileName": "the-shooting-star-demo-1.4.4-forge.jar",
@@ -2401,6 +2369,22 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-mimicer",
       "name": "The Mimicer"
+    },
+    {
+      "fileName": "TheOneWhoWatches-V1.4.4-1.20.1.jar",
+      "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696",
+      "sizeBytes": 5493144,
+      "sourceUrl": "https://edge.forgecdn.net/files/7608/035/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+      "projectId": 940557,
+      "fileId": 7608035,
+      "path": "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+      "kind": "requested",
+      "version": "1.4.4",
+      "modIds": [
+        "the_one_who_watches"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-one-who-watches",
+      "name": "The One Who Watches"
     },
     {
       "fileName": "theonlooker-forge-1.20.1-4.7.1-alpha.jar",
@@ -2540,6 +2524,22 @@
       "name": "Woodwalkers"
     },
     {
+      "path": "mods/weather2-1.20.1-2.8.3.jar",
+      "fileName": "weather2-1.20.1-2.8.3.jar",
+      "sha256": "5eb828f93b2eb370d7f38ad1893739caf7655f32d58dbbdaabae6075ede635db",
+      "sizeBytes": 6852245,
+      "sourceUrl": "https://mediafilez.forgecdn.net/files/5244/118/weather2-1.20.1-2.8.3.jar",
+      "projectId": 237746,
+      "fileId": 5244118,
+      "version": "1.20.1-2.8.3",
+      "modIds": [
+        "weather2"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/weather-storms-tornadoes",
+      "name": "Weather, Storms & Tornadoes",
+      "kind": "requested"
+    },
+    {
       "fileName": "whisperwoods-1.20.1-2.1.2-forge.jar",
       "sha256": "211f99245543494e063ce64a8d4f964a0999df6adb53304d259d97413406358c",
       "sizeBytes": 1240454,
@@ -2602,6 +2602,22 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/zombie-awareness",
       "name": "Zombie Awareness"
+    },
+    {
+      "fileName": "ZoNiEx-1.2.1-forge-1.20.1.jar",
+      "sha256": "57a71e8680009a18b8f2a76f337e83b0ac99dab9fbe07aea03a47b396ec2e1c5",
+      "sizeBytes": 894750,
+      "sourceUrl": "https://edge.forgecdn.net/files/6276/844/ZoNiEx-1.2.1-forge-1.20.1.jar",
+      "projectId": 1171163,
+      "fileId": 6276844,
+      "path": "mods/ZoNiEx-1.2.1-forge-1.20.1.jar",
+      "kind": "requested",
+      "version": "1.2.1",
+      "modIds": [
+        "zoniex"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/zoniex",
+      "name": "Zombie Nightmare Expansions"
     }
   ],
   "supportFiles": [
@@ -2677,15 +2693,15 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "1a4311327f0513b8d717595a262dc6dc44835b8fda47f121c8da43da2fb48d01",
-      "sizeBytes": 12994,
+      "sha256": "ad4dff60b99a34a613d8f584274ac111e0c2f26911bd66154b086b8396379660",
+      "sizeBytes": 12951,
       "kind": "resource",
       "reason": "User-requested optional key-only controls preset and guide. Uses the actual 682 native EN/RU Options mapping names; explicit Apply preserves language, graphics and other personal preferences. Optional and mandatory manual character groups are documented; no JAR/world/permission changes."
     },
     {
       "path": "launcher/controls-preset.txt",
-      "sha256": "73c4ed9b08666e758fa00b5f305afda7b9704068cf747af7555be28e83fdd603",
-      "sizeBytes": 35738,
+      "sha256": "fffd40f60e730f751eb5dcf292a7f9b2f09c6401f1ffd9ca0dcd3ccc265b202f",
+      "sizeBytes": 35517,
       "kind": "configuration",
       "reason": "User-requested optional key-only controls preset and guide. Uses the actual 682 native EN/RU Options mapping names; explicit Apply preserves language, graphics and other personal preferences. Optional and mandatory manual character groups are documented; no JAR/world/permission changes."
     },
@@ -2716,6 +2732,27 @@
       "sizeBytes": 1727,
       "kind": "configuration",
       "reason": "Pack-owned exact official Ollama runtime and model recipe. The generic launcher verifies and prepares this declared dependency before Java; Verity owns native backend startup and shutdown."
+    },
+    {
+      "path": "kubejs/client_scripts/lanmc_memory_warning_policy.js",
+      "sizeBytes": 421,
+      "sha256": "68b42fde0072ce3f366605a7619931cb6388575230ca7a910c23580b58cbaeab",
+      "kind": "configuration",
+      "reason": "Pack-owned client KubeJS native Memory Settings disableWarnings=true before its initial game-menu check. Suppresses the requested upper-memory panel without rewriting personal JSON or changing the selected heap. Earlier low-heap Swing/constructor logs are outside this client stage."
+    },
+    {
+      "path": "kubejs/assets/Verity-JE-RU.zip",
+      "sizeBytes": 383380,
+      "sha256": "de15104f3ea81fe2ba50116c65f3d74e29692cefbc6ef68192244a7c64740b68",
+      "kind": "resource",
+      "reason": "User-requested untouched PAGODI Verity JE Russian Translation resource pack, CF1774624/file9375140, loaded through existing KubeJS native top-level assets ZIP support. Adds a partial ru_ru layer; approved Russian Verity JAR and personal resource-pack selection remain unchanged.",
+      "projectId": 1774624,
+      "fileId": 9375140,
+      "version": "Verity JE-RU-1.20.1-v6.0.0",
+      "fileName": "Verity-JE-RU.zip",
+      "websiteUrl": "https://www.curseforge.com/minecraft/texture-packs/verity-je-russian-translation-rusifikator",
+      "sourceUrl": "https://mediafilez.forgecdn.net/files/9375/140/Verity-JE-RU.zip",
+      "license": "All Rights Reserved"
     }
   ],
   "questLocalization": {

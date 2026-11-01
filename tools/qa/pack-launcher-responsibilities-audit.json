@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 1,
+  "kind": "public-safe-pack-launcher-responsibilities-source-audit",
+  "launcherSourceRevision": "f9b8967d6d0a5a1e20064feca843cf4c48d9d36a",
+  "launcherMandatoryReleaseCasesPassed": 503,
+  "launcherPublishedExeVerificationClaimedByThisReport": true,
+  "launcherPublicProof": {
+    "sha256": "44fb7e548007b1bd6dcfff3a658a1cfb7b06be0f0a395716e32ad2b7c503cb52",
+    "workflowId": 41312377974,
+    "ciConclusion": "success",
+    "exeSizeBytes": 168754605,
+    "exeSha256": "fe9d2891bcca4df4ed3e1e8f06f8c876eb280155fd5d61819c9bade507ede524",
+    "delta420To421ReproducedExactPublicExecutable": true,
+    "downloadedExeExecuted": false,
+    "uiOrSteamP2PVerified": false
+  },
+  "originalPublicProof": {
+    "sha256": "de7708230580c93f5c012628751a79585968c3bcad2ad2c56c1cb2aea4196720",
+    "workflowId": 41312613040,
+    "sourceRevision": "5c83a253137be7133336995bec111aa4ee8ef089",
+    "currentRuntimeFiles": 1805,
+    "allCurrentSourceFileHashesVerified": true,
+    "allCurrentPayloadMembersIndependentlyVerified": true,
+    "newActualPayloadDownloads": 2,
+    "newActualLibraryDownloads": 1,
+    "unchangedPayloadsReusedOnlyByExactPriorActualPublicSha256": 217,
+    "scope": "Historical parent5c83 runtime proof, not the later diagnostic config cohort."
+  },
+  "originalSourceLocaleCorrection": {
+    "sourceRevision": "465fcd2a71c027f629e43055f9450cdbbb340ea2",
+    "sourceOnlyChangedPaths": [
+      "README.md",
+      "tools/keybinds/stock.json",
+      "tools/qa/original-native-title-421.json",
+      "tools/qa/original-native-title-421.md"
+    ],
+    "runtimeAndPresetChanged": false,
+    "canonicalCorrectedNativeReceiptSha256": "c59822b2bfd263e3e04fefaeca1baf0f1806ca89b009b94166d5b12d5ff59f2f",
+    "correctedReceiptPublicAssetVerificationClaimed": true,
+    "currentPublicMetadataProofSha256": "de8e4f9b472fc0294af394e73ee9c438bb718552b2a7d5531f8239c850650b5c",
+    "currentWorkflowId": 41314220858,
+    "currentPublicManifestSha256": "680b7a758ef8339eabdf922412284876c4c481bcbdec292cc3cebb9d0226d178",
+    "payloadAssetsReusedByExactParentDigest": 219,
+    "actualNewLibraryDownloads": 1,
+    "knownPublicRuntimeProofCanPrecedeMetadataCorrection": true,
+    "scope": "Historical source-only465 metadata correction, before the later diagnostic runtime delta."
+  },
+  "modifiedSourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+  "modifiedComposition": {
+    "jars": 532,
+    "baseMembership": 431,
+    "originalBaseJars": 430,
+    "officialBaseOverrides": 1,
+    "requestedNewJars": 82,
+    "newDependencyJars": 19,
+    "supportFiles": 18,
+    "authorByteExactJars": 530,
+    "authorizedNewDerivativeJars": 2
+  },
+  "sourceCode": [
+    {
+      "path": "Program/PackRuntimeService.cs",
+      "sha256": "5818c42d265c2df45f3a228e03a13cc4aa701d8fe98e06dc78a2f156c76894e5"
+    },
+    {
+      "path": "Program/SteamTransportCatalog.cs",
+      "sha256": "84d93bcb2ca5e3b3b356c3ca370b6a412569f5cae8d16dcdb7254142004b6955"
+    },
+    {
+      "path": "Program/ManagedComponentService.cs",
+      "sha256": "f2784f1f8390308f4659871d6125f0a0aaaa40df0fa676dc28499409bbaf8939"
+    },
+    {
+      "path": "Program/SkinService.cs",
+      "sha256": "27356defa4fb37f57a4180efa742533c8de6cb114b05aa86b0ac964354ae6c81"
+    },
+    {
+      "path": "Program/PortableIdentityRegistryService.cs",
+      "sha256": "dc029d942a1457c397c9bccc7c2d8ea5419607a3ce1925ab845e606d77e96b14"
+    },
+    {
+      "path": "Program/IdentityAdapterMappingService.cs",
+      "sha256": "3ddeea8271971d545f3fd80bf3b4eb75b47cf77d61323b90019669cd39f993df"
+    },
+    {
+      "path": "Program/IdentityAdapters/Common/PortableLanAutoPublishHooks.java",
+      "sha256": "43d2c511a35597653dfc51a11e400a7baf6ef1f0593da62c660a27db4d524ff3"
+    },
+    {
+      "path": "Program/IdentityAdapters/Common/PortableGuestMovementTransformer.java",
+      "sha256": "d67bd5d1070735230b19f71eaa9c9a76d96f65bdfda2b59b4ef4517f407bca1f"
+    },
+    {
+      "path": "Program/PortableIdentityAdapterService.cs",
+      "sha256": "5652cd272beb09396f5631bd48b6e78aa1b24ea1dc357f803cf6997465da7db6"
+    },
+    {
+      "path": "Program/IdentityAdapters/Common/PortableIdentityPreflight.java",
+      "sha256": "c3823b1fac973e086a9ac559dac309e0062d787b604d2cb70398013213125651"
+    },
+    {
+      "path": "Program/LocalAiProvisioningService.cs",
+      "sha256": "05d95bff6c95937913f62b1922f206632eb1defc00b8e949d9d00c2cb9bd1056"
+    },
+    {
+      "path": "Program/PackLaunchContextService.cs",
+      "sha256": "bba783e73b7c1faae4e8198b97d500abdb0dc38a0bf9a0e7d1c3e60e494d7f20"
+    },
+    {
+      "path": "Program/ControlsPresetService.cs",
+      "sha256": "d1dc6b5634aeb13f64b9cc6305e11db877c4f2a08c68318f04f13e86ecb69848"
+    },
+    {
+      "path": "Program/OptionsDefaultsService.cs",
+      "sha256": "e15f76c4e90841f117c80d5ccb18baf524d7d079d21b58c30b4ac7c68d42e33c"
+    },
+    {
+      "path": "Program/ResourcePackDefaultsService.cs",
+      "sha256": "6f2841d3c65f9a0f854739d6bf7ddb5b8bdc87808dad45cd06b61cb47ddeb68f"
+    },
+    {
+      "path": "Program/MinimapResetService.cs",
+      "sha256": "c3cfb544a9eec0efb540d040068831aa404cee9b57e5a0071017241becdaf9df"
+    },
+    {
+      "path": "Program/PackInstanceService.cs",
+      "sha256": "86a20c478272d172dab4872aa642515d4ddce203f26c43ed1f698edf53b08ad5"
+    },
+    {
+      "path": "Program/MinecraftProcessService.cs",
+      "sha256": "a48436c47d7319b66a83541424084db5c8df4d8fbaa4d0f52609409d3d781668"
+    },
+    {
+      "path": "Program/WindowTitleSettings.cs",
+      "sha256": "59a371785aedce979b5090fe1443adaa9937dfbfe4731da2421cdc8ae9500aee"
+    },
+    {
+      "path": "Program/GameNoticeOverlayService.cs",
+      "sha256": "8df6bcaf54806f76cdb93914d4161ff4d31d21867c98051c17305c4140dba5c5"
+    },
+    {
+      "path": "Program/MainWindow.xaml.cs",
+      "sha256": "548d825992921fc005fc2b142fefc5d4a26fbc7b355c263a6e787564d6a8b742"
+    }
+  ],
+  "packDescriptors": [
+    {
+      "packId": "all-the-mods-10",
+      "descriptors": {
+        "controls-preset.txt": {
+          "present": true,
+          "sha256": "4dabc94769baf569b24a8f8df68593b652ce3b28e8cf086c8a4f89cb5100e51c"
+        },
+        "jvm-args.txt": {
+          "present": true,
+          "sha256": "00c9054b671ac8c70eb7eb01425a4c4c11717fbc8db6bd3cd7145fac3de4969b"
+        },
+        "options-default.txt": {
+          "present": true,
+          "sha256": "7bf69d4a9923d6615e00989748d99cc243c07e96235c037d11a20a3422f4bf96"
+        },
+        "resourcepacks-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "map-reset.txt": {
+          "present": false,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "packId": "all-the-mods-9",
+      "descriptors": {
+        "controls-preset.txt": {
+          "present": true,
+          "sha256": "180653847d8ff8b70deee595c1b38e51b23c6aacface960abdd10bd62f89be91"
+        },
+        "jvm-args.txt": {
+          "present": true,
+          "sha256": "a1f3a734e672681e16e8db9a35ece57236720f99f95a85bac9eb2caac1e19d3c"
+        },
+        "options-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "resourcepacks-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "map-reset.txt": {
+          "present": false,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "packId": "all-the-mods-9-modified",
+      "descriptors": {
+        "controls-preset.txt": {
+          "present": true,
+          "sha256": "fffd40f60e730f751eb5dcf292a7f9b2f09c6401f1ffd9ca0dcd3ccc265b202f"
+        },
+        "jvm-args.txt": {
+          "present": true,
+          "sha256": "a1f3a734e672681e16e8db9a35ece57236720f99f95a85bac9eb2caac1e19d3c"
+        },
+        "options-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "resourcepacks-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "map-reset.txt": {
+          "present": false,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "packId": "terrafirma-rebirth",
+      "descriptors": {
+        "controls-preset.txt": {
+          "present": true,
+          "sha256": "dfa1a153069c433e3db403b94d9bfe00ff258aa2cef95503e8c1cd20d162b698"
+        },
+        "jvm-args.txt": {
+          "present": true,
+          "sha256": "94c3837d106accff859e88201ffae225b67b0612485cb8e7d2d8f75718efdd9b"
+        },
+        "options-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "resourcepacks-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "map-reset.txt": {
+          "present": false,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "packId": "minecraft-26-2",
+      "descriptors": {
+        "controls-preset.txt": {
+          "present": true,
+          "sha256": "b59348d914d666b1c0b6739a50f267d944180bd3e647a1c897f62ce0ba069524"
+        },
+        "jvm-args.txt": {
+          "present": true,
+          "sha256": "a1f3a734e672681e16e8db9a35ece57236720f99f95a85bac9eb2caac1e19d3c"
+        },
+        "options-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "resourcepacks-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "map-reset.txt": {
+          "present": false,
+          "sha256": null
+        }
+      }
+    },
+    {
+      "packId": "caves-and-dungeons",
+      "descriptors": {
+        "controls-preset.txt": {
+          "present": true,
+          "sha256": "61fa1076a25ef1f0d6138ce85a61c0bad3e55ace65eff8c815d3f29b6f5f74cd"
+        },
+        "jvm-args.txt": {
+          "present": true,
+          "sha256": "a1f3a734e672681e16e8db9a35ece57236720f99f95a85bac9eb2caac1e19d3c"
+        },
+        "options-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "resourcepacks-default.txt": {
+          "present": false,
+          "sha256": null
+        },
+        "map-reset.txt": {
+          "present": false,
+          "sha256": null
+        }
+      }
+    }
+  ],
+  "atm10OptionsDefault": {
+    "activeEntries": 20,
+    "forcedEntries": 0,
+    "ownGraphicsDistanceLimits": 0,
+    "onlyLanguageAndKeyEntries": true,
+    "nativeDefaultSettingsOrConfiguredDefaultsRouteFound": false,
+    "reason": "Only-missing generic options merge preserves existing values; source-owned descriptor remains declarative pack data. Whole-template overwrite would replace personal options."
+  },
+  "resourcePackAndMapResetReaders": {
+    "activeInCurrentSixPackSources": false,
+    "legacyRemovedLl8OutsideThisScope": true
+  },
+  "originalNativeTitleReport": {
+    "destination": "tools/qa/original-native-title-421.json",
+    "sha256": "c59822b2bfd263e3e04fefaeca1baf0f1806ca89b009b94166d5b12d5ff59f2f"
+  },
+  "limitations": [
+    "Generic dynamic hooks are not claimed fundamentally impossible to move in future.",
+    "Native profile/transform/CI proof is not rendered selected-skin or two-client Steam proof.",
+    "Caves descriptors read-only from current installed payload; no personal files copied into this report.",
+    "No raw user logs, machine paths, player UUID, endpoint or credentials published."
+  ],
+  "historicalFailed533": {
+    "sourceLockSha256": "36859e8f9b67789407e976436bb99070428b2a53cd6b75831861f3ffee145265",
+    "nativeAcceptance": false,
+    "reportPath": "tools/qa/failed-runtime-533.json",
+    "reportSha256": "1265b1d4921cf32e87303919bc024793fc69227e7157412267000dd10ae985eb",
+    "current533MeasuredNamespace": {
+      "run": "final-weather-421-02",
+      "sourceLoadedInventoryPath": "library/loaded-mods.json",
+      "sourceLoadedInventorySha256": "6d413c0986c7815bd96d250c14a9d24ca0236cbc540adf460ace3f2286f0a7ea",
+      "nativeAllModIds": 561,
+      "nativePackModIds": 558,
+      "nativeOptionsKeys": 642,
+      "nativeRegistryKeys": 656,
+      "sourceStockSha256": "cbc5ffc818f40256b7bdc918c6587618e35f7a3be6fc55850cbfe893aea1fdf2",
+      "all642SourceNamesEqualNativeOptions": true,
+      "currentPresetApplyPhysicalInputOrRestartClaimed": false,
+      "historical531BindingsProofKeptSeparate": true,
+      "nativeRuI18nSamplesObserved": true,
+      "nativeI18nObservationSha256": "797a4385edb768a1e77d2978bb40f93397ead62bbf804205d8cf0b461536be56",
+      "nativeKeyInventorySha256": "22d0fb9a43e4dd0540e668b27ca7df1236abf3b159b866096860e0475a108450",
+      "localePrecision": "Run02 observed RU natively and persisted ru_ru/pauseOnLostFocus=false. First-boot run01 requested seed was overwritten and is not RU UI proof. Historical evidence remains separate.",
+      "continuousFiveMinuteNoInputWorldPass": true,
+      "healthyNoInputSeconds": 335.147,
+      "healthyNoInputSamples": 103,
+      "pausedNoInputSamples": 0,
+      "fullClientAiAndNormalExitAcceptance": false
+    },
+    "current533RuntimeOutcome": {
+      "status": "FAILED_SOUL_EATER_DELAYED_SERVER_TICK_AFTER_HEALTHY_INTERVAL",
+      "crashAtUtc": "2026-11-01T14:14:44Z",
+      "exitAtUtc": "2026-11-01T14:14:56Z",
+      "exitCode": -1,
+      "directErrorOwner": "Soul Eater",
+      "jarPath": "mods/SoulEater_1.20.1_ver35.jar",
+      "declaredModVersion": "1.25.11",
+      "jarSha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536",
+      "site": "FreeOnEntityTickUpdateProcedure.lambda$execute$9:190 -> SoulEaterMod.tick:89; Entity.getX receiver null",
+      "actualGiveAtUtc": "2026-11-01T14:14:15.768Z",
+      "chatFileQueuedAfterCrashAtUtc": "2026-11-01T14:14:49Z",
+      "actualRussianChatSent": false,
+      "actualAiApiRequestPerformed": false,
+      "actualAiReplyClaimed": false,
+      "verity790DiagnosticPathObserved": false,
+      "normalSaveQuitClaimed": false,
+      "errorHeaders": 108,
+      "fatalHeaders": 2,
+      "prefixErrorHeaders": 103,
+      "prefixFatalHeaders": 0,
+      "latePlaceboGearFallbackHeaders": 2,
+      "latePlaceboAtUtc": "2026-11-01T14:12:11Z",
+      "soulEaterRelatedErrorHeaders": 3,
+      "causalRelationToVerityOrWeatherEstablished": false,
+      "rootNativeAcceptancePresent": false,
+      "fullErrorClassificationPending": true
+    },
+    "privateQaDefaultProfileDelta": {
+      "path": "config/defaultsettings/Default/options.txt",
+      "sourceBytes": 2249,
+      "sourceSha256": "083ce95f3d8da669852ebe76227c7bfa93c138d735e785a4fc121e3f42171f62",
+      "privateQaBytes": 2250,
+      "privateQaSha256": "98eb66c395625c078869ec3201d3cea595f2e76a5e86401fe430f4d8ae4bd893",
+      "onlyChangedRows": [
+        [
+          "lang:en_us",
+          "lang:ru_ru"
+        ],
+        [
+          "pauseOnLostFocus:true",
+          "pauseOnLostFocus:false"
+        ]
+      ],
+      "other101RowsEqual": true,
+      "authorKeysFileUnchangedSha256": "1b7838b3aebe4e492843dd29c5c0bc5d7ef956cab55dc0bd6a8102f7562ea5e9",
+      "sourceProfileChanged": false,
+      "all1915SourceAndRuntimeFilesByteEqualClaimed": false
+    }
+  },
+  "current532NativeAcceptanceClaimed": true,
+  "current532NamespaceCapturePending": false,
+  "current532MeasuredNamespace": {
+    "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+    "language": "ru_ru",
+    "languageObservedNatively": true,
+    "nativeI18nObservationSha256": "c063a817b6071ac39f9b404cc7ca2b363df11d5ecc71c2da7b3a0d56bab44504",
+    "nativeOptionsKeyCount": 638,
+    "nativeAllRegistryCount": 652,
+    "actualLoadedAllModCount": 560,
+    "actualLoadedPackModCount": 557,
+    "keyInventorySha256": "2934ebb083144da1e88e3024aab147847edec60132e4d534c2906d113651f8bc",
+    "modListObservationSha256": "120f42c09c86718991e4e845ebf394069fd84786a568b97286ab6d1b9847249d",
+    "sourcePresetNamesEqualActualNativeOptions": true,
+    "presetAppliedOrCurrentBindingsMatchedClaimed": false,
+    "scope": "Fresh532 native RU namespace and638 actual mappings persisted through accepted singleplayer world/save/exit. Content receipt is separate from unperformed optional source-preset application/current-binding equality, physical-input and restart checks.",
+    "nativeMappingsPersistedAfterExit": 638,
+    "singleplayerContentAcceptance": {
+      "path": "tools/qa/native-source-acceptance.json",
+      "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
+      "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+      "scope": "Measured singleplayer content only; Steam/network acceptance remains open; no applied-preset/physical-input/restart/all-abilities or visual PASS."
+    },
+    "loadedInventoryPath": "library/loaded-mods.json",
+    "loadedInventorySha256": "aad8c37b02fec2c64af5d1343d00a817c50f485e5bcd9a6ec1e5b05464dfe920",
+    "sourceStockSha256": "b4329c5b422e9c85ac1b84c1e59e489eaab17e86097d14cb89f78e6cc5db4d1d",
+    "sourceJarCount": 532,
+    "fullStableWorldAiNormalExitAcceptanceClaimed": true,
+    "fullStableWorldAiNormalExitMeasured": true
+  },
+  "current532SourcePreset": {
+    "keyMappings": 638,
+    "bound": 184,
+    "unbound": 454,
+    "independentWorldInputs": 83,
+    "sourcePresetSha256": "fffd40f60e730f751eb5dcf292a7f9b2f09c6401f1ffd9ca0dcd3ccc265b202f",
+    "sourceGuideSha256": "ad4dff60b99a34a613d8f584274ac111e0c2f26911bd66154b086b8396379660"
+  },
+  "current532CompositionReceiptSha256": "db8cdc3f0aec7fd7de7a7047a0a21ca6314b6cbcd369a8bc5316c4770999282d",
+  "legacyUnion": {
+    "rows": 2012,
+    "sha256": "1c8a2f0774c93f75536446e0799479e58ddca3d9db9e52cd072e333a964729b2"
+  },
+  "soulEaterExclusionPolicy": {
+    "path": "tools/qa/soul-eater-removal.json",
+    "sha256": "460a96a9674656881bf099427078c8a690518a95b87772cca331a7c1837c4829",
+    "unconditionalUserExclusion": true,
+    "readditionRequiresNewExplicitUserRequest": true,
+    "futureAttributionDoesNotAutomaticallyReadd": true
+  },
+  "resourceLayer": {
+    "path": "kubejs/assets/Verity-JE-RU.zip",
+    "sha256": "de15104f3ea81fe2ba50116c65f3d74e29692cefbc6ef68192244a7c64740b68",
+    "sizeBytes": 383380,
+    "communityAuthor": "PAGODI",
+    "ruKeys": 29,
+    "combinedRuKeyUnion": 31,
+    "approvedRuJarUnchanged": true,
+    "activation": "Existing native KubeJS top-level assets ZIP scan; no activation JS/personal options/launcher rule",
+    "staticProofPath": "tools/qa/verity-je-ru-resourcepack-static.json",
+    "staticProofSha256": "c2160f777c20b28e893fb5a4ef726049c9ff0b835fc3d265ce52f6f2c6b1e9b5",
+    "nativeProofPath": "tools/qa/verity-je-ru-resourcepack-native.json",
+    "nativeProofSha256": "d11a5ac578195840e38733f326b9f809f66feb4a58d7ce202075ece376d054f5",
+    "additionalResourceOnlyGameTestUserWaived": true,
+    "newResourceGameInjectionOrVisualPassClaimed": false,
+    "observedNativeResourceManagerWinner": {
+      "during": "General532 runtime for Soul Eater removal, not an additional resource-only game test",
+      "stages": [
+        "title",
+        "world"
+      ],
+      "resourceId": "verity:lang/ru_ru.json",
+      "source": "Verity-JE-RU.zip",
+      "sizeBytes": 1938,
+      "sha256": "e67fc9015cc3d0c011a09bca50d56f2a0dce7a0535ff8399a69f136cb7e97328",
+      "allUiCallersOrPixelsClaimed": false
+    },
+    "nativeResourceWinnerObservedInGeneral532Session": true
+  },
+  "tfrFixedTitle": {
+    "owner": "pack",
+    "path": "launcher/jvm-args.txt",
+    "property": "minecraft.portable.identity.windowTitleText",
+    "value": "TerraFirma Rebirth 2",
+    "genericFolderTitleIsFallbackOnly": true,
+    "priority": "MinecraftProcessService.CompleteJvmArguments keeps final pack property before main class"
+  },
+  "current532ClosedRuntime": {
+    "sourceReportPath": "tools/qa/final-runtime-532.json",
+    "sourceReportSha256": "b6ee6f3d2067c64496c04ba342703e2ce2421ef7b8819c7ad519e22823cf75e5",
+    "sourceReportMarkdownPath": "tools/qa/final-runtime-532.md",
+    "sourceReportMarkdownSha256": "6d0ca35be45c29dd32e3d76890a87c78eea32119168c2d8deff3beedfef40e46",
+    "lifecycleEvidenceSha256": "b9dd3a3ae3adc70703ba3d0c9dad0c5e3860670f9b19d44ec61b90b8b0300469",
+    "postExitByteGuardSha256": "5107a3cdf801aad89d798d409c8cd5f37af23c89cdc7030e02acaafb105f16d7",
+    "newPrivateWorldCreatedFor532": true,
+    "nativeHealthAndLifecycle": {
+      "fiveMinuteNoInputWindow": {
+        "schemaVersion": 1,
+        "kind": "native-no-harness-input-world-health",
+        "status": "PASS_MEASURED_UNPAUSED_WINDOW",
+        "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+        "startUtc": "2026-11-01T14:44:56.594647100Z",
+        "lastHealthySampleUtc": "2026-11-01T14:51:30.065091800Z",
+        "capturedAtUtc": "2026-11-01T14:51:30.439926+00:00",
+        "durationSeconds": 393.470444,
+        "healthySamples": 122,
+        "badSamples": 0,
+        "nativeHarnessInputRequests": 0,
+        "actualPhysicalInputMonitoringClaimed": false,
+        "nativeWorldPublished": false,
+        "frozenLogPrefixBytes": 5653640,
+        "frozenLogPrefixSha256": "f1a03690241a762f78c5faacad02343699164bd1e206a4cb754c4a1e495989c7",
+        "errorHeaders": 108,
+        "fatalHeaders": 0,
+        "phaseIsBeforeAnyGiveOrAiChat": true
+      },
+      "normalExitCode": 0,
+      "normalSaveAndExitPassed": true,
+      "allDimensionsSavedMessages": 1,
+      "observedExitUtc": "2026-11-01T14:55:39.9114865+00:00",
+      "dimensionSaveMessages": 82,
+      "crashReports": 0,
+      "forcedKill": false,
+      "ownedGameAndBackendProcessesAbsentAfterExit": true,
+      "ownedBackendEndpointClosedAfterExit": true,
+      "postAiHealthyNativeSampleUtc": "2026-11-01T14:55:24.192619500Z",
+      "fullSessionFinalAcceptanceBelongsToRoot": true
+    },
+    "errorHeaders": 899,
+    "fatalHeaders": 0,
+    "phasePartition": {
+      "preAiPrefix": 108,
+      "verityDiscovery": 790,
+      "grandSigilAfterQuitRequested": 1
+    },
+    "attributionPartition": {
+      "newOwnMetadataNetwork": 6,
+      "sharedOrSourceAttributedBackground": 87,
+      "intentionalAuthorDiagnostics": 14,
+      "baseBloodMagicCuriosUnknownSpecificNewInitiator": 2,
+      "verityDiscovery": 790
+    },
+    "intentionalDiagnostics": {
+      "grandSigilNewOwned": 3,
+      "grandSigilStartup": 2,
+      "grandSigilAfterQuitRequested": 1,
+      "baseJeiProgress": 11,
+      "grandSigilIncludedInShared87": false
+    },
+    "actualNativeAiExchange": true,
+    "nativeRussianResponseObserved": true,
+    "semanticNameAnswerAccuracyClaimed": false,
+    "sourceFilesUnchanged": 1915,
+    "all532RuntimeJarsPlusE4Exact": true,
+    "all1915SourceRuntimeBytesEqualClaimed": false,
+    "privateQaDefaultProfileChangedFieldsOnly": [
+      "language",
+      "pauseOnLostFocus"
+    ],
+    "native638MappingsPersisted": true,
+    "sourcePresetAppliedOrCurrentBindingsMatchedClaimed": false,
+    "newFaultFamilyBeyondHistoricalExactOrSourceAttributedFound": false,
+    "openAlObserved": false,
+    "placeboIronGearObserved": false,
+    "absenceMeansSourceFixClaimed": false,
+    "glDebugInfo": {
+      "total": 44,
+      "shaderLink": 2,
+      "uniform": 42,
+      "sameCurrentOriginalFamiliesAfterProgramHandleNormalization": true,
+      "visualQualityPassClaimed": false
+    },
+    "fullAcceptanceDecidedByThisReport": false,
+    "migrationOrPublicationEstablishedByNativeRun": false,
+    "measuredLauncherReference": {
+      "sha256": "bcb994f7e5b95597b22df4cdd7f1e61d5b255826be9e29d1f8961a7e4241a599",
+      "configuration": "Debug",
+      "fileVersion": "1.0.1.0",
+      "productVersion": "1.0.1+b130ef14f0fd9c8dfdca9e3dcc3bb916e1b8d8dc",
+      "sourceBaseRevision": "b130ef14f0fd9c8dfdca9e3dcc3bb916e1b8d8dc",
+      "workingSourceContainsReviewed421PreflightFix": true,
+      "public421OrFuture422ExeByteIdentityClaimed": false,
+      "scope": "Pre-commit candidate code with reviewed native preflight changes; exact frozen assembly is identified by SHA, not relabelled as a released EXE."
+    },
+    "postAiIntervalScope": {
+      "responseObservedUtc": "2026-11-01T14:52:39Z",
+      "lastHealthyNativeSampleUtc": "2026-11-01T14:55:24.192619500Z",
+      "longerThanThreeMinutesClaimed": false
+    }
+  },
+  "current532RootAcceptance": {
+    "path": "tools/qa/native-source-acceptance.json",
+    "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
+    "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+    "fullClientAndWorldAccepted": true,
+    "scope": "Measured singleplayer content only; real Steam/network remains an open task."
+  },
+  "historicalUserSteamDeferral": {
+    "wasExplicitlyDeferred": true,
+    "supersededByCurrentRealNetworkFailureTask": true,
+    "notCurrentAcceptancePolicy": true
+  },
+  "currentNetworkAcceptance": {
+    "status": "OPEN",
+    "goalClosureRequiresRealSteamFixAndAcceptance": true,
+    "latestFreshSteamPreLoginCmeHadFullStack": false,
+    "directLanSuccessObservedSeparately": true,
+    "directLanSuccessIsSteamPass": false,
+    "modifiedSteamOrSelectedSkinPassClaimed": false,
+    "preciseCauseEstablished": false
+  },
+  "measuredLauncherReference": {
+    "sha256": "bcb994f7e5b95597b22df4cdd7f1e61d5b255826be9e29d1f8961a7e4241a599",
+    "configuration": "Debug",
+    "fileVersion": "1.0.1.0",
+    "productVersion": "1.0.1+b130ef14f0fd9c8dfdca9e3dcc3bb916e1b8d8dc",
+    "sourceBaseRevision": "b130ef14f0fd9c8dfdca9e3dcc3bb916e1b8d8dc",
+    "workingSourceContainsReviewed421PreflightFix": true,
+    "public421OrFuture422ExeByteIdentityClaimed": false,
+    "scope": "Pre-commit candidate code with reviewed native preflight changes; exact frozen assembly is identified by SHA, not relabelled as a released EXE."
+  },
+  "launcherSourceAuditScope": "Immutable421 source/permalink baseline. Future422 network/UI changes are not byte-pinned as published by this audit.",
+  "launcher422AtDocumentSnapshot": {
+    "date": "2026-11-01",
+    "mandatoryReleaseCheckInProgress": true,
+    "publicExeVerifiedByThisReport": false,
+    "networkDisconnectFixOrPassClaimed": false,
+    "emptyRangeScrollPaintFixProved": true,
+    "liveOverflowRootCauseEstablished": false,
+    "boundedNumericScrollDiagnosticsPrepared": true
+  },
+  "originalCurrentConnectionDiagnosticPublication": {
+    "proofSha256": "ade209c146e109a127301635d3baee4f214d3ef962aa424019279de16b12e4df",
+    "sourceRevision": "dba4b58c162bb06591bba3b00618a1d825095e6d",
+    "workflowRunId": 41322238677,
+    "changedRuntimeFiles": [
+      "config/log4j2.xml"
+    ],
+    "runtimeFiles": 1805,
+    "status": "PASS",
+    "newGameRunClaimed": false,
+    "historicalNativeTitleRelabelledAsCurrent": false,
+    "networkConnectionFixClaimed": false
+  },
+  "current532SourceMetadata": {
+    "tools/decisions.json": "b3b9ddf03a7ee3261585c376ebff558db8a81befd6329cbc88d49704e7fae477",
+    "tools/qa/soul-eater-removal.json": "460a96a9674656881bf099427078c8a690518a95b87772cca331a7c1837c4829",
+    "tools/keybinds/stock.json": "b4329c5b422e9c85ac1b84c1e59e489eaab17e86097d14cb89f78e6cc5db4d1d"
+  }
+}

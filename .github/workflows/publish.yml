@@ -46,8 +46,14 @@ jobs:
           distribution: temurin
           java-version: '25'
 
+      - name: Restore pack-owned client policy source templates
+        run: python tools/client-policy/prepare.py --pack . --templates-only --apply
+
       - name: Restore exact original ATM9 and pinned additions
         run: python tools/restore_modified.py --pack . --cache artifacts/verified-downloads
+
+      - name: Verify pack-owned native client policies
+        run: python tools/client-policy/prepare.py --pack . --apply
 
       - name: Verify preserved author base and exact final loaded inventory
         run: python tools/verify_modified.py --pack . --require-loaded-inventory

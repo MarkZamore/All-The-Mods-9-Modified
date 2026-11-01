@@ -122,7 +122,8 @@
   ],
   "parents": {
     "grandsigil": "irons_spellbooks",
-    "remorphed": "walkers"
+    "remorphed": "walkers",
+    "derenderpatcher": "draconicevolution"
   },
   "modsTitle": "Дополнительные моды",
   "visibleModIds": [
@@ -190,7 +191,6 @@
     "singing_villagers",
     "siren_head",
     "sons_of_sins",
-    "soul_eater",
     "sound_of_fear",
     "sound_physics_remastered",
     "sounds_of_the_forest",
@@ -206,7 +206,9 @@
     "whisperwoods",
     "witherstormmod",
     "zombieawareness",
-    "zoniex"
+    "zoniex",
+    "weather2",
+    "derenderpatcher"
   ],
   "baseModIds": [
     "absentbydesign",

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "status": "SOURCE_READY_STATIC_CANDIDATE_ONLY_NATIVE_CLIENT_PENDING",
+  "author": "Corosus",
+  "requestedProject": "Weather, Storms & Tornadoes (Weather2)",
+  "officialPage": "https://www.curseforge.com/minecraft/mc-mods/weather-storms-tornadoes",
+  "officialFilePage": "https://www.curseforge.com/minecraft/mc-mods/weather-storms-tornadoes/files/5244118",
+  "officialSource": "https://github.com/Corosauce/weather2",
+  "reviewedSourceCommit": "2b2edd2c5ec98decb23981eb71a22876210b69e0",
+  "sourceBranchHeadWasLaterDebugOnlyCommit": "c023f4606218a3e49f66ba91fa4cd982f9aebff6",
+  "popularityEvidence": {
+    "observedOfficialProjectDownloadsApprox": "16.1 million",
+    "officialFileDownloadsApprox": "3.1 million",
+    "otherOfficialExamples": [
+      {
+        "project": "Weather and Tornadoes Remastered",
+        "downloadsApprox": 60309,
+        "loader": "Fabric",
+        "page": "https://www.curseforge.com/minecraft/mc-mods/weather-and-tornadoes-remastered"
+      },
+      {
+        "project": "Climate - Clouds, Storms & Technology",
+        "downloadsApprox": 3693,
+        "loader": "Forge",
+        "page": "https://www.curseforge.com/minecraft/mc-mods/climate-clouds-storms-technology"
+      }
+    ],
+    "scope": "Observed official pages substantiate popularity among discovered tornado/weather projects; not an exhaustive proof of every Minecraft project."
+  },
+  "candidate": {
+    "path": "mods/weather2-1.20.1-2.8.3.jar",
+    "fileName": "weather2-1.20.1-2.8.3.jar",
+    "sha256": "5eb828f93b2eb370d7f38ad1893739caf7655f32d58dbbdaabae6075ede635db",
+    "sizeBytes": 6852245,
+    "sourceUrl": "https://mediafilez.forgecdn.net/files/5244/118/weather2-1.20.1-2.8.3.jar",
+    "projectId": 237746,
+    "fileId": 5244118,
+    "version": "1.20.1-2.8.3",
+    "modIds": [
+      "weather2"
+    ],
+    "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/weather-storms-tornadoes",
+    "name": "Weather, Storms & Tornadoes"
+  },
+  "downloadCrossCheck": {
+    "officialModrinthVersion": "ZKVtwI5D",
+    "sha1": "4ec7a372945874dd734a20fa61574f08d2b6763a",
+    "sha512": "240bd2eadfb47c6f8e201105e0d69f4ffe6957ec97d95200c01904edd6eca6b42cb61c67b58492a5fd0b0c306108519980f89c5382d168c5c71dbae95e72bb49",
+    "curseForgeBytesEqualOfficialModrinthHashes": true
+  },
+  "modLoader": "javafml",
+  "loaderVersion": "[47,)",
+  "mandatoryDependencies": [
+    {
+      "modId": "forge",
+      "mandatory": true,
+      "versionRange": "[47,)",
+      "ordering": "NONE",
+      "side": "BOTH"
+    },
+    {
+      "modId": "minecraft",
+      "mandatory": true,
+      "versionRange": "[1.20.1,1.21)",
+      "ordering": "NONE",
+      "side": "BOTH"
+    },
+    {
+      "modId": "coroutil",
+      "mandatory": true,
+      "versionRange": "[1.20.1-1.3.7,)",
+      "ordering": "NONE",
+      "side": "BOTH"
+    }
+  ],
+  "existingCoro": {
+    "path": "mods/coroutil-forge-1.20.1-1.3.7.jar",
+    "version": "1.20.1-1.3.7",
+    "sha256": "11448808a42c17425cf2ea39701841008683d6ad6e2838a34eef0253251a870f",
+    "dependencyAlreadyAddedToModified": "NEW remains NEW; not a BASE update",
+    "replaced": false
+  },
+  "additionalDependenciesNeeded": 0,
+  "authorJarsToAdd": 1,
+  "baseJarsToChange": 0,
+  "authorPackFormat": 4,
+  "ownJarOrRuntimePatchAdded": false,
+  "mixin": {
+    "required": true,
+    "package": "weather2.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "refmap": "weather2.refmap.json",
+    "client": [
+      "client.RenderParticlesOverride"
+    ],
+    "injectors": {
+      "defaultRequire": 1
+    },
+    "minVersion": "0.8"
+  },
+  "nativeRenderSite": {
+    "caller": "LevelRenderer.m_109599_",
+    "invoke": "LevelRenderer.m_109703_(LightTexture,FDDD)V",
+    "untransformedExactForge47_4_0InvokeCount": 2,
+    "noOrdinalRestriction": true,
+    "nearbyEmbeddium": "Redirect inside renderSnowAndRain to Minecraft.useFancyGraphics, distinct call site",
+    "nearbyMekalus": "Inject/ModifyArg on renderSnowAndRain body and weather pipeline, distinct call site in inspected annotations",
+    "sharedRedirectOrActualClientPassClaimed": false
+  },
+  "permissionsAndWorldChanges": {
+    "reviewedAgainst": "Actual release JAR CFR decompilation and version2.8.3 official source; source alone is not runtime proof.",
+    "authorDefaultGrabBlocks": true,
+    "authorDefaultGrabItems": false,
+    "authorDefaultRefinedGrabRules": true,
+    "authorDefaultOptionalForgeBreakEvent": false,
+    "tornadoRip": {
+      "caller": "TornadoHelper.canGrab -> canGrabEventCheck -> tryRip -> listBlockUpdateQueue -> tick",
+      "nativeGate": "strength/list/refined author rules and damage-deflector cache; optional cancellable Forge BreakEvent with fixed author fake player only when blockBreakingInvokesCancellableEvent=true",
+      "delayedMutation": "AIR or DIRT snapshots applied by Level.setBlock(...,3) every40ticks; claim/permission is not rechecked at queue application",
+      "claimProtectedByDefault": false,
+      "owner": "Storm.spawnerUUID/playerControlled only supplies entity-grab exemptions; no demonstrated caster/claim permission gate",
+      "inventoryBoundary": "No blanket block-entity/inventory guard; author excludes normal chest and jukebox in strength safetyCheck, not every modded container; normal native block-removal side effects remain possible. No separate direct inventory-clear loop identified in reviewed release."
+    },
+    "firenado": "TornadoHelper.tick directly sets FIRE above suitable ground; separate path from canGrabEventCheck.",
+    "snowAndSand": "WeatherObjectParticleStorm.tick -> WeatherUtilBlock.fillAgainstWallSmoothly -> trySpreadOnPos2 clears soft obstructions with AIR and adds layered blocks with setBlockAndUpdate; no FTB claim/direct Forge placement gate identified.",
+    "lightning": "Registered LightningBoltWeatherNew powers rods/changes copper via native calls. spawnFire/thunderHit call sites in its tick are commented out in this release; do not claim those inactive paths cause damage. Other generic storm/entity/wind paths remain author behavior.",
+    "operatorCommands": "/weather2 summon and other mutations require permission level2; autonomous storms do not have an authorized player caster.",
+    "ownSafetyChangesApplied": false,
+    "reasonNoOwnSafetyModule": "User forbids own Safety/framework. This addition preserves author mechanics and defaults; no claim-protection guarantee is supplied and no hidden global griefing policy is introduced.",
+    "nativeProtectionLimits": "Author Weather Deflector is an in-world storm mechanism, not FTB claim integration; optional Forge BreakEvent does not by itself prove all delayed/fire/layer-placement paths protected."
+  },
+  "renderingLimits": {
+    "authorNotesUrl": "https://www.curseforge.com/minecraft/mc-mods/weather-storms-tornadoes",
+    "authorReported": "Since2.7.7 supports Optifine/Rubidium shaders; author notes Oculus changes a fog path so snowstorm visuals can differ. Mekalus is Oculus fork. No extra shader mod or quality/distance settings changed.",
+    "fullClientWorldOrWeatherAbilityAcceptanceClaimed": false
+  },
+  "textureStaticInventory": {
+    "pngCount": 123,
+    "maxWidth": 800,
+    "maxHeight": 768,
+    "sumSourcePixels": 4174369,
+    "scope": "PNG dimensions only, not stitcher/backend/GPU compatibility."
+  },
+  "evidence": {
+    "download-provenance.json": "2f35398d1e60044b7b24d5ed2b6f5f11ea5a397c5adfd0a698e1546caba77772",
+    "coroutil-symbol-proof.json": "a1a902de91296b8390f156b079ee5b03988e055a615355c83f5e316ff6f2b1d9",
+    "render-site-proof.json": "04a1948ec47a73daea4be4da4358e996a8c5026b133085aed6e1ecebcee9a0b5"
+  },
+  "activePackLocksLibraryOrPublicationEdited": false,
+  "noGameStartedByThisAudit": true
+}

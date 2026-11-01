@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Current642-name namespace and all preset values observed in actual Russian-locale Minecraft on exact531-JAR composition; original682 EN/RU observations remain historical parent evidence.",
+  "scope": "Current532-JAR actual native RU namespace638/registry652 observed, all638 actual native mappings persisted after accepted singleplayer world/save/exit. Source preset was not applied and current bindings were not compared to it; gameAcceptance=false remains the controls-specific limitation, not a rejection of content acceptance. Historical applied-preset evidence remains separately named.",
   "englishNativeSha256": "1e2c66275c9b5a3d0a7c7d9e42bd58921520f3356acb4c35b4c0deb9f72d4459",
   "russianNativeSha256": "c45fed5c93946834c8294bbed0a0c3703410c86fa0cbc7da83f4e52cde42fad1",
   "sourceJars": {
@@ -437,7 +437,6 @@
     "sophisticatedbackpacks-1.20.1-3.24.9.1391.jar": "fd7464b56e96d24c509da7d701ef7704876476b19dcf7145719cd6435771be4b",
     "sophisticatedcore-1.20.1-1.2.105.1230.jar": "3a9aea835f7a4162681d5cf58199c4b1ad735d0c26cc8e903abc4c8254c6cf68",
     "sophisticatedstorage-1.20.1-1.4.11.1344.jar": "33a288e2d5ad2975ec4e9f9fbc4abc18a0a26720fc78ae00408c2af3b50f2620",
-    "SoulEater_1.20.1_ver35.jar": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536",
     "sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
     "sound_of_fear-0.4.0-forge-1.20.1.jar.jar": "242f06126cb351706fec8e3423942ba2703604f4c3afca4960de3c09e748614a",
     "sounds_of_the_forest-1.0.2-forge-1.20.1.jar": "caa98fef71bf6945954acf7ae1ca3b0cfb70ef859ca69021fa8573754e9df74d",
@@ -534,7 +533,9 @@
     "zombieawareness-1.20.1-1.13.1.jar": "4f5104f7d29e1d065364d2483885f3751da2bef09a734cead2fce81c82c46586",
     "ZoNiEx-1.2.1-forge-1.20.1.jar": "57a71e8680009a18b8f2a76f337e83b0ac99dab9fbe07aea03a47b396ec2e1c5",
     "alltheleaks-1.1.4+1.20.1-forge.jar": "fb72063a7d17df97740d24355444ef2f95eab97728e1256c639bb432c61b7716",
-    "grotesque_steve-1.4.2-quiet.1-forge-1.20.1.jar": "ffa7df6fb07e54217757436b566fa0073b460c5fa4b695cfd2d4d40692208052"
+    "grotesque_steve-1.4.2-quiet.1-forge-1.20.1.jar": "ffa7df6fb07e54217757436b566fa0073b460c5fa4b695cfd2d4d40692208052",
+    "weather2-1.20.1-2.8.3.jar": "5eb828f93b2eb370d7f38ad1893739caf7655f32d58dbbdaabae6075ede635db",
+    "derenderpatcher-1.20.1-1.3.0-forge.jar": "a59d110b3a0f8ade8c6c4bd9e7c6d6cf265f84391bce89de87ef92de5498d4ef"
   },
   "requiredCore": {
     "key.inventory": "key.keyboard.e",
@@ -3436,70 +3437,6 @@
       "role": "unbound",
       "nativeValue": "key.keyboard.unknown",
       "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.soul_eater.weapon_form",
-      "category": "key.categories.souleater",
-      "mappingClass": "net.mcreator.souleater.init.SoulEaterModKeyMappings$1",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "SoulEater_1.20.1_ver35.jar"
-      ],
-      "labels": {
-        "en_us": "Skill Activate"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.z",
-      "defaultValue": "key.keyboard.z"
-    },
-    {
-      "id": "key.soul_eater.skill_rotate",
-      "category": "key.categories.souleater",
-      "mappingClass": "net.mcreator.souleater.init.SoulEaterModKeyMappings$2",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "SoulEater_1.20.1_ver35.jar"
-      ],
-      "labels": {
-        "en_us": "Skill Rotate"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.r",
-      "defaultValue": "key.keyboard.r"
-    },
-    {
-      "id": "key.soul_eater.resonate",
-      "category": "key.categories.souleater",
-      "mappingClass": "net.mcreator.souleater.init.SoulEaterModKeyMappings$3",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "SoulEater_1.20.1_ver35.jar"
-      ],
-      "labels": {
-        "en_us": "Resonate"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.x",
-      "defaultValue": "key.keyboard.x"
-    },
-    {
-      "id": "key.soul_eater.soul_perception_activate",
-      "category": "key.categories.souleater",
-      "mappingClass": "net.mcreator.souleater.init.SoulEaterModKeyMappings$4",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "SoulEater_1.20.1_ver35.jar"
-      ],
-      "labels": {
-        "en_us": "Soul Perception Activate"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.c",
-      "defaultValue": "key.keyboard.c"
     },
     {
       "id": "key.refinedstorage.focusSearchBar",
@@ -11124,7 +11061,7 @@
       "key.traveloptics.lore_item_next",
       "key.traveloptics.lore_item_previous"
     ],
-    "currentNativeRecaptureVerified": true,
+    "currentNativeRecaptureVerified": false,
     "parentEnglishNativeSha256": "1e2c66275c9b5a3d0a7c7d9e42bd58921520f3356acb4c35b4c0deb9f72d4459",
     "parentRussianNativeSha256": "c45fed5c93946834c8294bbed0a0c3703410c86fa0cbc7da83f4e52cde42fad1",
     "approvedJarUpdates": [
@@ -11168,7 +11105,8 @@
       }
     ]
   },
-  "currentNativeEvidence": {
+  "parentNativeSnapshotScope": "englishNativeSha256/russianNativeSha256 describe the historical682-name parent captures; current RU642 evidence is separate.",
+  "previousNativeEvidence214b": {
     "sourceLockSha256": "214b22b429d73f9b68b88c32021253cde056d10e137199a373b92b810e2fcf09",
     "language": "ru_ru",
     "nativeOptionsKeyCount": 642,
@@ -11180,5 +11118,69 @@
     "presetComparisonSha256": "5f9d020dd25b62ba43798bd0b55775bfd71d60c1fce77ce197137995591134ae",
     "scope": "Actual initialized technical-instance title snapshot, not a first-boot/restart/all-abilities acceptance claim."
   },
-  "parentNativeSnapshotScope": "englishNativeSha256/russianNativeSha256 describe the historical682-name parent captures; current RU642 evidence is separate."
+  "weather2StaticKeyMappingProof": "tools/qa/weather2-keymapping-static.json",
+  "finalCompositionNativeRecapturePending": false,
+  "initial533TitleEvidence": {
+    "sourceLockSha256": "36859e8f9b67789407e976436bb99070428b2a53cd6b75831861f3ffee145265",
+    "language": "en_us",
+    "nativeOptionsKeyCount": 642,
+    "nativeAllRegistryCount": 656,
+    "actualLoadedAllModCount": 561,
+    "actualLoadedPackModCount": 558,
+    "keyInventorySha256": "aba1c314d8360d0f7d359f282b357ff3f4f37f61d8f8e233e4f98d12d675e6e2",
+    "modListObservationSha256": "c7a4affeeff37e9c40a79578f738a7ebcc8266132e1f5d38c82f3a40d7bf1807",
+    "sourcePresetNamesEqualActualNativeOptions": true,
+    "presetAppliedOrCurrentBindingsMatchedClaimed": false,
+    "scope": "Initial533 namespace capture only; no continuous300s/unpaused, RU UI, AI or preset-application acceptance.",
+    "languageEvidence": "Inferred from private post-title persisted options; no native language getter in run01. Requested ru_ru was overwritten by first-boot DefaultSettings."
+  },
+  "previousNativeEvidence533Failed": {
+    "sourceLockSha256": "36859e8f9b67789407e976436bb99070428b2a53cd6b75831861f3ffee145265",
+    "language": "ru_ru",
+    "languageObservedNatively": true,
+    "nativeI18nObservationSha256": "797a4385edb768a1e77d2978bb40f93397ead62bbf804205d8cf0b461536be56",
+    "nativeOptionsKeyCount": 642,
+    "nativeAllRegistryCount": 656,
+    "actualLoadedAllModCount": 561,
+    "actualLoadedPackModCount": 558,
+    "keyInventorySha256": "22d0fb9a43e4dd0540e668b27ca7df1236abf3b159b866096860e0475a108450",
+    "modListObservationSha256": "e58c49d9a4a6be33f6699253cbe329100eea59a7bbf669ec0f3518e447dcdc3a",
+    "sourcePresetNamesEqualActualNativeOptions": true,
+    "presetAppliedOrCurrentBindingsMatchedClaimed": false,
+    "scope": "Initialized private technical-world run02 after first-boot run01; no current preset application, physical input or applied-binding restart proof. Full client acceptance is a separate receipt."
+  },
+  "soulEaterRemoval": {
+    "removedKeys": [
+      "key.soul_eater.resonate",
+      "key.soul_eater.skill_rotate",
+      "key.soul_eater.soul_perception_activate",
+      "key.soul_eater.weapon_form"
+    ],
+    "removedJar": "SoulEater_1.20.1_ver35.jar",
+    "removedSha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536",
+    "reason": "User-approved removal after Free current-target null dereference crashed the integrated server."
+  },
+  "currentNativeEvidence": {
+    "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+    "language": "ru_ru",
+    "languageObservedNatively": true,
+    "nativeI18nObservationSha256": "c063a817b6071ac39f9b404cc7ca2b363df11d5ecc71c2da7b3a0d56bab44504",
+    "nativeOptionsKeyCount": 638,
+    "nativeAllRegistryCount": 652,
+    "actualLoadedAllModCount": 560,
+    "actualLoadedPackModCount": 557,
+    "keyInventorySha256": "2934ebb083144da1e88e3024aab147847edec60132e4d534c2906d113651f8bc",
+    "modListObservationSha256": "120f42c09c86718991e4e845ebf394069fd84786a568b97286ab6d1b9847249d",
+    "sourcePresetNamesEqualActualNativeOptions": true,
+    "presetAppliedOrCurrentBindingsMatchedClaimed": false,
+    "scope": "Fresh532 native RU namespace and638 actual mappings persisted through accepted singleplayer world/save/exit. Content receipt is separate from unperformed optional source-preset application/current-binding equality, physical-input and restart checks.",
+    "nativeMappingsPersistedAfterExit": 638,
+    "singleplayerContentAcceptance": {
+      "path": "tools/qa/native-source-acceptance.json",
+      "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
+      "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+      "scope": "Measured singleplayer content only; Steam/network acceptance remains open; no applied-preset/physical-input/restart/all-abilities or visual PASS."
+    }
+  },
+  "gameAcceptanceScope": "Controls-specific: current532 source preset was not applied and current binding equality/physical input/restart were not accepted. Full singleplayer content receipt is tools/qa/native-source-acceptance.json."
 }

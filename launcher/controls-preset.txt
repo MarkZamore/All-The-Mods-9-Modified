@@ -82,8 +82,6 @@ key_key.remorphed_menu:key.keyboard.home
 key_key.rimulib.skill_menu:key.keyboard.f8
 key_key.scpo.activate_anomaly:key.keyboard.f10
 key_key.shooting_star_demo.skill_menu:key.mouse.5
-key_key.soul_eater.skill_rotate:key.keyboard.keypad.3
-key_key.soul_eater.weapon_form:key.keyboard.keypad.4
 key_key.special_ability:key.keyboard.keypad.6
 key_key.verity.push_to_talk:key.keyboard.p
 key_key.voice_chat:key.keyboard.o
@@ -520,8 +518,6 @@ key_key.shooting_star_demo.stellar_remote.the_shooting_star:key.keyboard.unknown
 key_key.shrink.shrink:key.keyboard.unknown
 key_key.smoothCamera:key.keyboard.unknown
 key_key.socialInteractions:key.keyboard.unknown
-key_key.soul_eater.resonate:key.keyboard.unknown
-key_key.soul_eater.soul_perception_activate:key.keyboard.unknown
 key_key.spectatorOutlines:key.keyboard.unknown
 key_key.structure_gel.open_building_tool_gui:key.keyboard.unknown
 key_key.structurecompass.hide:key.keyboard.unknown
