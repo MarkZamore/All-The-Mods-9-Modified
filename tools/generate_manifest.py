@@ -31,6 +31,7 @@ from __future__ import annotations
 from pack_library import stage_library, verify_library
 
 import argparse
+import base64
 import fnmatch
 import hashlib
 import json
@@ -43,6 +44,7 @@ import pathlib
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 
 SCAN_ROOTS = ("mods", "config", "kubejs", "scripts", "defaultconfigs", "data",
               "resourcepacks", "shaderpacks", "configureddefaults", "packmenu", "datapacks", "resources", "launcher")
@@ -77,6 +79,60 @@ def sha256_file(path: Path) -> str:
         while chunk := handle.read(CHUNK):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def required_launcher_features(pack: Path) -> list[str]:
+    """Gate declarative features before a launcher can interpret their payload."""
+    features = []
+    descriptor_path = pack / "launcher/local-ai.json"
+    if descriptor_path.is_file():
+        features.append("local-ai-native-v1")
+        descriptor = json.loads(descriptor_path.read_text(encoding="utf-8-sig"))
+        relative = descriptor.get("recipeFile")
+        if relative is not None:
+            features.append("local-ai-recipe-v1")
+            if (not isinstance(relative, str) or "\\" in relative or ":" in relative
+                    or any(part in ("", ".", "..") for part in relative.split("/"))):
+                fail("local AI recipeFile must be a safe pack-relative path")
+            recipe_path = pack / relative
+            if (relative.split("/")[0] not in SCAN_ROOTS or is_excluded(tuple(relative.split("/")))
+                    or not recipe_path.resolve().is_relative_to(pack.resolve())):
+                fail("local AI recipeFile must belong to the shipped pack file set")
+            if not recipe_path.is_file() or sha256_file(recipe_path) != descriptor.get("recipeSha256"):
+                fail("local AI recipeFile bytes do not match recipeSha256")
+            recipe = json.loads(recipe_path.read_text(encoding="utf-8-sig"))
+            model = recipe.get("model", {})
+            if not isinstance(model, dict):
+                fail("local AI recipe model must be an object")
+            if "blobUrls" in model:
+                urls = model["blobUrls"]
+                if not isinstance(urls, dict) or not urls:
+                    fail("local AI blobUrls must be a non-empty digest-to-HTTPS map")
+                try:
+                    raw = base64.b64decode(model["manifestBase64"], validate=True)
+                    if hashlib.sha256(raw).hexdigest() != model["manifestSha256"]:
+                        raise ValueError("manifest SHA256 differs")
+                    manifest = json.loads(raw)
+                    descriptors = [manifest["config"], *manifest["layers"]]
+                    digests = {row["digest"] for row in descriptors}
+                    if any(not re.fullmatch(r"sha256:[0-9a-f]{64}", value) for value in digests):
+                        raise ValueError("invalid descriptor digest")
+                    if set(urls) != {digest[7:] for digest in digests}:
+                        raise ValueError("blob URLs do not exactly cover manifest descriptors")
+                    for value in urls.values():
+                        parsed = urlsplit(value)
+                        if (parsed.scheme != "https" or not parsed.hostname or parsed.username
+                                or parsed.password or parsed.fragment or "\\" in value):
+                            raise ValueError("blob URL is not an unauthenticated HTTPS download URL")
+                except (KeyError, TypeError, ValueError) as error:
+                    fail("invalid local AI blobUrls recipe: " + str(error))
+                features.append("local-ai-blob-urls-v1")
+    if (pack / "launcher/launch-context.json").is_file():
+        features.append("launch-context-v1")
+    content_path = pack / "library/content.json"
+    if content_path.is_file() and json.loads(content_path.read_text(encoding="utf-8-sig")).get("visibleModIds") is not None:
+        features.append("curated-mod-list-v1")
+    return features
 
 
 def sanitize_name(name: str) -> str:
@@ -293,17 +349,7 @@ def generate(pack: Path, out: Path, revision: str) -> None:
         "assets": assets,
     }
 
-    required_features = []
-    if (pack / "launcher/local-ai.json").is_file():
-        required_features.append("local-ai-native-v1")
-        descriptor = json.loads((pack / "launcher/local-ai.json").read_text(encoding="utf-8-sig"))
-        if descriptor.get("recipeFile") is not None:
-            required_features.append("local-ai-recipe-v1")
-    if (pack / "launcher/launch-context.json").is_file():
-        required_features.append("launch-context-v1")
-    content_path = pack / "library/content.json"
-    if content_path.is_file() and json.loads(content_path.read_text(encoding="utf-8-sig")).get("visibleModIds") is not None:
-        required_features.append("curated-mod-list-v1")
+    required_features = required_launcher_features(pack)
     if required_features:
         manifest["schemaVersion"] = 2
         manifest["requiredLauncherFeatures"] = required_features

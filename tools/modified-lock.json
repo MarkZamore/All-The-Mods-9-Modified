@@ -2623,10 +2623,10 @@
   "supportFiles": [
     {
       "path": "config/log4j2.xml",
-      "sha256": "6752b55f7a2ede24cef57d8bab70cfeec8f471f7adb72b6fb13b46853151c65d",
-      "sizeBytes": 4137,
+      "sha256": "9e7b9918b6ede54f7393ed3d307e51a2edb032b98c12f069f5df976bcf940b89",
+      "sizeBytes": 4617,
       "kind": "configuration",
-      "reason": "Exact former launcher logging template moved into pack-owned native data; logger severity, throwable output and plugins were checked with actual Minecraft/loader dependencies. No runtime C# config writer remains."
+      "reason": "Pack-owned diagnostic logger captures only four native Connection caught-Throwable DEBUG labels in files while retaining INFO Root/Console and denying all other Connection DEBUG. Exact Minecraft/Forge caller and native Log4j filter probe verified; no gameplay/network fix is claimed."
     },
     {
       "path": "config/mbackrooms/Mbackrooms-Config-Common.toml",
@@ -2721,17 +2721,17 @@
     },
     {
       "path": "launcher/local-ai.json",
-      "sha256": "a5fdc93fa30c2ea8f978c8ac0df4160c8929f7535f0719473f58d4f2a4d9f126",
+      "sha256": "7798d073d45a5e7a3fd0f9d1fd631c14617909d901755b0e0760088468bcda58",
       "sizeBytes": 413,
       "kind": "configuration",
-      "reason": "Generic local dependency declaration bound to the exact Verity JAR and pack-owned recipe SHA256. No launcher-compiled mod, model, language or installation-path policy."
+      "reason": "Generic local dependency declaration bound to the exact unchanged Verity JAR and updated pack-owned mirror recipe SHA256. Model, language, reserve and installation policy are unchanged."
     },
     {
       "path": "launcher/ollama-recipe.json",
-      "sha256": "cee8f1ad0e81cd13f6977eb1dba15131264388f4702b37a6f162b220d34b39e4",
-      "sizeBytes": 1727,
+      "sha256": "87c6b4bdd07eff0a3eaba19215ba2de78f1bed0916ddaedf9cb30afdfa2e26b0",
+      "sizeBytes": 3119,
       "kind": "configuration",
-      "reason": "Pack-owned exact official Ollama runtime and model recipe. The generic launcher verifies and prepares this declared dependency before Java; Verity owns native backend startup and shutdown."
+      "reason": "Pack-owned GitHub mirror URLs for the identical Ollama runtime and all five pinned Qwen3 manifest blobs; runtime/model sizes, SHA256, manifest and execution settings are unchanged. Requires generic launcher local-ai-blob-urls-v1 support."
     },
     {
       "path": "kubejs/client_scripts/lanmc_memory_warning_policy.js",

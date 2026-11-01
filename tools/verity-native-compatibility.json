@@ -60,14 +60,14 @@
     },
     {
       "path": "launcher/local-ai.json",
-      "sha256": "a5fdc93fa30c2ea8f978c8ac0df4160c8929f7535f0719473f58d4f2a4d9f126",
+      "sha256": "7798d073d45a5e7a3fd0f9d1fd631c14617909d901755b0e0760088468bcda58",
       "sizeBytes": 413,
       "kind": "configuration"
     },
     {
       "path": "launcher/ollama-recipe.json",
-      "sha256": "cee8f1ad0e81cd13f6977eb1dba15131264388f4702b37a6f162b220d34b39e4",
-      "sizeBytes": 1727,
+      "sha256": "87c6b4bdd07eff0a3eaba19215ba2de78f1bed0916ddaedf9cb30afdfa2e26b0",
+      "sizeBytes": 3119,
       "kind": "configuration"
     }
   ],
@@ -107,5 +107,14 @@
       "negativeControls": "Both the bare builder and builder-only fix reproduce their respective native KubeJS ambiguities.",
       "preparationProbe": "Full native BuiltinKubeJSForgePlugin wrapper registration; four AI fields only. Separate current lock214b native first-consumer path and full client/world completed; see tools/qa/final-runtime-post-removals-420.json."
     }
+  },
+  "aiDeliveryMirror": {
+    "releaseTag": "ai-ollama-v0.40.12-qwen3-1.7b-8f68893c",
+    "runtimeAndModelPayloadBytesChanged": false,
+    "allFiveManifestBlobUrlsDeclared": true,
+    "registryUrlRole": "Local manifest namespace only; the complete blobUrls mapping supplies every network blob URL.",
+    "requiredLauncherFeature": "local-ai-blob-urls-v1",
+    "proof": "tools/ai-mirror/README.md",
+    "historicalNativeReceipt": "The existing full native acceptance remains evidence for its exact parent lock009 cohort. This delivery-only update does not claim a repeated game run."
   }
 }

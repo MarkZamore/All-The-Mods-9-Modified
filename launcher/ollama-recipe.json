@@ -3,7 +3,7 @@
   "provider": "ollama",
   "runtime": {
     "version": "0.40.12",
-    "archiveUrl": "https://github.com/ollama/ollama/releases/download/v0.40.12/ollama-windows-amd64.zip",
+    "archiveUrl": "https://github.com/MarkZamore/All-The-Mods-9-Modified/releases/download/ai-ollama-v0.40.12-qwen3-1.7b-8f68893c/ollama-windows-amd64-0.40.12-21814944.zip",
     "sizeBytes": 1601458136,
     "sha256": "21814944f3e50d3f07b6bb3af75baddb96f59e91353c332ac9c5063b3bfd1041",
     "installDirectory": "AppData/Local/Verity/ollama"
@@ -12,6 +12,13 @@
     "reference": "qwen3:1.7b",
     "registryUrl": "https://registry.ollama.ai",
     "manifestSha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
-    "manifestBase64": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJkaWdlc3QiOiJzaGEyNTY6NTE3Y2NhZmYwMmZlOWY5OTcxOGFiMmY0NzhlNjExYWEyODEzYzM2MjYzZWVlZDg2YzI0MjdiYzEyMmQxNGFkOCIsInNpemUiOjQ4N30sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5tb2RlbCIsImRpZ2VzdCI6InNoYTI1NjozZDBiNzkwNTM0ZmU0Yjc5NTI1ZmMzNjkyOTUwNDA4ZGNhNDExNzE2NzZlZDdlMjFkYjU3YWY1YzY1ZWY2YWI2Iiwic2l6ZSI6MTM1OTI3OTc3Nn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQub2xsYW1hLmltYWdlLnRlbXBsYXRlIiwiZGlnZXN0Ijoic2hhMjU2OmFlMzcwZDg4NGYxMDhkMTZlN2NjOGZkNTI1OWViYzU3NzNhMGFmYTZlMDc4YjExZjRlZDdlMzlhMjdlMGRmYzQiLCJzaXplIjoxNzIzfSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vbGxhbWEuaW1hZ2UubGljZW5zZSIsImRpZ2VzdCI6InNoYTI1NjpkMThhNWNjNzFiODRiYzRhZjM5NGEzMTExNmJkMzkzMmI0MjI0MWRlNzBjNzdkMmI3NmQ2OWEzMTRlYzhhYTEyIiwic2l6ZSI6MTEzMzh9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5wYXJhbXMiLCJkaWdlc3QiOiJzaGEyNTY6Y2ZmM2YzOTVlZjM3NTZhYjYzZTU4YjBhZDFiMzJiYjZmODAyOTA1Y2FlMTQ3MmU2YTEyMDM0ZTQyNDZmYmJkYiIsInNpemUiOjEyMH1dfQ=="
+    "manifestBase64": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJkaWdlc3QiOiJzaGEyNTY6NTE3Y2NhZmYwMmZlOWY5OTcxOGFiMmY0NzhlNjExYWEyODEzYzM2MjYzZWVlZDg2YzI0MjdiYzEyMmQxNGFkOCIsInNpemUiOjQ4N30sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5tb2RlbCIsImRpZ2VzdCI6InNoYTI1NjozZDBiNzkwNTM0ZmU0Yjc5NTI1ZmMzNjkyOTUwNDA4ZGNhNDExNzE2NzZlZDdlMjFkYjU3YWY1YzY1ZWY2YWI2Iiwic2l6ZSI6MTM1OTI3OTc3Nn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQub2xsYW1hLmltYWdlLnRlbXBsYXRlIiwiZGlnZXN0Ijoic2hhMjU2OmFlMzcwZDg4NGYxMDhkMTZlN2NjOGZkNTI1OWViYzU3NzNhMGFmYTZlMDc4YjExZjRlZDdlMzlhMjdlMGRmYzQiLCJzaXplIjoxNzIzfSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vbGxhbWEuaW1hZ2UubGljZW5zZSIsImRpZ2VzdCI6InNoYTI1NjpkMThhNWNjNzFiODRiYzRhZjM5NGEzMTExNmJkMzkzMmI0MjI0MWRlNzBjNzdkMmI3NmQ2OWEzMTRlYzhhYTEyIiwic2l6ZSI6MTEzMzh9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5wYXJhbXMiLCJkaWdlc3QiOiJzaGEyNTY6Y2ZmM2YzOTVlZjM3NTZhYjYzZTU4YjBhZDFiMzJiYjZmODAyOTA1Y2FlMTQ3MmU2YTEyMDM0ZTQyNDZmYmJkYiIsInNpemUiOjEyMH1dfQ==",
+    "blobUrls": {
+      "517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8": "https://github.com/MarkZamore/All-The-Mods-9-Modified/releases/download/ai-ollama-v0.40.12-qwen3-1.7b-8f68893c/sha256-517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8",
+      "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "https://github.com/MarkZamore/All-The-Mods-9-Modified/releases/download/ai-ollama-v0.40.12-qwen3-1.7b-8f68893c/sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+      "ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4": "https://github.com/MarkZamore/All-The-Mods-9-Modified/releases/download/ai-ollama-v0.40.12-qwen3-1.7b-8f68893c/sha256-ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4",
+      "d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12": "https://github.com/MarkZamore/All-The-Mods-9-Modified/releases/download/ai-ollama-v0.40.12-qwen3-1.7b-8f68893c/sha256-d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+      "cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb": "https://github.com/MarkZamore/All-The-Mods-9-Modified/releases/download/ai-ollama-v0.40.12-qwen3-1.7b-8f68893c/sha256-cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb"
+    }
   }
 }

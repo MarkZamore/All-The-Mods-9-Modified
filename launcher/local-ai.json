@@ -8,5 +8,5 @@
   "reserveMemoryMb": 3072,
   "language": "ru",
   "recipeFile": "launcher/ollama-recipe.json",
-  "recipeSha256": "cee8f1ad0e81cd13f6977eb1dba15131264388f4702b37a6f162b220d34b39e4"
+  "recipeSha256": "87c6b4bdd07eff0a3eaba19215ba2de78f1bed0916ddaedf9cb30afdfa2e26b0"
 }

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "kind": "delivery-and-bounded-logging-amendment",
+  "verifiedAtUtc": "2026-11-01T18:54:51.790916+00:00",
+  "parentSourceRevision": "5d1f1db1062207431b2c698aed580de1c7cfbd87",
+  "parentSourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+  "parentPublicManifestSha256": "626ca4e2a96f41bdffcb55e3c4921eb6b9764a7528717c709c9aee81b09599b6",
+  "parentFullPublicProofSha256": "03da778e8194f891a922579305dccbd079f2503ac290a56c707b7502ae20c937",
+  "historicalNativeReceiptSha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
+  "currentSourceLockSha256": "a42be5fe8d1e28f6cd053a3d8ca8762cd244b050d9719416b9708ce257fa81d0",
+  "runtimeFiles": 1915,
+  "unchangedRuntimeFiles": 1912,
+  "changedRuntimeFiles": [
+    {
+      "before": {
+        "path": "config/log4j2.xml",
+        "sizeBytes": 4137,
+        "sha256": "6752b55f7a2ede24cef57d8bab70cfeec8f471f7adb72b6fb13b46853151c65d"
+      },
+      "after": {
+        "path": "config/log4j2.xml",
+        "sizeBytes": 4617,
+        "sha256": "9e7b9918b6ede54f7393ed3d307e51a2edb032b98c12f069f5df976bcf940b89"
+      }
+    },
+    {
+      "before": {
+        "path": "launcher/local-ai.json",
+        "sizeBytes": 413,
+        "sha256": "a5fdc93fa30c2ea8f978c8ac0df4160c8929f7535f0719473f58d4f2a4d9f126"
+      },
+      "after": {
+        "path": "launcher/local-ai.json",
+        "sizeBytes": 413,
+        "sha256": "7798d073d45a5e7a3fd0f9d1fd631c14617909d901755b0e0760088468bcda58"
+      }
+    },
+    {
+      "before": {
+        "path": "launcher/ollama-recipe.json",
+        "sizeBytes": 1727,
+        "sha256": "cee8f1ad0e81cd13f6977eb1dba15131264388f4702b37a6f162b220d34b39e4"
+      },
+      "after": {
+        "path": "launcher/ollama-recipe.json",
+        "sizeBytes": 3119,
+        "sha256": "87c6b4bdd07eff0a3eaba19215ba2de78f1bed0916ddaedf9cb30afdfa2e26b0"
+      }
+    }
+  ],
+  "unchangedContentJars": 532,
+  "supportFiles": 18,
+  "runtimeArchiveAndModelBytesUnchanged": true,
+  "allFiveBlobUrlsPublicBytesVerified": true,
+  "aiMirrorPublicProofSha256": "3959f05f44291e9b32e581f1bd3869d73bf3697c25b01b89f8eef83d15aeb21c",
+  "aiMirrorInventorySha256": "aa2f4aa75c03c34e2b5734f2d9e9c26444de83d825b6877f09bd672a3b28280b",
+  "nativeLoggingFilterProofSha256": "e7f796e4ea71bd02f3819fdd8af2ae9768d60ff7f3ee24729ad78e50d9e2fd81",
+  "requiredLauncherFeatures": [
+    "local-ai-native-v1",
+    "local-ai-recipe-v1",
+    "local-ai-blob-urls-v1",
+    "launch-context-v1",
+    "curated-mod-list-v1"
+  ],
+  "safetyReview": "All532 content JARs/native abilities and AI payload bytes are unchanged. Only declarative download URLs and an exact native caught-Throwable logger filter change; no new world-writing or permission route is introduced.",
+  "newGameRunClaimed": false,
+  "networkFailureFixed": false,
+  "limits": [
+    "Historical native/gameplay receipt remains bound to its parent009 lock.",
+    "New GitHub pack publication and catalog synchronization require separate public-delivery checks.",
+    "The Connection filter adds diagnostic stacks only; no disconnect cause or gameplay fix is established."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "tag": "ai-ollama-v0.40.12-qwen3-1.7b-8f68893c",
+  "assets": [
+    {
+      "name": "ATTRIBUTION-AND-LICENSES.md",
+      "sizeBytes": 2246,
+      "sha256": "e1a23011a5414f9c68fe7c3d46208ca373e496aa98dac47d03118c5cdc99f7c4"
+    },
+    {
+      "name": "LICENSE-Ollama-MIT.txt",
+      "sizeBytes": 1058,
+      "sha256": "5934ed2ce0d15154bcdb9c85203210abac0da4314af34081e36df4599f90b226"
+    },
+    {
+      "name": "LICENSE-Qwen3-Apache-2.0-upstream.txt",
+      "sizeBytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    {
+      "name": "LICENSE-Qwen3-from-pinned-model.txt",
+      "sizeBytes": 11338,
+      "sha256": "d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12"
+    },
+    {
+      "name": "mirror-index.json",
+      "sizeBytes": 5136,
+      "sha256": "c25098901b0263795efc7137504a2bdb86f89685528168780f543b9b6a728fcb"
+    },
+    {
+      "name": "ollama-windows-amd64-0.40.12-21814944.zip",
+      "sizeBytes": 1601458136,
+      "sha256": "21814944f3e50d3f07b6bb3af75baddb96f59e91353c332ac9c5063b3bfd1041"
+    },
+    {
+      "name": "qwen3-1.7b-8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7.manifest.json",
+      "sizeBytes": 859,
+      "sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7"
+    },
+    {
+      "name": "sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+      "sizeBytes": 1359279776,
+      "sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+    },
+    {
+      "name": "sha256-517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8",
+      "sizeBytes": 487,
+      "sha256": "517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8"
+    },
+    {
+      "name": "sha256-ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4",
+      "sizeBytes": 1723,
+      "sha256": "ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4"
+    },
+    {
+      "name": "sha256-cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb",
+      "sizeBytes": 120,
+      "sha256": "cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb"
+    },
+    {
+      "name": "sha256-d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+      "sizeBytes": 11338,
+      "sha256": "d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "sizeBytes": 1439,
+      "sha256": "df988b7b7e7bf681d9d9ffde2ab9771eac3803a7a811a3c0735eb462cbe57b22"
+    }
+  ]
+}

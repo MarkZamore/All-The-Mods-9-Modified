@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "kind": "bounded-network-throwable-logging",
+  "minecraftVersion": "1.20.1",
+  "forgeVersion": "47.4.0",
+  "forgeClientSha256": "010adc332f19b05fb24383954ec7a88694666216e480a6824ff0cbc4740c3c66",
+  "caller": "net.minecraft.network.Connection.exceptionCaught(io.netty.channel.ChannelHandlerContext, java.lang.Throwable)",
+  "logger": "net.minecraft.network.Connection",
+  "nativeLogLevel": "DEBUG",
+  "nativeThrowableMessageLabels": [
+    "Failed to sent packet",
+    "Double fault",
+    "Skipping packet due to errors",
+    "Timeout"
+  ],
+  "loggerNameProof": "Connection static initializer uses com.mojang.logging.LogUtils.getLogger()",
+  "sourceConfigSha256": "6752b55f7a2ede24cef57d8bab70cfeec8f471f7adb72b6fb13b46853151c65d",
+  "candidateConfigSha256": "9e7b9918b6ede54f7393ed3d307e51a2edb032b98c12f069f5df976bcf940b89",
+  "log4jVersion": "2.19.0",
+  "syntheticAssertions": {
+    "allFourThrowableStacksWritten": true,
+    "normalInfoWritten": true,
+    "normalWarnWritten": true,
+    "normalErrorAndStackWritten": true,
+    "packetMarkerDebugRejected": true,
+    "unrelatedDebugAndThrowableRejected": true
+  },
+  "scope": "Real Log4j logger/filter integration with synthetic exceptions. Native caller and logger checked in exact Forge client bytecode. Existing Minecraft custom pattern converters excluded from isolated fixture; no in-game acceptance claimed.",
+  "mechanicsChanged": false,
+  "networkErrorFixed": false,
+  "reason": "The bounded INFO pack configuration did not record native Connection caught exception DEBUG messages. This change retains those four diagnostics in latest.log for the next normal launch without enabling packet debug logs."
+}
