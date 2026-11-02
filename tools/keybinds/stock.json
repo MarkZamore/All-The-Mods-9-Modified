@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "ShootingStar1.5.1/Rimulib1.2.1 candidate: the638 parent namespace/roles and preset bytes are retained, but sourceJars and native evidence below still describe the prior cohort. Actual candidate key registration and JAR-bound recapture are pending; no current preset or game acceptance is claimed.",
+  "scope": "SS1.5.1/Rimulib1.2.1/ModernFix5.25.0 candidate: parent638 namespace/roles and runtime preset are retained. SourceJars/native evidence still bind the prior cohort until actual candidate captures; no current controls/game acceptance is claimed.",
   "englishNativeSha256": "1e2c66275c9b5a3d0a7c7d9e42bd58921520f3356acb4c35b4c0deb9f72d4459",
   "russianNativeSha256": "c45fed5c93946834c8294bbed0a0c3703410c86fa0cbc7da83f4e52cde42fad1",
   "sourceJars": {
@@ -11185,7 +11185,7 @@
   },
   "currentNativeEvidence": {
     "status": "PENDING_ACTUAL_CANDIDATE_CAPTURE",
-    "sourceLockSha256": "d745d91560e234e65e120f8beaf3be3e4e2a98e6ae63bbfd03b74848d50fb1b4",
+    "sourceLockSha256": "d718d6bbd9be9e81346dce02014a46946278d1c76ad2f72099b4c577ce504e73",
     "sourceJarsRepinned": false,
     "oldPresetBytesRetained": true,
     "newGravitiaLanguageKeyRegisteredClaimed": false

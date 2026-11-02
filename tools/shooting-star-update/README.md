@@ -1,6 +1,6 @@
 # Shooting Star 1.5.1 / Rimulib 1.2.1 source update
 
-The candidate replaces only two NEW files: requested Shooting Star Demo 1.4.4 → 1.5.1-demo and its NEW dependency Rimulib 1.1.2 → 1.2.1. The Minecraft 1.20.1 / Forge 47.4.0 platform, all BASE membership/pins and the other 530 JARs remain unchanged. Vocaloid, Addition and SS-21 Quasar remain excluded. Official project links stay attached to their existing IDs in `library/mod-pages.json`.
+The Shooting Star phase replaces two NEW files: requested Shooting Star Demo 1.4.4 → 1.5.1-demo and its NEW dependency Rimulib 1.1.2 → 1.2.1. That phase retains the Minecraft 1.20.1 / Forge 47.4.0 platform and BASE membership/pins. The later separately audited official ModernFix BASE replacement is recorded in tools/qa/modernfix-525-static.json; do not interpret this two-file phase as the complete current candidate. Vocaloid, Addition and SS-21 Quasar remain excluded. Official project links stay attached to their existing IDs in `library/mod-pages.json`.
 
 Exact old/new rows, dependency ranges and limits are recorded in `tools/qa/shooting-star-151-static.json`. The old Rimulib retirement triple is added to `tools/legacy-files.json`; the old Shooting Star triple was already present. This authorizes cleanup only when old size and SHA256 match, not deletion by filename alone.
 

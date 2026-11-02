@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "status": "EXACT_GITHUB_CURSEFORGE_BINARY_EQUIVALENCE_PASS",
+  "verifiedAtUtc": "2026-11-02T10:29:53.225420+00:00",
+  "curseForgeProjectId": 790626,
+  "curseForgeFileId": 7190629,
+  "curseForgeFilePage": "https://www.curseforge.com/minecraft/mc-mods/modernfix/files/7190629",
+  "sourceUrl": "https://mediafilez.forgecdn.net/files/7190/629/modernfix-forge-5.25.0%2Bmc1.20.1.jar",
+  "finalOfficialUrl": "https://mediafilez.forgecdn.net/files/7190/629/modernfix-forge-5.25.0%2Bmc1.20.1.jar",
+  "filename": "modernfix-forge-5.25.0+mc1.20.1.jar",
+  "sizeBytes": 897884,
+  "sha256": "8c0156eec349bb115621e7c3bbf99a5cebf01eea6d9b5a4512fd8cd74b267a91",
+  "sameAsRootApprovedGithubCandidate": true,
+  "githubSourceUrl": "https://github.com/embeddedt/ModernFix/releases/download/5.25.0%2B1.20.1/modernfix-forge-5.25.0%2Bmc1.20.1.jar",
+  "scope": "Actual complete official CurseForge bytes downloaded and hashed, identical to the approved official GitHub asset; no game or installed-source change."
+}

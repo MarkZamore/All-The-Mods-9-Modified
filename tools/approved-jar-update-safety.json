@@ -138,5 +138,38 @@
     "reasonNoOwnModule": "The user explicitly forbids adding a custom Safety/framework. The source ships the authorized unchanged official JARs and records their new direct chunk/palette world paths; no FTB claim, owner/caster or terrain-protection guarantee is inferred from metadata/API presence.",
     "protectionClaim": "NONE",
     "runtimeOrAllAbilityAcceptanceClaimed": false
+  },
+  "ModernFix": {
+    "classification": "BASE remains BASE",
+    "original": {
+      "path": "mods/modernfix-forge-5.24.4+mc1.20.1.jar",
+      "sha256": "98d77cb29c718934b1d5d465d3725a0de4284bf3c8033d6553a7dd3b15956fe4",
+      "sizeBytes": 880557,
+      "version": "5.24.4+mc1.20.1"
+    },
+    "replacement": {
+      "path": "mods/modernfix-forge-5.25.0+mc1.20.1.jar",
+      "fileName": "modernfix-forge-5.25.0+mc1.20.1.jar",
+      "sha256": "8c0156eec349bb115621e7c3bbf99a5cebf01eea6d9b5a4512fd8cd74b267a91",
+      "sizeBytes": 897884,
+      "sourceUrl": "https://mediafilez.forgecdn.net/files/7190/629/modernfix-forge-5.25.0%2Bmc1.20.1.jar",
+      "projectId": 790626,
+      "fileId": 7190629,
+      "version": "5.25.0+mc1.20.1",
+      "modIds": [
+        "modernfix"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/modernfix"
+    },
+    "reason": "Authorized unchanged official5.25.0 release, including correct soft-reference ingredient invalidation and broader14-commit/18-file author changes; no new content mod or own framework.",
+    "sourceConfigBytesChanged": false,
+    "newWorldEditingAbilityIdentified": false,
+    "customSafetyModuleAdded": false,
+    "allRuntimeBehaviorOrNativeClaimProtectionProven": false,
+    "audit": {
+      "path": "tools/qa/modernfix-525-static.json",
+      "sha256": "0aff241dbcdf0091eacfdb5d4ba38478a2ab38888177f808d093487ed6ace2b5"
+    },
+    "actualIncidentCauseOrResolutionProven": false
   }
 }

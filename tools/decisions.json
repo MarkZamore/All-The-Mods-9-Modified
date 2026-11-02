@@ -2073,6 +2073,31 @@
       },
       "reason": "User-approved compatible AllTheLeaks1.1.4 BASE exception; retain this exact pin across author pack imports until separately reviewed.",
       "updatePolicy": "retain-pinned-compatible-jar"
+    },
+    {
+      "modId": "modernfix",
+      "original": {
+        "path": "mods/modernfix-forge-5.24.4+mc1.20.1.jar",
+        "sha256": "98d77cb29c718934b1d5d465d3725a0de4284bf3c8033d6553a7dd3b15956fe4",
+        "sizeBytes": 880557,
+        "version": "5.24.4+mc1.20.1"
+      },
+      "replacement": {
+        "path": "mods/modernfix-forge-5.25.0+mc1.20.1.jar",
+        "fileName": "modernfix-forge-5.25.0+mc1.20.1.jar",
+        "sha256": "8c0156eec349bb115621e7c3bbf99a5cebf01eea6d9b5a4512fd8cd74b267a91",
+        "sizeBytes": 897884,
+        "sourceUrl": "https://mediafilez.forgecdn.net/files/7190/629/modernfix-forge-5.25.0%2Bmc1.20.1.jar",
+        "projectId": 790626,
+        "fileId": 7190629,
+        "version": "5.25.0+mc1.20.1",
+        "modIds": [
+          "modernfix"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/modernfix"
+      },
+      "reason": "Authorized official BASE update retains Forge Ingredient soft-cache invalidation and includes broader author performance/compatibility fixes. Controlled synthetic stale-cache reproduction is not proof of the actual multiplayer incident trigger or resolution. Author config bytes and native options are preserved.",
+      "updatePolicy": "retain-pinned-compatible-jar"
     }
   ],
   "grotesqueQuiet": {
@@ -2214,8 +2239,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "PENDING_SHOOTING_STAR_151_NATIVE_COMPARISON_AND_NETWORK_GATE",
-    "sourceLockSha256": "d745d91560e234e65e120f8beaf3be3e4e2a98e6ae63bbfd03b74848d50fb1b4",
+    "status": "PENDING_THREE_JAR_NATIVE_COMPARISON_AND_NETWORK_GATE",
+    "sourceLockSha256": "d718d6bbd9be9e81346dce02014a46946278d1c76ad2f72099b4c577ce504e73",
     "historicalReceipt": {
       "path": "tools/qa/native-source-acceptance.json",
       "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
@@ -2326,5 +2351,39 @@
     },
     "ownFrameworkAdded": false,
     "publicSourceUnchangedUntilRootGate": true
+  },
+  "modernFix525Update": {
+    "status": "AUTHORIZED_OFFICIAL_BASE_CANDIDATE_STATIC_PASS_NATIVE_PENDING",
+    "override": {
+      "modId": "modernfix",
+      "original": {
+        "path": "mods/modernfix-forge-5.24.4+mc1.20.1.jar",
+        "sha256": "98d77cb29c718934b1d5d465d3725a0de4284bf3c8033d6553a7dd3b15956fe4",
+        "sizeBytes": 880557,
+        "version": "5.24.4+mc1.20.1"
+      },
+      "replacement": {
+        "path": "mods/modernfix-forge-5.25.0+mc1.20.1.jar",
+        "fileName": "modernfix-forge-5.25.0+mc1.20.1.jar",
+        "sha256": "8c0156eec349bb115621e7c3bbf99a5cebf01eea6d9b5a4512fd8cd74b267a91",
+        "sizeBytes": 897884,
+        "sourceUrl": "https://mediafilez.forgecdn.net/files/7190/629/modernfix-forge-5.25.0%2Bmc1.20.1.jar",
+        "projectId": 790626,
+        "fileId": 7190629,
+        "version": "5.25.0+mc1.20.1",
+        "modIds": [
+          "modernfix"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/modernfix"
+      },
+      "reason": "Authorized official BASE update retains Forge Ingredient soft-cache invalidation and includes broader author performance/compatibility fixes. Controlled synthetic stale-cache reproduction is not proof of the actual multiplayer incident trigger or resolution. Author config bytes and native options are preserved.",
+      "updatePolicy": "retain-pinned-compatible-jar"
+    },
+    "audit": {
+      "path": "tools/qa/modernfix-525-static.json",
+      "sha256": "0aff241dbcdf0091eacfdb5d4ba38478a2ab38888177f808d093487ed6ace2b5"
+    },
+    "upstreamAuthorLockImmutable": true,
+    "syntheticCacheCaseIsNotActualIncidentCauseProof": true
   }
 }

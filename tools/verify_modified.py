@@ -478,7 +478,7 @@ def verify(pack: Path, *, require_loaded_inventory=False) -> dict:
             require(not re.search(r"(?im)^(?:Premain-Class|Agent-Class):", manifest), "A Java agent cannot be an added content mod: " + row["path"])
     for entry in plan["baseJarOverrides"]:
         row = entry["replacement"]
-        atm9_base_jar_overrides.metadata((pack / row["path"]).read_bytes(), row["fileName"], row["version"])
+        atm9_base_jar_overrides.metadata((pack / row["path"]).read_bytes(), row["fileName"], row["version"], entry["modId"])
     hashes = {relative: sha256(pack / relative) for relative in jars}
     inventory_path = pack / "library/loaded-mods.json"
     inventory = read_json(inventory_path) if inventory_path.is_file() else {}

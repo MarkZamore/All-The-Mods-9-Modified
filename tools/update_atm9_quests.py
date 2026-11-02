@@ -156,10 +156,11 @@ def stage_author(published,snapshot,output,*,base_cache=None):
         native=indexed.get(row['path'])
         if not native or row['originalSha256']!=native['sha256'] or row['originalSizeBytes']!=native['sizeBytes']:raise ValueError('Published display input differs from author BASE')
     derived={}
-    jar_originals={r['original']['path']:r['original'] for r in snapshot.get('baseJarOverrides',[])}
+    jar_originals={r['original']['path']:r for r in snapshot.get('baseJarOverrides',[])}
     for row in rows:
         if row['path'] in jar_originals:
-            raw=base_jars.author_payload(root,jar_originals[row['path']],base_cache,locale)
+            override=jar_originals[row['path']]
+            raw=base_jars.author_payload(root,override['original'],base_cache,locale,override['modId'])
             if len(raw)!=row['sizeBytes'] or locale.sha(raw)!=row['sha256']:raise ValueError('BASE original cache differs from native author row')
             derived[row['path']]=raw
             continue

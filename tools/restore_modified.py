@@ -160,7 +160,7 @@ def prepare_base_jar_overrides(pack: Path, cache: Path, plan: dict):
         else:
             download(source, old_cache)
         verifier.require(matches(old_cache, original), "Unverified original BASE override cache")
-        base_jars.metadata(old_cache.read_bytes(), Path(original["path"]).name, original["version"])
+        base_jars.metadata(old_cache.read_bytes(), Path(original["path"]).name, original["version"], entry["modId"])
         new_cache = verifier.target_path(cache, "additional/" + replacement["sha256"])
         current = verifier.target_path(pack, replacement["path"])
         if matches(current, replacement):
@@ -168,7 +168,7 @@ def prepare_base_jar_overrides(pack: Path, cache: Path, plan: dict):
         else:
             download(replacement, new_cache)
         verifier.require(matches(new_cache, replacement), "Unverified replacement BASE override cache")
-        base_jars.metadata(new_cache.read_bytes(), replacement["fileName"], replacement["version"])
+        base_jars.metadata(new_cache.read_bytes(), replacement["fileName"], replacement["version"], entry["modId"])
         prepared.append((entry, old_cache, new_cache))
     return prepared
 

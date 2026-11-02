@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "status": "CONTROLLED_SYNTHETIC_NATIVE_PROBE_COMPLETED",
+  "privateEvidenceSha256": "c6d41b17c293b9b0c9c7b21aa5040a0c63d439b59084561bd6784426941242eb",
+  "classTransformation": false,
+  "realRecipesTagsWorldOrKubeJsGlobalsMutated": false,
+  "controlledSyntheticEmptyCacheInput": true,
+  "nativeDeclaredRegistryName": "minecraft:stone",
+  "nativeDeclaredValues": 1,
+  "nativeWrapperCount": 3,
+  "nativeInvalidateLeavesSameEmptySoftReference": true,
+  "nativeInvalidateOnlyFailure": {
+    "exception": "java.lang.ArrayIndexOutOfBoundsException",
+    "site": "com.smashingmods.alchemylib.api.item.IngredientStack.<init>(IngredientStack.java:44)",
+    "firstIngredientVarInt": 0
+  },
+  "officialEffectOperationEmulated": "synthetic.invalidate(); synthetic.mfix$clearReference()",
+  "officialEffectRoundtrip": {
+    "encodedBytes": 9,
+    "encodedHex": "010101010000000003",
+    "ingredientFirstVarInt": 1,
+    "success": true,
+    "decodedRegistryName": "minecraft:stone",
+    "decodedCount": 3,
+    "decodedGetterItems": 1,
+    "remainingBytes": 0
+  },
+  "official525JarExecutedInThisProbe": false,
+  "actualIncidentTriggerOrOffendingRecipeProven": false,
+  "actualMultiplayerResolutionProven": false,
+  "scope": "The controlled synthetic empty cache survives the old native invalidation; explicitly applying the official clear-reference effect yields a stone stack of count3. This is neither execution of the new official JAR nor proof that this cache state caused the user incident."
+}

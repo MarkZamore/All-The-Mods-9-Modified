@@ -2786,6 +2786,31 @@
       },
       "reason": "User-approved compatible AllTheLeaks1.1.4 BASE exception; retain this exact pin across author pack imports until separately reviewed.",
       "updatePolicy": "retain-pinned-compatible-jar"
+    },
+    {
+      "modId": "modernfix",
+      "original": {
+        "path": "mods/modernfix-forge-5.24.4+mc1.20.1.jar",
+        "sha256": "98d77cb29c718934b1d5d465d3725a0de4284bf3c8033d6553a7dd3b15956fe4",
+        "sizeBytes": 880557,
+        "version": "5.24.4+mc1.20.1"
+      },
+      "replacement": {
+        "path": "mods/modernfix-forge-5.25.0+mc1.20.1.jar",
+        "fileName": "modernfix-forge-5.25.0+mc1.20.1.jar",
+        "sha256": "8c0156eec349bb115621e7c3bbf99a5cebf01eea6d9b5a4512fd8cd74b267a91",
+        "sizeBytes": 897884,
+        "sourceUrl": "https://mediafilez.forgecdn.net/files/7190/629/modernfix-forge-5.25.0%2Bmc1.20.1.jar",
+        "projectId": 790626,
+        "fileId": 7190629,
+        "version": "5.25.0+mc1.20.1",
+        "modIds": [
+          "modernfix"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/modernfix"
+      },
+      "reason": "Authorized official BASE update retains Forge Ingredient soft-cache invalidation and includes broader author performance/compatibility fixes. Controlled synthetic stale-cache reproduction is not proof of the actual multiplayer incident trigger or resolution. Author config bytes and native options are preserved.",
+      "updatePolicy": "retain-pinned-compatible-jar"
     }
   ]
 }

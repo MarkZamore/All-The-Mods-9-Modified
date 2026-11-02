@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "status": "OFFICIAL_BASE_CANDIDATE_STATIC_PASS_NATIVE_AND_NETWORK_PENDING",
+  "sourceParentLocalCommit": "9e510cbae5b59e737c3295309da6e8d74cc44536",
+  "sourceLockSha256": "d718d6bbd9be9e81346dce02014a46946278d1c76ad2f72099b4c577ce504e73",
+  "classification": "BASE remains BASE; not a NEW dependency or content mod",
+  "override": {
+    "modId": "modernfix",
+    "original": {
+      "path": "mods/modernfix-forge-5.24.4+mc1.20.1.jar",
+      "sha256": "98d77cb29c718934b1d5d465d3725a0de4284bf3c8033d6553a7dd3b15956fe4",
+      "sizeBytes": 880557,
+      "version": "5.24.4+mc1.20.1"
+    },
+    "replacement": {
+      "path": "mods/modernfix-forge-5.25.0+mc1.20.1.jar",
+      "fileName": "modernfix-forge-5.25.0+mc1.20.1.jar",
+      "sha256": "8c0156eec349bb115621e7c3bbf99a5cebf01eea6d9b5a4512fd8cd74b267a91",
+      "sizeBytes": 897884,
+      "sourceUrl": "https://mediafilez.forgecdn.net/files/7190/629/modernfix-forge-5.25.0%2Bmc1.20.1.jar",
+      "projectId": 790626,
+      "fileId": 7190629,
+      "version": "5.25.0+mc1.20.1",
+      "modIds": [
+        "modernfix"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/modernfix"
+    },
+    "reason": "Authorized official BASE update retains Forge Ingredient soft-cache invalidation and includes broader author performance/compatibility fixes. Controlled synthetic stale-cache reproduction is not proof of the actual multiplayer incident trigger or resolution. Author config bytes and native options are preserved.",
+    "updatePolicy": "retain-pinned-compatible-jar"
+  },
+  "immutableAuthorUpstreamLockChanged": false,
+  "baseMembershipChanged": false,
+  "sourceConfigFilesChanged": false,
+  "newFrameworkOrPerformanceOptionDisableAdded": false,
+  "officialGithubCandidateReceiptSha256": "d5432d44afae96481ac2b2eb10b4d2a33ea28e818c7376e1ca0c0691188ab89a",
+  "githubProvenance": "https://github.com/embeddedt/ModernFix/releases/download/5.25.0%2B1.20.1/modernfix-forge-5.25.0%2Bmc1.20.1.jar",
+  "curseForgeBinaryEquivalence": {
+    "path": "tools/qa/modernfix-525-official-cdn-equivalence.json",
+    "sha256": "624818e76ba5707332a89d0bba633ad40432a755f207a2e1d29521d57861ac96"
+  },
+  "metadata": {
+    "modId": "modernfix",
+    "loader": "javafml",
+    "loaderVersion": "[46,)",
+    "forge": "[46.0.1,)",
+    "minecraft": "[1.20, 1.21)",
+    "optionalJei": "[15.8.0.11,)",
+    "side": "BOTH"
+  },
+  "officialIngredientInvalidation": {
+    "officialCommit": "e411f11c0cc69f7bdb1c9ecf854c706ccb2f3fae",
+    "actualBinaryVerified": "invalidateSoftReference invokes mfix$clearReference",
+    "firstOfficialContainingTag": "5.25.0+1.20.1"
+  },
+  "broaderAuthorChanges": {
+    "installed": "5.24.4+mc1.20.1",
+    "commits": 14,
+    "files": 18,
+    "changes": [
+      "Background thread count limiting",
+      "Dynamic-sound duration-aware cache rewrite",
+      "Dynamic-resource model compatibility fix",
+      "worldgen_allocation enabled by default",
+      "Registry lookup memoization",
+      "ResourcefulLib highlight deduplication",
+      "Optional read-only global properties file",
+      "Narrator logging and profiler thread changes"
+    ]
+  },
+  "nativeGlobalPropertiesReader": "Windows APPDATA/.minecraft/global/modernfix-global-mixins.properties; only reads when present, no file creation by new reader",
+  "syntheticControlledProbe": {
+    "path": "tools/qa/modernfix-525-controlled-cache-summary.json",
+    "sha256": "0c822e28a0c2324fd423b1ada17a9bfe44d3c99031780619244cf0775dd6e8a6"
+  },
+  "itemAbilityOrWorldRegistryIdsAddedOrRemoved": false,
+  "allMixinOrGameplayBehaviorEqualityClaimed": false,
+  "nativeCandidateRunClaimed": false,
+  "incidentRootCauseOrFixClaimed": false,
+  "retirement": "Exact former ModernFix5.24.4 triple already exists in the legacy union; no additional filename-only cleanup permission is added.",
+  "safetyReview": "This remains an authorized BASE performance/compatibility replacement. Broader author hooks and defaults are disclosed; no NEW caster/ability framework or custom protection code is introduced. No protection/all-abilities guarantee is claimed.",
+  "publicationGate": "Root full native three-JAR candidate comparison, actual inventory/keys/registries and network validation must finish before publication."
+}
