@@ -8,9 +8,13 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
 import java.time.Instant;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.jar.*;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 import javax.tools.ToolProvider;
 
 /** Local JDI observation only. No target method invocation, agent load, class mutation or heap dump. */
@@ -22,7 +26,7 @@ public final class RecipeExceptionObserver {
     static final String STEAM_CLASS = "link.e4steam.steam.SteamConnectionBridge";
     static final String STEAM_JAR = "e4steam-forge-mc1.18.2-1.20.2-v0.3.4-lanmc-native-ui.1.jar";
     static final String STEAM_SHA = "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40";
-    static final String HEADER = "[RecipeExceptionObserver v7] ";
+    static final String HEADER = "[RecipeExceptionObserver v8] ";
     static final int MAX_BYTES = 256 * 1024;
     static final int MAX_EVENTS = 8;
     static final int MAX_TERMINALS = 24;
@@ -36,7 +40,9 @@ public final class RecipeExceptionObserver {
         }
     }
     record Candidate(long pid, Path game) { }
-    record Site(String className, String methodName, String signature) { }
+    record Site(String className, String methodName, String signature, long codeIndex) {
+        Site(String className, String methodName, String signature) { this(className, methodName, signature, 0); }
+    }
     static final List<Site> TERMINALS = List.of(
         new Site(STEAM_CLASS, "close", "(Z)V"), new Site(STEAM_CLASS, "beginGracefulClose", "()V"),
         new Site("net.minecraft.network.Connection", "channelInactive", "(Lio/netty/channel/ChannelHandlerContext;)V"),
@@ -44,8 +50,10 @@ public final class RecipeExceptionObserver {
         new Site("net.minecraft.network.Connection", "m_129507_", "(Lnet/minecraft/network/chat/Component;)V"),
         new Site("net.minecraft.client.multiplayer.ClientPacketListener", "m_7231_", "(Lnet/minecraft/network/protocol/game/ClientboundKeepAlivePacket;)V"),
         new Site("net.minecraft.server.network.ServerGamePacketListenerImpl", "m_5683_", "(Lnet/minecraft/network/protocol/game/ServerboundKeepAlivePacket;)V"),
-        new Site("net.minecraft.server.network.ServerGamePacketListenerImpl", "m_9942_", "(Lnet/minecraft/network/chat/Component;)V"));
-    static boolean keepAliveSite(Site site) { return site.methodName.equals("m_7231_") || site.methodName.equals("m_5683_"); }
+        new Site("net.minecraft.server.network.ServerGamePacketListenerImpl", "m_9942_", "(Lnet/minecraft/network/chat/Component;)V"),
+        new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "<init>", "(J)V"),
+        new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "<init>", "(Lnet/minecraft/network/FriendlyByteBuf;)V", 12));
+    static boolean keepAliveSite(Site site) { return site.methodName.equals("m_7231_") || site.methodName.equals("m_5683_") || site.className.equals("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket"); }
 
     public static void main(String[] args) throws Exception {
         if (args.length >= 1 && args[0].equals("--self-test")) {
@@ -214,11 +222,11 @@ public final class RecipeExceptionObserver {
             if (!type.name().equals(site.className)) continue;
             List<Method> matching = type.methodsByName(site.methodName, site.signature);
             if (matching.size() != 1) throw new IllegalStateException("Terminal profile mismatch: " + site.className + "." + site.methodName);
-            Location entry = matching.get(0).locationOfCodeIndex(0);
+            Location entry = matching.get(0).locationOfCodeIndex(site.codeIndex);
             if (entry == null) throw new IllegalStateException("Terminal entry unavailable: " + site.methodName);
             BreakpointRequest request = manager.createBreakpointRequest(entry); request.putProperty("terminalSite", site);
             request.setSuspendPolicy(EventRequest.SUSPEND_EVENT_THREAD); request.enable();
-            methods.add(site.methodName + site.signature);
+            methods.add(site.methodName + site.signature + "@" + site.codeIndex);
         }
         return Map.of("class", type.name(), "state", "installed", "methods", methods);
     }
@@ -278,7 +286,25 @@ public final class RecipeExceptionObserver {
     static Map<String, Object> keepAliveSnapshot(BreakpointEvent event, Site site, long pid) throws Exception {
         var output = new LinkedHashMap<String, Object>(); output.put("kind", "keepalive"); output.put("utc", Instant.now().toString()); output.put("pid", pid);
         output.put("thread", shortText(event.thread().name(), 120)); output.put("class", site.className); output.put("method", site.methodName);
-        StackFrame top = event.thread().frame(0); List<Value> arguments = top.getArgumentValues();
+        StackFrame top = event.thread().frame(0);
+        boolean constructor = site.methodName.equals("<init>"), generated = constructor && site.signature.equals("(J)V");
+        if (constructor) {
+            output.put("direction", generated ? "clientbound_challenge_constructed" : "clientbound_challenge_decoded");
+            output.put("packetClass", site.className); output.put("codeIndex", site.codeIndex);
+            if (generated) {
+                List<Value> values = top.getArgumentValues(); output.put("challengeId", values.isEmpty() ? null : allowedValue(values.get(0)));
+                output.put("observationLimit", "Construction does not prove send or delivery");
+            } else {
+                ObjectReference packet = top.thisObject(); output.put("challengeId", packet == null ? null : allowedValue(readField(packet, "f_132209_")));
+                output.put("observationLimit", "Decoded ID does not prove handler dispatch");
+            }
+            var callers = new ArrayList<Map<String, Object>>();
+            for (StackFrame frame : event.thread().frames(0, Math.min(8, event.thread().frameCount()))) {
+                Location location = frame.location(); callers.add(Map.of("class", shortText(location.declaringType().name(),220), "method", shortText(location.method().name(),100), "codeIndex", location.codeIndex(), "line", location.lineNumber()));
+            }
+            output.put("stack", callers); output.put("targetMethodsInvoked", false); output.put("classMutation", false); return output;
+        }
+        List<Value> arguments = top.getArgumentValues();
         if (!arguments.isEmpty() && arguments.get(0) instanceof ObjectReference packet) {
             String field = site.methodName.equals("m_7231_") ? "f_132209_" : "f_134092_";
             output.put("packetClass", packet.referenceType().name()); output.put("challengeId", allowedValue(readField(packet, field)));
@@ -462,13 +488,43 @@ public final class RecipeExceptionObserver {
         try (InputStream input = Files.newInputStream(path)) { byte[] buffer = new byte[131072]; int length; while ((length = input.read(buffer)) != -1) digest.update(buffer, 0, length); }
         if (!HexFormat.of().formatHex(digest.digest()).equals(expected)) throw new SecurityException("Native JAR SHA differs: " + path.getFileName());
     }
-    static final class OutputBudget { int emittedBytes; }
+    static final class OutputBudget {
+        int emittedBytes;
+        final ByteArrayOutputStream transcript = new ByteArrayOutputStream();
+        final String archiveName = "recipe-diagnostics-" + DateTimeFormatter.ofPattern("uuuuMMdd-HHmmss-SSS").withZone(ZoneOffset.UTC).format(Instant.now()) + "-" + ProcessHandle.current().pid() + ".log.gz";
+    }
     static void append(Config config, OutputBudget budget, String line) throws Exception {
         safe(config.output.getParent()); if (Files.exists(config.output, LinkOption.NOFOLLOW_LINKS)) safe(config.output);
         byte[] bytes = line.getBytes(StandardCharsets.UTF_8);
         if ((long) budget.emittedBytes + bytes.length > MAX_BYTES) throw new IOException("Observer reached256KiB bound");
         Files.write(config.output, bytes, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
         budget.emittedBytes += bytes.length;
+        budget.transcript.write(bytes);
+        archive(config, budget);
+    }
+    static void archive(Config config, OutputBudget budget) throws Exception {
+        Path directory = safe(config.output.getParent()); Path target = directory.resolve(budget.archiveName);
+        if (!target.getParent().equals(directory)) throw new SecurityException("Archive must stay in game logs");
+        if (Files.exists(target, LinkOption.NOFOLLOW_LINKS)) safe(target);
+        Path temporary = Files.createTempFile(directory, "recipe-diagnostics-", ".tmp");
+        try {
+            safe(temporary);
+            try (GZIPOutputStream gzip = new GZIPOutputStream(Files.newOutputStream(temporary, StandardOpenOption.WRITE))) { budget.transcript.writeTo(gzip); }
+            if (Files.size(temporary) > MAX_BYTES + 1024L) throw new IOException("Diagnostic gzip archive exceeds bounded size");
+            Files.move(temporary, target, StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
+        } finally { Files.deleteIfExists(temporary); }
+    }
+    static Path selfTestArchive(Path logs) throws Exception {
+        try (var paths = Files.list(logs)) {
+            List<Path> archives = paths.filter(path -> path.getFileName().toString().startsWith("recipe-diagnostics-") && path.toString().endsWith(".log.gz")).toList();
+            if (archives.size() != 1) throw new AssertionError("Expected exactly one diagnostic archive");
+            return archives.get(0);
+        }
+    }
+    static byte[] selfTestUnpack(Path archive) throws Exception {
+        try (GZIPInputStream gzip = new GZIPInputStream(Files.newInputStream(archive))) {
+            byte[] bytes = gzip.readNBytes(MAX_BYTES + 1); if (bytes.length > MAX_BYTES) throw new AssertionError("Unpacked archive exceeds own budget"); return bytes;
+        }
     }
     static Map<String, String> options(String[] args) { if (args.length % 2 != 0) throw new IllegalArgumentException("Expected option/value pairs"); var values = new HashMap<String, String>(); for (int i=0;i<args.length;i+=2) if (values.putIfAbsent(args[i],args[i+1])!=null) throw new IllegalArgumentException("Duplicate option"); return values; }
     static String required(Map<String,String> values,String name) { String result=values.get(name); if(result==null||result.isBlank()) throw new IllegalArgumentException("Missing "+name); return result; }
@@ -481,7 +537,7 @@ public final class RecipeExceptionObserver {
         var files=new LinkedHashMap<String,String>();
         files.put("net/minecraft/resources/ResourceLocation.java","package net.minecraft.resources; public class ResourceLocation { public final String f_135804_,f_135805_; public ResourceLocation(String a,String b){f_135804_=a;f_135805_=b;} }");
         files.put("net/minecraft/world/item/crafting/Ingredient.java","package net.minecraft.world.item.crafting; public class Ingredient { public final Object[] f_43902_; public Ingredient(Object[] a){f_43902_=a;} }");
-        files.put("net/minecraft/network/FriendlyByteBuf.java","package net.minecraft.network; public class FriendlyByteBuf { private final Storage f_130049_=new Storage(); public static class Storage { public int readerIndex=9,writerIndex=17; } }");
+        files.put("net/minecraft/network/FriendlyByteBuf.java","package net.minecraft.network; public class FriendlyByteBuf { private final Storage f_130049_=new Storage(); private long value=704815; public FriendlyByteBuf(){} public FriendlyByteBuf(long id){value=id;} public long readLong(){return value;} public static class Storage { public int readerIndex=9,writerIndex=17; } }");
         files.put("com/smashingmods/alchemylib/api/item/IngredientStack.java","package com.smashingmods.alchemylib.api.item; import net.minecraft.world.item.crafting.Ingredient; public class IngredientStack { public IngredientStack(Ingredient ingredient,int count){ if(count==999)throw new IllegalStateException(\"unrelated\"); Object first=ingredient.f_43902_[0]; } }");
         files.put("com/smashingmods/alchemistry/common/recipe/dissolver/DissolverRecipeSerializer.java","package com.smashingmods.alchemistry.common.recipe.dissolver; import net.minecraft.resources.ResourceLocation; import net.minecraft.network.FriendlyByteBuf; import net.minecraft.world.item.crafting.Ingredient; import com.smashingmods.alchemylib.api.item.IngredientStack; public class DissolverRecipeSerializer { public void fromNetwork(ResourceLocation id,FriendlyByteBuf buf){ new IngredientStack(new Ingredient(new Object[0]),2); } }");
         files.put("ProbeMain.java","import java.nio.file.*; import com.smashingmods.alchemistry.common.recipe.dissolver.DissolverRecipeSerializer; import net.minecraft.resources.ResourceLocation; import net.minecraft.network.FriendlyByteBuf; public class ProbeMain { public static void main(String[] args)throws Exception { Path root=Path.of(args[0]); Class.forName(\"java.lang.ArrayIndexOutOfBoundsException\"); Files.writeString(root.resolve(\"boot.flag\"),\"ok\"); while(!Files.exists(root.resolve(\"start.flag\")))Thread.sleep(10); try {int a=(new int[0])[0];}catch(ArrayIndexOutOfBoundsException expected){} try {new com.smashingmods.alchemylib.api.item.IngredientStack(new net.minecraft.world.item.crafting.Ingredient(new Object[]{\"ok\"}),999);}catch(IllegalStateException expected){} try {new com.smashingmods.alchemylib.api.item.IngredientStack(new net.minecraft.world.item.crafting.Ingredient(new Object[0]),2);}catch(ArrayIndexOutOfBoundsException expected){} try {new DissolverRecipeSerializer().fromNetwork(new ResourceLocation(\"qa\",\"caught_recipe\"),new FriendlyByteBuf());}catch(ArrayIndexOutOfBoundsException expected){} Thread worker=new Thread(()->new DissolverRecipeSerializer().fromNetwork(new ResourceLocation(\"qa\",\"uncaught_recipe\"),new FriendlyByteBuf()),\"uncaught-selftest\");worker.start();worker.join(); Files.writeString(root.resolve(\"continued.flag\"),\"continued\");while(!Files.exists(root.resolve(\"stop.flag\")))Thread.sleep(10); } }");
@@ -490,14 +546,14 @@ public final class RecipeExceptionObserver {
         files.put("net/minecraft/network/chat/ComponentContents.java", "package net.minecraft.network.chat; public interface ComponentContents {} ");
         files.put("net/minecraft/network/chat/MutableComponent.java", "package net.minecraft.network.chat; public class MutableComponent implements Component { private final ComponentContents f_237194_; public MutableComponent(ComponentContents contents){f_237194_=contents;} }");
         files.put("net/minecraft/network/chat/contents/TranslatableContents.java", "package net.minecraft.network.chat.contents; public class TranslatableContents implements net.minecraft.network.chat.ComponentContents { private final String f_237497_; private final String f_263792_=null; public TranslatableContents(String key){f_237497_=key;} }");
-        files.put("net/minecraft/network/protocol/game/ClientboundKeepAlivePacket.java", "package net.minecraft.network.protocol.game; public class ClientboundKeepAlivePacket { private final long f_132209_; public ClientboundKeepAlivePacket(long id){f_132209_=id;} }");
+        files.put("net/minecraft/network/protocol/game/ClientboundKeepAlivePacket.java", "package net.minecraft.network.protocol.game; public class ClientboundKeepAlivePacket { private final long f_132209_; public ClientboundKeepAlivePacket(long id){f_132209_=id;} public ClientboundKeepAlivePacket(net.minecraft.network.FriendlyByteBuf buf){f_132209_=buf.readLong();} }");
         files.put("net/minecraft/network/protocol/game/ServerboundKeepAlivePacket.java", "package net.minecraft.network.protocol.game; public class ServerboundKeepAlivePacket { private final long f_134092_; public ServerboundKeepAlivePacket(long id){f_134092_=id;} }");
         files.put("com/mojang/blaze3d/systems/RenderSystem.java", "package com.mojang.blaze3d.systems; public class RenderSystem { private static final java.util.concurrent.atomic.AtomicBoolean pollingEvents=new java.util.concurrent.atomic.AtomicBoolean(false); private static final java.util.concurrent.atomic.AtomicLong pollEventsWaitStart=new java.util.concurrent.atomic.AtomicLong(12345); public static void load(){} }");
         files.put("net/minecraft/client/multiplayer/ClientPacketListener.java", "package net.minecraft.client.multiplayer; public class ClientPacketListener { public boolean continued; public void m_7231_(net.minecraft.network.protocol.game.ClientboundKeepAlivePacket packet){continued=true;} }");
         files.put("net/minecraft/server/level/ServerPlayer.java", "package net.minecraft.server.level; public class ServerPlayer { public int f_8943_=12; }");
         files.put("net/minecraft/server/network/ServerGamePacketListenerImpl.java", "package net.minecraft.server.network; public class ServerGamePacketListenerImpl { private boolean f_9748_=true; private long f_9747_=112233,f_9749_=704815; public boolean continued; public void m_5683_(net.minecraft.network.protocol.game.ServerboundKeepAlivePacket packet){f_9748_=false;continued=true;} public void m_9942_(net.minecraft.network.chat.Component reason){continued=true;} public void tick(){f_9748_=true;f_9747_=998877;m_9942_(new net.minecraft.network.chat.MutableComponent(new net.minecraft.network.chat.contents.TranslatableContents(\"disconnect.timeout\")));} }");
         files.put("net/minecraft/server/network/ServerGamePacketListenerImpl.java", files.get("net/minecraft/server/network/ServerGamePacketListenerImpl.java").replace("private boolean f_9748_=true;", "private net.minecraft.server.level.ServerPlayer f_9743_=new net.minecraft.server.level.ServerPlayer(); private boolean f_9748_=true;"));
-        files.put("ProbeKeepAlive.java", "public class ProbeKeepAlive { public static void run(){com.mojang.blaze3d.systems.RenderSystem.load();net.minecraft.client.multiplayer.ClientPacketListener client=new net.minecraft.client.multiplayer.ClientPacketListener();client.m_7231_(new net.minecraft.network.protocol.game.ClientboundKeepAlivePacket(704815));if(!client.continued)throw new AssertionError();net.minecraft.server.network.ServerGamePacketListenerImpl server=new net.minecraft.server.network.ServerGamePacketListenerImpl();server.m_5683_(new net.minecraft.network.protocol.game.ServerboundKeepAlivePacket(704815));if(!server.continued)throw new AssertionError();server.tick();} }");
+        files.put("ProbeKeepAlive.java", "public class ProbeKeepAlive { public static void run(){com.mojang.blaze3d.systems.RenderSystem.load();net.minecraft.client.multiplayer.ClientPacketListener client=new net.minecraft.client.multiplayer.ClientPacketListener();new net.minecraft.network.protocol.game.ClientboundKeepAlivePacket(704815);client.m_7231_(new net.minecraft.network.protocol.game.ClientboundKeepAlivePacket(new net.minecraft.network.FriendlyByteBuf(704815)));if(!client.continued)throw new AssertionError();net.minecraft.server.network.ServerGamePacketListenerImpl server=new net.minecraft.server.network.ServerGamePacketListenerImpl();server.m_5683_(new net.minecraft.network.protocol.game.ServerboundKeepAlivePacket(704815));if(!server.continued)throw new AssertionError();server.tick();} }");
         files.put("net/minecraft/network/Connection.java", "package net.minecraft.network; public class Connection { private Object f_129470_=new Listener(); private Object f_129471_,f_290021_,f_129468_; private boolean f_129479_,f_129473_; public static class Listener {} public void channelInactive(io.netty.channel.ChannelHandlerContext c){} public void exceptionCaught(io.netty.channel.ChannelHandlerContext c,Throwable t){f_129479_=true;} public void m_129507_(net.minecraft.network.chat.Component c){f_129471_=c;} }");
         files.put("link/e4steam/steam/SteamRuntime.java", "package link.e4steam.steam; public class SteamRuntime { public enum State { RUNNING } private State status=State.RUNNING; private Throwable failureCause; private boolean permanentlyShutdown; private int activityCount=1; }");
         files.put("link/e4steam/steam/SteamConnectionBridge.java", "package link.e4steam.steam; import java.util.concurrent.atomic.*; public class SteamConnectionBridge { public static final boolean NETWORK_DIAGNOSTICS=true; private final SteamRuntime runtime=new SteamRuntime(); private final int connectionId; private final boolean hostSide; private final AtomicBoolean started=new AtomicBoolean(true),closed=new AtomicBoolean(),outboundFinQueued=new AtomicBoolean(),peerReady=new AtomicBoolean(true); private final AtomicLong tcpReadBytes=new AtomicLong(41); private String outboundWait=\"selftest\"; private int mode; public SteamConnectionBridge(int id,boolean host){connectionId=id;hostSide=host;} public void localEof(){mode=0;readLoop();} public void localIo(){mode=1;readLoop();} private void readLoop(){if(mode==0){beginGracefulClose();return;}try{throw new java.io.IOException(\"qa_bridge_local_io\");}catch(java.io.IOException exception){close(false);}} public void acceptRemoteFin(){beginGracefulClose();} private void beginGracefulClose(){outboundFinQueued.set(true);} public void close(boolean reset){closed.set(true);} }");
@@ -523,7 +579,7 @@ public final class RecipeExceptionObserver {
             if (selected.pid != child.pid() || !selected.game.equals(game)) throw new AssertionError("Discovery selected wrong game");
             try { selectOne(List.of()); throw new AssertionError("Empty selection accepted"); } catch (IllegalStateException expected) { }
             try { selectOne(List.of(selected, selected)); throw new AssertionError("Ambiguous selection accepted"); } catch (IllegalStateException expected) { }
-            Thread observer=new Thread(()->{try{observe(new Config(child.pid(),child.pid(),game,game.resolve("logs/debug.log"),lib,chem,2,steam,7,2),()->{try{Files.writeString(root.resolve("start.flag"),"start");}catch(Exception failure){throw new RuntimeException(failure);}});observing.complete(null);}catch(Throwable failure){observing.completeExceptionally(failure);}},"self-test-observer");observer.start();
+            Thread observer=new Thread(()->{try{observe(new Config(child.pid(),child.pid(),game,game.resolve("logs/debug.log"),lib,chem,2,steam,7,4),()->{try{String readyArchive=new String(selfTestUnpack(selfTestArchive(game.resolve("logs"))),StandardCharsets.UTF_8);if(!readyArchive.contains("observer_ready")||readyArchive.contains("alchemylib_recipe_exception"))throw new AssertionError("READY archive missing or includes preexisting log");Files.writeString(root.resolve("start.flag"),"start");}catch(Exception failure){throw new RuntimeException(failure);}});observing.complete(null);}catch(Throwable failure){observing.completeExceptionally(failure);}},"self-test-observer");observer.start();
             observing.get(20,TimeUnit.SECONDS);waitFor(root.resolve("continued.flag"),child,5000);
             String captured=Files.readString(game.resolve("logs/debug.log"));
             byte[] resultingLog=Files.readAllBytes(game.resolve("logs/debug.log")); if(!Arrays.equals(existingLog,Arrays.copyOf(resultingLog,existingLog.length)))throw new AssertionError("Existing log prefix changed");
@@ -533,13 +589,27 @@ public final class RecipeExceptionObserver {
                 !captured.contains("\"packetListener\":{\"class\":\"net.minecraft.network.Connection$Listener\"}") ||
                 !captured.contains("terminal_hooks_ready") || !captured.contains("\"key\":\"disconnect.timeout\"") || captured.contains("terminal_snapshot_failure")) throw new AssertionError("Terminal origin/filter/fields self-test failed");
             if (captured.lines().noneMatch(line -> line.contains("\"method\":\"channelInactive\"") && line.contains("\"f_129471_\":null"))) throw new AssertionError("Bare channel-close null reason not captured");
-            if (captured.split("\"kind\":\"keepalive\"", -1).length - 1 != 2 || captured.split("\"challengeId\":704815", -1).length - 1 < 3 ||
+            if (captured.split("\"kind\":\"keepalive\"", -1).length - 1 != 4 || captured.split("\"challengeId\":704815", -1).length - 1 < 3 ||
+                !captured.contains("clientbound_challenge_constructed") || !captured.contains("clientbound_challenge_decoded") ||
                 !captured.contains("\"pollingEvents\":false") || !captured.contains("\"pollEventsWaitStart\":12345") ||
                 !captured.contains("\"playerLatencyMillis\":12") ||
                 captured.lines().noneMatch(line -> line.contains("\"method\":\"m_9942_\"") && line.contains("\"method\":\"tick\"") && line.contains("\"lastKeepAliveMillis\":998877")) ||
                 captured.contains("keepalive_snapshot_failure")) throw new AssertionError("Keepalive matching/state/original-disconnect self-test failed");
             Files.writeString(root.resolve("stop.flag"),"stop");if(!child.waitFor(5,TimeUnit.SECONDS)||child.exitValue()!=0)throw new AssertionError("Self-test debuggee did not continue and exit normally");
             Files.writeString(root.resolve("result.json"),json(Map.of("status","PASS","capturedEvents",2,"exactRecipeIds",List.of("qa:caught_recipe","qa:uncaught_recipe"),"emptyArrayCaptured",true,"unrelatedErrorsExcluded",true,"eventThreadsResumed",true,"debuggeeExitCode",child.exitValue(),"logSizes",Map.of("totalBytes",Files.size(game.resolve("logs/debug.log")),"preexistingBytesPreserved",existingLog.length,"newBytes",resultingLog.length-existingLog.length),"targetMethodsInvoked",false,"classMutation",false))+"\n");
+            Path archive = selfTestArchive(game.resolve("logs")); byte[] unpacked = selfTestUnpack(archive);
+            if (!Arrays.equals(unpacked, Arrays.copyOfRange(resultingLog, existingLog.length, resultingLog.length))) throw new AssertionError("Archive must contain only exact own emitted rows");
+            long archiveBytes = Files.size(archive); Files.delete(game.resolve("logs/debug.log"));
+            if (!Files.exists(archive)) throw new AssertionError("Archive was lost with debug cleanup");
+            List<Path> reportCandidates;
+            try (var paths = Files.list(game.resolve("logs"))) {
+                reportCandidates = paths.filter(path -> path.toString().endsWith(".log.gz"))
+                    .filter(path -> {try{return Files.getLastModifiedTime(path).toInstant().isAfter(Instant.now().minusSeconds(86400));}catch(IOException failure){throw new UncheckedIOException(failure);}})
+                    .sorted((left,right)->{try{return Files.getLastModifiedTime(right).compareTo(Files.getLastModifiedTime(left));}catch(IOException failure){throw new UncheckedIOException(failure);}}).limit(2).toList();
+            }
+            if (!reportCandidates.contains(archive)) throw new AssertionError("Archive not selected by existing report *.log.gz/newest2/24h rule");
+            try (var paths = Files.list(game.resolve("logs"))) { if (paths.anyMatch(path -> path.toString().endsWith(".tmp"))) throw new AssertionError("Temporary archive left over"); }
+            Files.writeString(root.resolve("archive-validation.json"),json(Map.of("status","PASS","readySnapshotPresent",true,"atomicArchiveMatchesOwnRows",true,"sourceBytes",unpacked.length,"compressedBytes",archiveBytes,"childExitedBeforeCleanup",true,"survivesDebugDeletion",true,"selectedByExistingReportRule",true,"selectionProof","Source-verified existing rule mirrored after child exit; BugReportService itself not invoked by this Java self-test"))+"\n");
             System.out.println("SELF_TEST_PASS "+root.resolve("result.json"));
         } finally {
             Files.writeString(root.resolve("stop.flag"),"stop");

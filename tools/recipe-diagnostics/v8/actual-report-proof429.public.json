@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "publishedLauncherVersion": "1.0.429.0",
+  "publishedProductVersion": "1.0.429\u002Bef0be2f09b3dcabcdb6cf7aab91f1ce6593e40aa.ef0be2f09b3dcabcdb6cf7aab91f1ce6593e40aa",
+  "assemblySha256": "d1a8af02204e03a8748a3a0151aa4aaaf34a218660e2b9fc19feb83cedd88b12",
+  "actualMethodsInvoked": [
+    "LogCleanupService.RetainRecentSessionDiagnostics",
+    "BugReportService.BuildArchive"
+  ],
+  "debugLogAbsentBeforeAndAfter": true,
+  "gzipSurvivedActualCleanup": true,
+  "gzipBytesPreserved": true,
+  "gzipSha256": "d71ef6a540f226a71910240de4a1688533092d291a64a5e06799a3f3c8971d7f",
+  "diagnosticRows": 19,
+  "allDiagnosticRowsPreservedInDecompressedReport": true,
+  "nativeCaughtRecipePreserved": true,
+  "nativeUncaughtRecipePreserved": true,
+  "reportEntry": "game/recipe-diagnostics-20261102-151731-120-2412.log",
+  "reportEntryBytes": 14863,
+  "reportEntryNames": [
+    "report.txt",
+    "game/recipe-diagnostics-20261102-151731-120-2412.log"
+  ],
+  "listedByActualCollector": true,
+  "reportArchiveSha256": "c401055fef5ec566a27c5868472614a0f733f0a58a8db123901c81153a81f13d",
+  "networkSendPerformed": false,
+  "liveGameAccessed": false,
+  "selectionBoundary": "Current report selects newest two logs/*.log.gz modified within24hours; fixture has one archive."
+}

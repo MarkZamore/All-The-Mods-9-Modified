@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "status": "SOURCE_VERIFIED_DIAGNOSTIC_DELIVERY_REAL_PEER_PENDING",
+  "parentSourceRevision": "8d9f2d5e10201077fdf465ed75cc6e9908bc108a",
+  "sourceLockSha256": "88a81c596423776712fb5c0229f68f802d371dd5ab7250600f50e17fb3f0f308",
+  "onlyRuntimeChange": {
+    "path": "launcher/diagnostics/recipe-exception-observer.jar",
+    "oldSha256": "434f6efced7866031dd49551bb1c979b4e9d07fde5351391be772779cbdcc9ba",
+    "oldSizeBytes": 33233,
+    "sha256": "6cec35543c876ca8a06a15781819fce3d7876c048e58a46d36e0b97e0ce77dbf",
+    "sizeBytes": 37102
+  },
+  "contentJarsUnchanged": 529,
+  "sameRuntimePaths": 1916,
+  "sourceProjectedPackModIds": 554,
+  "freshNativeObservationClaimed": false,
+  "standardConnectivityTimeoutUnchanged": true,
+  "jvmArgumentsUnchanged": true,
+  "manualHelpersUnchanged": true,
+  "journeyMapPolicyIncluded": false,
+  "proofs": [
+    {
+      "path": "tools/recipe-diagnostics/v8/validation.json",
+      "sha256": "4a7e20a4dcc6b4e1eea91575667bc13b4cc3608e185194445297060666048dd0"
+    },
+    {
+      "path": "tools/recipe-diagnostics/v8/native-profile.public.json",
+      "sha256": "bdd54d32301094c91340abb4ee1431f0b6466c2fccceb0bd643f7952b0ffa38e"
+    },
+    {
+      "path": "tools/recipe-diagnostics/v8/actual-report-proof429.public.json",
+      "sha256": "adff9ed1874fca2211cf06201602477f0346c8e79f92b54347ed4ad175a87174"
+    },
+    {
+      "path": "tools/recipe-diagnostics/v8/README.public.md",
+      "sha256": "391bdefe10680596a63c07a50bcb60b95ee3a52e2740da278ad4b2195f59a8a4"
+    }
+  ],
+  "scope": "Isolated Java17 observer fixture, exact native profile and actual published429 log-cleanup/report fixture. Constructed challenge is not sent; decoded is not handled. No new live game, multiplayer fix or delivery guarantee after newer archives displace newest-two selection."
+}

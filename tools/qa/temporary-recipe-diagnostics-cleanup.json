@@ -4,10 +4,10 @@
   "temporaryFiles": [
     {
       "path": "launcher/diagnostics/recipe-exception-observer.jar",
-      "sha256": "434f6efced7866031dd49551bb1c979b4e9d07fde5351391be772779cbdcc9ba",
-      "sizeBytes": 33233,
+      "sha256": "6cec35543c876ca8a06a15781819fce3d7876c048e58a46d36e0b97e0ce77dbf",
+      "sizeBytes": 37102,
       "kind": "temporary-diagnostic-tool",
-      "reason": "Temporary manual read-only v7:8recipe+24terminal+32keepalive events share256KiB ownoutput. ExactnativeMinecraft/e4steam68ba/Alchemy guards, no class transforms/targetmethodinvoke. Original60s timeout and allJVMflags retained. Runbothparticipants beforeShare/join; remove3tools/2diagnosticflags after confirmedfix. Not a network-fix claim."
+      "reason": "Temporary manual read-only v8: bounded recipe/terminal/keepalive snapshots plus atomic own-row gzip archive for existing launcher reports. Same 8/24/32 event limits and256KiB source budget. No game method invocation, class transformation, timeout or transport change; real peer test pending. Remove after confirmed fix."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
@@ -42,7 +42,7 @@
   ],
   "modernFixClassification": "Official BASE5.25.0 cache candidate: retain if justified, otherwise explicitly review/revert to author5.24.4. Not automatically removed with diagnostic utilities.",
   "noRealIncidentFixClaimed": true,
-  "currentObserverVersion": 7,
+  "currentObserverVersion": 8,
   "eventLimits": {
     "recipeEvents": 8,
     "terminalEvents": 24,
@@ -50,5 +50,7 @@
     "ownEmittedBytes": 262144
   },
   "originalV5ReceiptRemainsHistorical": true,
-  "standardConnectivityTimeoutUnchanged": true
+  "standardConnectivityTimeoutUnchanged": true,
+  "ownArchivePattern": "logs/recipe-diagnostics-<UTC-session>-<observerPID>.log.gz",
+  "archiveReportBoundary": "Existing generic launcher rule selects newest two logs/*.log.gz changed within24hours; later sessions may displace this archive. Retention7days/64MiB per instance."
 }

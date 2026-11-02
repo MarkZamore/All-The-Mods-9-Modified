@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_STUB_NATIVE_PROFILE_AND_PUBLISHED429_ARCHIVE_COLLECTION",
+  "jarSha256": "6cec35543c876ca8a06a15781819fce3d7876c048e58a46d36e0b97e0ce77dbf",
+  "jarBytes": 37102,
+  "sourceSha256": "85619a29ddc1ba91956952739cb872c070176da1f4e0362ed32ef1462475fb09",
+  "javaRelease": 17,
+  "testResult": "jdi-selftest14/result.json",
+  "archiveJavaTest": "jdi-selftest14/archive-validation.json",
+  "capturedEvents": {
+    "recipe": 2,
+    "terminal": 7,
+    "keepalive": 4,
+    "totalRows": 19
+  },
+  "challengeDirections": [
+    "clientbound_challenge_constructed",
+    "clientbound_challenge_decoded",
+    "client_received_request",
+    "server_received_reply"
+  ],
+  "allFourChallengeIdsMatch": true,
+  "originalServerDisconnectCallerAndTimerTestPassed": true,
+  "targetMethodsInvoked": false,
+  "classTransformation": false,
+  "liveGameAttached": false,
+  "eventThreadsResumedAndDebuggeeExited0": true,
+  "crossTempDiscoveryPassed": true,
+  "preexistingDebugBytesPreservedBeforeFixtureCleanup": 307200,
+  "sourceRowBytes": 14844,
+  "gzipBytes": 2292,
+  "productionLimits": {
+    "recipeEvents": 8,
+    "terminalEvents": 24,
+    "keepaliveEvents": 32,
+    "ownEmittedSourceBytes": 262144,
+    "compressedSnapshotBytes": 263168,
+    "terminalStackFrames": 36,
+    "constructorStackFrames": 8,
+    "stringCharacters": 512
+  },
+  "archive": {
+    "pattern": "logs/recipe-diagnostics-<UTC-session>-<observerPID>.log.gz",
+    "update": "Atomic replacement after READY and each emitted row; only own rows, no preexisting debug content",
+    "genericReportRule": "Newest two logs/*.log.gz modified within24hours",
+    "genericRetention": "Seven days / instance64MiB log budget; inclusion after later sessions is not guaranteed"
+  },
+  "actualPublishedLauncherProof": {
+    "file": "actual-report-proof429.public.json",
+    "sha256": "adff9ed1874fca2211cf06201602477f0346c8e79f92b54347ed4ad175a87174",
+    "launcherVersion": "1.0.429.0",
+    "assemblySha256": "d1a8af02204e03a8748a3a0151aa4aaaf34a218660e2b9fc19feb83cedd88b12",
+    "methods": [
+      "LogCleanupService.RetainRecentSessionDiagnostics",
+      "BugReportService.BuildArchive"
+    ],
+    "gzipSurvivedCleanup": true,
+    "allRowsPreserved": true,
+    "rows": 19,
+    "networkSendPerformed": false,
+    "liveGameAccessed": false,
+    "scope": "Actual published429 IL methods on isolated fixture, with DOTNET_ReadyToRun=0 only for extracted-assembly test harness; app not rebuilt."
+  },
+  "nativeProfileFile": "native-profile.public.json",
+  "nativeProfileSha256": "bdd54d32301094c91340abb4ee1431f0b6466c2fccceb0bd643f7952b0ffa38e",
+  "independentEntryProfileSha256": "736cd97c6607864bf1aaaa8973723df8cf09d218c9ab8358d221d6b03389e0d9",
+  "independentConstructorProfileSha256": "262ecee9c2f14a7c5ab48c2e5088138e4b7d6f08ad1dcf5488ba1dcb280acec9",
+  "steamJarSha256": "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40",
+  "helpersIdenticalV7": {
+    "Start-RecipeDiagnostics.ps1": true,
+    "Start-RecipeDiagnostics.cmd": true
+  },
+  "realPlayerRunPending": true,
+  "proofLimits": [
+    "Native catch LVT offsets and transformed production sites are statically bound, not runtime acceptance.",
+    "JDI snapshot InternalException is an observer failure, not evidence of target exception.",
+    "Constructor generation does not prove send; completed decode does not prove handler invocation.",
+    "No buffer content/payload collection, target invokes, class transformation, generic packet or per-tick hook.",
+    "Archive collection fixture has one qualifying archive; newest-two pressure after later sessions remains the existing rule."
+  ]
+}

@@ -2383,18 +2383,21 @@
     "cleanupInventory": "tools/qa/temporary-recipe-diagnostics-cleanup.json",
     "manualOnly": true,
     "unsupportedStartupJsRemoved": true,
-    "observerVersion": 7,
+    "observerVersion": 8,
     "recipeEventLimit": 8,
     "terminalEventLimit": 24,
     "ownEmittedBytesLimit": 262144,
-    "sourceSelfTestProof": "tools/recipe-diagnostics/v7/validation.json",
+    "sourceSelfTestProof": "tools/recipe-diagnostics/v8/validation.json",
     "exactTerminalProfileSha256": "f843f8a2327d275f07f15c4396e44ed323481d5f1705eedae52b67fc132524f2",
     "actualNewUserGameClaimed": false,
     "keepAliveEventLimit": 32,
     "authorConnectivityTimeout60Retained": true,
-    "sourceSelfTestSha256": "27e93dc4235531afd8091e03156995a923fa9e76879609b062e8c3624a0db2d5",
-    "exactKeepAliveNativeProfile": "tools/recipe-diagnostics/v7/native-profile.public.json",
-    "exactKeepAliveNativeProfileSha256": "6a49e9fa8271d32c752d4c732bc2d01f61ccd303493838ddfe74b797333d184a"
+    "sourceSelfTestSha256": "4a7e20a4dcc6b4e1eea91575667bc13b4cc3608e185194445297060666048dd0",
+    "exactKeepAliveNativeProfile": "tools/recipe-diagnostics/v8/native-profile.public.json",
+    "exactKeepAliveNativeProfileSha256": "bdd54d32301094c91340abb4ee1431f0b6466c2fccceb0bd643f7952b0ffa38e",
+    "actualPublished429ArchiveProof": "tools/recipe-diagnostics/v8/actual-report-proof429.public.json",
+    "actualPublished429ArchiveProofSha256": "adff9ed1874fca2211cf06201602477f0346c8e79f92b54347ed4ad175a87174",
+    "realPlayerRunPending": true
   },
   "previousThreeJarNativeAcceptanceBeforeCarpetDataFix": {
     "status": "ROOT_ACCEPTED_CLEAN_NATIVE_NETWORK_REPRO_PENDING",
@@ -2592,5 +2595,14 @@
     "activeTimeoutScript": false,
     "proposed180DeferredByLatestUserSteering": true,
     "reason": "Observed server timeout proves the outcome, not why keepalive stopped. Preserve standard author timeout while v7 read-only observation investigates actual keepalive/original-disconnect flow."
+  },
+  "observerV8Delivery": {
+    "sourceLockSha256": "88a81c596423776712fb5c0229f68f802d371dd5ab7250600f50e17fb3f0f308",
+    "receipt": "tools/qa/observer-v8-delivery.json",
+    "runtimeFilesChanged": [
+      "launcher/diagnostics/recipe-exception-observer.jar"
+    ],
+    "contentJarsUnchanged": 529,
+    "newNativeOrPeerAcceptanceClaimed": false
   }
 }
