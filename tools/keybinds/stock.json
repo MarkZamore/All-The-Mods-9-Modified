@@ -448,7 +448,6 @@
     "rottencreatures-forge-1.20.1-1.1.0.jar": "cbf97ceeb4378b493884fc49fb668098edaca135dad81db548dea6f4c324e81b",
     "rsinsertexportupgrade-1.20.1-1.4.0.jar": "36072a05476d258d1612a9d75144af0b839cca7e752a5bbc39eed7e8bdddf613",
     "rsrequestify-1.20.1-2.3.3.jar": "dbf2c11fa5ae9c274c114e14435f015584a8545b77f8d7af739164f66d3601ab",
-    "sanitydim-mc1.20-1.1.0.jar": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a",
     "sao_mod-1.0.0-forge-1.20.1.jar": "c8c781f789c5ac032e160981eec7d30d5632123979ac30bbd6dde08682ddebdf",
     "shetiphiancore-forge-1.20.1-1.5.jar": "1511c8c17975abbe9667eb548e41bf1e68f21f0ef065b54341e70002d2e60175",
     "silent-gear-1.20.1-3.6.7.jar": "0f438b1919544e6ba0b4e44ee4496d7dfab878f90c9ab02cca46507217e0dc5a",
@@ -9933,7 +9932,8 @@
       "mods/revervox_mod-1.20.1-2.1.jar": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
       "mods/scpo-3.1.2-forge-1.20.1.jar": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
       "mods/the_obsessed-1.5.2g-forge-1.20.1.jar": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
-      "mods/voicechatrecording-1.20.1-2.1.jar": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1"
+      "mods/voicechatrecording-1.20.1-2.1.jar": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
+      "mods/sanitydim-mc1.20-1.1.0.jar": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a"
     },
     "removedKeyNames": [
       "key.fairy_mine.soltar_habilidade",
@@ -10219,5 +10219,30 @@
     "retainedPresetValuesChanged": false,
     "currentNativeRecaptureVerified": false,
     "standaloneVoiceChatRetained": true
+  },
+  "sanityRemovalProjection": {
+    "parentSourceRevision": "e012b5a097450c3267ccfb464a3a5fcf57ff8aad",
+    "removedSourceJars": [
+      {
+        "fileName": "sanitydim-mc1.20-1.1.0.jar",
+        "sha256": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a",
+        "sizeBytes": 6052841,
+        "sourceUrl": "https://edge.forgecdn.net/files/4625/236/sanitydim-mc1.20-1.1.0.jar",
+        "projectId": 876448,
+        "fileId": 4625236,
+        "path": "mods/sanitydim-mc1.20-1.1.0.jar",
+        "kind": "requested",
+        "version": "1.1.0",
+        "modIds": [
+          "sanitydim"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sanity-descent-into-madness",
+        "name": "Sanity: Descent Into Madness"
+      }
+    ],
+    "removedKeyNames": [],
+    "retainedPresetNames": 560,
+    "retainedPresetValuesChanged": false,
+    "currentNativeRecaptureVerified": false
   }
 }

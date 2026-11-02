@@ -1611,12 +1611,13 @@
     {
       "name": "Sanity: Descent Into Madness",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sanity-descent-into-madness",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "sanitydim"
       ],
       "version": "1.1.0",
-      "sha256": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a"
+      "sha256": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a",
+      "reason": "User explicitly requested complete Sanity removal on 2026-11-03. No network-cause claim is made."
     },
     {
       "name": "SAO MOD",
@@ -2005,7 +2006,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 72,
+  "selectedRequestedProjects": 71,
   "dependencyJars": 17,
   "authorCompatibilitySelections": [
     {
@@ -2249,8 +2250,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_USER_REMOVALS_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "6ba9919c4db87c5c46b06c746fddee2d2fb5fa117aac98d128ee3a0f39d680c8",
+    "status": "SOURCE_USER_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "4f084ec1a26fc5e119865ff8632be2f8011b4e57469ddd8f2feaeb31fb69545c",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -2937,6 +2938,46 @@
     "retainedDependencyJars": 17,
     "standaloneVoiceChatRetained": true,
     "safetyReason": "Removal introduces no new world-mutation path; no custom Safety framework/profile exists. Remaining author JARs/native permissions unchanged. Removed registry content may be lost in old worlds; no lossless migration claimed.",
+    "newRuntimeOrSteamFixClaimed": false
+  },
+  "previousSingleplayerContentAcceptanceBeforeSanityRemoval": {
+    "status": "SOURCE_USER_REMOVALS_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "6ba9919c4db87c5c46b06c746fddee2d2fb5fa117aac98d128ee3a0f39d680c8",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "sanityRemoval": {
+    "userAuthorizedIds": [
+      "sanitydim"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "sanitydim-mc1.20-1.1.0.jar",
+        "sha256": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a",
+        "sizeBytes": 6052841,
+        "sourceUrl": "https://edge.forgecdn.net/files/4625/236/sanitydim-mc1.20-1.1.0.jar",
+        "projectId": 876448,
+        "fileId": 4625236,
+        "path": "mods/sanitydim-mc1.20-1.1.0.jar",
+        "kind": "requested",
+        "version": "1.1.0",
+        "modIds": [
+          "sanitydim"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sanity-descent-into-madness",
+        "name": "Sanity: Descent Into Madness"
+      }
+    ],
+    "removedKeyNames": [],
+    "retainedSourceJars": 519,
+    "retainedProjectedPackModIds": 544,
+    "retainedPresetNames": 560,
+    "retainedRequestedJars": 71,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "safetyReason": "Removing Sanity introduces no new mutation path. Shared GeckoLib remains for other retained mods; no custom Safety framework/profile exists. Remaining author JARs/native permissions unchanged. Old-world Sanity registry content may be lost; no lossless migration claimed.",
     "newRuntimeOrSteamFixClaimed": false
   }
 }

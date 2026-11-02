@@ -4981,6 +4981,11 @@
   },
   {
     "path": "launcher/controls-guide.md",
+    "sizeBytes": 11649,
+    "sha256": "999f84bdff620e69b8c11de2b6345ec231f44feb1c66b95cc157a11e92871feb"
+  },
+  {
+    "path": "launcher/controls-guide.md",
     "sizeBytes": 12597,
     "sha256": "be9debd58a9544dc9116c3f79b73eb3d1e71f9fd04a9ae2f92e8d4d6a5848fc4"
   },

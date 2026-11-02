@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "e012b5a097450c3267ccfb464a3a5fcf57ff8aad",
+  "priorUnionSha256": "f9b74108062ccbf94721918b077d2330dbe02b7f5b5eead95926d0fa72e3f3ac",
+  "currentUnionSha256": "cdb9af37f5fb348a22894e4bc6eabc025a7e3ef11f6a3ed03cf7c04592b7a675",
+  "addedExactRows": [
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 11649,
+      "sha256": "999f84bdff620e69b8c11de2b6345ec231f44feb1c66b95cc157a11e92871feb"
+    }
+  ],
+  "userRemovedIds": [
+    "sanitydim"
+  ],
+  "unknownPersonalFilesDeletionClaimed": false
+}
