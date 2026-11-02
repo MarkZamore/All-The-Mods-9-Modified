@@ -30,6 +30,7 @@ from __future__ import annotations
 
 from pack_library import stage_library, verify_library
 import network_logging_policy
+import carpets_recipe_policy
 
 import argparse
 import base64
@@ -258,6 +259,7 @@ class Staging:
 def generate(pack: Path, out: Path, revision: str) -> None:
     # This source gate validates pack data; it never rewrites a launched instance.
     network_logging_policy.verify(pack)
+    carpets_recipe_policy.verify(pack)
     portable = load_portable_pack(pack)
     client_jar = portable["clientJar"].replace("\\", "/")
     if client_jar:

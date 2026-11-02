@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "kind": "same-id-alchemistry-carpet-tag-source-verification",
+  "status": "SOURCE_DATA_VERIFIED_REAL_PEER_RETEST_PENDING",
+  "priorSourceRevision": "8276115caef8892abea65f47a40d14daa057a8ee",
+  "priorPublicManifestSha256": "7bef7389f13e0405d00138f644de3438910aa83ea8a0702ce05f400713ac8cb0",
+  "sourceLockSha256": "a5e178344f369d68279678f5699e2eed5df8e5038720acad6caf24e6d7bd30e8",
+  "runtimeFiles": 1919,
+  "shippedJars": 532,
+  "changedExistingRuntimeRows": 0,
+  "addedRuntimeRows": [
+    {
+      "path": "kubejs/data/alchemistry/recipes/dissolver/carpets.json",
+      "sizeBytes": 644,
+      "sha256": "05a82fcfb14da81ad397e342192b4f7dec0528156b0f4116cfc1f4aa68f009d4"
+    }
+  ],
+  "allPriorRuntimeRowsByteIdentical": true,
+  "all532JarBytesUnchanged": true,
+  "authorJar": {
+    "path": "mods/alchemistry-1.20.1-2.3.4.jar",
+    "sizeBytes": 3654585,
+    "sha256": "fe993f8e0586a9c65209c230de21225991d9e91c5482a262ce80b3eab2eb02e1"
+  },
+  "authorRecipe": {
+    "entry": "data/alchemistry/recipes/dissolver/carpets.json",
+    "sizeBytes": 639,
+    "sha256": "8b46cb2a3fe70fd29c418281ab29ab79de4211eb39289c79edd758f4505bb71c"
+  },
+  "onlyChangedJsonPointer": "/input/ingredient/tag",
+  "oldTag": "minecraft:carpets",
+  "newTag": "minecraft:wool_carpets",
+  "recipeId": "alchemistry:dissolver/carpets",
+  "allOtherRecipeFieldsUnchanged": true,
+  "globalAliasAdded": false,
+  "normalSourceProducerRestoreCyclesCompleted": 2,
+  "sourceHelper": "tools/carpets_recipe_policy.py",
+  "sourcePolicyReceipt": "tools/carpets-recipe-policy.json",
+  "sourceHelperPrepare": "Explicit operator-reviewed independent source rebase only; never automatic in CI, importer or launcher. Any changed/fixed author recipe stops before writes/publication. A new JAR with identical recipe still requires operator review and receipt rebase.",
+  "futureAuthorChangedOrFixedRecipe": "Fail and review retirement/rebase of only known exact overlay. Legacy ownership includes exact644-byte resource; unknown personal files are not deletion authority.",
+  "upstreamIssue": "https://github.com/SmashingMods/Alchemistry/issues/365",
+  "historicalNativeAcceptance": {
+    "path": "tools/qa/native-source-acceptance.json",
+    "sha256": "10f0bdca54ebb67484f44b0b2d6a491eaa86b6f5f66cf0cb17c2b7b55f4ecc99",
+    "sourceLockSha256": "7983c8f1edc7c9035249e710ccfafaddf64c19a4d6068a14451c526c52c67edd",
+    "runtimeFiles": 1918,
+    "includesNewDataOverride": false
+  },
+  "modernFix525AloneResolvedActualPeerIncident": false,
+  "newGameStartedForThisDataOnlyChange": false,
+  "realPeerRuntimeAcceptanceClaimed": false,
+  "newGameNativePassClaimed": false,
+  "temporaryDiagnosticsRetainedForNextActualPeerRetest": true,
+  "safetyChangeRequired": false,
+  "safetyReason": "No JAR, ability, item, entity, world mutation code or permission gate changes. Same recipe ID/count/output/probabilities retained; one missing input tag is replaced with its author-intended current vanilla carpet tag. No own Safety/framework introduced. This is not a protection claim.",
+  "sourceUnitTests": {
+    "executed": 234,
+    "passed": 234,
+    "skipped": 0
+  },
+  "staticCompositionVerified": true,
+  "exactPriorJarLoadedInventoryStillMatches": true,
+  "unchangedControlNames": 636,
+  "tagSourceEvidence": {
+    "authoritativeVanillaWoolCarpetItems": 16,
+    "legacyVanillaCarpetsTagPresent": false,
+    "modTagAppendProviders": [
+      "Chipped",
+      "Dyenamics",
+      "The Undergarden",
+      "SecurityCraft"
+    ],
+    "runtimeTagSizeIsNotClaimedToEqual16": true,
+    "upstreamDataAuditSha256": "dc98b21885f64ca4eadc31f6cf487f1e9506ac22e0fa2021e7f5dae54cea2e3a",
+    "minimalFixReviewSha256": "a88adfb25656794405d88ab2fd8ab55a3fafda4657140669d3f685c272038e61"
+  }
+}

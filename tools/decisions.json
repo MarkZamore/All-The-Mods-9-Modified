@@ -2239,14 +2239,17 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "ROOT_ACCEPTED_CLEAN_NATIVE_NETWORK_REPRO_PENDING",
-    "receipt": {
+    "status": "DATA_ONLY_CARPET_RECIPE_CANDIDATE_SOURCE_VERIFIED_REAL_PEER_NATIVE_PENDING",
+    "sourceLockSha256": "a5e178344f369d68279678f5699e2eed5df8e5038720acad6caf24e6d7bd30e8",
+    "historicalThreeJarReceipt": {
       "path": "tools/qa/native-source-acceptance.json",
       "sha256": "10f0bdca54ebb67484f44b0b2d6a491eaa86b6f5f66cf0cb17c2b7b55f4ecc99",
       "sourceLockSha256": "7983c8f1edc7c9035249e710ccfafaddf64c19a4d6068a14451c526c52c67edd"
     },
+    "newOverlayRuntimeAcceptanceClaimed": false,
     "realPeerJoinVerified": false,
-    "networkFixClaimed": false
+    "actualOriginalIncidentRecipeObserved": "alchemistry:dissolver/carpets",
+    "modernFix525AloneResolvedRealIncident": false
   },
   "previousSingleplayerContentAcceptanceBeforeShootingStar151": {
     "receipt": {
@@ -2382,5 +2385,28 @@
     "cleanupInventory": "tools/qa/temporary-recipe-diagnostics-cleanup.json",
     "manualOnly": true,
     "unsupportedStartupJsRemoved": true
+  },
+  "previousThreeJarNativeAcceptanceBeforeCarpetDataFix": {
+    "status": "ROOT_ACCEPTED_CLEAN_NATIVE_NETWORK_REPRO_PENDING",
+    "receipt": {
+      "path": "tools/qa/native-source-acceptance.json",
+      "sha256": "10f0bdca54ebb67484f44b0b2d6a491eaa86b6f5f66cf0cb17c2b7b55f4ecc99",
+      "sourceLockSha256": "7983c8f1edc7c9035249e710ccfafaddf64c19a4d6068a14451c526c52c67edd"
+    },
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "carpetRecipeDataCorrection": {
+    "receipt": "tools/carpets-recipe-policy.json",
+    "override": {
+      "path": "kubejs/data/alchemistry/recipes/dissolver/carpets.json",
+      "sizeBytes": 644,
+      "sha256": "05a82fcfb14da81ad397e342192b4f7dec0528156b0f4116cfc1f4aa68f009d4"
+    },
+    "onlyChangedJsonPointer": "/input/ingredient/tag",
+    "oldTag": "minecraft:carpets",
+    "newTag": "minecraft:wool_carpets",
+    "sourcePreparationOnly": true,
+    "nativeRetestPending": true
   }
 }

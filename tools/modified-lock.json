@@ -2774,6 +2774,13 @@
       "sizeBytes": 174,
       "kind": "temporary-diagnostic-launcher",
       "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
+    },
+    {
+      "path": "kubejs/data/alchemistry/recipes/dissolver/carpets.json",
+      "sizeBytes": 644,
+      "sha256": "05a82fcfb14da81ad397e342192b4f7dec0528156b0f4116cfc1f4aa68f009d4",
+      "kind": "resource",
+      "reason": "User-authorized same-ID native recipe data correction: only input.ingredient.tag minecraft:carpets→minecraft:wool_carpets. All counts, outputs, probabilities and alchemistry:dissolver/carpets ID preserved. No global tag alias, JAR change, launcher hook or new framework. Exact author-recipe byte guard requires review if the author changes/fixes it."
     }
   ],
   "questLocalization": {

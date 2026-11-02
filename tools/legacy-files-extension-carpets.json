@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Exact owned overlay bytes are registered for safe future retirement when an author recipe fix supersedes this source-only correction. Current active resources are still covered by the current manifest; no filename-only deletion authority.",
+  "priorUnionSha256": "d1e99f534da71104a7d8bfbc9b85d2bd7fe6ebdcc9ad80d01186ea371db6148a",
+  "priorSourceRevision": "8276115caef8892abea65f47a40d14daa057a8ee",
+  "priorRows": 2013,
+  "currentUnionSha256": "837016c8de3bac8063dade7a0e78223cae3c0d4a0f3798d179d16154100c4ce5",
+  "currentRows": 2014,
+  "addedExactRows": [
+    {
+      "path": "kubejs/data/alchemistry/recipes/dissolver/carpets.json",
+      "sizeBytes": 644,
+      "sha256": "05a82fcfb14da81ad397e342192b4f7dec0528156b0f4116cfc1f4aa68f009d4"
+    }
+  ]
+}
