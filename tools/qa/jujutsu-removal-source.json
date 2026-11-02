@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "parentSourceRevision": "610b7371efebf52598220f9235ba4be7c915d366",
+  "removedFile": {
+    "fileName": "JujutsuCraft-ver51-forge-1.20.1.jar",
+    "sha256": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
+    "sizeBytes": 16810987,
+    "path": "mods/JujutsuCraft-ver51-forge-1.20.1.jar",
+    "kind": "requested",
+    "version": "51",
+    "modIds": [
+      "jujutsucraft"
+    ],
+    "name": "Jujutsu Craft",
+    "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sorceryfight",
+    "sourceUrl": "https://edge.forgecdn.net/files/9146/690/JujutsuCraft-ver51-forge-1.20.1.jar",
+    "projectId": 471288,
+    "fileId": 9146690
+  },
+  "retainedJarCount": 528,
+  "unchangedRetainedJarBytes": true,
+  "removedKeyNames": [
+    "key.jujutsucraft.key_change_technique",
+    "key.jujutsucraft.key_start_technique",
+    "key.jujutsucraft.key_simple_domain",
+    "key.jujutsucraft.key_reset_technique",
+    "key.jujutsucraft.key_reverse_cursed_technique",
+    "key.jujutsucraft.key_backstep",
+    "key.jujutsucraft.key_domain_amplification",
+    "key.jujutsucraft.key_space",
+    "key.jujutsucraft.key_forward",
+    "key.jujutsucraft.key_switch_cursed_technique",
+    "key.jujutsucraft.key_use_main_skill",
+    "key.jujutsucraft.key_a",
+    "key.jujutsucraft.key_d"
+  ],
+  "retainedPresetNames": 565,
+  "projectedModIds": 553,
+  "nativeRuntimeOrMultiplayerPassClaimed": false,
+  "runtimeRemovedFiles": [
+    "mods/JujutsuCraft-ver51-forge-1.20.1.jar"
+  ],
+  "runtimeChangedFiles": [
+    "launcher/controls-guide.md",
+    "launcher/controls-preset.txt"
+  ],
+  "launcherContentRuleAdded": false,
+  "oldWorldContentRegistryLossExpected": true
+}

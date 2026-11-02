@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "610b7371efebf52598220f9235ba4be7c915d366",
+  "priorUnionSha256": "0c07b54ad1d3069fec45c03e69a99566297f194fa309165e242940c2411a66ed",
+  "currentUnionSha256": "0489d5bc733fab2b90ddfa73e688460a2b5a7d6440554c67ed13e553f2a4e453",
+  "addedExactRows": [
+    {
+      "path": "launcher/controls-preset.txt",
+      "sizeBytes": 31980,
+      "sha256": "e8562c1c8471fe1294ba8552b7a4600e07dd7a911dd981d3f81f4b614c94593a"
+    },
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 12597,
+      "sha256": "be9debd58a9544dc9116c3f79b73eb3d1e71f9fd04a9ae2f92e8d4d6a5848fc4"
+    }
+  ],
+  "removedContentKnownExactRow": {
+    "path": "mods/JujutsuCraft-ver51-forge-1.20.1.jar",
+    "sizeBytes": 16810987,
+    "sha256": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af"
+  },
+  "unknownPersonalFilesDeletionClaimed": false
+}

@@ -1670,22 +1670,6 @@
       "name": "HSR Phainon"
     },
     {
-      "fileName": "JujutsuCraft-ver51-forge-1.20.1.jar",
-      "sha256": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
-      "sizeBytes": 16810987,
-      "path": "mods/JujutsuCraft-ver51-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "51",
-      "modIds": [
-        "jujutsucraft"
-      ],
-      "name": "Jujutsu Craft",
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sorceryfight",
-      "sourceUrl": "https://edge.forgecdn.net/files/9146/690/JujutsuCraft-ver51-forge-1.20.1.jar",
-      "projectId": 471288,
-      "fileId": 9146690
-    },
-    {
       "fileName": "kleiders_custom_renderer-7.4.1-forge-1.20.1.jar",
       "sha256": "9e7bf7f20560120ec6de86f76ca88bb2f1c6ad22e98980bce119599f1e0c809e",
       "sizeBytes": 47876,
@@ -2645,17 +2629,17 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "be9debd58a9544dc9116c3f79b73eb3d1e71f9fd04a9ae2f92e8d4d6a5848fc4",
-      "sizeBytes": 12597,
+      "sha256": "55b2acd475e352d3d401e13a675d867d352f179d21ac395efc90707170c5ae3a",
+      "sizeBytes": 11919,
       "kind": "resource",
-      "reason": "Optional key-only preset578 retained names: remove only58 mappings owned by3 explicitly excluded NEWmods from historical native636 namespace; remaining values unchanged. No fresh native/application claim."
+      "reason": "Optional key-only preset565 retained names: remove only71 mappings owned by4 explicitly excluded NEWmods from historical native636 namespace; remaining values unchanged. No fresh native/application claim."
     },
     {
       "path": "launcher/controls-preset.txt",
-      "sha256": "e8562c1c8471fe1294ba8552b7a4600e07dd7a911dd981d3f81f4b614c94593a",
-      "sizeBytes": 31980,
+      "sha256": "58eee726ee9f6ea26e2c7505d5c6f3199839a31700666728363dd082268bef1b",
+      "sizeBytes": 31238,
       "kind": "configuration",
-      "reason": "Optional key-only preset578 retained names: remove only58 mappings owned by3 explicitly excluded NEWmods from historical native636 namespace; remaining values unchanged. No fresh native/application claim."
+      "reason": "Optional key-only preset565 retained names: remove only71 mappings owned by4 explicitly excluded NEWmods from historical native636 namespace; remaining values unchanged. No fresh native/application claim."
     },
     {
       "path": "launcher/jvm-args.txt",

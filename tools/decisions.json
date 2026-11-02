@@ -1399,18 +1399,19 @@
     {
       "name": "Jujutsu Craft",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sorceryfight",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "jujutsucraft"
       ],
       "version": "51",
-      "sha256": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af"
+      "sha256": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
+      "reason": "User explicitly requested complete removal on 2026-11-02 after identifying loud melee hit sounds. Not part of original ATM9."
     },
     {
       "name": "Kimetsunoyaiba",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/demonslayer",
       "status": "excluded-by-user",
-      "reason": "User requested removal on 2026-10-30 of the pictured cyan backstep arrow and five-square HUD. Pixel-exact icon anchors relative to the independently matched Bleach fist agree with Kimetsu OverlayCooldownTimeOverlay at GUI scale2, not the similar Jujutsu overlay. Not present in original ATM9. Jujutsu Craft remains selected."
+      "reason": "User requested removal on 2026-10-30 of the pictured cyan backstep arrow and five-square HUD. Pixel-exact icon anchors relative to the independently matched Bleach fist agree with Kimetsu OverlayCooldownTimeOverlay at GUI scale2, not the similar Jujutsu overlay. Not present in original ATM9. Jujutsu Craft was subsequently removed by separate user request on 2026-11-02."
     },
     {
       "name": "Liminality",
@@ -1998,7 +1999,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 79,
+  "selectedRequestedProjects": 78,
   "dependencyJars": 19,
   "authorCompatibilitySelections": [
     {
@@ -2242,8 +2243,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_JOURNEYMAP_AND_V10_CACHED_DIAGNOSTICS_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "647a30184d7f31957471695c741d9d8ce5bfcfca3778259cad52163c5ffa6738",
+    "status": "SOURCE_JUJUTSU_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "1596ef43858831f9011ab07351561b2b61b6adf8f4863edf325b7cc0843de8b8",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -2649,5 +2650,53 @@
     "onlyRuntimeChange": "launcher/diagnostics/recipe-exception-observer.jar",
     "all529ContentJarsAndPermanentJourneyMapPolicyUnchanged": true,
     "noNewGameOrPeerAcceptanceClaimed": true
+  },
+  "previousSingleplayerContentAcceptanceBeforeJujutsuRemoval": {
+    "status": "SOURCE_JOURNEYMAP_AND_V10_CACHED_DIAGNOSTICS_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "647a30184d7f31957471695c741d9d8ce5bfcfca3778259cad52163c5ffa6738",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "jujutsuCraftRemoval": {
+    "userAuthorized": true,
+    "removedFile": {
+      "fileName": "JujutsuCraft-ver51-forge-1.20.1.jar",
+      "sha256": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
+      "sizeBytes": 16810987,
+      "path": "mods/JujutsuCraft-ver51-forge-1.20.1.jar",
+      "kind": "requested",
+      "version": "51",
+      "modIds": [
+        "jujutsucraft"
+      ],
+      "name": "Jujutsu Craft",
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sorceryfight",
+      "sourceUrl": "https://edge.forgecdn.net/files/9146/690/JujutsuCraft-ver51-forge-1.20.1.jar",
+      "projectId": 471288,
+      "fileId": 9146690
+    },
+    "removedKeyNames": [
+      "key.jujutsucraft.key_change_technique",
+      "key.jujutsucraft.key_start_technique",
+      "key.jujutsucraft.key_simple_domain",
+      "key.jujutsucraft.key_reset_technique",
+      "key.jujutsucraft.key_reverse_cursed_technique",
+      "key.jujutsucraft.key_backstep",
+      "key.jujutsucraft.key_domain_amplification",
+      "key.jujutsucraft.key_space",
+      "key.jujutsucraft.key_forward",
+      "key.jujutsucraft.key_switch_cursed_technique",
+      "key.jujutsucraft.key_use_main_skill",
+      "key.jujutsucraft.key_a",
+      "key.jujutsucraft.key_d"
+    ],
+    "retainedSourceJars": 528,
+    "retainedProjectedPackModIds": 553,
+    "retainedPresetNames": 565,
+    "strictScriptGameruleReferencesFound": false,
+    "newRuntimeAcceptanceClaimed": false,
+    "safetyReason": "Removal of one NEW content JAR adds no world mutation path; no custom Safety framework is present. Retained author JARs and native permission gates are unchanged. No lossless old-world registry migration is claimed."
   }
 }

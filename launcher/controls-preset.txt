@@ -57,14 +57,6 @@ key_key.irons_spellbooks.spell_wheel:key.keyboard.y
 key_key.irons_spellbooks.spellbook_cast:key.keyboard.i
 key_key.journeymap.create_waypoint:key.keyboard.n
 key_key.journeymap.map_toggle_alt:key.keyboard.m
-key_key.jujutsucraft.key_change_technique:key.keyboard.x
-key_key.jujutsucraft.key_domain_amplification:key.keyboard.semicolon
-key_key.jujutsucraft.key_reset_technique:key.keyboard.right.control
-key_key.jujutsucraft.key_reverse_cursed_technique:key.keyboard.page.up
-key_key.jujutsucraft.key_simple_domain:key.keyboard.page.down
-key_key.jujutsucraft.key_start_technique:key.keyboard.z
-key_key.jujutsucraft.key_switch_cursed_technique:key.keyboard.apostrophe
-key_key.jujutsucraft.key_use_main_skill:key.keyboard.u
 key_key.push_to_talk:key.keyboard.caps.lock
 key_key.remorphed_menu:key.keyboard.home
 key_key.rimulib.skill_menu:key.keyboard.f8
@@ -93,11 +85,6 @@ key_key.grotesque_steve.ends:key.keyboard.escape
 key_key.grotesque_steve.resistance:key.keyboard.left.shift
 key_key.irons_spellbooks.spell_bar_modifier:key.keyboard.left.shift
 key_key.jade.show_details:key.keyboard.left.shift
-key_key.jujutsucraft.key_a:key.keyboard.a
-key_key.jujutsucraft.key_backstep:key.keyboard.s
-key_key.jujutsucraft.key_d:key.keyboard.d
-key_key.jujutsucraft.key_forward:key.keyboard.w
-key_key.jujutsucraft.key_space:key.keyboard.space
 key_key.mekanism.key_boost:key.keyboard.left.control
 key_key.zoniex.zoniex_jump:key.keyboard.space
 key_pneumaticcraft.boots.jet_boots:key.keyboard.space
