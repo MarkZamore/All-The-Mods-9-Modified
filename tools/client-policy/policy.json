@@ -7,6 +7,12 @@
       "template": "scripts/lanmc_memory_warning_policy.js",
       "sizeBytes": 421,
       "sha256": "68b42fde0072ce3f366605a7619931cb6388575230ca7a910c23580b58cbaeab"
+    },
+    {
+      "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
+      "sizeBytes": 21199,
+      "sha256": "7dbba69af094db80119d65f6082a117de8455cb2fd1f1c787f633308ab896dc2",
+      "template": "scripts/lanmc_journeymap_waypoint_policy.js"
     }
   ],
   "apiContracts": [

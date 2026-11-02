@@ -4915,6 +4915,11 @@
     "sha256": "e695e3f36e364319d0d10f8fa6deb66b2b7e89cbe165e54ec4841610d28b9af3"
   },
   {
+    "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
+    "sizeBytes": 21199,
+    "sha256": "7dbba69af094db80119d65f6082a117de8455cb2fd1f1c787f633308ab896dc2"
+  },
+  {
     "path": "kubejs/startup_scripts/mekanismStartup.js",
     "sizeBytes": 2845,
     "sha256": "b92c9da364d8cc399c73d7af65e974f3f80fae7489155c0ae9cb272e0e8ee966"

@@ -2733,6 +2733,13 @@
       "sha256": "05a82fcfb14da81ad397e342192b4f7dec0528156b0f4116cfc1f4aa68f009d4",
       "kind": "resource",
       "reason": "User-authorized same-ID native recipe data correction: only input.ingredient.tag minecraft:carpets→minecraft:wool_carpets. All counts, outputs, probabilities and alchemistry:dissolver/carpets ID preserved. No global tag alias, JAR change, launcher hook or new framework. Exact author-recipe byte guard requires review if the author changes/fixes it."
+    },
+    {
+      "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
+      "sizeBytes": 21199,
+      "sha256": "7dbba69af094db80119d65f6082a117de8455cb2fd1f1c787f633308ab896dc2",
+      "kind": "resource",
+      "reason": "Pack-owned native KubeJS singleplayer waypoint generation association. Preserve all displaced waypoint files by rename/archive and restore known UUID generations; no images, configs, game JARs or mechanics changed. Exact source/native API guard requires review on author updates."
     }
   ],
   "questLocalization": {

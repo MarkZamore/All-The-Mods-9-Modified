@@ -22,6 +22,7 @@ import zipfile
 import pack_library
 import atm9_base_jar_overrides
 import carpets_recipe_policy
+import waypoint_source_policy
 
 CONTENT_ROOTS = {"mods", "config", "kubejs", "scripts", "defaultconfigs", "data",
                  "resourcepacks", "shaderpacks", "configureddefaults", "packmenu",
@@ -509,6 +510,8 @@ def verify(pack: Path, *, require_loaded_inventory=False) -> dict:
             check_file(pack, row, "Author baseline file" if row["path"] in base_paths else "Modified locked file")
     if any(row["path"] == carpets_recipe_policy.OVERRIDE for row in plan["supportFiles"]):
         carpets_recipe_policy.verify(pack)
+    if any(row["path"] == waypoint_source_policy.SCRIPT for row in plan["supportFiles"]):
+        waypoint_source_policy.verify(pack)
     expected, actual = expected_content(plan), content_paths(pack)
     require(actual == expected, "Unexpected/missing active content: " + repr(sorted(actual ^ expected)[:30]))
     require(target_path(pack, "launcher/pack-owned.txt").is_file(), "Missing launcher ownership declarations")

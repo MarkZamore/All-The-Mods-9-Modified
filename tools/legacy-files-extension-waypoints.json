@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "fcea2d570569c9d1599ec14bbe56b5f3b9266e12",
+  "priorUnionSha256": "abcffb71deca8bfbe6dd82f67e7855bb9d7d62694708c7b9bf1d0ec3f6238d4c",
+  "priorRows": 2019,
+  "currentUnionSha256": "dbcc2939c461386f2d9766a7da0da5ecae4f7039f07b02320201c09b9e87d273",
+  "currentRows": 2020,
+  "addedExactRows": [
+    {
+      "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
+      "sizeBytes": 21199,
+      "sha256": "7dbba69af094db80119d65f6082a117de8455cb2fd1f1c787f633308ab896dc2"
+    }
+  ],
+  "purpose": "Exact managed-source script retirement authority for a future reviewed policy removal; no personal waypoint or save files are claimed."
+}
