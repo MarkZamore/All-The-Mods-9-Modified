@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "version": 10,
+  "jarSha256": "b66d1defe81cf239f61ebd6b3f114f6d5cc642a91789a012e4ead8f9b9c5a27d",
+  "sourceSha256": "c4fc3e3c1130213e95c298dc17fba09becd6975473335e198775e6bb064182b7",
+  "runtime": "Portable full JDK17 observer and isolated debuggee",
+  "tests": {
+    "selftestFixture": 20,
+    "legacyRecipeAndTerminalTests": true,
+    "keepaliveEvents": 5,
+    "matchingChallengeId": 704815,
+    "encoderReturnSite": 9,
+    "lifecycleReferences": 2,
+    "queueSamples": 2,
+    "sampleIntervalSeconds": 5.067998,
+    "autoReadStates": [
+      0,
+      1
+    ],
+    "pendingBytes": [
+      777,
+      123
+    ],
+    "inboundQueueStates": [
+      2,
+      0
+    ],
+    "perBridgeMapCount": 3,
+    "cache16CapAndDuplicateGuard": true,
+    "closedAndCollectedReferenceDrop": true,
+    "noReferenceSkipsWithoutAnyVmLookup": true,
+    "lifecycleHandlerOnlyFrame0ThisObject": true,
+    "noInstancesOrCapabilityOrCollectionPinCalls": true,
+    "noTargetInvokeExplicitSuspendTransformApi": true,
+    "periodicCollectorNoFramesOrArguments": true,
+    "optionalNettyHashGuard": true,
+    "ownByteBudgetGuard": true,
+    "eventThreadsResumedAndDebuggeeExit0": true,
+    "preexistingLogBytesPreserved": 307200,
+    "wrappersUnchanged": true,
+    "actual429CleanupAndArchive": "PASS"
+  },
+  "eventRows": 23,
+  "ownSourceBytes": 18903,
+  "gzipBytes": 2923,
+  "actualReportEntryBytes": 18926,
+  "nativeLifecycleProfileSha256": "7bce10e26a596e121980d5ecff085e1327e6319eb14c2c9eb136c6e39ee5d5d0",
+  "nativeFieldProfileSha256": "8c89b5996bcb855f5874f9ddd56ae14ded9eb9b717773d955aba5933b8354fef",
+  "actualAssemblySha256": "d1a8af02204e03a8748a3a0151aa4aaaf34a218660e2b9fc19feb83cedd88b12",
+  "actualArchiveProofSha256": "7631dc09bef9396072c17b1ffba6a9acf2d0a779070155f9edfde05754ec0af2",
+  "actualRowProofSha256": "1ff5225ffd57e3245a540755c3bea0fb0117dd386d1d69994ed82a3c82097ccf",
+  "independentReview": "completion_scope_audit CLEAR; exact aliases, cache boundary and no heap-search fallback reviewed",
+  "boundaries": [
+    "No actual Minecraft v9/v10 attach or performance run; no earlier network failure attributed to these never-used versions.",
+    "Future lifecycle references only: already-active objects before READY are not discovered. Cache overflow and GC mean incomplete coverage.",
+    "No explicit periodic suspend, target method invocation, class mutation, heap instance enumeration or collection disabling. Existing narrow event breakpoints still suspend their event thread briefly.",
+    "Object fields are non-atomic best-effort observations, not proof delivery.",
+    "No application rebuild, source-pack edit, new JVM argument or publication by this agent."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "publishedLauncherVersion": "1.0.429.0",
+  "publishedProductVersion": "1.0.429+ef0be2f09b3dcabcdb6cf7aab91f1ce6593e40aa.ef0be2f09b3dcabcdb6cf7aab91f1ce6593e40aa",
+  "assemblySha256": "d1a8af02204e03a8748a3a0151aa4aaaf34a218660e2b9fc19feb83cedd88b12",
+  "actualMethodsInvoked": [
+    "LogCleanupService.RetainRecentSessionDiagnostics",
+    "BugReportService.BuildArchive"
+  ],
+  "debugLogAbsentBeforeAndAfter": true,
+  "gzipSurvivedActualCleanup": true,
+  "gzipBytesPreserved": true,
+  "gzipSha256": "a196836715cecc2e7b03bbb34ff8c147cf345204711faa29928b1df5903780eb",
+  "diagnosticRows": 23,
+  "allDiagnosticRowsPreservedInDecompressedReport": true,
+  "nativeCaughtRecipePreserved": true,
+  "nativeUncaughtRecipePreserved": true,
+  "reportEntry": "game/recipe-diagnostics-20261102-165449-003-38336.log",
+  "reportEntryBytes": 18926,
+  "reportEntryNames": [
+    "report.txt",
+    "game/recipe-diagnostics-20261102-165449-003-38336.log"
+  ],
+  "listedByActualCollector": true,
+  "reportArchiveSha256": "6a691e51b3266e8e3cc325733f724f38d4773e680adff1edbb72606cb248d7cc",
+  "networkSendPerformed": false,
+  "liveGameAccessed": false,
+  "selectionBoundary": "Current report selects newest two logs/*.log.gz modified within24hours; fixture has one archive.",
+  "v10Counts": {
+    "observer_ready": 1,
+    "queue_sampling_ready": 1,
+    "lifecycle_reference_captured": 2,
+    "alchemylib_recipe_exception": 2,
+    "connection_terminal": 7,
+    "terminal_hooks_ready": 3,
+    "keepalive": 5,
+    "network_queue_sample": 2
+  },
+  "lifecycleReferences": 2,
+  "encodedChallengeId": 704815,
+  "queueSamples": 2
+}

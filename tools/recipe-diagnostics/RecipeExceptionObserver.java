@@ -26,7 +26,7 @@ public final class RecipeExceptionObserver {
     static final String STEAM_CLASS = "link.e4steam.steam.SteamConnectionBridge";
     static final String STEAM_JAR = "e4steam-forge-mc1.18.2-1.20.2-v0.3.4-lanmc-native-ui.1.jar";
     static final String STEAM_SHA = "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40";
-    static final String HEADER = "[RecipeExceptionObserver v9] ";
+    static final String HEADER = "[RecipeExceptionObserver v10] ";
     static final String NETTY_SHA = "c210069be4ab4120f5ac7cb5e4a126d3a007e78a64fd44c9971220e013dbaef1";
     static final int MAX_QUEUE_SAMPLES = 24;
     static final int MAX_BYTES = 256 * 1024;
@@ -58,7 +58,10 @@ public final class RecipeExceptionObserver {
         new Site("net.minecraft.server.network.ServerGamePacketListenerImpl", "m_9942_", "(Lnet/minecraft/network/chat/Component;)V"),
         new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "<init>", "(J)V"),
         new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "<init>", "(Lnet/minecraft/network/FriendlyByteBuf;)V", 12),
-        new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "m_5779_", "(Lnet/minecraft/network/FriendlyByteBuf;)V", 9));
+        new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "m_5779_", "(Lnet/minecraft/network/FriendlyByteBuf;)V", 9),
+        new Site(STEAM_CLASS, "start", "()V"),
+        new Site("net.minecraft.network.Connection", "channelActive", "(Lio/netty/channel/ChannelHandlerContext;)V"));
+    static boolean lifecycleSite(Site site) { return site.methodName.equals("start") || site.methodName.equals("channelActive"); }
     static boolean keepAliveSite(Site site) { return site.methodName.equals("m_7231_") || site.methodName.equals("m_5683_") || site.className.equals("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket"); }
 
     public static void main(String[] args) throws Exception {
@@ -166,8 +169,8 @@ public final class RecipeExceptionObserver {
             append(config, budget, HEADER + json(Map.of("kind", "observer_ready", "utc", Instant.now().toString(),
                 "pid", config.pid, "callerFilter", CALLER, "maxEvents", config.maxEvents,
                 "targetMethodsInvoked", false, "classMutation", false, "terminalHooks", hookStates, "maxTerminalEvents", config.maxTerminals, "maxKeepAliveEvents", config.maxKeepAlives)) + "\n");
-            QueueSampler sampler = new QueueSampler(vm.canGetInstanceInfo() && Files.isRegularFile(config.game.resolve("mods").resolve(STEAM_JAR)), nettyProfileVerified(config));
-            append(config, budget, HEADER + json(Map.of("kind", "queue_sampling_ready", "utc", Instant.now().toString(), "enabled", sampler.enabled, "nettyProfileVerified", sampler.nettyProfileVerified, "intervalSeconds", 5, "maxSamples", config.maxQueueSamples, "maxInstancesPerType", 16, "targetMethodsInvoked", false, "periodicThreadSuspension", false)) + "\n");
+            QueueSampler sampler = new QueueSampler(Files.isRegularFile(config.game.resolve("mods").resolve(STEAM_JAR)), nettyProfileVerified(config));
+            append(config, budget, HEADER + json(Map.of("kind", "queue_sampling_ready", "utc", Instant.now().toString(), "enabled", sampler.enabled, "nettyProfileVerified", sampler.nettyProfileVerified, "intervalSeconds", 5, "maxSamples", config.maxQueueSamples, "maxCachedRefsPerType", 16, "targetMethodsInvoked", false, "periodicThreadSuspension", false, "referenceSource", "future_lifecycle_only_no_existing_object_fallback")) + "\n");
             ready.run();
             while ((captured < config.maxEvents || terminalCaptured < config.maxTerminals || keepAliveCaptured < config.maxKeepAlives || (sampler.enabled && sampler.samples < config.maxQueueSamples)) && alive(config.pid) && alive(config.parentPid)) {
                 EventSet eventSet;
@@ -184,6 +187,9 @@ public final class RecipeExceptionObserver {
                             var state = new LinkedHashMap<String, Object>(terminalRequests(manager, prepared.referenceType()));
                             state.put("kind", "terminal_hooks_ready"); state.put("utc", Instant.now().toString()); state.put("pid", config.pid);
                             snapshots.add(state); prepared.request().disable();
+                        } else if (event instanceof BreakpointEvent lifecycle && lifecycle.request().getProperty("terminalSite") instanceof Site site && lifecycleSite(site)) {
+                            try { Map<String,Object> cached = cacheLifecycle(lifecycle, site, sampler, config.pid); if(cached != null) snapshots.add(cached); }
+                            catch (RuntimeException | IncompatibleThreadStateException failure) { snapshots.add(Map.of("kind", "lifecycle_reference_failure", "utc", Instant.now().toString(), "error", failure.getClass().getName())); }
                         } else if (event instanceof BreakpointEvent terminal && terminal.request().getProperty("terminalSite") instanceof Site site && keepAliveSite(site) && keepAliveCaptured < config.maxKeepAlives) {
                             try { snapshots.add(keepAliveSnapshot(terminal, site, config.pid)); keepAliveCaptured++; }
                             catch (Throwable failure) { snapshots.add(Map.of("kind", "keepalive_snapshot_failure", "utc", Instant.now().toString(), "error", failure.getClass().getName())); keepAliveCaptured++; }
@@ -202,7 +208,7 @@ public final class RecipeExceptionObserver {
                 }
                 for (Map<String, Object> snapshot : snapshots) append(config, budget, HEADER + json(snapshot) + "\n");
                 for (BreakpointRequest request : manager.breakpointRequests()) if (request.getProperty("terminalSite") instanceof Site site &&
-                    ((keepAliveSite(site) && keepAliveCaptured >= config.maxKeepAlives) || (!keepAliveSite(site) && terminalCaptured >= config.maxTerminals))) request.disable();
+                    ((lifecycleSite(site) && sampler.samples >= config.maxQueueSamples) || (keepAliveSite(site) && keepAliveCaptured >= config.maxKeepAlives) || (!keepAliveSite(site) && !lifecycleSite(site) && terminalCaptured >= config.maxTerminals))) request.disable();
                 if (captured >= config.maxEvents) for (ExceptionRequest request : manager.exceptionRequests()) request.disable();
                 if (disconnected) break;
                 sampleQueues(vm, config, budget, sampler);
@@ -224,8 +230,38 @@ public final class RecipeExceptionObserver {
         final boolean enabled, nettyProfileVerified;
         int samples;
         long nextNanos;
+        final LinkedHashMap<Long,ObjectReference> bridges=new LinkedHashMap<>(), connections=new LinkedHashMap<>();
+        boolean bridgeCacheLimitReached, connectionCacheLimitReached;
         QueueSampler(boolean enabled, boolean nettyProfileVerified) {
             this.enabled = enabled; this.nettyProfileVerified = nettyProfileVerified;
+        }
+    }
+
+
+    static Map<String,Object> cacheLifecycle(BreakpointEvent event, Site site, QueueSampler sampler, long pid) throws IncompatibleThreadStateException {
+        if(!sampler.enabled) return null;
+        ObjectReference receiver=event.thread().frame(0).thisObject(); if(receiver==null)return null;
+        boolean bridge=site.className.equals(STEAM_CLASS);
+        LinkedHashMap<Long,ObjectReference> cache=bridge?sampler.bridges:sampler.connections;
+        long id=receiver.uniqueID(); if(cache.containsKey(id))return null;
+        if(cache.size()>=16){if(bridge)sampler.bridgeCacheLimitReached=true;else sampler.connectionCacheLimitReached=true;return null;}
+        cache.put(id,receiver);
+        return Map.of("kind","lifecycle_reference_captured","utc",Instant.now().toString(),"pid",pid,"class",site.className,"method",site.methodName,"receiverId",id,"cachedReferences",cache.size(),"targetMethodsInvoked",false,"collectionDisabled",false);
+    }
+
+    static void pruneCached(LinkedHashMap<Long,ObjectReference> cache, boolean bridges) {
+        for(var iterator=cache.entrySet().iterator();iterator.hasNext();) {
+            var entry=iterator.next(); ObjectReference value=entry.getValue();
+            try {
+                if(bridges) { if(Boolean.TRUE.equals(allowedValue(readField(value,"closed"))))iterator.remove(); }
+                else {
+                    Value channelValue=readField(value,"f_129468_");
+                    if(channelValue instanceof ObjectReference channel && channel.referenceType().name().equals("io.netty.channel.socket.nio.NioSocketChannel")) {
+                        Value unsafeValue=readField(channel,"unsafe");
+                        if(unsafeValue instanceof ObjectReference unsafe && readField(unsafe,"outboundBuffer")==null)iterator.remove();
+                    }
+                }
+            } catch(ObjectCollectedException collected){iterator.remove();}
         }
     }
 
@@ -241,7 +277,7 @@ public final class RecipeExceptionObserver {
         if (!sampler.enabled || sampler.samples >= config.maxQueueSamples || System.nanoTime() < sampler.nextNanos) return;
         sampler.nextNanos = System.nanoTime() + TimeUnit.SECONDS.toNanos(5);
         Map<String, Object> snapshot;
-        try { snapshot = queueSnapshot(vm, config.pid, sampler.nettyProfileVerified); }
+        try { snapshot = queueSnapshot(vm, config.pid, sampler.nettyProfileVerified, sampler); }
         catch (VMDisconnectedException disconnected) { return; }
         catch (RuntimeException failure) {
             snapshot = Map.of("kind", "queue_snapshot_failure", "utc", Instant.now().toString(), "error", failure.getClass().getName(), "targetMethodsInvoked", false, "periodicThreadSuspension", false);
@@ -249,10 +285,9 @@ public final class RecipeExceptionObserver {
         if (snapshot != null) { snapshot = new LinkedHashMap<>(snapshot); sampler.samples++; snapshot.put("sample", sampler.samples); append(config, budget, HEADER + json(snapshot) + "\n"); }
     }
 
-    static Map<String, Object> queueSnapshot(VirtualMachine vm, long pid, boolean nettyVerified) {
-        List<ReferenceType> bridgeTypes = vm.classesByName(STEAM_CLASS);
-        if (bridgeTypes.size() != 1 || !(bridgeTypes.get(0) instanceof ClassType bridgeType)) return null;
-        List<ObjectReference> instances = bridgeType.instances(16);
+    static Map<String, Object> queueSnapshot(VirtualMachine vm, long pid, boolean nettyVerified, QueueSampler sampler) {
+        pruneCached(sampler.bridges,true);
+        List<ObjectReference> instances = new ArrayList<>(sampler.bridges.values());
         var bridges = new ArrayList<Map<String, Object>>();
         for (ObjectReference bridge : instances) {
             try {
@@ -281,14 +316,14 @@ public final class RecipeExceptionObserver {
             } catch (ObjectCollectedException collected) { /* Running-object snapshots are best effort, never pinned. */ }
         }
         if (bridges.isEmpty()) return null;
+        if(nettyVerified)pruneCached(sampler.connections,false);
         var snapshot = new LinkedHashMap<String, Object>(); snapshot.put("kind", "network_queue_sample"); snapshot.put("utc", Instant.now().toString()); snapshot.put("pid", pid);
-        snapshot.put("nonAtomicRunningSnapshot", true); snapshot.put("maxInstancesPerType", 16); snapshot.put("bridgeInstancesMayBeTruncated", instances.size() == 16); snapshot.put("bridges", bridges);
+        snapshot.put("nonAtomicRunningSnapshot", true); snapshot.put("maxCachedRefsPerType", 16); snapshot.put("bridgeCacheLimitReached", sampler.bridgeCacheLimitReached); snapshot.put("referenceSource", "future_lifecycle_only"); snapshot.put("bridges", bridges);
         snapshot.put("nettyProfileVerified", nettyVerified);
         if (nettyVerified) {
             var connections = new ArrayList<Map<String, Object>>();
-            List<ReferenceType> connectionTypes = vm.classesByName("net.minecraft.network.Connection");
-            if (connectionTypes.size() == 1 && connectionTypes.get(0) instanceof ClassType connectionType) {
-                List<ObjectReference> connectionsFound = connectionType.instances(16); snapshot.put("connectionInstancesMayBeTruncated", connectionsFound.size() == 16);
+            {
+                List<ObjectReference> connectionsFound = new ArrayList<>(sampler.connections.values()); snapshot.put("connectionCacheLimitReached", sampler.connectionCacheLimitReached);
                 for (ObjectReference connection : connectionsFound) {
                     try {
                         var row = new LinkedHashMap<String, Object>(); row.put("receiverId", connection.uniqueID());
@@ -703,6 +738,12 @@ public final class RecipeExceptionObserver {
         files.put("ProbeQueue.java", "public class ProbeQueue { static final link.e4steam.steam.SteamConnectionBridge bridge=new link.e4steam.steam.SteamConnectionBridge(77,false); static final net.minecraft.network.Connection connection=new net.minecraft.network.Connection(); public static void start(java.nio.file.Path root){Thread t=new Thread(()->{try{while(!java.nio.file.Files.exists(root.resolve(\"queue-change.flag\")))Thread.sleep(10);connection.enable();bridge.drain();Thread.sleep(12000);}catch(InterruptedException e){}},\"e4steam-steam-local-writer-76561198000000000-77\");t.setDaemon(true);t.start();} }");
         files.put("ProbeMain.java", files.get("ProbeMain.java").replace("Files.writeString(root.resolve(\"boot.flag\"),\"ok\");", "ProbeQueue.start(root); Files.writeString(root.resolve(\"boot.flag\"),\"ok\");"));
 
+
+        files.put("link/e4steam/steam/SteamConnectionBridge.java", files.get("link/e4steam/steam/SteamConnectionBridge.java").replace("public void localEof()", "public void start(){started.set(true);} public void localEof()"));
+        files.put("net/minecraft/network/Connection.java", files.get("net/minecraft/network/Connection.java").replace("public void channelInactive", "public void channelActive(io.netty.channel.ChannelHandlerContext c){} public void channelInactive"));
+        files.put("ProbeQueue.java", files.get("ProbeQueue.java").replace("public static void start(java.nio.file.Path root)", "public static void activate(){connection.channelActive(null);bridge.start();} public static void start(java.nio.file.Path root)"));
+        files.put("ProbeMain.java", files.get("ProbeMain.java").replace("try {int a=", "ProbeQueue.activate(); try {int a="));
+
         var compilerArgs=new ArrayList<String>(List.of("--release","17","-g","-d",classes.toString()));
         for(var row:files.entrySet()){Path file=sources.resolve(row.getKey());Files.createDirectories(file.getParent());Files.writeString(file,row.getValue());compilerArgs.add(file.toString());}
         int compiled=ToolProvider.getSystemJavaCompiler().run(null,null,null,compilerArgs.toArray(String[]::new));if(compiled!=0)throw new IllegalStateException("Self-test compilation failed");
@@ -743,6 +784,7 @@ public final class RecipeExceptionObserver {
                 captured.lines().noneMatch(line -> line.contains("\"method\":\"m_9942_\"") && line.contains("\"method\":\"tick\"") && line.contains("\"lastKeepAliveMillis\":998877")) ||
                 captured.contains("keepalive_snapshot_failure")) throw new AssertionError("Keepalive matching/state/original-disconnect self-test failed");
 
+            if(captured.split("\"kind\":\"lifecycle_reference_captured\"",-1).length-1!=2 || captured.contains("lifecycle_reference_failure")) throw new AssertionError("Lifecycle-only reference capture failed");
             if(captured.split("\"kind\":\"network_queue_sample\"",-1).length-1!=2 || !captured.contains("\"autoRead\":0") || !captured.contains("\"autoRead\":1") || !captured.contains("\"totalPendingSize\":777") || !captured.contains("\"totalPendingSize\":123") || !captured.contains("\"inboundQueueCount\":2") || !captured.contains("\"perBridgeQueuedData\":3") || !captured.contains("\"periodicThreadSuspension\":false") || captured.contains("queue_snapshot_failure") || !captured.contains("e4steam-steam-local-writer-<peer>-77")) throw new AssertionError("Queue sampler read-only/profile/running-state self-test failed");
 
             Files.writeString(root.resolve("stop.flag"),"stop");if(!child.waitFor(5,TimeUnit.SECONDS)||child.exitValue()!=0)throw new AssertionError("Self-test debuggee did not continue and exit normally");

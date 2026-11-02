@@ -4,24 +4,24 @@
   "temporaryFiles": [
     {
       "path": "launcher/diagnostics/recipe-exception-observer.jar",
-      "sha256": "db7a7f55ed33c989745ea8dcab330c52f3213e3a77a97ba3688b1a8a65c39880",
-      "sizeBytes": 43259,
+      "sha256": "b66d1defe81cf239f61ebd6b3f114f6d5cc642a91789a012e4ead8f9b9c5a27d",
+      "sizeBytes": 44431,
       "kind": "temporary-diagnostic-tool",
-      "reason": "Temporary manual read-only v9: bounded8recipe/24terminal/32keepalive events plus24 direct-field queue samples at least5s apart, same256KiB own-text cap. Exact native/optional Netty pins; no class transformation or target-method calls. Enumeration has overhead; samples are non-atomic/incomplete. Author timeout/JVMflags unchanged; no network fix claim."
+      "reason": "Temporary read-only v10:8recipe/24terminal/32keepalive and24 cached-reference samples>=5s, same256KiB own text. Captures future Connection.channelActive/SteamBridge.start only;16refs/type. No heap instance search/capability query/collection pinning, target method calls or class changes. Already-active objects, cap/GC can be missed; snapshots not atomic. Existing narrow event-thread suspension and debugger overhead remain."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
       "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44",
       "sizeBytes": 2327,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Temporary manual read-only v7:8recipe+24terminal+32keepalive events share256KiB ownoutput. ExactnativeMinecraft/e4steam68ba/Alchemy guards, no class transforms/targetmethodinvoke. Original60s timeout and allJVMflags retained. Runbothparticipants beforeShare/join; remove3tools/2diagnosticflags after confirmedfix. Not a network-fix claim."
+      "reason": "Temporary read-only v10:8recipe/24terminal/32keepalive and24 cached-reference samples>=5s, same256KiB own text. Captures future Connection.channelActive/SteamBridge.start only;16refs/type. No heap instance search/capability query/collection pinning, target method calls or class changes. Already-active objects, cap/GC can be missed; snapshots not atomic. Existing narrow event-thread suspension and debugger overhead remain."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
       "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a",
       "sizeBytes": 174,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Temporary manual read-only v7:8recipe+24terminal+32keepalive events share256KiB ownoutput. ExactnativeMinecraft/e4steam68ba/Alchemy guards, no class transforms/targetmethodinvoke. Original60s timeout and allJVMflags retained. Runbothparticipants beforeShare/join; remove3tools/2diagnosticflags after confirmedfix. Not a network-fix claim."
+      "reason": "Temporary read-only v10:8recipe/24terminal/32keepalive and24 cached-reference samples>=5s, same256KiB own text. Captures future Connection.channelActive/SteamBridge.start only;16refs/type. No heap instance search/capability query/collection pinning, target method calls or class changes. Already-active objects, cap/GC can be missed; snapshots not atomic. Existing narrow event-thread suspension and debugger overhead remain."
     }
   ],
   "temporaryJvmFlags": [
@@ -42,7 +42,7 @@
   ],
   "modernFixClassification": "Official BASE5.25.0 cache candidate: retain if justified, otherwise explicitly review/revert to author5.24.4. Not automatically removed with diagnostic utilities.",
   "noRealIncidentFixClaimed": true,
-  "currentObserverVersion": 9,
+  "currentObserverVersion": 10,
   "eventLimits": {
     "recipeEvents": 8,
     "terminalEvents": 24,
@@ -50,12 +50,13 @@
     "ownEmittedBytes": 262144,
     "queueSamples": 24,
     "minimumSampleIntervalSeconds": 5,
-    "maximumInstancesPerType": 16,
-    "maximumThreadHeaders": 32
+    "maximumThreadHeaders": 32,
+    "maximumCachedReferencesPerType": 16
   },
   "originalV5ReceiptRemainsHistorical": true,
   "standardConnectivityTimeoutUnchanged": true,
   "ownArchivePattern": "logs/recipe-diagnostics-<UTC-session>-<observerPID>.log.gz",
   "archiveReportBoundary": "Existing generic launcher rule selects newest two logs/*.log.gz changed within24hours; later sessions may displace this archive. Retention7days/64MiB per instance.",
-  "periodicReadLimits": "Direct fields only; no explicit suspend, frames, target invokes or packet bytes. Enumeration has overhead and snapshots/object caps may be incomplete."
+  "periodicReadLimits": "Future lifecycle-captured refs only; no instances/capability/collection-pinning or fallback. Direct fields, no periodic suspend/frames/invoke. Existing active objects, cache caps and GC mean incomplete, non-atomic coverage.",
+  "v9RetiredBecause": "Periodic instance enumeration can perform global heap traversal at safepoint and confound timing. It was not game-used in this investigation."
 }

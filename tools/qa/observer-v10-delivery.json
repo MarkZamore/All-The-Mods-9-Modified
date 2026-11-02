@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "status": "SOURCE_AND_ISOLATED_OBSERVER_FIXTURE_VERIFIED_NO_GAME_PASS",
+  "parentPublicRevision": "8f97229182b68a08abf8b217d7c41cd19bd80176",
+  "sourceLockSha256": "647a30184d7f31957471695c741d9d8ce5bfcfca3778259cad52163c5ffa6738",
+  "runtimeMapSha256": "6b4cd76573f5e00771259cae365d4381a5fa7c1058a1bb3ca6a90687f98ffd36",
+  "runtimeFiles": 1917,
+  "contentJars": 529,
+  "supportFiles": 23,
+  "projectedPackModIds": 554,
+  "onlyRuntimeChange": "launcher/diagnostics/recipe-exception-observer.jar",
+  "observerSha256": "b66d1defe81cf239f61ebd6b3f114f6d5cc642a91789a012e4ead8f9b9c5a27d",
+  "observerBytes": 44431,
+  "all1916OtherParentRuntimeRowsUnchanged": true,
+  "all529JarAndJourneyMap1e55BytesUnchanged": true,
+  "jvmArgumentsAndManualWrappersUnchanged": true,
+  "author60SecondConnectivityTimeoutRetained": true,
+  "noInstancesOrCapabilityOrCollectionPinApiInSource": true,
+  "cacheProfile": "Future2exactlifecycle entries;16refs/type,24samples>=5s,256KiB own text. Already-active refs,cap/GC can be missed. Non-atomic fields and debugger overhead remain.",
+  "proofs": [
+    {
+      "path": "tools/recipe-diagnostics/v10/validation.json",
+      "sha256": "89c6669d28d2a0da099c9201f48866fda5277772e3fe921d757766fbccf28740"
+    },
+    {
+      "path": "tools/recipe-diagnostics/v10/native-profile.public.json",
+      "sha256": "3718c0aff29b31e6c41d2437489b5c96355a00d9f17d638c3cb52e4227f92279"
+    },
+    {
+      "path": "tools/recipe-diagnostics/v10/actual-report-proof429.public.json",
+      "sha256": "96de39a2d577324dbd971c8ddefda81f55848270f2658cc918d47ff407bfd786"
+    }
+  ],
+  "newNativeGameOrPeerObservationClaimed": false,
+  "v9WasNotGameUsedHere": true,
+  "localIpControlDoesNotRequireHelper": true,
+  "temporaryToolsAnd2JvmFlagsMustBeRemovedAfterConfirmedFix": true,
+  "pythonUnitTestsPassed": 248,
+  "sourceStaticAndPresetPassed": true,
+  "all1917SourceRowsVerified": true,
+  "journeyMapSourceProofSha256": "e749c60201f0ab9f51ecbbf3678a9fc7454648ee7e111974fcae735ac02dcb1f"
+}

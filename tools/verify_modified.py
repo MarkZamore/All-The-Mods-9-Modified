@@ -55,8 +55,8 @@ QUEST_MANIFEST_PATH = "tools/atm9_ru_quests/manifest.json"
 QUEST_PATCH_TOOL = "tools/atm9_ru_quests.py"
 APPROVED_RECIPE_OBSERVER = {
     "path": "launcher/diagnostics/recipe-exception-observer.jar",
-    "sha256": "db7a7f55ed33c989745ea8dcab330c52f3213e3a77a97ba3688b1a8a65c39880",
-    "sizeBytes": 43259,
+    "sha256": "b66d1defe81cf239f61ebd6b3f114f6d5cc642a91789a012e4ead8f9b9c5a27d",
+    "sizeBytes": 44431,
     "kind": "temporary-diagnostic-tool",
 }
 RECIPE_DIAGNOSTIC_SCRIPT = "kubejs/startup_scripts/atm9_modified_recipe_diagnostics.js"

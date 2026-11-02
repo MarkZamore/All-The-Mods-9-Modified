@@ -1,0 +1,101 @@
+{
+  "minecraft": "1.20.1",
+  "forge": "47.4.0",
+  "verification": "Exact native bytecode profiles plus isolated Java17 lifecycle-cache runtime; actual Minecraft v10 run pending",
+  "originalSrgJarSha256": "e2e940fe7ca0a9fba5a5c11ad2cf3e2f7df91bbf51d12af22cdde7af18adc344",
+  "forgeClientJarSha256": "010adc332f19b05fb24383954ec7a88694666216e480a6824ff0cbc4740c3c66",
+  "sites": [
+    {
+      "class": "net.minecraft.client.multiplayer.ClientPacketListener",
+      "method": "m_7231_",
+      "signature": "(Lnet/minecraft/network/protocol/game/ClientboundKeepAlivePacket;)V",
+      "codeIndex": 0
+    },
+    {
+      "class": "net.minecraft.server.network.ServerGamePacketListenerImpl",
+      "method": "m_5683_",
+      "signature": "(Lnet/minecraft/network/protocol/game/ServerboundKeepAlivePacket;)V",
+      "codeIndex": 0
+    },
+    {
+      "class": "net.minecraft.server.network.ServerGamePacketListenerImpl",
+      "method": "m_9942_",
+      "signature": "(Lnet/minecraft/network/chat/Component;)V",
+      "codeIndex": 0
+    },
+    {
+      "class": "net.minecraft.network.protocol.game.ClientboundKeepAlivePacket",
+      "method": "<init>",
+      "signature": "(J)V",
+      "codeIndex": 0,
+      "read": "argumentValues[0] LongValue only; not assigned field",
+      "meaning": "constructed, does not prove wire send"
+    },
+    {
+      "class": "net.minecraft.network.protocol.game.ClientboundKeepAlivePacket",
+      "method": "<init>",
+      "signature": "(Lnet/minecraft/network/FriendlyByteBuf;)V",
+      "codeIndex": 12,
+      "read": "this.f_132209_ long only, after native readLong and putfield; no buffer read/invoke by observer",
+      "meaning": "decoded, does not prove handler dispatch"
+    },
+    {
+      "class": "net.minecraft.network.protocol.game.ClientboundKeepAlivePacket",
+      "method": "m_5779_",
+      "signature": "(Lnet/minecraft/network/FriendlyByteBuf;)V",
+      "codeIndex": 9,
+      "read": "this.f_132209_:J only; after native writeLong",
+      "meaning": "encode completed, does not prove socket write or delivery"
+    },
+    {
+      "class": "link.e4steam.steam.SteamConnectionBridge",
+      "method": "start",
+      "signature": "()V",
+      "codeIndex": 0,
+      "sourceLine": 228,
+      "read": "frame0.thisObject only; before started CAS",
+      "meaning": "Capture future bridge reference, not proof successful start"
+    },
+    {
+      "class": "net.minecraft.network.Connection",
+      "method": "channelActive",
+      "signature": "(Lio/netty/channel/ChannelHandlerContext;)V",
+      "codeIndex": 0,
+      "sourceLine": 96,
+      "read": "frame0.thisObject only; channel field assigned later at bytecode12",
+      "meaning": "Capture future connection reference; channel may still be null at entry"
+    }
+  ],
+  "fields": {
+    "clientPacketChallenge": "f_132209_:J",
+    "serverPacketChallenge": "f_134092_:J",
+    "serverKeepAliveTime": "f_9747_:J",
+    "serverKeepAlivePending": "f_9748_:Z",
+    "serverKeepAliveChallenge": "f_9749_:J",
+    "serverPlayer": "f_9743_",
+    "serverConnection": "f_9742_",
+    "playerLatency": "f_8943_:I",
+    "RenderSystem": "pollingEvents AtomicBoolean.value and pollEventsWaitStart AtomicLong.value"
+  },
+  "timeSemantics": "Target monotonic millisecond fields are not UTC and must not be compared directly across machines/observer. pollingEvents=false rules out this freeze predicate only at the snapshot instant.",
+  "constructorProfileEvidenceSha256": "262ecee9c2f14a7c5ab48c2e5088138e4b7d6f08ad1dcf5488ba1dcb280acec9",
+  "queueProfile": {
+    "exactPrivateProfileSha256": "8c89b5996bcb855f5874f9ddd56ae14ded9eb9b717773d955aba5933b8354fef",
+    "e4steamJarSha256": "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40",
+    "nettyTransportSha256": "c210069be4ab4120f5ac7cb5e4a126d3a007e78a64fd44c9971220e013dbaef1",
+    "bridge": "hostSide,connectionId,closed,readiness atomics and inbound ArrayBlockingQueue.count",
+    "runtime": "outbound.packets.count, dataPacketsByBridge IdentityHashMap.table/Integer.value, retry packet owner identity/kind, status",
+    "minecraftConnection": "f_129468_ -> exact NioSocketChannel.config.autoRead:I; inherited unsafe.outboundBuffer.totalPendingSize:J,flushed:I,unwritable:I",
+    "limits": {
+      "intervalSeconds": 5,
+      "maxSamples": 24,
+      "mapArrayReferences": 256,
+      "threadHeaders": 32,
+      "ownTotalSourceBytes": 262144,
+      "cachedRefsPerType": 16
+    },
+    "boundary": "Running non-atomic direct fields from bounded weak JDI object references. Late attachment, collected objects and cache overflow leave unknown coverage. Queue count excludes retry/in-flight data.",
+    "referenceSource": "Only future lifecycle callbacks; no instance enumeration, preexisting-object fallback or collection pinning"
+  },
+  "lifecycleProfileSha256": "7bce10e26a596e121980d5ecff085e1327e6319eb14c2c9eb136c6e39ee5d5d0"
+}
