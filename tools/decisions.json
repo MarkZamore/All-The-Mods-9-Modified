@@ -2243,7 +2243,7 @@
   },
   "currentSingleplayerContentAcceptance": {
     "status": "SOURCE_WAYPOINT_POLICY_CANDIDATE_NO_NEW_NATIVE_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "a66937c7887d07e41b02fe9b89a02f33e4450987241f7ca3342b950993978d0f",
+    "sourceLockSha256": "f388811e5208939e470965b1891af30e99e586ac22aa8eccee2467098bd6f11d",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -2615,11 +2615,11 @@
   },
   "journeyMapWaypointAssociation": {
     "receipt": "tools/journeymap-waypoints-policy.json",
-    "sourceLockSha256": "a66937c7887d07e41b02fe9b89a02f33e4450987241f7ca3342b950993978d0f",
+    "sourceLockSha256": "f388811e5208939e470965b1891af30e99e586ac22aa8eccee2467098bd6f11d",
     "script": {
       "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
-      "sizeBytes": 21199,
-      "sha256": "7dbba69af094db80119d65f6082a117de8455cb2fd1f1c787f633308ab896dc2"
+      "sizeBytes": 21839,
+      "sha256": "1e55c42ee3d06fff262fdb2e94819d66751c2a253c1115e8d291e8ac6659eef3"
     },
     "sourceOnly": true,
     "imagesUntouched": true,

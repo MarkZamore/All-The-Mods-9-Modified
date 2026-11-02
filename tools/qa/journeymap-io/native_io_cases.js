@@ -54,6 +54,20 @@ run('dangling junction entry is refused even though File.exists is false',functi
   expectFailure(function(){io.assertPath('dangling/no-write');},'dangling junction path accepted');
   expectFailure(function(){io.mkdirs('dangling/no-write');},'dangling junction mkdir accepted');
   expectFailure(function(){io.assertPath('DaNgLiNg/no-write');},'case alias of dangling junction accepted');
+  expectFailure(function(){io.relativeFile(NativeBridge.getFileFromPath('dangling/no-write'),true);},'missing dangling relative path accepted');
+});
+run('pure missing map paths are checked before creation and server roots remain existing-only',function(){
+  var relative='journeymap/data/sp/NotYetCreated/deep';
+  var missing=NativeBridge.getFileFromPath(relative);
+  assertOk(!missing.exists(),'fixture target unexpectedly exists');
+  expectFailure(function(){io.relativeFile(missing);},'missing server world root accepted by default');
+  assertOk(io.relativeFile(missing,true)===relative,'safe missing map path refused');
+  assertOk(!missing.exists(),'path validation created the map');
+  expectFailure(function(){io.relativeFile(NativeBridge.getFileFromPath('alias/no-write/deep'),true);},'external missing target accepted');
+  expectFailure(function(){io.relativeFile(NativeBridge.getFileFromPath('internal-alias/no-write/deep'),true);},'internal alias missing target accepted');
+  expectFailure(function(){io.relativeFile(NativeBridge.getFileFromPath('../outside/no-write'),true);},'lexical escape missing target accepted');
+  io.mkdirs(relative);
+  assertOk(missing.isDirectory(),'policy could not create previously validated path');
 });
 run('unlistable existing parent refuses a new child before writes',function(){
   io.mkdirs('unlistable-parent');NativeBridge.failNextList('unlistable-parent');

@@ -33,6 +33,7 @@ public final class NativeLifecycleAliasProbe {
     method(checks,remapper,"net.minecraft.client.Minecraft","m_91091_","hasSingleplayerServer");
     method(checks,remapper,"net.minecraft.client.Minecraft","m_91092_","getSingleplayerServer");
     checks.put("native-public-FileHandler.getJMWorldDir",cls("journeymap.client.io.FileHandler").getMethod("getJMWorldDir",cls("net.minecraft.client.Minecraft")).getReturnType().getName());
+    checks.put("native-public-FileHandler.getJMWorldDirForWorldId",cls("journeymap.client.io.FileHandler").getMethod("getJMWorldDirForWorldId",cls("net.minecraft.client.Minecraft"),String.class).getReturnType().getName());
     Class<?> levelResource=cls("net.minecraft.world.level.storage.LevelResource");
     String root=remapper.getMappedField(levelResource,levelResource.getField("f_78182_"));
     if (!root.equals("ROOT")) throw new AssertionError(root);

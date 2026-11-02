@@ -167,14 +167,21 @@ function createWaypointIo(bridge) {
     need(!target.exists() || target.isFile(), 'refusing to remove a directory');
     return target.exists() && target.delete() === true;
   }
-  function relativeFile(file) {
-    need(file !== null && file.exists(), 'source directory does not exist');
+  function relativeFile(file, allowMissing) {
+    need(file !== null, 'source directory is unavailable');
     var lexical = file.toPath().toAbsolutePath().normalize();
     need(lexical.startsWith(rootLexical) && !lexical.equals(rootLexical), 'source path escaped game directory');
-    var actual = file.toPath().toRealPath();
-    need(actual.startsWith(rootReal) && !actual.equals(rootReal), 'source path escaped game directory');
     var relative = String(rootLexical.relativize(lexical).toString()).replace(/\\/g, '/');
-    need(checked(relative).toPath().toRealPath().equals(actual), 'source alias changed');
+    // The pure JourneyMap resolver may name a map directory that has not
+    // been created yet. Validate its lexical path and every existing
+    // ancestor before the policy creates anything. Server world roots
+    // retain the existing-only default.
+    var guarded = checked(relative);
+    if (file.exists()) {
+      var actual = file.toPath().toRealPath();
+      need(actual.startsWith(rootReal) && !actual.equals(rootReal), 'source path escaped game directory');
+      need(guarded.exists() && guarded.toPath().toRealPath().equals(actual), 'source alias changed');
+    } else need(allowMissing === true && !guarded.exists(), 'source directory does not exist');
     return relative;
   }
   return {

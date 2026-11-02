@@ -1,7 +1,6 @@
 {
   "schemaVersion": 1,
-  "kind": "native-forge1201-journeymap-logging-in-glue-proof",
-  "status": "NATIVE_ALIASES_AND_BYTECODE_LIFECYCLE_PLUS_SYNTHETIC_RHINO_GLUE_CHECKS",
+  "status": "NATIVE_ALIASES_AND_MODELED_LIFECYCLE_ONLY_NO_GAME_ACCEPTANCE",
   "nativeAliases": {
     "net.minecraft.server.MinecraftServer.m_129843_": "getWorldPath",
     "net.minecraft.server.MinecraftServer.m_129910_": "getWorldData",
@@ -11,6 +10,7 @@
     "net.minecraft.client.Minecraft.m_91091_": "hasSingleplayerServer",
     "net.minecraft.client.Minecraft.m_91092_": "getSingleplayerServer",
     "native-public-FileHandler.getJMWorldDir": "java.io.File",
+    "native-public-FileHandler.getJMWorldDirForWorldId": "java.io.File",
     "LevelResource.f_78182_": "ROOT",
     "IntegratedServer-is-MinecraftServer": true,
     "native-public-JourneymapClient.getInstance": "journeymap.client.JourneymapClient",
@@ -20,21 +20,7 @@
     "actualRhino-id-suffix-equivalent-to-Java-replaceAll": true,
     "status": "PASS_NATIVE_MAPPING_AND_SAFE_STATIC_ALIAS_ONLY"
   },
-  "rhinoJarSha256": "fed2211429301bf043864183cab9ab8e92d4cc4dbb9e488ce6c75217c54584a6",
-  "rhinoBundledMappingsGzipSha256": "02b575a8da7a9592261a4bc51d3784db15ce40018e6e6bf453891cf3119aef2c",
-  "scriptManager": "Actual KubeJS ScriptManager.prepareContext obtains RemappingHelper.getMinecraftRemapper and invokes Context.setRemapper at bci80.",
-  "nativeLoginWindow": {
-    "proofSha256": "d51b91a705e79cc023405cf39112294b2599fc17fa433116e8ea8e043e5ad926",
-    "classScanCount": 646,
-    "nativeOrder": "ClientPacketListener.handleLogin enforces client executor; ClientLevel assigned bci248; ForgeHooksClient.firePlayerLogin bci383 synchronouslyposts LoggingIn; JM startMapping mainqueue tasks run at subsequentForgeClientTick START.",
-    "nativePath": "FileHandler.getJMWorldDir(mc) derives canonical/legacy/current-world-ID itself, checks exists then mkdirs at bci38 before returning; return maystill be absent ifmkdirsfails, IO adapter mustrefuse that failure.",
-    "limits": [
-      "No automatic preLoggingIn nativeJM waypointload found; arbitraryaddons/reflection outsideprofile are notproved.",
-      "Old native3s delayedDeathpoint maystillwrite afterassociation; separateoptionalguard.",
-      "No real Forge event dispatched or fullclient/worldruntimePASS."
-    ]
-  },
-  "glueModel": {
+  "nativeLifecycleModel": {
     "status": "PASS",
     "checks": [
       "native-selected-map-used-without-manual-fallback",
@@ -50,23 +36,23 @@
     ],
     "scope": "Synthetic dispatcher/policy/IO model on actual Rhino only; no Forge event, native IO, world, or game runtime PASS."
   },
-  "files": [
-    {
-      "path": "NativeLifecycleAliasProbe.java",
-      "sha256": "9127c0fa66c71dd0ded5a46cbfbb5a74c60ef744e28aed59c8a768f272e930e8",
-      "sizeBytes": 4678
-    },
-    {
-      "path": "candidate/waypoint_forge1201_lifecycle.js",
-      "sha256": "72a210613bd4e8572819cfe055c1bdd39830ca249e9cd3a1a626828e2421d1f0",
-      "sizeBytes": 3307
-    },
-    {
-      "path": "candidate/test_waypoint_lifecycle.js",
-      "sha256": "b84f08634b8beb701d4d09256ef69f82b86d5b339dbe193f0793be12e06a62f5",
-      "sizeBytes": 4524
-    }
-  ],
-  "noActiveOrSourceChanges": true,
-  "previousProofSha256": "09a699727ad9954764d5f7dec20c08cefb554c0350a95423b1fde03c9b8af5a7"
+  "actualJavaRuntime": "Java17.0.15",
+  "rhinoJarSha256": "fed2211429301bf043864183cab9ab8e92d4cc4dbb9e488ce6c75217c54584a6",
+  "journeyMapJarSha256": "8b2679b7b4881e0aa430fd24345ea446de919faf8a45bd2a71d37c7e8ff6ae1e",
+  "kubeJsJarSha256": "3de6b7267d3aab981848ed54d3afe7edf20532fa4060631fd6fffcd99ac5f3d5",
+  "lifecycleScriptSha256": "03be67e2b52e1a50f31689e0994cf751149f0c7d571c338e1b84acbb474eabe5",
+  "pureNativeResolver": "FileHandler.getJMWorldDirForWorldId(Minecraft,String)",
+  "mapTargetValidatedBeforeGuardedCreation": true,
+  "nativeMethodReview": {
+    "directoryCreationWrapperNotCalled": "getJMWorldDir(Minecraft)",
+    "nativeResolverBodyHasNoMkdirOrFileWriteCall": true,
+    "worldIdProvidedByNativeGetter": true,
+    "source": "Exact JourneyMap5.10.3 class bytecode and public-method reflection; no target method invocation"
+  },
+  "limits": [
+    "Real native methods/fields and bundled remapper are inspected; only safe static alias/safe-name calls execute.",
+    "Lifecycle dispatch, Minecraft/server and JourneyMap selection are explicit JS models on actual Rhino.",
+    "No real Forge LoggingIn event, full Minecraft, persistent waypoint file operation, or game visibility test is claimed by this fixture.",
+    "Native delayed deathpoint callback sleeps at least3000ms plus executor queuing and does not recheck world generation; separate optional guard is absent."
+  ]
 }

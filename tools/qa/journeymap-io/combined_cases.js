@@ -35,6 +35,16 @@ if(String(MODE)==='positive'){
   check(NativeBridge.getFileFromPath('local/lanmc-waypoint-archives/v1/'+owner.slotId+'/'+newWorld.worldId+'/waypoints/legitB.json').exists(),'newpoint not retained in archive');
   check(warnings.length===0,'unexpected warning '+warnings.join(';'));
  });
+ run('combined pure resolver accepts a missing map only after guarded validation',function(){
+  model.saveRoot='saves/NewMissingMap';model.mapRoot='journeymap/data/sp/NewMissingMap';
+  NativeBridge.writeTest(model.saveRoot+'/level.dat','SYNTHETIC-SAME-SEED-42');
+  check(!NativeBridge.getFileFromPath(model.mapRoot).exists(),'map existed before resolver');
+  loginCallbacks[0]();
+  check(global.lanmcWaypointGeneration!==null,'missing map not associated');
+  check(NativeBridge.getFileFromPath(model.mapRoot+'/lanmc-waypoints-owner.json').isFile(),'validated map owner missing');
+  check(!NativeBridge.getFileFromPath(model.mapRoot+'/waypoints').exists(),'unexpected waypoint payload created');
+  check(warnings.length===0,'unexpected missing-map warning '+warnings.join(';'));
+ });
 }else if(String(MODE)==='bootstrap-failure'){
  run('existing saves enumeration failure leaves policy unready',function(){
   NativeBridge.failNextList('saves');startupCallbacks[0]();loginCallbacks[0]();

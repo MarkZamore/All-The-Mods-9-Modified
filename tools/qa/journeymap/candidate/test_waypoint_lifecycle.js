@@ -15,7 +15,8 @@ function installLifecycleModel(options){
     Java:{loadClass:function(name){
       if(name==='net.minecraft.client.Minecraft')return {getInstance:function(){return mc;}};
       if(name==='net.minecraft.world.level.storage.LevelResource')return {ROOT:{}};
-      if(name==='journeymap.client.io.FileHandler')return {getJMWorldDir:function(){nativeSelections++;return {path: options.selectedMap || 'journeymap/data/sp/Actual~folder_exact-id'};}};
+      if(name==='journeymap.client.io.FileHandler')return {getJMWorldDir:function(){throw new Error('Mutating native wrapper must not be called');},getJMWorldDirForWorldId:function(mc,id){if(id!=='native-id')throw new Error('Native ID was changed');nativeSelections++;return {path: options.selectedMap || 'journeymap/data/sp/Actual~folder_exact-id'};}};
+      if(name==='journeymap.client.JourneymapClient')return {getInstance:function(){return {getCurrentWorldId:function(){return 'native-id';}};}};
       throw new Error('unexpected class '+name);
     }},console:{warn:function(m){warnings.push(m);}},global:global,
     createWaypointIo:function(){return io;},createWaypointGenerationPolicy:function(){return {

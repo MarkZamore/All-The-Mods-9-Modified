@@ -77,11 +77,11 @@ def main():
                                 str(source / 'waypoint_io_adapter.js'), str(source / 'waypoint_generation_core.js'),
                                 str(source / 'native_io_cases.js'), str(result)], check=True, capture_output=True, text=True, timeout=60, **flags)
     data = json.loads(result.read_text(encoding='utf-8'))
-    require(data['checks'] == 14 and data['passed'] == 14, 'Native fixture assertions failed; inspect private result.json.')
+    require(data['checks'] == 15 and data['passed'] == 15, 'Native fixture assertions failed; inspect private result.json.')
     require(not dangling.exists(), 'The dangling outside target was created.')
     require(sorted(p.name for p in outside.iterdir()) == ['sentinel.txt'], 'The external fixture target was changed.')
     combined_results = []
-    for mode, expected_checks in [('positive', 5), ('bootstrap-failure', 1)]:
+    for mode, expected_checks in [('positive', 6), ('bootstrap-failure', 1)]:
         target = output / ('combined-' + mode)
         combined_result = output / ('combined-' + mode + '.json')
         subprocess.run([str(java), '-Xmx128m', '-cp', classpath, 'CombinedWaypointNativeAudit', str(target),
@@ -92,7 +92,7 @@ def main():
         require(len(combined['checks']) == expected_checks and combined['passed'] == expected_checks,
                 'Combined-script fixture assertions failed: ' + mode)
         combined_results.append({'mode': mode, 'checks': expected_checks, 'resultSha256': sha(combined_result)})
-    print(json.dumps({'status': 'PASS', 'nativeIoChecks': 14, 'combinedChecks': 6, 'resultSha256': sha(result),
+    print(json.dumps({'status': 'PASS', 'nativeIoChecks': 15, 'combinedChecks': 7, 'resultSha256': sha(result),
                       'combinedResults': combined_results,
                       'scope': pins['scope'], 'gameStarted': False}))
 

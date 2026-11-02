@@ -337,14 +337,21 @@ function createWaypointIo(bridge) {
     need(!target.exists() || target.isFile(), 'refusing to remove a directory');
     return target.exists() && target.delete() === true;
   }
-  function relativeFile(file) {
-    need(file !== null && file.exists(), 'source directory does not exist');
+  function relativeFile(file, allowMissing) {
+    need(file !== null, 'source directory is unavailable');
     var lexical = file.toPath().toAbsolutePath().normalize();
     need(lexical.startsWith(rootLexical) && !lexical.equals(rootLexical), 'source path escaped game directory');
-    var actual = file.toPath().toRealPath();
-    need(actual.startsWith(rootReal) && !actual.equals(rootReal), 'source path escaped game directory');
     var relative = String(rootLexical.relativize(lexical).toString()).replace(/\\/g, '/');
-    need(checked(relative).toPath().toRealPath().equals(actual), 'source alias changed');
+    // The pure JourneyMap resolver may name a map directory that has not
+    // been created yet. Validate its lexical path and every existing
+    // ancestor before the policy creates anything. Server world roots
+    // retain the existing-only default.
+    var guarded = checked(relative);
+    if (file.exists()) {
+      var actual = file.toPath().toRealPath();
+      need(actual.startsWith(rootReal) && !actual.equals(rootReal), 'source path escaped game directory');
+      need(guarded.exists() && guarded.toPath().toRealPath().equals(actual), 'source alias changed');
+    } else need(allowMissing === true && !guarded.exists(), 'source directory does not exist');
     return relative;
   }
   return {
@@ -367,6 +374,7 @@ if (Platform.isClientEnvironment() && Platform.isLoaded('journeymap')) {
     var Minecraft = null;
     var LevelResource = null;
     var FileHandler = null;
+    var JourneyMapClient = null;
     var jmRoot = 'journeymap/data/sp/';
     StartupEvents.postInit(function () {
       ready = false;
@@ -376,6 +384,7 @@ if (Platform.isClientEnvironment() && Platform.isLoaded('journeymap')) {
         Minecraft = Java.loadClass('net.minecraft.client.Minecraft');
         LevelResource = Java.loadClass('net.minecraft.world.level.storage.LevelResource');
         FileHandler = Java.loadClass('journeymap.client.io.FileHandler');
+        JourneyMapClient = Java.loadClass('journeymap.client.JourneymapClient');
         var root = io.file('saves');
         var files = null;
         if (root.exists()) {
@@ -417,7 +426,8 @@ if (Platform.isClientEnvironment() && Platform.isLoaded('journeymap')) {
         io.assertPath('journeymap/data/sp');
         // Native selection includes actual folder, legacy fallback and current
         // world ID suffix. No manual display-name or seed reconstruction.
-        var mapRoot = String(io.relativeFile(FileHandler.getJMWorldDir(mc)));
+        var worldId = JourneyMapClient.getInstance().getCurrentWorldId();
+        var mapRoot = String(io.relativeFile(FileHandler.getJMWorldDirForWorldId(mc, worldId), true));
         if (!/^journeymap\/data\/sp\/[^/]+$/.test(mapRoot)) throw new Error('Unexpected JourneyMap directory');
         io.assertPath(mapRoot);
         global.lanmcWaypointGeneration = policy.associate(saveRoot, mapRoot);

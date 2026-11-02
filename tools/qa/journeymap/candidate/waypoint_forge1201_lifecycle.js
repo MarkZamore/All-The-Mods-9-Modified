@@ -9,6 +9,7 @@ if (Platform.isClientEnvironment() && Platform.isLoaded('journeymap')) {
     var Minecraft = null;
     var LevelResource = null;
     var FileHandler = null;
+    var JourneyMapClient = null;
     var jmRoot = 'journeymap/data/sp/';
     StartupEvents.postInit(function () {
       ready = false;
@@ -18,6 +19,7 @@ if (Platform.isClientEnvironment() && Platform.isLoaded('journeymap')) {
         Minecraft = Java.loadClass('net.minecraft.client.Minecraft');
         LevelResource = Java.loadClass('net.minecraft.world.level.storage.LevelResource');
         FileHandler = Java.loadClass('journeymap.client.io.FileHandler');
+        JourneyMapClient = Java.loadClass('journeymap.client.JourneymapClient');
         var root = io.file('saves');
         var files = null;
         if (root.exists()) {
@@ -59,7 +61,8 @@ if (Platform.isClientEnvironment() && Platform.isLoaded('journeymap')) {
         io.assertPath('journeymap/data/sp');
         // Native selection includes actual folder, legacy fallback and current
         // world ID suffix. No manual display-name or seed reconstruction.
-        var mapRoot = String(io.relativeFile(FileHandler.getJMWorldDir(mc)));
+        var worldId = JourneyMapClient.getInstance().getCurrentWorldId();
+        var mapRoot = String(io.relativeFile(FileHandler.getJMWorldDirForWorldId(mc, worldId), true));
         if (!/^journeymap\/data\/sp\/[^/]+$/.test(mapRoot)) throw new Error('Unexpected JourneyMap directory');
         io.assertPath(mapRoot);
         global.lanmcWaypointGeneration = policy.associate(saveRoot, mapRoot);

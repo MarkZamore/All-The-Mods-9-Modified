@@ -42,10 +42,10 @@ def main():
     classes=a.out/'classes';classes.mkdir(exist_ok=True)
     cp=list(dict.fromkeys([classes,patch,base,universal]+[a.mods/name for name in PINS]+libraries))
     cptext=';'.join(str(x.resolve()) for x in cp)
-    sources=[HERE/'NativeWaypointProbe.java',HERE/'NativeLifecycleAliasProbe.java']
+    sources=[HERE/'NativeWaypointProbe.java',HERE/'NativeLifecycleAliasProbe.java',HERE/'NativeLifecycleModelProbe.java']
     invoke([str(a.javac),'--release','17','-encoding','UTF-8','-cp',cptext,'-d',str(classes)]+[str(x) for x in sources],a.out/'compile.log',a.out)
     records=[]
-    for name,mainclass,extra in [('public-api','NativeWaypointProbe',[str(HERE/'native-waypoint-probe.js')]),('aliases','NativeLifecycleAliasProbe',[])]:
+    for name,mainclass,extra in [('public-api','NativeWaypointProbe',[str(HERE/'native-waypoint-probe.js')]),('aliases','NativeLifecycleAliasProbe',[]),('lifecycle-model','NativeLifecycleModelProbe',[str(HERE/'candidate/waypoint_forge1201_lifecycle.js'),str(HERE/'candidate/test_waypoint_lifecycle.js')])]:
         args=['-Xms16m','-Xmx128m','-Djava.awt.headless=true','-Dfile.encoding=UTF-8','-cp',cptext,mainclass]+extra
         argfile=a.out/(name+'-args.txt');argfile.write_text('\n'.join('"'+x.replace('\\','/').replace('"','\\"')+'"' for x in args)+'\n',encoding='utf-8')
         log=a.out/(name+'.log');text=invoke([str(a.java),'@'+str(argfile)],log,a.out)

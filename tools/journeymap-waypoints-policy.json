@@ -10,8 +10,8 @@
   },
   "script": {
     "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
-    "sizeBytes": 21199,
-    "sha256": "7dbba69af094db80119d65f6082a117de8455cb2fd1f1c787f633308ab896dc2",
+    "sizeBytes": 21839,
+    "sha256": "1e55c42ee3d06fff262fdb2e94819d66751c2a253c1115e8d291e8ac6659eef3",
     "template": "tools/client-policy/scripts/lanmc_journeymap_waypoint_policy.js"
   },
   "nativeModules": [
@@ -51,5 +51,6 @@
     "This is process-interruption/rollback recovery, not a hardware/power-loss fsync guarantee.",
     "Bootstrap or login path failures warn and skip association; existing data is not purged.",
     "No full Minecraft startup, real Forge login event, world-switch visibility or live user data proof is claimed here."
-  ]
+  ],
+  "nativeMapResolver": "FileHandler.getJMWorldDirForWorldId(Minecraft,String), without the directory-creating wrapper; IO validates missing/existing ancestors before its own mkdir."
 }
