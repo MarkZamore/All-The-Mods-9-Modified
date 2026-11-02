@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "jarSha256": "4c87326e5a243974ea46ccfc3c2b3d5d09709151e8e8538fb3d6b4f8b46f4c5d",
+  "javaRelease": 17,
+  "selfTest": "jdi-selftest11/result.json",
+  "recipeEvents": 2,
+  "terminalEvents": 6,
+  "terminalMethods": [
+    {
+      "class": "link.e4steam.steam.SteamConnectionBridge",
+      "method": "beginGracefulClose",
+      "topCaller": {
+        "method": "readLoop",
+        "class": "link.e4steam.steam.SteamConnectionBridge",
+        "codeIndex": 8,
+        "line": 1
+      }
+    },
+    {
+      "class": "link.e4steam.steam.SteamConnectionBridge",
+      "method": "close",
+      "topCaller": {
+        "method": "readLoop",
+        "class": "link.e4steam.steam.SteamConnectionBridge",
+        "codeIndex": 25,
+        "line": 1
+      }
+    },
+    {
+      "class": "link.e4steam.steam.SteamConnectionBridge",
+      "method": "beginGracefulClose",
+      "topCaller": {
+        "method": "acceptRemoteFin",
+        "class": "link.e4steam.steam.SteamConnectionBridge",
+        "codeIndex": 1,
+        "line": 1
+      }
+    },
+    {
+      "class": "net.minecraft.network.Connection",
+      "method": "exceptionCaught",
+      "topCaller": {
+        "method": "run",
+        "class": "ProbeClose",
+        "codeIndex": 58,
+        "line": 1
+      }
+    },
+    {
+      "class": "net.minecraft.network.Connection",
+      "method": "m_129507_",
+      "topCaller": {
+        "method": "run",
+        "class": "ProbeClose",
+        "codeIndex": 78,
+        "line": 1
+      }
+    },
+    {
+      "class": "net.minecraft.network.Connection",
+      "method": "channelInactive",
+      "topCaller": {
+        "method": "run",
+        "class": "ProbeClose",
+        "codeIndex": 89,
+        "line": 1
+      }
+    }
+  ],
+  "hooksPreparedAfterReady": [
+    "link.e4steam.steam.SteamConnectionBridge",
+    "net.minecraft.network.Connection"
+  ],
+  "decodedTimeoutReason": true,
+  "bareCloseNullReason": true,
+  "preexistingLogBytesPreserved": 307200,
+  "newLogBytes": 10130,
+  "gameTempDifferentFromObserver": true,
+  "realGameAttachedByThisAgent": false,
+  "targetMethodsInvoked": false,
+  "classTransformation": false,
+  "productionLimits": {
+    "recipeEvents": 8,
+    "terminalEvents": 24,
+    "ownEmittedBytes": 262144,
+    "stackFrames": 36,
+    "stringCharacters": 512
+  },
+  "profileJarSha256": "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40",
+  "profileEvidence": "artifacts/e4steam-close-hooks-20261102/close-entry-profile.private.json",
+  "manualHelpersIdenticalV5": {
+    "Start-RecipeDiagnostics.ps1": true,
+    "Start-RecipeDiagnostics.cmd": true
+  },
+  "limitsOfSelfTest": "Stub terminal origins, reason decoding, class-prepare hooks and resume semantics tested; exact production LVT catch locations/native-send locals reviewed against pinned javap profile, not reproduced in fake short-bytecode methods. No two-player reproduction tested."
+}

@@ -1369,22 +1369,6 @@
       "name": "Cursed Fate"
     },
     {
-      "fileName": "dandadanver2.jar",
-      "sha256": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd",
-      "sizeBytes": 2750248,
-      "sourceUrl": "https://edge.forgecdn.net/files/6074/836/dandadanver2.jar",
-      "projectId": 1164278,
-      "fileId": 6074836,
-      "path": "mods/dandadanver2.jar",
-      "kind": "requested",
-      "version": "2.0",
-      "modIds": [
-        "dandadan"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/dandadan",
-      "name": "Dandadan"
-    },
-    {
       "fileName": "darkness-forge-1.20.1-2.0.103-fork.jar",
       "sha256": "6a1e7db25ad3eeb48642ac2fa3d5a61043e32493c9fda7f0631ba4f3f4cc3fd4",
       "sizeBytes": 29331,
@@ -1543,22 +1527,6 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/eyes-in-the-darkness",
       "name": "Eyes in the Darkness"
-    },
-    {
-      "fileName": "fairy_mine-2.6.5-forge-1.20.1.jar",
-      "sha256": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
-      "sizeBytes": 4067262,
-      "sourceUrl": "https://edge.forgecdn.net/files/8371/246/fairy_mine-2.6.5-forge-1.20.1.jar",
-      "projectId": 1357752,
-      "fileId": 8371246,
-      "path": "mods/fairy_mine-2.6.5-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "2.6.5",
-      "modIds": [
-        "fairy_mine"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/fairy-mine",
-      "name": "Fairy Mine"
     },
     {
       "fileName": "from-another-world-1.2A.1-forge.jar",
@@ -2693,17 +2661,17 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "0b5dedb3d8881360729b2ba1d2e042d224f80c61c05f9b188b89aa92edf5fe36",
-      "sizeBytes": 13506,
+      "sha256": "97bb6694d53a23d677eda0c2419a69578b751a1bfe965a9e0ebfc19626154d13",
+      "sizeBytes": 12998,
       "kind": "resource",
-      "reason": "User-requested optional key-only controls preset and guide. Uses the actual 682 native EN/RU Options mapping names; explicit Apply preserves language, graphics and other personal preferences. Optional and mandatory manual character groups are documented; no JAR/world/permission changes."
+      "reason": "Optional key-only preset:625 retained source mappings after user removal of11 Dandadan/FairyMine keys from historical636 native namespace. Existing values unchanged; no new native/applied-preset claim."
     },
     {
       "path": "launcher/controls-preset.txt",
-      "sha256": "e1b8d9298a455d6b41cefa3fd24b4bf8ae7da5a6516ca9d40ec104e257e6e02d",
-      "sizeBytes": 35409,
+      "sha256": "eb74ccdef915787537eb0363decb361f0f4cb8c14d7e9033375d25ad604e3594",
+      "sizeBytes": 34832,
       "kind": "configuration",
-      "reason": "User-requested optional key-only controls preset and guide. Uses the actual 682 native EN/RU Options mapping names; explicit Apply preserves language, graphics and other personal preferences. Optional and mandatory manual character groups are documented; no JAR/world/permission changes."
+      "reason": "Optional key-only preset:625 retained source mappings after user removal of11 Dandadan/FairyMine keys from historical636 native namespace. Existing values unchanged; no new native/applied-preset claim."
     },
     {
       "path": "launcher/jvm-args.txt",
@@ -2756,24 +2724,24 @@
     },
     {
       "path": "launcher/diagnostics/recipe-exception-observer.jar",
-      "sha256": "eb402b3ef55eae7d29f2ce8212c2ce2a3b87db15d4fd1f39bb149708be9465fe",
-      "sizeBytes": 22045,
+      "sha256": "4c87326e5a243974ea46ccfc3c2b3d5d09709151e8e8538fb3d6b4f8b46f4c5d",
+      "sizeBytes": 30890,
       "kind": "temporary-diagnostic-tool",
-      "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
+      "reason": "Explicit temporary manual read-only v6 diagnostics for next peer test:8recipe+24terminal events under256KiB own output, exact Alchemy/e4steam68ba guards,2e4+3MC terminal entry breakpoints, no class transforms/target method invocation. Start before host shares/guest joins; remove3tools and2diagnosticJVMflags after confirmed fix. Not a network-fix claim."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
       "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44",
       "sizeBytes": 2327,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
+      "reason": "Explicit temporary manual read-only v6 diagnostics for next peer test:8recipe+24terminal events under256KiB own output, exact Alchemy/e4steam68ba guards,2e4+3MC terminal entry breakpoints, no class transforms/target method invocation. Start before host shares/guest joins; remove3tools and2diagnosticJVMflags after confirmed fix. Not a network-fix claim."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
       "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a",
       "sizeBytes": 174,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
+      "reason": "Explicit temporary manual read-only v6 diagnostics for next peer test:8recipe+24terminal events under256KiB own output, exact Alchemy/e4steam68ba guards,2e4+3MC terminal entry breakpoints, no class transforms/target method invocation. Start before host shares/guest joins; remove3tools and2diagnosticJVMflags after confirmed fix. Not a network-fix claim."
     },
     {
       "path": "kubejs/data/alchemistry/recipes/dissolver/carpets.json",

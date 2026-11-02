@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "kind": "user-requested-dandadan-and-fairy-mine-removal",
+  "status": "SOURCE_COMPOSITION_VERIFIED_V6_SELFTEST_PASS_ACTUAL_NEW_PEER_PENDING",
+  "parentSourceRevision": "20f0720de3c68b115f858286191597c5b1f1a3bb",
+  "parentPublicManifestSha256": "017413bdba39cd0f6a362eea46ef1f6977bf811d9c2d9a2dbf2cc9c536b80145",
+  "baselineSnapshotSha256": "e51b4f257f3cf841af6a2fcd50223a64d7d7681c39498205052c3359fd9a9aa7",
+  "removedFiles": [
+    {
+      "fileName": "dandadanver2.jar",
+      "sha256": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd",
+      "sizeBytes": 2750248,
+      "sourceUrl": "https://edge.forgecdn.net/files/6074/836/dandadanver2.jar",
+      "projectId": 1164278,
+      "fileId": 6074836,
+      "path": "mods/dandadanver2.jar",
+      "kind": "requested",
+      "version": "2.0",
+      "modIds": [
+        "dandadan"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/dandadan",
+      "name": "Dandadan"
+    },
+    {
+      "fileName": "fairy_mine-2.6.5-forge-1.20.1.jar",
+      "sha256": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
+      "sizeBytes": 4067262,
+      "sourceUrl": "https://edge.forgecdn.net/files/8371/246/fairy_mine-2.6.5-forge-1.20.1.jar",
+      "projectId": 1357752,
+      "fileId": 8371246,
+      "path": "mods/fairy_mine-2.6.5-forge-1.20.1.jar",
+      "kind": "requested",
+      "version": "2.6.5",
+      "modIds": [
+        "fairy_mine"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/fairy-mine",
+      "name": "Fairy Mine"
+    }
+  ],
+  "remainingContentJars": 530,
+  "requestedAdditionalJars": 80,
+  "newDependencyJars": 19,
+  "projectedPackModIds": 555,
+  "freshNativeModListClaimed": false,
+  "controls": {
+    "historicalNativeNames": 636,
+    "sourceProjectedNames": 625,
+    "removedKeyNames": [
+      "key.fairy_mine.soltar_habilidade",
+      "key.fairy_mine.trocar_habilidade",
+      "key.fairy_mine.transformation",
+      "key.fairy_mine.dash",
+      "key.fairy_mine.normal_attack",
+      "key.dandadan.open_ability_wheel",
+      "key.dandadan.okarun_boost",
+      "key.dandadan.quick_skill_1",
+      "key.dandadan.quick_skill_2",
+      "key.dandadan.quick_skill_3",
+      "key.dandadan.quick_skill_4"
+    ],
+    "retainedPresetValuesChanged": false,
+    "newNativeOrAppliedPresetClaimed": false
+  },
+  "dependencyAudit": {
+    "BASE": [
+      "geckolib",
+      "playeranimator"
+    ],
+    "NEW": {
+      "kleiders_custom_renderer": "Mandatory for still-present cursedfate1.0.39; FairyMine reference is optional and uses old alias."
+    }
+  },
+  "orphanNewDependenciesRemoved": [],
+  "bothRemovedJarsContainNestedJar": false,
+  "strictScriptGameruleConfigReferencesFound": false,
+  "sameIdCarpetsDataFixRetained": {
+    "path": "kubejs/data/alchemistry/recipes/dissolver/carpets.json",
+    "sha256": "05a82fcfb14da81ad397e342192b4f7dec0528156b0f4116cfc1f4aa68f009d4"
+  },
+  "unchangedOfficialVersions": [
+    "ShootingStar1.5.1-demo",
+    "Rimulib1.2.1",
+    "ModernFix5.25.0"
+  ],
+  "previousFullNativeReceipt": {
+    "path": "tools/qa/native-source-acceptance.json",
+    "sha256": "10f0bdca54ebb67484f44b0b2d6a491eaa86b6f5f66cf0cb17c2b7b55f4ecc99",
+    "coversOld532ContentOnly": true
+  },
+  "temporaryDiagnosticsV6ReadinessPending": false,
+  "networkCauseOrFixClaimed": false,
+  "newWorldOrProcessAttachPerformed": false,
+  "removedModsMayLeaveOldWorldMissingRegistryContent": true,
+  "noLosslessOldWorldMigrationClaimed": true,
+  "safetyChangeRequired": false,
+  "safetyReason": "Removing two NEW content mods adds no world mutation paths or custom framework. Otherauthorabilities/configs/Safetyabsence unchanged. Existing-world content/registry loss from these removals is expected, not a lossless migration promise.",
+  "sourceLockSha256": "d38c8f283f6b0e631c306bf7531fadb2b642a136dfa954ebacf7cc809d53229d",
+  "temporaryV6": {
+    "path": "launcher/diagnostics/recipe-exception-observer.jar",
+    "sizeBytes": 30890,
+    "sha256": "4c87326e5a243974ea46ccfc3c2b3d5d09709151e8e8538fb3d6b4f8b46f4c5d",
+    "selfTestProof": "tools/qa/recipe-diagnostics-v6-selftest.json",
+    "selfTestProofSha256": "f4af56d2bbb7493a0c77b804c112373ecefc92597df55b5554408cb74fc229f6",
+    "exactE4TerminalProfileSha256": "f843f8a2327d275f07f15c4396e44ed323481d5f1705eedae52b67fc132524f2",
+    "e4JarSha256": "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40",
+    "e4TerminalEntryBreakpoints": 2,
+    "minecraftTerminalEntryBreakpoints": 3,
+    "recipeEventLimit": 8,
+    "terminalEventLimit": 24,
+    "ownBytesLimit": 262144,
+    "manualOnly": true,
+    "actualUserGameAttachedByThisPublication": false,
+    "selfTestScope": "Java17 isolated controlled stubs/filter/resume, not actual real-user cause or new530 gameplay acceptance."
+  },
+  "runtimeFiles": 1917,
+  "allRetained530JarBytesUnchanged": true,
+  "removedRuntimePaths": [
+    "mods/dandadanver2.jar",
+    "mods/fairy_mine-2.6.5-forge-1.20.1.jar"
+  ],
+  "addedRuntimePaths": [],
+  "changedRetainedRuntimePaths": [
+    "launcher/controls-guide.md",
+    "launcher/controls-preset.txt",
+    "launcher/diagnostics/recipe-exception-observer.jar"
+  ],
+  "sourceUnitTests": {
+    "executed": 239,
+    "passed": 239,
+    "skipped": 0
+  },
+  "actualSourceProducerRestoreCycles": 1,
+  "sourcePresetCheck": {
+    "names": 625,
+    "bound": 177,
+    "unbound": 448,
+    "independentWorldActions": 76,
+    "conflicts": 0,
+    "newNativeCaptureClaimed": false
+  }
+}

@@ -123,6 +123,41 @@ def read_mods(data, jar_name, depth=0, loader=None):
     return result
 
 
+def inventory_evidence_kind(pack, inventory):
+    """Validate an explicit exact-removal projection without claiming a new capture."""
+    derivation = inventory.get("derivation")
+    if derivation is None:
+        return "native-observation"
+    if (derivation.get("kind") != "exact-removal-projection" or
+            derivation.get("freshNativeObservationClaimed") is not False):
+        raise ValueError("Invalid inventory derivation or fresh-native claim")
+    parent_row = derivation.get("parentInventory", {})
+    name = parent_row.get("path", "")
+    relative = pathlib.PurePosixPath(name)
+    if (not name or "\\" in name or ":" in name or relative.is_absolute() or
+            any(part in ("", ".", "..") for part in name.split("/"))):
+        raise ValueError("Unsafe parent inventory path")
+    parent_path = pathlib.Path(pack) / name
+    raw = parent_path.read_bytes()
+    if hashlib.sha256(raw).hexdigest() != parent_row.get("sha256"):
+        raise ValueError("Parent native inventory hash differs")
+    parent = json.loads(raw.decode("utf-8"))
+    removed_jars = derivation.get("removedSourceJars", {})
+    removed_ids = derivation.get("removedModIds", [])
+    if (parent.get("derivation") is not None or not removed_jars or not removed_ids or
+            len(removed_ids) != len(set(removed_ids)) or
+            not set(removed_jars) <= set(parent.get("sourceJars", {})) or
+            any(parent["sourceJars"][n] != h for n, h in removed_jars.items()) or
+            not set(removed_ids) <= {r["id"] for r in parent.get("mods", [])}):
+        raise ValueError("Inventory removal is not bound to the actual parent")
+    expected = {**parent,
+                "sourceJars": {n: h for n, h in parent["sourceJars"].items() if n not in removed_jars},
+                "mods": [r for r in parent["mods"] if r["id"] not in removed_ids]}
+    if {k: v for k, v in inventory.items() if k != "derivation"} != expected:
+        raise ValueError("Inventory projection changes more than exact removed JARs/IDs")
+    return "exact-removal-projection"
+
+
 def read_pack_mods(pack, shipped=None):
     """Read metadata, optionally pinned to an exact-hash actual loader inventory.
 
@@ -145,6 +180,7 @@ def read_pack_mods(pack, shipped=None):
     inventory_path = pack / "library/loaded-mods.json"
     if inventory_path.exists():
         inventory = json.loads(inventory_path.read_text(encoding="utf-8-sig"))
+        inventory_evidence_kind(pack, inventory)
         actual_hashes = {jar.relative_to(pack).as_posix(): hashlib.sha256(jar.read_bytes()).hexdigest()
                          for jar in jars}
         if (inventory.get("schemaVersion") != 1 or inventory.get("sourceJars") != actual_hashes or

@@ -19,11 +19,28 @@ public final class RecipeExceptionObserver {
     static final String SERIALIZER = "com.smashingmods.alchemistry.common.recipe.dissolver.DissolverRecipeSerializer";
     static final String LIB_SHA = "1bf4d28c70fb671c5b2ca72bfd12f74594db6319f67be7b50bb7bce5d11c4466";
     static final String CHEM_SHA = "fe993f8e0586a9c65209c230de21225991d9e91c5482a262ce80b3eab2eb02e1";
-    static final String HEADER = "[RecipeExceptionObserver v5] ";
+    static final String STEAM_CLASS = "link.e4steam.steam.SteamConnectionBridge";
+    static final String STEAM_JAR = "e4steam-forge-mc1.18.2-1.20.2-v0.3.4-lanmc-native-ui.1.jar";
+    static final String STEAM_SHA = "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40";
+    static final String HEADER = "[RecipeExceptionObserver v6] ";
     static final int MAX_BYTES = 256 * 1024;
     static final int MAX_EVENTS = 8;
-    record Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents) { }
+    static final int MAX_TERMINALS = 24;
+    record Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents, String steamSha, int maxTerminals) {
+        Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents) {
+            this(pid, parentPid, game, output, librarySha, chemistrySha, maxEvents, STEAM_SHA, MAX_TERMINALS);
+        }
+        Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents, String steamSha) {
+            this(pid, parentPid, game, output, librarySha, chemistrySha, maxEvents, steamSha, MAX_TERMINALS);
+        }
+    }
     record Candidate(long pid, Path game) { }
+    record Site(String className, String methodName, String signature) { }
+    static final List<Site> TERMINALS = List.of(
+        new Site(STEAM_CLASS, "close", "(Z)V"), new Site(STEAM_CLASS, "beginGracefulClose", "()V"),
+        new Site("net.minecraft.network.Connection", "channelInactive", "(Lio/netty/channel/ChannelHandlerContext;)V"),
+        new Site("net.minecraft.network.Connection", "exceptionCaught", "(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Throwable;)V"),
+        new Site("net.minecraft.network.Connection", "m_129507_", "(Lnet/minecraft/network/chat/Component;)V"));
 
     public static void main(String[] args) throws Exception {
         if (args.length >= 1 && args[0].equals("--self-test")) {
@@ -49,6 +66,9 @@ public final class RecipeExceptionObserver {
     }
 
     static Candidate discover(Path minecraftRoot, String librarySha, String chemistrySha) throws Exception {
+        return discover(minecraftRoot, librarySha, chemistrySha, STEAM_SHA);
+    }
+    static Candidate discover(Path minecraftRoot, String librarySha, String chemistrySha, String steamSha) throws Exception {
         Path root = safe(minecraftRoot);
         if (!Files.isDirectory(root.resolve("Launcher/JavaRuntimes")) || !Files.isDirectory(root.resolve("Personal/Instances")))
             throw new SecurityException("Expected portable Minecraft root with Launcher/JavaRuntimes and Personal/Instances");
@@ -79,7 +99,7 @@ public final class RecipeExceptionObserver {
             } catch (Exception unavailable) { continue; }
             finally { if (attached != null) try { attached.detach(); } catch (IOException ignored) { } }
             try {
-                validate(new Config(pid, pid, game, game.resolve("logs/debug.log"), librarySha, chemistrySha, MAX_EVENTS));
+                validate(new Config(pid, pid, game, game.resolve("logs/debug.log"), librarySha, chemistrySha, MAX_EVENTS, steamSha));
                 candidates.add(new Candidate(pid, game));
             } catch (Exception incompatible) { /* An unvalidated JVM is never selected. */ }
         }
@@ -96,6 +116,7 @@ public final class RecipeExceptionObserver {
         validate(config);
         VirtualMachine vm = null;
         int captured = 0;
+        int terminalCaptured = 0;
         OutputBudget budget = new OutputBudget();
         try {
             AttachingConnector connector = Bootstrap.virtualMachineManager().attachingConnectors().stream()
@@ -112,11 +133,21 @@ public final class RecipeExceptionObserver {
                 prepare.addClassFilter("java.lang.ArrayIndexOutOfBoundsException");
                 prepare.setSuspendPolicy(EventRequest.SUSPEND_EVENT_THREAD); prepare.enable();
             } else exceptionRequest(manager, exceptions.get(0));
+            var hookStates = new ArrayList<Map<String, Object>>();
+            var terminalClasses = new LinkedHashSet<String>(); for (Site site : TERMINALS) terminalClasses.add(site.className);
+            for (String className : terminalClasses) {
+                List<ReferenceType> loaded = vm.classesByName(className);
+                if (loaded.isEmpty()) {
+                    ClassPrepareRequest prepare = manager.createClassPrepareRequest(); prepare.addClassFilter(className);
+                    prepare.setSuspendPolicy(EventRequest.SUSPEND_EVENT_THREAD); prepare.enable();
+                    hookStates.add(Map.of("class", className, "state", "waiting_for_class"));
+                } else for (ReferenceType type : loaded) hookStates.add(terminalRequests(manager, type));
+            }
             append(config, budget, HEADER + json(Map.of("kind", "observer_ready", "utc", Instant.now().toString(),
                 "pid", config.pid, "callerFilter", CALLER, "maxEvents", config.maxEvents,
-                "targetMethodsInvoked", false, "classMutation", false)) + "\n");
+                "targetMethodsInvoked", false, "classMutation", false, "terminalHooks", hookStates, "maxTerminalEvents", config.maxTerminals)) + "\n");
             ready.run();
-            while (captured < config.maxEvents && alive(config.pid) && alive(config.parentPid)) {
+            while ((captured < config.maxEvents || terminalCaptured < config.maxTerminals) && alive(config.pid) && alive(config.parentPid)) {
                 EventSet eventSet;
                 try { eventSet = vm.eventQueue().remove(1000); }
                 catch (VMDisconnectedException disconnected) { break; }
@@ -127,6 +158,13 @@ public final class RecipeExceptionObserver {
                     for (Event event : eventSet) {
                         if (event instanceof ClassPrepareEvent prepared && prepared.referenceType().name().equals("java.lang.ArrayIndexOutOfBoundsException")) {
                             exceptionRequest(manager, prepared.referenceType()); prepared.request().disable();
+                        } else if (event instanceof ClassPrepareEvent prepared && terminalClasses.contains(prepared.referenceType().name())) {
+                            var state = new LinkedHashMap<String, Object>(terminalRequests(manager, prepared.referenceType()));
+                            state.put("kind", "terminal_hooks_ready"); state.put("utc", Instant.now().toString()); state.put("pid", config.pid);
+                            snapshots.add(state); prepared.request().disable();
+                        } else if (event instanceof BreakpointEvent terminal && terminalCaptured < config.maxTerminals && terminal.request().getProperty("terminalSite") instanceof Site site) {
+                            try { snapshots.add(terminalSnapshot(terminal, site, config.pid)); terminalCaptured++; }
+                            catch (Throwable failure) { snapshots.add(Map.of("kind", "terminal_snapshot_failure", "utc", Instant.now().toString(), "error", failure.getClass().getName())); terminalCaptured++; }
                         } else if (event instanceof ExceptionEvent exception && captured < config.maxEvents && isTarget(exception)) {
                             try { Map<String, Object> capturedSnapshot = snapshot(exception); if (capturedSnapshot != null) { snapshots.add(capturedSnapshot); captured++; } }
                             catch (Throwable failure) { snapshots.add(Map.of("kind", "observer_snapshot_failure", "utc", Instant.now().toString(), "error", failure.getClass().getName())); captured++; }
@@ -138,11 +176,17 @@ public final class RecipeExceptionObserver {
                     try { eventSet.resume(); } catch (VMDisconnectedException ignored) { }
                 }
                 for (Map<String, Object> snapshot : snapshots) append(config, budget, HEADER + json(snapshot) + "\n");
+                if (terminalCaptured >= config.maxTerminals) for (BreakpointRequest request : manager.breakpointRequests()) request.disable();
+                if (captured >= config.maxEvents) for (ExceptionRequest request : manager.exceptionRequests()) request.disable();
                 if (disconnected) break;
             }
         } finally {
             if (vm != null) {
                 try { for (ExceptionRequest request : vm.eventRequestManager().exceptionRequests()) request.disable(); }
+                catch (VMDisconnectedException ignored) { }
+                try { for (BreakpointRequest request : vm.eventRequestManager().breakpointRequests()) request.disable(); }
+                catch (VMDisconnectedException ignored) { }
+                try { for (ClassPrepareRequest request : vm.eventRequestManager().classPrepareRequests()) request.disable(); }
                 catch (VMDisconnectedException ignored) { }
                 try { vm.dispose(); } catch (VMDisconnectedException ignored) { }
             }
@@ -152,6 +196,119 @@ public final class RecipeExceptionObserver {
     static void exceptionRequest(EventRequestManager manager, ReferenceType type) {
         ExceptionRequest request = manager.createExceptionRequest(type, true, true);
         request.addClassFilter(CALLER); request.setSuspendPolicy(EventRequest.SUSPEND_EVENT_THREAD); request.enable();
+    }
+
+    static Map<String, Object> terminalRequests(EventRequestManager manager, ReferenceType type) {
+        var methods = new ArrayList<String>();
+        for (Site site : TERMINALS) {
+            if (!type.name().equals(site.className)) continue;
+            List<Method> matching = type.methodsByName(site.methodName, site.signature);
+            if (matching.size() != 1) throw new IllegalStateException("Terminal profile mismatch: " + site.className + "." + site.methodName);
+            Location entry = matching.get(0).locationOfCodeIndex(0);
+            if (entry == null) throw new IllegalStateException("Terminal entry unavailable: " + site.methodName);
+            BreakpointRequest request = manager.createBreakpointRequest(entry); request.putProperty("terminalSite", site);
+            request.setSuspendPolicy(EventRequest.SUSPEND_EVENT_THREAD); request.enable();
+            methods.add(site.methodName + site.signature);
+        }
+        return Map.of("class", type.name(), "state", "installed", "methods", methods);
+    }
+
+    static Map<String, Object> terminalSnapshot(BreakpointEvent event, Site site, long pid) throws Exception {
+        var output = new LinkedHashMap<String, Object>(); output.put("kind", "connection_terminal");
+        output.put("utc", Instant.now().toString()); output.put("pid", pid); output.put("thread", shortText(event.thread().name(), 120));
+        output.put("class", site.className); output.put("method", site.methodName); output.put("signature", site.signature);
+        List<StackFrame> frames = event.thread().frames(0, Math.min(36, event.thread().frameCount()));
+        StackFrame top = frames.get(0); var arguments = new ArrayList<Object>();
+        for (Value value : top.getArgumentValues()) arguments.add(allowedValue(value)); output.put("arguments", arguments);
+        ObjectReference receiver = top.thisObject();
+        if (receiver != null) output.put("receiverId", receiver.uniqueID());
+        if (receiver != null && site.className.equals(STEAM_CLASS)) {
+            output.put("bridge", fields(receiver, List.of("hostSide", "connectionId", "started", "closed", "outboundFinQueued", "outboundFinSubmitted", "inboundFinQueued", "inboundFinished", "outboundDataObserved", "inboundDataObserved", "peerReady", "addonNegotiationReady", "preNegotiationBytes", "outboundWait", "gracefulCloseDeadlineMillis", "outboundNotBeforeMillis", "outboundDataFallbackMillis", "dedicatedSessionGeneration")));
+            Field diagnosticFlag = receiver.referenceType().fieldByName("NETWORK_DIAGNOSTICS");
+            boolean countersEnabled = diagnosticFlag != null && receiver.referenceType().getValue(diagnosticFlag) instanceof BooleanValue value && value.value();
+            output.put("bridgeCountersEnabled", countersEnabled);
+            if (countersEnabled) output.put("bridgeCounters", fields(receiver, List.of("tcpReadBytes", "steamSentBytes", "steamReceivedBytes", "tcpWrittenBytes", "localQueueRetries")));
+            Value runtime = readField(receiver, "runtime");
+            if (runtime instanceof ObjectReference object) {
+                output.put("runtime", fields(object, List.of("status", "failureCause", "permanentlyShutdown", "activityCount", "retryOutboundNotBeforeMillis", "retryOutboundDeadlineMillis")));
+                Value generation = readField(object, "generation");
+                if (generation instanceof ObjectReference value) output.put("runtimeGeneration", fields(value, List.of("stopRequested", "id")));
+            }
+        } else if (receiver != null && site.className.equals("net.minecraft.network.Connection")) {
+            output.put("connection", fields(receiver, List.of("f_129471_", "f_290021_", "f_129479_", "f_129473_", "f_129468_")));
+            Value listener = readField(receiver, "f_129470_"); output.put("packetListener", allowedValue(listener));
+        }
+        var stack = new ArrayList<Map<String, Object>>();
+        for (StackFrame frame : frames) {
+            Location location = frame.location();
+            stack.add(Map.of("class", shortText(location.declaringType().name(), 220), "method", shortText(location.method().name(), 100), "line", location.lineNumber(), "codeIndex", location.codeIndex()));
+            if (location.declaringType().name().equals(STEAM_CLASS) && location.method().signature().equals("()V") &&
+                ((location.method().name().equals("readLoop") && location.codeIndex() >= 112 && location.codeIndex() <= 159) ||
+                 (location.method().name().equals("writeLoop") && location.codeIndex() >= 123 && location.codeIndex() <= 170))) {
+                try {
+                    LocalVariable variable = frame.visibleVariableByName("exception");
+                    if (variable != null && variable.typeName().equals("java.io.IOException") && frame.getValue(variable) instanceof ObjectReference exception)
+                        output.put("localIoException", allowedValue(exception));
+                } catch (AbsentInformationException unavailable) { output.put("localIoException", "debug_local_information_unavailable"); }
+            }
+            if (location.declaringType().name().equals("link.e4steam.steam.SteamRuntime") && location.method().name().equals("drainOutbound") &&
+                location.method().signature().equals("(Ljava/nio/ByteBuffer;J)V") && location.codeIndex() == 1248) {
+                try {
+                    LocalVariable failure = frame.visibleVariableByName("failure"), result = frame.visibleVariableByName("result");
+                    if (failure != null && frame.getValue(failure) instanceof ObjectReference value) output.put("nativeSendFailure", allowedValue(value));
+                    if (result != null && frame.getValue(result) instanceof IntegerValue value) output.put("nativeSendResult", value.value());
+                } catch (AbsentInformationException unavailable) { output.put("nativeSendFailure", "debug_local_information_unavailable"); }
+            }
+        }
+        output.put("stack", stack); output.put("targetMethodsInvoked", false); output.put("classMutation", false); return output;
+    }
+
+    static Map<String, Object> fields(ObjectReference object, List<String> names) {
+        var result = new LinkedHashMap<String, Object>();
+        for (String name : names) result.put(name, allowedValue(readField(object, name))); return result;
+    }
+    static Object allowedValue(Value value) {
+        if (value == null) return null;
+        if (value instanceof BooleanValue primitive) return primitive.value();
+        if (value instanceof ByteValue primitive) return primitive.value();
+        if (value instanceof ShortValue primitive) return primitive.value();
+        if (value instanceof IntegerValue primitive) return primitive.value();
+        if (value instanceof LongValue primitive) return primitive.value();
+        if (value instanceof FloatValue primitive) return Float.isFinite(primitive.value()) ? primitive.value() : "nonfinite";
+        if (value instanceof DoubleValue primitive) return Double.isFinite(primitive.value()) ? primitive.value() : "nonfinite";
+        if (value instanceof CharValue primitive) return String.valueOf(primitive.value());
+        if (value instanceof StringReference string) return shortText(string.value(), 512);
+        if (value instanceof ObjectReference object) {
+            String className = object.referenceType().name();
+            if (className.equals("java.util.concurrent.atomic.AtomicBoolean")) { Value primitive = readField(object, "value"); return primitive instanceof IntegerValue integer ? integer.value() != 0 : null; }
+            if (className.equals("java.util.concurrent.atomic.AtomicLong")) return allowedValue(readField(object, "value"));
+            if (className.equals("net.minecraft.network.chat.MutableComponent")) {
+                var component = new LinkedHashMap<String, Object>(); component.put("class", className);
+                Value contents = readField(object, "f_237194_");
+                if (contents instanceof ObjectReference content) {
+                    String contentClass = content.referenceType().name(); component.put("contentsClass", contentClass);
+                    if (contentClass.equals("net.minecraft.network.chat.contents.TranslatableContents")) {
+                        component.put("key", stringField(content, "f_237497_")); component.put("fallback", stringField(content, "f_263792_"));
+                    } else if (contentClass.equals("net.minecraft.network.chat.contents.LiteralContents")) component.put("text", stringField(content, "f_237368_"));
+                }
+                return component;
+            }
+            if (object.referenceType() instanceof ClassType type) {
+                for (ClassType current = type; current != null; current = current.superclass()) {
+                    if (current.name().equals("java.lang.Throwable")) {
+                        var exception = new LinkedHashMap<String, Object>(); exception.put("class", className); exception.put("message", stringField(object, "detailMessage"));
+                        Value cause = readField(object, "cause");
+                        if (cause instanceof ObjectReference causeObject && causeObject.uniqueID() != object.uniqueID()) {
+                            exception.put("causeClass", causeObject.referenceType().name()); exception.put("causeMessage", stringField(causeObject, "detailMessage"));
+                        }
+                        return exception;
+                    }
+                    if (current.name().equals("java.lang.Enum")) return Map.of("class", className, "name", Objects.toString(stringField(object, "name"), ""));
+                }
+            }
+            return Map.of("class", shortText(className, 220));
+        }
+        return value.type().name();
     }
 
     static boolean isTarget(ExceptionEvent event) {
@@ -229,6 +386,14 @@ public final class RecipeExceptionObserver {
         safe(game.resolve("logs"));
         verifyHash(game.resolve("mods/alchemylib-1.20.1-1.0.30.jar"), config.librarySha);
         verifyHash(game.resolve("mods/alchemistry-1.20.1-2.3.4.jar"), config.chemistrySha);
+        try (var entries = Files.list(game.resolve("mods"))) {
+            List<Path> steam = entries.filter(path -> path.getFileName().toString().toLowerCase(Locale.ROOT).startsWith("e4steam") && path.toString().endsWith(".jar")).toList();
+            if (steam.size() > 1) throw new SecurityException("Ambiguous e4steam JARs");
+            if (steam.size() == 1) {
+                if (!steam.get(0).getFileName().toString().equals(STEAM_JAR)) throw new SecurityException("Unprofiled e4steam JAR name");
+                verifyHash(steam.get(0), config.steamSha);
+            }
+        }
         com.sun.tools.attach.VirtualMachine local = com.sun.tools.attach.VirtualMachine.attach(String.valueOf(config.pid));
         try {
             Properties properties = local.getSystemProperties();
@@ -276,12 +441,23 @@ public final class RecipeExceptionObserver {
         files.put("com/smashingmods/alchemylib/api/item/IngredientStack.java","package com.smashingmods.alchemylib.api.item; import net.minecraft.world.item.crafting.Ingredient; public class IngredientStack { public IngredientStack(Ingredient ingredient,int count){ if(count==999)throw new IllegalStateException(\"unrelated\"); Object first=ingredient.f_43902_[0]; } }");
         files.put("com/smashingmods/alchemistry/common/recipe/dissolver/DissolverRecipeSerializer.java","package com.smashingmods.alchemistry.common.recipe.dissolver; import net.minecraft.resources.ResourceLocation; import net.minecraft.network.FriendlyByteBuf; import net.minecraft.world.item.crafting.Ingredient; import com.smashingmods.alchemylib.api.item.IngredientStack; public class DissolverRecipeSerializer { public void fromNetwork(ResourceLocation id,FriendlyByteBuf buf){ new IngredientStack(new Ingredient(new Object[0]),2); } }");
         files.put("ProbeMain.java","import java.nio.file.*; import com.smashingmods.alchemistry.common.recipe.dissolver.DissolverRecipeSerializer; import net.minecraft.resources.ResourceLocation; import net.minecraft.network.FriendlyByteBuf; public class ProbeMain { public static void main(String[] args)throws Exception { Path root=Path.of(args[0]); Class.forName(\"java.lang.ArrayIndexOutOfBoundsException\"); Files.writeString(root.resolve(\"boot.flag\"),\"ok\"); while(!Files.exists(root.resolve(\"start.flag\")))Thread.sleep(10); try {int a=(new int[0])[0];}catch(ArrayIndexOutOfBoundsException expected){} try {new com.smashingmods.alchemylib.api.item.IngredientStack(new net.minecraft.world.item.crafting.Ingredient(new Object[]{\"ok\"}),999);}catch(IllegalStateException expected){} try {new com.smashingmods.alchemylib.api.item.IngredientStack(new net.minecraft.world.item.crafting.Ingredient(new Object[0]),2);}catch(ArrayIndexOutOfBoundsException expected){} try {new DissolverRecipeSerializer().fromNetwork(new ResourceLocation(\"qa\",\"caught_recipe\"),new FriendlyByteBuf());}catch(ArrayIndexOutOfBoundsException expected){} Thread worker=new Thread(()->new DissolverRecipeSerializer().fromNetwork(new ResourceLocation(\"qa\",\"uncaught_recipe\"),new FriendlyByteBuf()),\"uncaught-selftest\");worker.start();worker.join(); Files.writeString(root.resolve(\"continued.flag\"),\"continued\");while(!Files.exists(root.resolve(\"stop.flag\")))Thread.sleep(10); } }");
+        files.put("io/netty/channel/ChannelHandlerContext.java", "package io.netty.channel; public interface ChannelHandlerContext {} ");
+        files.put("net/minecraft/network/chat/Component.java", "package net.minecraft.network.chat; public interface Component {} ");
+        files.put("net/minecraft/network/chat/ComponentContents.java", "package net.minecraft.network.chat; public interface ComponentContents {} ");
+        files.put("net/minecraft/network/chat/MutableComponent.java", "package net.minecraft.network.chat; public class MutableComponent implements Component { private final ComponentContents f_237194_; public MutableComponent(ComponentContents contents){f_237194_=contents;} }");
+        files.put("net/minecraft/network/chat/contents/TranslatableContents.java", "package net.minecraft.network.chat.contents; public class TranslatableContents implements net.minecraft.network.chat.ComponentContents { private final String f_237497_; private final String f_263792_=null; public TranslatableContents(String key){f_237497_=key;} }");
+        files.put("net/minecraft/network/Connection.java", "package net.minecraft.network; public class Connection { private Object f_129470_=new Listener(); private Object f_129471_,f_290021_,f_129468_; private boolean f_129479_,f_129473_; public static class Listener {} public void channelInactive(io.netty.channel.ChannelHandlerContext c){} public void exceptionCaught(io.netty.channel.ChannelHandlerContext c,Throwable t){f_129479_=true;} public void m_129507_(net.minecraft.network.chat.Component c){f_129471_=c;} }");
+        files.put("link/e4steam/steam/SteamRuntime.java", "package link.e4steam.steam; public class SteamRuntime { public enum State { RUNNING } private State status=State.RUNNING; private Throwable failureCause; private boolean permanentlyShutdown; private int activityCount=1; }");
+        files.put("link/e4steam/steam/SteamConnectionBridge.java", "package link.e4steam.steam; import java.util.concurrent.atomic.*; public class SteamConnectionBridge { public static final boolean NETWORK_DIAGNOSTICS=true; private final SteamRuntime runtime=new SteamRuntime(); private final int connectionId; private final boolean hostSide; private final AtomicBoolean started=new AtomicBoolean(true),closed=new AtomicBoolean(),outboundFinQueued=new AtomicBoolean(),peerReady=new AtomicBoolean(true); private final AtomicLong tcpReadBytes=new AtomicLong(41); private String outboundWait=\"selftest\"; private int mode; public SteamConnectionBridge(int id,boolean host){connectionId=id;hostSide=host;} public void localEof(){mode=0;readLoop();} public void localIo(){mode=1;readLoop();} private void readLoop(){if(mode==0){beginGracefulClose();return;}try{throw new java.io.IOException(\"qa_bridge_local_io\");}catch(java.io.IOException exception){close(false);}} public void acceptRemoteFin(){beginGracefulClose();} private void beginGracefulClose(){outboundFinQueued.set(true);} public void close(boolean reset){closed.set(true);} }");
+        files.put("ProbeClose.java", "public class ProbeClose { public static void run(){new link.e4steam.steam.SteamConnectionBridge(7,true).localEof();new link.e4steam.steam.SteamConnectionBridge(8,true).localIo();new link.e4steam.steam.SteamConnectionBridge(9,false).acceptRemoteFin();net.minecraft.network.Connection connection=new net.minecraft.network.Connection();connection.exceptionCaught(null,new java.io.IOException(\"qa_native_local_io\"));connection.m_129507_(new net.minecraft.network.chat.MutableComponent(new net.minecraft.network.chat.contents.TranslatableContents(\"disconnect.timeout\")));new net.minecraft.network.Connection().channelInactive(null);} }");
+        files.put("ProbeMain.java", files.get("ProbeMain.java").replace("Files.writeString(root.resolve(\"continued.flag\"),\"continued\");", "ProbeClose.run(); Files.writeString(root.resolve(\"continued.flag\"),\"continued\");"));
         var compilerArgs=new ArrayList<String>(List.of("--release","17","-g","-d",classes.toString()));
         for(var row:files.entrySet()){Path file=sources.resolve(row.getKey());Files.createDirectories(file.getParent());Files.writeString(file,row.getValue());compilerArgs.add(file.toString());}
         int compiled=ToolProvider.getSystemJavaCompiler().run(null,null,null,compilerArgs.toArray(String[]::new));if(compiled!=0)throw new IllegalStateException("Self-test compilation failed");
-        for(String name:List.of("alchemylib-1.20.1-1.0.30.jar","alchemistry-1.20.1-2.3.4.jar")){try(JarOutputStream zip=new JarOutputStream(Files.newOutputStream(game.resolve("mods").resolve(name)))){zip.putNextEntry(new JarEntry("selftest.marker"));zip.write(name.getBytes(StandardCharsets.UTF_8));zip.closeEntry();}}
+        for(String name:List.of("alchemylib-1.20.1-1.0.30.jar","alchemistry-1.20.1-2.3.4.jar",STEAM_JAR)){try(JarOutputStream zip=new JarOutputStream(Files.newOutputStream(game.resolve("mods").resolve(name)))){zip.putNextEntry(new JarEntry("selftest.marker"));zip.write(name.getBytes(StandardCharsets.UTF_8));zip.closeEntry();}}
         String lib=HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(Files.readAllBytes(game.resolve("mods/alchemylib-1.20.1-1.0.30.jar"))));
         String chem=HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(Files.readAllBytes(game.resolve("mods/alchemistry-1.20.1-2.3.4.jar"))));
+        String steam=HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(Files.readAllBytes(game.resolve("mods").resolve(STEAM_JAR))));
         Path childTemp = root.resolve("separate-game-temp"); Files.createDirectories(childTemp);
         if (childTemp.equals(Path.of(System.getProperty("java.io.tmpdir")).toAbsolutePath().normalize())) throw new AssertionError("Self-test temp directories must differ");
         ProcessBuilder childBuilder=new ProcessBuilder(java.toAbsolutePath().toString(),"-Djava.io.tmpdir="+childTemp,"-Dlanminecraft.diagnostics.recipeIds=true","-agentlib:jdwp=transport=dt_socket,address=127.0.0.1:0,server=y,suspend=n","-cp",classes.toString(),"ProbeMain",root.toString()).directory(game.toFile()).redirectOutput(root.resolve("debuggee.out.log").toFile()).redirectError(root.resolve("debuggee.err.log").toFile());
@@ -291,15 +467,20 @@ public final class RecipeExceptionObserver {
         CompletableFuture<Void> observing=new CompletableFuture<>();
         try {
             waitFor(root.resolve("boot.flag"),child,10000);
-            Candidate selected = discover(minecraft, lib, chem);
+            Candidate selected = discover(minecraft, lib, chem, steam);
             if (selected.pid != child.pid() || !selected.game.equals(game)) throw new AssertionError("Discovery selected wrong game");
             try { selectOne(List.of()); throw new AssertionError("Empty selection accepted"); } catch (IllegalStateException expected) { }
             try { selectOne(List.of(selected, selected)); throw new AssertionError("Ambiguous selection accepted"); } catch (IllegalStateException expected) { }
-            Thread observer=new Thread(()->{try{observe(new Config(child.pid(),child.pid(),game,game.resolve("logs/debug.log"),lib,chem,2),()->{try{Files.writeString(root.resolve("start.flag"),"start");}catch(Exception failure){throw new RuntimeException(failure);}});observing.complete(null);}catch(Throwable failure){observing.completeExceptionally(failure);}},"self-test-observer");observer.start();
+            Thread observer=new Thread(()->{try{observe(new Config(child.pid(),child.pid(),game,game.resolve("logs/debug.log"),lib,chem,2,steam,6),()->{try{Files.writeString(root.resolve("start.flag"),"start");}catch(Exception failure){throw new RuntimeException(failure);}});observing.complete(null);}catch(Throwable failure){observing.completeExceptionally(failure);}},"self-test-observer");observer.start();
             observing.get(20,TimeUnit.SECONDS);waitFor(root.resolve("continued.flag"),child,5000);
             String captured=Files.readString(game.resolve("logs/debug.log"));
             byte[] resultingLog=Files.readAllBytes(game.resolve("logs/debug.log")); if(!Arrays.equals(existingLog,Arrays.copyOf(resultingLog,existingLog.length)))throw new AssertionError("Existing log prefix changed");
             if(!captured.contains("qa:caught_recipe")||!captured.contains("qa:uncaught_recipe")||!captured.contains("\"ingredientValuesLength\":0")||!captured.contains("\"caught\":false")||!captured.contains("\"caught\":true")||captured.contains("IllegalStateException")||!captured.contains("\"readerIndex\":9")||!captured.contains("\"writerIndex\":17")||!Files.exists(root.resolve("continued.flag")))throw new AssertionError("Observer capture/filter/resume self-test failed");
+            if (captured.split("\"kind\":\"connection_terminal\"", -1).length - 1 != 6 || !captured.contains("qa_native_local_io") ||
+                !captured.contains("acceptRemoteFin") || !captured.contains("readLoop") || !captured.contains("\"tcpReadBytes\":41") ||
+                !captured.contains("\"packetListener\":{\"class\":\"net.minecraft.network.Connection$Listener\"}") ||
+                !captured.contains("terminal_hooks_ready") || !captured.contains("\"key\":\"disconnect.timeout\"") || captured.contains("terminal_snapshot_failure")) throw new AssertionError("Terminal origin/filter/fields self-test failed");
+            if (captured.lines().noneMatch(line -> line.contains("\"method\":\"channelInactive\"") && line.contains("\"f_129471_\":null"))) throw new AssertionError("Bare channel-close null reason not captured");
             Files.writeString(root.resolve("stop.flag"),"stop");if(!child.waitFor(5,TimeUnit.SECONDS)||child.exitValue()!=0)throw new AssertionError("Self-test debuggee did not continue and exit normally");
             Files.writeString(root.resolve("result.json"),json(Map.of("status","PASS","capturedEvents",2,"exactRecipeIds",List.of("qa:caught_recipe","qa:uncaught_recipe"),"emptyArrayCaptured",true,"unrelatedErrorsExcluded",true,"eventThreadsResumed",true,"debuggeeExitCode",child.exitValue(),"logSizes",Map.of("totalBytes",Files.size(game.resolve("logs/debug.log")),"preexistingBytesPreserved",existingLog.length,"newBytes",resultingLog.length-existingLog.length),"targetMethodsInvoked",false,"classMutation",false))+"\n");
             System.out.println("SELF_TEST_PASS "+root.resolve("result.json"));

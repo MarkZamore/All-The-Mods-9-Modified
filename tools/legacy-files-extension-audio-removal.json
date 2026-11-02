@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Exact old bytes for safe retirement/replacement of explicitly removed content and temporary diagnostics. No filename-only authority; unknown user files preserved.",
+  "priorSourceRevision": "20f0720de3c68b115f858286191597c5b1f1a3bb",
+  "priorUnionSha256": "837016c8de3bac8063dade7a0e78223cae3c0d4a0f3798d179d16154100c4ce5",
+  "priorRows": 2014,
+  "currentUnionSha256": "26de87b2c8e126094febdb8d2484a67c6e9135bcea8e8aec6fa812d7aefadaf2",
+  "currentRows": 2017,
+  "addedExactRows": [
+    {
+      "path": "launcher/controls-preset.txt",
+      "sizeBytes": 35409,
+      "sha256": "e1b8d9298a455d6b41cefa3fd24b4bf8ae7da5a6516ca9d40ec104e257e6e02d"
+    },
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 13506,
+      "sha256": "0b5dedb3d8881360729b2ba1d2e042d224f80c61c05f9b188b89aa92edf5fe36"
+    },
+    {
+      "path": "launcher/diagnostics/recipe-exception-observer.jar",
+      "sizeBytes": 22045,
+      "sha256": "eb402b3ef55eae7d29f2ce8212c2ce2a3b87db15d4fd1f39bb149708be9465fe"
+    }
+  ],
+  "removedContentAlreadyCoveredByExistingExactRows": [
+    {
+      "path": "mods/dandadanver2.jar",
+      "sizeBytes": 2750248,
+      "sha256": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd"
+    },
+    {
+      "path": "mods/fairy_mine-2.6.5-forge-1.20.1.jar",
+      "sizeBytes": 4067262,
+      "sha256": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034"
+    }
+  ]
+}

@@ -2,7 +2,8 @@
 """Verify the exact author ATM9 payload plus its separately pinned additions.
 
 Preparation checks are static composition checks. Pass --require-loaded-inventory
-for publication after recording the real Forge ModList against these exact JARs.
+for publication with a recorded Forge ModList or a guarded exact-removal projection.
+A projection is reported separately and never becomes a fresh native observation.
 Neither mode establishes a successful client/world/AI/Steam runtime by itself.
 """
 from __future__ import annotations
@@ -53,8 +54,8 @@ QUEST_MANIFEST_PATH = "tools/atm9_ru_quests/manifest.json"
 QUEST_PATCH_TOOL = "tools/atm9_ru_quests.py"
 APPROVED_RECIPE_OBSERVER = {
     "path": "launcher/diagnostics/recipe-exception-observer.jar",
-    "sha256": "eb402b3ef55eae7d29f2ce8212c2ce2a3b87db15d4fd1f39bb149708be9465fe",
-    "sizeBytes": 22045,
+    "sha256": "4c87326e5a243974ea46ccfc3c2b3d5d09709151e8e8538fb3d6b4f8b46f4c5d",
+    "sizeBytes": 30890,
     "kind": "temporary-diagnostic-tool",
 }
 RECIPE_DIAGNOSTIC_SCRIPT = "kubejs/startup_scripts/atm9_modified_recipe_diagnostics.js"
@@ -153,7 +154,7 @@ def validate_recipe_observer(pack: Path, row: dict, support: list[dict]):
             "Temporary standalone observer must be explicitly pack-owned")
     with zipfile.ZipFile(target_path(pack, APPROVED_RECIPE_OBSERVER["path"])) as archive:
         require(set(archive.namelist()) == {"META-INF/", "META-INF/MANIFEST.MF", "RecipeExceptionObserver.class", "RecipeExceptionObserver$Config.class",
-                                          "RecipeExceptionObserver$Candidate.class", "RecipeExceptionObserver$OutputBudget.class"},
+                                          "RecipeExceptionObserver$Candidate.class", "RecipeExceptionObserver$OutputBudget.class", "RecipeExceptionObserver$Site.class"},
                 "Temporary observer JAR has unexpected executable/mod entries")
         manifest = archive.read("META-INF/MANIFEST.MF").decode("utf-8-sig")
         require(re.search(r"(?im)^Main-Class: RecipeExceptionObserver\s*$", manifest)
@@ -543,6 +544,7 @@ def verify(pack: Path, *, require_loaded_inventory=False) -> dict:
     inventory_current = (inventory.get("schemaVersion") == 1 and inventory.get("sourceJars") == hashes
                          and inventory.get("minecraftVersion") == plan["platform"]["minecraftVersion"]
                          and inventory.get("loader") == plan["platform"]["loader"])
+    inventory_kind = pack_library.inventory_evidence_kind(pack, inventory) if inventory_current else None
     actual_ids = []
     if inventory_current:
         for mod in inventory.get("mods", []):
@@ -562,8 +564,10 @@ def verify(pack: Path, *, require_loaded_inventory=False) -> dict:
             "dependencyJars": len([x for x in plan["files"] if x["kind"] == "dependency"]),
             "bundledUserProvidedJars": len([x for x in plan["files"] if x.get("sourceKind") == "bundled-user-provided"]),
             "supportFiles": len(plan["supportFiles"]), "jarFiles": len(jars), "topLevelForgeModIds": len(top_ids),
-            "duplicateTopLevelIds": duplicates, "runtimeInventoryVerified": inventory_current,
-            "actualLoadedPackModCount": len(actual_ids) if inventory_current else None,
+            "duplicateTopLevelIds": duplicates, "runtimeInventoryVerified": inventory_current and inventory_kind == "native-observation",
+            "inventorySourceBindingsVerified": inventory_current, "inventoryEvidenceKind": inventory_kind,
+            "actualLoadedPackModCount": len(actual_ids) if inventory_current and inventory_kind == "native-observation" else None,
+            "projectedLoadedPackModCount": len(actual_ids) if inventory_current and inventory_kind == "exact-removal-projection" else None,
             "runtimeAcceptanceClaimed": False}
 
 

@@ -47,14 +47,8 @@ key_key.cursedfate.combat_mode:key.keyboard.keypad.8
 key_key.cursedfate.menu:key.keyboard.keypad.9
 key_key.cursedfate.output:key.keyboard.keypad.add
 key_key.cursedfate.preset_swich:key.keyboard.keypad.subtract
-key_key.dandadan.okarun_boost:key.keyboard.right.shift
-key_key.dandadan.open_ability_wheel:key.keyboard.f6
 key_key.deep_dark_regrowth.special_ability:key.keyboard.keypad.7
 key_key.doomsday.arsenal:key.keyboard.f9
-key_key.fairy_mine.normal_attack:key.keyboard.right.alt
-key_key.fairy_mine.soltar_habilidade:key.keyboard.equal
-key_key.fairy_mine.transformation:key.keyboard.minus
-key_key.fairy_mine.trocar_habilidade:key.keyboard.0
 key_key.ftbquests.quests:key.keyboard.grave.accent
 key_key.ftbultimine:key.keyboard.left.alt
 key_key.godwand.skill_wheel:key.keyboard.f7
@@ -313,10 +307,6 @@ key_key.cursedfate.quick_ability_1:key.keyboard.unknown
 key_key.cursedfate.quick_ability_2:key.keyboard.unknown
 key_key.cursedfate.quick_ability_3:key.keyboard.unknown
 key_key.cursedfate.quick_ability_4:key.keyboard.unknown
-key_key.dandadan.quick_skill_1:key.keyboard.unknown
-key_key.dandadan.quick_skill_2:key.keyboard.unknown
-key_key.dandadan.quick_skill_3:key.keyboard.unknown
-key_key.dandadan.quick_skill_4:key.keyboard.unknown
 key_key.dankstorage.construction:key.keyboard.unknown
 key_key.dankstorage.lock_slot:key.keyboard.unknown
 key_key.dankstorage.pickup_mode:key.keyboard.unknown
@@ -352,7 +342,6 @@ key_key.exchangers.mode_switch:key.keyboard.unknown
 key_key.exchangers.open_gui:key.keyboard.unknown
 key_key.exchangers.range_switch:key.keyboard.unknown
 key_key.exchangers.void_items_mode_toggle:key.keyboard.unknown
-key_key.fairy_mine.dash:key.keyboard.unknown
 key_key.findme.pull_one:key.keyboard.unknown
 key_key.findme.pull_stack:key.keyboard.unknown
 key_key.findme.search:key.keyboard.unknown

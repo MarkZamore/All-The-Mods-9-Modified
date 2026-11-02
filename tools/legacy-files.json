@@ -4946,6 +4946,11 @@
   },
   {
     "path": "launcher/controls-guide.md",
+    "sizeBytes": 13506,
+    "sha256": "0b5dedb3d8881360729b2ba1d2e042d224f80c61c05f9b188b89aa92edf5fe36"
+  },
+  {
+    "path": "launcher/controls-guide.md",
     "sizeBytes": 12994,
     "sha256": "1a4311327f0513b8d717595a262dc6dc44835b8fda47f121c8da43da2fb48d01"
   },
@@ -4968,6 +4973,16 @@
     "path": "launcher/controls-preset.txt",
     "sizeBytes": 35027,
     "sha256": "8d1e1c08bb19fc6a78ac24dfc83149dcd63dfe5a23c2333370204898db032701"
+  },
+  {
+    "path": "launcher/controls-preset.txt",
+    "sizeBytes": 35409,
+    "sha256": "e1b8d9298a455d6b41cefa3fd24b4bf8ae7da5a6516ca9d40ec104e257e6e02d"
+  },
+  {
+    "path": "launcher/diagnostics/recipe-exception-observer.jar",
+    "sizeBytes": 22045,
+    "sha256": "eb402b3ef55eae7d29f2ce8212c2ce2a3b87db15d4fd1f39bb149708be9465fe"
   },
   {
     "path": "minecraft-1.20.1-client.jar",

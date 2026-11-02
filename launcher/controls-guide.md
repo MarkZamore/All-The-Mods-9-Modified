@@ -17,18 +17,12 @@
 | Open the Variants Menu (`key.walkers_variants`) | end |
 | ArPhEx Power Keybind (`key.arphex.power_bind`) | Num 5 |
 | Activate Anomaly (`key.scpo.activate_anomaly`) | f10 |
-| Use Skill (`key.fairy_mine.soltar_habilidade`) | = |
-| Switch Skill (`key.fairy_mine.trocar_habilidade`) | 0 |
-| Transformation (`key.fairy_mine.transformation`) | − |
-| Use Normal Attack (`key.fairy_mine.normal_attack`) | правый Alt |
 | Push to Talk (`key.push_to_talk`) | Caps Lock |
 | Voice Chat Menu (`key.voice_chat`) | O |
 | Special Ability 1 (`key.deep_dark_regrowth.special_ability`) | Num 7 |
 | Поговорить с Verity (удерживать) (`key.verity.push_to_talk`) | P |
 | Open Backpack (`keybind.sophisticatedbackpacks.open_backpack`) | B |
 | Default Item Action (`key.biomancy.item_default`) | Mouse 4 |
-| Open Ability Wheel (`key.dandadan.open_ability_wheel`) | f6 |
-| Okarun Boost (`key.dandadan.okarun_boost`) | правый Shift |
 | Reload Gun/Weapon (`key.azurelib.reload`) | Num decimal |
 | Scope Weapon (`key.azurelib.scope`) | Num enter |
 | Combat Mode (`key.cursedfate.combat_mode`) | Num 8 |
@@ -77,7 +71,6 @@ P нужно удерживать для речи с Verity. Это отдель
 | Cursed Fate | Классические способности 1–7 | Верхний ряд 1–7; отдельные quick ability 1–4 и в авторском моде не назначены |
 | HSR Phainon | Basic ATK, Skill 1, Skill 2, Technique, Ultimate | C, Q, E, Z, X соответственно |
 | Shooting Star Stellar Remote | SS-01 Railgun, SS-03 Gungnir, SS-04 Seven Stars, SS-05 Tesseract | K, I, U, Y; основное skill menu настроено отдельно |
-| Fairy Mine | Dash | V; цикл, применение, превращение и обычная атака назначены |
 | Deep Dark Regrowth | Laser Mask / Special Ability 2 | G |
 | SCP Overtime | Действие мебели | F в авторском моде; здесь F оставлена обычной второй руке |
 | Crystalix | Четыре свойства строительной палочки | Shadeless Z, Reinforced X, Light C, Ghost V; это отдельные свойства одной палочки, их нельзя сводить в одну кнопку |

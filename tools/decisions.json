@@ -1216,12 +1216,13 @@
     {
       "name": "Dandadan",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/dandadan",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "dandadan"
       ],
       "version": "2.0",
-      "sha256": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd"
+      "sha256": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd",
+      "reason": "User explicitly removed Dandadan and FairyMine after the bad-MP3 sound crash investigation. No author JAR rewrite or sound quality substitution; content removed completely."
     },
     {
       "name": "Deep Dark: Regrowth",
@@ -1319,12 +1320,13 @@
     {
       "name": "Fairy Mine",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/fairy-mine",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "fairy_mine"
       ],
       "version": "2.6.5",
-      "sha256": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034"
+      "sha256": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
+      "reason": "User explicitly removed Dandadan and FairyMine after the bad-MP3 sound crash investigation. No author JAR rewrite or sound quality substitution; content removed completely."
     },
     {
       "name": "Frieren - Singularity",
@@ -1995,7 +1997,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 82,
+  "selectedRequestedProjects": 80,
   "dependencyJars": 19,
   "authorCompatibilitySelections": [
     {
@@ -2239,17 +2241,12 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "DATA_ONLY_CARPET_RECIPE_CANDIDATE_SOURCE_VERIFIED_REAL_PEER_NATIVE_PENDING",
-    "sourceLockSha256": "a5e178344f369d68279678f5699e2eed5df8e5038720acad6caf24e6d7bd30e8",
-    "historicalThreeJarReceipt": {
-      "path": "tools/qa/native-source-acceptance.json",
-      "sha256": "10f0bdca54ebb67484f44b0b2d6a491eaa86b6f5f66cf0cb17c2b7b55f4ecc99",
-      "sourceLockSha256": "7983c8f1edc7c9035249e710ccfafaddf64c19a4d6068a14451c526c52c67edd"
-    },
-    "newOverlayRuntimeAcceptanceClaimed": false,
+    "status": "USER_REQUESTED_REMOVALS_SOURCE_PROJECTED_NEW_NATIVE_PEER_TEST_PENDING",
+    "sourceLockSha256": "d38c8f283f6b0e631c306bf7531fadb2b642a136dfa954ebacf7cc809d53229d",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
-    "actualOriginalIncidentRecipeObserved": "alchemistry:dissolver/carpets",
-    "modernFix525AloneResolvedRealIncident": false
+    "networkFixClaimed": false
   },
   "previousSingleplayerContentAcceptanceBeforeShootingStar151": {
     "receipt": {
@@ -2384,7 +2381,14 @@
   "temporaryRecipeDiagnostics": {
     "cleanupInventory": "tools/qa/temporary-recipe-diagnostics-cleanup.json",
     "manualOnly": true,
-    "unsupportedStartupJsRemoved": true
+    "unsupportedStartupJsRemoved": true,
+    "observerVersion": 6,
+    "recipeEventLimit": 8,
+    "terminalEventLimit": 24,
+    "ownEmittedBytesLimit": 262144,
+    "sourceSelfTestProof": "tools/qa/recipe-diagnostics-v6-selftest.json",
+    "exactTerminalProfileSha256": "f843f8a2327d275f07f15c4396e44ed323481d5f1705eedae52b67fc132524f2",
+    "actualNewUserGameClaimed": false
   },
   "previousThreeJarNativeAcceptanceBeforeCarpetDataFix": {
     "status": "ROOT_ACCEPTED_CLEAN_NATIVE_NETWORK_REPRO_PENDING",
@@ -2408,5 +2412,87 @@
     "newTag": "minecraft:wool_carpets",
     "sourcePreparationOnly": true,
     "nativeRetestPending": true
+  },
+  "previousContentAcceptanceBeforeAudioRemoval": {
+    "status": "DATA_ONLY_CARPET_RECIPE_CANDIDATE_SOURCE_VERIFIED_REAL_PEER_NATIVE_PENDING",
+    "sourceLockSha256": "a5e178344f369d68279678f5699e2eed5df8e5038720acad6caf24e6d7bd30e8",
+    "historicalThreeJarReceipt": {
+      "path": "tools/qa/native-source-acceptance.json",
+      "sha256": "10f0bdca54ebb67484f44b0b2d6a491eaa86b6f5f66cf0cb17c2b7b55f4ecc99",
+      "sourceLockSha256": "7983c8f1edc7c9035249e710ccfafaddf64c19a4d6068a14451c526c52c67edd"
+    },
+    "newOverlayRuntimeAcceptanceClaimed": false,
+    "realPeerJoinVerified": false,
+    "actualOriginalIncidentRecipeObserved": "alchemistry:dissolver/carpets",
+    "modernFix525AloneResolvedRealIncident": false
+  },
+  "audioModRemoval": {
+    "userAuthorized": true,
+    "removedFiles": [
+      {
+        "fileName": "dandadanver2.jar",
+        "sha256": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd",
+        "sizeBytes": 2750248,
+        "sourceUrl": "https://edge.forgecdn.net/files/6074/836/dandadanver2.jar",
+        "projectId": 1164278,
+        "fileId": 6074836,
+        "path": "mods/dandadanver2.jar",
+        "kind": "requested",
+        "version": "2.0",
+        "modIds": [
+          "dandadan"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/dandadan",
+        "name": "Dandadan"
+      },
+      {
+        "fileName": "fairy_mine-2.6.5-forge-1.20.1.jar",
+        "sha256": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
+        "sizeBytes": 4067262,
+        "sourceUrl": "https://edge.forgecdn.net/files/8371/246/fairy_mine-2.6.5-forge-1.20.1.jar",
+        "projectId": 1357752,
+        "fileId": 8371246,
+        "path": "mods/fairy_mine-2.6.5-forge-1.20.1.jar",
+        "kind": "requested",
+        "version": "2.6.5",
+        "modIds": [
+          "fairy_mine"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/fairy-mine",
+        "name": "Fairy Mine"
+      }
+    ],
+    "removedKeyNames": [
+      "key.fairy_mine.soltar_habilidade",
+      "key.fairy_mine.trocar_habilidade",
+      "key.fairy_mine.transformation",
+      "key.fairy_mine.dash",
+      "key.fairy_mine.normal_attack",
+      "key.dandadan.open_ability_wheel",
+      "key.dandadan.okarun_boost",
+      "key.dandadan.quick_skill_1",
+      "key.dandadan.quick_skill_2",
+      "key.dandadan.quick_skill_3",
+      "key.dandadan.quick_skill_4"
+    ],
+    "retainedSourceJars": 530,
+    "retainedProjectedPackModIds": 555,
+    "retainedPresetNames": 625,
+    "dependencyOrphansRemoved": [],
+    "sharedDependenciesRetained": {
+      "BASE": [
+        "geckolib",
+        "playeranimator"
+      ],
+      "NEW": {
+        "kleiders_custom_renderer": "Mandatory for still-present cursedfate1.0.39; FairyMine reference is optional and uses old alias."
+      }
+    },
+    "strictScriptGameruleOrConfigReferencesFound": false,
+    "nativeNewCohortAcceptanceClaimed": false,
+    "carpetDataFixRetained": true,
+    "shootingStar151AndRimulib121Retained": true,
+    "modernFix525RetainedForIsolatedNetworkDiagnosis": true,
+    "safetyReason": "Removing two NEW content mods adds no world mutation paths or custom framework. Otherauthorabilities/configs/Safetyabsence unchanged. Existing-world content/registry loss from these removals is expected, not a lossless migration promise."
   }
 }
