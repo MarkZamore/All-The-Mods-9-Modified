@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "c5c205a30dd30e03139d17a721d380c4e5e1b2bc",
+  "priorUnionSha256": "a284e07faff605fe3437c13ebe00ebd5982d68ad67815f9e0f778934d7d5713d",
+  "currentUnionSha256": "f9b74108062ccbf94721918b077d2330dbe02b7f5b5eead95926d0fa72e3f3ac",
+  "addedExactRows": [
+    {
+      "path": "mods/ArPhEx-5.0.2-forge-1.20.1.jar",
+      "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
+      "sizeBytes": 13527755
+    },
+    {
+      "path": "mods/kurolib-0.6-forge-1.20.1.jar",
+      "sha256": "812bc009a545b02b897362e354f53f7b1e62286550f3135ff3951a0b6eaa634a",
+      "sizeBytes": 2569967
+    },
+    {
+      "path": "mods/revervox_mod-1.20.1-2.1.jar",
+      "sha256": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
+      "sizeBytes": 1415249
+    },
+    {
+      "path": "mods/scpo-3.1.2-forge-1.20.1.jar",
+      "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
+      "sizeBytes": 49883761
+    },
+    {
+      "path": "mods/voicechatrecording-1.20.1-2.1.jar",
+      "sha256": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
+      "sizeBytes": 167824
+    },
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 11921,
+      "sha256": "71bf9610b50fae5b519fc1001627675119c46525d1a02d9fb784569c29f6fdda"
+    },
+    {
+      "path": "launcher/controls-preset.txt",
+      "sizeBytes": 31188,
+      "sha256": "d3430d45fb425aba069d2af92764609b1dcc1259f2375940ddd3773f73ff44f1"
+    }
+  ],
+  "userRemovedIds": [
+    "arphex",
+    "revervox_mod",
+    "scpo",
+    "the_obsessed"
+  ],
+  "orphanRemovedIds": [
+    "kurolib",
+    "voicechatrecording"
+  ],
+  "standaloneVoiceChatRetained": true,
+  "unknownPersonalFilesDeletionClaimed": false
+}

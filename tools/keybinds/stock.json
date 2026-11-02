@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Direct source projection564 names from historical actual636 namespace after six explicitly removed NEW mods. Playmate has no mappings; all retained values unchanged, no fresh native/applied-preset claim.",
+  "scope": "Direct source projection560 names from historical actual636 namespace after explicit content removals and orphan-library cleanup. Four own ArPhEx/SCP mappings removed; all retained bindings unchanged. No fresh native/application claim.",
   "englishNativeSha256": "1e2c66275c9b5a3d0a7c7d9e42bd58921520f3356acb4c35b4c0deb9f72d4459",
   "russianNativeSha256": "c45fed5c93946834c8294bbed0a0c3703410c86fa0cbc7da83f4e52cde42fad1",
   "sourceJars": {
@@ -19,7 +19,6 @@
     "Applied-Mekanistics-1.4.2.jar": "957e59989cc8388bcc10c42c8f68c0f1e3afce8a066a02bb2b6d0f4d641cce55",
     "AppliedFlux-1.20-1.3.4-forge.jar": "55891c5fa24835061dcc469fae310e71e71514f0216dc7dbd2d12ed3d62c9e60",
     "Aquaculture-1.20.1-2.5.5.jar": "8189d09adde558cd2ef97627e9480e4b620c3fa1de7ed064d1c20346288841e5",
-    "ArPhEx-5.0.2-forge-1.20.1.jar": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
     "Atlas Lib-1.20.1-1.1.12.jar": "8cc9b5b46e65affed0c38aa54da6870ec4e820364c654c4dd2bb70a94ba39c50",
     "AttributeFix-Forge-1.20.1-21.0.4.jar": "5d8cc8928ce480288d5b504663bb13104df56ac72ce5bf36f2743ec27c701112",
     "BambooEverything-forge-3.0.3+mc1.20.1.jar": "86dc6ebf0472bc7f8b269be16a562561b2f54a890f0b6911d175f6661cc1e14f",
@@ -351,7 +350,6 @@
     "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar": "e78686b92c3761ec26eb9d3c53efdd3d6ca77981cbd3723995e1163b7103ae0b",
     "kotlinforforge-4.11.0-all.jar": "ef988f86d170af499d147ea8a5c34c99dbd6d8f4a5ad236a4b43818dc4470a10",
     "kubejs-forge-2001.6.5-build.16.jar": "3de6b7267d3aab981848ed54d3afe7edf20532fa4060631fd6fffcd99ac5f3d5",
-    "kurolib-0.6-forge-1.20.1.jar": "812bc009a545b02b897362e354f53f7b1e62286550f3135ff3951a0b6eaa634a",
     "laserio-1.6.8.jar": "f07fc6cb7f2aa28197e87ffc3a35062390259ad803d8996b08b13473c0af6790",
     "ldlib-forge-1.20.1-1.0.45.jar": "b5b0c7db58a59ea14e687fe511885793b50d90da0c076ca9272eb98e050fd6fb",
     "liminality-1.0.4.jar": "81f861e3f837427880c37f6ef39b2be8f042f8087d2e48b996f319a10892e903",
@@ -439,7 +437,6 @@
     "resourcefulconfig-forge-1.20.1-2.1.3.jar": "c404b9e5cf8595427a72d4ca6ee5730289168762b463f169be3ae5dfe3727ded",
     "resourcefullib-forge-1.20.1-2.1.29.jar": "b13afb95231d88e1caea5a045967e0fc291b29020b0d26ad39e6f9e9a551fee8",
     "retail-1.0.6-forge-1.20.1.jar": "632e65ae6cea9ee8538798fe28335842a90592a2d03a24ff119102ce8eccf555",
-    "revervox_mod-1.20.1-2.1.jar": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
     "rftoolsbase-1.20-5.0.6.jar": "641bbcb2d8e1039496705da3ec7e7356e25270e81f7a1d1e79fbe437485c0a1a",
     "rftoolsbuilder-1.20-6.0.8.jar": "c306ec9ebab2c15f560f5dc05a454eb10f632d09eac69273b26e22e105c8010a",
     "rftoolscontrol-1.20-7.0.3.jar": "0d137ff88869c94fb4d66f29516800271bb91d01b6da4d962c85960c40b9b3d2",
@@ -453,7 +450,6 @@
     "rsrequestify-1.20.1-2.3.3.jar": "dbf2c11fa5ae9c274c114e14435f015584a8545b77f8d7af739164f66d3601ab",
     "sanitydim-mc1.20-1.1.0.jar": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a",
     "sao_mod-1.0.0-forge-1.20.1.jar": "c8c781f789c5ac032e160981eec7d30d5632123979ac30bbd6dde08682ddebdf",
-    "scpo-3.1.2-forge-1.20.1.jar": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
     "shetiphiancore-forge-1.20.1-1.5.jar": "1511c8c17975abbe9667eb548e41bf1e68f21f0ef065b54341e70002d2e60175",
     "silent-gear-1.20.1-3.6.7.jar": "0f438b1919544e6ba0b4e44ee4496d7dfab878f90c9ab02cca46507217e0dc5a",
     "silent-lib-1.20.1-8.0.0.jar": "9ca45fb6d723474d145227bed27dd1791cca30ac96fd8f05084417b0779e0e01",
@@ -485,7 +481,6 @@
     "the_after-0.1.2-forge-1.20.1.jar": "f43700d5c7e2e55c59f42954fa4e67be057b5de97369b36efee73bf253217d6e",
     "the_backwoods-1.6.0-forge-1.20.1.jar": "9f24cecad4e4467aca091a8b148e6fe47576e5ec812098b68b5d910ecdae97e6",
     "the_midnight_lurker_3.3.7.jar": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
-    "the_obsessed-1.5.2g-forge-1.20.1.jar": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
     "thefinalgoatman-4.3.0.jar": "62fa70d78a265d6d162062a746f3c0f0e3391cd6db194dcb19f784d1fa2ed748",
     "themimic_er-1.20.1-1.7.0.jar": "88516636609e3c84212c510a9e1d478e5f8affa2171d04165e34090c01843d7f",
     "theonlooker-forge-1.20.1-4.7.1-alpha.jar": "e037615bde9810e139bd3cf7e73070c1417d094f87074aff2e8373d0c22d72c0",
@@ -518,7 +513,6 @@
     "villagertools-1.20.1-1.0.3.jar": "df2b684697752619f43dc9dae1ff8c1e530e3c7af43152a78ace29781757390b",
     "villagertradingplus-forge-mc1.20.1-1.1.1.jar": "cc90af84a22be12814da2d090bf43ae28d11555e5687e9556bec4ad8fe53028c",
     "voicechat-forge-1.20.1-2.6.22.jar": "f171e99fa99f007ef013af5306f6c490fe79a11be7e1b18940147d75ced045b9",
-    "voicechatrecording-1.20.1-2.1.jar": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
     "voidtotem-forge-1.20-3.0.1.jar": "6578e2f4322c7bf0ede69f118d6f601481e1e319ef790b097be8e724b9391947",
     "walkers-5.8.13.jar": "032edf9ea5cddfe082e863362eb155c9e5f6b225712e1b4e8dba934c76ed633a",
     "waystones-forge-1.20.1-14.1.17.jar": "079aa58d6e95bee3caff622e10dcb6504efef43b803c7c21e2551201bd1ca78c",
@@ -1389,38 +1383,6 @@
       "defaultValue": "key.keyboard.c"
     },
     {
-      "id": "key.arphex.space_press",
-      "category": "key.categories.movement",
-      "mappingClass": "net.arphex.init.ArphexModKeyMappings$1",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "ArPhEx-5.0.2-forge-1.20.1.jar"
-      ],
-      "labels": {
-        "en_us": "SET TO SPACE BAR - ARPHEX"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.space",
-      "defaultValue": "key.keyboard.space"
-    },
-    {
-      "id": "key.arphex.power_bind",
-      "category": "key.categories.misc",
-      "mappingClass": "net.arphex.init.ArphexModKeyMappings$2",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "ArPhEx-5.0.2-forge-1.20.1.jar"
-      ],
-      "labels": {
-        "en_us": "ArPhEx Power Keybind"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.c",
-      "defaultValue": "key.keyboard.c"
-    },
-    {
       "id": "tombstone.message.knowledge_of_death",
       "category": "Corail Tombstone",
       "mappingClass": "net.minecraft.client.KeyMapping",
@@ -1707,38 +1669,6 @@
       "role": "unbound",
       "nativeValue": "key.keyboard.left.alt",
       "defaultValue": "key.keyboard.left.alt"
-    },
-    {
-      "id": "key.scpo.activate_anomaly",
-      "category": "key.categories.scpo",
-      "mappingClass": "net.scpo.init.ScpoModKeyMappings$1",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "scpo-3.1.2-forge-1.20.1.jar"
-      ],
-      "labels": {
-        "en_us": "Activate Anomaly"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.k",
-      "defaultValue": "key.keyboard.k"
-    },
-    {
-      "id": "key.scpo.furniture_action_key",
-      "category": "key.categories.gameplay",
-      "mappingClass": "net.scpo.init.ScpoModKeyMappings$2",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "scpo-3.1.2-forge-1.20.1.jar"
-      ],
-      "labels": {
-        "en_us": "Furniture Action Key"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.f",
-      "defaultValue": "key.keyboard.f"
     },
     {
       "id": "key.push_to_talk",
@@ -9997,7 +9927,13 @@
       "mods/mine-mine-no-mi-1.20.1-0.11.6.jar": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
       "mods/JujutsuCraft-ver51-forge-1.20.1.jar": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
       "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
-      "mods/playmate 1.1.2 1.20.1.jar": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04"
+      "mods/playmate 1.1.2 1.20.1.jar": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
+      "mods/ArPhEx-5.0.2-forge-1.20.1.jar": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
+      "mods/kurolib-0.6-forge-1.20.1.jar": "812bc009a545b02b897362e354f53f7b1e62286550f3135ff3951a0b6eaa634a",
+      "mods/revervox_mod-1.20.1-2.1.jar": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
+      "mods/scpo-3.1.2-forge-1.20.1.jar": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
+      "mods/the_obsessed-1.5.2g-forge-1.20.1.jar": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
+      "mods/voicechatrecording-1.20.1-2.1.jar": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1"
     },
     "removedKeyNames": [
       "key.fairy_mine.soltar_habilidade",
@@ -10071,7 +10007,11 @@
       "key.jujutsucraft.key_use_main_skill",
       "key.jujutsucraft.key_a",
       "key.jujutsucraft.key_d",
-      "key.anomaly_rephased.misc"
+      "key.anomaly_rephased.misc",
+      "key.arphex.space_press",
+      "key.arphex.power_bind",
+      "key.scpo.activate_anomaly",
+      "key.scpo.furniture_action_key"
     ],
     "currentNativeCaptureClaimed": false
   },
@@ -10156,5 +10096,128 @@
     "removedKeyNames": [],
     "retainedPresetValuesChanged": false,
     "currentNativeRecaptureVerified": false
+  },
+  "networkSendersRemovalProjection": {
+    "parentSourceRevision": "c5c205a30dd30e03139d17a721d380c4e5e1b2bc",
+    "removedSourceJars": [
+      {
+        "fileName": "ArPhEx-5.0.2-forge-1.20.1.jar",
+        "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
+        "sizeBytes": 13527755,
+        "sourceUrl": "https://edge.forgecdn.net/files/7466/434/ArPhEx-5.0.2-forge-1.20.1.jar",
+        "projectId": 967672,
+        "fileId": 7466434,
+        "path": "mods/ArPhEx-5.0.2-forge-1.20.1.jar",
+        "kind": "requested",
+        "version": "5.0.2",
+        "modIds": [
+          "arphex"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/arphex",
+        "name": "Arthropod Phobia Expansions"
+      },
+      {
+        "fileName": "kurolib-0.6-forge-1.20.1.jar",
+        "sha256": "812bc009a545b02b897362e354f53f7b1e62286550f3135ff3951a0b6eaa634a",
+        "sizeBytes": 2569967,
+        "path": "mods/kurolib-0.6-forge-1.20.1.jar",
+        "kind": "dependency",
+        "version": "0.6",
+        "modIds": [
+          "kurolib"
+        ],
+        "name": "KuroLib",
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/kurolib",
+        "sourceUrl": "https://edge.forgecdn.net/files/9358/029/kurolib-0.6-forge-1.20.1.jar",
+        "projectId": 1289564,
+        "fileId": 9358029,
+        "dependencyEvidence": {
+          "kind": "author-documented-feature-dependency",
+          "consumerModIds": [
+            "scpo"
+          ],
+          "consumerJar": {
+            "path": "mods/scpo-3.1.2-forge-1.20.1.jar",
+            "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752"
+          },
+          "officialProjectUrl": "https://www.curseforge.com/minecraft/mc-mods/kurolib",
+          "reason": "Same author documents SCPO feature requirement; current SCPO contains 33 native references to KuroLIB registry IDs including required kurolib:blood_block. TOML omits this dependency.",
+          "nativeRemovalCallbackAudit": "No removal override or MobEffectEvent reference found in 792 library classes; bounded static proof, not runtime/all-abilities PASS."
+        }
+      },
+      {
+        "fileName": "revervox_mod-1.20.1-2.1.jar",
+        "sha256": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
+        "sizeBytes": 1415249,
+        "sourceUrl": "https://edge.forgecdn.net/files/8553/927/revervox_mod-1.20.1-2.1.jar",
+        "projectId": 1327680,
+        "fileId": 8553927,
+        "path": "mods/revervox_mod-1.20.1-2.1.jar",
+        "kind": "requested",
+        "version": "2.1",
+        "modIds": [
+          "revervox_mod"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/revervox",
+        "name": "Revervox"
+      },
+      {
+        "fileName": "scpo-3.1.2-forge-1.20.1.jar",
+        "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
+        "sizeBytes": 49883761,
+        "sourceUrl": "https://edge.forgecdn.net/files/8692/976/scpo-3.1.2-forge-1.20.1.jar",
+        "projectId": 339045,
+        "fileId": 8692976,
+        "path": "mods/scpo-3.1.2-forge-1.20.1.jar",
+        "kind": "requested",
+        "version": "3.1.2",
+        "modIds": [
+          "scpo"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/scp-overtime",
+        "name": "SCP:Overtime"
+      },
+      {
+        "fileName": "the_obsessed-1.5.2g-forge-1.20.1.jar",
+        "sha256": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
+        "sizeBytes": 3529151,
+        "sourceUrl": "https://edge.forgecdn.net/files/8915/683/the_obsessed-1.5.2g-forge-1.20.1.jar",
+        "projectId": 1372373,
+        "fileId": 8915683,
+        "path": "mods/the_obsessed-1.5.2g-forge-1.20.1.jar",
+        "kind": "requested",
+        "version": "1.5.2",
+        "modIds": [
+          "the_obsessed"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/obsessed",
+        "name": "The Obsessed"
+      },
+      {
+        "fileName": "voicechatrecording-1.20.1-2.1.jar",
+        "sha256": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
+        "sizeBytes": 167824,
+        "sourceUrl": "https://edge.forgecdn.net/files/8553/934/voicechatrecording-1.20.1-2.1.jar",
+        "projectId": 1327668,
+        "fileId": 8553934,
+        "path": "mods/voicechatrecording-1.20.1-2.1.jar",
+        "kind": "dependency",
+        "version": "2.1",
+        "modIds": [
+          "voicechatrecording"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/voice-chat-recording",
+        "name": "voice-chat-recording"
+      }
+    ],
+    "removedKeyNames": [
+      "key.arphex.space_press",
+      "key.arphex.power_bind",
+      "key.scpo.activate_anomaly",
+      "key.scpo.furniture_action_key"
+    ],
+    "retainedPresetValuesChanged": false,
+    "currentNativeRecaptureVerified": false,
+    "standaloneVoiceChatRetained": true
   }
 }

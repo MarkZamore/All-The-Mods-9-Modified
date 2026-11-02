@@ -1068,12 +1068,13 @@
     {
       "name": "Arthropod Phobia Expansions",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/arphex",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "arphex"
       ],
       "version": "5.0.2",
-      "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc"
+      "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
+      "reason": "User explicitly requested complete removal on 2026-11-03 while investigation of the Steam outgoing backlog continues. A sole-cause or completed network-fix claim is not made."
     },
     {
       "name": "Attack On Block: Season Two",
@@ -1568,12 +1569,13 @@
     {
       "name": "Revervox",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/revervox",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "revervox_mod"
       ],
       "version": "2.1",
-      "sha256": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6"
+      "sha256": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
+      "reason": "User explicitly requested complete removal on 2026-11-03 while investigation of the Steam outgoing backlog continues. A sole-cause or completed network-fix claim is not made."
     },
     {
       "name": "Rolling Giant: Oldest View",
@@ -1629,12 +1631,13 @@
     {
       "name": "SCP:Overtime",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/scp-overtime",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "scpo"
       ],
       "version": "3.1.2",
-      "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752"
+      "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
+      "reason": "User explicitly requested complete removal on 2026-11-03 while investigation of the Steam outgoing backlog continues. A sole-cause or completed network-fix claim is not made."
     },
     {
       "name": "Siren Head",
@@ -1818,12 +1821,13 @@
     {
       "name": "The Obsessed",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/obsessed",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "the_obsessed"
       ],
       "version": "1.5.2",
-      "sha256": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb"
+      "sha256": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
+      "reason": "User explicitly requested complete removal on 2026-11-03 while investigation of the Steam outgoing backlog continues. A sole-cause or completed network-fix claim is not made."
     },
     {
       "name": "The One Who Watches",
@@ -2001,8 +2005,8 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 76,
-  "dependencyJars": 19,
+  "selectedRequestedProjects": 72,
+  "dependencyJars": 17,
   "authorCompatibilitySelections": [
     {
       "project": "AzureLib",
@@ -2245,8 +2249,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_PLAYMATE_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "4e8c0b123e4c1bb1d1504daf5d99fc1c5bb3755d05e68360e23d24927970838f",
+    "status": "SOURCE_USER_REMOVALS_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "6ba9919c4db87c5c46b06c746fddee2d2fb5fa117aac98d128ee3a0f39d680c8",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -2789,5 +2793,150 @@
     "audioFixShipped": false,
     "newRuntimeAcceptanceClaimed": false,
     "safetyReason": "Removing this NEW content JAR adds no mutation path. No Safety/framework exists. Retained author JARs/native permission gates unchanged; no lossless migration of Playmate registry content claimed."
+  },
+  "previousSingleplayerContentAcceptanceBeforeNetworkSendersRemoval": {
+    "status": "SOURCE_PLAYMATE_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "4e8c0b123e4c1bb1d1504daf5d99fc1c5bb3755d05e68360e23d24927970838f",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "networkSendersRemoval": {
+    "userAuthorizedIds": [
+      "arphex",
+      "revervox_mod",
+      "scpo",
+      "the_obsessed"
+    ],
+    "orphanRemovedIds": [
+      "kurolib",
+      "voicechatrecording"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "ArPhEx-5.0.2-forge-1.20.1.jar",
+        "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
+        "sizeBytes": 13527755,
+        "sourceUrl": "https://edge.forgecdn.net/files/7466/434/ArPhEx-5.0.2-forge-1.20.1.jar",
+        "projectId": 967672,
+        "fileId": 7466434,
+        "path": "mods/ArPhEx-5.0.2-forge-1.20.1.jar",
+        "kind": "requested",
+        "version": "5.0.2",
+        "modIds": [
+          "arphex"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/arphex",
+        "name": "Arthropod Phobia Expansions"
+      },
+      {
+        "fileName": "kurolib-0.6-forge-1.20.1.jar",
+        "sha256": "812bc009a545b02b897362e354f53f7b1e62286550f3135ff3951a0b6eaa634a",
+        "sizeBytes": 2569967,
+        "path": "mods/kurolib-0.6-forge-1.20.1.jar",
+        "kind": "dependency",
+        "version": "0.6",
+        "modIds": [
+          "kurolib"
+        ],
+        "name": "KuroLib",
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/kurolib",
+        "sourceUrl": "https://edge.forgecdn.net/files/9358/029/kurolib-0.6-forge-1.20.1.jar",
+        "projectId": 1289564,
+        "fileId": 9358029,
+        "dependencyEvidence": {
+          "kind": "author-documented-feature-dependency",
+          "consumerModIds": [
+            "scpo"
+          ],
+          "consumerJar": {
+            "path": "mods/scpo-3.1.2-forge-1.20.1.jar",
+            "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752"
+          },
+          "officialProjectUrl": "https://www.curseforge.com/minecraft/mc-mods/kurolib",
+          "reason": "Same author documents SCPO feature requirement; current SCPO contains 33 native references to KuroLIB registry IDs including required kurolib:blood_block. TOML omits this dependency.",
+          "nativeRemovalCallbackAudit": "No removal override or MobEffectEvent reference found in 792 library classes; bounded static proof, not runtime/all-abilities PASS."
+        }
+      },
+      {
+        "fileName": "revervox_mod-1.20.1-2.1.jar",
+        "sha256": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
+        "sizeBytes": 1415249,
+        "sourceUrl": "https://edge.forgecdn.net/files/8553/927/revervox_mod-1.20.1-2.1.jar",
+        "projectId": 1327680,
+        "fileId": 8553927,
+        "path": "mods/revervox_mod-1.20.1-2.1.jar",
+        "kind": "requested",
+        "version": "2.1",
+        "modIds": [
+          "revervox_mod"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/revervox",
+        "name": "Revervox"
+      },
+      {
+        "fileName": "scpo-3.1.2-forge-1.20.1.jar",
+        "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
+        "sizeBytes": 49883761,
+        "sourceUrl": "https://edge.forgecdn.net/files/8692/976/scpo-3.1.2-forge-1.20.1.jar",
+        "projectId": 339045,
+        "fileId": 8692976,
+        "path": "mods/scpo-3.1.2-forge-1.20.1.jar",
+        "kind": "requested",
+        "version": "3.1.2",
+        "modIds": [
+          "scpo"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/scp-overtime",
+        "name": "SCP:Overtime"
+      },
+      {
+        "fileName": "the_obsessed-1.5.2g-forge-1.20.1.jar",
+        "sha256": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
+        "sizeBytes": 3529151,
+        "sourceUrl": "https://edge.forgecdn.net/files/8915/683/the_obsessed-1.5.2g-forge-1.20.1.jar",
+        "projectId": 1372373,
+        "fileId": 8915683,
+        "path": "mods/the_obsessed-1.5.2g-forge-1.20.1.jar",
+        "kind": "requested",
+        "version": "1.5.2",
+        "modIds": [
+          "the_obsessed"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/obsessed",
+        "name": "The Obsessed"
+      },
+      {
+        "fileName": "voicechatrecording-1.20.1-2.1.jar",
+        "sha256": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
+        "sizeBytes": 167824,
+        "sourceUrl": "https://edge.forgecdn.net/files/8553/934/voicechatrecording-1.20.1-2.1.jar",
+        "projectId": 1327668,
+        "fileId": 8553934,
+        "path": "mods/voicechatrecording-1.20.1-2.1.jar",
+        "kind": "dependency",
+        "version": "2.1",
+        "modIds": [
+          "voicechatrecording"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/voice-chat-recording",
+        "name": "voice-chat-recording"
+      }
+    ],
+    "removedKeyNames": [
+      "key.arphex.space_press",
+      "key.arphex.power_bind",
+      "key.scpo.activate_anomaly",
+      "key.scpo.furniture_action_key"
+    ],
+    "retainedSourceJars": 520,
+    "retainedProjectedPackModIds": 545,
+    "retainedPresetNames": 560,
+    "retainedRequestedJars": 72,
+    "retainedDependencyJars": 17,
+    "standaloneVoiceChatRetained": true,
+    "safetyReason": "Removal introduces no new world-mutation path; no custom Safety framework/profile exists. Remaining author JARs/native permissions unchanged. Removed registry content may be lost in old worlds; no lossless migration claimed.",
+    "newRuntimeOrSteamFixClaimed": false
   }
 }

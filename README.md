@@ -2,7 +2,7 @@
 
 Отдельная чистая производная от оригинальной **ATM9 1.1.1**, **Minecraft 1.20.1**, **Forge 47.4.0**. ID: `all-the-mods-9-modified`; папка установки: `All the Mods 9 Modified`. Оригинальная ATM9 остаётся самостоятельным профилем. Для Modified подготовлены [собственный источник](https://github.com/MarkZamore/All-The-Mods-9-Modified) и профиль поставки `pack-latest`; прежние наработки Modified не служат входом для этой сборки.
 
-**Текущий состав526:** по явному решению пользователя полностью исключён Playmate (`knock_knock`) вместо дальнейшего исправления начальной реплики. Anomaly Rephased и JujutsuCraft также остаются исключёнными. Остальные526 JAR не менялись. У Playmate нет клавиш; все564 назначения сохранены. Карточка551mod ID является прямой source-проекцией исторического557 снимка после шести удалений, а не новым runtime-наблюдением. Исправление Steam-разрыва этим удалением не заявляется.
+**Текущий состав520:** по явному решению пользователя исключены The Obsessed, ArPhEx, SCP:Overtime / SCP:Obscurity и Revervox. Удалены также две больше не используемые NEW-зависимости KuroLib и Voice Chat Recording; самостоятельный Simple Voice Chat и его интеграции сохранены. Остальные520 JAR не изменены. Пресет содержит560 имён после удаления четырёх собственных назначений ArPhEx/SCP. Карточка545mod ID является source-проекцией исторического557 снимка, а не новым native-наблюдением. Исправление Steam-разрыва проверяется отдельно.
 
 Временный standalone V10-инструмент получил только exact-guard для опубликованного Forge e4steam V2, необходимый после обновления лаунчера431. Все167 наблюдаемых Steam-классов V1/V2 совпадают; точки/поля/лимиты диагностики прежние. Синтетический selftest и сохранность отчёта проверены, новый игровой/сетевой PASS не заявляется.
 
@@ -26,11 +26,11 @@
 
 Эту ревизию нельзя описывать как «только добавленные моды» или обещать побайтную неизменность всех 1 794 файлов. По отдельному запросу локализованы 107 BASE-текстовых ресурсов квестов: их SHA/размеры закреплены в quest `baseReplacements`. Отдельный `baseJarOverrides` разрешает только точные официальные AllTheLeaks1.1.4 и ModernFix5.25.0 и не расширяет locale-guard на JAR. ID, задачи, награды и зависимости квестов не заменяются этим переводом.
 
-Из526 JAR **524 файлов совпадают с соответствующими авторскими файлами**, включая новый официальный AllTheLeaks. Два NEW JAR — явно разрешённые производные: замороженный русский Verity6.0.0-ru.1 и Grotesque Steve1.4.2-quiet.1. Последний меняет только два login callbacks и синтаксис одной функции, как раскрыто ниже. Отдельно описан общий производный e4steam лаунчера. Собственные Forge-моды, Safety-framework и прежние helper JAR не добавляются; runtime LAN/UUID/skin-адаптация раскрыта отдельно.
+Из520 JAR **518 файлов совпадают с соответствующими авторскими файлами**, включая новый официальный AllTheLeaks. Два NEW JAR — явно разрешённые производные: замороженный русский Verity6.0.0-ru.1 и Grotesque Steve1.4.2-quiet.1. Последний меняет только два login callbacks и синтаксис одной функции, как раскрыто ниже. Отдельно описан общий производный e4steam лаунчера. Собственные Forge-моды, Safety-framework и прежние helper JAR не добавляются; runtime LAN/UUID/skin-адаптация раскрыта отдельно.
 
-Карточка сохраняет исходные краткое описание, описание и обложку ATM9. Раздел **«Дополнительные моды»** показывает только76 выбранных ручных дополнений; BASE, автоматические зависимости и встроенные библиотеки не выдаются за ручные добавления. Исторические ModList531/533 архивированы; текущий `library/loaded-mods.json` явно проецирует551pack ID из526sourceJAR напрямую из последнего реального557 native capture, исключая Dandadan, Fairy Mine, Mine Mine no Mi, JujutsuCraft, Anomaly Rephased и Playmate. Общий E4 не включается в эти source JAR.
+Карточка сохраняет исходные краткое описание, описание и обложку ATM9. Раздел **«Дополнительные моды»** показывает только72 выбранных ручных дополнений; BASE, автоматические зависимости и встроенные библиотеки не выдаются за ручные добавления. Исторические ModList531/533 архивированы; текущий `library/loaded-mods.json` явно проецирует545pack ID из520sourceJAR напрямую из последнего реального557 native capture, после точных исключений, перечисленных в derivation этого файла. Общий E4 не включается в эти source JAR.
 
-### Ручные дополнения (76)
+### Ручные дополнения (72)
 
 Ниже данные текущего active lock: официальная страница, версия из метаданных JAR и объявленные mod ID. Версия внутри JAR может отличаться от имени файла или заголовка релиза. Точные имена, file ID, размеры и SHA256 остаются в lock.
 
@@ -43,7 +43,6 @@
 | [Antlers](https://www.curseforge.com/minecraft/mc-mods/antlers-the-wendigo) | `1.0.0` | `antlers` |
 | [Apex Arcana](https://www.curseforge.com/minecraft/mc-mods/apex-arcana-irons-spells-n-spellbooks-addon) | `1.4.0` | `grandsigil` |
 | [Apollyon](https://www.curseforge.com/minecraft/mc-mods/apollyon) | `1.1.1` | `apollyon` |
-| [Arthropod Phobia Expansions](https://www.curseforge.com/minecraft/mc-mods/arphex) | `5.0.2` | `arphex` |
 | [Biomancy 2](https://www.curseforge.com/minecraft/mc-mods/biomancy) | `2.8.19.0` | `biomancy` |
 | [Black Sun](https://www.curseforge.com/minecraft/mc-mods/black-sun) | `1.1.0` | `blacksun` |
 | [Boiled One Reimagined](https://www.curseforge.com/minecraft/mc-mods/the-boiled-one-reimagined) | `1.0.12` | `boiled_reimagined` |
@@ -78,12 +77,10 @@
 | [Rats](https://www.curseforge.com/minecraft/mc-mods/rats) | `1.20.1-8.1.3` | `rats` |
 | [ReMorphed](https://www.curseforge.com/minecraft/mc-mods/remorphed) | `4.2` | `remorphed` |
 | [Retail 3008](https://www.curseforge.com/minecraft/mc-mods/retail-3008) | `1.0.6` | `retail` |
-| [Revervox](https://www.curseforge.com/minecraft/mc-mods/revervox) | `2.1` | `revervox_mod` |
 | [Rolling Giant: Oldest View](https://www.curseforge.com/minecraft/mc-mods/rolling-giant-oldest-view) | `1.0.0` | `rolling_giant_oldest_view` |
 | [Rotten Creatures](https://www.curseforge.com/minecraft/mc-mods/rotten-creatures) | `1.1.0` | `rottencreatures` |
 | [Sanity: Descent Into Madness](https://www.curseforge.com/minecraft/mc-mods/sanity-descent-into-madness) | `1.1.0` | `sanitydim` |
 | [SAO MOD](https://www.curseforge.com/minecraft/mc-mods/sword-art-online-expansion) | `1.0.0` | `sao_mod` |
-| [SCP:Overtime](https://www.curseforge.com/minecraft/mc-mods/scp-overtime) | `3.1.2` | `scpo` |
 | [Siren Head](https://www.curseforge.com/minecraft/mc-mods/siren-head-the-arrival) | `1.1.4` | `siren_head` |
 | [Sons of Sins](https://www.curseforge.com/minecraft/mc-mods/sons-of-sins) | `2.2.1` | `sons_of_sins` |
 | [Sound of Fear](https://www.curseforge.com/minecraft/mc-mods/sound-of-fear-horror-sounds) | `1.0.0` | `sound_of_fear` |
@@ -98,7 +95,6 @@
 | [The Midnight](https://www.curseforge.com/minecraft/mc-mods/the-midnight) | `0.6.7` | `midnight` |
 | [The Midnight Lurker](https://www.curseforge.com/minecraft/mc-mods/the-midnight-lurker) | `3.3.7` | `midnightlurker` |
 | [The Mimicer](https://www.curseforge.com/minecraft/mc-mods/the-mimicer) | `1.7.0` | `themimic_er` |
-| [The Obsessed](https://www.curseforge.com/minecraft/mc-mods/obsessed) | `1.5.2` | `the_obsessed` |
 | [The One Who Watches](https://www.curseforge.com/minecraft/mc-mods/the-one-who-watches) | `1.4.4` | `the_one_who_watches` |
 | [The Onlooker](https://www.curseforge.com/minecraft/mc-mods/the-onlooker) | `4.7.1-alpha` | `anta` |
 | [The Shooting Star (Demo)](https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-demo) | `1.5.1-demo` | `shooting_star_demo` |
@@ -113,7 +109,7 @@
 | [Zombie Awareness](https://www.curseforge.com/minecraft/mc-mods/zombie-awareness) | `1.20.1-1.13.1` | `zombieawareness` |
 | [Zombie Nightmare Expansions](https://www.curseforge.com/minecraft/mc-mods/zoniex) | `1.2.1` | `zoniex` |
 
-### Добавленные зависимости (19)
+### Добавленные зависимости (17)
 
 Эти библиотеки не показаны в карточке как ручные дополнения. Уже имеющиеся зависимости ATM9 используются без второй копии. Новая зависимость остаётся NEW и после последующего обновления своего JAR.
 
@@ -128,7 +124,6 @@
 | [CreativeCore](https://www.curseforge.com/minecraft/mc-mods/creativecore) | `2.12.40` | `creativecore` |
 | [FromAnotherLibrary](https://www.curseforge.com/minecraft/mc-mods/fromanotherlibrary) | `1.0.2` | `fromanotherlibrary` |
 | [Kleiders Custom Renderer API](https://www.curseforge.com/minecraft/mc-mods/kleiders-custom-renderer-api) | `7.4.0` | `kleiders_custom_renderer` |
-| [KuroLib](https://www.curseforge.com/minecraft/mc-mods/kurolib) | `0.6` | `kurolib` |
 | [lucent](https://www.curseforge.com/minecraft/mc-mods/lucent) | `1.5.5` | `lucent` |
 | [Pehkui](https://www.curseforge.com/minecraft/mc-mods/pehkui) | `3.8.2+1.20.1-forge` | `pehkui` |
 | [Photon](https://www.curseforge.com/minecraft/mc-mods/photon) | `1.1.17` | `photon` |
@@ -136,10 +131,9 @@
 | [rimulib](https://www.curseforge.com/minecraft/mc-mods/rimulib) | `1.2.1` | `rimulib` |
 | [simple-voice-chat](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) | `1.20.1-2.6.22` | `voicechat`, `voicechat_api` |
 | [VillagersTradingPlus](https://www.curseforge.com/minecraft/mc-mods/villagerstradingplus) | `1.1.1+mc1.20.1` | `villagertradingplus` |
-| [voice-chat-recording](https://www.curseforge.com/minecraft/mc-mods/voice-chat-recording) | `2.1` | `voicechatrecording` |
 | [YetAnotherConfigLib](https://www.curseforge.com/minecraft/mc-mods/yacl) | `3.6.6+1.20.1-forge` | `yet_another_config_lib_v3` |
 
-KuroLib0.6 сохранён для авторских обращений SCP:Overtime. TravelOptics исключён вместе с обязательным аддоном Apex Tides по решению пользователя; базовый Iron’s Spells 3.4.0.11 не менялся.
+KuroLib0.6 и Voice Chat Recording2.1 удалены после исключения их единственных потребителей; самостоятельный Simple Voice Chat сохранён. TravelOptics исключён вместе с обязательным аддоном Apex Tides по решению пользователя; базовый Iron’s Spells 3.4.0.11 не менялся.
 
 AzureLib обновлён адресно как **NEW-зависимость**, а не базовая библиотека:
 
@@ -225,9 +219,9 @@ Grotesque Steve сохранён как **1.4.2-quiet.1** по отдельно�
 
 Общая раскладка применяется отдельной кнопкой лаунчера и меняет только клавиши. P нужно удерживать для разговора с Verity. Карта M, рюкзак B, квесты на Ё/grave accent, Curios G и обычные WASD сохранены. Настроены основные меню/колёса/циклы/превращения. Назначения исключённых модов убраны. Полная таблица — [руководство по управлению](launcher/controls-guide.md).
 
-Для некоторых боевых веток нужны собственные назначения в меню Minecraft: классические способности Cursed Fate 1–7, все пять действий HSR Phainon, четыре Stellar Remote из Shooting Star, а также Dash Fairy Mine и Laser Mask. Действие мебели SCP Overtime и четыре свойства палочки Crystalix также оставлены для выбора кнопок игроком. Это прямые действия без настроенной здесь замены; они не выдаются за полностью управляемые через другое меню. Родные кнопки и остальные неназначенные группы перечислены в руководстве и `tools/keybinds/stock.json`.
+Для некоторых боевых веток нужны собственные назначения в меню Minecraft: классические способности Cursed Fate 1–7, все пять действий HSR Phainon, четыре Stellar Remote из Shooting Star, а также Laser Mask. Четыре свойства палочки Crystalix также оставлены для выбора кнопок игроком. Это прямые действия без настроенной здесь замены; они не выдаются за полностью управляемые через другое меню. Родные кнопки и остальные неназначенные группы перечислены в руководстве и `tools/keybinds/stock.json`.
 
-Текущий source-пресет содержит564 имени:149 назначены,415 свободны;62 независимых действия мира. Последнее удаление Anomaly убрало только его строку ESC; остальные назначения сохранены. Текущие551mod ID и namespace пресета выведены из исторического native-снимка; нового применения/перезапуска или физического ввода этим обновлением не проверено. Пресет остаётся необязательным и не меняет язык, графику, дальности, голос или микрофон.
+Текущий source-пресет содержит560 имён:146 назначены,414 свободны;60 независимых действий мира. Удалены только четыре собственных назначения ArPhEx/SCP, прочие сохранены. Текущие545mod ID и namespace пресета выведены из исторического native-снимка; нового применения/перезапуска или физического ввода этим обновлением не проверено. Пресет остаётся необязательным и не меняет язык, графику, дальности, голос или микрофон.
 
 **Сначала запустите новую установку до главного меню и штатно закройте игру, затем применяйте пресет.** Авторский DefaultSettings при первой инициализации копирует свой профиль поверх `options.txt`, поэтому пресет, применённый раньше, может быть заменён. Пресет остаётся необязательным действием игрока; авторские DefaultSettings и его профиль не изменялись.
 

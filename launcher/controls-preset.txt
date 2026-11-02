@@ -36,7 +36,6 @@ key_key.togglePerspective:key.keyboard.f5
 key_key.use:key.mouse.right
 
 # world-primary
-key_key.arphex.power_bind:key.keyboard.keypad.5
 key_key.ars_nouveau.open_book:key.keyboard.c
 key_key.azurelib.reload:key.keyboard.keypad.decimal
 key_key.azurelib.scope:key.keyboard.keypad.enter
@@ -60,7 +59,6 @@ key_key.journeymap.map_toggle_alt:key.keyboard.m
 key_key.push_to_talk:key.keyboard.caps.lock
 key_key.remorphed_menu:key.keyboard.home
 key_key.rimulib.skill_menu:key.keyboard.f8
-key_key.scpo.activate_anomaly:key.keyboard.f10
 key_key.special_ability:key.keyboard.keypad.6
 key_key.verity.push_to_talk:key.keyboard.p
 key_key.voice_chat:key.keyboard.o
@@ -72,7 +70,6 @@ key_keybind.sophisticatedbackpacks.open_backpack:key.keyboard.b
 
 # native-companion
 key_key.aether.gravitite_jump_ability.desc:key.keyboard.space
-key_key.arphex.space_press:key.keyboard.space
 key_key.deep_dark_regrowth.konami_code_1:key.keyboard.up
 key_key.deep_dark_regrowth.konami_code_2:key.keyboard.down
 key_key.deep_dark_regrowth.konami_code_3:key.keyboard.left
@@ -416,7 +413,6 @@ key_key.refinedstorage.openWirelessGrid:key.keyboard.unknown
 key_key.refinedstorageaddons.openWirelessCraftingGrid:key.keyboard.unknown
 key_key.rimulib.cutscenes:key.keyboard.unknown
 key_key.saveToolbarActivator:key.keyboard.unknown
-key_key.scpo.furniture_action_key:key.keyboard.unknown
 key_key.securitycraft.cameraActivateNightVision:key.keyboard.unknown
 key_key.securitycraft.cameraEmitRedstone:key.keyboard.unknown
 key_key.securitycraft.cameraZoomIn:key.keyboard.unknown

@@ -1081,22 +1081,6 @@
       "name": "Apollyon"
     },
     {
-      "fileName": "ArPhEx-5.0.2-forge-1.20.1.jar",
-      "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
-      "sizeBytes": 13527755,
-      "sourceUrl": "https://edge.forgecdn.net/files/7466/434/ArPhEx-5.0.2-forge-1.20.1.jar",
-      "projectId": 967672,
-      "fileId": 7466434,
-      "path": "mods/ArPhEx-5.0.2-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "5.0.2",
-      "modIds": [
-        "arphex"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/arphex",
-      "name": "Arthropod Phobia Expansions"
-    },
-    {
       "fileName": "Atlas Lib-1.20.1-1.1.12.jar",
       "sha256": "8cc9b5b46e65affed0c38aa54da6870ec4e820364c654c4dd2bb70a94ba39c50",
       "sizeBytes": 124436,
@@ -1670,35 +1654,6 @@
       "name": "Kleiders Custom Renderer API"
     },
     {
-      "fileName": "kurolib-0.6-forge-1.20.1.jar",
-      "sha256": "812bc009a545b02b897362e354f53f7b1e62286550f3135ff3951a0b6eaa634a",
-      "sizeBytes": 2569967,
-      "path": "mods/kurolib-0.6-forge-1.20.1.jar",
-      "kind": "dependency",
-      "version": "0.6",
-      "modIds": [
-        "kurolib"
-      ],
-      "name": "KuroLib",
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/kurolib",
-      "sourceUrl": "https://edge.forgecdn.net/files/9358/029/kurolib-0.6-forge-1.20.1.jar",
-      "projectId": 1289564,
-      "fileId": 9358029,
-      "dependencyEvidence": {
-        "kind": "author-documented-feature-dependency",
-        "consumerModIds": [
-          "scpo"
-        ],
-        "consumerJar": {
-          "path": "mods/scpo-3.1.2-forge-1.20.1.jar",
-          "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752"
-        },
-        "officialProjectUrl": "https://www.curseforge.com/minecraft/mc-mods/kurolib",
-        "reason": "Same author documents SCPO feature requirement; current SCPO contains 33 native references to KuroLIB registry IDs including required kurolib:blood_block. TOML omits this dependency.",
-        "nativeRemovalCallbackAudit": "No removal override or MobEffectEvent reference found in 792 library classes; bounded static proof, not runtime/all-abilities PASS."
-      }
-    },
-    {
       "fileName": "liminality-1.0.4.jar",
       "sha256": "81f861e3f837427880c37f6ef39b2be8f042f8087d2e48b996f319a10892e903",
       "sizeBytes": 32865413,
@@ -1939,22 +1894,6 @@
       "name": "Retail 3008"
     },
     {
-      "fileName": "revervox_mod-1.20.1-2.1.jar",
-      "sha256": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
-      "sizeBytes": 1415249,
-      "sourceUrl": "https://edge.forgecdn.net/files/8553/927/revervox_mod-1.20.1-2.1.jar",
-      "projectId": 1327680,
-      "fileId": 8553927,
-      "path": "mods/revervox_mod-1.20.1-2.1.jar",
-      "kind": "requested",
-      "version": "2.1",
-      "modIds": [
-        "revervox_mod"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/revervox",
-      "name": "Revervox"
-    },
-    {
       "fileName": "rimulib-1.2.1-forge.jar",
       "sha256": "906cbd286f6c491898620eed26aea1337e21bb68b6345c211ba083e9c646c5e6",
       "sizeBytes": 1256374,
@@ -2033,22 +1972,6 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sword-art-online-expansion",
       "name": "SAO MOD"
-    },
-    {
-      "fileName": "scpo-3.1.2-forge-1.20.1.jar",
-      "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
-      "sizeBytes": 49883761,
-      "sourceUrl": "https://edge.forgecdn.net/files/8692/976/scpo-3.1.2-forge-1.20.1.jar",
-      "projectId": 339045,
-      "fileId": 8692976,
-      "path": "mods/scpo-3.1.2-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "3.1.2",
-      "modIds": [
-        "scpo"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/scp-overtime",
-      "name": "SCP:Overtime"
     },
     {
       "fileName": "singing_villagers-3.5.0-forge-1.20.1.jar",
@@ -2227,22 +2150,6 @@
       "name": "The Midnight Lurker"
     },
     {
-      "fileName": "the_obsessed-1.5.2g-forge-1.20.1.jar",
-      "sha256": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
-      "sizeBytes": 3529151,
-      "sourceUrl": "https://edge.forgecdn.net/files/8915/683/the_obsessed-1.5.2g-forge-1.20.1.jar",
-      "projectId": 1372373,
-      "fileId": 8915683,
-      "path": "mods/the_obsessed-1.5.2g-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "1.5.2",
-      "modIds": [
-        "the_obsessed"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/obsessed",
-      "name": "The Obsessed"
-    },
-    {
       "fileName": "thefinalgoatman-4.3.0.jar",
       "sha256": "62fa70d78a265d6d162062a746f3c0f0e3391cd6db194dcb19f784d1fa2ed748",
       "sizeBytes": 3055634,
@@ -2394,22 +2301,6 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat",
       "name": "simple-voice-chat"
-    },
-    {
-      "fileName": "voicechatrecording-1.20.1-2.1.jar",
-      "sha256": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
-      "sizeBytes": 167824,
-      "sourceUrl": "https://edge.forgecdn.net/files/8553/934/voicechatrecording-1.20.1-2.1.jar",
-      "projectId": 1327668,
-      "fileId": 8553934,
-      "path": "mods/voicechatrecording-1.20.1-2.1.jar",
-      "kind": "dependency",
-      "version": "2.1",
-      "modIds": [
-        "voicechatrecording"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/voice-chat-recording",
-      "name": "voice-chat-recording"
     },
     {
       "fileName": "walkers-5.8.13.jar",
@@ -2597,17 +2488,17 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "71bf9610b50fae5b519fc1001627675119c46525d1a02d9fb784569c29f6fdda",
-      "sizeBytes": 11921,
+      "sha256": "999f84bdff620e69b8c11de2b6345ec231f44feb1c66b95cc157a11e92871feb",
+      "sizeBytes": 11649,
       "kind": "resource",
-      "reason": "Optional key-only preset564 retained names: remove72 mappings owned by5 explicitly excluded NEWmods from historical native636 namespace. Remaining values unchanged; no fresh native/application claim."
+      "reason": "Optional key-only preset560 retained names: remove four own mappings of explicitly excluded ArPhEx/SCP; all remaining controls unchanged, including standalone VoiceChat. No fresh native/application claim."
     },
     {
       "path": "launcher/controls-preset.txt",
-      "sha256": "d3430d45fb425aba069d2af92764609b1dcc1259f2375940ddd3773f73ff44f1",
-      "sizeBytes": 31188,
+      "sha256": "eff64ec7c0375ce99a3688390a7ac46f929568b36cfb845eddc82762e2126860",
+      "sizeBytes": 30992,
       "kind": "configuration",
-      "reason": "Optional key-only preset564 retained names: remove72 mappings owned by5 explicitly excluded NEWmods from historical native636 namespace. Remaining values unchanged; no fresh native/application claim."
+      "reason": "Optional key-only preset560 retained names: remove four own mappings of explicitly excluded ArPhEx/SCP; all remaining controls unchanged, including standalone VoiceChat. No fresh native/application claim."
     },
     {
       "path": "launcher/jvm-args.txt",

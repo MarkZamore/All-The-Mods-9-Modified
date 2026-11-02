@@ -4971,6 +4971,11 @@
   },
   {
     "path": "launcher/controls-guide.md",
+    "sizeBytes": 11921,
+    "sha256": "71bf9610b50fae5b519fc1001627675119c46525d1a02d9fb784569c29f6fdda"
+  },
+  {
+    "path": "launcher/controls-guide.md",
     "sizeBytes": 12998,
     "sha256": "97bb6694d53a23d677eda0c2419a69578b751a1bfe965a9e0ebfc19626154d13"
   },
@@ -5003,6 +5008,11 @@
     "path": "launcher/controls-preset.txt",
     "sizeBytes": 35027,
     "sha256": "8d1e1c08bb19fc6a78ac24dfc83149dcd63dfe5a23c2333370204898db032701"
+  },
+  {
+    "path": "launcher/controls-preset.txt",
+    "sizeBytes": 31188,
+    "sha256": "d3430d45fb425aba069d2af92764609b1dcc1259f2375940ddd3773f73ff44f1"
   },
   {
     "path": "launcher/controls-preset.txt",
@@ -5103,6 +5113,11 @@
     "path": "mods/Aquaculture-1.20.1-2.5.5.jar",
     "sizeBytes": 601173,
     "sha256": "8189d09adde558cd2ef97627e9480e4b620c3fa1de7ed064d1c20346288841e5"
+  },
+  {
+    "path": "mods/ArPhEx-5.0.2-forge-1.20.1.jar",
+    "sha256": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
+    "sizeBytes": 13527755
   },
   {
     "path": "mods/Atlas Lib-1.20.1-1.1.12.jar",
@@ -7005,6 +7020,11 @@
     "sha256": "3de6b7267d3aab981848ed54d3afe7edf20532fa4060631fd6fffcd99ac5f3d5"
   },
   {
+    "path": "mods/kurolib-0.6-forge-1.20.1.jar",
+    "sha256": "812bc009a545b02b897362e354f53f7b1e62286550f3135ff3951a0b6eaa634a",
+    "sizeBytes": 2569967
+  },
+  {
     "path": "mods/lanmc-steam-flow-1.20.1-0.1.0.jar",
     "sizeBytes": 20021,
     "sha256": "afe331147061d83ed4f42f3176b4d542f13810e2dbf512ad8b47be523ac3de0b"
@@ -7465,6 +7485,11 @@
     "sha256": "632e65ae6cea9ee8538798fe28335842a90592a2d03a24ff119102ce8eccf555"
   },
   {
+    "path": "mods/revervox_mod-1.20.1-2.1.jar",
+    "sha256": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
+    "sizeBytes": 1415249
+  },
+  {
     "path": "mods/rftoolsbase-1.20-5.0.6.jar",
     "sizeBytes": 419413,
     "sha256": "641bbcb2d8e1039496705da3ec7e7356e25270e81f7a1d1e79fbe437485c0a1a"
@@ -7528,6 +7553,11 @@
     "path": "mods/sao_mod-1.0.0-forge-1.20.1.jar",
     "sizeBytes": 416680,
     "sha256": "c8c781f789c5ac032e160981eec7d30d5632123979ac30bbd6dde08682ddebdf"
+  },
+  {
+    "path": "mods/scpo-3.1.2-forge-1.20.1.jar",
+    "sha256": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
+    "sizeBytes": 49883761
   },
   {
     "path": "mods/shetiphiancore-forge-1.20.1-1.5.jar",
@@ -7843,6 +7873,11 @@
     "path": "mods/villagertools-1.20.1-1.0.3.jar",
     "sizeBytes": 56156,
     "sha256": "df2b684697752619f43dc9dae1ff8c1e530e3c7af43152a78ace29781757390b"
+  },
+  {
+    "path": "mods/voicechatrecording-1.20.1-2.1.jar",
+    "sha256": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
+    "sizeBytes": 167824
   },
   {
     "path": "mods/voidtotem-forge-1.20-3.0.1.jar",

@@ -56,7 +56,6 @@
     "mods/AppliedFlux-1.20-1.3.4-forge.jar": "55891c5fa24835061dcc469fae310e71e71514f0216dc7dbd2d12ed3d62c9e60",
     "mods/Aquaculture-1.20.1-2.5.5.jar": "8189d09adde558cd2ef97627e9480e4b620c3fa1de7ed064d1c20346288841e5",
     "mods/architectury-9.2.14-forge.jar": "218b471d0b8a1f6cda14cfc1beb9eeb0df54304500acc6c5613d9b88ec65d9af",
-    "mods/ArPhEx-5.0.2-forge-1.20.1.jar": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
     "mods/ars_creo-1.20.1-4.3.0.jar": "31964f41303ee2265ac4dbed66c6af20c11bd01637016d13e8de091e87fb78f7",
     "mods/ars_elemental-1.20.1-0.6.7.8.jar": "34a338b42b7050d41053c2681e0e9f4fcbc822af3ac40abd1691b79d29395e0d",
     "mods/ars_nouveau-1.20.1-4.12.7-all.jar": "1f1debc282a0c379c1141f2840ea294eede6f6b544c589663f40bbe17b59a1af",
@@ -282,7 +281,6 @@
     "mods/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar": "e78686b92c3761ec26eb9d3c53efdd3d6ca77981cbd3723995e1163b7103ae0b",
     "mods/kotlinforforge-4.11.0-all.jar": "ef988f86d170af499d147ea8a5c34c99dbd6d8f4a5ad236a4b43818dc4470a10",
     "mods/kubejs-forge-2001.6.5-build.16.jar": "3de6b7267d3aab981848ed54d3afe7edf20532fa4060631fd6fffcd99ac5f3d5",
-    "mods/kurolib-0.6-forge-1.20.1.jar": "812bc009a545b02b897362e354f53f7b1e62286550f3135ff3951a0b6eaa634a",
     "mods/L_Enders_Cataclysm-3.16.jar": "ac1028f4bfaa2629d80ce3c1f26e28ceec2e6f2aaaac3bb03dd8957856d2e7ca",
     "mods/laserio-1.6.8.jar": "f07fc6cb7f2aa28197e87ffc3a35062390259ad803d8996b08b13473c0af6790",
     "mods/ldlib-forge-1.20.1-1.0.45.jar": "b5b0c7db58a59ea14e687fe511885793b50d90da0c076ca9272eb98e050fd6fb",
@@ -400,7 +398,6 @@
     "mods/resourcefulconfig-forge-1.20.1-2.1.3.jar": "c404b9e5cf8595427a72d4ca6ee5730289168762b463f169be3ae5dfe3727ded",
     "mods/resourcefullib-forge-1.20.1-2.1.29.jar": "b13afb95231d88e1caea5a045967e0fc291b29020b0d26ad39e6f9e9a551fee8",
     "mods/retail-1.0.6-forge-1.20.1.jar": "632e65ae6cea9ee8538798fe28335842a90592a2d03a24ff119102ce8eccf555",
-    "mods/revervox_mod-1.20.1-2.1.jar": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
     "mods/rftoolsbase-1.20-5.0.6.jar": "641bbcb2d8e1039496705da3ec7e7356e25270e81f7a1d1e79fbe437485c0a1a",
     "mods/rftoolsbuilder-1.20-6.0.8.jar": "c306ec9ebab2c15f560f5dc05a454eb10f632d09eac69273b26e22e105c8010a",
     "mods/rftoolscontrol-1.20-7.0.3.jar": "0d137ff88869c94fb4d66f29516800271bb91d01b6da4d962c85960c40b9b3d2",
@@ -418,7 +415,6 @@
     "mods/sanitydim-mc1.20-1.1.0.jar": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a",
     "mods/sao_mod-1.0.0-forge-1.20.1.jar": "c8c781f789c5ac032e160981eec7d30d5632123979ac30bbd6dde08682ddebdf",
     "mods/ScalableCatsForce-3.3.1-build-0-with-library.jar": "4ae39dc3029d8bc4292d55ff20368b7eb69b050af24ebaa487594ab61665da81",
-    "mods/scpo-3.1.2-forge-1.20.1.jar": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
     "mods/Searchables-forge-1.20.1-1.0.3.jar": "c1a76e93886210574d3f298c0461241fb711e52ac22c7a04d3236840f29e6576",
     "mods/shetiphiancore-forge-1.20.1-1.5.jar": "1511c8c17975abbe9667eb548e41bf1e68f21f0ef065b54341e70002d2e60175",
     "mods/Shrink-1.20.1-1.4.5.jar": "a7af6dc3bc080c470a27ff691152c974bd13ce61e0c0948daf5eefece432abb1",
@@ -464,7 +460,6 @@
     "mods/the_after-0.1.2-forge-1.20.1.jar": "f43700d5c7e2e55c59f42954fa4e67be057b5de97369b36efee73bf253217d6e",
     "mods/the_backwoods-1.6.0-forge-1.20.1.jar": "9f24cecad4e4467aca091a8b148e6fe47576e5ec812098b68b5d910ecdae97e6",
     "mods/the_midnight_lurker_3.3.7.jar": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
-    "mods/the_obsessed-1.5.2g-forge-1.20.1.jar": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
     "mods/The_Undergarden-1.20.1-0.8.14.jar": "43029e388ab455f8c9bcfc8653b9a57a3eb1ff6b435cf6e58722d2d4c50d2444",
     "mods/thefinalgoatman-4.3.0.jar": "62fa70d78a265d6d162062a746f3c0f0e3391cd6db194dcb19f784d1fa2ed748",
     "mods/themimic_er-1.20.1-1.7.0.jar": "88516636609e3c84212c510a9e1d478e5f8affa2171d04165e34090c01843d7f",
@@ -505,7 +500,6 @@
     "mods/villagertools-1.20.1-1.0.3.jar": "df2b684697752619f43dc9dae1ff8c1e530e3c7af43152a78ace29781757390b",
     "mods/villagertradingplus-forge-mc1.20.1-1.1.1.jar": "cc90af84a22be12814da2d090bf43ae28d11555e5687e9556bec4ad8fe53028c",
     "mods/voicechat-forge-1.20.1-2.6.22.jar": "f171e99fa99f007ef013af5306f6c490fe79a11be7e1b18940147d75ced045b9",
-    "mods/voicechatrecording-1.20.1-2.1.jar": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
     "mods/Voidscape-1.20.1-1.5.389.jar": "c3eb2cc621c035460652f71ecaa80f54db1bc69f8440538f904baf46a96411a8",
     "mods/voidtotem-forge-1.20-3.0.1.jar": "6578e2f4322c7bf0ede69f118d6f601481e1e319ef790b097be8e724b9391947",
     "mods/walkers-5.8.13.jar": "032edf9ea5cddfe082e863362eb155c9e5f6b225712e1b4e8dba934c76ed633a",
@@ -760,11 +754,6 @@
       "id": "architectury",
       "name": "Architectury",
       "version": "9.2.14"
-    },
-    {
-      "id": "arphex",
-      "name": "Arthropod Phobia Expansions",
-      "version": "5.0.2"
     },
     {
       "id": "ars_creo",
@@ -2032,11 +2021,6 @@
       "version": "20.1.12"
     },
     {
-      "id": "kurolib",
-      "name": "KuroLib",
-      "version": "0.6"
-    },
-    {
       "id": "l2library",
       "name": "L2 Library",
       "version": "2.4.16"
@@ -2657,11 +2641,6 @@
       "version": "1.0.6"
     },
     {
-      "id": "revervox_mod",
-      "name": "Revervox",
-      "version": "2.1"
-    },
-    {
       "id": "rftoolsbase",
       "name": "RFToolsBase",
       "version": "1.20-5.0.6"
@@ -2745,11 +2724,6 @@
       "id": "sao_mod",
       "name": "SAO MOD",
       "version": "1.0.0"
-    },
-    {
-      "id": "scpo",
-      "name": "SCP:Overtime",
-      "version": "3.1.2"
     },
     {
       "id": "searchables",
@@ -2982,11 +2956,6 @@
       "version": "1.6.0"
     },
     {
-      "id": "the_obsessed",
-      "name": "the_obsessed",
-      "version": "1.5.2"
-    },
-    {
       "id": "the_one_who_watches",
       "name": "The One Who Watches",
       "version": "1.4.4"
@@ -3192,11 +3161,6 @@
       "version": "2.6.20"
     },
     {
-      "id": "voicechatrecording",
-      "name": "Voice Chat Recording",
-      "version": "2.1"
-    },
-    {
       "id": "voidscape",
       "name": "Voidscape",
       "version": "1.20.1-1.5.389"
@@ -3304,7 +3268,13 @@
       "mods/mine-mine-no-mi-1.20.1-0.11.6.jar": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
       "mods/JujutsuCraft-ver51-forge-1.20.1.jar": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
       "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
-      "mods/playmate 1.1.2 1.20.1.jar": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04"
+      "mods/playmate 1.1.2 1.20.1.jar": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
+      "mods/ArPhEx-5.0.2-forge-1.20.1.jar": "4e60117d3c8e4c22d041d9c2524d5a5fd4b7f624afd9b495adcca68065e00fbc",
+      "mods/kurolib-0.6-forge-1.20.1.jar": "812bc009a545b02b897362e354f53f7b1e62286550f3135ff3951a0b6eaa634a",
+      "mods/revervox_mod-1.20.1-2.1.jar": "a53d6b2695d9eb91512e9fde620f12f954fd5144c950fbcdf6888c3ceac4b7e6",
+      "mods/scpo-3.1.2-forge-1.20.1.jar": "719fdc56872edecc2925280285079fe0cbcd092e0dffd6c70709181e41753752",
+      "mods/the_obsessed-1.5.2g-forge-1.20.1.jar": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
+      "mods/voicechatrecording-1.20.1-2.1.jar": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1"
     },
     "removedModIds": [
       "dandadan",
@@ -3312,9 +3282,15 @@
       "mineminenomi",
       "jujutsucraft",
       "anomaly_rephased",
-      "knock_knock"
+      "knock_knock",
+      "arphex",
+      "kurolib",
+      "revervox_mod",
+      "scpo",
+      "the_obsessed",
+      "voicechatrecording"
     ],
     "freshNativeObservationClaimed": false,
-    "scope": "Direct exact subtraction of6 explicitly removed NEWmods from actual557ID/532JAR parent. Retained551 IDs/526JARs source-projected; no fresh native/full-game acceptance claimed."
+    "scope": "Direct exact subtraction of12 removed NEWmod/library IDs from actual557ID/532JAR parent. Retained545 IDs/520JARs source-projected; no fresh native/full-game acceptance claimed."
   }
 }
