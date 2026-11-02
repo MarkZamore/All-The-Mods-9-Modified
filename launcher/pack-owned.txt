@@ -10,3 +10,4 @@ resourcepacks/**
 shaderpacks/**
 configureddefaults/**
 packmenu/**
+launcher/diagnostics/**

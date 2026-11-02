@@ -2693,24 +2693,24 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "ad4dff60b99a34a613d8f584274ac111e0c2f26911bd66154b086b8396379660",
-      "sizeBytes": 12951,
+      "sha256": "0b5dedb3d8881360729b2ba1d2e042d224f80c61c05f9b188b89aa92edf5fe36",
+      "sizeBytes": 13506,
       "kind": "resource",
       "reason": "User-requested optional key-only controls preset and guide. Uses the actual 682 native EN/RU Options mapping names; explicit Apply preserves language, graphics and other personal preferences. Optional and mandatory manual character groups are documented; no JAR/world/permission changes."
     },
     {
       "path": "launcher/controls-preset.txt",
-      "sha256": "fffd40f60e730f751eb5dcf292a7f9b2f09c6401f1ffd9ca0dcd3ccc265b202f",
-      "sizeBytes": 35517,
+      "sha256": "e1b8d9298a455d6b41cefa3fd24b4bf8ae7da5a6516ca9d40ec104e257e6e02d",
+      "sizeBytes": 35409,
       "kind": "configuration",
       "reason": "User-requested optional key-only controls preset and guide. Uses the actual 682 native EN/RU Options mapping names; explicit Apply preserves language, graphics and other personal preferences. Optional and mandatory manual character groups are documented; no JAR/world/permission changes."
     },
     {
       "path": "launcher/jvm-args.txt",
-      "sha256": "a1f3a734e672681e16e8db9a35ece57236720f99f95a85bac9eb2caac1e19d3c",
-      "sizeBytes": 44,
+      "sha256": "3f36cf95a7fd2bfb6381dd43011f441eb8735485d80b6356cb04141407e67c31",
+      "sizeBytes": 160,
       "kind": "configuration",
-      "reason": "Pack-owned native JVM selection of config/log4j2.xml through the existing generic argument loader; no per-pack logging policy is compiled into the launcher."
+      "reason": "Pack-owned native logging selector plus temporary loopback-only ephemeral JDWP and recipeIds diagnostic opt-in; all previous JVM flags retained. Not a gameplay fix or launcher per-mod writer."
     },
     {
       "path": "launcher/launch-context.json",
@@ -2753,6 +2753,27 @@
       "websiteUrl": "https://www.curseforge.com/minecraft/texture-packs/verity-je-russian-translation-rusifikator",
       "sourceUrl": "https://mediafilez.forgecdn.net/files/9375/140/Verity-JE-RU.zip",
       "license": "All Rights Reserved"
+    },
+    {
+      "path": "launcher/diagnostics/recipe-exception-observer.jar",
+      "sha256": "eb402b3ef55eae7d29f2ce8212c2ce2a3b87db15d4fd1f39bb149708be9465fe",
+      "sizeBytes": 22045,
+      "kind": "temporary-diagnostic-tool",
+      "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
+    },
+    {
+      "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
+      "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44",
+      "sizeBytes": 2327,
+      "kind": "temporary-diagnostic-launcher",
+      "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
+    },
+    {
+      "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
+      "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a",
+      "sizeBytes": 174,
+      "kind": "temporary-diagnostic-launcher",
+      "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
     }
   ],
   "questLocalization": {

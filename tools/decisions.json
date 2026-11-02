@@ -2239,22 +2239,14 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "PENDING_THREE_JAR_NATIVE_COMPARISON_AND_NETWORK_GATE",
-    "sourceLockSha256": "d718d6bbd9be9e81346dce02014a46946278d1c76ad2f72099b4c577ce504e73",
-    "historicalReceipt": {
+    "status": "ROOT_ACCEPTED_CLEAN_NATIVE_NETWORK_REPRO_PENDING",
+    "receipt": {
       "path": "tools/qa/native-source-acceptance.json",
-      "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
-      "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
-      "scope": "Measured singleplayer content only; Steam/network acceptance remains open; no applied-preset/physical-input/restart/all-abilities or visual PASS."
+      "sha256": "10f0bdca54ebb67484f44b0b2d6a491eaa86b6f5f66cf0cb17c2b7b55f4ecc99",
+      "sourceLockSha256": "7983c8f1edc7c9035249e710ccfafaddf64c19a4d6068a14451c526c52c67edd"
     },
-    "historicalReport": {
-      "path": "tools/qa/final-runtime-532.json",
-      "sha256": "b6ee6f3d2067c64496c04ba342703e2ce2421ef7b8819c7ad519e22823cf75e5"
-    },
-    "nativeLoadedInventoryRecapturePending": true,
-    "actualKeyAndRegistryCapturePending": true,
-    "currentCandidateGameAcceptanceClaimed": false,
-    "publicationAllowed": false
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
   },
   "previousSingleplayerContentAcceptanceBeforeShootingStar151": {
     "receipt": {
@@ -2385,5 +2377,10 @@
     },
     "upstreamAuthorLockImmutable": true,
     "syntheticCacheCaseIsNotActualIncidentCauseProof": true
+  },
+  "temporaryRecipeDiagnostics": {
+    "cleanupInventory": "tools/qa/temporary-recipe-diagnostics-cleanup.json",
+    "manualOnly": true,
+    "unsupportedStartupJsRemoved": true
   }
 }

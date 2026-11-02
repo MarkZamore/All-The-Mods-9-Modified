@@ -81,7 +81,6 @@ key_key.push_to_talk:key.keyboard.caps.lock
 key_key.remorphed_menu:key.keyboard.home
 key_key.rimulib.skill_menu:key.keyboard.f8
 key_key.scpo.activate_anomaly:key.keyboard.f10
-key_key.shooting_star_demo.skill_menu:key.mouse.5
 key_key.special_ability:key.keyboard.keypad.6
 key_key.verity.push_to_talk:key.keyboard.p
 key_key.voice_chat:key.keyboard.o
@@ -510,7 +509,6 @@ key_key.sfm.toggle_label_view_key:key.keyboard.unknown
 key_key.sfm.toggle_network_tool_overlay:key.keyboard.unknown
 key_key.shetiphiancore.tool.next:key.keyboard.unknown
 key_key.shetiphiancore.tool.previous:key.keyboard.unknown
-key_key.shooting_star_demo.cutscenes:key.keyboard.unknown
 key_key.shooting_star_demo.stellar_remote.gungnir:key.keyboard.unknown
 key_key.shooting_star_demo.stellar_remote.seven_stars:key.keyboard.unknown
 key_key.shooting_star_demo.stellar_remote.tesseract:key.keyboard.unknown

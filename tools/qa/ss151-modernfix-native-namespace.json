@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "status": "ACTUAL_NATIVE_NAMESPACE_OBSERVED",
+  "nativeSourceEvidenceSha256": "7e0c3fc75b5dac11b15705ef9a42a277e275dccc804a60ba1ebc21ce240c9c0c",
+  "keyEvidenceSha256": "2830201ea1834b4bd227db21f846d0534d13badd8ca5ef7f1fc46cfc7723b403",
+  "modListObservationSha256": "98bc67ea5ed3bf66db10e1f03e66eca6a3961aced3a03a4de497181f19b37608",
+  "loadedPackIds": 557,
+  "optionsKeys": 636,
+  "registryKeys": 650,
+  "removedOptions": [
+    "key.shooting_star_demo.skill_menu",
+    "key.shooting_star_demo.cutscenes"
+  ],
+  "addedOptions": [],
+  "remaining636SourcePresetValuesChanged": false,
+  "fiveComparedRegistrySets": {
+    "item": "61242 unchanged",
+    "block": "43395→43396,only shooting_star_demo:gravitia_space_block added",
+    "entity_type": "3189 unchanged",
+    "mob_effect": "779 unchanged",
+    "particle_type": "963 unchanged"
+  },
+  "removedIdsInThoseFiveSets": [],
+  "notAFullDimensionBiomeOrOldWorldMigrationProof": true,
+  "captureScope": "Namespace capture was made in initial startup-error cohort; same532JARs passed subsequent clean Root run. Not source-preset application or real-peer proof."
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "atm9-modified-native-source-acceptance",
+  "status": "PASS",
+  "fullClientAndWorldAccepted": true,
+  "acceptedAtUtc": "2026-11-01T15:31:11.121911+00:00",
+  "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+  "scope": "Root accepts this exact measured singleplayer532 content cohort: new private world,393.470-second healthy window, real local Russian model exchange and normal save/exit, with explicitly disclosed899ERROR. Real Steam/LAN connection failures remain a separate open user task.",
+  "runtimeReport": {
+    "path": "tools/qa/final-runtime-532.json",
+    "sha256": "b6ee6f3d2067c64496c04ba342703e2ce2421ef7b8819c7ad519e22823cf75e5"
+  },
+  "independentAttributionSha256": "568bb6eb7e2110ce4257c2300e457e35eb82a92694d43322bdef6d79ad8d8a43",
+  "closedNativeLogSha256": "8c45fa00dfc1aad859d0e630ca06356576627272b2b8f9bd13a455233a1639b6",
+  "normalExitCode": 0,
+  "shippedJars": 532,
+  "nativeModListEntries": 560,
+  "nativePackModIds": 557,
+  "nativeOptionsKeys": 638,
+  "nativeRegistryKeys": 652,
+  "nativeMappingsPersistedAfterExit": 638,
+  "sourcePresetAppliedInThisRun": false,
+  "remainingErrorHeaders": 899,
+  "fatalHeaders": 0,
+  "errorWindows": {
+    "noInput": 108,
+    "afterSeparateAiMarkerBeforeQuit": 790,
+    "shutdown": 1
+  },
+  "remainingNewOwnMetadataNetworkHeaders": 6,
+  "verityToForgeDiscoveryDiagnosticHeaders": 790,
+  "baseBloodMagicHeadersWithoutProvenNewInitiator": 2,
+  "nativeByteProofSha256": "5107a3cdf801aad89d798d409c8cd5f37af23c89cdc7030e02acaafb105f16d7",
+  "testedLauncherReferenceSha256": "bcb994f7e5b95597b22df4cdd7f1e61d5b255826be9e29d1f8961a7e4241a599",
+  "testedReferenceFileVersion": "1.0.1.0",
+  "publicReleasedExeByteIdentityClaimed": false,
+  "limitations": [
+    "Not zero ERROR; no new critical fault in the measured window.",
+    "Model generated a Russian question/echo; semantic self-name accuracy is not claimed.",
+    "No selected-skin, two-client Steam/LAN, all-abilities, physical controls/restart or visual-quality PASS.",
+    "Private QA seed changed only language/focus fields; all1915 SOURCE rows and532 content JARs remained exact.",
+    "Migration and publication are separate; current actual network bug is not resolved by this singleplayer receipt."
+  ]
+}

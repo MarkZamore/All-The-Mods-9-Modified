@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "status": "ACTIVE_TEMPORARY_REMOVE_AFTER_CONFIRMED_NETWORK_FIX",
+  "temporaryFiles": [
+    {
+      "path": "launcher/diagnostics/recipe-exception-observer.jar",
+      "sha256": "eb402b3ef55eae7d29f2ce8212c2ce2a3b87db15d4fd1f39bb149708be9465fe",
+      "sizeBytes": 22045,
+      "kind": "temporary-diagnostic-tool",
+      "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
+    },
+    {
+      "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
+      "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44",
+      "sizeBytes": 2327,
+      "kind": "temporary-diagnostic-launcher",
+      "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
+    },
+    {
+      "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
+      "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a",
+      "sizeBytes": 174,
+      "kind": "temporary-diagnostic-launcher",
+      "reason": "Explicit temporary manual read-only recipe exception diagnostics for the next peer test; exact native Alchemy hashes, one guarded running game,8events/256KiB own output, no class transforms/game-method invocation. Remove the tool/launchers and two diagnostic JVM flags after confirmed fix; not an incident-fix claim."
+    }
+  ],
+  "temporaryJvmFlags": [
+    "-agentlib:jdwp=transport=dt_socket,address=127.0.0.1:0,server=y,suspend=n",
+    "-Dlanminecraft.diagnostics.recipeIds=true"
+  ],
+  "temporaryOwnershipLine": "launcher/diagnostics/**",
+  "obsoleteStartupScript": {
+    "path": "kubejs/startup_scripts/atm9_modified_recipe_diagnostics.js",
+    "active": false,
+    "everPublished": false,
+    "retirementAuthorityAdded": false
+  },
+  "cleanup": "Remove only these3files/support rows,2exactJVM lines and1ownership line in source; remove the narrow executable allowance. Publish a new manifest with exact retired-file triples from the actually published candidate so normal updater removes known temporary bytes and preserves changed personal files. Preserve all other launcher files,AI data,permanent logging selector/config/helper,and all settings/worlds. Do not recursively remove launcher or diagnostics directories.",
+  "permanentRequestedContent": [
+    "Shooting Star1.5.1-demo",
+    "Rimulib1.2.1 required dependency"
+  ],
+  "modernFixClassification": "Official BASE5.25.0 cache candidate: retain if justified, otherwise explicitly review/revert to author5.24.4. Not automatically removed with diagnostic utilities.",
+  "noRealIncidentFixClaimed": true
+}
