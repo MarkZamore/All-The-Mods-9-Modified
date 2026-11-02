@@ -1,0 +1,2562 @@
+{
+  "type95": {
+    "uniqueMemberRefs": 120,
+    "referencedLibraryClasses": 49,
+    "missingClassesInNew": [],
+    "changedClassKindOrReducedPublicVisibility": [],
+    "missingInNew": [],
+    "changedStaticOrReducedPublicVisibility": [],
+    "checks": [
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/bulwark/Threat$Kind",
+        "name": "BLAST",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/bulwark/Threat$Kind;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 16409,
+        "newFlags": 16409
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/bulwark/Threat$Kind",
+        "name": "BOLT",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/bulwark/Threat$Kind;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 16409,
+        "newFlags": 16409
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillKeys",
+        "name": "menu",
+        "descriptor": "Lnet/minecraft/client/KeyMapping;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "aberration",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "bloom",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "bloomRadius",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "contrast",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "desaturate",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "flash",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "grain",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "impact",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "shake",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "synthetic",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "vignette",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "zoomBlur",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/ModLog",
+        "name": "error",
+        "descriptor": "(Ljava/lang/String;[Ljava/lang/Object;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 129,
+        "newFlags": 129
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/ModLog",
+        "name": "info",
+        "descriptor": "(Ljava/lang/String;[Ljava/lang/Object;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 129,
+        "newFlags": 129
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/ModLog",
+        "name": "warn",
+        "descriptor": "(Ljava/lang/String;[Ljava/lang/Object;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 129,
+        "newFlags": 129
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/RimuMod",
+        "name": "log",
+        "descriptor": "(Ljava/lang/String;)Lcyou/rimuru/rimulib/mc1201/ModLog;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 33,
+        "newFlags": 33
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/Rimulib",
+        "name": "register",
+        "descriptor": "(Ljava/lang/String;Ljava/lang/Class;)Lcyou/rimuru/rimulib/mc1201/RimuMod;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/bulwark/Bulwark",
+        "name": "warn",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;Lcyou/rimuru/rimulib/mc1201/bulwark/Threat;)Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/bulwark/Threat",
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/String;Lcyou/rimuru/rimulib/mc1201/bulwark/Threat$Kind;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;DIII)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/bulwark/Threat",
+        "name": "at",
+        "descriptor": "(Ljava/lang/String;Lcyou/rimuru/rimulib/mc1201/bulwark/Threat$Kind;Lnet/minecraft/world/phys/Vec3;DIII)Lcyou/rimuru/rimulib/mc1201/bulwark/Threat;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/ClientHooks",
+        "name": "hideHand",
+        "descriptor": "(Ljava/util/function/BooleanSupplier;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/ClientHooks",
+        "name": "limitTurn",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/client/ClientHooks$TurnLimit;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/ClientHooks",
+        "name": "shake",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/client/ClientHooks$Shake;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/ClientHooks",
+        "name": "stage",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/client/ClientHooks$Stage;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/CutsceneKeys",
+        "name": "register",
+        "descriptor": "()Lnet/minecraft/client/KeyMapping;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 41,
+        "newFlags": 41
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CameraPose",
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;FF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene",
+        "name": "<init>",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/client/cinematic/Subject;Ljava/lang/String;Ljava/lang/String;IILjava/util/List;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene",
+        "name": "clock",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene$Clock;)Lcyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene",
+        "name": "hardCut",
+        "descriptor": "()Lcyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene",
+        "name": "priority",
+        "descriptor": "(I)Lcyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "active",
+        "descriptor": "()Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "clear",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "enabled",
+        "descriptor": "()Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "films",
+        "descriptor": "(ZZ)Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "hideHud",
+        "descriptor": "()Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "load",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "play",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "renderHud",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;F)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "setEnabled",
+        "descriptor": "(Z)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "weight",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/client/cinematic/Subject;)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Shot",
+        "name": "cut",
+        "descriptor": "(IILcyou/rimuru/rimulib/mc1201/client/cinematic/Shot$Path;)Lcyou/rimuru/rimulib/mc1201/client/cinematic/Shot;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/ClientSkills",
+        "name": "apply",
+        "descriptor": "(Ljava/lang/String;[I[I)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/ClientSkills",
+        "name": "remaining",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillKeys",
+        "name": "name",
+        "descriptor": "(Lnet/minecraft/client/KeyMapping;)Lnet/minecraft/network/chat/Component;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillTuning",
+        "name": "damage",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillTuning",
+        "name": "flush",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillTuning",
+        "name": "of",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)Lcyou/rimuru/rimulib/mc1201/skill/Tuning;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillTuning",
+        "name": "power",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillTuning",
+        "name": "setDamageStep",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;I)Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillTuning",
+        "name": "setPower",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;F)Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/WhiteSpaceSource",
+        "name": "credit",
+        "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Lcyou/rimuru/rimulib/mc1201/client/magic/WhiteSpaceSource;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/WhiteSpaceSource",
+        "name": "films",
+        "descriptor": "(Z)Lcyou/rimuru/rimulib/mc1201/client/magic/WhiteSpaceSource;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/WhiteSpaceSource",
+        "name": "of",
+        "descriptor": "(Ljava/lang/String;)Lcyou/rimuru/rimulib/mc1201/client/magic/WhiteSpaceSource;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/WhiteSpaceSource",
+        "name": "order",
+        "descriptor": "(I)Lcyou/rimuru/rimulib/mc1201/client/magic/WhiteSpaceSource;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/WhiteSpaceSource",
+        "name": "ownScreen",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/SkillSet;Ljava/util/function/Consumer;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/net/RimuNetClient",
+        "name": "receive",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/net/RimuPacket;Lcyou/rimuru/rimulib/mc1201/client/net/RimuNetClient$Handler;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/net/RimuNetClient",
+        "name": "sendToServer",
+        "descriptor": "(Ljava/lang/Object;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/PostFx",
+        "name": "register",
+        "descriptor": "(Ljava/lang/String;Ljava/util/function/BiConsumer;Lcyou/rimuru/rimulib/mc1201/client/render/PostFx$Render;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/PostFx",
+        "name": "wardAware",
+        "descriptor": "(Ljava/lang/String;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/PostFxRenderer",
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/String;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/PostFxRenderer",
+        "name": "render",
+        "descriptor": "(Ljava/util/List;Lcyou/rimuru/rimulib/mc1201/client/render/ScreenFx;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;F)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/PostFxRenderer",
+        "name": "warm",
+        "descriptor": "(Ljava/lang/String;)Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/PostPass",
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/String;Ljava/util/function/Consumer;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "<init>",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "addFlash",
+        "descriptor": "(IF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "addImpact",
+        "descriptor": "(FIFF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "addVignette",
+        "descriptor": "(IF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "idle",
+        "descriptor": "()Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "reset",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ShaderWarmup",
+        "name": "register",
+        "descriptor": "(Ljava/lang/String;Ljava/util/function/Predicate;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 41,
+        "newFlags": 41
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/ui/SaoUi",
+        "name": "init",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/erase/ErasePolicy",
+        "name": "forceKill",
+        "descriptor": "(ZF)Lcyou/rimuru/rimulib/mc1201/erase/ErasePolicy;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/erase/ErasePolicy",
+        "name": "unmake",
+        "descriptor": "(Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceKey;)Lcyou/rimuru/rimulib/mc1201/erase/ErasePolicy;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/erase/Erasure",
+        "name": "hit",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/erase/ErasePolicy;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerPlayer;F)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/net/RimuNet",
+        "name": "c2s",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/net/RimuPacket;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/net/RimuNet",
+        "name": "receive",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/net/RimuPacket;Lcyou/rimuru/rimulib/mc1201/net/RimuNet$Handler;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/net/RimuNet",
+        "name": "s2c",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/net/RimuPacket;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/net/RimuNet",
+        "name": "send",
+        "descriptor": "(Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/Object;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/net/RimuPacket",
+        "name": "of",
+        "descriptor": "(Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Class;Ljava/util/function/BiConsumer;Ljava/util/function/Function;)Lcyou/rimuru/rimulib/mc1201/net/RimuPacket;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Power",
+        "name": "<init>",
+        "descriptor": "(FFFZF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Power",
+        "name": "at",
+        "descriptor": "(F)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Power",
+        "name": "initial",
+        "descriptor": "()F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Power",
+        "name": "position",
+        "descriptor": "(F)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Power",
+        "name": "snap",
+        "descriptor": "(F)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Power",
+        "name": "step",
+        "descriptor": "(FI)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/SkillSet",
+        "name": "register",
+        "descriptor": "(Lnet/minecraft/resources/ResourceLocation;I[Lcyou/rimuru/rimulib/mc1201/skill/Skill;Lcyou/rimuru/rimulib/mc1201/skill/SkillSet$Caster;)Lcyou/rimuru/rimulib/mc1201/skill/SkillSet;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/SkillSet",
+        "name": "skillCount",
+        "descriptor": "(Ljava/lang/String;)I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "<init>",
+        "descriptor": "(FFF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "clampFor",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)Lcyou/rimuru/rimulib/mc1201/skill/Tuning;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "damage",
+        "descriptor": "()F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "damageStep",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;F)I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "erases",
+        "descriptor": "()Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "forceKill",
+        "descriptor": "(Ljava/lang/String;Z)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "initial",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)Lcyou/rimuru/rimulib/mc1201/skill/Tuning;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "maxDamage",
+        "descriptor": "(Ljava/lang/String;)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "power",
+        "descriptor": "()F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "steps",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)[F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "done",
+        "descriptor": "()Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "flatten",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/Vec3;DLcyou/rimuru/rimulib/mc1201/terrain/Carving$Floor;Lcyou/rimuru/rimulib/mc1201/terrain/Carving$Surface;Lnet/minecraft/core/BlockPos;)Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "lazy",
+        "descriptor": "()Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "linger",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/terrain/Carving;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "named",
+        "descriptor": "(Ljava/lang/String;)Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "perTick",
+        "descriptor": "(I)Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "stop",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "streaming",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/terrain/Carving$Tickets;)Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "tick",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "tick",
+        "descriptor": "(D)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Subject",
+        "name": "feet",
+        "descriptor": "(F)Lnet/minecraft/world/phys/Vec3;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Subject",
+        "name": "forward",
+        "descriptor": "()Lnet/minecraft/world/phys/Vec3;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/net/RimuNetClient$Context",
+        "name": "client",
+        "descriptor": "()Lnet/minecraft/client/Minecraft;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "f1",
+        "descriptor": "(Ljava/lang/String;F)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "f4",
+        "descriptor": "(Ljava/lang/String;FFFF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "v3",
+        "descriptor": "(Ljava/lang/String;Lnet/minecraft/world/phys/Vec3;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "vec4s",
+        "descriptor": "(Ljava/lang/String;[F)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/net/RimuNet$Context",
+        "name": "player",
+        "descriptor": "()Lnet/minecraft/server/level/ServerPlayer;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "duration",
+        "descriptor": "()I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "id",
+        "descriptor": "()Ljava/lang/String;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      }
+    ]
+  },
+  "shootingStar151": {
+    "uniqueMemberRefs": 134,
+    "referencedLibraryClasses": 58,
+    "missingClassesInNew": [],
+    "changedClassKindOrReducedPublicVisibility": [],
+    "missingInNew": [],
+    "changedStaticOrReducedPublicVisibility": [],
+    "checks": [
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene",
+        "name": "shots",
+        "descriptor": "Ljava/util/List;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 17,
+        "newFlags": 17
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene",
+        "name": "subject",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/client/cinematic/Subject;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 17,
+        "newFlags": 17
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector$Style",
+        "name": "HINT",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector$Style;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 16409,
+        "newFlags": 16409
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillKeys",
+        "name": "menu",
+        "descriptor": "Lnet/minecraft/client/KeyMapping;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "aberration",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "bloom",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "bloomRadius",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "contrast",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "desaturate",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "flash",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "flashB",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "flashG",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "flashR",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "grain",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "impact",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "impactMode",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "impactX",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "impactY",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "keepHot",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "priority",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "shake",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "stepFps",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "synthetic",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "vignette",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "vignetteB",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "vignetteG",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "vignetteR",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "zoomBlur",
+        "descriptor": "F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType$Face",
+        "name": "DISPLAY",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/client/text/TessType$Face;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 16409,
+        "newFlags": 16409
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType$Face",
+        "name": "LABEL",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/client/text/TessType$Face;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 16409,
+        "newFlags": 16409
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType$Face",
+        "name": "MONO",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/client/text/TessType$Face;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 16409,
+        "newFlags": 16409
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/SkillSet",
+        "name": "skills",
+        "descriptor": "Ljava/util/List;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 17,
+        "newFlags": 17
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "DAMAGE_STEPS",
+        "descriptor": "[F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 25,
+        "newFlags": 25
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "SPEED",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/skill/Power;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 25,
+        "newFlags": 25
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning$Limits",
+        "name": "NONE",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/skill/Tuning$Limits;",
+        "resolvedInOld": false,
+        "resolvedInNew": true,
+        "oldFlags": null,
+        "newFlags": 25
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "VERIFY",
+        "descriptor": "Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 25,
+        "newFlags": 25
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/world/Regen$Dragon",
+        "name": "GONE",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/world/Regen$Dragon;",
+        "resolvedInOld": false,
+        "resolvedInNew": true,
+        "oldFlags": null,
+        "newFlags": 16409
+      },
+      {
+        "kind": "fields",
+        "owner": "cyou/rimuru/rimulib/mc1201/world/WorldShape",
+        "name": "CUSTOM",
+        "descriptor": "Lcyou/rimuru/rimulib/mc1201/world/WorldShape;",
+        "resolvedInOld": false,
+        "resolvedInNew": true,
+        "oldFlags": null,
+        "newFlags": 16409
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/ModLog",
+        "name": "error",
+        "descriptor": "(Ljava/lang/String;[Ljava/lang/Object;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 129,
+        "newFlags": 129
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/ModLog",
+        "name": "info",
+        "descriptor": "(Ljava/lang/String;[Ljava/lang/Object;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 129,
+        "newFlags": 129
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/ModLog",
+        "name": "warn",
+        "descriptor": "(Ljava/lang/String;[Ljava/lang/Object;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 129,
+        "newFlags": 129
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CameraPose",
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;FF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Cutscene",
+        "name": "<init>",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/client/cinematic/Subject;Ljava/lang/String;Ljava/lang/String;IILjava/util/List;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/CutsceneDirector",
+        "name": "legacy",
+        "descriptor": "()Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/ClientSkills",
+        "name": "recharging",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/ClientSkills",
+        "name": "selected",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/SkillSet;)Lcyou/rimuru/rimulib/mc1201/skill/Skill;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/ClientSkills",
+        "name": "sinceSelect",
+        "descriptor": "()I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/magic/SkillKeys",
+        "name": "label",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)Ljava/lang/String;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/FxTextures",
+        "name": "request",
+        "descriptor": "(Ljava/lang/String;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/PostFxRenderer",
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/String;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/PostFxRenderer",
+        "name": "warm",
+        "descriptor": "(Ljava/lang/String;)Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/PostPass",
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/String;Ljava/util/function/Consumer;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "<init>",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/ScreenFx",
+        "name": "addVignette",
+        "descriptor": "(IF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/sound/ScoreCue",
+        "name": "<init>",
+        "descriptor": "(FLnet/minecraft/resources/ResourceLocation;FILnet/minecraft/client/resources/sounds/SoundInstance$Attenuation;DDDZ)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/sound/StretchedSound",
+        "name": "<init>",
+        "descriptor": "(FLnet/minecraft/resources/ResourceLocation;Lnet/minecraft/sounds/SoundSource;FFLnet/minecraft/util/RandomSource;ZILnet/minecraft/client/resources/sounds/SoundInstance$Attenuation;DDDZ)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/Overlay",
+        "name": "height",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;)I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/Overlay",
+        "name": "width",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;)I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType",
+        "name": "box",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;FFFFI)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType",
+        "name": "draw",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;Lcyou/rimuru/rimulib/mc1201/client/text/TessType$Face;Ljava/lang/String;FFFFFLcyou/rimuru/rimulib/mc1201/client/text/TessType$Paint;FF)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType",
+        "name": "lock",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;FFFFFI)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType",
+        "name": "prism",
+        "descriptor": "(FFFF)Lcyou/rimuru/rimulib/mc1201/client/text/TessType$Paint;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType",
+        "name": "rule",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;FFFFLcyou/rimuru/rimulib/mc1201/client/text/TessType$Paint;F)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType",
+        "name": "spectrum",
+        "descriptor": "(FF)I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType",
+        "name": "veil",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;FFFFF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType",
+        "name": "width",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;Lcyou/rimuru/rimulib/mc1201/client/text/TessType$Face;Ljava/lang/String;FF)F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType$Title",
+        "name": "backdrop",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;FFFLcyou/rimuru/rimulib/mc1201/client/text/TessType$Paint;FF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType$Title",
+        "name": "draw",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiGraphics;FFFFLcyou/rimuru/rimulib/mc1201/client/text/TessType$Paint;FF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Power",
+        "name": "<init>",
+        "descriptor": "(FFFZF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/SkillSet",
+        "name": "of",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/skill/Skill;)Lcyou/rimuru/rimulib/mc1201/skill/SkillSet;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "<init>",
+        "descriptor": "(FFFF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "damage",
+        "descriptor": "()F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "erases",
+        "descriptor": "()Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning",
+        "name": "power",
+        "descriptor": "()F",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Tuning$Limits",
+        "name": "<init>",
+        "descriptor": "(FFFFFFFFZ)V",
+        "resolvedInOld": false,
+        "resolvedInNew": true,
+        "oldFlags": null,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/Vec3;DLnet/minecraft/core/BlockPos;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "batched",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/terrain/Carving$Batch;)Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "buildAhead",
+        "descriptor": "(D)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "checkedSurface",
+        "descriptor": "(Z)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "done",
+        "descriptor": "()Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "flatten",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/Vec3;DLcyou/rimuru/rimulib/mc1201/terrain/Carving$Floor;Lcyou/rimuru/rimulib/mc1201/terrain/Carving$Surface;Lnet/minecraft/core/BlockPos;)Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "keepsCores",
+        "descriptor": "()Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "linger",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/terrain/Carving;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "named",
+        "descriptor": "(Ljava/lang/String;)Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "paint",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;Ljava/util/Map;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "perTick",
+        "descriptor": "(I)Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "relightAll",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;Ljava/util/List;)V",
+        "resolvedInOld": false,
+        "resolvedInNew": true,
+        "oldFlags": null,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "streaming",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/terrain/Carving$Tickets;)Lcyou/rimuru/rimulib/mc1201/terrain/Carving;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "tick",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/Carving",
+        "name": "tick",
+        "descriptor": "(D)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionSink",
+        "name": "apply",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;)[J",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionSink",
+        "name": "begin",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;IIIII)Lcyou/rimuru/rimulib/mc1201/terrain/SectionSink;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionSink",
+        "name": "loaded",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;)Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionSink",
+        "name": "misses",
+        "descriptor": "()I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionSink",
+        "name": "prepare",
+        "descriptor": "()V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionSink",
+        "name": "release",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionSink",
+        "name": "stale",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;)Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionSink",
+        "name": "stateAt",
+        "descriptor": "(III)Lnet/minecraft/world/level/block/state/BlockState;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionSink",
+        "name": "take",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;J)Z",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionWriter",
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/server/level/ServerLevel;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionWriter",
+        "name": "flush",
+        "descriptor": "()[J",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/SectionWriter",
+        "name": "put",
+        "descriptor": "(IIILnet/minecraft/world/level/block/state/BlockState;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Shot$Path",
+        "name": "pose",
+        "descriptor": "(Lcyou/rimuru/rimulib/mc1201/client/cinematic/Subject;FF)Lcyou/rimuru/rimulib/mc1201/client/cinematic/CameraPose;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Subject",
+        "name": "anchor",
+        "descriptor": "(F)Lnet/minecraft/world/phys/Vec3;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Subject",
+        "name": "feet",
+        "descriptor": "(F)Lnet/minecraft/world/phys/Vec3;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Subject",
+        "name": "forward",
+        "descriptor": "()Lnet/minecraft/world/phys/Vec3;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Subject",
+        "name": "frame",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;DDD)Lnet/minecraft/world/phys/Vec3;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Subject",
+        "name": "orbit",
+        "descriptor": "(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/world/phys/Vec3;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/cinematic/Subject",
+        "name": "target",
+        "descriptor": "()Lnet/minecraft/world/phys/Vec3;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/net/RimuNetClient$Context",
+        "name": "client",
+        "descriptor": "()Lnet/minecraft/client/Minecraft;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "f1",
+        "descriptor": "(Ljava/lang/String;F)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "f2",
+        "descriptor": "(Ljava/lang/String;FF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "f3",
+        "descriptor": "(Ljava/lang/String;FFF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "f4",
+        "descriptor": "(Ljava/lang/String;FFFF)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "glTexture",
+        "descriptor": "(Ljava/lang/String;I)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "texture",
+        "descriptor": "(Ljava/lang/String;Ljava/lang/String;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "v3",
+        "descriptor": "(Ljava/lang/String;Lnet/minecraft/world/phys/Vec3;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/render/Uniforms",
+        "name": "vec4s",
+        "descriptor": "(Ljava/lang/String;[F)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/client/text/TessType$Paint",
+        "name": "flat",
+        "descriptor": "(I)Lcyou/rimuru/rimulib/mc1201/client/text/TessType$Paint;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/net/RimuNet$Context",
+        "name": "player",
+        "descriptor": "()Lnet/minecraft/server/level/ServerPlayer;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/platform/Platform",
+        "name": "configDir",
+        "descriptor": "()Ljava/nio/file/Path;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/platform/Platform",
+        "name": "get",
+        "descriptor": "()Lcyou/rimuru/rimulib/mc1201/platform/Platform;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 9,
+        "newFlags": 9
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "color",
+        "descriptor": "()I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "cooldown",
+        "descriptor": "()I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "duration",
+        "descriptor": "()I",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "id",
+        "descriptor": "()Ljava/lang/String;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "power",
+        "descriptor": "()Lcyou/rimuru/rimulib/mc1201/skill/Power;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "selectWarning",
+        "descriptor": "()Ljava/lang/String;",
+        "resolvedInOld": false,
+        "resolvedInNew": true,
+        "oldFlags": null,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "tier",
+        "descriptor": "()Ljava/lang/String;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "title",
+        "descriptor": "()Ljava/lang/String;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/skill/Skill",
+        "name": "width",
+        "descriptor": "()Lcyou/rimuru/rimulib/mc1201/skill/Power;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/BlockReader",
+        "name": "get",
+        "descriptor": "(III)Lnet/minecraft/world/level/block/state/BlockState;",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/BlockSink",
+        "name": "clear",
+        "descriptor": "(IIII)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1,
+        "newFlags": 1
+      },
+      {
+        "kind": "methods",
+        "owner": "cyou/rimuru/rimulib/mc1201/terrain/BlockSink",
+        "name": "put",
+        "descriptor": "(IIILnet/minecraft/world/level/block/state/BlockState;)V",
+        "resolvedInOld": true,
+        "resolvedInNew": true,
+        "oldFlags": 1025,
+        "newFlags": 1025
+      }
+    ]
+  }
+}

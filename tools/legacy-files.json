@@ -7435,6 +7435,11 @@
     "sha256": "34dc577450405f892af12fe20d492583de78a0dee5ce5eb80de6a5b3e458a432"
   },
   {
+    "path": "mods/rimulib-1.1.2-forge.jar",
+    "sizeBytes": 1073424,
+    "sha256": "579a02a11efaf5d16b9704e0597e82b6c6c68c87c5c645953fe4a197fff71960"
+  },
+  {
     "path": "mods/rsinsertexportupgrade-1.20.1-1.4.0.jar",
     "sizeBytes": 66932,
     "sha256": "36072a05476d258d1612a9d75144af0b839cca7e752a5bbc39eed7e8bdddf613"

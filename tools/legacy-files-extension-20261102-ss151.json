@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Exact-hash retirement extension for the user-authorized Shooting Star/Rimulib update; no path-only deletion authority. Historical provenance and row indexes retain their original meaning.",
+  "priorUnion": {
+    "path": "tools/qa/legacy-files-before-ss151.json",
+    "sha256": "1c8a2f0774c93f75536446e0799479e58ddca3d9db9e52cd072e333a964729b2",
+    "rows": 2012,
+    "sourceRevision": "5ddb52423ae08764234a3b8de7c3f6db6242df8d"
+  },
+  "currentUnion": {
+    "path": "tools/legacy-files.json",
+    "sha256": "d1e99f534da71104a7d8bfbc9b85d2bd7fe6ebdcc9ad80d01186ea371db6148a",
+    "rows": 2013
+  },
+  "addedExactRows": [
+    {
+      "path": "mods/rimulib-1.1.2-forge.jar",
+      "sizeBytes": 1073424,
+      "sha256": "579a02a11efaf5d16b9704e0597e82b6c6c68c87c5c645953fe4a197fff71960"
+    }
+  ],
+  "alreadyPresentExactRetiredRows": [
+    {
+      "path": "mods/the-shooting-star-demo-1.4.4-forge.jar",
+      "sizeBytes": 13470587,
+      "sha256": "c95777d06233b12f0172ff92925fc2521a5c7a04acdd899fe81acde888dd4fcf"
+    }
+  ],
+  "authority": "Exact former official JAR rows in published5ddb source-locka42 and manifest03c60d; only identical known bytes may be retired. Changed personal files do not match these triples."
+}

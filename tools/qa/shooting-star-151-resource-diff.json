@@ -1,0 +1,12 @@
+{
+  "added": [
+    "assets/shooting_star_demo/blockstates/gravitia_space_block.json",
+    "data/shooting_star_demo/dimension/black.json",
+    "data/shooting_star_demo/dimension/gravitia_stage.json",
+    "data/shooting_star_demo/dimension_type/black.json",
+    "data/shooting_star_demo/worldgen/biome/black.json",
+    "data/shooting_star_demo/worldgen/biome/gravitia_space.json",
+    "data/shooting_star_demo/worldgen/biome/void.json"
+  ],
+  "removed": []
+}

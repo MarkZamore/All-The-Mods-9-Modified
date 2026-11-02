@@ -1846,8 +1846,8 @@
       "modIds": [
         "shooting_star_demo"
       ],
-      "version": "1.4.4-demo",
-      "sha256": "c95777d06233b12f0172ff92925fc2521a5c7a04acdd899fe81acde888dd4fcf"
+      "version": "1.5.1-demo",
+      "sha256": "9a547738e3971b79f0e501fb3311e4abb74e48547acab6c921db9c8c3b1dd4f5"
     },
     {
       "name": "The Shooting Star Addition",
@@ -2214,6 +2214,24 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
+    "status": "PENDING_SHOOTING_STAR_151_NATIVE_COMPARISON_AND_NETWORK_GATE",
+    "sourceLockSha256": "d745d91560e234e65e120f8beaf3be3e4e2a98e6ae63bbfd03b74848d50fb1b4",
+    "historicalReceipt": {
+      "path": "tools/qa/native-source-acceptance.json",
+      "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
+      "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
+      "scope": "Measured singleplayer content only; Steam/network acceptance remains open; no applied-preset/physical-input/restart/all-abilities or visual PASS."
+    },
+    "historicalReport": {
+      "path": "tools/qa/final-runtime-532.json",
+      "sha256": "b6ee6f3d2067c64496c04ba342703e2ce2421ef7b8819c7ad519e22823cf75e5"
+    },
+    "nativeLoadedInventoryRecapturePending": true,
+    "actualKeyAndRegistryCapturePending": true,
+    "currentCandidateGameAcceptanceClaimed": false,
+    "publicationAllowed": false
+  },
+  "previousSingleplayerContentAcceptanceBeforeShootingStar151": {
     "receipt": {
       "path": "tools/qa/native-source-acceptance.json",
       "sha256": "21daa63e9ed6367cb333a3aa82ff4c5a9436b94d0234e9f658938c98dadc4414",
@@ -2229,5 +2247,84 @@
     "fatalHeaders": 0,
     "realSteamAcceptance": "OPEN",
     "migrationAndPublicationEstablishedByThisReceipt": false
+  },
+  "shootingStar151Update": {
+    "status": "AUTHORIZED_SOURCE_CANDIDATE_STATIC_PASS_NATIVE_PENDING",
+    "replacements": [
+      {
+        "old": {
+          "fileName": "the-shooting-star-demo-1.4.4-forge.jar",
+          "sha256": "c95777d06233b12f0172ff92925fc2521a5c7a04acdd899fe81acde888dd4fcf",
+          "sizeBytes": 13470587,
+          "sourceUrl": "https://edge.forgecdn.net/files/9231/721/the-shooting-star-demo-1.4.4-forge.jar",
+          "projectId": 1719195,
+          "fileId": 9231721,
+          "path": "mods/the-shooting-star-demo-1.4.4-forge.jar",
+          "kind": "requested",
+          "version": "1.4.4-demo",
+          "modIds": [
+            "shooting_star_demo"
+          ],
+          "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-demo",
+          "name": "The Shooting Star (Demo)"
+        },
+        "new": {
+          "fileName": "the-shooting-star-demo-1.5.1-forge.jar",
+          "sha256": "9a547738e3971b79f0e501fb3311e4abb74e48547acab6c921db9c8c3b1dd4f5",
+          "sizeBytes": 24579696,
+          "sourceUrl": "https://edge.forgecdn.net/files/9400/022/the-shooting-star-demo-1.5.1-forge.jar",
+          "projectId": 1719195,
+          "fileId": 9400022,
+          "path": "mods/the-shooting-star-demo-1.5.1-forge.jar",
+          "kind": "requested",
+          "version": "1.5.1-demo",
+          "modIds": [
+            "shooting_star_demo"
+          ],
+          "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-demo",
+          "name": "The Shooting Star (Demo)"
+        }
+      },
+      {
+        "old": {
+          "fileName": "rimulib-1.1.2-forge.jar",
+          "sha256": "579a02a11efaf5d16b9704e0597e82b6c6c68c87c5c645953fe4a197fff71960",
+          "sizeBytes": 1073424,
+          "sourceUrl": "https://edge.forgecdn.net/files/9302/618/rimulib-1.1.2-forge.jar",
+          "projectId": 1753907,
+          "fileId": 9302618,
+          "path": "mods/rimulib-1.1.2-forge.jar",
+          "kind": "dependency",
+          "version": "1.1.2",
+          "modIds": [
+            "rimulib"
+          ],
+          "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rimulib",
+          "name": "rimulib"
+        },
+        "new": {
+          "fileName": "rimulib-1.2.1-forge.jar",
+          "sha256": "906cbd286f6c491898620eed26aea1337e21bb68b6345c211ba083e9c646c5e6",
+          "sizeBytes": 1256374,
+          "sourceUrl": "https://edge.forgecdn.net/files/9399/933/rimulib-1.2.1-forge.jar",
+          "projectId": 1753907,
+          "fileId": 9399933,
+          "path": "mods/rimulib-1.2.1-forge.jar",
+          "kind": "dependency",
+          "version": "1.2.1",
+          "modIds": [
+            "rimulib"
+          ],
+          "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rimulib",
+          "name": "rimulib"
+        }
+      }
+    ],
+    "audit": {
+      "path": "tools/qa/shooting-star-151-static.json",
+      "sha256": "bb222ecd12bdac3e8c9ef7d70a8f8c6c6aeab0b7548d3f4cbe1de8fd35103876"
+    },
+    "ownFrameworkAdded": false,
+    "publicSourceUnchangedUntilRootGate": true
   }
 }

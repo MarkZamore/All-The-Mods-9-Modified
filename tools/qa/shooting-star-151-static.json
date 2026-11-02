@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "status": "STATIC_AUDIT_PASS_NATIVE_ACCEPTANCE_PENDING",
+  "sourceBaseRevision": "5ddb52423ae08764234a3b8de7c3f6db6242df8d",
+  "candidateSourceLockSha256": "d745d91560e234e65e120f8beaf3be3e4e2a98e6ae63bbfd03b74848d50fb1b4",
+  "replacements": [
+    {
+      "old": {
+        "fileName": "the-shooting-star-demo-1.4.4-forge.jar",
+        "sha256": "c95777d06233b12f0172ff92925fc2521a5c7a04acdd899fe81acde888dd4fcf",
+        "sizeBytes": 13470587,
+        "sourceUrl": "https://edge.forgecdn.net/files/9231/721/the-shooting-star-demo-1.4.4-forge.jar",
+        "projectId": 1719195,
+        "fileId": 9231721,
+        "path": "mods/the-shooting-star-demo-1.4.4-forge.jar",
+        "kind": "requested",
+        "version": "1.4.4-demo",
+        "modIds": [
+          "shooting_star_demo"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-demo",
+        "name": "The Shooting Star (Demo)"
+      },
+      "new": {
+        "fileName": "the-shooting-star-demo-1.5.1-forge.jar",
+        "sha256": "9a547738e3971b79f0e501fb3311e4abb74e48547acab6c921db9c8c3b1dd4f5",
+        "sizeBytes": 24579696,
+        "sourceUrl": "https://edge.forgecdn.net/files/9400/022/the-shooting-star-demo-1.5.1-forge.jar",
+        "projectId": 1719195,
+        "fileId": 9400022,
+        "path": "mods/the-shooting-star-demo-1.5.1-forge.jar",
+        "kind": "requested",
+        "version": "1.5.1-demo",
+        "modIds": [
+          "shooting_star_demo"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-demo",
+        "name": "The Shooting Star (Demo)"
+      }
+    },
+    {
+      "old": {
+        "fileName": "rimulib-1.1.2-forge.jar",
+        "sha256": "579a02a11efaf5d16b9704e0597e82b6c6c68c87c5c645953fe4a197fff71960",
+        "sizeBytes": 1073424,
+        "sourceUrl": "https://edge.forgecdn.net/files/9302/618/rimulib-1.1.2-forge.jar",
+        "projectId": 1753907,
+        "fileId": 9302618,
+        "path": "mods/rimulib-1.1.2-forge.jar",
+        "kind": "dependency",
+        "version": "1.1.2",
+        "modIds": [
+          "rimulib"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rimulib",
+        "name": "rimulib"
+      },
+      "new": {
+        "fileName": "rimulib-1.2.1-forge.jar",
+        "sha256": "906cbd286f6c491898620eed26aea1337e21bb68b6345c211ba083e9c646c5e6",
+        "sizeBytes": 1256374,
+        "sourceUrl": "https://edge.forgecdn.net/files/9399/933/rimulib-1.2.1-forge.jar",
+        "projectId": 1753907,
+        "fileId": 9399933,
+        "path": "mods/rimulib-1.2.1-forge.jar",
+        "kind": "dependency",
+        "version": "1.2.1",
+        "modIds": [
+          "rimulib"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/rimulib",
+        "name": "rimulib"
+      }
+    }
+  ],
+  "minecraftVersion": "1.20.1",
+  "loader": {
+    "type": "forge",
+    "version": "47.4.0"
+  },
+  "platformChanged": false,
+  "requestedAdditionCount": 82,
+  "newDependencyCount": 19,
+  "shippedJarCount": 532,
+  "supportFileCount": 18,
+  "allOther1913RuntimeRowsUnchangedFromParent": true,
+  "baseJarOrBaseIdChanged": false,
+  "removalDecisionsPreserved": [
+    "Vocaloid Stars",
+    "The Shooting Star Addition",
+    "The Shooting Star: SS-21 Quasar"
+  ],
+  "officialProjectUrlsRetained": true,
+  "dependencyRanges": {
+    "shooting_star_demo": {
+      "forge": "[47.1,)",
+      "minecraft": "[1.20.1,1.20.2),[1.21.1,1.21.2)",
+      "rimulib": "[1.1.6,2.0)"
+    },
+    "rimulib": {
+      "forge": "[47.1,)",
+      "minecraft": "[1.20.1,1.20.2),[1.21.1,1.21.2)"
+    }
+  },
+  "existingType95": {
+    "version": "1.0.2+forge-1.20.1",
+    "rimulibRange": "[1.1.1,2.0)",
+    "memberReferencesChecked": 120,
+    "referencedLibraryClasses": 49,
+    "missingClassesOrMembers": 0,
+    "changedStaticnessOrReducedPublicVisibility": 0,
+    "scope": "Actual mc1201 branch constant-pool references against new library members and supertype resolution; not Mixin/gameplay proof.",
+    "reducedPublicClassVisibilityOrChangedClassKind": 0
+  },
+  "newShootingStarApiReferences": {
+    "libraryMemberReferencesChecked": 134,
+    "referencedLibraryClasses": 58,
+    "missingClassesOrMembers": 0,
+    "changedStaticnessOrReducedPublicVisibility": 0,
+    "reducedPublicClassVisibilityOrChangedClassKind": 0
+  },
+  "apiProof": {
+    "path": "tools/qa/shooting-star-151-rimulib-api.json",
+    "sha256": "5df5213957cbd9902d12aa8aaf1481e0a67c96d2fad56ebaa558b98f7ab44a8e"
+  },
+  "registryResources": {
+    "newBlockResource": "shooting_star_demo:gravitia_space_block",
+    "newDimensions": [
+      "shooting_star_demo:black",
+      "shooting_star_demo:gravitia_stage"
+    ],
+    "newBiomeResources": [
+      "shooting_star_demo:black",
+      "shooting_star_demo:gravitia_space",
+      "shooting_star_demo:void"
+    ],
+    "removedDataAndRegistryResourcePaths": [],
+    "actualNativeRegistryIdPreservationConfirmed": false,
+    "scope": "Data/resource path and localization identifiers only; opaque renamed class symbols prevent a trustworthy static full registry-ID assertion."
+  },
+  "keys": {
+    "oldLanguageIds": 6,
+    "newLanguageIds": 7,
+    "newLanguageId": "key.shooting_star_demo.stellar_remote.gravitia",
+    "authorSaysGravitiaMenuOnly": true,
+    "actualRegisteredNewKeyMappingConfirmed": false,
+    "requiredBeforeCompositionAcceptance": "Capture actual registered key IDs in the candidate native client; preserve existing user/preset mappings; update stock jar hashes."
+  },
+  "worldMutationAndSafety": {
+    "classification": "Shooting Star remains NEW requested; Rimulib remains NEW dependency, never BASE.",
+    "activeCustomSafetyFrameworkPresent": false,
+    "ownSafetyFrameworkAdded": false,
+    "newDestructiveMechanisms": true,
+    "newMechanisms": [
+      "SS06Gravitia whole-world/imaginary-space ability",
+      "Rimulib world shape persistence and chunk section/palette rewrite paths (16 newly added world classes)."
+    ],
+    "spCloneBehavior": "Author1.5.1 saves original singleplayer world then uses a new <world> - Gravitia world. Bytecode eligible-path tests dedicated/published/playercount and an additional opaque condition.",
+    "lanBoundary": "Published integrated server/LAN is excluded from that singleplayer clone helper; do not promise the original world stays untouched when SS06 is used in Steam/LAN.",
+    "nativeClaimProtectionVerified": false,
+    "nativeWorldApiScope": "WorldShapes.set receives server+dimension+shape+String+boolean; its Entry stores shape,lo,hi,spawning,shaper and chunk appliers perform direct section/palette operations. No actor-aware FTB claims guarantee follows.",
+    "automaticDestructionAtNormalStartupClaimed": false,
+    "worldOrAbilityTestRun": false
+  },
+  "strictPackReferences": {
+    "gameruleScriptRecipePatchNeeded": false,
+    "matchingRuntimeFiles": [
+      "launcher/controls-preset.txt"
+    ],
+    "oldPresetBytesRetainedPendingActualCapture": true,
+    "scope": "Exact Shooting Star/Rimulib namespaces in shipped config/defaultconfigs/KubeJS/launcher text were inspected; only the existing control preset refers to them. No guessed registry or key mapping is introduced."
+  },
+  "modListAndControlRecapture": "Required actual candidate native captures; parent557 IDs/638 Options remain historical and are not repinned to the new JARs.",
+  "publicationGate": "Root native comparison, actual registry/key metadata and independent network-investigation gate must complete before source publication.",
+  "authorSources": [
+    {
+      "url": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-demo/files/all",
+      "supports": "Latest1.5.1Forge listed Nov1 2026, rimuru_dev."
+    },
+    {
+      "url": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-demo/files/9400022",
+      "supports": "Discovered canonical file URL; website fetch blocked, officialforgecdn actual bytes+native metadata inspected."
+    },
+    {
+      "url": "https://www.curseforge.com/minecraft/mc-mods/the-shooting-star-demo",
+      "supports": "Author gameplay, MC/loader requirements, multiplayer and manual menu/confirmation."
+    },
+    {
+      "url": "https://www.curseforge.com/minecraft/mc-mods/rimulib/files/9399933",
+      "supports": "Official1.2.1Forge Nov1 2026 supports1.20.1/1.21.1; carving improvements and slider fix."
+    }
+  ],
+  "gameOrWorldRunClaimed": false,
+  "automaticDestructionAtNormalStartupClaimed": false,
+  "claimProtectionGuaranteeClaimed": false
+}

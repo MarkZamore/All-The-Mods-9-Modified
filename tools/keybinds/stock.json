@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Current532-JAR actual native RU namespace638/registry652 observed, all638 actual native mappings persisted after accepted singleplayer world/save/exit. Source preset was not applied and current bindings were not compared to it; gameAcceptance=false remains the controls-specific limitation, not a rejection of content acceptance. Historical applied-preset evidence remains separately named.",
+  "scope": "ShootingStar1.5.1/Rimulib1.2.1 candidate: the638 parent namespace/roles and preset bytes are retained, but sourceJars and native evidence below still describe the prior cohort. Actual candidate key registration and JAR-bound recapture are pending; no current preset or game acceptance is claimed.",
   "englishNativeSha256": "1e2c66275c9b5a3d0a7c7d9e42bd58921520f3356acb4c35b4c0deb9f72d4459",
   "russianNativeSha256": "c45fed5c93946834c8294bbed0a0c3703410c86fa0cbc7da83f4e52cde42fad1",
   "sourceJars": {
@@ -11119,7 +11119,7 @@
     "scope": "Actual initialized technical-instance title snapshot, not a first-boot/restart/all-abilities acceptance claim."
   },
   "weather2StaticKeyMappingProof": "tools/qa/weather2-keymapping-static.json",
-  "finalCompositionNativeRecapturePending": false,
+  "finalCompositionNativeRecapturePending": true,
   "initial533TitleEvidence": {
     "sourceLockSha256": "36859e8f9b67789407e976436bb99070428b2a53cd6b75831861f3ffee145265",
     "language": "en_us",
@@ -11160,7 +11160,8 @@
     "removedSha256": "ae94fb51f42ae969627f3ab25715bcef7e7080d02c900e347e42a73dbe6f2536",
     "reason": "User-approved removal after Free current-target null dereference crashed the integrated server."
   },
-  "currentNativeEvidence": {
+  "gameAcceptanceScope": "Controls-specific: current532 source preset was not applied and current binding equality/physical input/restart were not accepted. Full singleplayer content receipt is tools/qa/native-source-acceptance.json.",
+  "previousNativeEvidence532BeforeShootingStar151": {
     "sourceLockSha256": "0096874596826ede2b8250dc04f70c8db58b8d886d61d958cf69870e34537285",
     "language": "ru_ru",
     "languageObservedNatively": true,
@@ -11182,5 +11183,11 @@
       "scope": "Measured singleplayer content only; Steam/network acceptance remains open; no applied-preset/physical-input/restart/all-abilities or visual PASS."
     }
   },
-  "gameAcceptanceScope": "Controls-specific: current532 source preset was not applied and current binding equality/physical input/restart were not accepted. Full singleplayer content receipt is tools/qa/native-source-acceptance.json."
+  "currentNativeEvidence": {
+    "status": "PENDING_ACTUAL_CANDIDATE_CAPTURE",
+    "sourceLockSha256": "d745d91560e234e65e120f8beaf3be3e4e2a98e6ae63bbfd03b74848d50fb1b4",
+    "sourceJarsRepinned": false,
+    "oldPresetBytesRetained": true,
+    "newGravitiaLanguageKeyRegisteredClaimed": false
+  }
 }
