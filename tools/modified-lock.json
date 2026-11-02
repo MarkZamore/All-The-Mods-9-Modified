@@ -1795,22 +1795,6 @@
       "name": "The Midnight"
     },
     {
-      "fileName": "mine-mine-no-mi-1.20.1-0.11.6.jar",
-      "sha256": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
-      "sizeBytes": 21485453,
-      "sourceUrl": "https://edge.forgecdn.net/files/9108/443/mine-mine-no-mi-1.20.1-0.11.6.jar",
-      "projectId": 78726,
-      "fileId": 9108443,
-      "path": "mods/mine-mine-no-mi-1.20.1-0.11.6.jar",
-      "kind": "requested",
-      "version": "0.11.6",
-      "modIds": [
-        "mineminenomi"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/mine-mine-no-mi",
-      "name": "Mine Mine no Mi"
-    },
-    {
       "fileName": "nostalgia-1.2.0-forge-1.20.1.jar",
       "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2",
       "sizeBytes": 949977,
@@ -2661,17 +2645,17 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "97bb6694d53a23d677eda0c2419a69578b751a1bfe965a9e0ebfc19626154d13",
-      "sizeBytes": 12998,
+      "sha256": "be9debd58a9544dc9116c3f79b73eb3d1e71f9fd04a9ae2f92e8d4d6a5848fc4",
+      "sizeBytes": 12597,
       "kind": "resource",
-      "reason": "Optional key-only preset:625 retained source mappings after user removal of11 Dandadan/FairyMine keys from historical636 native namespace. Existing values unchanged; no new native/applied-preset claim."
+      "reason": "Optional key-only preset578 retained names: remove only58 mappings owned by3 explicitly excluded NEWmods from historical native636 namespace; remaining values unchanged. No fresh native/application claim."
     },
     {
       "path": "launcher/controls-preset.txt",
-      "sha256": "eb74ccdef915787537eb0363decb361f0f4cb8c14d7e9033375d25ad604e3594",
-      "sizeBytes": 34832,
+      "sha256": "e8562c1c8471fe1294ba8552b7a4600e07dd7a911dd981d3f81f4b614c94593a",
+      "sizeBytes": 31980,
       "kind": "configuration",
-      "reason": "Optional key-only preset:625 retained source mappings after user removal of11 Dandadan/FairyMine keys from historical636 native namespace. Existing values unchanged; no new native/applied-preset claim."
+      "reason": "Optional key-only preset578 retained names: remove only58 mappings owned by3 explicitly excluded NEWmods from historical native636 namespace; remaining values unchanged. No fresh native/application claim."
     },
     {
       "path": "launcher/jvm-args.txt",
@@ -2724,24 +2708,24 @@
     },
     {
       "path": "launcher/diagnostics/recipe-exception-observer.jar",
-      "sha256": "4c87326e5a243974ea46ccfc3c2b3d5d09709151e8e8538fb3d6b4f8b46f4c5d",
-      "sizeBytes": 30890,
+      "sha256": "434f6efced7866031dd49551bb1c979b4e9d07fde5351391be772779cbdcc9ba",
+      "sizeBytes": 33233,
       "kind": "temporary-diagnostic-tool",
-      "reason": "Explicit temporary manual read-only v6 diagnostics for next peer test:8recipe+24terminal events under256KiB own output, exact Alchemy/e4steam68ba guards,2e4+3MC terminal entry breakpoints, no class transforms/target method invocation. Start before host shares/guest joins; remove3tools and2diagnosticJVMflags after confirmed fix. Not a network-fix claim."
+      "reason": "Temporary manual read-only v7:8recipe+24terminal+32keepalive events share256KiB ownoutput. ExactnativeMinecraft/e4steam68ba/Alchemy guards, no class transforms/targetmethodinvoke. Original60s timeout and allJVMflags retained. Runbothparticipants beforeShare/join; remove3tools/2diagnosticflags after confirmedfix. Not a network-fix claim."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
       "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44",
       "sizeBytes": 2327,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Explicit temporary manual read-only v6 diagnostics for next peer test:8recipe+24terminal events under256KiB own output, exact Alchemy/e4steam68ba guards,2e4+3MC terminal entry breakpoints, no class transforms/target method invocation. Start before host shares/guest joins; remove3tools and2diagnosticJVMflags after confirmed fix. Not a network-fix claim."
+      "reason": "Temporary manual read-only v7:8recipe+24terminal+32keepalive events share256KiB ownoutput. ExactnativeMinecraft/e4steam68ba/Alchemy guards, no class transforms/targetmethodinvoke. Original60s timeout and allJVMflags retained. Runbothparticipants beforeShare/join; remove3tools/2diagnosticflags after confirmedfix. Not a network-fix claim."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
       "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a",
       "sizeBytes": 174,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Explicit temporary manual read-only v6 diagnostics for next peer test:8recipe+24terminal events under256KiB own output, exact Alchemy/e4steam68ba guards,2e4+3MC terminal entry breakpoints, no class transforms/target method invocation. Start before host shares/guest joins; remove3tools and2diagnosticJVMflags after confirmed fix. Not a network-fix claim."
+      "reason": "Temporary manual read-only v7:8recipe+24terminal+32keepalive events share256KiB ownoutput. ExactnativeMinecraft/e4steam68ba/Alchemy guards, no class transforms/targetmethodinvoke. Original60s timeout and allJVMflags retained. Runbothparticipants beforeShare/join; remove3tools/2diagnosticflags after confirmedfix. Not a network-fix claim."
     },
     {
       "path": "kubejs/data/alchemistry/recipes/dissolver/carpets.json",

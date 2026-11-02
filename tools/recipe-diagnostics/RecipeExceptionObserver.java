@@ -22,16 +22,17 @@ public final class RecipeExceptionObserver {
     static final String STEAM_CLASS = "link.e4steam.steam.SteamConnectionBridge";
     static final String STEAM_JAR = "e4steam-forge-mc1.18.2-1.20.2-v0.3.4-lanmc-native-ui.1.jar";
     static final String STEAM_SHA = "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40";
-    static final String HEADER = "[RecipeExceptionObserver v6] ";
+    static final String HEADER = "[RecipeExceptionObserver v7] ";
     static final int MAX_BYTES = 256 * 1024;
     static final int MAX_EVENTS = 8;
     static final int MAX_TERMINALS = 24;
-    record Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents, String steamSha, int maxTerminals) {
+    static final int MAX_KEEPALIVES = 32;
+    record Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents, String steamSha, int maxTerminals, int maxKeepAlives) {
         Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents) {
-            this(pid, parentPid, game, output, librarySha, chemistrySha, maxEvents, STEAM_SHA, MAX_TERMINALS);
+            this(pid, parentPid, game, output, librarySha, chemistrySha, maxEvents, STEAM_SHA, MAX_TERMINALS, MAX_KEEPALIVES);
         }
         Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents, String steamSha) {
-            this(pid, parentPid, game, output, librarySha, chemistrySha, maxEvents, steamSha, MAX_TERMINALS);
+            this(pid, parentPid, game, output, librarySha, chemistrySha, maxEvents, steamSha, MAX_TERMINALS, MAX_KEEPALIVES);
         }
     }
     record Candidate(long pid, Path game) { }
@@ -40,7 +41,11 @@ public final class RecipeExceptionObserver {
         new Site(STEAM_CLASS, "close", "(Z)V"), new Site(STEAM_CLASS, "beginGracefulClose", "()V"),
         new Site("net.minecraft.network.Connection", "channelInactive", "(Lio/netty/channel/ChannelHandlerContext;)V"),
         new Site("net.minecraft.network.Connection", "exceptionCaught", "(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Throwable;)V"),
-        new Site("net.minecraft.network.Connection", "m_129507_", "(Lnet/minecraft/network/chat/Component;)V"));
+        new Site("net.minecraft.network.Connection", "m_129507_", "(Lnet/minecraft/network/chat/Component;)V"),
+        new Site("net.minecraft.client.multiplayer.ClientPacketListener", "m_7231_", "(Lnet/minecraft/network/protocol/game/ClientboundKeepAlivePacket;)V"),
+        new Site("net.minecraft.server.network.ServerGamePacketListenerImpl", "m_5683_", "(Lnet/minecraft/network/protocol/game/ServerboundKeepAlivePacket;)V"),
+        new Site("net.minecraft.server.network.ServerGamePacketListenerImpl", "m_9942_", "(Lnet/minecraft/network/chat/Component;)V"));
+    static boolean keepAliveSite(Site site) { return site.methodName.equals("m_7231_") || site.methodName.equals("m_5683_"); }
 
     public static void main(String[] args) throws Exception {
         if (args.length >= 1 && args[0].equals("--self-test")) {
@@ -117,6 +122,7 @@ public final class RecipeExceptionObserver {
         VirtualMachine vm = null;
         int captured = 0;
         int terminalCaptured = 0;
+        int keepAliveCaptured = 0;
         OutputBudget budget = new OutputBudget();
         try {
             AttachingConnector connector = Bootstrap.virtualMachineManager().attachingConnectors().stream()
@@ -145,9 +151,9 @@ public final class RecipeExceptionObserver {
             }
             append(config, budget, HEADER + json(Map.of("kind", "observer_ready", "utc", Instant.now().toString(),
                 "pid", config.pid, "callerFilter", CALLER, "maxEvents", config.maxEvents,
-                "targetMethodsInvoked", false, "classMutation", false, "terminalHooks", hookStates, "maxTerminalEvents", config.maxTerminals)) + "\n");
+                "targetMethodsInvoked", false, "classMutation", false, "terminalHooks", hookStates, "maxTerminalEvents", config.maxTerminals, "maxKeepAliveEvents", config.maxKeepAlives)) + "\n");
             ready.run();
-            while ((captured < config.maxEvents || terminalCaptured < config.maxTerminals) && alive(config.pid) && alive(config.parentPid)) {
+            while ((captured < config.maxEvents || terminalCaptured < config.maxTerminals || keepAliveCaptured < config.maxKeepAlives) && alive(config.pid) && alive(config.parentPid)) {
                 EventSet eventSet;
                 try { eventSet = vm.eventQueue().remove(1000); }
                 catch (VMDisconnectedException disconnected) { break; }
@@ -162,7 +168,10 @@ public final class RecipeExceptionObserver {
                             var state = new LinkedHashMap<String, Object>(terminalRequests(manager, prepared.referenceType()));
                             state.put("kind", "terminal_hooks_ready"); state.put("utc", Instant.now().toString()); state.put("pid", config.pid);
                             snapshots.add(state); prepared.request().disable();
-                        } else if (event instanceof BreakpointEvent terminal && terminalCaptured < config.maxTerminals && terminal.request().getProperty("terminalSite") instanceof Site site) {
+                        } else if (event instanceof BreakpointEvent terminal && terminal.request().getProperty("terminalSite") instanceof Site site && keepAliveSite(site) && keepAliveCaptured < config.maxKeepAlives) {
+                            try { snapshots.add(keepAliveSnapshot(terminal, site, config.pid)); keepAliveCaptured++; }
+                            catch (Throwable failure) { snapshots.add(Map.of("kind", "keepalive_snapshot_failure", "utc", Instant.now().toString(), "error", failure.getClass().getName())); keepAliveCaptured++; }
+                        } else if (event instanceof BreakpointEvent terminal && terminalCaptured < config.maxTerminals && terminal.request().getProperty("terminalSite") instanceof Site site && !keepAliveSite(site)) {
                             try { snapshots.add(terminalSnapshot(terminal, site, config.pid)); terminalCaptured++; }
                             catch (Throwable failure) { snapshots.add(Map.of("kind", "terminal_snapshot_failure", "utc", Instant.now().toString(), "error", failure.getClass().getName())); terminalCaptured++; }
                         } else if (event instanceof ExceptionEvent exception && captured < config.maxEvents && isTarget(exception)) {
@@ -176,7 +185,8 @@ public final class RecipeExceptionObserver {
                     try { eventSet.resume(); } catch (VMDisconnectedException ignored) { }
                 }
                 for (Map<String, Object> snapshot : snapshots) append(config, budget, HEADER + json(snapshot) + "\n");
-                if (terminalCaptured >= config.maxTerminals) for (BreakpointRequest request : manager.breakpointRequests()) request.disable();
+                for (BreakpointRequest request : manager.breakpointRequests()) if (request.getProperty("terminalSite") instanceof Site site &&
+                    ((keepAliveSite(site) && keepAliveCaptured >= config.maxKeepAlives) || (!keepAliveSite(site) && terminalCaptured >= config.maxTerminals))) request.disable();
                 if (captured >= config.maxEvents) for (ExceptionRequest request : manager.exceptionRequests()) request.disable();
                 if (disconnected) break;
             }
@@ -237,6 +247,8 @@ public final class RecipeExceptionObserver {
         } else if (receiver != null && site.className.equals("net.minecraft.network.Connection")) {
             output.put("connection", fields(receiver, List.of("f_129471_", "f_290021_", "f_129479_", "f_129473_", "f_129468_")));
             Value listener = readField(receiver, "f_129470_"); output.put("packetListener", allowedValue(listener));
+        } else if (receiver != null && site.className.equals("net.minecraft.server.network.ServerGamePacketListenerImpl")) {
+            output.put("serverKeepAlive", serverKeepAliveFields(receiver));
         }
         var stack = new ArrayList<Map<String, Object>>();
         for (StackFrame frame : frames) {
@@ -261,6 +273,38 @@ public final class RecipeExceptionObserver {
             }
         }
         output.put("stack", stack); output.put("targetMethodsInvoked", false); output.put("classMutation", false); return output;
+    }
+
+    static Map<String, Object> keepAliveSnapshot(BreakpointEvent event, Site site, long pid) throws Exception {
+        var output = new LinkedHashMap<String, Object>(); output.put("kind", "keepalive"); output.put("utc", Instant.now().toString()); output.put("pid", pid);
+        output.put("thread", shortText(event.thread().name(), 120)); output.put("class", site.className); output.put("method", site.methodName);
+        StackFrame top = event.thread().frame(0); List<Value> arguments = top.getArgumentValues();
+        if (!arguments.isEmpty() && arguments.get(0) instanceof ObjectReference packet) {
+            String field = site.methodName.equals("m_7231_") ? "f_132209_" : "f_134092_";
+            output.put("packetClass", packet.referenceType().name()); output.put("challengeId", allowedValue(readField(packet, field)));
+        }
+        ObjectReference receiver = top.thisObject();
+        if (receiver != null) output.put("receiverId", receiver.uniqueID());
+        if (site.methodName.equals("m_7231_")) {
+            output.put("direction", "client_received_request");
+            var polling = new LinkedHashMap<String, Object>();
+            List<ReferenceType> renderTypes = event.virtualMachine().classesByName("com.mojang.blaze3d.systems.RenderSystem");
+            if (renderTypes.size() == 1) for (String name : List.of("pollingEvents", "pollEventsWaitStart")) {
+                Field field = renderTypes.get(0).fieldByName(name); polling.put(name, field == null ? null : allowedValue(renderTypes.get(0).getValue(field)));
+            }
+            output.put("renderSystemPolling", polling);
+        } else {
+            output.put("direction", "server_received_reply"); if (receiver != null) output.put("serverKeepAlive", serverKeepAliveFields(receiver));
+        }
+        output.put("targetMethodsInvoked", false); output.put("classMutation", false); return output;
+    }
+
+    static Map<String, Object> serverKeepAliveFields(ObjectReference listener) {
+        var output = new LinkedHashMap<String, Object>(); output.put("pending", allowedValue(readField(listener, "f_9748_")));
+        output.put("lastKeepAliveMillis", allowedValue(readField(listener, "f_9747_"))); output.put("challengeId", allowedValue(readField(listener, "f_9749_")));
+        Value player = readField(listener, "f_9743_"); if (player instanceof ObjectReference value) output.put("playerLatencyMillis", allowedValue(readField(value, "f_8943_")));
+        Value connection = readField(listener, "f_9742_"); if (connection instanceof ObjectReference value) output.put("connectionReceiverId", value.uniqueID());
+        return output;
     }
 
     static Map<String, Object> fields(ObjectReference object, List<String> names) {
@@ -446,11 +490,19 @@ public final class RecipeExceptionObserver {
         files.put("net/minecraft/network/chat/ComponentContents.java", "package net.minecraft.network.chat; public interface ComponentContents {} ");
         files.put("net/minecraft/network/chat/MutableComponent.java", "package net.minecraft.network.chat; public class MutableComponent implements Component { private final ComponentContents f_237194_; public MutableComponent(ComponentContents contents){f_237194_=contents;} }");
         files.put("net/minecraft/network/chat/contents/TranslatableContents.java", "package net.minecraft.network.chat.contents; public class TranslatableContents implements net.minecraft.network.chat.ComponentContents { private final String f_237497_; private final String f_263792_=null; public TranslatableContents(String key){f_237497_=key;} }");
+        files.put("net/minecraft/network/protocol/game/ClientboundKeepAlivePacket.java", "package net.minecraft.network.protocol.game; public class ClientboundKeepAlivePacket { private final long f_132209_; public ClientboundKeepAlivePacket(long id){f_132209_=id;} }");
+        files.put("net/minecraft/network/protocol/game/ServerboundKeepAlivePacket.java", "package net.minecraft.network.protocol.game; public class ServerboundKeepAlivePacket { private final long f_134092_; public ServerboundKeepAlivePacket(long id){f_134092_=id;} }");
+        files.put("com/mojang/blaze3d/systems/RenderSystem.java", "package com.mojang.blaze3d.systems; public class RenderSystem { private static final java.util.concurrent.atomic.AtomicBoolean pollingEvents=new java.util.concurrent.atomic.AtomicBoolean(false); private static final java.util.concurrent.atomic.AtomicLong pollEventsWaitStart=new java.util.concurrent.atomic.AtomicLong(12345); public static void load(){} }");
+        files.put("net/minecraft/client/multiplayer/ClientPacketListener.java", "package net.minecraft.client.multiplayer; public class ClientPacketListener { public boolean continued; public void m_7231_(net.minecraft.network.protocol.game.ClientboundKeepAlivePacket packet){continued=true;} }");
+        files.put("net/minecraft/server/level/ServerPlayer.java", "package net.minecraft.server.level; public class ServerPlayer { public int f_8943_=12; }");
+        files.put("net/minecraft/server/network/ServerGamePacketListenerImpl.java", "package net.minecraft.server.network; public class ServerGamePacketListenerImpl { private boolean f_9748_=true; private long f_9747_=112233,f_9749_=704815; public boolean continued; public void m_5683_(net.minecraft.network.protocol.game.ServerboundKeepAlivePacket packet){f_9748_=false;continued=true;} public void m_9942_(net.minecraft.network.chat.Component reason){continued=true;} public void tick(){f_9748_=true;f_9747_=998877;m_9942_(new net.minecraft.network.chat.MutableComponent(new net.minecraft.network.chat.contents.TranslatableContents(\"disconnect.timeout\")));} }");
+        files.put("net/minecraft/server/network/ServerGamePacketListenerImpl.java", files.get("net/minecraft/server/network/ServerGamePacketListenerImpl.java").replace("private boolean f_9748_=true;", "private net.minecraft.server.level.ServerPlayer f_9743_=new net.minecraft.server.level.ServerPlayer(); private boolean f_9748_=true;"));
+        files.put("ProbeKeepAlive.java", "public class ProbeKeepAlive { public static void run(){com.mojang.blaze3d.systems.RenderSystem.load();net.minecraft.client.multiplayer.ClientPacketListener client=new net.minecraft.client.multiplayer.ClientPacketListener();client.m_7231_(new net.minecraft.network.protocol.game.ClientboundKeepAlivePacket(704815));if(!client.continued)throw new AssertionError();net.minecraft.server.network.ServerGamePacketListenerImpl server=new net.minecraft.server.network.ServerGamePacketListenerImpl();server.m_5683_(new net.minecraft.network.protocol.game.ServerboundKeepAlivePacket(704815));if(!server.continued)throw new AssertionError();server.tick();} }");
         files.put("net/minecraft/network/Connection.java", "package net.minecraft.network; public class Connection { private Object f_129470_=new Listener(); private Object f_129471_,f_290021_,f_129468_; private boolean f_129479_,f_129473_; public static class Listener {} public void channelInactive(io.netty.channel.ChannelHandlerContext c){} public void exceptionCaught(io.netty.channel.ChannelHandlerContext c,Throwable t){f_129479_=true;} public void m_129507_(net.minecraft.network.chat.Component c){f_129471_=c;} }");
         files.put("link/e4steam/steam/SteamRuntime.java", "package link.e4steam.steam; public class SteamRuntime { public enum State { RUNNING } private State status=State.RUNNING; private Throwable failureCause; private boolean permanentlyShutdown; private int activityCount=1; }");
         files.put("link/e4steam/steam/SteamConnectionBridge.java", "package link.e4steam.steam; import java.util.concurrent.atomic.*; public class SteamConnectionBridge { public static final boolean NETWORK_DIAGNOSTICS=true; private final SteamRuntime runtime=new SteamRuntime(); private final int connectionId; private final boolean hostSide; private final AtomicBoolean started=new AtomicBoolean(true),closed=new AtomicBoolean(),outboundFinQueued=new AtomicBoolean(),peerReady=new AtomicBoolean(true); private final AtomicLong tcpReadBytes=new AtomicLong(41); private String outboundWait=\"selftest\"; private int mode; public SteamConnectionBridge(int id,boolean host){connectionId=id;hostSide=host;} public void localEof(){mode=0;readLoop();} public void localIo(){mode=1;readLoop();} private void readLoop(){if(mode==0){beginGracefulClose();return;}try{throw new java.io.IOException(\"qa_bridge_local_io\");}catch(java.io.IOException exception){close(false);}} public void acceptRemoteFin(){beginGracefulClose();} private void beginGracefulClose(){outboundFinQueued.set(true);} public void close(boolean reset){closed.set(true);} }");
         files.put("ProbeClose.java", "public class ProbeClose { public static void run(){new link.e4steam.steam.SteamConnectionBridge(7,true).localEof();new link.e4steam.steam.SteamConnectionBridge(8,true).localIo();new link.e4steam.steam.SteamConnectionBridge(9,false).acceptRemoteFin();net.minecraft.network.Connection connection=new net.minecraft.network.Connection();connection.exceptionCaught(null,new java.io.IOException(\"qa_native_local_io\"));connection.m_129507_(new net.minecraft.network.chat.MutableComponent(new net.minecraft.network.chat.contents.TranslatableContents(\"disconnect.timeout\")));new net.minecraft.network.Connection().channelInactive(null);} }");
-        files.put("ProbeMain.java", files.get("ProbeMain.java").replace("Files.writeString(root.resolve(\"continued.flag\"),\"continued\");", "ProbeClose.run(); Files.writeString(root.resolve(\"continued.flag\"),\"continued\");"));
+        files.put("ProbeMain.java", files.get("ProbeMain.java").replace("Files.writeString(root.resolve(\"continued.flag\"),\"continued\");", "ProbeClose.run(); ProbeKeepAlive.run(); Files.writeString(root.resolve(\"continued.flag\"),\"continued\");"));
         var compilerArgs=new ArrayList<String>(List.of("--release","17","-g","-d",classes.toString()));
         for(var row:files.entrySet()){Path file=sources.resolve(row.getKey());Files.createDirectories(file.getParent());Files.writeString(file,row.getValue());compilerArgs.add(file.toString());}
         int compiled=ToolProvider.getSystemJavaCompiler().run(null,null,null,compilerArgs.toArray(String[]::new));if(compiled!=0)throw new IllegalStateException("Self-test compilation failed");
@@ -471,16 +523,21 @@ public final class RecipeExceptionObserver {
             if (selected.pid != child.pid() || !selected.game.equals(game)) throw new AssertionError("Discovery selected wrong game");
             try { selectOne(List.of()); throw new AssertionError("Empty selection accepted"); } catch (IllegalStateException expected) { }
             try { selectOne(List.of(selected, selected)); throw new AssertionError("Ambiguous selection accepted"); } catch (IllegalStateException expected) { }
-            Thread observer=new Thread(()->{try{observe(new Config(child.pid(),child.pid(),game,game.resolve("logs/debug.log"),lib,chem,2,steam,6),()->{try{Files.writeString(root.resolve("start.flag"),"start");}catch(Exception failure){throw new RuntimeException(failure);}});observing.complete(null);}catch(Throwable failure){observing.completeExceptionally(failure);}},"self-test-observer");observer.start();
+            Thread observer=new Thread(()->{try{observe(new Config(child.pid(),child.pid(),game,game.resolve("logs/debug.log"),lib,chem,2,steam,7,2),()->{try{Files.writeString(root.resolve("start.flag"),"start");}catch(Exception failure){throw new RuntimeException(failure);}});observing.complete(null);}catch(Throwable failure){observing.completeExceptionally(failure);}},"self-test-observer");observer.start();
             observing.get(20,TimeUnit.SECONDS);waitFor(root.resolve("continued.flag"),child,5000);
             String captured=Files.readString(game.resolve("logs/debug.log"));
             byte[] resultingLog=Files.readAllBytes(game.resolve("logs/debug.log")); if(!Arrays.equals(existingLog,Arrays.copyOf(resultingLog,existingLog.length)))throw new AssertionError("Existing log prefix changed");
             if(!captured.contains("qa:caught_recipe")||!captured.contains("qa:uncaught_recipe")||!captured.contains("\"ingredientValuesLength\":0")||!captured.contains("\"caught\":false")||!captured.contains("\"caught\":true")||captured.contains("IllegalStateException")||!captured.contains("\"readerIndex\":9")||!captured.contains("\"writerIndex\":17")||!Files.exists(root.resolve("continued.flag")))throw new AssertionError("Observer capture/filter/resume self-test failed");
-            if (captured.split("\"kind\":\"connection_terminal\"", -1).length - 1 != 6 || !captured.contains("qa_native_local_io") ||
+            if (captured.split("\"kind\":\"connection_terminal\"", -1).length - 1 != 7 || !captured.contains("qa_native_local_io") ||
                 !captured.contains("acceptRemoteFin") || !captured.contains("readLoop") || !captured.contains("\"tcpReadBytes\":41") ||
                 !captured.contains("\"packetListener\":{\"class\":\"net.minecraft.network.Connection$Listener\"}") ||
                 !captured.contains("terminal_hooks_ready") || !captured.contains("\"key\":\"disconnect.timeout\"") || captured.contains("terminal_snapshot_failure")) throw new AssertionError("Terminal origin/filter/fields self-test failed");
             if (captured.lines().noneMatch(line -> line.contains("\"method\":\"channelInactive\"") && line.contains("\"f_129471_\":null"))) throw new AssertionError("Bare channel-close null reason not captured");
+            if (captured.split("\"kind\":\"keepalive\"", -1).length - 1 != 2 || captured.split("\"challengeId\":704815", -1).length - 1 < 3 ||
+                !captured.contains("\"pollingEvents\":false") || !captured.contains("\"pollEventsWaitStart\":12345") ||
+                !captured.contains("\"playerLatencyMillis\":12") ||
+                captured.lines().noneMatch(line -> line.contains("\"method\":\"m_9942_\"") && line.contains("\"method\":\"tick\"") && line.contains("\"lastKeepAliveMillis\":998877")) ||
+                captured.contains("keepalive_snapshot_failure")) throw new AssertionError("Keepalive matching/state/original-disconnect self-test failed");
             Files.writeString(root.resolve("stop.flag"),"stop");if(!child.waitFor(5,TimeUnit.SECONDS)||child.exitValue()!=0)throw new AssertionError("Self-test debuggee did not continue and exit normally");
             Files.writeString(root.resolve("result.json"),json(Map.of("status","PASS","capturedEvents",2,"exactRecipeIds",List.of("qa:caught_recipe","qa:uncaught_recipe"),"emptyArrayCaptured",true,"unrelatedErrorsExcluded",true,"eventThreadsResumed",true,"debuggeeExitCode",child.exitValue(),"logSizes",Map.of("totalBytes",Files.size(game.resolve("logs/debug.log")),"preexistingBytesPreserved",existingLog.length,"newBytes",resultingLog.length-existingLog.length),"targetMethodsInvoked",false,"classMutation",false))+"\n");
             System.out.println("SELF_TEST_PASS "+root.resolve("result.json"));

@@ -52,3 +52,10 @@ class InventoryRemovalProjectionTests(unittest.TestCase):
         self.current["derivation"]["freshNativeObservationClaimed"] = False
         self.current["evidenceUtc"] = "new-unobserved-time"
         with self.assertRaises(ValueError): pack_library.inventory_evidence_kind(self.pack, self.current)
+
+    def test_a_projected_parent_cannot_impersonate_the_last_actual_capture(self):
+        parent = {**self.parent, "derivation": {"kind": "exact-removal-projection"}}
+        raw = (json.dumps(parent) + "\n").encode()
+        (self.pack / "parent.json").write_bytes(raw)
+        self.current["derivation"]["parentInventory"]["sha256"] = hashlib.sha256(raw).hexdigest()
+        with self.assertRaises(ValueError): pack_library.inventory_evidence_kind(self.pack, self.current)

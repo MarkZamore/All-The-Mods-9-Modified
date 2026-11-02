@@ -4,24 +4,24 @@
   "temporaryFiles": [
     {
       "path": "launcher/diagnostics/recipe-exception-observer.jar",
-      "sha256": "4c87326e5a243974ea46ccfc3c2b3d5d09709151e8e8538fb3d6b4f8b46f4c5d",
-      "sizeBytes": 30890,
+      "sha256": "434f6efced7866031dd49551bb1c979b4e9d07fde5351391be772779cbdcc9ba",
+      "sizeBytes": 33233,
       "kind": "temporary-diagnostic-tool",
-      "reason": "Explicit temporary manual read-only v6 diagnostics for next peer test:8recipe+24terminal events under256KiB own output, exact Alchemy/e4steam68ba guards,2e4+3MC terminal entry breakpoints, no class transforms/target method invocation. Start before host shares/guest joins; remove3tools and2diagnosticJVMflags after confirmed fix. Not a network-fix claim."
+      "reason": "Temporary manual read-only v7:8recipe+24terminal+32keepalive events share256KiB ownoutput. ExactnativeMinecraft/e4steam68ba/Alchemy guards, no class transforms/targetmethodinvoke. Original60s timeout and allJVMflags retained. Runbothparticipants beforeShare/join; remove3tools/2diagnosticflags after confirmedfix. Not a network-fix claim."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
       "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44",
       "sizeBytes": 2327,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Explicit temporary manual read-only v6 diagnostics for next peer test:8recipe+24terminal events under256KiB own output, exact Alchemy/e4steam68ba guards,2e4+3MC terminal entry breakpoints, no class transforms/target method invocation. Start before host shares/guest joins; remove3tools and2diagnosticJVMflags after confirmed fix. Not a network-fix claim."
+      "reason": "Temporary manual read-only v7:8recipe+24terminal+32keepalive events share256KiB ownoutput. ExactnativeMinecraft/e4steam68ba/Alchemy guards, no class transforms/targetmethodinvoke. Original60s timeout and allJVMflags retained. Runbothparticipants beforeShare/join; remove3tools/2diagnosticflags after confirmedfix. Not a network-fix claim."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
       "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a",
       "sizeBytes": 174,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Explicit temporary manual read-only v6 diagnostics for next peer test:8recipe+24terminal events under256KiB own output, exact Alchemy/e4steam68ba guards,2e4+3MC terminal entry breakpoints, no class transforms/target method invocation. Start before host shares/guest joins; remove3tools and2diagnosticJVMflags after confirmed fix. Not a network-fix claim."
+      "reason": "Temporary manual read-only v7:8recipe+24terminal+32keepalive events share256KiB ownoutput. ExactnativeMinecraft/e4steam68ba/Alchemy guards, no class transforms/targetmethodinvoke. Original60s timeout and allJVMflags retained. Runbothparticipants beforeShare/join; remove3tools/2diagnosticflags after confirmedfix. Not a network-fix claim."
     }
   ],
   "temporaryJvmFlags": [
@@ -42,11 +42,13 @@
   ],
   "modernFixClassification": "Official BASE5.25.0 cache candidate: retain if justified, otherwise explicitly review/revert to author5.24.4. Not automatically removed with diagnostic utilities.",
   "noRealIncidentFixClaimed": true,
-  "currentObserverVersion": 6,
+  "currentObserverVersion": 7,
   "eventLimits": {
     "recipeEvents": 8,
     "terminalEvents": 24,
+    "keepAliveEvents": 32,
     "ownEmittedBytes": 262144
   },
-  "originalV5ReceiptRemainsHistorical": true
+  "originalV5ReceiptRemainsHistorical": true,
+  "standardConnectivityTimeoutUnchanged": true
 }

@@ -1435,12 +1435,13 @@
     {
       "name": "Mine Mine no Mi",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/mine-mine-no-mi",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "mineminenomi"
       ],
       "version": "0.11.6",
-      "sha256": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc"
+      "sha256": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
+      "reason": "User explicitly removed Mine Mine no Mi; no author JAR rewrite or replacement framework."
     },
     {
       "name": "Mine Piece",
@@ -1997,7 +1998,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 80,
+  "selectedRequestedProjects": 79,
   "dependencyJars": 19,
   "authorCompatibilitySelections": [
     {
@@ -2241,8 +2242,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "USER_REQUESTED_REMOVALS_SOURCE_PROJECTED_NEW_NATIVE_PEER_TEST_PENDING",
-    "sourceLockSha256": "d38c8f283f6b0e631c306bf7531fadb2b642a136dfa954ebacf7cc809d53229d",
+    "status": "SOURCE_529_AND_V7_READY_STANDARD_TIMEOUT_RETAINED_ACTUAL_PEER_TEST_PENDING",
+    "sourceLockSha256": "17c2d0b831ffe1e40ae915dc1eefdceabc2d1ebfe509e5389bfec0903a37ef91",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -2382,13 +2383,18 @@
     "cleanupInventory": "tools/qa/temporary-recipe-diagnostics-cleanup.json",
     "manualOnly": true,
     "unsupportedStartupJsRemoved": true,
-    "observerVersion": 6,
+    "observerVersion": 7,
     "recipeEventLimit": 8,
     "terminalEventLimit": 24,
     "ownEmittedBytesLimit": 262144,
-    "sourceSelfTestProof": "tools/qa/recipe-diagnostics-v6-selftest.json",
+    "sourceSelfTestProof": "tools/recipe-diagnostics/v7/validation.json",
     "exactTerminalProfileSha256": "f843f8a2327d275f07f15c4396e44ed323481d5f1705eedae52b67fc132524f2",
-    "actualNewUserGameClaimed": false
+    "actualNewUserGameClaimed": false,
+    "keepAliveEventLimit": 32,
+    "authorConnectivityTimeout60Retained": true,
+    "sourceSelfTestSha256": "27e93dc4235531afd8091e03156995a923fa9e76879609b062e8c3624a0db2d5",
+    "exactKeepAliveNativeProfile": "tools/recipe-diagnostics/v7/native-profile.public.json",
+    "exactKeepAliveNativeProfileSha256": "6a49e9fa8271d32c752d4c732bc2d01f61ccd303493838ddfe74b797333d184a"
   },
   "previousThreeJarNativeAcceptanceBeforeCarpetDataFix": {
     "status": "ROOT_ACCEPTED_CLEAN_NATIVE_NETWORK_REPRO_PENDING",
@@ -2494,5 +2500,97 @@
     "shootingStar151AndRimulib121Retained": true,
     "modernFix525RetainedForIsolatedNetworkDiagnosis": true,
     "safetyReason": "Removing two NEW content mods adds no world mutation paths or custom framework. Otherauthorabilities/configs/Safetyabsence unchanged. Existing-world content/registry loss from these removals is expected, not a lossless migration promise."
+  },
+  "previousContentAcceptanceBeforeMmmAndTimeout": {
+    "status": "USER_REQUESTED_REMOVALS_SOURCE_PROJECTED_NEW_NATIVE_PEER_TEST_PENDING",
+    "sourceLockSha256": "d38c8f283f6b0e631c306bf7531fadb2b642a136dfa954ebacf7cc809d53229d",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "mineMineNoMiRemoval": {
+    "userAuthorized": true,
+    "removedFile": {
+      "fileName": "mine-mine-no-mi-1.20.1-0.11.6.jar",
+      "sha256": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
+      "sizeBytes": 21485453,
+      "sourceUrl": "https://edge.forgecdn.net/files/9108/443/mine-mine-no-mi-1.20.1-0.11.6.jar",
+      "projectId": 78726,
+      "fileId": 9108443,
+      "path": "mods/mine-mine-no-mi-1.20.1-0.11.6.jar",
+      "kind": "requested",
+      "version": "0.11.6",
+      "modIds": [
+        "mineminenomi"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/mine-mine-no-mi",
+      "name": "Mine Mine no Mi"
+    },
+    "removedKeyNames": [
+      "Test Key",
+      "key.mineminenomi.player_stats",
+      "key.mineminenomi.open_abilities_menu",
+      "key.mineminenomi.open_challenges_menu",
+      "key.mineminenomi.open_quests_menu",
+      "key.mineminenomi.open_crew_menu",
+      "key.mineminenomi.open_ability_tree_menu",
+      "key.mineminenomi.change_vehicle_mode",
+      "key.mineminenomi.change_combat_mode",
+      "key.mineminenomi.next_combat_bar",
+      "key.mineminenomi.previous_combat_bar",
+      "key.mineminenomi.last_combat_bar",
+      "key.mineminenomi.change_ability_mode",
+      "key.mineminenomi.combat_bar.1.slot.1",
+      "key.mineminenomi.combat_bar.1.slot.2",
+      "key.mineminenomi.combat_bar.1.slot.3",
+      "key.mineminenomi.combat_bar.1.slot.4",
+      "key.mineminenomi.combat_bar.1.slot.5",
+      "key.mineminenomi.combat_bar.1.slot.6",
+      "key.mineminenomi.combat_bar.1.slot.7",
+      "key.mineminenomi.combat_bar.1.slot.8",
+      "key.mineminenomi.combat_bar.2.slot.1",
+      "key.mineminenomi.combat_bar.2.slot.2",
+      "key.mineminenomi.combat_bar.2.slot.3",
+      "key.mineminenomi.combat_bar.2.slot.4",
+      "key.mineminenomi.combat_bar.2.slot.5",
+      "key.mineminenomi.combat_bar.2.slot.6",
+      "key.mineminenomi.combat_bar.2.slot.7",
+      "key.mineminenomi.combat_bar.2.slot.8",
+      "key.mineminenomi.combat_bar.3.slot.1",
+      "key.mineminenomi.combat_bar.3.slot.2",
+      "key.mineminenomi.combat_bar.3.slot.3",
+      "key.mineminenomi.combat_bar.3.slot.4",
+      "key.mineminenomi.combat_bar.3.slot.5",
+      "key.mineminenomi.combat_bar.3.slot.6",
+      "key.mineminenomi.combat_bar.3.slot.7",
+      "key.mineminenomi.combat_bar.3.slot.8",
+      "key.mineminenomi.combat_bar_shortcut.1",
+      "key.mineminenomi.combat_bar_shortcut.2",
+      "key.mineminenomi.combat_bar_shortcut.3",
+      "key.mineminenomi.combat_bar_shortcut.4",
+      "key.mineminenomi.combat_bar_shortcut.5",
+      "key.mineminenomi.combat_bar_shortcut.6",
+      "key.mineminenomi.combat_bar_shortcut.7",
+      "key.mineminenomi.combat_bar_shortcut.8",
+      "key.mineminenomi.combat_bar_shortcut.9",
+      "key.mineminenomi.combat_bar_shortcut.10"
+    ],
+    "retainedSourceJars": 529,
+    "retainedProjectedPackModIds": 554,
+    "retainedPresetNames": 578,
+    "projectionDirectlyFromActual557Ids": true,
+    "orphanNewDependenciesRemoved": [],
+    "optionalSharedBaseDependencyKept": "cloth_config",
+    "strictScriptGameruleConfigReferencesFound": false,
+    "carpetDataFixAndShootingStar151Rimulib121ModernFix525V6Unchanged": true,
+    "nativeNewCohortAcceptanceClaimed": false,
+    "safetyReason": "Removing a NEWcontentmod adds no world mutation paths. Nativeauthorabilities/permissiongates for all remaining mods and lack of custom Safety/framework unchanged. Existing-world MMM registry/content loss is expected, not a lossless migration claim."
+  },
+  "connectivityTimeoutDecision": {
+    "authorDefault60Retained": true,
+    "activeTimeoutScript": false,
+    "proposed180DeferredByLatestUserSteering": true,
+    "reason": "Observed server timeout proves the outcome, not why keepalive stopped. Preserve standard author timeout while v7 read-only observation investigates actual keepalive/original-disconnect flow."
   }
 }

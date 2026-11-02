@@ -1,0 +1,39 @@
+{
+  "minecraft": "1.20.1",
+  "forge": "47.4.0",
+  "verification": "Static exact-JAR bytecode profile independently supplied by completion_scope_audit; real-player run pending",
+  "originalSrgJarSha256": "e2e940fe7ca0a9fba5a5c11ad2cf3e2f7df91bbf51d12af22cdde7af18adc344",
+  "forgeClientJarSha256": "010adc332f19b05fb24383954ec7a88694666216e480a6824ff0cbc4740c3c66",
+  "sites": [
+    {
+      "class": "net.minecraft.client.multiplayer.ClientPacketListener",
+      "method": "m_7231_",
+      "signature": "(Lnet/minecraft/network/protocol/game/ClientboundKeepAlivePacket;)V",
+      "codeIndex": 0
+    },
+    {
+      "class": "net.minecraft.server.network.ServerGamePacketListenerImpl",
+      "method": "m_5683_",
+      "signature": "(Lnet/minecraft/network/protocol/game/ServerboundKeepAlivePacket;)V",
+      "codeIndex": 0
+    },
+    {
+      "class": "net.minecraft.server.network.ServerGamePacketListenerImpl",
+      "method": "m_9942_",
+      "signature": "(Lnet/minecraft/network/chat/Component;)V",
+      "codeIndex": 0
+    }
+  ],
+  "fields": {
+    "clientPacketChallenge": "f_132209_:J",
+    "serverPacketChallenge": "f_134092_:J",
+    "serverKeepAliveTime": "f_9747_:J",
+    "serverKeepAlivePending": "f_9748_:Z",
+    "serverKeepAliveChallenge": "f_9749_:J",
+    "serverPlayer": "f_9743_",
+    "serverConnection": "f_9742_",
+    "playerLatency": "f_8943_:I",
+    "RenderSystem": "pollingEvents AtomicBoolean.value and pollEventsWaitStart AtomicLong.value"
+  },
+  "timeSemantics": "Target monotonic millisecond fields are not UTC and must not be compared directly across machines/observer. pollingEvents=false rules out this freeze predicate only at the snapshot instant."
+}

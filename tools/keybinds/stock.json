@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Source projection625 names after exact removal of11 Dandadan/FairyMine mappings from historical native636 namespace. All625 retained preset values unchanged. No new native capture, applied-preset, gameplay or peer success claimed.",
+  "scope": "Direct source projection578 names from historical actual636 namespace by excluding11 Dandadan/FairyMine and47 MMM mappings. All578 retained source preset values unchanged; no new native or applied-preset capture claimed.",
   "englishNativeSha256": "1e2c66275c9b5a3d0a7c7d9e42bd58921520f3356acb4c35b4c0deb9f72d4459",
   "russianNativeSha256": "c45fed5c93946834c8294bbed0a0c3703410c86fa0cbc7da83f4e52cde42fad1",
   "sourceJars": {
@@ -386,7 +386,6 @@
     "memorysettings-1.20.1-5.9.jar": "90c2d5093da73a2dbffcf3981f02303444fbbf8371184ca9103a4d438246f2ee",
     "merequester-forge-1.20.1-1.1.5.jar": "119c23431ff06b1ebe57606daff460b7c74f74c8564a26f1cbac4cd3521968cd",
     "midnight-1.20.1-0.6.7.jar": "252ad68dac3dbc8b1f7885edccb563becb26ce2fe4abf4f2713a3869b9bff820",
-    "mine-mine-no-mi-1.20.1-0.11.6.jar": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
     "minecolonies-1.20.1-1.1.1065-snapshot.jar": "c882c29416eb4cee8fa47326a04db80342267adbe059cc4961b3deee9418b623",
     "mininggadgets-1.15.6.jar": "cd3b6bbea5fd439df793b8213ccc906c2d025811dfb09b766acb2364ec513019",
     "mob_grinding_utils-1.20.1-1.1.0.jar": "6e0fa6a245fd56cce99d60ac908b5028bc6392a59833c45e0bc3e27ec7f0a2f9",
@@ -4559,802 +4558,6 @@
       ],
       "labels": {
         "en_us": "Open Crafting on a Stick"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "Test Key",
-      "category": "key.categories.mineminenomi.generic",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {},
-      "role": "unbound",
-      "nativeValue": "key.keyboard.p",
-      "defaultValue": "key.keyboard.p"
-    },
-    {
-      "id": "key.mineminenomi.player_stats",
-      "category": "key.categories.mineminenomi.generic",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Player Stats",
-        "ru_ru": "Характеристики игрока"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.r",
-      "defaultValue": "key.keyboard.r"
-    },
-    {
-      "id": "key.mineminenomi.open_abilities_menu",
-      "category": "key.categories.mineminenomi.generic",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Open Abilities Menu",
-        "ru_ru": "Открыть меню способностей"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.open_challenges_menu",
-      "category": "key.categories.mineminenomi.generic",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Open Challenges Menu",
-        "ru_ru": "Открыть меню испытаний"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.open_quests_menu",
-      "category": "key.categories.mineminenomi.generic",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Open Quests Menu",
-        "ru_ru": "Открыть меню заданий"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.open_crew_menu",
-      "category": "key.categories.mineminenomi.generic",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Open Crew Menu",
-        "ru_ru": "Открыть меню Команды"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.open_ability_tree_menu",
-      "category": "key.categories.mineminenomi.generic",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Open Ability Tree Menu",
-        "ru_ru": "Открыть древо способностей"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.change_vehicle_mode",
-      "category": "key.categories.mineminenomi.generic",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Toggle Vehicle Mode",
-        "ru_ru": "Переключить режим транспорта"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.grave.accent",
-      "defaultValue": "key.keyboard.grave.accent"
-    },
-    {
-      "id": "key.mineminenomi.change_combat_mode",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Combat Mode",
-        "ru_ru": "Боевой режим"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.left.alt",
-      "defaultValue": "key.keyboard.left.alt"
-    },
-    {
-      "id": "key.mineminenomi.next_combat_bar",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Next Combat Bar",
-        "ru_ru": "Следующая боевая панель"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.right.bracket",
-      "defaultValue": "key.keyboard.right.bracket"
-    },
-    {
-      "id": "key.mineminenomi.previous_combat_bar",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Previous Combat Bar",
-        "ru_ru": "Предыдущая боевая панель"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.left.bracket",
-      "defaultValue": "key.keyboard.left.bracket"
-    },
-    {
-      "id": "key.mineminenomi.last_combat_bar",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Last Combat Bar",
-        "ru_ru": "Последняя боевая панель"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.change_ability_mode",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Change Ability Mode",
-        "ru_ru": "Сменить режим способностей"
-      },
-      "role": "world-primary",
-      "nativeValue": "key.keyboard.grave.accent",
-      "defaultValue": "key.keyboard.grave.accent"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.1.slot.1",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 1 - Ability 1",
-        "ru_ru": "Панель 1 - Способность 1"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.1",
-      "defaultValue": "key.keyboard.1"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.1.slot.2",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 1 - Ability 2",
-        "ru_ru": "Панель 1 - Способность 2"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.2",
-      "defaultValue": "key.keyboard.2"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.1.slot.3",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 1 - Ability 3",
-        "ru_ru": "Панель 1 - Способность 3"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.3",
-      "defaultValue": "key.keyboard.3"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.1.slot.4",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 1 - Ability 4",
-        "ru_ru": "Панель 1 - Способность 4"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.4",
-      "defaultValue": "key.keyboard.4"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.1.slot.5",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 1 - Ability 5",
-        "ru_ru": "Панель 1 - Способность 5"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.5",
-      "defaultValue": "key.keyboard.5"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.1.slot.6",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 1 - Ability 6",
-        "ru_ru": "Панель 1 - Способность 6"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.6",
-      "defaultValue": "key.keyboard.6"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.1.slot.7",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 1 - Ability 7",
-        "ru_ru": "Панель 1 - Способность 7"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.7",
-      "defaultValue": "key.keyboard.7"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.1.slot.8",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 1 - Ability 8",
-        "ru_ru": "Панель 1 - Способность 8"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.8",
-      "defaultValue": "key.keyboard.8"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.2.slot.1",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 2 - Ability 1",
-        "ru_ru": "Панель 2 - Способность 1"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.2.slot.2",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 2 - Ability 2",
-        "ru_ru": "Панель 2 - Способность 2"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.2.slot.3",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 2 - Ability 3",
-        "ru_ru": "Панель 2 - Способность 3"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.2.slot.4",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 2 - Ability 4",
-        "ru_ru": "Панель 2 - Способность 4"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.2.slot.5",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 2 - Ability 5",
-        "ru_ru": "Панель 2 - Способность 5"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.2.slot.6",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 2 - Ability 6",
-        "ru_ru": "Панель 2 - Способность 6"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.2.slot.7",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 2 - Ability 7",
-        "ru_ru": "Панель 2 - Способность 7"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.2.slot.8",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 2 - Ability 8",
-        "ru_ru": "Панель 2 - Способность 8"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.3.slot.1",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 3 - Ability 1",
-        "ru_ru": "Панель 3 - Способность 1"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.3.slot.2",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 3 - Ability 2",
-        "ru_ru": "Панель 3 - Способность 2"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.3.slot.3",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 3 - Ability 3",
-        "ru_ru": "Панель 3 - Способность 3"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.3.slot.4",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 3 - Ability 4",
-        "ru_ru": "Панель 3 - Способность 4"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.3.slot.5",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 3 - Ability 5",
-        "ru_ru": "Панель 3 - Способность 5"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.3.slot.6",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 3 - Ability 6",
-        "ru_ru": "Панель 3 - Способность 6"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.3.slot.7",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 3 - Ability 7",
-        "ru_ru": "Панель 3 - Способность 7"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar.3.slot.8",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Bar 3 - Ability 8",
-        "ru_ru": "Панель 3 - Способность 8"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.1",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 1",
-        "ru_ru": "Перейти к набору боевой панели 1"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.2",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 2",
-        "ru_ru": "Перейти к набору боевой панели 2"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.3",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 3",
-        "ru_ru": "Перейти к набору боевой панели 3"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.4",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 4",
-        "ru_ru": "Перейти к набору боевой панели 4"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.5",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 5",
-        "ru_ru": "Перейти к набору боевой панели 5"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.6",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 6",
-        "ru_ru": "Перейти к набору боевой панели 6"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.7",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 7",
-        "ru_ru": "Перейти к набору боевой панели 7"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.8",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 8",
-        "ru_ru": "Перейти к набору боевой панели 8"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.9",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 9",
-        "ru_ru": "Перейти к набору боевой панели 9"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.unknown",
-      "defaultValue": "key.keyboard.unknown"
-    },
-    {
-      "id": "key.mineminenomi.combat_bar_shortcut.10",
-      "category": "key.categories.mineminenomi.combat_bar",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "IN_GAME",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "mine-mine-no-mi-1.20.1-0.11.6.jar"
-      ],
-      "labels": {
-        "en_us": "Move to Combat Bar Set 10",
-        "ru_ru": "Перейти к набору боевой панели 10"
       },
       "role": "unbound",
       "nativeValue": "key.keyboard.unknown",
@@ -11008,5 +10211,78 @@
     ],
     "currentNativeRecaptureVerified": false,
     "retainedPresetValuesChanged": false
+  },
+  "explicitRemovalProjection": {
+    "parentSourceStock": {
+      "path": "tools/keybinds/stock-before-explicit-removals.json",
+      "sha256": "600d328510b03669c0fca269f1dbc12a85004b2d6001f9f33b3c5439841e52d9"
+    },
+    "parentActualNames": 636,
+    "removedSourceJars": {
+      "mods/dandadanver2.jar": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd",
+      "mods/fairy_mine-2.6.5-forge-1.20.1.jar": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
+      "mods/mine-mine-no-mi-1.20.1-0.11.6.jar": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc"
+    },
+    "removedKeyNames": [
+      "key.fairy_mine.soltar_habilidade",
+      "key.fairy_mine.trocar_habilidade",
+      "key.fairy_mine.transformation",
+      "key.fairy_mine.dash",
+      "key.fairy_mine.normal_attack",
+      "key.dandadan.open_ability_wheel",
+      "key.dandadan.okarun_boost",
+      "key.dandadan.quick_skill_1",
+      "key.dandadan.quick_skill_2",
+      "key.dandadan.quick_skill_3",
+      "key.dandadan.quick_skill_4",
+      "Test Key",
+      "key.mineminenomi.player_stats",
+      "key.mineminenomi.open_abilities_menu",
+      "key.mineminenomi.open_challenges_menu",
+      "key.mineminenomi.open_quests_menu",
+      "key.mineminenomi.open_crew_menu",
+      "key.mineminenomi.open_ability_tree_menu",
+      "key.mineminenomi.change_vehicle_mode",
+      "key.mineminenomi.change_combat_mode",
+      "key.mineminenomi.next_combat_bar",
+      "key.mineminenomi.previous_combat_bar",
+      "key.mineminenomi.last_combat_bar",
+      "key.mineminenomi.change_ability_mode",
+      "key.mineminenomi.combat_bar.1.slot.1",
+      "key.mineminenomi.combat_bar.1.slot.2",
+      "key.mineminenomi.combat_bar.1.slot.3",
+      "key.mineminenomi.combat_bar.1.slot.4",
+      "key.mineminenomi.combat_bar.1.slot.5",
+      "key.mineminenomi.combat_bar.1.slot.6",
+      "key.mineminenomi.combat_bar.1.slot.7",
+      "key.mineminenomi.combat_bar.1.slot.8",
+      "key.mineminenomi.combat_bar.2.slot.1",
+      "key.mineminenomi.combat_bar.2.slot.2",
+      "key.mineminenomi.combat_bar.2.slot.3",
+      "key.mineminenomi.combat_bar.2.slot.4",
+      "key.mineminenomi.combat_bar.2.slot.5",
+      "key.mineminenomi.combat_bar.2.slot.6",
+      "key.mineminenomi.combat_bar.2.slot.7",
+      "key.mineminenomi.combat_bar.2.slot.8",
+      "key.mineminenomi.combat_bar.3.slot.1",
+      "key.mineminenomi.combat_bar.3.slot.2",
+      "key.mineminenomi.combat_bar.3.slot.3",
+      "key.mineminenomi.combat_bar.3.slot.4",
+      "key.mineminenomi.combat_bar.3.slot.5",
+      "key.mineminenomi.combat_bar.3.slot.6",
+      "key.mineminenomi.combat_bar.3.slot.7",
+      "key.mineminenomi.combat_bar.3.slot.8",
+      "key.mineminenomi.combat_bar_shortcut.1",
+      "key.mineminenomi.combat_bar_shortcut.2",
+      "key.mineminenomi.combat_bar_shortcut.3",
+      "key.mineminenomi.combat_bar_shortcut.4",
+      "key.mineminenomi.combat_bar_shortcut.5",
+      "key.mineminenomi.combat_bar_shortcut.6",
+      "key.mineminenomi.combat_bar_shortcut.7",
+      "key.mineminenomi.combat_bar_shortcut.8",
+      "key.mineminenomi.combat_bar_shortcut.9",
+      "key.mineminenomi.combat_bar_shortcut.10"
+    ],
+    "currentNativeCaptureClaimed": false
   }
 }

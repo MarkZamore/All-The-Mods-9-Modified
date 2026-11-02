@@ -324,7 +324,6 @@
     "mods/memorysettings-1.20.1-5.9.jar": "90c2d5093da73a2dbffcf3981f02303444fbbf8371184ca9103a4d438246f2ee",
     "mods/merequester-forge-1.20.1-1.1.5.jar": "119c23431ff06b1ebe57606daff460b7c74f74c8564a26f1cbac4cd3521968cd",
     "mods/midnight-1.20.1-0.6.7.jar": "252ad68dac3dbc8b1f7885edccb563becb26ce2fe4abf4f2713a3869b9bff820",
-    "mods/mine-mine-no-mi-1.20.1-0.11.6.jar": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
     "mods/minecolonies-1.20.1-1.1.1065-snapshot.jar": "c882c29416eb4cee8fa47326a04db80342267adbe059cc4961b3deee9418b623",
     "mods/mininggadgets-1.15.6.jar": "cd3b6bbea5fd439df793b8213ccc906c2d025811dfb09b766acb2364ec513019",
     "mods/mob_grinding_utils-1.20.1-1.1.0.jar": "6e0fa6a245fd56cce99d60ac908b5028bc6392a59833c45e0bc3e27ec7f0a2f9",
@@ -2256,11 +2255,6 @@
       "version": "1.20.1-1.1.1065-snapshot"
     },
     {
-      "id": "mineminenomi",
-      "name": "Mine Mine no Mi",
-      "version": "0.11.6"
-    },
-    {
       "id": "mininggadgets",
       "name": "Mining Gadgets",
       "version": "1.15.6"
@@ -3324,13 +3318,15 @@
     },
     "removedSourceJars": {
       "mods/dandadanver2.jar": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd",
-      "mods/fairy_mine-2.6.5-forge-1.20.1.jar": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034"
+      "mods/fairy_mine-2.6.5-forge-1.20.1.jar": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
+      "mods/mine-mine-no-mi-1.20.1-0.11.6.jar": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc"
     },
     "removedModIds": [
       "dandadan",
-      "fairy_mine"
+      "fairy_mine",
+      "mineminenomi"
     ],
     "freshNativeObservationClaimed": false,
-    "scope": "Parent actual557 pack IDs/532JARs are historical;555 retained IDs/530JARs are derived by exact removal only. Native acceptance of the new cohort is pending the user peer test."
+    "scope": "Direct exact subtraction of3 explicitly removed NEWmods from the actual557ID/532JAR parent. Retained554 IDs/529JARs are source-projected; no fresh native capture or full-game acceptance claimed."
   }
 }

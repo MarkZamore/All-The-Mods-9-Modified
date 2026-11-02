@@ -32,12 +32,6 @@
 | Ability Use For Combat Type 2 (`key.cursedfate.ability_use_for_combat_type_2`) | Num 0 |
 | Open Arsenal (`key.doomsday.arsenal`) | f9 |
 | Open/Close Curios Inventory (`key.curios.open.desc`) | G |
-| Player Stats (`key.mineminenomi.player_stats`) | insert |
-| Toggle Vehicle Mode (`key.mineminenomi.change_vehicle_mode`) | delete |
-| Combat Mode (`key.mineminenomi.change_combat_mode`) | [ |
-| Next Combat Bar (`key.mineminenomi.next_combat_bar`) | \ |
-| Previous Combat Bar (`key.mineminenomi.previous_combat_bar`) | backspace |
-| Change Ability Mode (`key.mineminenomi.change_ability_mode`) | ] |
 | Open Spell Wheel (`key.irons_spellbooks.spell_wheel`) | Y |
 | Cast Selected Spell (`key.irons_spellbooks.spellbook_cast`) | I |
 | (Spell Book) Open Book (`key.ars_nouveau.open_book`) | C |

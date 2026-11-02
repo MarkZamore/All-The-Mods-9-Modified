@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "091db7c09c0f7df0655346b18c314590a3589bb5",
+  "priorUnionSha256": "26de87b2c8e126094febdb8d2484a67c6e9135bcea8e8aec6fa812d7aefadaf2",
+  "priorRows": 2017,
+  "currentUnionSha256": "abcffb71deca8bfbe6dd82f67e7855bb9d7d62694708c7b9bf1d0ec3f6238d4c",
+  "currentRows": 2019,
+  "addedExactRows": [
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 12998,
+      "sha256": "97bb6694d53a23d677eda0c2419a69578b751a1bfe965a9e0ebfc19626154d13"
+    },
+    {
+      "path": "launcher/controls-preset.txt",
+      "sizeBytes": 34832,
+      "sha256": "eb74ccdef915787537eb0363decb361f0f4cb8c14d7e9033375d25ad604e3594"
+    }
+  ],
+  "removedContentKnownExactRow": {
+    "path": "mods/mine-mine-no-mi-1.20.1-0.11.6.jar",
+    "sizeBytes": 21485453,
+    "sha256": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc"
+  },
+  "unknownPersonalFilesDeletionClaimed": false
+}

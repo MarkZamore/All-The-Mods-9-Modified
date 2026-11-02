@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_LIMITED_STUB_SELFTEST_AND_STATIC_NATIVE_PROFILE",
+  "jarSha256": "434f6efced7866031dd49551bb1c979b4e9d07fde5351391be772779cbdcc9ba",
+  "jarBytes": 33233,
+  "sourceSha256": "e904df9c70ba2956e9f756a19d869a1488d0c74a0e3f0512a3421012586ae0a0",
+  "javaRelease": 17,
+  "testResult": "jdi-selftest12/result.json",
+  "recipeEventsCaptured": 2,
+  "terminalEventsCaptured": 7,
+  "keepAliveEventsCaptured": 2,
+  "clientServerChallengeMatched": true,
+  "originalDisconnectCallerTickAndTimeCaptured": true,
+  "pollingPrimitivesCaptured": true,
+  "decodedTimeoutReason": true,
+  "bareCloseNullReasonCaptured": true,
+  "eventThreadsResumedAndChildExited0": true,
+  "crossTempDiscoveryPassed": true,
+  "preexistingBytesPreserved": 307200,
+  "newLogBytes": 12968,
+  "productionLimits": {
+    "recipeEvents": 8,
+    "terminalEvents": 24,
+    "keepAliveEvents": 32,
+    "ownEmittedBytes": 262144,
+    "terminalStackFrames": 36,
+    "stringCharacters": 512
+  },
+  "nativeProfileFile": "native-profile.public.json",
+  "nativeProfileSha256": "6a49e9fa8271d32c752d4c732bc2d01f61ccd303493838ddfe74b797333d184a",
+  "steamJarSha256": "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40",
+  "manualHelpersIdenticalV6": {
+    "Start-RecipeDiagnostics.ps1": true,
+    "Start-RecipeDiagnostics.cmd": true
+  },
+  "targetMethodsInvoked": false,
+  "classTransformation": false,
+  "realGameAttachedByThisAgent": false,
+  "realPlayerRunPending": true,
+  "limitsOfProof": [
+    "Self-test uses isolated fake classes and no game process.",
+    "Actual production LVT catch offsets/native-send locals are statically pinned, not reproduced by shortened stub methods.",
+    "Observer JDI InternalException snapshot failures are observer failures, not target-game exceptions; a failed snapshot can omit that event.",
+    "Method-entry snapshots record pre-body state. Polling predicate may change after target resumes.",
+    "No per-tick or per-packet generic hook, payload collection, native invocation, target method call or class transformation."
+  ]
+}

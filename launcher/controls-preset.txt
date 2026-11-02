@@ -65,12 +65,6 @@ key_key.jujutsucraft.key_simple_domain:key.keyboard.page.down
 key_key.jujutsucraft.key_start_technique:key.keyboard.z
 key_key.jujutsucraft.key_switch_cursed_technique:key.keyboard.apostrophe
 key_key.jujutsucraft.key_use_main_skill:key.keyboard.u
-key_key.mineminenomi.change_ability_mode:key.keyboard.right.bracket
-key_key.mineminenomi.change_combat_mode:key.keyboard.left.bracket
-key_key.mineminenomi.change_vehicle_mode:key.keyboard.delete
-key_key.mineminenomi.next_combat_bar:key.keyboard.backslash
-key_key.mineminenomi.player_stats:key.keyboard.insert
-key_key.mineminenomi.previous_combat_bar:key.keyboard.backspace
 key_key.push_to_talk:key.keyboard.caps.lock
 key_key.remorphed_menu:key.keyboard.home
 key_key.rimulib.skill_menu:key.keyboard.f8
@@ -105,14 +99,6 @@ key_key.jujutsucraft.key_d:key.keyboard.d
 key_key.jujutsucraft.key_forward:key.keyboard.w
 key_key.jujutsucraft.key_space:key.keyboard.space
 key_key.mekanism.key_boost:key.keyboard.left.control
-key_key.mineminenomi.combat_bar.1.slot.1:key.keyboard.1
-key_key.mineminenomi.combat_bar.1.slot.2:key.keyboard.2
-key_key.mineminenomi.combat_bar.1.slot.3:key.keyboard.3
-key_key.mineminenomi.combat_bar.1.slot.4:key.keyboard.4
-key_key.mineminenomi.combat_bar.1.slot.5:key.keyboard.5
-key_key.mineminenomi.combat_bar.1.slot.6:key.keyboard.6
-key_key.mineminenomi.combat_bar.1.slot.7:key.keyboard.7
-key_key.mineminenomi.combat_bar.1.slot.8:key.keyboard.8
 key_key.zoniex.zoniex_jump:key.keyboard.space
 key_pneumaticcraft.boots.jet_boots:key.keyboard.space
 key_ponder.keyinfo.ponder:key.keyboard.w
@@ -213,7 +199,6 @@ key_quark.keybind.transfer_extract:key.keyboard.unknown
 key_quark.keybind.transfer_insert:key.keyboard.unknown
 
 # unbound
-key_Test Key:key.keyboard.unknown
 key_artifacts.key.helium_flamingo.activate:key.keyboard.unknown
 key_artifacts.key.night_vision_goggles.toggle:key.keyboard.unknown
 key_artifacts.key.universal_attractor.toggle:key.keyboard.unknown
@@ -406,38 +391,6 @@ key_key.mekanism.legs_mode:key.keyboard.unknown
 key_key.mekanism.mode:key.keyboard.unknown
 key_key.mekanism.module_tweaker:key.keyboard.unknown
 key_key.minecolonies.toggle_goggles:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.2.slot.1:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.2.slot.2:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.2.slot.3:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.2.slot.4:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.2.slot.5:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.2.slot.6:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.2.slot.7:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.2.slot.8:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.3.slot.1:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.3.slot.2:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.3.slot.3:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.3.slot.4:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.3.slot.5:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.3.slot.6:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.3.slot.7:key.keyboard.unknown
-key_key.mineminenomi.combat_bar.3.slot.8:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.1:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.10:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.2:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.3:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.4:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.5:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.6:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.7:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.8:key.keyboard.unknown
-key_key.mineminenomi.combat_bar_shortcut.9:key.keyboard.unknown
-key_key.mineminenomi.last_combat_bar:key.keyboard.unknown
-key_key.mineminenomi.open_abilities_menu:key.keyboard.unknown
-key_key.mineminenomi.open_ability_tree_menu:key.keyboard.unknown
-key_key.mineminenomi.open_challenges_menu:key.keyboard.unknown
-key_key.mineminenomi.open_crew_menu:key.keyboard.unknown
-key_key.mineminenomi.open_quests_menu:key.keyboard.unknown
 key_key.modernfix.config:key.keyboard.unknown
 key_key.moreoverlays.chunkbounds.desc:key.keyboard.unknown
 key_key.moreoverlays.lightoverlay.desc:key.keyboard.unknown
