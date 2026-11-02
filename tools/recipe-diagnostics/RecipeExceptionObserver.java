@@ -26,6 +26,8 @@ public final class RecipeExceptionObserver {
     static final String STEAM_CLASS = "link.e4steam.steam.SteamConnectionBridge";
     static final String STEAM_JAR = "e4steam-forge-mc1.18.2-1.20.2-v0.3.4-lanmc-native-ui.1.jar";
     static final String STEAM_SHA = "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40";
+    static final String STEAM_JAR_V2 = "e4steam-forge-mc1.18.2-1.20.2-v0.3.4-lanmc-native-ui.2.jar";
+    static final String STEAM_SHA_V2 = "3f397fc193f14d3c543b5ef9b4613bc149a21ca8e14bd93c39de3d1bc6f9553c";
     static final String HEADER = "[RecipeExceptionObserver v10] ";
     static final String NETTY_SHA = "c210069be4ab4120f5ac7cb5e4a126d3a007e78a64fd44c9971220e013dbaef1";
     static final int MAX_QUEUE_SAMPLES = 24;
@@ -169,7 +171,7 @@ public final class RecipeExceptionObserver {
             append(config, budget, HEADER + json(Map.of("kind", "observer_ready", "utc", Instant.now().toString(),
                 "pid", config.pid, "callerFilter", CALLER, "maxEvents", config.maxEvents,
                 "targetMethodsInvoked", false, "classMutation", false, "terminalHooks", hookStates, "maxTerminalEvents", config.maxTerminals, "maxKeepAliveEvents", config.maxKeepAlives)) + "\n");
-            QueueSampler sampler = new QueueSampler(Files.isRegularFile(config.game.resolve("mods").resolve(STEAM_JAR)), nettyProfileVerified(config));
+            QueueSampler sampler = new QueueSampler(Files.isRegularFile(config.game.resolve("mods").resolve(STEAM_JAR)) || Files.isRegularFile(config.game.resolve("mods").resolve(STEAM_JAR_V2)), nettyProfileVerified(config));
             append(config, budget, HEADER + json(Map.of("kind", "queue_sampling_ready", "utc", Instant.now().toString(), "enabled", sampler.enabled, "nettyProfileVerified", sampler.nettyProfileVerified, "intervalSeconds", 5, "maxSamples", config.maxQueueSamples, "maxCachedRefsPerType", 16, "targetMethodsInvoked", false, "periodicThreadSuspension", false, "referenceSource", "future_lifecycle_only_no_existing_object_fallback")) + "\n");
             ready.run();
             while ((captured < config.maxEvents || terminalCaptured < config.maxTerminals || keepAliveCaptured < config.maxKeepAlives || (sampler.enabled && sampler.samples < config.maxQueueSamples)) && alive(config.pid) && alive(config.parentPid)) {
@@ -624,8 +626,7 @@ public final class RecipeExceptionObserver {
             List<Path> steam = entries.filter(path -> path.getFileName().toString().toLowerCase(Locale.ROOT).startsWith("e4steam") && path.toString().endsWith(".jar")).toList();
             if (steam.size() > 1) throw new SecurityException("Ambiguous e4steam JARs");
             if (steam.size() == 1) {
-                if (!steam.get(0).getFileName().toString().equals(STEAM_JAR)) throw new SecurityException("Unprofiled e4steam JAR name");
-                verifyHash(steam.get(0), config.steamSha);
+                verifyHash(steam.get(0), expectedSteamHash(steam.get(0).getFileName().toString(), config.steamSha));
             }
         }
         com.sun.tools.attach.VirtualMachine local = com.sun.tools.attach.VirtualMachine.attach(String.valueOf(config.pid));
@@ -636,6 +637,12 @@ public final class RecipeExceptionObserver {
             if (!arguments.contains("-agentlib:jdwp=") || !arguments.contains("address=127.0.0.1:") || !arguments.contains("server=y") || !arguments.contains("suspend=n"))
                 throw new SecurityException("Expected loopback-only non-suspending standard JDWP flag is absent");
         } finally { local.detach(); }
+    }
+
+    static String expectedSteamHash(String fileName, String originalExpectedSha) {
+        if(fileName.equals(STEAM_JAR)) return originalExpectedSha;
+        if(fileName.equals(STEAM_JAR_V2) && originalExpectedSha.equals(STEAM_SHA)) return STEAM_SHA_V2;
+        throw new SecurityException("Unprofiled e4steam JAR name");
     }
 
     static Path safe(Path path) throws Exception {

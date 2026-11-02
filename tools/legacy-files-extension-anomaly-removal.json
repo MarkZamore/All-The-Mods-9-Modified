@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "9c6ef0d637554ef62b6dcd6850dfec255d71506c",
+  "priorUnionSha256": "0489d5bc733fab2b90ddfa73e688460a2b5a7d6440554c67ed13e553f2a4e453",
+  "currentUnionSha256": "2946af4a051003f7dd69ea09533fefcc7982f83838efb807b8bf159baed43dd8",
+  "addedExactRows": [
+    {
+      "path": "launcher/controls-preset.txt",
+      "sizeBytes": 31238,
+      "sha256": "58eee726ee9f6ea26e2c7505d5c6f3199839a31700666728363dd082268bef1b"
+    },
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 11919,
+      "sha256": "55b2acd475e352d3d401e13a675d867d352f179d21ac395efc90707170c5ae3a"
+    },
+    {
+      "path": "launcher/diagnostics/recipe-exception-observer.jar",
+      "sha256": "b66d1defe81cf239f61ebd6b3f114f6d5cc642a91789a012e4ead8f9b9c5a27d",
+      "sizeBytes": 44431
+    }
+  ],
+  "removedContentKnownExactRow": {
+    "path": "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+    "sizeBytes": 2938820,
+    "sha256": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c"
+  },
+  "unknownPersonalFilesDeletionClaimed": false,
+  "temporaryObserverExactV10Retirement": {
+    "path": "launcher/diagnostics/recipe-exception-observer.jar",
+    "sha256": "b66d1defe81cf239f61ebd6b3f114f6d5cc642a91789a012e4ead8f9b9c5a27d",
+    "sizeBytes": 44431
+  }
+}

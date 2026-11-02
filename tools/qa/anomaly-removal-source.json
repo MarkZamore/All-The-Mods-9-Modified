@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "parentSourceRevision": "9c6ef0d637554ef62b6dcd6850dfec255d71506c",
+  "removedFile": {
+    "fileName": "anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+    "sha256": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
+    "sizeBytes": 2938820,
+    "sourceUrl": "https://edge.forgecdn.net/files/8746/269/anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+    "projectId": 1043571,
+    "fileId": 8746269,
+    "path": "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+    "kind": "requested",
+    "version": "2.0.032",
+    "modIds": [
+      "anomaly_rephased"
+    ],
+    "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-anomaly",
+    "name": "Anomaly Rephased"
+  },
+  "retainedJarCount": 527,
+  "unchangedRetainedJarBytes": true,
+  "removedKeyNames": [
+    "key.anomaly_rephased.misc"
+  ],
+  "retainedPresetNames": 564,
+  "projectedModIds": 552,
+  "dependentMods": [],
+  "geckolibRetained": true,
+  "playmateUnchanged": true,
+  "runtimeRemovedFiles": [
+    "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar"
+  ],
+  "runtimeChangedFiles": [
+    "launcher/controls-guide.md",
+    "launcher/controls-preset.txt",
+    "launcher/diagnostics/recipe-exception-observer.jar"
+  ],
+  "newRuntimeOrMultiplayerPassClaimed": false,
+  "steamDisconnectCauseProven": false,
+  "launcherContentRuleAdded": false,
+  "oldWorldContentRegistryLossExpected": true,
+  "additionalTemporaryChange": "Exact ForgeV2 filename/hash acceptance only in unchanged bounded V10 observer"
+}

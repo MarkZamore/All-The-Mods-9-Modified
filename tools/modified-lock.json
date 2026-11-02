@@ -1049,22 +1049,6 @@
       "name": "AmbiHorror"
     },
     {
-      "fileName": "anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
-      "sha256": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
-      "sizeBytes": 2938820,
-      "sourceUrl": "https://edge.forgecdn.net/files/8746/269/anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
-      "projectId": 1043571,
-      "fileId": 8746269,
-      "path": "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "2.0.032",
-      "modIds": [
-        "anomaly_rephased"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-anomaly",
-      "name": "Anomaly Rephased"
-    },
-    {
       "fileName": "antlers-1.0.0.jar",
       "sha256": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
       "sizeBytes": 8955321,
@@ -2629,17 +2613,17 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "55b2acd475e352d3d401e13a675d867d352f179d21ac395efc90707170c5ae3a",
-      "sizeBytes": 11919,
+      "sha256": "1126b60332dd6d406a823ca85a1103a7c5128ab7fe3940394a4f2bac1a578c12",
+      "sizeBytes": 11921,
       "kind": "resource",
-      "reason": "Optional key-only preset565 retained names: remove only71 mappings owned by4 explicitly excluded NEWmods from historical native636 namespace; remaining values unchanged. No fresh native/application claim."
+      "reason": "Optional key-only preset564 retained names: remove72 mappings owned by5 explicitly excluded NEWmods from historical native636 namespace. Remaining values unchanged; no fresh native/application claim."
     },
     {
       "path": "launcher/controls-preset.txt",
-      "sha256": "58eee726ee9f6ea26e2c7505d5c6f3199839a31700666728363dd082268bef1b",
-      "sizeBytes": 31238,
+      "sha256": "d3430d45fb425aba069d2af92764609b1dcc1259f2375940ddd3773f73ff44f1",
+      "sizeBytes": 31188,
       "kind": "configuration",
-      "reason": "Optional key-only preset565 retained names: remove only71 mappings owned by4 explicitly excluded NEWmods from historical native636 namespace; remaining values unchanged. No fresh native/application claim."
+      "reason": "Optional key-only preset564 retained names: remove72 mappings owned by5 explicitly excluded NEWmods from historical native636 namespace. Remaining values unchanged; no fresh native/application claim."
     },
     {
       "path": "launcher/jvm-args.txt",
@@ -2692,24 +2676,24 @@
     },
     {
       "path": "launcher/diagnostics/recipe-exception-observer.jar",
-      "sha256": "b66d1defe81cf239f61ebd6b3f114f6d5cc642a91789a012e4ead8f9b9c5a27d",
-      "sizeBytes": 44431,
+      "sha256": "71b7167dd4e9d34dfc16581e2b9eb3472c5b13f7f728980aab37332f978e71e0",
+      "sizeBytes": 44663,
       "kind": "temporary-diagnostic-tool",
-      "reason": "Temporary read-only v10:8recipe/24terminal/32keepalive and24 cached-reference samples>=5s, same256KiB own text. Captures future Connection.channelActive/SteamBridge.start only;16refs/type. No heap instance search/capability query/collection pinning, target method calls or class changes. Already-active objects, cap/GC can be missed; snapshots not atomic. Existing narrow event-thread suspension and debugger overhead remain."
+      "reason": "Temporary V10 exact ForgeV1/V2 guard compatibility only. Same recipe/terminal/keepalive/lifecycle hooks, cached-reference fields and 256KiB/24sample caps; no heap enumeration, new instrumentation, method invocation or class mutation. All167 Steam target classes are byte-identical between the two pinned e4steam JARs. New peer test pending."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
       "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44",
       "sizeBytes": 2327,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Temporary read-only v10:8recipe/24terminal/32keepalive and24 cached-reference samples>=5s, same256KiB own text. Captures future Connection.channelActive/SteamBridge.start only;16refs/type. No heap instance search/capability query/collection pinning, target method calls or class changes. Already-active objects, cap/GC can be missed; snapshots not atomic. Existing narrow event-thread suspension and debugger overhead remain."
+      "reason": "Temporary V10 exact ForgeV1/V2 guard compatibility only. Same recipe/terminal/keepalive/lifecycle hooks, cached-reference fields and 256KiB/24sample caps; no heap enumeration, new instrumentation, method invocation or class mutation. All167 Steam target classes are byte-identical between the two pinned e4steam JARs. New peer test pending."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
       "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a",
       "sizeBytes": 174,
       "kind": "temporary-diagnostic-launcher",
-      "reason": "Temporary read-only v10:8recipe/24terminal/32keepalive and24 cached-reference samples>=5s, same256KiB own text. Captures future Connection.channelActive/SteamBridge.start only;16refs/type. No heap instance search/capability query/collection pinning, target method calls or class changes. Already-active objects, cap/GC can be missed; snapshots not atomic. Existing narrow event-thread suspension and debugger overhead remain."
+      "reason": "Temporary V10 exact ForgeV1/V2 guard compatibility only. Same recipe/terminal/keepalive/lifecycle hooks, cached-reference fields and 256KiB/24sample caps; no heap enumeration, new instrumentation, method invocation or class mutation. All167 Steam target classes are byte-identical between the two pinned e4steam JARs. New peer test pending."
     },
     {
       "path": "kubejs/data/alchemistry/recipes/dissolver/carpets.json",

@@ -72,7 +72,6 @@ key_keybind.sophisticatedbackpacks.open_backpack:key.keyboard.b
 
 # native-companion
 key_key.aether.gravitite_jump_ability.desc:key.keyboard.space
-key_key.anomaly_rephased.misc:key.keyboard.escape
 key_key.arphex.space_press:key.keyboard.space
 key_key.deep_dark_regrowth.konami_code_1:key.keyboard.up
 key_key.deep_dark_regrowth.konami_code_2:key.keyboard.down

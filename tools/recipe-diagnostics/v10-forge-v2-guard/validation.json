@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "version": "V10 exact ForgeV2 guard compatibility only",
+  "jarSha256": "71b7167dd4e9d34dfc16581e2b9eb3472c5b13f7f728980aab37332f978e71e0",
+  "jarSizeBytes": 44663,
+  "sourceSha256": "98476313ae4ae1a452d2e9a6bfa7b16e346ff039a40697aca2f10c75ee4ca474",
+  "guardDiffSha256": "73207d495c2805cec325ccb00ef72ef4829ae07abd7db7d5683bd662002b11ab",
+  "nativeBindingSha256": "a187a0bd4516067cc1806b88aa6802743537c3fdb776cb68adc3045d74fb6704",
+  "changes": [
+    "Whitelist exact ForgeV2 filename/SHA in addition to exact ForgeV1.",
+    "Enable the existing sampler-presence guard when that exact validated V2 file is installed."
+  ],
+  "unchanged": [
+    "All lifecycle, keepalive, recipe and terminal sites.",
+    "All direct fields, cache semantics, no-heap-search policy and event/byte limits.",
+    "CLI, portable CMD/PowerShell wrappers, JVM arguments and archive protocol."
+  ],
+  "tests": {
+    "portableJdk17SelfTest21": "PASS",
+    "same23Rows": true,
+    "exactV2PublicBytesPositiveGuard": "PASS",
+    "unknownV3CrossLoaderWrongProfileAndV2AsV1Rejected": "PASS",
+    "V1FixtureAndProductionHashSelectionUnchanged": "PASS",
+    "all167SteamClassEntriesV1V2ByteIdentical": true,
+    "sourceSlicesForSitesFieldsCachesAndLimitsIdentical": true,
+    "actualPublished429CleanupAndArchive": "PASS",
+    "actualArchiveRows": 23,
+    "existingDebugDeletedBeforeReport": true,
+    "gameOrUserNetworkOperations": false
+  },
+  "actual429ProofSha256": "1f672c01bb377018c8b2c4dd9689bf20fb806bef7ae608d95c73512dc5fad78f",
+  "actualRowProofSha256": "b4af0f3769ec1735dbe038f11d682f477fafac71827400bc8e402b7213490f4e",
+  "rootReview": "Approved exact candidate SHA71b7167dd4e9d34dfc16581e2b9eb3472c5b13f7f728980aab37332f978e71e0 after guard diff/native class binding/archive proof review.",
+  "boundaries": [
+    "No live Minecraft attach or network retry by this agent.",
+    "Fresh bridge/channel hooks must occur after helper readiness; existing connections are not enumerated.",
+    "Fields are non-atomic snapshots; zero queue length is not proof of delivery.",
+    "Only exact known ForgeV1/V2 files are accepted; no fallback to unknown author builds."
+  ]
+}

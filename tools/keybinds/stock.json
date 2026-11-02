@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Direct source projection565 names from historical actual636 namespace by excluding71 mappings of four explicitly removed NEW mods. All retained preset values unchanged; no new native or applied-preset capture claimed.",
+  "scope": "Direct source projection564 names from historical actual636 namespace by excluding72 mappings of five explicitly removed NEW mods. All retained values unchanged; no fresh native/applied-preset capture claimed.",
   "englishNativeSha256": "1e2c66275c9b5a3d0a7c7d9e42bd58921520f3356acb4c35b4c0deb9f72d4459",
   "russianNativeSha256": "c45fed5c93946834c8294bbed0a0c3703410c86fa0cbc7da83f4e52cde42fad1",
   "sourceJars": {
@@ -195,7 +195,6 @@
     "ambihorror-forge-1.0.0.jar": "246a89ddc1ea5f9a779820f056004b9d891113198785e19998dde2c588b3c083",
     "amendments-1.20-2.2.3.jar": "f574c856ed26333824109b061664b1642aca05bd8c8d93ba6d6a488bcdd89cd9",
     "angelring-1.20.1-2.3.1.jar": "5954ce71e859ec807ffe0a8b5de9f2ff3a2c03ccde29cff609cc8dd1e90aefe8",
-    "anomaly_rephased-2.0.0b32-forge-1.20.1.jar": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
     "antlers-1.0.0.jar": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
     "appleskin-forge-mc1.20.1-2.5.1.jar": "e12419e43e3babc810af289403c5cd96bd7f09809b389acc6bb2f122b4b2a426",
     "applied-botanics-forge-1.5.1.jar": "48d40bfcec913b2732b24c3c2152cb2fc0084c255c00490630837ea0988fe4dd",
@@ -3704,22 +3703,6 @@
       "role": "world-primary",
       "nativeValue": "key.keyboard.v",
       "defaultValue": "key.keyboard.v"
-    },
-    {
-      "id": "key.anomaly_rephased.misc",
-      "category": "key.categories.misc",
-      "mappingClass": "net.mcreator.anomalyrephased.init.AnomalyRephasedModKeyMappings$1",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "anomaly_rephased-2.0.0b32-forge-1.20.1.jar"
-      ],
-      "labels": {
-        "en_us": "Misc1"
-      },
-      "role": "native-companion",
-      "nativeValue": "key.keyboard.escape",
-      "defaultValue": "key.keyboard.escape"
     },
     {
       "id": "key.toastcontrol.clear",
@@ -10013,7 +9996,8 @@
       "mods/dandadanver2.jar": "6ab676c0277be019c1baf9b07ea88704ee50f480c6eb566f51291bef871ff2dd",
       "mods/fairy_mine-2.6.5-forge-1.20.1.jar": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
       "mods/mine-mine-no-mi-1.20.1-0.11.6.jar": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
-      "mods/JujutsuCraft-ver51-forge-1.20.1.jar": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af"
+      "mods/JujutsuCraft-ver51-forge-1.20.1.jar": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
+      "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c"
     },
     "removedKeyNames": [
       "key.fairy_mine.soltar_habilidade",
@@ -10086,7 +10070,8 @@
       "key.jujutsucraft.key_switch_cursed_technique",
       "key.jujutsucraft.key_use_main_skill",
       "key.jujutsucraft.key_a",
-      "key.jujutsucraft.key_d"
+      "key.jujutsucraft.key_d",
+      "key.anomaly_rephased.misc"
     ],
     "currentNativeCaptureClaimed": false
   },
@@ -10122,6 +10107,30 @@
       "key.jujutsucraft.key_use_main_skill",
       "key.jujutsucraft.key_a",
       "key.jujutsucraft.key_d"
+    ],
+    "retainedPresetValuesChanged": false,
+    "currentNativeRecaptureVerified": false
+  },
+  "anomalyRemovalProjection": {
+    "parentSourceRevision": "9c6ef0d637554ef62b6dcd6850dfec255d71506c",
+    "removedSourceJar": {
+      "fileName": "anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+      "sha256": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
+      "sizeBytes": 2938820,
+      "sourceUrl": "https://edge.forgecdn.net/files/8746/269/anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+      "projectId": 1043571,
+      "fileId": 8746269,
+      "path": "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+      "kind": "requested",
+      "version": "2.0.032",
+      "modIds": [
+        "anomaly_rephased"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-anomaly",
+      "name": "Anomaly Rephased"
+    },
+    "removedKeyNames": [
+      "key.anomaly_rephased.misc"
     ],
     "retainedPresetValuesChanged": false,
     "currentNativeRecaptureVerified": false

@@ -4961,6 +4961,11 @@
   },
   {
     "path": "launcher/controls-guide.md",
+    "sizeBytes": 11919,
+    "sha256": "55b2acd475e352d3d401e13a675d867d352f179d21ac395efc90707170c5ae3a"
+  },
+  {
+    "path": "launcher/controls-guide.md",
     "sizeBytes": 12998,
     "sha256": "97bb6694d53a23d677eda0c2419a69578b751a1bfe965a9e0ebfc19626154d13"
   },
@@ -4973,6 +4978,11 @@
     "path": "launcher/controls-preset.txt",
     "sizeBytes": 36367,
     "sha256": "28cd4e196c15805fbda07507951b9e57667b093b1a1140d227365cd6f57c1ff0"
+  },
+  {
+    "path": "launcher/controls-preset.txt",
+    "sizeBytes": 31238,
+    "sha256": "58eee726ee9f6ea26e2c7505d5c6f3199839a31700666728363dd082268bef1b"
   },
   {
     "path": "launcher/controls-preset.txt",
@@ -5003,6 +5013,11 @@
     "path": "launcher/controls-preset.txt",
     "sizeBytes": 34832,
     "sha256": "eb74ccdef915787537eb0363decb361f0f4cb8c14d7e9033375d25ad604e3594"
+  },
+  {
+    "path": "launcher/diagnostics/recipe-exception-observer.jar",
+    "sha256": "b66d1defe81cf239f61ebd6b3f114f6d5cc642a91789a012e4ead8f9b9c5a27d",
+    "sizeBytes": 44431
   },
   {
     "path": "launcher/diagnostics/recipe-exception-observer.jar",

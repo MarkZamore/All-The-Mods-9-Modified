@@ -1016,12 +1016,13 @@
     {
       "name": "Anomaly Rephased",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-anomaly",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "anomaly_rephased"
       ],
       "version": "2.0.032",
-      "sha256": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c"
+      "sha256": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
+      "reason": "User explicitly requested complete removal of The Anomaly / Anomaly Rephased on 2026-11-02 after discussing its Deathmode totem and author multiplayer caveat. A causal link to the Steam disconnect is not established."
     },
     {
       "name": "Antlers",
@@ -1999,7 +2000,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 78,
+  "selectedRequestedProjects": 77,
   "dependencyJars": 19,
   "authorCompatibilitySelections": [
     {
@@ -2243,8 +2244,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_JUJUTSU_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "1596ef43858831f9011ab07351561b2b61b6adf8f4863edf325b7cc0843de8b8",
+    "status": "SOURCE_ANOMALY_REMOVAL_AND_V10_V2_GUARD_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "63bfb073b11ac67d2be0db6e240bbe907a2eb6f1fa4c26962c2aeeb2e2618e50",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -2698,5 +2699,57 @@
     "strictScriptGameruleReferencesFound": false,
     "newRuntimeAcceptanceClaimed": false,
     "safetyReason": "Removal of one NEW content JAR adds no world mutation path; no custom Safety framework is present. Retained author JARs and native permission gates are unchanged. No lossless old-world registry migration is claimed."
+  },
+  "previousSingleplayerContentAcceptanceBeforeAnomalyRemoval": {
+    "status": "SOURCE_JUJUTSU_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "1596ef43858831f9011ab07351561b2b61b6adf8f4863edf325b7cc0843de8b8",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "anomalyRemoval": {
+    "userAuthorized": true,
+    "removedFile": {
+      "fileName": "anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+      "sha256": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
+      "sizeBytes": 2938820,
+      "sourceUrl": "https://edge.forgecdn.net/files/8746/269/anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+      "projectId": 1043571,
+      "fileId": 8746269,
+      "path": "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar",
+      "kind": "requested",
+      "version": "2.0.032",
+      "modIds": [
+        "anomaly_rephased"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-anomaly",
+      "name": "Anomaly Rephased"
+    },
+    "removedKeyNames": [
+      "key.anomaly_rephased.misc"
+    ],
+    "retainedSourceJars": 527,
+    "retainedProjectedPackModIds": 552,
+    "retainedPresetNames": 564,
+    "dependentMods": [],
+    "strictScriptGameruleReferencesFound": false,
+    "newRuntimeAcceptanceClaimed": false,
+    "safetyReason": "Removing this NEW content JAR adds no world mutation path. No custom Safety framework/profile exists. Retained author JARs/native permission gates unchanged; old Anomaly registry content is removed, not a lossless world-migration claim.",
+    "playmateUnchanged": true,
+    "geckolibRetained": true
+  },
+  "observerV10ForgeV2Compatibility": {
+    "kind": "exact-guard-only",
+    "sourceSha256": "98476313ae4ae1a452d2e9a6bfa7b16e346ff039a40697aca2f10c75ee4ca474",
+    "jarSha256": "71b7167dd4e9d34dfc16581e2b9eb3472c5b13f7f728980aab37332f978e71e0",
+    "jarSizeBytes": 44663,
+    "approvedForgeV2Sha256": "3f397fc193f14d3c543b5ef9b4613bc149a21ca8e14bd93c39de3d1bc6f9553c",
+    "all167SteamClassesUnchanged": true,
+    "eventSitesFieldsCapsUnchanged": true,
+    "syntheticFixtureRows": 23,
+    "published429CollectorVerified": true,
+    "realPeerRunClaimed": false,
+    "networkFixClaimed": false
   }
 }
