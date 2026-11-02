@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "00210384e6ac7cb54f36e32c2e1ceebfd7cb902c",
+  "priorUnionSha256": "2946af4a051003f7dd69ea09533fefcc7982f83838efb807b8bf159baed43dd8",
+  "currentUnionSha256": "a284e07faff605fe3437c13ebe00ebd5982d68ad67815f9e0f778934d7d5713d",
+  "addedExactRows": [
+    {
+      "path": "mods/playmate 1.1.2 1.20.1.jar",
+      "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
+      "sizeBytes": 4419554
+    },
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 11921,
+      "sha256": "1126b60332dd6d406a823ca85a1103a7c5128ab7fe3940394a4f2bac1a578c12"
+    }
+  ],
+  "removedContentKnownExactRow": {
+    "path": "mods/playmate 1.1.2 1.20.1.jar",
+    "sizeBytes": 4419554,
+    "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04"
+  },
+  "unknownPersonalFilesDeletionClaimed": false
+}

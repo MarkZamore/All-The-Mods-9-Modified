@@ -1875,22 +1875,6 @@
       "name": "platform"
     },
     {
-      "fileName": "playmate 1.1.2 1.20.1.jar",
-      "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
-      "sizeBytes": 4419554,
-      "sourceUrl": "https://edge.forgecdn.net/files/6752/633/playmate%201.1.2%201.20.1.jar",
-      "projectId": 1066065,
-      "fileId": 6752633,
-      "path": "mods/playmate 1.1.2 1.20.1.jar",
-      "kind": "requested",
-      "version": "1.0.0",
-      "modIds": [
-        "knock_knock"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/playmate",
-      "name": "Playmate"
-    },
-    {
       "fileName": "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
       "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
       "sizeBytes": 7080698,
@@ -2613,7 +2597,7 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "1126b60332dd6d406a823ca85a1103a7c5128ab7fe3940394a4f2bac1a578c12",
+      "sha256": "71bf9610b50fae5b519fc1001627675119c46525d1a02d9fb784569c29f6fdda",
       "sizeBytes": 11921,
       "kind": "resource",
       "reason": "Optional key-only preset564 retained names: remove72 mappings owned by5 explicitly excluded NEWmods from historical native636 namespace. Remaining values unchanged; no fresh native/application claim."

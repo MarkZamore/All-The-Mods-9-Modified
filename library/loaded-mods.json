@@ -371,7 +371,6 @@
     "mods/Platform-forge-1.20.1-1.4.2.jar": "90a8dbe620614f4be677e43071cfaf01bbad382ad3354088d6caaf182fca7166",
     "mods/platforms-forge-1.20.1-1.2.jar": "47bae36798f6036cd8602fe5bb743e283c14d6b1d36c334e52f053806ef19b63",
     "mods/player-animation-lib-forge-1.0.2-rc1+1.20.jar": "90d9965cb9efdbda29fdc5610be3914cf7008bf5c392ff34f7ab25f96a852691",
-    "mods/playmate 1.1.2 1.20.1.jar": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
     "mods/pneumaticcraft-repressurized-6.0.21+mc1.20.1.jar": "ebdbd3d8876f9cc15560bc103dc66479d2ea8e37c3f6539a18a02216f2e2d113",
     "mods/polyeng-forge-0.1.1-1.20.1.jar": "595eeacf80632633967c1a21b751a6d981b2ac12c16416ec3993b26f26df3af0",
     "mods/polymorph-forge-0.49.10+1.20.1.jar": "cbe63a0a1cb6ae8dbc0e29bb96d149a137cd4e714b295fa49d230994091d157f",
@@ -2013,11 +2012,6 @@
       "version": "7.4.0"
     },
     {
-      "id": "knock_knock",
-      "name": "knock knock",
-      "version": "1.0.0"
-    },
-    {
       "id": "konkrete",
       "name": "Konkrete",
       "version": "1.8.0"
@@ -3309,16 +3303,18 @@
       "mods/fairy_mine-2.6.5-forge-1.20.1.jar": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
       "mods/mine-mine-no-mi-1.20.1-0.11.6.jar": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
       "mods/JujutsuCraft-ver51-forge-1.20.1.jar": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
-      "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c"
+      "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
+      "mods/playmate 1.1.2 1.20.1.jar": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04"
     },
     "removedModIds": [
       "dandadan",
       "fairy_mine",
       "mineminenomi",
       "jujutsucraft",
-      "anomaly_rephased"
+      "anomaly_rephased",
+      "knock_knock"
     ],
     "freshNativeObservationClaimed": false,
-    "scope": "Direct exact subtraction of5 explicitly removed NEWmods from actual557ID/532JAR parent. Retained552 IDs/527JARs are source-projected; no fresh native capture/full-game acceptance claimed."
+    "scope": "Direct exact subtraction of6 explicitly removed NEWmods from actual557ID/532JAR parent. Retained551 IDs/526JARs source-projected; no fresh native/full-game acceptance claimed."
   }
 }

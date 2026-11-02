@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "parentSourceRevision": "00210384e6ac7cb54f36e32c2e1ceebfd7cb902c",
+  "removedFile": {
+    "fileName": "playmate 1.1.2 1.20.1.jar",
+    "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
+    "sizeBytes": 4419554,
+    "sourceUrl": "https://edge.forgecdn.net/files/6752/633/playmate%201.1.2%201.20.1.jar",
+    "projectId": 1066065,
+    "fileId": 6752633,
+    "path": "mods/playmate 1.1.2 1.20.1.jar",
+    "kind": "requested",
+    "version": "1.0.0",
+    "modIds": [
+      "knock_knock"
+    ],
+    "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/playmate",
+    "name": "Playmate"
+  },
+  "retainedJarCount": 526,
+  "unchangedRetainedJarBytes": true,
+  "removedKeyNames": [],
+  "retainedPresetNames": 564,
+  "projectedModIds": 551,
+  "runtimeRemovedFiles": [
+    "mods/playmate 1.1.2 1.20.1.jar"
+  ],
+  "runtimeChangedFiles": [
+    "launcher/controls-guide.md"
+  ],
+  "audioFixShipped": false,
+  "geckolibRetained": true,
+  "newRuntimeOrMultiplayerPassClaimed": false,
+  "launcherContentRuleAdded": false,
+  "oldWorldContentRegistryLossExpected": true
+}

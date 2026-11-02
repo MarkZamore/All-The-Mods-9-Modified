@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Direct source projection564 names from historical actual636 namespace by excluding72 mappings of five explicitly removed NEW mods. All retained values unchanged; no fresh native/applied-preset capture claimed.",
+  "scope": "Direct source projection564 names from historical actual636 namespace after six explicitly removed NEW mods. Playmate has no mappings; all retained values unchanged, no fresh native/applied-preset claim.",
   "englishNativeSha256": "1e2c66275c9b5a3d0a7c7d9e42bd58921520f3356acb4c35b4c0deb9f72d4459",
   "russianNativeSha256": "c45fed5c93946834c8294bbed0a0c3703410c86fa0cbc7da83f4e52cde42fad1",
   "sourceJars": {
@@ -416,7 +416,6 @@
     "pipez-forge-1.20.1-1.2.26.jar": "f692b0a24c46c954358db8535248021deaf3399973c4e746ba1e3e115a8a48c9",
     "platforms-forge-1.20.1-1.2.jar": "47bae36798f6036cd8602fe5bb743e283c14d6b1d36c334e52f053806ef19b63",
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar": "90d9965cb9efdbda29fdc5610be3914cf7008bf5c392ff34f7ab25f96a852691",
-    "playmate 1.1.2 1.20.1.jar": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
     "pneumaticcraft-repressurized-6.0.21+mc1.20.1.jar": "ebdbd3d8876f9cc15560bc103dc66479d2ea8e37c3f6539a18a02216f2e2d113",
     "polyeng-forge-0.1.1-1.20.1.jar": "595eeacf80632633967c1a21b751a6d981b2ac12c16416ec3993b26f26df3af0",
     "polymorph-forge-0.49.10+1.20.1.jar": "cbe63a0a1cb6ae8dbc0e29bb96d149a137cd4e714b295fa49d230994091d157f",
@@ -9997,7 +9996,8 @@
       "mods/fairy_mine-2.6.5-forge-1.20.1.jar": "e9174997365e127c1a686436be42a69d1983163294eb48176cb4009949ac0034",
       "mods/mine-mine-no-mi-1.20.1-0.11.6.jar": "ceab4866a28236c5f74fc0245dc8a079ce9284b93eee7865ec8414c487de30cc",
       "mods/JujutsuCraft-ver51-forge-1.20.1.jar": "94a1bdd649d170ae663e2e7773cf2b7ad71d907e35381a782e3976de252566af",
-      "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c"
+      "mods/anomaly_rephased-2.0.0b32-forge-1.20.1.jar": "273fd4ea215c6ab2a4a01dd5cc7e2e1dad64ec09987fc10720b4bb6dc9151c7c",
+      "mods/playmate 1.1.2 1.20.1.jar": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04"
     },
     "removedKeyNames": [
       "key.fairy_mine.soltar_habilidade",
@@ -10132,6 +10132,28 @@
     "removedKeyNames": [
       "key.anomaly_rephased.misc"
     ],
+    "retainedPresetValuesChanged": false,
+    "currentNativeRecaptureVerified": false
+  },
+  "playmateRemovalProjection": {
+    "parentSourceRevision": "00210384e6ac7cb54f36e32c2e1ceebfd7cb902c",
+    "removedSourceJar": {
+      "fileName": "playmate 1.1.2 1.20.1.jar",
+      "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
+      "sizeBytes": 4419554,
+      "sourceUrl": "https://edge.forgecdn.net/files/6752/633/playmate%201.1.2%201.20.1.jar",
+      "projectId": 1066065,
+      "fileId": 6752633,
+      "path": "mods/playmate 1.1.2 1.20.1.jar",
+      "kind": "requested",
+      "version": "1.0.0",
+      "modIds": [
+        "knock_knock"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/playmate",
+      "name": "Playmate"
+    },
+    "removedKeyNames": [],
     "retainedPresetValuesChanged": false,
     "currentNativeRecaptureVerified": false
   }

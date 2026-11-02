@@ -1517,12 +1517,13 @@
     {
       "name": "Playmate",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/playmate",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "knock_knock"
       ],
       "version": "1.0.0",
-      "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04"
+      "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
+      "reason": "User explicitly requested complete Playmate removal on 2026-11-02 instead of further investigation/repair of its initial speech playback. The author audio recordings/JAR were not patched."
     },
     {
       "name": "Presence Footsteps (Forge)",
@@ -2000,7 +2001,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 77,
+  "selectedRequestedProjects": 76,
   "dependencyJars": 19,
   "authorCompatibilitySelections": [
     {
@@ -2244,8 +2245,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_ANOMALY_REMOVAL_AND_V10_V2_GUARD_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "63bfb073b11ac67d2be0db6e240bbe907a2eb6f1fa4c26962c2aeeb2e2618e50",
+    "status": "SOURCE_PLAYMATE_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "4e8c0b123e4c1bb1d1504daf5d99fc1c5bb3755d05e68360e23d24927970838f",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -2751,5 +2752,42 @@
     "published429CollectorVerified": true,
     "realPeerRunClaimed": false,
     "networkFixClaimed": false
+  },
+  "previousSingleplayerContentAcceptanceBeforePlaymateRemoval": {
+    "status": "SOURCE_ANOMALY_REMOVAL_AND_V10_V2_GUARD_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "63bfb073b11ac67d2be0db6e240bbe907a2eb6f1fa4c26962c2aeeb2e2618e50",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "playmateRemoval": {
+    "userAuthorized": true,
+    "removedFile": {
+      "fileName": "playmate 1.1.2 1.20.1.jar",
+      "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
+      "sizeBytes": 4419554,
+      "sourceUrl": "https://edge.forgecdn.net/files/6752/633/playmate%201.1.2%201.20.1.jar",
+      "projectId": 1066065,
+      "fileId": 6752633,
+      "path": "mods/playmate 1.1.2 1.20.1.jar",
+      "kind": "requested",
+      "version": "1.0.0",
+      "modIds": [
+        "knock_knock"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/playmate",
+      "name": "Playmate"
+    },
+    "removedKeyNames": [],
+    "retainedSourceJars": 526,
+    "retainedProjectedPackModIds": 551,
+    "retainedPresetNames": 564,
+    "dependentMods": [],
+    "strictScriptGameruleReferencesFound": false,
+    "geckolibRetained": true,
+    "audioFixShipped": false,
+    "newRuntimeAcceptanceClaimed": false,
+    "safetyReason": "Removing this NEW content JAR adds no mutation path. No Safety/framework exists. Retained author JARs/native permission gates unchanged; no lossless migration of Playmate registry content claimed."
   }
 }

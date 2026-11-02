@@ -4956,6 +4956,11 @@
   },
   {
     "path": "launcher/controls-guide.md",
+    "sizeBytes": 11921,
+    "sha256": "1126b60332dd6d406a823ca85a1103a7c5128ab7fe3940394a4f2bac1a578c12"
+  },
+  {
+    "path": "launcher/controls-guide.md",
     "sizeBytes": 12994,
     "sha256": "1a4311327f0513b8d717595a262dc6dc44835b8fda47f121c8da43da2fb48d01"
   },
@@ -7338,6 +7343,11 @@
     "path": "mods/player-animation-lib-forge-1.0.2-rc1+1.20.jar",
     "sizeBytes": 181437,
     "sha256": "90d9965cb9efdbda29fdc5610be3914cf7008bf5c392ff34f7ab25f96a852691"
+  },
+  {
+    "path": "mods/playmate 1.1.2 1.20.1.jar",
+    "sha256": "4f05eb47d9f67b773c18415d650780919196544ad7066fdda8be3fdd1150ad04",
+    "sizeBytes": 4419554
   },
   {
     "path": "mods/pneumaticcraft-repressurized-6.0.21+mc1.20.1.jar",
