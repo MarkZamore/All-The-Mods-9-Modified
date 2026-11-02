@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "version": 9,
+  "jarSha256": "db7a7f55ed33c989745ea8dcab330c52f3213e3a77a97ba3688b1a8a65c39880",
+  "sourceSha256": "91f3ee6b3a56309649329f12562f580bde75d663e6e5466ab41274acc443cb0d",
+  "jdkTarget": 17,
+  "runtime": "Portable full JDK17 for observer and isolated debuggee",
+  "tests": {
+    "legacyRecipeAndTerminalTests": true,
+    "keepaliveEvents": 5,
+    "matchingChallengeId": 704815,
+    "newEncoderReturnSite": 9,
+    "queueSamples": 2,
+    "actualSampleIntervalSeconds": 5.42961,
+    "autoReadStates": [
+      0,
+      1
+    ],
+    "nettyPendingBytes": [
+      777,
+      123
+    ],
+    "inboundQueueStates": [
+      2,
+      0
+    ],
+    "perBridgeIdentityMapCount": 3,
+    "threadNamePrivacyRedaction": true,
+    "debuggeeContinuedAndExited0": true,
+    "existingLogPrefixBytesPreserved": 307200,
+    "optionalNettyProfileHashMismatchRejected": true,
+    "disabledCappedNotDueSamplerShortCircuit": true,
+    "ownByteCapBeforeWrite": true,
+    "noTargetInvokeOrExplicitSuspendOrTransformApi": true,
+    "periodicCollectorHasNoFrameOrArgumentReads": true,
+    "portableWrappersUnchanged": true,
+    "actualPublished429ArchiveProof": "PASS"
+  },
+  "eventRows": 21,
+  "ownSourceBytes": 18127,
+  "gzipBytes": 2806,
+  "actualReportEntryBytes": 18148,
+  "newNativeProfileSha256": "8c89b5996bcb855f5874f9ddd56ae14ded9eb9b717773d955aba5933b8354fef",
+  "actualAssemblySha256": "d1a8af02204e03a8748a3a0151aa4aaaf34a218660e2b9fc19feb83cedd88b12",
+  "actualArchiveProofSha256": "1f65edc3fefda7567ba69dffa079ac7870ba7d032b7e0a34e0951223e1aec2e5",
+  "actualRowProofSha256": "ab53e2dfe3ad56601be7c27f9f351320c064236fb0d5e6606b8913c80493f550",
+  "boundaries": [
+    "Native fields/method offsets statically verified on exact installed jars. Stub test does not prove live mod-transformed method locals or actual peer delivery.",
+    "No v9 game attach, gameplay run, target method invocation, class transformation, app build, source-pack edit or publication performed.",
+    "Periodic reads do not explicitly suspend threads, but JVM instance enumeration can introduce overhead.",
+    "Object/array/thread caps and non-atomic reads can yield incomplete state.",
+    "A zero per-bridge map count excludes an already dequeued retry packet and other transport buffers."
+  ]
+}

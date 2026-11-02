@@ -26,12 +26,17 @@ public final class RecipeExceptionObserver {
     static final String STEAM_CLASS = "link.e4steam.steam.SteamConnectionBridge";
     static final String STEAM_JAR = "e4steam-forge-mc1.18.2-1.20.2-v0.3.4-lanmc-native-ui.1.jar";
     static final String STEAM_SHA = "68ba6bdce76868e2cb43359a13416dfa1b011c628c13b6c4266b653c765b5c40";
-    static final String HEADER = "[RecipeExceptionObserver v8] ";
+    static final String HEADER = "[RecipeExceptionObserver v9] ";
+    static final String NETTY_SHA = "c210069be4ab4120f5ac7cb5e4a126d3a007e78a64fd44c9971220e013dbaef1";
+    static final int MAX_QUEUE_SAMPLES = 24;
     static final int MAX_BYTES = 256 * 1024;
     static final int MAX_EVENTS = 8;
     static final int MAX_TERMINALS = 24;
     static final int MAX_KEEPALIVES = 32;
-    record Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents, String steamSha, int maxTerminals, int maxKeepAlives) {
+    record Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents, String steamSha, int maxTerminals, int maxKeepAlives, String nettySha, int maxQueueSamples) {
+        Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents, String steamSha, int maxTerminals, int maxKeepAlives) {
+            this(pid, parentPid, game, output, librarySha, chemistrySha, maxEvents, steamSha, maxTerminals, maxKeepAlives, NETTY_SHA, MAX_QUEUE_SAMPLES);
+        }
         Config(long pid, long parentPid, Path game, Path output, String librarySha, String chemistrySha, int maxEvents) {
             this(pid, parentPid, game, output, librarySha, chemistrySha, maxEvents, STEAM_SHA, MAX_TERMINALS, MAX_KEEPALIVES);
         }
@@ -52,7 +57,8 @@ public final class RecipeExceptionObserver {
         new Site("net.minecraft.server.network.ServerGamePacketListenerImpl", "m_5683_", "(Lnet/minecraft/network/protocol/game/ServerboundKeepAlivePacket;)V"),
         new Site("net.minecraft.server.network.ServerGamePacketListenerImpl", "m_9942_", "(Lnet/minecraft/network/chat/Component;)V"),
         new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "<init>", "(J)V"),
-        new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "<init>", "(Lnet/minecraft/network/FriendlyByteBuf;)V", 12));
+        new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "<init>", "(Lnet/minecraft/network/FriendlyByteBuf;)V", 12),
+        new Site("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket", "m_5779_", "(Lnet/minecraft/network/FriendlyByteBuf;)V", 9));
     static boolean keepAliveSite(Site site) { return site.methodName.equals("m_7231_") || site.methodName.equals("m_5683_") || site.className.equals("net.minecraft.network.protocol.game.ClientboundKeepAlivePacket"); }
 
     public static void main(String[] args) throws Exception {
@@ -160,12 +166,14 @@ public final class RecipeExceptionObserver {
             append(config, budget, HEADER + json(Map.of("kind", "observer_ready", "utc", Instant.now().toString(),
                 "pid", config.pid, "callerFilter", CALLER, "maxEvents", config.maxEvents,
                 "targetMethodsInvoked", false, "classMutation", false, "terminalHooks", hookStates, "maxTerminalEvents", config.maxTerminals, "maxKeepAliveEvents", config.maxKeepAlives)) + "\n");
+            QueueSampler sampler = new QueueSampler(vm.canGetInstanceInfo() && Files.isRegularFile(config.game.resolve("mods").resolve(STEAM_JAR)), nettyProfileVerified(config));
+            append(config, budget, HEADER + json(Map.of("kind", "queue_sampling_ready", "utc", Instant.now().toString(), "enabled", sampler.enabled, "nettyProfileVerified", sampler.nettyProfileVerified, "intervalSeconds", 5, "maxSamples", config.maxQueueSamples, "maxInstancesPerType", 16, "targetMethodsInvoked", false, "periodicThreadSuspension", false)) + "\n");
             ready.run();
-            while ((captured < config.maxEvents || terminalCaptured < config.maxTerminals || keepAliveCaptured < config.maxKeepAlives) && alive(config.pid) && alive(config.parentPid)) {
+            while ((captured < config.maxEvents || terminalCaptured < config.maxTerminals || keepAliveCaptured < config.maxKeepAlives || (sampler.enabled && sampler.samples < config.maxQueueSamples)) && alive(config.pid) && alive(config.parentPid)) {
                 EventSet eventSet;
                 try { eventSet = vm.eventQueue().remove(1000); }
                 catch (VMDisconnectedException disconnected) { break; }
-                if (eventSet == null) continue;
+                if (eventSet == null) { sampleQueues(vm, config, budget, sampler); continue; }
                 var snapshots = new ArrayList<Map<String, Object>>();
                 boolean disconnected = false;
                 try {
@@ -197,6 +205,7 @@ public final class RecipeExceptionObserver {
                     ((keepAliveSite(site) && keepAliveCaptured >= config.maxKeepAlives) || (!keepAliveSite(site) && terminalCaptured >= config.maxTerminals))) request.disable();
                 if (captured >= config.maxEvents) for (ExceptionRequest request : manager.exceptionRequests()) request.disable();
                 if (disconnected) break;
+                sampleQueues(vm, config, budget, sampler);
             }
         } finally {
             if (vm != null) {
@@ -210,6 +219,120 @@ public final class RecipeExceptionObserver {
             }
         }
     }
+
+    static final class QueueSampler {
+        final boolean enabled, nettyProfileVerified;
+        int samples;
+        long nextNanos;
+        QueueSampler(boolean enabled, boolean nettyProfileVerified) {
+            this.enabled = enabled; this.nettyProfileVerified = nettyProfileVerified;
+        }
+    }
+
+    static boolean nettyProfileVerified(Config config) {
+        try {
+            Path minecraft = config.game.getParent().getParent().getParent();
+            verifyHash(minecraft.resolve("Launcher/Shared/libraries/io/netty/netty-transport/4.1.82.Final/netty-transport-4.1.82.Final.jar"), config.nettySha);
+            return true;
+        } catch (Exception unavailable) { return false; }
+    }
+
+    static void sampleQueues(VirtualMachine vm, Config config, OutputBudget budget, QueueSampler sampler) throws Exception {
+        if (!sampler.enabled || sampler.samples >= config.maxQueueSamples || System.nanoTime() < sampler.nextNanos) return;
+        sampler.nextNanos = System.nanoTime() + TimeUnit.SECONDS.toNanos(5);
+        Map<String, Object> snapshot;
+        try { snapshot = queueSnapshot(vm, config.pid, sampler.nettyProfileVerified); }
+        catch (VMDisconnectedException disconnected) { return; }
+        catch (RuntimeException failure) {
+            snapshot = Map.of("kind", "queue_snapshot_failure", "utc", Instant.now().toString(), "error", failure.getClass().getName(), "targetMethodsInvoked", false, "periodicThreadSuspension", false);
+        }
+        if (snapshot != null) { snapshot = new LinkedHashMap<>(snapshot); sampler.samples++; snapshot.put("sample", sampler.samples); append(config, budget, HEADER + json(snapshot) + "\n"); }
+    }
+
+    static Map<String, Object> queueSnapshot(VirtualMachine vm, long pid, boolean nettyVerified) {
+        List<ReferenceType> bridgeTypes = vm.classesByName(STEAM_CLASS);
+        if (bridgeTypes.size() != 1 || !(bridgeTypes.get(0) instanceof ClassType bridgeType)) return null;
+        List<ObjectReference> instances = bridgeType.instances(16);
+        var bridges = new ArrayList<Map<String, Object>>();
+        for (ObjectReference bridge : instances) {
+            try {
+                Object closed = allowedValue(readField(bridge, "closed"));
+                if (!Boolean.FALSE.equals(closed)) continue;
+                var row = new LinkedHashMap<String, Object>(); row.put("receiverId", bridge.uniqueID());
+                row.put("bridge", fields(bridge, List.of("connectionId", "hostSide", "started", "closed", "peerReady", "addonNegotiationReady", "inboundFinQueued", "inboundFinished", "outboundFinQueued", "outboundFinSubmitted", "preNegotiationBytes", "outboundWait", "outboundNotBeforeMillis", "outboundDataFallbackMillis")));
+                Value inbound = readField(bridge, "inbound");
+                row.put("inboundQueueCount", inbound instanceof ObjectReference queue && queue.referenceType().name().equals("java.util.concurrent.ArrayBlockingQueue") ? allowedValue(readField(queue, "count")) : null);
+                Value runtimeValue = readField(bridge, "runtime");
+                if (runtimeValue instanceof ObjectReference runtime && runtime.referenceType().name().equals("link.e4steam.steam.SteamRuntime")) {
+                    row.put("runtime", fields(runtime, List.of("status", "failureCause", "retryOutboundNotBeforeMillis", "retryOutboundDeadlineMillis")));
+                    Value outbound = readField(runtime, "outbound");
+                    if (outbound instanceof ObjectReference queue && queue.referenceType().name().equals("link.e4steam.steam.SteamOutboundQueue")) {
+                        Value packets = readField(queue, "packets");
+                        row.put("outboundQueueCount", packets instanceof ObjectReference packetQueue && packetQueue.referenceType().name().equals("java.util.concurrent.ArrayBlockingQueue") ? allowedValue(readField(packetQueue, "count")) : null);
+                        row.put("perBridgeQueuedData", perBridgeCount(readField(queue, "dataPacketsByBridge"), bridge));
+                    }
+                    Value retry = readField(runtime, "retryOutboundPacket");
+                    if (retry instanceof ObjectReference packet && packet.referenceType().name().equals("link.e4steam.steam.SteamOutboundQueue$Packet")) {
+                        Value owner = readField(packet, "bridge"); row.put("retryPacketForThisBridge", owner instanceof ObjectReference object && object.uniqueID() == bridge.uniqueID());
+                        row.put("retryPacketKind", allowedValue(readField(packet, "kind")));
+                    } else row.put("retryPacketForThisBridge", false);
+                }
+                bridges.add(row);
+            } catch (ObjectCollectedException collected) { /* Running-object snapshots are best effort, never pinned. */ }
+        }
+        if (bridges.isEmpty()) return null;
+        var snapshot = new LinkedHashMap<String, Object>(); snapshot.put("kind", "network_queue_sample"); snapshot.put("utc", Instant.now().toString()); snapshot.put("pid", pid);
+        snapshot.put("nonAtomicRunningSnapshot", true); snapshot.put("maxInstancesPerType", 16); snapshot.put("bridgeInstancesMayBeTruncated", instances.size() == 16); snapshot.put("bridges", bridges);
+        snapshot.put("nettyProfileVerified", nettyVerified);
+        if (nettyVerified) {
+            var connections = new ArrayList<Map<String, Object>>();
+            List<ReferenceType> connectionTypes = vm.classesByName("net.minecraft.network.Connection");
+            if (connectionTypes.size() == 1 && connectionTypes.get(0) instanceof ClassType connectionType) {
+                List<ObjectReference> connectionsFound = connectionType.instances(16); snapshot.put("connectionInstancesMayBeTruncated", connectionsFound.size() == 16);
+                for (ObjectReference connection : connectionsFound) {
+                    try {
+                        var row = new LinkedHashMap<String, Object>(); row.put("receiverId", connection.uniqueID());
+                        Value listener = readField(connection, "f_129470_"); row.put("packetListenerClass", listener instanceof ObjectReference object ? object.referenceType().name() : null);
+                        Value channelValue = readField(connection, "f_129468_");
+                        if (channelValue instanceof ObjectReference channel) {
+                            row.put("channelClass", channel.referenceType().name());
+                            if (channel.referenceType().name().equals("io.netty.channel.socket.nio.NioSocketChannel")) {
+                                row.put("channelReceiverId", channel.uniqueID());
+                                Value config = readField(channel, "config"); row.put("autoRead", config instanceof ObjectReference object ? allowedValue(readField(object, "autoRead")) : null);
+                                Value unsafe = readField(channel, "unsafe"); Value buffer = unsafe instanceof ObjectReference object ? readField(object, "outboundBuffer") : null;
+                                if (buffer instanceof ObjectReference object && object.referenceType().name().equals("io.netty.channel.ChannelOutboundBuffer")) row.put("outboundBuffer", fields(object, List.of("totalPendingSize", "flushed", "unwritable")));
+                                else row.put("outboundBuffer", null);
+                            } else row.put("profileState", "not_profiled_nio_socket_channel");
+                        } else row.put("profileState", "channel_null_or_unavailable");
+                        connections.add(row);
+                    } catch (ObjectCollectedException collected) { }
+                }
+            }
+            snapshot.put("connections", connections);
+        }
+        var threads = new ArrayList<Map<String, Object>>();
+        for (ThreadReference thread : vm.allThreads()) {
+            String name = thread.name();
+            if (name.startsWith("e4steam-steam-") || name.startsWith("Netty Client IO") || name.startsWith("Netty Server IO") || name.equals("Render thread") || name.equals("Server thread")) {
+                threads.add(Map.of("name", shortText(name.replaceAll("[0-9]{12,}", "<peer>"), 120), "status", thread.status()));
+                if (threads.size() == 32) break;
+            }
+        }
+        snapshot.put("threadHeaders", threads); snapshot.put("targetMethodsInvoked", false); snapshot.put("periodicThreadSuspension", false); snapshot.put("classMutation", false);
+        return snapshot;
+    }
+
+    static Object perBridgeCount(Value value, ObjectReference bridge) {
+        if (!(value instanceof ObjectReference map) || !map.referenceType().name().equals("java.util.IdentityHashMap")) return null;
+        Value size = readField(map, "size"); if (size instanceof IntegerValue count && count.value() == 0) return 0;
+        Value tableValue = readField(map, "table"); if (!(tableValue instanceof ArrayReference table)) return null;
+        int length = Math.min(256, table.length()); List<Value> entries = table.getValues(0, length);
+        for (int i = 0; i + 1 < entries.size(); i += 2) {
+            if (entries.get(i) instanceof ObjectReference key && key.uniqueID() == bridge.uniqueID() && entries.get(i + 1) instanceof ObjectReference integer && integer.referenceType().name().equals("java.lang.Integer")) return allowedValue(readField(integer, "value"));
+        }
+        return table.length() <= 256 ? 0 : null;
+    }
+
 
     static void exceptionRequest(EventRequestManager manager, ReferenceType type) {
         ExceptionRequest request = manager.createExceptionRequest(type, true, true);
@@ -287,6 +410,12 @@ public final class RecipeExceptionObserver {
         var output = new LinkedHashMap<String, Object>(); output.put("kind", "keepalive"); output.put("utc", Instant.now().toString()); output.put("pid", pid);
         output.put("thread", shortText(event.thread().name(), 120)); output.put("class", site.className); output.put("method", site.methodName);
         StackFrame top = event.thread().frame(0);
+        if (site.methodName.equals("m_5779_")) {
+            output.put("direction", "clientbound_challenge_encode_completed"); output.put("codeIndex", site.codeIndex);
+            ObjectReference packet = top.thisObject(); output.put("challengeId", packet == null ? null : allowedValue(readField(packet, "f_132209_")));
+            output.put("observationLimit", "writeLong completed; this does not prove socket write or peer delivery");
+            output.put("targetMethodsInvoked", false); output.put("classMutation", false); return output;
+        }
         boolean constructor = site.methodName.equals("<init>"), generated = constructor && site.signature.equals("(J)V");
         if (constructor) {
             output.put("direction", generated ? "clientbound_challenge_constructed" : "clientbound_challenge_decoded");
@@ -559,6 +688,21 @@ public final class RecipeExceptionObserver {
         files.put("link/e4steam/steam/SteamConnectionBridge.java", "package link.e4steam.steam; import java.util.concurrent.atomic.*; public class SteamConnectionBridge { public static final boolean NETWORK_DIAGNOSTICS=true; private final SteamRuntime runtime=new SteamRuntime(); private final int connectionId; private final boolean hostSide; private final AtomicBoolean started=new AtomicBoolean(true),closed=new AtomicBoolean(),outboundFinQueued=new AtomicBoolean(),peerReady=new AtomicBoolean(true); private final AtomicLong tcpReadBytes=new AtomicLong(41); private String outboundWait=\"selftest\"; private int mode; public SteamConnectionBridge(int id,boolean host){connectionId=id;hostSide=host;} public void localEof(){mode=0;readLoop();} public void localIo(){mode=1;readLoop();} private void readLoop(){if(mode==0){beginGracefulClose();return;}try{throw new java.io.IOException(\"qa_bridge_local_io\");}catch(java.io.IOException exception){close(false);}} public void acceptRemoteFin(){beginGracefulClose();} private void beginGracefulClose(){outboundFinQueued.set(true);} public void close(boolean reset){closed.set(true);} }");
         files.put("ProbeClose.java", "public class ProbeClose { public static void run(){new link.e4steam.steam.SteamConnectionBridge(7,true).localEof();new link.e4steam.steam.SteamConnectionBridge(8,true).localIo();new link.e4steam.steam.SteamConnectionBridge(9,false).acceptRemoteFin();net.minecraft.network.Connection connection=new net.minecraft.network.Connection();connection.exceptionCaught(null,new java.io.IOException(\"qa_native_local_io\"));connection.m_129507_(new net.minecraft.network.chat.MutableComponent(new net.minecraft.network.chat.contents.TranslatableContents(\"disconnect.timeout\")));new net.minecraft.network.Connection().channelInactive(null);} }");
         files.put("ProbeMain.java", files.get("ProbeMain.java").replace("Files.writeString(root.resolve(\"continued.flag\"),\"continued\");", "ProbeClose.run(); ProbeKeepAlive.run(); Files.writeString(root.resolve(\"continued.flag\"),\"continued\");"));
+
+        files.put("net/minecraft/network/FriendlyByteBuf.java", files.get("net/minecraft/network/FriendlyByteBuf.java").replace("public long readLong(){return value;}", "public long readLong(){return value;} public FriendlyByteBuf writeLong(long id){value=id;return this;}"));
+        files.put("net/minecraft/network/protocol/game/ClientboundKeepAlivePacket.java", files.get("net/minecraft/network/protocol/game/ClientboundKeepAlivePacket.java").replace("private final long f_132209_;", "private final long f_132209_; public void m_5779_(net.minecraft.network.FriendlyByteBuf buffer){buffer.writeLong(f_132209_);}"));
+        files.put("ProbeKeepAlive.java", files.get("ProbeKeepAlive.java").replace("new net.minecraft.network.protocol.game.ClientboundKeepAlivePacket(704815);", "new net.minecraft.network.protocol.game.ClientboundKeepAlivePacket(704815).m_5779_(new net.minecraft.network.FriendlyByteBuf());"));
+        files.put("io/netty/channel/DefaultChannelConfig.java", "package io.netty.channel; public class DefaultChannelConfig { private volatile int autoRead; public void set(int v){autoRead=v;} }");
+        files.put("io/netty/channel/ChannelOutboundBuffer.java", "package io.netty.channel; public class ChannelOutboundBuffer { private long totalPendingSize=777; private int flushed=3,unwritable=1; public void set(){totalPendingSize=123;flushed=1;unwritable=0;} }");
+        files.put("io/netty/channel/AbstractChannel.java", "package io.netty.channel; public class AbstractChannel { private final AbstractUnsafe unsafe=new AbstractUnsafe(); public static class AbstractUnsafe { private final ChannelOutboundBuffer outboundBuffer=new ChannelOutboundBuffer(); } public void change(){unsafe.outboundBuffer.set();} }");
+        files.put("io/netty/channel/socket/nio/NioSocketChannel.java", "package io.netty.channel.socket.nio; public class NioSocketChannel extends io.netty.channel.AbstractChannel { private final io.netty.channel.DefaultChannelConfig config=new io.netty.channel.DefaultChannelConfig(); public void enable(){config.set(1);change();} }");
+        files.put("net/minecraft/network/Connection.java", files.get("net/minecraft/network/Connection.java").replace("private Object f_129471_,f_290021_,f_129468_;", "private Object f_129471_,f_290021_; private io.netty.channel.socket.nio.NioSocketChannel f_129468_=new io.netty.channel.socket.nio.NioSocketChannel(); public void enable(){f_129468_.enable();}"));
+        files.put("link/e4steam/steam/SteamOutboundQueue.java", "package link.e4steam.steam; public class SteamOutboundQueue { private java.util.concurrent.ArrayBlockingQueue<Object> packets=new java.util.concurrent.ArrayBlockingQueue<>(2048); private java.util.Map<Object,Integer> dataPacketsByBridge=new java.util.IdentityHashMap<>(); public void add(Object bridge){dataPacketsByBridge.put(bridge,3);packets.offer(new Object());} public void clear(){packets.clear();dataPacketsByBridge.clear();} }");
+        files.put("link/e4steam/steam/SteamRuntime.java", files.get("link/e4steam/steam/SteamRuntime.java").replace("private int activityCount=1;", "private int activityCount=1; private SteamOutboundQueue outbound=new SteamOutboundQueue(); public void register(Object bridge){outbound.add(bridge);} public void drain(){outbound.clear();}"));
+        files.put("link/e4steam/steam/SteamConnectionBridge.java", files.get("link/e4steam/steam/SteamConnectionBridge.java").replace("private int mode;", "private java.util.concurrent.BlockingQueue<Object> inbound=new java.util.concurrent.ArrayBlockingQueue<>(257); private final AtomicBoolean addonNegotiationReady=new AtomicBoolean(true); public void drain(){inbound.clear();runtime.drain();} private int mode;").replace("connectionId=id;hostSide=host;", "connectionId=id;hostSide=host;inbound.offer(new Object());inbound.offer(new Object());runtime.register(this);"));
+        files.put("ProbeQueue.java", "public class ProbeQueue { static final link.e4steam.steam.SteamConnectionBridge bridge=new link.e4steam.steam.SteamConnectionBridge(77,false); static final net.minecraft.network.Connection connection=new net.minecraft.network.Connection(); public static void start(java.nio.file.Path root){Thread t=new Thread(()->{try{while(!java.nio.file.Files.exists(root.resolve(\"queue-change.flag\")))Thread.sleep(10);connection.enable();bridge.drain();Thread.sleep(12000);}catch(InterruptedException e){}},\"e4steam-steam-local-writer-76561198000000000-77\");t.setDaemon(true);t.start();} }");
+        files.put("ProbeMain.java", files.get("ProbeMain.java").replace("Files.writeString(root.resolve(\"boot.flag\"),\"ok\");", "ProbeQueue.start(root); Files.writeString(root.resolve(\"boot.flag\"),\"ok\");"));
+
         var compilerArgs=new ArrayList<String>(List.of("--release","17","-g","-d",classes.toString()));
         for(var row:files.entrySet()){Path file=sources.resolve(row.getKey());Files.createDirectories(file.getParent());Files.writeString(file,row.getValue());compilerArgs.add(file.toString());}
         int compiled=ToolProvider.getSystemJavaCompiler().run(null,null,null,compilerArgs.toArray(String[]::new));if(compiled!=0)throw new IllegalStateException("Self-test compilation failed");
@@ -566,6 +710,8 @@ public final class RecipeExceptionObserver {
         String lib=HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(Files.readAllBytes(game.resolve("mods/alchemylib-1.20.1-1.0.30.jar"))));
         String chem=HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(Files.readAllBytes(game.resolve("mods/alchemistry-1.20.1-2.3.4.jar"))));
         String steam=HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(Files.readAllBytes(game.resolve("mods").resolve(STEAM_JAR))));
+        Path nettyJar=minecraft.resolve("Launcher/Shared/libraries/io/netty/netty-transport/4.1.82.Final/netty-transport-4.1.82.Final.jar"); Files.createDirectories(nettyJar.getParent()); try(JarOutputStream zip=new JarOutputStream(Files.newOutputStream(nettyJar))){zip.putNextEntry(new JarEntry("selftest.marker"));zip.write("netty fixture".getBytes(StandardCharsets.UTF_8));zip.closeEntry();}
+        String netty=HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(Files.readAllBytes(nettyJar)));
         Path childTemp = root.resolve("separate-game-temp"); Files.createDirectories(childTemp);
         if (childTemp.equals(Path.of(System.getProperty("java.io.tmpdir")).toAbsolutePath().normalize())) throw new AssertionError("Self-test temp directories must differ");
         ProcessBuilder childBuilder=new ProcessBuilder(java.toAbsolutePath().toString(),"-Djava.io.tmpdir="+childTemp,"-Dlanminecraft.diagnostics.recipeIds=true","-agentlib:jdwp=transport=dt_socket,address=127.0.0.1:0,server=y,suspend=n","-cp",classes.toString(),"ProbeMain",root.toString()).directory(game.toFile()).redirectOutput(root.resolve("debuggee.out.log").toFile()).redirectError(root.resolve("debuggee.err.log").toFile());
@@ -579,7 +725,8 @@ public final class RecipeExceptionObserver {
             if (selected.pid != child.pid() || !selected.game.equals(game)) throw new AssertionError("Discovery selected wrong game");
             try { selectOne(List.of()); throw new AssertionError("Empty selection accepted"); } catch (IllegalStateException expected) { }
             try { selectOne(List.of(selected, selected)); throw new AssertionError("Ambiguous selection accepted"); } catch (IllegalStateException expected) { }
-            Thread observer=new Thread(()->{try{observe(new Config(child.pid(),child.pid(),game,game.resolve("logs/debug.log"),lib,chem,2,steam,7,4),()->{try{String readyArchive=new String(selfTestUnpack(selfTestArchive(game.resolve("logs"))),StandardCharsets.UTF_8);if(!readyArchive.contains("observer_ready")||readyArchive.contains("alchemylib_recipe_exception"))throw new AssertionError("READY archive missing or includes preexisting log");Files.writeString(root.resolve("start.flag"),"start");}catch(Exception failure){throw new RuntimeException(failure);}});observing.complete(null);}catch(Throwable failure){observing.completeExceptionally(failure);}},"self-test-observer");observer.start();
+            Thread observer=new Thread(()->{try{observe(new Config(child.pid(),child.pid(),game,game.resolve("logs/debug.log"),lib,chem,2,steam,7,5,netty,2),()->{try{String readyArchive=new String(selfTestUnpack(selfTestArchive(game.resolve("logs"))),StandardCharsets.UTF_8);if(!readyArchive.contains("observer_ready")||readyArchive.contains("alchemylib_recipe_exception"))throw new AssertionError("READY archive missing or includes preexisting log");Files.writeString(root.resolve("start.flag"),"start");}catch(Exception failure){throw new RuntimeException(failure);}});observing.complete(null);}catch(Throwable failure){observing.completeExceptionally(failure);}},"self-test-observer");observer.start();
+            long sampleDeadline=System.nanoTime()+TimeUnit.SECONDS.toNanos(10); while(!Files.readString(game.resolve("logs/debug.log")).contains("\"kind\":\"network_queue_sample\"") && System.nanoTime()<sampleDeadline) Thread.sleep(20); Files.writeString(root.resolve("queue-change.flag"),"change");
             observing.get(20,TimeUnit.SECONDS);waitFor(root.resolve("continued.flag"),child,5000);
             String captured=Files.readString(game.resolve("logs/debug.log"));
             byte[] resultingLog=Files.readAllBytes(game.resolve("logs/debug.log")); if(!Arrays.equals(existingLog,Arrays.copyOf(resultingLog,existingLog.length)))throw new AssertionError("Existing log prefix changed");
@@ -589,12 +736,15 @@ public final class RecipeExceptionObserver {
                 !captured.contains("\"packetListener\":{\"class\":\"net.minecraft.network.Connection$Listener\"}") ||
                 !captured.contains("terminal_hooks_ready") || !captured.contains("\"key\":\"disconnect.timeout\"") || captured.contains("terminal_snapshot_failure")) throw new AssertionError("Terminal origin/filter/fields self-test failed");
             if (captured.lines().noneMatch(line -> line.contains("\"method\":\"channelInactive\"") && line.contains("\"f_129471_\":null"))) throw new AssertionError("Bare channel-close null reason not captured");
-            if (captured.split("\"kind\":\"keepalive\"", -1).length - 1 != 4 || captured.split("\"challengeId\":704815", -1).length - 1 < 3 ||
-                !captured.contains("clientbound_challenge_constructed") || !captured.contains("clientbound_challenge_decoded") ||
+            if (captured.split("\"kind\":\"keepalive\"", -1).length - 1 != 5 || captured.split("\"challengeId\":704815", -1).length - 1 < 4 ||
+                !captured.contains("clientbound_challenge_constructed") || !captured.contains("clientbound_challenge_decoded") || !captured.contains("clientbound_challenge_encode_completed") ||
                 !captured.contains("\"pollingEvents\":false") || !captured.contains("\"pollEventsWaitStart\":12345") ||
                 !captured.contains("\"playerLatencyMillis\":12") ||
                 captured.lines().noneMatch(line -> line.contains("\"method\":\"m_9942_\"") && line.contains("\"method\":\"tick\"") && line.contains("\"lastKeepAliveMillis\":998877")) ||
                 captured.contains("keepalive_snapshot_failure")) throw new AssertionError("Keepalive matching/state/original-disconnect self-test failed");
+
+            if(captured.split("\"kind\":\"network_queue_sample\"",-1).length-1!=2 || !captured.contains("\"autoRead\":0") || !captured.contains("\"autoRead\":1") || !captured.contains("\"totalPendingSize\":777") || !captured.contains("\"totalPendingSize\":123") || !captured.contains("\"inboundQueueCount\":2") || !captured.contains("\"perBridgeQueuedData\":3") || !captured.contains("\"periodicThreadSuspension\":false") || captured.contains("queue_snapshot_failure") || !captured.contains("e4steam-steam-local-writer-<peer>-77")) throw new AssertionError("Queue sampler read-only/profile/running-state self-test failed");
+
             Files.writeString(root.resolve("stop.flag"),"stop");if(!child.waitFor(5,TimeUnit.SECONDS)||child.exitValue()!=0)throw new AssertionError("Self-test debuggee did not continue and exit normally");
             Files.writeString(root.resolve("result.json"),json(Map.of("status","PASS","capturedEvents",2,"exactRecipeIds",List.of("qa:caught_recipe","qa:uncaught_recipe"),"emptyArrayCaptured",true,"unrelatedErrorsExcluded",true,"eventThreadsResumed",true,"debuggeeExitCode",child.exitValue(),"logSizes",Map.of("totalBytes",Files.size(game.resolve("logs/debug.log")),"preexistingBytesPreserved",existingLog.length,"newBytes",resultingLog.length-existingLog.length),"targetMethodsInvoked",false,"classMutation",false))+"\n");
             Path archive = selfTestArchive(game.resolve("logs")); byte[] unpacked = selfTestUnpack(archive);

@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "status": "SOURCE_AND_PINNED_NATIVE_API_IO_COMBINED_FIXTURES_PASS_NO_GAME_ACCEPTANCE",
   "parentSourceRevision": "fcea2d570569c9d1599ec14bbe56b5f3b9266e12",
-  "sourceLockSha256": "f388811e5208939e470965b1891af30e99e586ac22aa8eccee2467098bd6f11d",
-  "runtimeMapSha256": "0cc8f60517f113a9ea8b51d76ef7af22063582537592edd26be3cf7679ad0e91",
+  "sourceLockSha256": "a123621b47d91a0ae4b5f4610a51944a7a2e553e0f2353bd4e4698a336b80837",
+  "runtimeMapSha256": "41b080406e58a93e2a629f31442df02c8f79c9d24fc08058208cf81b0c011a01",
   "runtimeFiles": 1917,
   "onlyAddedRuntimeFile": {
     "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
     "sizeBytes": 21839,
     "sha256": "1e55c42ee3d06fff262fdb2e94819d66751c2a253c1115e8d291e8ac6659eef3"
   },
-  "all1916ParentRuntimeRowsUnchanged": true,
+  "all1916ParentRuntimeRowsUnchanged": false,
   "all529ContentJarsUnchanged": true,
   "sourceProjectedPackModIds": 554,
   "nativeModules": [
@@ -84,5 +84,10 @@
   "sourcePreset578Unchanged": true,
   "nativePurePathResolverBeforeGuardedCreation": true,
   "nativePureResolverPublicAliasProved": true,
-  "nativeDirectoryCreatingWrapperNotCalledByPolicy": true
+  "nativeDirectoryCreatingWrapperNotCalledByPolicy": true,
+  "unchangedParentRuntimeRows": 1915,
+  "changedRetainedParentFiles": [
+    "launcher/diagnostics/recipe-exception-observer.jar"
+  ],
+  "diagnosticDelivery": "tools/qa/observer-v9-and-waypoints-delivery.json"
 }

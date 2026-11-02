@@ -4,10 +4,10 @@
   "temporaryFiles": [
     {
       "path": "launcher/diagnostics/recipe-exception-observer.jar",
-      "sha256": "6cec35543c876ca8a06a15781819fce3d7876c048e58a46d36e0b97e0ce77dbf",
-      "sizeBytes": 37102,
+      "sha256": "db7a7f55ed33c989745ea8dcab330c52f3213e3a77a97ba3688b1a8a65c39880",
+      "sizeBytes": 43259,
       "kind": "temporary-diagnostic-tool",
-      "reason": "Temporary manual read-only v8: bounded recipe/terminal/keepalive snapshots plus atomic own-row gzip archive for existing launcher reports. Same 8/24/32 event limits and256KiB source budget. No game method invocation, class transformation, timeout or transport change; real peer test pending. Remove after confirmed fix."
+      "reason": "Temporary manual read-only v9: bounded8recipe/24terminal/32keepalive events plus24 direct-field queue samples at least5s apart, same256KiB own-text cap. Exact native/optional Netty pins; no class transformation or target-method calls. Enumeration has overhead; samples are non-atomic/incomplete. Author timeout/JVMflags unchanged; no network fix claim."
     },
     {
       "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
@@ -42,15 +42,20 @@
   ],
   "modernFixClassification": "Official BASE5.25.0 cache candidate: retain if justified, otherwise explicitly review/revert to author5.24.4. Not automatically removed with diagnostic utilities.",
   "noRealIncidentFixClaimed": true,
-  "currentObserverVersion": 8,
+  "currentObserverVersion": 9,
   "eventLimits": {
     "recipeEvents": 8,
     "terminalEvents": 24,
     "keepAliveEvents": 32,
-    "ownEmittedBytes": 262144
+    "ownEmittedBytes": 262144,
+    "queueSamples": 24,
+    "minimumSampleIntervalSeconds": 5,
+    "maximumInstancesPerType": 16,
+    "maximumThreadHeaders": 32
   },
   "originalV5ReceiptRemainsHistorical": true,
   "standardConnectivityTimeoutUnchanged": true,
   "ownArchivePattern": "logs/recipe-diagnostics-<UTC-session>-<observerPID>.log.gz",
-  "archiveReportBoundary": "Existing generic launcher rule selects newest two logs/*.log.gz changed within24hours; later sessions may displace this archive. Retention7days/64MiB per instance."
+  "archiveReportBoundary": "Existing generic launcher rule selects newest two logs/*.log.gz changed within24hours; later sessions may displace this archive. Retention7days/64MiB per instance.",
+  "periodicReadLimits": "Direct fields only; no explicit suspend, frames, target invokes or packet bytes. Enumeration has overhead and snapshots/object caps may be incomplete."
 }

@@ -2242,8 +2242,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_WAYPOINT_POLICY_CANDIDATE_NO_NEW_NATIVE_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "f388811e5208939e470965b1891af30e99e586ac22aa8eccee2467098bd6f11d",
+    "status": "SOURCE_JOURNEYMAP_AND_V9_DIAGNOSTICS_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "a123621b47d91a0ae4b5f4610a51944a7a2e553e0f2353bd4e4698a336b80837",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -2383,21 +2383,23 @@
     "cleanupInventory": "tools/qa/temporary-recipe-diagnostics-cleanup.json",
     "manualOnly": true,
     "unsupportedStartupJsRemoved": true,
-    "observerVersion": 8,
+    "observerVersion": 9,
     "recipeEventLimit": 8,
     "terminalEventLimit": 24,
     "ownEmittedBytesLimit": 262144,
-    "sourceSelfTestProof": "tools/recipe-diagnostics/v8/validation.json",
+    "sourceSelfTestProof": "tools/recipe-diagnostics/v9/validation.json",
     "exactTerminalProfileSha256": "f843f8a2327d275f07f15c4396e44ed323481d5f1705eedae52b67fc132524f2",
     "actualNewUserGameClaimed": false,
     "keepAliveEventLimit": 32,
     "authorConnectivityTimeout60Retained": true,
-    "sourceSelfTestSha256": "4a7e20a4dcc6b4e1eea91575667bc13b4cc3608e185194445297060666048dd0",
-    "exactKeepAliveNativeProfile": "tools/recipe-diagnostics/v8/native-profile.public.json",
-    "exactKeepAliveNativeProfileSha256": "bdd54d32301094c91340abb4ee1431f0b6466c2fccceb0bd643f7952b0ffa38e",
-    "actualPublished429ArchiveProof": "tools/recipe-diagnostics/v8/actual-report-proof429.public.json",
-    "actualPublished429ArchiveProofSha256": "adff9ed1874fca2211cf06201602477f0346c8e79f92b54347ed4ad175a87174",
-    "realPlayerRunPending": true
+    "sourceSelfTestSha256": "afdc5dc32802b4c381ddc001ebaffac7e5f5cf256deb934504f98d7a01bde855",
+    "exactKeepAliveNativeProfile": "tools/recipe-diagnostics/v9/native-profile.public.json",
+    "exactKeepAliveNativeProfileSha256": "389e27e1e39c4e794c67ef7740eac6b31e1e0471bdf4a2da0ecaa07426cfc59a",
+    "actualPublished429ArchiveProof": "tools/recipe-diagnostics/v9/actual-report-proof429.public.json",
+    "actualPublished429ArchiveProofSha256": "dfecf0c7b6428b1c305d4e90e9d93f7e7f9f1579613ab102c752f8e5d8bd7a27",
+    "realPlayerRunPending": true,
+    "queueSampleLimit": 24,
+    "minimumQueueSampleIntervalSeconds": 5
   },
   "previousThreeJarNativeAcceptanceBeforeCarpetDataFix": {
     "status": "ROOT_ACCEPTED_CLEAN_NATIVE_NETWORK_REPRO_PENDING",
@@ -2615,7 +2617,7 @@
   },
   "journeyMapWaypointAssociation": {
     "receipt": "tools/journeymap-waypoints-policy.json",
-    "sourceLockSha256": "f388811e5208939e470965b1891af30e99e586ac22aa8eccee2467098bd6f11d",
+    "sourceLockSha256": "a123621b47d91a0ae4b5f4610a51944a7a2e553e0f2353bd4e4698a336b80837",
     "script": {
       "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
       "sizeBytes": 21839,
@@ -2624,5 +2626,18 @@
     "sourceOnly": true,
     "imagesUntouched": true,
     "optionalLateDeathGuardIncluded": false
+  },
+  "observerV9Delivery": {
+    "receipt": "tools/qa/observer-v9-and-waypoints-delivery.json",
+    "sourceLockSha256": "a123621b47d91a0ae4b5f4610a51944a7a2e553e0f2353bd4e4698a336b80837",
+    "runtimeMapSha256": "41b080406e58a93e2a629f31442df02c8f79c9d24fc08058208cf81b0c011a01",
+    "newRuntimeFiles": [
+      "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js"
+    ],
+    "changedRuntimeFiles": [
+      "launcher/diagnostics/recipe-exception-observer.jar"
+    ],
+    "all529ContentJarsUnchanged": true,
+    "realPeerTestPending": true
   }
 }

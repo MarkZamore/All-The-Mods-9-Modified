@@ -55,8 +55,8 @@ QUEST_MANIFEST_PATH = "tools/atm9_ru_quests/manifest.json"
 QUEST_PATCH_TOOL = "tools/atm9_ru_quests.py"
 APPROVED_RECIPE_OBSERVER = {
     "path": "launcher/diagnostics/recipe-exception-observer.jar",
-    "sha256": "6cec35543c876ca8a06a15781819fce3d7876c048e58a46d36e0b97e0ce77dbf",
-    "sizeBytes": 37102,
+    "sha256": "db7a7f55ed33c989745ea8dcab330c52f3213e3a77a97ba3688b1a8a65c39880",
+    "sizeBytes": 43259,
     "kind": "temporary-diagnostic-tool",
 }
 RECIPE_DIAGNOSTIC_SCRIPT = "kubejs/startup_scripts/atm9_modified_recipe_diagnostics.js"
@@ -155,7 +155,7 @@ def validate_recipe_observer(pack: Path, row: dict, support: list[dict]):
             "Temporary standalone observer must be explicitly pack-owned")
     with zipfile.ZipFile(target_path(pack, APPROVED_RECIPE_OBSERVER["path"])) as archive:
         require(set(archive.namelist()) == {"META-INF/", "META-INF/MANIFEST.MF", "RecipeExceptionObserver.class", "RecipeExceptionObserver$Config.class",
-                                          "RecipeExceptionObserver$Candidate.class", "RecipeExceptionObserver$OutputBudget.class", "RecipeExceptionObserver$Site.class"},
+                                          "RecipeExceptionObserver$Candidate.class", "RecipeExceptionObserver$OutputBudget.class", "RecipeExceptionObserver$Site.class", "RecipeExceptionObserver$QueueSampler.class"},
                 "Temporary observer JAR has unexpected executable/mod entries")
         manifest = archive.read("META-INF/MANIFEST.MF").decode("utf-8-sig")
         require(re.search(r"(?im)^Main-Class: RecipeExceptionObserver\s*$", manifest)

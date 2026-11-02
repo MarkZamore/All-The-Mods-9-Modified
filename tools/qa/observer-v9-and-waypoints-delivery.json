@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "status": "SOURCE_AND_NATIVE_FIXTURE_VERIFIED_LOCAL_IP_CONTROL_PENDING",
+  "parentPublicRevision": "fcea2d570569c9d1599ec14bbe56b5f3b9266e12",
+  "sourceLockSha256": "a123621b47d91a0ae4b5f4610a51944a7a2e553e0f2353bd4e4698a336b80837",
+  "runtimeMapSha256": "41b080406e58a93e2a629f31442df02c8f79c9d24fc08058208cf81b0c011a01",
+  "runtimeFiles": 1917,
+  "contentJars": 529,
+  "supportFiles": 23,
+  "projectedPackModIds": 554,
+  "addedRuntimeFiles": [
+    "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js"
+  ],
+  "changedRuntimeFiles": [
+    "launcher/diagnostics/recipe-exception-observer.jar"
+  ],
+  "allOther1915ParentRowsUnchanged": true,
+  "all529ContentJarBytesUnchanged": true,
+  "jvmArgumentsAndManualCmdPsUnchanged": true,
+  "author60SecondConnectivityTimeoutRetained": true,
+  "ownObserverJarSha256": "db7a7f55ed33c989745ea8dcab330c52f3213e3a77a97ba3688b1a8a65c39880",
+  "ownObserverBytes": 43259,
+  "journeyMapScriptSha256": "1e55c42ee3d06fff262fdb2e94819d66751c2a253c1115e8d291e8ac6659eef3",
+  "journeyMapIsPermanentPackPolicyNotTemporaryDiagnostic": true,
+  "proofs": [
+    {
+      "path": "tools/recipe-diagnostics/v9/validation.json",
+      "sha256": "afdc5dc32802b4c381ddc001ebaffac7e5f5cf256deb934504f98d7a01bde855"
+    },
+    {
+      "path": "tools/recipe-diagnostics/v9/native-profile.public.json",
+      "sha256": "389e27e1e39c4e794c67ef7740eac6b31e1e0471bdf4a2da0ecaa07426cfc59a"
+    },
+    {
+      "path": "tools/recipe-diagnostics/v9/actual-report-proof429.public.json",
+      "sha256": "dfecf0c7b6428b1c305d4e90e9d93f7e7f9f1579613ab102c752f8e5d8bd7a27"
+    },
+    {
+      "path": "tools/qa/journeymap-io/native-proof.json",
+      "sha256": "d2470c0a7049045a2091cbc82980e4e6359696ee7a43009bf32adc645092b347"
+    },
+    {
+      "path": "tools/qa/journeymap/native-lifecycle-alias-proof.json",
+      "sha256": "7aa286480706ddbfeaf4840ed1b0724dda57ad3ca9d21493a22af41d1faae2e7"
+    }
+  ],
+  "nativeMinecraftOrWorldSwitchOrPeerPassClaimed": false,
+  "nextControl": "Direct local IP control does not require this optional diagnostic helper; a later Steam retry can run it on both sides before share/join.",
+  "sampleLimitations": "Periodic JVM instance enumeration has overhead; non-atomic and capped direct-field snapshots do not prove delivery. Encoded ID is not socket send.",
+  "lateJourneyMapWriterResidual": "Native death callback sleeps at least3000ms plus executor queuing without generation recheck; old callback may cross worlds. Optional guard absent.",
+  "pythonUnitTestsPassed": 248,
+  "sourceStaticAndPresetPassed": true,
+  "all1917SourceRowsVerified": true,
+  "journeyMapSourceProofSha256": "1d05bd6911d38d3ae8394d29c9a10061b8a86596d37029a9dc173049a5e5bd2c"
+}
