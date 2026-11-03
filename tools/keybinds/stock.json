@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Direct source projection555 names from historical actual636 namespace after explicit content removals. Five unbound Phainon mappings removed; all146 enabled and409 retained unbound values unchanged. No fresh native/application claim.",
+  "scope": "Direct source projection554 names from historical actual636 namespace after explicit removals. One unbound Presence Footsteps setting removed; all146 enabled/408 retained unbound values unchanged. No fresh native/application claim.",
   "englishNativeSha256": "1e2c66275c9b5a3d0a7c7d9e42bd58921520f3356acb4c35b4c0deb9f72d4459",
   "russianNativeSha256": "c45fed5c93946834c8294bbed0a0c3703410c86fa0cbc7da83f4e52cde42fad1",
   "sourceJars": {
@@ -119,7 +119,6 @@
     "Platform-forge-1.20.1-1.4.2.jar": "90a8dbe620614f4be677e43071cfaf01bbad382ad3354088d6caaf182fca7166",
     "Potion-Blender-1.20.1-FORGE-3.1.2.jar": "ef908211bec8a6fbd4e2f718e02fe10fe8e5d87be84293857b8fd4e33e6d0a55",
     "Powah-5.0.11.jar": "22f16ac88e8064f4f7fd94fb88fad3c8723dbd6fa5c11b7fd73c078c293184fa",
-    "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
     "Psi-1.20.1-102.jar": "79ae09bb3b4d480fbca89d9b14124b558ae375862f49db8c68c2ac1dc77be5a0",
     "Quark-4.0-462.jar": "c90b96f049d92825c4a103721988c80d72e5ad380d17be46a0f53e114874c478",
     "RSInfinityBooster-1.20.1-1.0+39.jar": "4575dec1c18b852eee484454d32c8975c3788ff4337312faec3f0a94afdc6e47",
@@ -462,7 +461,6 @@
     "sophisticatedbackpacks-1.20.1-3.24.9.1391.jar": "fd7464b56e96d24c509da7d701ef7704876476b19dcf7145719cd6435771be4b",
     "sophisticatedcore-1.20.1-1.2.105.1230.jar": "3a9aea835f7a4162681d5cf58199c4b1ad735d0c26cc8e903abc4c8254c6cf68",
     "sophisticatedstorage-1.20.1-1.4.11.1344.jar": "33a288e2d5ad2975ec4e9f9fbc4abc18a0a26720fc78ae00408c2af3b50f2620",
-    "sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
     "sound_of_fear-0.4.0-forge-1.20.1.jar.jar": "242f06126cb351706fec8e3423942ba2703604f4c3afca4960de3c09e748614a",
     "sounds_of_the_forest-1.0.2-forge-1.20.1.jar": "caa98fef71bf6945954acf7ae1ca3b0cfb70ef859ca69021fa8573754e9df74d",
     "spark-1.10.53-forge.jar": "eba275ba9bb0cb5b542913c3138c6eeff6a752898266d63d125d185f26ac99ed",
@@ -9008,23 +9006,6 @@
       "defaultValue": "key.keyboard.left.shift"
     },
     {
-      "id": "key.presencefootsteps.settings",
-      "category": "key.categories.misc",
-      "mappingClass": "net.minecraft.client.KeyMapping",
-      "context": "UNIVERSAL",
-      "sourceKind": "NEW",
-      "sourceJars": [
-        "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar"
-      ],
-      "labels": {
-        "en_us": "Presence Footsteps",
-        "ru_ru": "Presence Footsteps"
-      },
-      "role": "unbound",
-      "nativeValue": "key.keyboard.f10",
-      "defaultValue": "key.keyboard.f10"
-    },
-    {
       "id": "key.observable.profile",
       "category": "category.observable.keybinds",
       "mappingClass": "net.minecraft.client.KeyMapping",
@@ -9855,7 +9836,9 @@
       "mods/the_obsessed-1.5.2g-forge-1.20.1.jar": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
       "mods/voicechatrecording-1.20.1-2.1.jar": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
       "mods/sanitydim-mc1.20-1.1.0.jar": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a",
-      "mods/hsrphainon-1.2.3.jar": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1"
+      "mods/hsrphainon-1.2.3.jar": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1",
+      "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
+      "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1"
     },
     "removedKeyNames": [
       "key.fairy_mine.soltar_habilidade",
@@ -9938,7 +9921,8 @@
       "key.hsrphainon.Skill1",
       "key.hsrphainon.Skill2",
       "key.hsrphainon.Ultimate",
-      "key.hsrphainon.TECHNIQUE"
+      "key.hsrphainon.TECHNIQUE",
+      "key.presencefootsteps.settings"
     ],
     "currentNativeCaptureClaimed": false
   },
@@ -10200,6 +10184,49 @@
       "key.hsrphainon.TECHNIQUE"
     ],
     "retainedPresetNames": 555,
+    "retainedPresetValuesChanged": false,
+    "currentNativeRecaptureVerified": false
+  },
+  "soundModsRemovalProjection": {
+    "parentSourceRevision": "8bc8242255d39a3417be5b08e3282006351c5127",
+    "removedSourceJars": [
+      {
+        "fileName": "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+        "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
+        "sizeBytes": 7080698,
+        "sourceUrl": "https://edge.forgecdn.net/files/5015/286/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+        "projectId": 433068,
+        "fileId": 5015286,
+        "path": "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+        "kind": "requested",
+        "version": "1.20.1-1.9.1-beta.1",
+        "modIds": [
+          "presencefootsteps"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
+        "name": "Presence Footsteps (Forge)"
+      },
+      {
+        "fileName": "sound-physics-remastered-forge-1.20.1-1.4.10.jar",
+        "sha256": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
+        "sizeBytes": 203819,
+        "sourceUrl": "https://edge.forgecdn.net/files/6352/920/sound-physics-remastered-forge-1.20.1-1.4.10.jar",
+        "projectId": 535489,
+        "fileId": 6352920,
+        "path": "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar",
+        "kind": "requested",
+        "version": "1.20.1-1.4.10",
+        "modIds": [
+          "sound_physics_remastered"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
+        "name": "Sound Physics Remastered"
+      }
+    ],
+    "removedKeyNames": [
+      "key.presencefootsteps.settings"
+    ],
+    "retainedPresetNames": 554,
     "retainedPresetValuesChanged": false,
     "currentNativeRecaptureVerified": false
   }

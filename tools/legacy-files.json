@@ -4991,6 +4991,11 @@
   },
   {
     "path": "launcher/controls-guide.md",
+    "sizeBytes": 11537,
+    "sha256": "c3b3d7260e4f18ab10c6a91fccf465aea95a68fb218880fa5923abd872ff38e3"
+  },
+  {
+    "path": "launcher/controls-guide.md",
     "sizeBytes": 11649,
     "sha256": "f2de9851126f4aa6d8d190e68b17db73a8c41f0741a996f59923090317885be6"
   },
@@ -5033,6 +5038,11 @@
     "path": "launcher/controls-preset.txt",
     "sizeBytes": 31980,
     "sha256": "e8562c1c8471fe1294ba8552b7a4600e07dd7a911dd981d3f81f4b614c94593a"
+  },
+  {
+    "path": "launcher/controls-preset.txt",
+    "sizeBytes": 30750,
+    "sha256": "eafa16512bb78921987f44f2dd583b98be604af2cf9e229d7d3db74d469c7ee6"
   },
   {
     "path": "launcher/controls-preset.txt",

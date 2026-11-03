@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "parentSourceRevision": "8bc8242255d39a3417be5b08e3282006351c5127",
+  "removedFiles": [
+    {
+      "fileName": "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+      "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
+      "sizeBytes": 7080698,
+      "sourceUrl": "https://edge.forgecdn.net/files/5015/286/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+      "projectId": 433068,
+      "fileId": 5015286,
+      "path": "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+      "kind": "requested",
+      "version": "1.20.1-1.9.1-beta.1",
+      "modIds": [
+        "presencefootsteps"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
+      "name": "Presence Footsteps (Forge)"
+    },
+    {
+      "fileName": "sound-physics-remastered-forge-1.20.1-1.4.10.jar",
+      "sha256": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
+      "sizeBytes": 203819,
+      "sourceUrl": "https://edge.forgecdn.net/files/6352/920/sound-physics-remastered-forge-1.20.1-1.4.10.jar",
+      "projectId": 535489,
+      "fileId": 6352920,
+      "path": "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar",
+      "kind": "requested",
+      "version": "1.20.1-1.4.10",
+      "modIds": [
+        "sound_physics_remastered"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
+      "name": "Sound Physics Remastered"
+    }
+  ],
+  "retainedJarCount": 516,
+  "unchangedRetainedJarBytes": true,
+  "removedKeyNames": [
+    "key.presencefootsteps.settings"
+  ],
+  "retainedPresetNames": 554,
+  "projectedModIds": 541,
+  "runtimeRemovedFiles": [
+    "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+    "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar"
+  ],
+  "runtimeChangedFiles": [
+    "launcher/controls-guide.md",
+    "launcher/controls-preset.txt"
+  ],
+  "noOrphanDependencies": true,
+  "newRuntimeOrMultiplayerPassClaimed": false,
+  "launcherContentRuleAdded": false
+}

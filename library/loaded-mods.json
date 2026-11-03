@@ -375,7 +375,6 @@
     "mods/Potion-Blender-1.20.1-FORGE-3.1.2.jar": "ef908211bec8a6fbd4e2f718e02fe10fe8e5d87be84293857b8fd4e33e6d0a55",
     "mods/potionsmaster-1.20.1-47.1.70-0.6.0.jar": "5d120ba6e1bec21da8a26e6cc94d7b64fc49c34b098b7ba03bf1135a3a31c51f",
     "mods/Powah-5.0.11.jar": "22f16ac88e8064f4f7fd94fb88fad3c8723dbd6fa5c11b7fd73c078c293184fa",
-    "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
     "mods/productivebees-1.20.1-12.6.0.jar": "b728e5640fcfd0bd7137cabf475455588452ace89a3dd136333a60fdf7049af4",
     "mods/productivetrees-1.20.1-0.2.6.jar": "068b8185e0d6c82170fba90fd615b4a97d294647029aec7723ad40f7dfc06fe0",
     "mods/Psi-1.20.1-102.jar": "79ae09bb3b4d480fbca89d9b14124b558ae375862f49db8c68c2ac1dc77be5a0",
@@ -432,7 +431,6 @@
     "mods/sophisticatedbackpacks-1.20.1-3.24.9.1391.jar": "fd7464b56e96d24c509da7d701ef7704876476b19dcf7145719cd6435771be4b",
     "mods/sophisticatedcore-1.20.1-1.2.105.1230.jar": "3a9aea835f7a4162681d5cf58199c4b1ad735d0c26cc8e903abc4c8254c6cf68",
     "mods/sophisticatedstorage-1.20.1-1.4.11.1344.jar": "33a288e2d5ad2975ec4e9f9fbc4abc18a0a26720fc78ae00408c2af3b50f2620",
-    "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
     "mods/sound_of_fear-0.4.0-forge-1.20.1.jar.jar": "242f06126cb351706fec8e3423942ba2703604f4c3afca4960de3c09e748614a",
     "mods/sounds_of_the_forest-1.0.2-forge-1.20.1.jar": "caa98fef71bf6945954acf7ae1ca3b0cfb70ef859ca69021fa8573754e9df74d",
     "mods/spark-1.10.53-forge.jar": "eba275ba9bb0cb5b542913c3138c6eeff6a752898266d63d125d185f26ac99ed",
@@ -2509,11 +2507,6 @@
       "version": "5.0.11"
     },
     {
-      "id": "presencefootsteps",
-      "name": "Presence Footsteps (Forge)",
-      "version": "1.20.1-1.9.1-beta.1"
-    },
-    {
       "id": "productivebees",
       "name": "Productive Bees",
       "version": "1.20.1-12.6.0"
@@ -2832,11 +2825,6 @@
       "id": "sound_of_fear",
       "name": "Sound of Fear",
       "version": "1.0.0"
-    },
-    {
-      "id": "sound_physics_remastered",
-      "name": "Sound Physics Remastered",
-      "version": "1.20.1-1.4.10"
     },
     {
       "id": "sounds_of_the_forest",
@@ -3264,7 +3252,9 @@
       "mods/the_obsessed-1.5.2g-forge-1.20.1.jar": "af31c86b4d544bbbb27537f6b9a173f1f9d0421be2df5013089aeae10b630aeb",
       "mods/voicechatrecording-1.20.1-2.1.jar": "fb5953b871d6846190b3f788a749473b20b48d5337b9a5a6aaa8bafe8eccb7d1",
       "mods/sanitydim-mc1.20-1.1.0.jar": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a",
-      "mods/hsrphainon-1.2.3.jar": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1"
+      "mods/hsrphainon-1.2.3.jar": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1",
+      "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
+      "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1"
     },
     "removedModIds": [
       "dandadan",
@@ -3280,9 +3270,11 @@
       "the_obsessed",
       "voicechatrecording",
       "sanitydim",
-      "hsrphainon"
+      "hsrphainon",
+      "presencefootsteps",
+      "sound_physics_remastered"
     ],
     "freshNativeObservationClaimed": false,
-    "scope": "Direct exact subtraction of14 removed NEW mod/library IDs from actual557ID/532JAR parent. Retained543 IDs/518JARs source-projected; no fresh native/full-game acceptance claimed."
+    "scope": "Direct exact subtraction of16 removed NEW mod/library IDs from actual557ID/532JAR parent. Retained541 IDs/516JARs source-projected; no fresh native/full-game acceptance claimed."
   }
 }

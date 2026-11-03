@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "8bc8242255d39a3417be5b08e3282006351c5127",
+  "priorUnionSha256": "8c7e28112b1610a401af5f733c39c58b075ed99764eea81173bbc7d73d914d96",
+  "currentUnionSha256": "296f7db2ec1e27b0b1054343e97a5b8aef8fd1afefa0a5308f538b88c7dce765",
+  "addedExactRows": [
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 11537,
+      "sha256": "c3b3d7260e4f18ab10c6a91fccf465aea95a68fb218880fa5923abd872ff38e3"
+    },
+    {
+      "path": "launcher/controls-preset.txt",
+      "sizeBytes": 30750,
+      "sha256": "eafa16512bb78921987f44f2dd583b98be604af2cf9e229d7d3db74d469c7ee6"
+    }
+  ],
+  "userRemovedIds": [
+    "presencefootsteps",
+    "sound_physics_remastered"
+  ],
+  "unknownPersonalFilesDeletionClaimed": false
+}

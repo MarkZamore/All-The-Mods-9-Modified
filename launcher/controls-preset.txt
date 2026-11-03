@@ -396,7 +396,6 @@ key_key.occultism.familiar.shub_niggurath_familiar:key.keyboard.unknown
 key_key.occultism.storage_remote:key.keyboard.unknown
 key_key.open_muffler_gui:key.keyboard.unknown
 key_key.paraglider.paragliderSettings:key.keyboard.unknown
-key_key.presencefootsteps.settings:key.keyboard.unknown
 key_key.prevDestination:key.keyboard.unknown
 key_key.railcraft.change_aura:key.keyboard.unknown
 key_key.rebornstorage.openWirelessCraftingGrid:key.keyboard.unknown

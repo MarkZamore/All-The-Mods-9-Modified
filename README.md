@@ -2,7 +2,7 @@
 
 Отдельная чистая производная от оригинальной **ATM9 1.1.1**, **Minecraft 1.20.1**, **Forge 47.4.0**. ID: `all-the-mods-9-modified`; папка установки: `All the Mods 9 Modified`. Оригинальная ATM9 остаётся самостоятельным профилем. Для Modified подготовлены [собственный источник](https://github.com/MarkZamore/All-The-Mods-9-Modified) и профиль поставки `pack-latest`; прежние наработки Modified не служат входом для этой сборки.
 
-**Текущий состав518:** по явному решению пользователя исключён HSR Phainon1.2.3. Ранее исключены Sanity, The Obsessed, ArPhEx, SCP:Overtime / SCP:Obscurity, Revervox и две orphan-библиотеки KuroLib / Voice Chat Recording. Самостоятельный Simple Voice Chat сохранён. Остальные518 JAR и все555 назначений пресета не изменены. Карточка543mod ID является source-проекцией исторического557 снимка, а не новым native-наблюдением. Исправление Steam-разрыва проверяется отдельно.
+**Текущий состав516:** по явному решению пользователя исключены Presence Footsteps и Sound Physics Remastered. Предыдущие удаления HSR Phainon, Sanity, The Obsessed, ArPhEx, SCP:Overtime / SCP:Obscurity и Revervox сохраняются. Самостоятельный Simple Voice Chat сохранён. Остальные516 JAR и все554 оставшихся назначения пресета не изменены. Карточка541mod ID является source-проекцией исторического557 снимка. Исправление Steam-разрыва проверяется отдельно.
 
 Временный standalone V10-инструмент получил только exact-guard для опубликованного Forge e4steam V2, необходимый после обновления лаунчера431. Все167 наблюдаемых Steam-классов V1/V2 совпадают; точки/поля/лимиты диагностики прежние. Синтетический selftest и сохранность отчёта проверены, новый игровой/сетевой PASS не заявляется.
 
@@ -72,7 +72,6 @@
 | [Nyctophobia](https://www.curseforge.com/minecraft/mc-mods/nyctophobia-forge) | `2.0.0+mc1.20.1` | `nyctophobia` |
 | [Nyf's Spiders](https://www.curseforge.com/minecraft/mc-mods/nyfs-spiders) | `3.0.2` | `nyfsspiders` |
 | [Orbital Railgun Forge](https://www.curseforge.com/minecraft/mc-mods/orbital-railgun-reforged) | `1.4.2` | `orbital_railgun` |
-| [Presence Footsteps (Forge)](https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge) | `1.20.1-1.9.1-beta.1` | `presencefootsteps` |
 | [Rats](https://www.curseforge.com/minecraft/mc-mods/rats) | `1.20.1-8.1.3` | `rats` |
 | [ReMorphed](https://www.curseforge.com/minecraft/mc-mods/remorphed) | `4.2` | `remorphed` |
 | [Retail 3008](https://www.curseforge.com/minecraft/mc-mods/retail-3008) | `1.0.6` | `retail` |
@@ -82,7 +81,6 @@
 | [Siren Head](https://www.curseforge.com/minecraft/mc-mods/siren-head-the-arrival) | `1.1.4` | `siren_head` |
 | [Sons of Sins](https://www.curseforge.com/minecraft/mc-mods/sons-of-sins) | `2.2.1` | `sons_of_sins` |
 | [Sound of Fear](https://www.curseforge.com/minecraft/mc-mods/sound-of-fear-horror-sounds) | `1.0.0` | `sound_of_fear` |
-| [Sound Physics Remastered](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered) | `1.20.1-1.4.10` | `sound_physics_remastered` |
 | [Sounds of the Forest](https://www.curseforge.com/minecraft/mc-mods/sounds-of-the-forest) | `1.0.2` | `sounds_of_the_forest` |
 | [The After](https://modrinth.com/mod/the-after) | `0.1.2` | `the_after` |
 | [The Backwoods](https://www.curseforge.com/minecraft/mc-mods/backwoods) | `1.6.0` | `the_backwoods` |
@@ -219,7 +217,7 @@ Grotesque Steve сохранён как **1.4.2-quiet.1** по отдельно�
 
 Для некоторых боевых веток нужны собственные назначения в меню Minecraft: классические способности Cursed Fate 1–7, четыре Stellar Remote из Shooting Star, а также Laser Mask. Четыре свойства палочки Crystalix также оставлены для выбора кнопок игроком. Это прямые действия без настроенной здесь замены; они не выдаются за полностью управляемые через другое меню. Родные кнопки и остальные неназначенные группы перечислены в руководстве и `tools/keybinds/stock.json`.
 
-Текущий source-пресет содержит560 имён:146 назначены,414 свободны;60 независимых действий мира. Удалены только четыре собственных назначения ArPhEx/SCP, прочие сохранены. Текущие544mod ID и namespace пресета выведены из исторического native-снимка; нового применения/перезапуска или физического ввода этим обновлением не проверено. Пресет остаётся необязательным и не меняет язык, графику, дальности, голос или микрофон.
+Текущий source-пресет содержит554 имени:146 назначены,408 свободны;60 независимых действий мира. Удалены только назначения исключённых модов, остальные значения сохранены. Текущие541mod ID и namespace пресета выведены из исторического native-снимка; нового применения/перезапуска или физического ввода этим обновлением не проверено. Пресет остаётся необязательным и не меняет язык, графику, дальности, голос или микрофон.
 
 **Сначала запустите новую установку до главного меню и штатно закройте игру, затем применяйте пресет.** Авторский DefaultSettings при первой инициализации копирует свой профиль поверх `options.txt`, поэтому пресет, применённый раньше, может быть заменён. Пресет остаётся необязательным действием игрока; авторские DefaultSettings и его профиль не изменялись.
 

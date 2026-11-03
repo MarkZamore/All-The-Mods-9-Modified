@@ -1814,22 +1814,6 @@
       "name": "platform"
     },
     {
-      "fileName": "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
-      "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
-      "sizeBytes": 7080698,
-      "sourceUrl": "https://edge.forgecdn.net/files/5015/286/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
-      "projectId": 433068,
-      "fileId": 5015286,
-      "path": "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
-      "kind": "requested",
-      "version": "1.20.1-1.9.1-beta.1",
-      "modIds": [
-        "presencefootsteps"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
-      "name": "Presence Footsteps (Forge)"
-    },
-    {
       "fileName": "Rats-1.20.1-8.1.3.jar",
       "sha256": "9a73aa327f8d48a06208bb6f47f03799e061eac8714f09301df0ef5d34ca5f3c",
       "sizeBytes": 8437611,
@@ -1988,22 +1972,6 @@
       ],
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sons-of-sins",
       "name": "Sons of Sins"
-    },
-    {
-      "fileName": "sound-physics-remastered-forge-1.20.1-1.4.10.jar",
-      "sha256": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
-      "sizeBytes": 203819,
-      "sourceUrl": "https://edge.forgecdn.net/files/6352/920/sound-physics-remastered-forge-1.20.1-1.4.10.jar",
-      "projectId": 535489,
-      "fileId": 6352920,
-      "path": "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar",
-      "kind": "requested",
-      "version": "1.20.1-1.4.10",
-      "modIds": [
-        "sound_physics_remastered"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
-      "name": "Sound Physics Remastered"
     },
     {
       "fileName": "sound_of_fear-0.4.0-forge-1.20.1.jar.jar",
@@ -2456,17 +2424,17 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "c3b3d7260e4f18ab10c6a91fccf465aea95a68fb218880fa5923abd872ff38e3",
-      "sizeBytes": 11537,
+      "sha256": "3b5723befb6d1df65dc51dea07bd69cafabb524a604294c53124209311b34791",
+      "sizeBytes": 11539,
       "kind": "resource",
-      "reason": "Optional key-only preset guide: current518 source JAR count after explicit Phainon removal; all555 mappings unchanged. No fresh native/application claim."
+      "reason": "Optional key-only preset/guide: remove one unbound Presence Footsteps setting;516 source JARs/554 key names. Retained assignments unchanged; no fresh native/application claim."
     },
     {
       "path": "launcher/controls-preset.txt",
-      "sha256": "eafa16512bb78921987f44f2dd583b98be604af2cf9e229d7d3db74d469c7ee6",
-      "sizeBytes": 30750,
+      "sha256": "946884959426d949ace22d3d75dd92086de3cf60409c9f6c4c7bd355c2d4120d",
+      "sizeBytes": 30694,
       "kind": "configuration",
-      "reason": "Optional key-only preset guide: current518 source JAR count after explicit Phainon removal; all555 mappings unchanged. No fresh native/application claim."
+      "reason": "Optional key-only preset/guide: remove one unbound Presence Footsteps setting;516 source JARs/554 key names. Retained assignments unchanged; no fresh native/application claim."
     },
     {
       "path": "launcher/jvm-args.txt",

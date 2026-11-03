@@ -1530,12 +1530,13 @@
     {
       "name": "Presence Footsteps (Forge)",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "presencefootsteps"
       ],
       "version": "1.20.1-1.9.1-beta.1",
-      "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98"
+      "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
+      "reason": "User explicitly requested removal on 2026-11-03 after review of footsteps and global audio processing. No exact audio clipping cause or Steam-network-fix claim is made."
     },
     {
       "name": "Rats",
@@ -1696,12 +1697,13 @@
     {
       "name": "Sound Physics Remastered",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "sound_physics_remastered"
       ],
       "version": "1.20.1-1.4.10",
-      "sha256": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1"
+      "sha256": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
+      "reason": "User explicitly requested removal on 2026-11-03 after review of footsteps and global audio processing. No exact audio clipping cause or Steam-network-fix claim is made."
     },
     {
       "name": "Sounds of the Forest",
@@ -2007,7 +2009,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 70,
+  "selectedRequestedProjects": 68,
   "dependencyJars": 17,
   "authorCompatibilitySelections": [
     {
@@ -2251,8 +2253,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_USER_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "5d74e606882fb4be070a7e49035d29fc7adf7b5c20af9502e8d82ce58c781f20",
+    "status": "SOURCE_USER_AUDIO_REMOVALS_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "6c1033e4fe8fbcb741e1e59d37fc5ca92f3906ec286333a63e77ec10782808b7",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -3025,6 +3027,65 @@
     "retainedDependencyJars": 17,
     "orphanDependencyRemoved": false,
     "safetyReason": "Removing Phainon introduces no new mutation path. Shared GeckoLib remains for other retained mods; no custom Safety framework/profile exists. Remaining author JARs/native permissions unchanged. Old-world Phainon registry content may be lost; no lossless migration claimed.",
+    "newRuntimeOrSteamFixClaimed": false
+  },
+  "previousSingleplayerContentAcceptanceBeforeSoundModsRemoval": {
+    "status": "SOURCE_USER_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "5d74e606882fb4be070a7e49035d29fc7adf7b5c20af9502e8d82ce58c781f20",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "soundModsRemoval": {
+    "userAuthorizedIds": [
+      "presencefootsteps",
+      "sound_physics_remastered"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+        "sha256": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
+        "sizeBytes": 7080698,
+        "sourceUrl": "https://edge.forgecdn.net/files/5015/286/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+        "projectId": 433068,
+        "fileId": 5015286,
+        "path": "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+        "kind": "requested",
+        "version": "1.20.1-1.9.1-beta.1",
+        "modIds": [
+          "presencefootsteps"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
+        "name": "Presence Footsteps (Forge)"
+      },
+      {
+        "fileName": "sound-physics-remastered-forge-1.20.1-1.4.10.jar",
+        "sha256": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
+        "sizeBytes": 203819,
+        "sourceUrl": "https://edge.forgecdn.net/files/6352/920/sound-physics-remastered-forge-1.20.1-1.4.10.jar",
+        "projectId": 535489,
+        "fileId": 6352920,
+        "path": "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar",
+        "kind": "requested",
+        "version": "1.20.1-1.4.10",
+        "modIds": [
+          "sound_physics_remastered"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
+        "name": "Sound Physics Remastered"
+      }
+    ],
+    "removedKeyNames": [
+      "key.presencefootsteps.settings"
+    ],
+    "retainedSourceJars": 516,
+    "retainedProjectedPackModIds": 541,
+    "retainedPresetNames": 554,
+    "retainedRequestedJars": 68,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "safetyReason": "Removal introduces no new world-mutation path. Both mods provide audio/client presentation rather than placed content; BASE Cloth Config and independent Simple Voice Chat remain. No custom Safety framework/profile exists; no author JAR is rewritten.",
     "newRuntimeOrSteamFixClaimed": false
   }
 }
