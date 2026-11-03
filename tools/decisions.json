@@ -2358,7 +2358,7 @@
     "publicSourceUnchangedUntilRootGate": true
   },
   "modernFix525Update": {
-    "status": "AUTHORIZED_OFFICIAL_BASE_CANDIDATE_STATIC_PASS_NATIVE_PENDING",
+    "status": "RETAINED_OFFICIAL_BASE_OVERRIDE_NATIVE_CACHE_FIX_PROVEN",
     "override": {
       "modId": "modernfix",
       "original": {
@@ -2389,7 +2389,8 @@
       "sha256": "0aff241dbcdf0091eacfdb5d4ba38478a2ab38888177f808d093487ed6ace2b5"
     },
     "upstreamAuthorLockImmutable": true,
-    "syntheticCacheCaseIsNotActualIncidentCauseProof": true
+    "syntheticCacheCaseIsNotActualIncidentCauseProof": true,
+    "retentionReceipt": "tools/qa/modernfix-525-retention.json"
   },
   "temporaryRecipeDiagnostics": {
     "cleanupInventory": "tools/qa/temporary-recipe-diagnostics-cleanup.json",
@@ -2409,11 +2410,14 @@
     "exactKeepAliveNativeProfileSha256": "3718c0aff29b31e6c41d2437489b5c96355a00d9f17d638c3cb52e4227f92279",
     "actualPublished429ArchiveProof": "tools/recipe-diagnostics/v10/actual-report-proof429.public.json",
     "actualPublished429ArchiveProofSha256": "96de39a2d577324dbd971c8ddefda81f55848270f2658cc918d47ff407bfd786",
-    "realPlayerRunPending": true,
+    "realPlayerRunPending": false,
     "queueSampleLimit": 24,
     "minimumQueueSampleIntervalSeconds": 5,
     "heapInstanceEnumeration": false,
-    "existingObjectsBeforeReadyDiscoverable": false
+    "existingObjectsBeforeReadyDiscoverable": false,
+    "status": "RETIRED_AFTER_CONFIRMED_STEAM_FIX_LAUNCHER435",
+    "active": false,
+    "confirmedNetworkReceipt": "tools/qa/steam-network-435-acceptance.json"
   },
   "previousThreeJarNativeAcceptanceBeforeCarpetDataFix": {
     "status": "ROOT_ACCEPTED_CLEAN_NATIVE_NETWORK_REPRO_PENDING",
@@ -2631,15 +2635,17 @@
   },
   "journeyMapWaypointAssociation": {
     "receipt": "tools/journeymap-waypoints-policy.json",
-    "sourceLockSha256": "647a30184d7f31957471695c741d9d8ce5bfcfca3778259cad52163c5ffa6738",
+    "sourceLockSha256": "3ec0a4a956cc30d88697248832c3bdb817f1f58cc91dfa1725a3e6ea4552b7d3",
     "script": {
       "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
-      "sizeBytes": 21839,
-      "sha256": "1e55c42ee3d06fff262fdb2e94819d66751c2a253c1115e8d291e8ac6659eef3"
+      "sizeBytes": 24074,
+      "sha256": "760e9a63ac9621027a5e3c0c8f6150ef3cc9c032908bef4f764e4af4862de21b"
     },
     "sourceOnly": true,
     "imagesUntouched": true,
-    "optionalLateDeathGuardIncluded": false
+    "optionalLateDeathGuardIncluded": false,
+    "v2Receipt": "tools/qa/journeymap-world-isolation-v2.json",
+    "rootFix": "Exact Rhino overload selection and one native level-storage root junction; no generic historical waypoint deletion."
   },
   "observerV9Delivery": {
     "receipt": "tools/qa/observer-v9-and-waypoints-delivery.json",
@@ -3160,5 +3166,13 @@
     "runtimeFilesChangedByPresentation": false,
     "launcherUsesPerPackNameRule": false,
     "scope": "Counts include standalone technical mods and recursive addons; API/library IDs are excluded. Groups, roles and scope are source-owned metadata."
+  },
+  "currentNetworkAcceptance": {
+    "status": "USER_CONFIRMED_STEAM_CONNECTION_WITH_MATCHED_LOGS",
+    "sourceRevision": "c445491aed34b1a77ab08881ce44edb29acaa122",
+    "launcherRelease": 435,
+    "receipt": "tools/qa/steam-network-435-acceptance.json",
+    "temporaryDiagnosticsRetired": true,
+    "fullTwoAccountMatrixClaimed": false
   }
 }

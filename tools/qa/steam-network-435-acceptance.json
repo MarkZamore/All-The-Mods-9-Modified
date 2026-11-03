@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "status": "USER_CONFIRMED_AND_MATCHED_HOST_GUEST_LOGS",
+  "acceptedSourceRevision": "c445491aed34b1a77ab08881ce44edb29acaa122",
+  "acceptedSourceLockSha256": "f08db611b1584c181c1f8390a9f61d0434e88e2c657aeb4973095203629e4418",
+  "packJars": 515,
+  "projectedPackModIds": 540,
+  "minecraftVersion": "1.20.1",
+  "forgeVersion": "47.4.0",
+  "launcher": {
+    "release": 435,
+    "commit": "a0522f4edf9feaa4ea2be801125a6a98c4bd6b88",
+    "publicExeSha256": "725724f903c69d355622b255db2c5adad5bb960e68f9c3ec32e9255b602bf953",
+    "workflowRunId": 41623506009
+  },
+  "observations": {
+    "nativeChannelBackpressureGuardActuallyActive": true,
+    "matchedFullRemoteKeepAliveRoundTrips": 3,
+    "roundTripSeconds": [30.16867, 12.256015, 4.485143],
+    "guestKeepAliveRequestsAndHandlers": 9,
+    "hostNetworkQueueDrained": true,
+    "heldChunkCountsAcrossReports": [1005, 127, 0],
+    "hostLogSecondsAfterAdmission": 218,
+    "guestConnectionAtCaptureSeconds": 181.55,
+    "clientEnteredWorld": true,
+    "terminalOrTimeoutObserved": false,
+    "userConfirmedPlayableSteamConnection": true
+  },
+  "privateAnalysisSha256": {
+    "host": "c72dbc36e85f6e5162af872e77af1959235ad94979ffb1a71c43b020be112ab4",
+    "guest": "20776b01bcc74c4ebee1b2a8d0a0cc1f34c6dcec8f573b06b541d47fc8410f03"
+  },
+  "limits": [
+    "One observed host/guest Steam session; not an exhaustive transport or loader matrix.",
+    "Observer limits truncated later host KeepAlive events; truncation is not a disconnect.",
+    "Existing OpenAL stream-buffer errors occurred during play; neither a shutdown-only race nor the network cause is established.",
+    "This receipt accepts the named pre-cleanup source cohort; source-only diagnostic retirement does not claim a second gameplay run.",
+    "No raw personal logs, account identities, paths or world files are published."
+  ]
+}

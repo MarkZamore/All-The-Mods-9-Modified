@@ -2422,10 +2422,10 @@
     },
     {
       "path": "launcher/jvm-args.txt",
-      "sha256": "3f36cf95a7fd2bfb6381dd43011f441eb8735485d80b6356cb04141407e67c31",
-      "sizeBytes": 160,
+      "sha256": "a1f3a734e672681e16e8db9a35ece57236720f99f95a85bac9eb2caac1e19d3c",
+      "sizeBytes": 44,
       "kind": "configuration",
-      "reason": "Pack-owned native logging selector plus temporary loopback-only ephemeral JDWP and recipeIds diagnostic opt-in; all previous JVM flags retained. Not a gameplay fix or launcher per-mod writer."
+      "reason": "Permanent pack-owned native logging selector."
     },
     {
       "path": "launcher/launch-context.json",
@@ -2470,27 +2470,6 @@
       "license": "All Rights Reserved"
     },
     {
-      "path": "launcher/diagnostics/recipe-exception-observer.jar",
-      "sha256": "71b7167dd4e9d34dfc16581e2b9eb3472c5b13f7f728980aab37332f978e71e0",
-      "sizeBytes": 44663,
-      "kind": "temporary-diagnostic-tool",
-      "reason": "Temporary V10 exact ForgeV1/V2 guard compatibility only. Same recipe/terminal/keepalive/lifecycle hooks, cached-reference fields and 256KiB/24sample caps; no heap enumeration, new instrumentation, method invocation or class mutation. All167 Steam target classes are byte-identical between the two pinned e4steam JARs. New peer test pending."
-    },
-    {
-      "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
-      "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44",
-      "sizeBytes": 2327,
-      "kind": "temporary-diagnostic-launcher",
-      "reason": "Temporary V10 exact ForgeV1/V2 guard compatibility only. Same recipe/terminal/keepalive/lifecycle hooks, cached-reference fields and 256KiB/24sample caps; no heap enumeration, new instrumentation, method invocation or class mutation. All167 Steam target classes are byte-identical between the two pinned e4steam JARs. New peer test pending."
-    },
-    {
-      "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
-      "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a",
-      "sizeBytes": 174,
-      "kind": "temporary-diagnostic-launcher",
-      "reason": "Temporary V10 exact ForgeV1/V2 guard compatibility only. Same recipe/terminal/keepalive/lifecycle hooks, cached-reference fields and 256KiB/24sample caps; no heap enumeration, new instrumentation, method invocation or class mutation. All167 Steam target classes are byte-identical between the two pinned e4steam JARs. New peer test pending."
-    },
-    {
       "path": "kubejs/data/alchemistry/recipes/dissolver/carpets.json",
       "sizeBytes": 644,
       "sha256": "05a82fcfb14da81ad397e342192b4f7dec0528156b0f4116cfc1f4aa68f009d4",
@@ -2499,10 +2478,10 @@
     },
     {
       "path": "kubejs/startup_scripts/lanmc_journeymap_waypoint_policy.js",
-      "sizeBytes": 21839,
-      "sha256": "1e55c42ee3d06fff262fdb2e94819d66751c2a253c1115e8d291e8ac6659eef3",
+      "sizeBytes": 24074,
+      "sha256": "760e9a63ac9621027a5e3c0c8f6150ef3cc9c032908bef4f764e4af4862de21b",
       "kind": "resource",
-      "reason": "Pack-owned native KubeJS singleplayer waypoint generation association. Preserve all displaced waypoint files by rename/archive and restore known UUID generations; no images, configs, game JARs or mechanics changed. Exact source/native API guard requires review on author updates."
+      "reason": "Pack-owned per-world waypoint association with exact KubeJS Rhino overloads and native-authorized saves junction; old generation data are preserved in local archives."
     }
   ],
   "questLocalization": {

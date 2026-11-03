@@ -5060,6 +5060,21 @@
     "sha256": "eff64ec7c0375ce99a3688390a7ac46f929568b36cfb845eddc82762e2126860"
   },
   {
+    "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
+    "sizeBytes": 174,
+    "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a"
+  },
+  {
+    "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
+    "sizeBytes": 2327,
+    "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44"
+  },
+  {
+    "path": "launcher/diagnostics/recipe-exception-observer.jar",
+    "sizeBytes": 44663,
+    "sha256": "71b7167dd4e9d34dfc16581e2b9eb3472c5b13f7f728980aab37332f978e71e0"
+  },
+  {
     "path": "launcher/diagnostics/recipe-exception-observer.jar",
     "sha256": "b66d1defe81cf239f61ebd6b3f114f6d5cc642a91789a012e4ead8f9b9c5a27d",
     "sizeBytes": 44431
@@ -5068,6 +5083,16 @@
     "path": "launcher/diagnostics/recipe-exception-observer.jar",
     "sizeBytes": 22045,
     "sha256": "eb402b3ef55eae7d29f2ce8212c2ce2a3b87db15d4fd1f39bb149708be9465fe"
+  },
+  {
+    "path": "launcher/jvm-args.txt",
+    "sizeBytes": 160,
+    "sha256": "3f36cf95a7fd2bfb6381dd43011f441eb8735485d80b6356cb04141407e67c31"
+  },
+  {
+    "path": "launcher/pack-owned.txt",
+    "sizeBytes": 271,
+    "sha256": "10705c33e725bcd5aa43e6146e81e132336f77d1c624f01df9ad82b3fade259c"
   },
   {
     "path": "minecraft-1.20.1-client.jar",

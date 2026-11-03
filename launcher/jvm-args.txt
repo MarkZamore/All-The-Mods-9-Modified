@@ -1,3 +1,1 @@
 -Dlog4j.configurationFile=config/log4j2.xml
--agentlib:jdwp=transport=dt_socket,address=127.0.0.1:0,server=y,suspend=n
--Dlanminecraft.diagnostics.recipeIds=true

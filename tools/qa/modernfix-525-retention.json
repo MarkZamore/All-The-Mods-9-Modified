@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "RETAIN_APPROVED_OFFICIAL_BASE_OVERRIDE",
+  "original": {
+    "version": "5.24.4+mc1.20.1",
+    "sha256": "98d77cb29c718934b1d5d465d3725a0de4284bf3c8033d6553a7dd3b15956fe4"
+  },
+  "retained": {
+    "version": "5.25.0+mc1.20.1",
+    "sha256": "8c0156eec349bb115621e7c3bbf99a5cebf01eea6d9b5a4512fd8cd74b267a91",
+    "sizeBytes": 897884,
+    "officialAuthorJarRewritten": false
+  },
+  "reason": "The actual official author mixin clears an Ingredient soft-reference cache during native invalidation. A controlled stale-cache case and the actual Alchemylib ingredient codec round-trip passed without emulating the fix or manually clearing the cache.",
+  "nativeEvidenceSha256": "ed573448e63c1500d6a33c0ac77b4bd3921172142cea6d7ec2267b4d5986fdeb",
+  "nativeCacheFixturePassed": true,
+  "realRecipeRegistryOrTagsMutated": false,
+  "officialFixEmulated": false,
+  "manualCacheClearBeforeMeasuredCodec": false,
+  "steamTransportCauseOrFixClaimed": false,
+  "temporaryDiagnosticUtility": false,
+  "scopeDisclosure": "This is the previously authorized full official update, including the broader14-commit/18-file author changes. It is not described as a one-line-only replacement. Original BASE membership and the immutable upstream lock remain unchanged."
+}

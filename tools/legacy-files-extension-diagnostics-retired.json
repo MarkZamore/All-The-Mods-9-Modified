@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "c445491aed34b1a77ab08881ce44edb29acaa122",
+  "priorUnionSha256": "2eb5017ee8b39ee71033222eb6c761a7a4d7c8cba6a1629941d5800d954b66f4",
+  "addedExactRows": [
+    {
+      "path": "launcher/diagnostics/recipe-exception-observer.jar",
+      "sizeBytes": 44663,
+      "sha256": "71b7167dd4e9d34dfc16581e2b9eb3472c5b13f7f728980aab37332f978e71e0"
+    },
+    {
+      "path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
+      "sizeBytes": 2327,
+      "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44"
+    },
+    {
+      "path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
+      "sizeBytes": 174,
+      "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a"
+    },
+    {
+      "path": "launcher/jvm-args.txt",
+      "sizeBytes": 160,
+      "sha256": "3f36cf95a7fd2bfb6381dd43011f441eb8735485d80b6356cb04141407e67c31"
+    },
+    {
+      "path": "launcher/pack-owned.txt",
+      "sizeBytes": 271,
+      "sha256": "10705c33e725bcd5aa43e6146e81e132336f77d1c624f01df9ad82b3fade259c"
+    }
+  ],
+  "purpose": "Retire only actually published temporary JDI artifacts and prior JVM/ownership bytes; unknown personal files are preserved."
+}

@@ -53,20 +53,6 @@ APPROVED_GROTESQUE_QUIET = {
 }
 QUEST_MANIFEST_PATH = "tools/atm9_ru_quests/manifest.json"
 QUEST_PATCH_TOOL = "tools/atm9_ru_quests.py"
-APPROVED_RECIPE_OBSERVER = {
-    "path": "launcher/diagnostics/recipe-exception-observer.jar",
-    "sha256": "71b7167dd4e9d34dfc16581e2b9eb3472c5b13f7f728980aab37332f978e71e0",
-    "sizeBytes": 44663,
-    "kind": "temporary-diagnostic-tool",
-}
-RECIPE_DIAGNOSTIC_SCRIPT = "kubejs/startup_scripts/atm9_modified_recipe_diagnostics.js"
-APPROVED_RECIPE_DIAGNOSTIC_LAUNCHERS = [
-    {"path": "launcher/diagnostics/Start-RecipeDiagnostics.ps1", "sizeBytes": 2327,
-     "sha256": "081a885fc387d0f55e2ba899b2db4ee841109c53d74b28c9a0820d700afc7b44", "kind": "temporary-diagnostic-launcher"},
-    {"path": "launcher/diagnostics/Start-RecipeDiagnostics.cmd", "sizeBytes": 174,
-     "sha256": "ce29b986dea9d50d2109a3a06db727b5d955a29378693f726aa4fd562ac1745a", "kind": "temporary-diagnostic-launcher"},
-]
-RECIPE_DIAGNOSTIC_JDWP = "-agentlib:jdwp=transport=dt_socket,address=127.0.0.1:0,server=y,suspend=n"
 
 
 def read_json(path: Path):
@@ -129,42 +115,37 @@ def check_file(pack: Path, row: dict, label="Locked file"):
     require(sha256(target) == row["sha256"], label + " SHA256 mismatch: " + row["path"])
 
 
-def validate_recipe_observer(pack: Path, row: dict, support: list[dict]):
-    """One temporary standalone JDI tool; never a Forge/helper-mod allowance."""
-    bundle = [APPROVED_RECIPE_OBSERVER, *APPROVED_RECIPE_DIAGNOSTIC_LAUNCHERS]
-    expected = next((item for item in bundle if item["path"] == row.get("path")), None)
-    require(expected is not None and set(row) == {*expected, "reason"}
-            and all(row.get(key) == value for key, value in expected.items()),
-            "Only the exact temporary manual recipe diagnostic bundle is approved")
-    for pin in bundle:
-        found = [item for item in support if item.get("path") == pin["path"]]
-        require(len(found) == 1 and all(found[0].get(key) == value for key, value in pin.items()),
-                "Temporary manual diagnostic bundle is incomplete or changed")
-        check_file(pack, pin, "Temporary manual recipe diagnostic artifact")
-    require(not any(item.get("path") == RECIPE_DIAGNOSTIC_SCRIPT for item in support)
-            and not target_path(pack, RECIPE_DIAGNOSTIC_SCRIPT).exists(),
-            "Unsupported temporary KubeJS observer startup script must be absent")
-    flags = [line.strip() for line in target_path(pack, "launcher/jvm-args.txt").read_text(encoding="utf-8-sig").splitlines()
-             if line.strip() and not line.strip().startswith("#")]
-    require([value for value in flags if value.startswith(("-agentlib:jdwp", "-Xrunjdwp"))] == [RECIPE_DIAGNOSTIC_JDWP],
-            "Temporary JDWP must be one loopback-only ephemeral non-suspending listener")
-    require([value for value in flags if value.startswith("-Dlanminecraft.diagnostics.recipeIds")] ==
-            ["-Dlanminecraft.diagnostics.recipeIds=true"], "Temporary observer diagnostic opt-in is missing or conflicting")
-    owned = target_path(pack, "launcher/pack-owned.txt").read_text(encoding="utf-8-sig").splitlines()
-    require(any(line.strip() in {row["path"], "launcher/diagnostics/**"} for line in owned),
-            "Temporary standalone observer must be explicitly pack-owned")
-    with zipfile.ZipFile(target_path(pack, APPROVED_RECIPE_OBSERVER["path"])) as archive:
-        require(set(archive.namelist()) == {"META-INF/", "META-INF/MANIFEST.MF", "RecipeExceptionObserver.class", "RecipeExceptionObserver$Config.class",
-                                          "RecipeExceptionObserver$Candidate.class", "RecipeExceptionObserver$OutputBudget.class", "RecipeExceptionObserver$Site.class", "RecipeExceptionObserver$QueueSampler.class"},
-                "Temporary observer JAR has unexpected executable/mod entries")
-        manifest = archive.read("META-INF/MANIFEST.MF").decode("utf-8-sig")
-        require(re.search(r"(?im)^Main-Class: RecipeExceptionObserver\s*$", manifest)
-                and not re.search(r"(?im)^(?:Premain-Class|Agent-Class|Can-Redefine-Classes|Can-Retransform-Classes):", manifest),
-                "Temporary observer must remain a standalone main program, not a class agent")
-        for name in (name for name in archive.namelist() if name.endswith(".class")):
-            raw = archive.read(name)
-            require(raw[:4] == b"\xca\xfe\xba\xbe" and int.from_bytes(raw[6:8], "big") == 61,
-                    "Temporary observer must target Java17")
+def validate_support_resource(row: dict):
+    """Support is configuration/data, with no standalone executable exception."""
+    validate_hash_record(row)
+    relative = row["path"]
+    require(relative.split("/", 1)[0] in CONTENT_ROOTS - {"mods"}
+            and row.get("kind") in {"configuration", "resource"},
+            "Invalid support file kind/root: " + relative)
+    require(not relative.lower().endswith((".jar", ".class", ".java", ".dll", ".exe", ".cmd", ".bat", ".ps1")),
+            "Executable/helper files are not support resources: " + relative)
+    require(isinstance(row.get("reason"), str) and row["reason"].strip(), "Support file needs a reason: " + relative)
+
+
+def verify_retired_diagnostics(pack: Path):
+    """Keep retired debugging out of a future source restore; never edit user files."""
+    for relative in ("launcher/diagnostics/recipe-exception-observer.jar",
+                     "launcher/diagnostics/Start-RecipeDiagnostics.ps1",
+                     "launcher/diagnostics/Start-RecipeDiagnostics.cmd",
+                     "kubejs/startup_scripts/atm9_modified_recipe_diagnostics.js"):
+        require(not target_path(pack, relative).exists(), "Retired temporary diagnostic remains in source: " + relative)
+    jvm = target_path(pack, "launcher/jvm-args.txt")
+    if jvm.is_file():
+        flags = [line.strip() for line in jvm.read_text(encoding="utf-8-sig").splitlines()
+                 if line.strip() and not line.strip().startswith("#")]
+        require(not any(value.startswith(("-agentlib:jdwp", "-Xrunjdwp", "-Dlanminecraft.diagnostics.recipeIds")) for value in flags),
+                "Retired temporary diagnostic JVM flag remains in source")
+    owned = target_path(pack, "launcher/pack-owned.txt")
+    if owned.is_file():
+        lines = [line.strip().rstrip("/") for line in owned.read_text(encoding="utf-8-sig").splitlines()
+                 if line.strip() and not line.strip().startswith("#")]
+        require(not any(line == "launcher/diagnostics" or line.startswith("launcher/diagnostics/") for line in lines),
+                "Retired temporary diagnostic ownership remains in source")
 
 
 def source_url(row: dict, *, url=None, filename=None) -> str:
@@ -398,6 +379,7 @@ def load_plan(pack: Path) -> dict:
     """Validate every lock/path/provenance before a restore can write anything."""
     pack = pack.absolute()
     require(not is_link(pack), "Pack root must not be linked")
+    verify_retired_diagnostics(pack)
     lock_path = target_path(pack, "tools/modified-lock.json")
     lock = read_json(lock_path)
     require(lock.get("schemaVersion") == 1, "Unsupported Modified lock schema")
@@ -451,16 +433,7 @@ def load_plan(pack: Path) -> dict:
                     "Addition needs its official project page: " + relative)
             download_record(pack, row)
     for row in support:
-        validate_hash_record(row)
-        root = row["path"].split("/", 1)[0]
-        if row.get("kind") in {"temporary-diagnostic-tool", "temporary-diagnostic-launcher"}:
-            validate_recipe_observer(pack, row, support)
-        else:
-            require(root in CONTENT_ROOTS - {"mods"} and row.get("kind") in {"configuration", "resource"},
-                    "Invalid support file kind/root: " + row["path"])
-            require(not row["path"].lower().endswith((".jar", ".class", ".java", ".dll", ".exe", ".cmd", ".bat", ".ps1")),
-                    "Executable/helper files are not support resources: " + row["path"])
-        require(isinstance(row.get("reason"), str) and row["reason"].strip(), "Support file needs a reason: " + row["path"])
+        validate_support_resource(row)
     for row in [*files, *support]:
         key = row["path"].casefold()
         require(key not in seen, "Addition overwrites baseline or duplicates an active path: " + row["path"])
