@@ -1391,12 +1391,13 @@
     {
       "name": "HSR Phainon",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/hsr-phainon",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "hsrphainon"
       ],
       "version": "1.2.3",
-      "sha256": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1"
+      "sha256": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1",
+      "reason": "User explicitly requested complete Phainon removal on 2026-11-03. No network-cause claim is made."
     },
     {
       "name": "Jujutsu Craft",
@@ -2006,7 +2007,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 71,
+  "selectedRequestedProjects": 70,
   "dependencyJars": 17,
   "authorCompatibilitySelections": [
     {
@@ -2251,7 +2252,7 @@
   },
   "currentSingleplayerContentAcceptance": {
     "status": "SOURCE_USER_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "4f084ec1a26fc5e119865ff8632be2f8011b4e57469ddd8f2feaeb31fb69545c",
+    "sourceLockSha256": "5d74e606882fb4be070a7e49035d29fc7adf7b5c20af9502e8d82ce58c781f20",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -2978,6 +2979,52 @@
     "retainedDependencyJars": 17,
     "orphanDependencyRemoved": false,
     "safetyReason": "Removing Sanity introduces no new mutation path. Shared GeckoLib remains for other retained mods; no custom Safety framework/profile exists. Remaining author JARs/native permissions unchanged. Old-world Sanity registry content may be lost; no lossless migration claimed.",
+    "newRuntimeOrSteamFixClaimed": false
+  },
+  "previousSingleplayerContentAcceptanceBeforePhainonRemoval": {
+    "status": "SOURCE_USER_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "4f084ec1a26fc5e119865ff8632be2f8011b4e57469ddd8f2feaeb31fb69545c",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "phainonRemoval": {
+    "userAuthorizedIds": [
+      "hsrphainon"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "hsrphainon-1.2.3.jar",
+        "sha256": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1",
+        "sizeBytes": 1169581,
+        "sourceUrl": "https://edge.forgecdn.net/files/8556/362/hsrphainon-1.2.3.jar",
+        "projectId": 1474801,
+        "fileId": 8556362,
+        "path": "mods/hsrphainon-1.2.3.jar",
+        "kind": "requested",
+        "version": "1.2.3",
+        "modIds": [
+          "hsrphainon"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/hsr-phainon",
+        "name": "HSR Phainon"
+      }
+    ],
+    "removedKeyNames": [
+      "key.hsrphainon.BasicATK",
+      "key.hsrphainon.Skill1",
+      "key.hsrphainon.Skill2",
+      "key.hsrphainon.Ultimate",
+      "key.hsrphainon.TECHNIQUE"
+    ],
+    "retainedSourceJars": 518,
+    "retainedProjectedPackModIds": 543,
+    "retainedPresetNames": 555,
+    "retainedRequestedJars": 70,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "safetyReason": "Removing Phainon introduces no new mutation path. Shared GeckoLib remains for other retained mods; no custom Safety framework/profile exists. Remaining author JARs/native permissions unchanged. Old-world Phainon registry content may be lost; no lossless migration claimed.",
     "newRuntimeOrSteamFixClaimed": false
   }
 }

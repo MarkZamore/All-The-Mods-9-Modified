@@ -2,7 +2,7 @@
 
 Отдельная чистая производная от оригинальной **ATM9 1.1.1**, **Minecraft 1.20.1**, **Forge 47.4.0**. ID: `all-the-mods-9-modified`; папка установки: `All the Mods 9 Modified`. Оригинальная ATM9 остаётся самостоятельным профилем. Для Modified подготовлены [собственный источник](https://github.com/MarkZamore/All-The-Mods-9-Modified) и профиль поставки `pack-latest`; прежние наработки Modified не служат входом для этой сборки.
 
-**Текущий состав519:** по явному решению пользователя исключён Sanity: Descent Into Madness1.1.0. Ранее исключены The Obsessed, ArPhEx, SCP:Overtime / SCP:Obscurity, Revervox и две orphan-библиотеки KuroLib / Voice Chat Recording. Самостоятельный Simple Voice Chat сохранён. Остальные519 JAR и все560 назначений пресета не изменены. Карточка544mod ID является source-проекцией исторического557 снимка, а не новым native-наблюдением. Исправление Steam-разрыва проверяется отдельно.
+**Текущий состав518:** по явному решению пользователя исключён HSR Phainon1.2.3. Ранее исключены Sanity, The Obsessed, ArPhEx, SCP:Overtime / SCP:Obscurity, Revervox и две orphan-библиотеки KuroLib / Voice Chat Recording. Самостоятельный Simple Voice Chat сохранён. Остальные518 JAR и все555 назначений пресета не изменены. Карточка543mod ID является source-проекцией исторического557 снимка, а не новым native-наблюдением. Исправление Steam-разрыва проверяется отдельно.
 
 Временный standalone V10-инструмент получил только exact-guard для опубликованного Forge e4steam V2, необходимый после обновления лаунчера431. Все167 наблюдаемых Steam-классов V1/V2 совпадают; точки/поля/лимиты диагностики прежние. Синтетический selftest и сохранность отчёта проверены, новый игровой/сетевой PASS не заявляется.
 
@@ -66,7 +66,6 @@
 | [God Wand](https://www.curseforge.com/minecraft/mc-mods/god-wand) | `1.2.0` | `godwand` |
 | [Grotesque Steve](https://saskez.gumroad.com/l/stevegrotesque) | `1.4.2-quiet.1` | `grotesque_steve` |
 | [Horror Element Mod](https://www.curseforge.com/minecraft/mc-mods/horror-elements-mod) | `1.6.3` | `horror_element_mod` |
-| [HSR Phainon](https://www.curseforge.com/minecraft/mc-mods/hsr-phainon) | `1.2.3` | `hsrphainon` |
 | [Liminality](https://www.curseforge.com/minecraft/mc-mods/liminal-reality) | `1.0.0` | `liminality` |
 | [Meulti's Backrooms](https://www.curseforge.com/minecraft/mc-mods/meultis-backrooms) | `1.4.0` | `mbackrooms` |
 | [Nostalgia](https://www.curseforge.com/minecraft/mc-mods/nostalgia-liminal-spaces) | `1.2.0` | `nostalgia` |
@@ -141,7 +140,7 @@ AzureLib обновлён адресно как **NEW-зависимость**, 
 | 1.0.34 | `9aca62c9caf1266617d2734e49204b1b2fe119ca58b0579dde47fb1c8f39a206` | Прежний кандидат, не активен |
 | 2.0.41 | `25a95a495c586b72f80bf8b65fd1892b2e21a2d9d2e072808e663aa0938401f6` | Активный официальный выпуск |
 
-Родной загрузчик 2.0.41 обработал неизменённую геометрию HSR Phainon1.2.3 Dawnmaker формата 1.21.110; проверены 190 прямых обращений From Another World к API AzureLib. Модели не переписывались, native format guards не обходились. Эти проверки не являются PASS полного клиента или обещанием переноса старых миров без потерь registry ID.
+Историческая проверка: родной загрузчик 2.0.41 обработал неизменённую геометрию уже исключённого HSR Phainon1.2.3 Dawnmaker формата 1.21.110; проверены 190 прямых обращений From Another World к API AzureLib. Модели не переписывались, native format guards не обходились. Эти проверки не являются PASS полного клиента или обещанием переноса старых миров без потерь registry ID.
 
 ### Исключённые проекты
 
@@ -218,7 +217,7 @@ Grotesque Steve сохранён как **1.4.2-quiet.1** по отдельно�
 
 Общая раскладка применяется отдельной кнопкой лаунчера и меняет только клавиши. P нужно удерживать для разговора с Verity. Карта M, рюкзак B, квесты на Ё/grave accent, Curios G и обычные WASD сохранены. Настроены основные меню/колёса/циклы/превращения. Назначения исключённых модов убраны. Полная таблица — [руководство по управлению](launcher/controls-guide.md).
 
-Для некоторых боевых веток нужны собственные назначения в меню Minecraft: классические способности Cursed Fate 1–7, все пять действий HSR Phainon, четыре Stellar Remote из Shooting Star, а также Laser Mask. Четыре свойства палочки Crystalix также оставлены для выбора кнопок игроком. Это прямые действия без настроенной здесь замены; они не выдаются за полностью управляемые через другое меню. Родные кнопки и остальные неназначенные группы перечислены в руководстве и `tools/keybinds/stock.json`.
+Для некоторых боевых веток нужны собственные назначения в меню Minecraft: классические способности Cursed Fate 1–7, четыре Stellar Remote из Shooting Star, а также Laser Mask. Четыре свойства палочки Crystalix также оставлены для выбора кнопок игроком. Это прямые действия без настроенной здесь замены; они не выдаются за полностью управляемые через другое меню. Родные кнопки и остальные неназначенные группы перечислены в руководстве и `tools/keybinds/stock.json`.
 
 Текущий source-пресет содержит560 имён:146 назначены,414 свободны;60 независимых действий мира. Удалены только четыре собственных назначения ArPhEx/SCP, прочие сохранены. Текущие544mod ID и namespace пресета выведены из исторического native-снимка; нового применения/перезапуска или физического ввода этим обновлением не проверено. Пресет остаётся необязательным и не меняет язык, графику, дальности, голос или микрофон.
 

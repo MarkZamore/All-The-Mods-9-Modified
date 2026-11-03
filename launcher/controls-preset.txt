@@ -324,11 +324,6 @@ key_key.ftbteams.open_gui:key.keyboard.unknown
 key_key.gravitationalmodulatingunittweaks.vertical_speed:key.keyboard.unknown
 key_key.grotesque_steve.open_manual:key.keyboard.unknown
 key_key.hide_icons:key.keyboard.unknown
-key_key.hsrphainon.BasicATK:key.keyboard.unknown
-key_key.hsrphainon.Skill1:key.keyboard.unknown
-key_key.hsrphainon.Skill2:key.keyboard.unknown
-key_key.hsrphainon.TECHNIQUE:key.keyboard.unknown
-key_key.hsrphainon.Ultimate:key.keyboard.unknown
 key_key.immersiveengineering.chemthrowerSwitch:key.keyboard.unknown
 key_key.immersiveengineering.magnetEquip:key.keyboard.unknown
 key_key.immersiveengineering.railgunZoom:key.keyboard.unknown

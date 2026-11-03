@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "parentSourceRevision": "1575a0a984d2f8fe640b5966d04cc081b19e1afa",
+  "removedFiles": [
+    {
+      "fileName": "hsrphainon-1.2.3.jar",
+      "sha256": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1",
+      "sizeBytes": 1169581,
+      "sourceUrl": "https://edge.forgecdn.net/files/8556/362/hsrphainon-1.2.3.jar",
+      "projectId": 1474801,
+      "fileId": 8556362,
+      "path": "mods/hsrphainon-1.2.3.jar",
+      "kind": "requested",
+      "version": "1.2.3",
+      "modIds": [
+        "hsrphainon"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/hsr-phainon",
+      "name": "HSR Phainon"
+    }
+  ],
+  "retainedJarCount": 518,
+  "unchangedRetainedJarBytes": true,
+  "removedKeyNames": [
+    "key.hsrphainon.BasicATK",
+    "key.hsrphainon.Skill1",
+    "key.hsrphainon.Skill2",
+    "key.hsrphainon.Ultimate",
+    "key.hsrphainon.TECHNIQUE"
+  ],
+  "retainedPresetNames": 555,
+  "projectedModIds": 543,
+  "runtimeRemovedFiles": [
+    "mods/hsrphainon-1.2.3.jar"
+  ],
+  "runtimeChangedFiles": [
+    "launcher/controls-guide.md",
+    "launcher/controls-preset.txt"
+  ],
+  "noOrphanDependencies": true,
+  "newRuntimeOrMultiplayerPassClaimed": false,
+  "launcherContentRuleAdded": false,
+  "oldWorldContentRegistryLossExpected": true
+}

@@ -1622,22 +1622,6 @@
       "name": "Horror Element Mod"
     },
     {
-      "fileName": "hsrphainon-1.2.3.jar",
-      "sha256": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1",
-      "sizeBytes": 1169581,
-      "sourceUrl": "https://edge.forgecdn.net/files/8556/362/hsrphainon-1.2.3.jar",
-      "projectId": 1474801,
-      "fileId": 8556362,
-      "path": "mods/hsrphainon-1.2.3.jar",
-      "kind": "requested",
-      "version": "1.2.3",
-      "modIds": [
-        "hsrphainon"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/hsr-phainon",
-      "name": "HSR Phainon"
-    },
-    {
       "fileName": "kleiders_custom_renderer-7.4.1-forge-1.20.1.jar",
       "sha256": "9e7bf7f20560120ec6de86f76ca88bb2f1c6ad22e98980bce119599f1e0c809e",
       "sizeBytes": 47876,
@@ -2472,17 +2456,17 @@
     },
     {
       "path": "launcher/controls-guide.md",
-      "sha256": "f2de9851126f4aa6d8d190e68b17db73a8c41f0741a996f59923090317885be6",
-      "sizeBytes": 11649,
+      "sha256": "c3b3d7260e4f18ab10c6a91fccf465aea95a68fb218880fa5923abd872ff38e3",
+      "sizeBytes": 11537,
       "kind": "resource",
-      "reason": "Optional key-only preset guide: current519 source JAR count after explicit Sanity removal; all560 mappings unchanged. No fresh native/application claim."
+      "reason": "Optional key-only preset guide: current518 source JAR count after explicit Phainon removal; all555 mappings unchanged. No fresh native/application claim."
     },
     {
       "path": "launcher/controls-preset.txt",
-      "sha256": "eff64ec7c0375ce99a3688390a7ac46f929568b36cfb845eddc82762e2126860",
-      "sizeBytes": 30992,
+      "sha256": "eafa16512bb78921987f44f2dd583b98be604af2cf9e229d7d3db74d469c7ee6",
+      "sizeBytes": 30750,
       "kind": "configuration",
-      "reason": "Optional key-only preset560 retained names: remove four own mappings of explicitly excluded ArPhEx/SCP; all remaining controls unchanged, including standalone VoiceChat. No fresh native/application claim."
+      "reason": "Optional key-only preset guide: current518 source JAR count after explicit Phainon removal; all555 mappings unchanged. No fresh native/application claim."
     },
     {
       "path": "launcher/jvm-args.txt",

@@ -4990,6 +4990,11 @@
     "sha256": "be9debd58a9544dc9116c3f79b73eb3d1e71f9fd04a9ae2f92e8d4d6a5848fc4"
   },
   {
+    "path": "launcher/controls-guide.md",
+    "sizeBytes": 11649,
+    "sha256": "f2de9851126f4aa6d8d190e68b17db73a8c41f0741a996f59923090317885be6"
+  },
+  {
     "path": "launcher/controls-preset.txt",
     "sizeBytes": 36367,
     "sha256": "28cd4e196c15805fbda07507951b9e57667b093b1a1140d227365cd6f57c1ff0"
@@ -5033,6 +5038,11 @@
     "path": "launcher/controls-preset.txt",
     "sizeBytes": 34832,
     "sha256": "eb74ccdef915787537eb0363decb361f0f4cb8c14d7e9033375d25ad604e3594"
+  },
+  {
+    "path": "launcher/controls-preset.txt",
+    "sizeBytes": 30992,
+    "sha256": "eff64ec7c0375ce99a3688390a7ac46f929568b36cfb845eddc82762e2126860"
   },
   {
     "path": "launcher/diagnostics/recipe-exception-observer.jar",
