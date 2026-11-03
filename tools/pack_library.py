@@ -11,6 +11,8 @@ import re
 import tomllib
 import zipfile
 from urllib.parse import urlsplit
+from library_mod_groups import group_presentation
+from library_presentation_policy import verify_if_declared
 
 
 LIBRARIES = set("architectury balm cloth_config clothconfig forgeconfigapiport geckolib geckolib3 citadel curios patchouli kotlinforforge kotlin_forge scalablecatsforce resourcefullib resourcefulconfig puzzleslib moonlight framework collective bookshelflib bookshelf selene placebo iceberg cristellib caelus creativecore cucumber cyclopscore supermartijn642corelib supermartijn642configlib titanium terrablender fabric_api forgified_fabric_api connector connector_extras yet_another_config_lib_v3 yacl_v3 owo libipn libgui jamlib badpackets smartbrainlib azurelib azurelibarmor athena octolib lithostitched rhino kubejs libx ftblibrary ftbteams prometheus libjf cardinal_components_base cardinal_components_entity cardinal_components_world cloth_basic_math unobtainiumlib coroutil unionlib flywheel ponder ferritecore modernfix embeddium sodium neoforge jei_api connector attributeslib apothic_attributes apothic_enchanting apothic_spawners apothic_core structure_gel mru prickle glitchcore searchables playeranimator player_animation_library catalogue configured cerbons_api cerbonsapi fusion fzzy_config codechickenlib cofh_core hammerlib kiwi mafg_lib mafg_lib sophis_backpacks sophisticatedcore sophisticatedstorageinmotion_helper commonnetwork cc_tweaked_api theurgy_kubejs theurgy_api modonomicon guideme ae2wtlib chemlib alchemylib kotlinforforge alltheleaks mixinextras mixinextras_neoforge mixin_squared mixinsquared sparkutil almostunified polylib towntalk cobaltscareers_api granular_config blueflame balm_api cupboard glitchcore entity_texture_features entity_model_features animation_overhaul_api lionfishapi curioscontinuation jamlib ftbfilters ftbxmodcompat librarium valhelsia_core yungsapi yungsmenutweaks zeta mutil mcjtylib xnetgases_lib exact_version_api fairplaylib octo_lib octolib epherolib permafrost_core puzzlesaccessapi simpleclouds_api lodestone selene_lib auxilium reliquary_core porting_lib connector modmenu_api domum_ornamentum blockui structurize dummmmmmy_api kambrik mantle shetiphiancore yacl yetanotherconfiglib cloth_config_api openloader kleeslabs_api catconfig mcwbridges_api expandability trenzalore reborncore ftbchunks_api".split())
@@ -223,8 +225,8 @@ def build_library(pack, revision):
             presentation[field] = sorted(ids)
     visible = presentation.get("visibleModIds")
     if visible is not None:
-        # A manually selected list is presentation only. Its overall counter
-        # must still describe the actual loader, including selected JarJar mods.
+        # A selected list is presentation only. Native inventory remains complete;
+        # the declared modCountScope controls only the player-facing count.
         if not (pack / "library/loaded-mods.json").exists():
             raise ValueError("A filtered mod list requires an exact-hash actual loader inventory")
         base_ids = set(presentation.get("baseModIds", []))
@@ -261,11 +263,13 @@ def build_library(pack, revision):
                 raise ValueError("Cyclic addon relation: " + mod["id"])
             seen.add(parent)
             parent = mods[parent]["parentId"]
+    presentation.update(group_presentation(authored, mods))
     doc = {"schemaVersion": 1, "id": authored["id"], "relativePath": authored.get("relativePath", pack.name),
            "name": authored["name"], "summary": authored["summary"], "description": authored["description"],
            "minecraftVersion": runtime["minecraftVersion"], "loader": runtime["loader"]["type"],
            "revision": revision, **presentation,
            "mods": sorted(mods.values(), key=lambda m: (m["name"].casefold(), m["id"]))}
+    verify_if_declared(pack, doc)
     data = json.dumps(doc, ensure_ascii=False, indent=2).encode("utf-8") + b"\n"
     preview = (pack / "library/preview.jpg").read_bytes()
     buffer = io.BytesIO()

@@ -1027,12 +1027,13 @@
     {
       "name": "Antlers",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/antlers-the-wendigo",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "antlers"
       ],
       "version": "1.0.0",
-      "sha256": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b"
+      "sha256": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
+      "reason": "User explicitly requested removal on 2026-11-03. Local profiling identified repeated global variable broadcasts after every loaded level tick; a sole Steam-disconnect cause is not claimed."
     },
     {
       "name": "Apex Arcana",
@@ -2009,7 +2010,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 68,
+  "selectedRequestedProjects": 67,
   "dependencyJars": 17,
   "authorCompatibilitySelections": [
     {
@@ -2253,8 +2254,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_USER_AUDIO_REMOVALS_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "6c1033e4fe8fbcb741e1e59d37fc5ca92f3906ec286333a63e77ec10782808b7",
+    "status": "SOURCE_USER_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "f08db611b1584c181c1f8390a9f61d0434e88e2c657aeb4973095203629e4418",
     "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
     "freshNativeObservationClaimed": false,
     "realPeerJoinVerified": false,
@@ -3087,5 +3088,77 @@
     "orphanDependencyRemoved": false,
     "safetyReason": "Removal introduces no new world-mutation path. Both mods provide audio/client presentation rather than placed content; BASE Cloth Config and independent Simple Voice Chat remain. No custom Safety framework/profile exists; no author JAR is rewritten.",
     "newRuntimeOrSteamFixClaimed": false
+  },
+  "previousSingleplayerContentAcceptanceBeforeAntlersRemoval": {
+    "status": "SOURCE_USER_AUDIO_REMOVALS_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
+    "sourceLockSha256": "6c1033e4fe8fbcb741e1e59d37fc5ca92f3906ec286333a63e77ec10782808b7",
+    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
+    "freshNativeObservationClaimed": false,
+    "realPeerJoinVerified": false,
+    "networkFixClaimed": false
+  },
+  "antlersRemoval": {
+    "userAuthorizedIds": [
+      "antlers"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "antlers-1.0.0.jar",
+        "sha256": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
+        "sizeBytes": 8955321,
+        "sourceUrl": "https://edge.forgecdn.net/files/5255/407/antlers-1.0.0.jar",
+        "projectId": 1002093,
+        "fileId": 5255407,
+        "path": "mods/antlers-1.0.0.jar",
+        "kind": "requested",
+        "version": "1.0.0",
+        "modIds": [
+          "antlers"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/antlers-the-wendigo",
+        "name": "Antlers"
+      }
+    ],
+    "removedKeyNames": [],
+    "retainedSourceJars": 515,
+    "retainedProjectedPackModIds": 540,
+    "retainedPresetNames": 554,
+    "retainedRequestedJars": 67,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "safetyReason": "Removal introduces no new mutation path; remaining GeckoLib/Lucent consumers retain their pinned libraries. Native wendigoSpawns has no retained strict script references. No custom Safety framework/profile exists. Old-world Antlers registry content may be lost; no lossless migration claimed.",
+    "localObservationScope": "Before removal on518, exact author Antlers0 SavedDataSyncMessage was encoded after global map updates on each loaded level tick. No actual Steam transport reproduction or post-removal native acceptance is claimed.",
+    "newRuntimeOrSteamFixClaimed": false
+  },
+  "libraryPresentation": {
+    "schemaVersion": 1,
+    "policyPath": "tools/library-presentation-policy.json",
+    "title": "Добавленные моды (Остальные в All The Mods 9)",
+    "groups": [
+      "Зрелищные",
+      "Аниме",
+      "Хоррор",
+      "Дополнительные"
+    ],
+    "displayedOriginalCount": 361,
+    "displayedModifiedCount": 430,
+    "visibleAddedModsAndAddons": 69,
+    "visibleAddedRoots": 68,
+    "counterScope": "all",
+    "sourceFileProvenanceCountsAreNotDisplayRoles": true,
+    "normalStandaloneDependencyIds": [
+      "alexscaves",
+      "lucent",
+      "voicechat"
+    ],
+    "helperOnlyEmbeddedIds": [
+      "awcapi",
+      "crackerslib",
+      "cryptic_registry"
+    ],
+    "sharedOriginalIdNotRepeated": "derenderpatcher",
+    "runtimeFilesChangedByPresentation": false,
+    "launcherUsesPerPackNameRule": false,
+    "scope": "Counts include standalone technical mods and recursive addons; API/library IDs are excluded. Groups, roles and scope are source-owned metadata."
   }
 }

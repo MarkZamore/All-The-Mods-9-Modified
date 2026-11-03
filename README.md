@@ -2,7 +2,7 @@
 
 Отдельная чистая производная от оригинальной **ATM9 1.1.1**, **Minecraft 1.20.1**, **Forge 47.4.0**. ID: `all-the-mods-9-modified`; папка установки: `All the Mods 9 Modified`. Оригинальная ATM9 остаётся самостоятельным профилем. Для Modified подготовлены [собственный источник](https://github.com/MarkZamore/All-The-Mods-9-Modified) и профиль поставки `pack-latest`; прежние наработки Modified не служат входом для этой сборки.
 
-**Текущий состав516:** по явному решению пользователя исключены Presence Footsteps и Sound Physics Remastered. Предыдущие удаления HSR Phainon, Sanity, The Obsessed, ArPhEx, SCP:Overtime / SCP:Obscurity и Revervox сохраняются. Самостоятельный Simple Voice Chat сохранён. Остальные516 JAR и все554 оставшихся назначения пресета не изменены. Карточка541mod ID является source-проекцией исторического557 снимка. Исправление Steam-разрыва проверяется отдельно.
+**Текущий состав515:** по явному решению пользователя исключён Antlers. Предыдущие удаления, включая Presence Footsteps, Sound Physics Remastered и HSR Phainon, сохраняются. Самостоятельный Simple Voice Chat сохранён. Остальные515 JAR и все554 назначения пресета не изменены. Карточка540mod ID является source-проекцией исторического557 снимка; игровой счётчик и группировка библиотеки описываются отдельно. Исправление Steam-разрыва проверяется отдельно.
 
 Временный standalone V10-инструмент получил только exact-guard для опубликованного Forge e4steam V2, необходимый после обновления лаунчера431. Все167 наблюдаемых Steam-классов V1/V2 совпадают; точки/поля/лимиты диагностики прежние. Синтетический selftest и сохранность отчёта проверены, новый игровой/сетевой PASS не заявляется.
 
@@ -26,21 +26,22 @@
 
 Эту ревизию нельзя описывать как «только добавленные моды» или обещать побайтную неизменность всех 1 794 файлов. По отдельному запросу локализованы 107 BASE-текстовых ресурсов квестов: их SHA/размеры закреплены в quest `baseReplacements`. Отдельный `baseJarOverrides` разрешает только точные официальные AllTheLeaks1.1.4 и ModernFix5.25.0 и не расширяет locale-guard на JAR. ID, задачи, награды и зависимости квестов не заменяются этим переводом.
 
-Из519 JAR **517 файлов совпадают с соответствующими авторскими файлами**, включая новый официальный AllTheLeaks. Два NEW JAR — явно разрешённые производные: замороженный русский Verity6.0.0-ru.1 и Grotesque Steve1.4.2-quiet.1. Последний меняет только два login callbacks и синтаксис одной функции, как раскрыто ниже. Отдельно описан общий производный e4steam лаунчера. Собственные Forge-моды, Safety-framework и прежние helper JAR не добавляются; runtime LAN/UUID/skin-адаптация раскрыта отдельно.
+Из515 JAR **513 файлов совпадают с соответствующими авторскими файлами**, включая официальный AllTheLeaks. Два NEW JAR — явно разрешённые производные: замороженный русский Verity6.0.0-ru.1 и Grotesque Steve1.4.2-quiet.1. Общий производный e4steam лаунчера описан отдельно. Собственные Forge-моды и Safety-framework не добавляются.
 
-Карточка сохраняет исходные краткое описание, описание и обложку ATM9. Раздел **«Дополнительные моды»** показывает только71 выбранного ручного дополнения; BASE, автоматические зависимости и встроенные библиотеки не выдаются за ручные добавления. Исторические ModList531/533 архивированы; текущий `library/loaded-mods.json` явно проецирует544pack ID из519sourceJAR напрямую из последнего реального557 native capture, после точных исключений, перечисленных в derivation этого файла. Общий E4 не включается в эти source JAR.
+Карточка сохраняет исходные описание и обложку ATM9. Раздел **«Добавленные моды (Остальные в All The Mods 9)»** показывает69 добавленных самостоятельных модов и аддонов, распределённых в четыре категории. Alex’s Caves, Lucent и Simple Voice Chat являются самостоятельными модами, хотя первоначально скачаны как зависимости. Общая с ATM9 Render Patcher в добавлениях не повторяется. Встроенные API и настоящие библиотеки исключены из счётчика. Текущий `library/loaded-mods.json` проецирует540 pack ID из515 source JAR; это полная инвентаризация для проверки файлов и памяти, а не отображаемое число.
 
-### Ручные дополнения (71)
+В лаунчере433 счётчик ATM9 равен361, Modified —430: разница69 совпадает с добавленными названиями, включая аддоны. Числа вычисляются по ID и ролям метаданных; полная native-инвентаризация и расчёт памяти сохраняются. `modCountScope=all` и категории принадлежат данным сборки, а не правилам C# по её имени. Контрольная база и пересчитываемые множества закреплены в `tools/library-presentation-policy.json`.
 
-Ниже данные текущего active lock: официальная страница, версия из метаданных JAR и объявленные mod ID. Версия внутри JAR может отличаться от имени файла или заголовка релиза. Точные имена, file ID, размеры и SHA256 остаются в lock.
+### Ручные дополнения (67)
 
-| Проект и официальная страница | Версия из JAR | Mod ID |
+Текущие файлы active lock; вид загрузки не определяет роль библиотеки в карточке.
+
+| Проект | Версия | mod ID |
 | --- | --- | --- |
 | [Alex's Mobs](https://www.curseforge.com/minecraft/mc-mods/alexs-mobs) | `1.22.9` | `alexsmobs` |
 | [Alone in the Dark](https://www.curseforge.com/minecraft/mc-mods/alone-in-the-dark) | `1.3.0` | `alone_in_the_dark` |
 | [AmbientSounds](https://www.curseforge.com/minecraft/mc-mods/ambientsounds) | `6.3.11` | `ambientsounds` |
 | [AmbiHorror](https://www.curseforge.com/minecraft/mc-mods/ambi-horror-ambience) | `1.0.0` | `ambihorror` |
-| [Antlers](https://www.curseforge.com/minecraft/mc-mods/antlers-the-wendigo) | `1.0.0` | `antlers` |
 | [Apex Arcana](https://www.curseforge.com/minecraft/mc-mods/apex-arcana-irons-spells-n-spellbooks-addon) | `1.4.0` | `grandsigil` |
 | [Apollyon](https://www.curseforge.com/minecraft/mc-mods/apollyon) | `1.1.1` | `apollyon` |
 | [Biomancy 2](https://www.curseforge.com/minecraft/mc-mods/biomancy) | `2.8.19.0` | `biomancy` |
@@ -57,8 +58,8 @@
 | [Deep Dark: Regrowth](https://www.curseforge.com/minecraft/mc-mods/deep-dark-regrowth) | `1.2.6.1` | `deep_dark_regrowth` |
 | [Distant Friends](https://www.curseforge.com/minecraft/mc-mods/distant-friends) | `0.5.6` | `distantfriends` |
 | [Doomsday Arsenal](https://www.curseforge.com/minecraft/mc-mods/doomsday-arsenal) | `1.0.0` | `doomsday` |
-| [Draconic Evolution Render Patcher](https://www.curseforge.com/minecraft/mc-mods/draconic-evolution-render-patcher) | `1.3.0` | `derenderpatcher` |
 | [Door Knocker (Horror)](https://www.curseforge.com/minecraft/mc-mods/door-knocker-horror) | `1.3` | `door_knocker` |
+| [Draconic Evolution Render Patcher](https://www.curseforge.com/minecraft/mc-mods/draconic-evolution-render-patcher) | `1.3.0` | `derenderpatcher` |
 | [Echoes of Nowhere](https://modrinth.com/mod/echoes-of-nowhere) | `1.0.1` | `echoes_of_nowhere` |
 | [Enhanced Celestials](https://www.curseforge.com/minecraft/mc-mods/enhanced-celestials) | `5.0.0.4` | `enhancedcelestials` |
 | [Eyes in the Darkness](https://www.curseforge.com/minecraft/mc-mods/eyes-in-the-darkness) | `1.3.10` | `eyesinthedarkness` |
@@ -107,9 +108,9 @@
 
 ### Добавленные зависимости (17)
 
-Эти библиотеки не показаны в карточке как ручные дополнения. Уже имеющиеся зависимости ATM9 используются без второй копии. Новая зависимость остаётся NEW и после последующего обновления своего JAR.
+Текущие файлы active lock; вид загрузки не определяет роль библиотеки в карточке.
 
-| Проект и официальная страница | Версия из JAR | Mod ID |
+| Проект | Версия | mod ID |
 | --- | --- | --- |
 | [Alex's Caves](https://www.curseforge.com/minecraft/mc-mods/alexs-caves) | `2.0.2` | `alexscaves` |
 | [atlas-lib](https://www.curseforge.com/minecraft/mc-mods/atlas-lib) | `1.1.12` | `atlaslib` |
@@ -125,7 +126,7 @@
 | [Photon](https://www.curseforge.com/minecraft/mc-mods/photon) | `1.1.17` | `photon` |
 | [platform](https://www.curseforge.com/minecraft/mc-mods/platform) | `1.4.2` | `platform` |
 | [rimulib](https://www.curseforge.com/minecraft/mc-mods/rimulib) | `1.2.1` | `rimulib` |
-| [simple-voice-chat](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) | `1.20.1-2.6.22` | `voicechat`, `voicechat_api` |
+| [simple-voice-chat](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) | `1.20.1-2.6.22` | `voicechat, voicechat_api` |
 | [VillagersTradingPlus](https://www.curseforge.com/minecraft/mc-mods/villagerstradingplus) | `1.1.1+mc1.20.1` | `villagertradingplus` |
 | [YetAnotherConfigLib](https://www.curseforge.com/minecraft/mc-mods/yacl) | `3.6.6+1.20.1-forge` | `yet_another_config_lib_v3` |
 
@@ -217,7 +218,7 @@ Grotesque Steve сохранён как **1.4.2-quiet.1** по отдельно�
 
 Для некоторых боевых веток нужны собственные назначения в меню Minecraft: классические способности Cursed Fate 1–7, четыре Stellar Remote из Shooting Star, а также Laser Mask. Четыре свойства палочки Crystalix также оставлены для выбора кнопок игроком. Это прямые действия без настроенной здесь замены; они не выдаются за полностью управляемые через другое меню. Родные кнопки и остальные неназначенные группы перечислены в руководстве и `tools/keybinds/stock.json`.
 
-Текущий source-пресет содержит554 имени:146 назначены,408 свободны;60 независимых действий мира. Удалены только назначения исключённых модов, остальные значения сохранены. Текущие541mod ID и namespace пресета выведены из исторического native-снимка; нового применения/перезапуска или физического ввода этим обновлением не проверено. Пресет остаётся необязательным и не меняет язык, графику, дальности, голос или микрофон.
+Текущий source-пресет содержит554 имени:146 назначены,408 свободны;60 независимых действий мира. Удалены только назначения исключённых модов, остальные значения сохранены. Текущие540mod ID и namespace пресета выведены из исторического native-снимка; нового применения/перезапуска или физического ввода этим обновлением не проверено. Пресет остаётся необязательным и не меняет язык, графику, дальности, голос или микрофон.
 
 **Сначала запустите новую установку до главного меню и штатно закройте игру, затем применяйте пресет.** Авторский DefaultSettings при первой инициализации копирует свой профиль поверх `options.txt`, поэтому пресет, применённый раньше, может быть заменён. Пресет остаётся необязательным действием игрока; авторские DefaultSettings и его профиль не изменялись.
 

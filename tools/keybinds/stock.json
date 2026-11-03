@@ -193,7 +193,6 @@
     "ambihorror-forge-1.0.0.jar": "246a89ddc1ea5f9a779820f056004b9d891113198785e19998dde2c588b3c083",
     "amendments-1.20-2.2.3.jar": "f574c856ed26333824109b061664b1642aca05bd8c8d93ba6d6a488bcdd89cd9",
     "angelring-1.20.1-2.3.1.jar": "5954ce71e859ec807ffe0a8b5de9f2ff3a2c03ccde29cff609cc8dd1e90aefe8",
-    "antlers-1.0.0.jar": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
     "appleskin-forge-mc1.20.1-2.5.1.jar": "e12419e43e3babc810af289403c5cd96bd7f09809b389acc6bb2f122b4b2a426",
     "applied-botanics-forge-1.5.1.jar": "48d40bfcec913b2732b24c3c2152cb2fc0084c255c00490630837ea0988fe4dd",
     "appliedenergistics2-forge-15.4.9.jar": "52c85b33e483f1ebaca1ff9c81040e6d178dfd571ece96f6fd0d4dc76f682e42",
@@ -9838,7 +9837,8 @@
       "mods/sanitydim-mc1.20-1.1.0.jar": "d1f58851682586dde4a533b1a200d83cdafaee833299d45d4700e47433fa103a",
       "mods/hsrphainon-1.2.3.jar": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1",
       "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
-      "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1"
+      "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
+      "mods/antlers-1.0.0.jar": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b"
     },
     "removedKeyNames": [
       "key.fairy_mine.soltar_habilidade",
@@ -10226,6 +10226,31 @@
     "removedKeyNames": [
       "key.presencefootsteps.settings"
     ],
+    "retainedPresetNames": 554,
+    "retainedPresetValuesChanged": false,
+    "currentNativeRecaptureVerified": false
+  },
+  "antlersRemovalProjection": {
+    "parentSourceRevision": "33885f54823439dacd5dfc8fbb3b3f670cbaefba",
+    "removedSourceJars": [
+      {
+        "fileName": "antlers-1.0.0.jar",
+        "sha256": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
+        "sizeBytes": 8955321,
+        "sourceUrl": "https://edge.forgecdn.net/files/5255/407/antlers-1.0.0.jar",
+        "projectId": 1002093,
+        "fileId": 5255407,
+        "path": "mods/antlers-1.0.0.jar",
+        "kind": "requested",
+        "version": "1.0.0",
+        "modIds": [
+          "antlers"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/antlers-the-wendigo",
+        "name": "Antlers"
+      }
+    ],
+    "removedKeyNames": [],
     "retainedPresetNames": 554,
     "retainedPresetValuesChanged": false,
     "currentNativeRecaptureVerified": false

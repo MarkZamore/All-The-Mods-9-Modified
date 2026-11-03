@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "33885f54823439dacd5dfc8fbb3b3f670cbaefba",
+  "priorUnionSha256": "296f7db2ec1e27b0b1054343e97a5b8aef8fd1afefa0a5308f538b88c7dce765",
+  "currentUnionSha256": "2eb5017ee8b39ee71033222eb6c761a7a4d7c8cba6a1629941d5800d954b66f4",
+  "addedExactRows": [
+    {
+      "path": "mods/antlers-1.0.0.jar",
+      "sha256": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
+      "sizeBytes": 8955321
+    },
+    {
+      "path": "launcher/controls-guide.md",
+      "sizeBytes": 11539,
+      "sha256": "3b5723befb6d1df65dc51dea07bd69cafabb524a604294c53124209311b34791"
+    }
+  ],
+  "userRemovedIds": [
+    "antlers"
+  ],
+  "unknownPersonalFilesDeletionClaimed": false
+}

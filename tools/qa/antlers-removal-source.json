@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "parentSourceRevision": "33885f54823439dacd5dfc8fbb3b3f670cbaefba",
+  "removedFiles": [
+    {
+      "fileName": "antlers-1.0.0.jar",
+      "sha256": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
+      "sizeBytes": 8955321,
+      "sourceUrl": "https://edge.forgecdn.net/files/5255/407/antlers-1.0.0.jar",
+      "projectId": 1002093,
+      "fileId": 5255407,
+      "path": "mods/antlers-1.0.0.jar",
+      "kind": "requested",
+      "version": "1.0.0",
+      "modIds": [
+        "antlers"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/antlers-the-wendigo",
+      "name": "Antlers"
+    }
+  ],
+  "retainedJarCount": 515,
+  "unchangedRetainedJarBytes": true,
+  "removedKeyNames": [],
+  "retainedPresetNames": 554,
+  "projectedModIds": 540,
+  "runtimeRemovedFiles": [
+    "mods/antlers-1.0.0.jar"
+  ],
+  "runtimeChangedFiles": [
+    "launcher/controls-guide.md"
+  ],
+  "noOrphanDependencies": true,
+  "newRuntimeOrMultiplayerPassClaimed": false,
+  "launcherContentRuleAdded": false,
+  "oldWorldContentRegistryLossExpected": true
+}

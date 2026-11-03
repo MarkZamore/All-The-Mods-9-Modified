@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "runtimeFileHashesUnchanged": true,
+  "sourceJarCount": 515,
+  "nativeInventoryIds": 540,
+  "displayedOriginalCount": 361,
+  "displayedModifiedCount": 430,
+  "displayedAddedCount": 69,
+  "addedRootCount": 68,
+  "differenceEqualsVisibleAdditions": true,
+  "baseSourceRevision": "8ec31f67388fcc23b72713a698b42e3fe5a9de21",
+  "groups": [
+    {
+      "title": "Зрелищные",
+      "rootCount": 11
+    },
+    {
+      "title": "Аниме",
+      "rootCount": 2
+    },
+    {
+      "title": "Хоррор",
+      "rootCount": 42
+    },
+    {
+      "title": "Дополнительные",
+      "rootCount": 13
+    }
+  ],
+  "scope": "Presentation metadata only. Global native/RAM inventory and all game files unchanged. No new gameplay/Steam acceptance claimed."
+}
