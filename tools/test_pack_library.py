@@ -14,17 +14,21 @@ class LibraryPublisherTests(unittest.TestCase):
         self.pack = pathlib.Path(self.temp.name) / "Example Pack"
         (self.pack / "mods").mkdir(parents=True)
         (self.pack / "library").mkdir()
-        (self.pack / "portable-pack.json").write_text(json.dumps({"minecraftVersion": "1.21.1", "loader": {"type": "NeoForge"}}))
+        (self.pack / "portable-pack.json").write_text(json.dumps({"minecraftVersion": "1.20.1", "loader": {"type": "forge", "version": "47.4.0"}}))
         self.content = {"id": "example", "name": "Example", "relativePath": "Stable Folder", "summary": "A short story", "description": "A longer story",
-                        "parents": {"addon": "base"}, "libraryIds": ["helper"]}
+                        "parents": {"addon": "base"}, "libraryIds": ["helper"],
+                        "modsTitle": "Добавленные моды", "visibleModIds": ["integration", "addon"], "baseModIds": ["base"],
+                        "modCountScope": "all", "modGroups": [{"title": "Добавленные", "modIds": ["integration", "addon"]}]}
         self.pages = {mid: "https://www.curseforge.com/minecraft/mc-mods/" + mid
                       for mid in ("base", "addon", "helper", "integration")}
         self.write_pages()
         self.write_content()
         (self.pack / "library/preview.jpg").write_bytes(b"test preview bytes")
-        for mod_id, name in (("base", "Base Mod"), ("addon", "An Addon"), ("helper", "A Helper Library"), ("integration", "Independent integration")):
+        self.mod_names = {"base": "Base Mod", "addon": "An Addon", "helper": "A Helper Library", "integration": "Independent integration"}
+        for mod_id, name in self.mod_names.items():
             with zipfile.ZipFile(self.pack / "mods" / (mod_id + ".jar"), "w") as archive:
-                archive.writestr("META-INF/neoforge.mods.toml", f'[[mods]]\nmodId="{mod_id}"\ndisplayName="{name}"\nversion="1.2.3"\n[[dependencies.{mod_id}]]\nmodId="base"\ntype="required"\n')
+                archive.writestr("META-INF/mods.toml", f'[[mods]]\nmodId="{mod_id}"\ndisplayName="{name}"\nversion="1.2.3"\n[[dependencies.{mod_id}]]\nmodId="base"\nmandatory=true\n')
+        self.write_inventory()
 
     def tearDown(self):
         self.temp.cleanup()
@@ -35,13 +39,13 @@ class LibraryPublisherTests(unittest.TestCase):
     def write_content(self):
         (self.pack / "library/content.json").write_text(json.dumps(self.content))
 
-    def write_inventory(self):
+    def write_inventory(self, ids=None):
         inventory = {"schemaVersion": 1,
-                     "minecraftVersion": "1.21.1", "loader": {"type": "NeoForge"},
+                     "minecraftVersion": "1.20.1", "loader": {"type": "forge", "version": "47.4.0"},
                      "sourceJars": {jar.relative_to(self.pack).as_posix(): hashlib.sha256(jar.read_bytes()).hexdigest()
                                     for jar in (self.pack / "mods").glob("*.jar")},
-                     "mods": [{"id": mid, "name": mid.title(), "version": "selected-2.0"}
-                              for mid in ("base", "addon", "helper", "integration")]}
+                     "mods": [{"id": mid, "name": self.mod_names.get(mid, mid.title()), "version": "selected-2.0"}
+                              for mid in (self.mod_names if ids is None else ids)]}
         (self.pack / "library/loaded-mods.json").write_text(json.dumps(inventory))
 
     def test_manual_additions_keep_the_full_actual_inventory_and_frozen_base_ids(self):
@@ -62,6 +66,7 @@ class LibraryPublisherTests(unittest.TestCase):
             build_library(self.pack, "r2")
 
     def test_manual_additions_require_actual_inventory_and_reject_dependencies_or_unknown_ids(self):
+        (self.pack / "library/loaded-mods.json").unlink()
         self.content["visibleModIds"] = ["addon"]
         self.write_content()
         with self.assertRaisesRegex(ValueError, "actual loader inventory"):
@@ -74,11 +79,14 @@ class LibraryPublisherTests(unittest.TestCase):
             with self.subTest(ids=ids), self.assertRaisesRegex(ValueError, message):
                 build_library(self.pack, "r1")
 
-    def test_existing_cards_keep_their_complete_lists_without_new_presentation_fields(self):
+    def test_grouped_additions_keep_the_full_inventory_and_all_count_scope(self):
         with zipfile.ZipFile(io.BytesIO(build_library(self.pack, "r1"))) as archive:
             data = json.loads(archive.read("library.json"))
-        self.assertNotIn("visibleModIds", data)
-        self.assertNotIn("modsTitle", data)
+        self.assertEqual(["addon", "integration"], data["visibleModIds"])
+        self.assertEqual(["base"], data["baseModIds"])
+        self.assertEqual(self.content["modsTitle"], data["modsTitle"])
+        self.assertEqual(self.content["modGroups"], data["modGroups"])
+        self.assertEqual("all", data["modCountScope"])
         self.assertEqual(4, len(data["mods"]))
 
     def test_actual_names_curated_addons_and_libraries_not_the_whole_dependency_graph(self):
@@ -95,7 +103,8 @@ class LibraryPublisherTests(unittest.TestCase):
         self.assertEqual("base", mods["addon"]["parentId"])
         self.assertIsNone(mods["integration"]["parentId"])
         self.assertTrue(mods["helper"]["isLibrary"])
-        self.assertEqual("1.21.1", data["minecraftVersion"])
+        self.assertEqual("1.20.1", data["minecraftVersion"])
+        self.assertEqual("forge", data["loader"])
         self.assertEqual("revision-one", data["revision"])
         self.assertEqual("Stable Folder", data["relativePath"])
 
@@ -143,26 +152,37 @@ class LibraryPublisherTests(unittest.TestCase):
 
     def test_embedded_mods_are_published_once_including_dependencies_of_normal_mods(self):
         self.pages["nested_helper"] = "https://www.curseforge.com/minecraft/mc-mods/nested-helper"
+        self.pages["unregistered_helper"] = "https://www.curseforge.com/minecraft/mc-mods/unregistered-helper"
         self.write_pages()
         nested = io.BytesIO()
         with zipfile.ZipFile(nested, "w") as archive:
-            archive.writestr("META-INF/neoforge.mods.toml", '[[mods]]\nmodId="nested_helper"\ndisplayName="Nested Helper"\nversion="1.0"\n')
+            archive.writestr("META-INF/mods.toml", '[[mods]]\nmodId="nested_helper"\ndisplayName="Nested Helper"\nversion="1.0"\n')
+        unregistered = io.BytesIO()
+        with zipfile.ZipFile(unregistered, "w") as archive:
+            archive.writestr("META-INF/mods.toml", '[[mods]]\nmodId="unregistered_helper"\ndisplayName="Unregistered Helper"\nversion="1.0"\n')
         for carrier in ("base", "addon"):
-            with zipfile.ZipFile(self.pack / "mods" / (carrier + ".jar"), "a") as archive:
+            carrier_path = self.pack / "mods" / (carrier + ".jar")
+            with zipfile.ZipFile(carrier_path, "a") as archive:
                 archive.writestr("META-INF/jarjar/metadata.json", json.dumps({"jars": [{"path": "META-INF/jarjar/helper.jar"}]}))
                 archive.writestr("META-INF/jarjar/helper.jar", nested.getvalue())
-                archive.writestr("META-INF/jarjar/not-registered.jar", nested.getvalue())
+                archive.writestr("META-INF/jarjar/not-registered.jar", unregistered.getvalue())
+            # Inspect the raw carrier before the actual inventory can hide an
+            # unexpected nested ID from the published list.
+            self.assertEqual({carrier, "nested_helper"},
+                             {mod["id"] for mod in read_mods(carrier_path.read_bytes(), carrier_path.name, loader="forge")})
+        self.write_inventory([*self.mod_names, "nested_helper"])
         with zipfile.ZipFile(io.BytesIO(build_library(self.pack, "r1"))) as archive:
             mods = json.loads(archive.read("library.json"))["mods"]
         self.assertEqual(5, len(mods))
         self.assertEqual(1, sum(mod["id"] == "nested_helper" for mod in mods))
         self.assertTrue(all(mod["isLoadedMod"] for mod in mods))
 
-    def test_non_mod_components_are_visible_libraries_without_fabric_or_invented_loaded_ids(self):
+    def test_forge_non_mod_components_are_visible_libraries_without_invented_loaded_ids(self):
         with zipfile.ZipFile(self.pack / "mods/scalablecatsforce-library.jar", "w") as archive:
             archive.writestr("META-INF/MANIFEST.MF", "FMLModType: LANGPROVIDER\nImplementation-Version: 3.3.1\n")
         self.pages["scalablecatsforce"] = "https://www.curseforge.com/minecraft/mc-mods/scalable-cats-force"
         self.write_pages()
+        self.write_inventory()
         with zipfile.ZipFile(io.BytesIO(build_library(self.pack, "r1"))) as archive:
             mods = json.loads(archive.read("library.json"))["mods"]
         component = next(mod for mod in mods if mod["id"] == "scalablecatsforce")
@@ -185,13 +205,10 @@ class LibraryPublisherTests(unittest.TestCase):
         self.assertEqual("2.4.1", mods[0]["version"])
 
     def test_actual_loader_inventory_resolves_selected_ids_and_versions_and_rejects_stale_jars(self):
-        inventory = {"schemaVersion": 1,
-                     "minecraftVersion": "1.21.1", "loader": {"type": "NeoForge"},
-                     "sourceJars": {jar.relative_to(self.pack).as_posix(): hashlib.sha256(jar.read_bytes()).hexdigest()
-                                    for jar in (self.pack / "mods").glob("*.jar")},
-                     "mods": [{"id": mid, "name": mid.title(), "version": "selected-2.0"}
-                              for mid in ("base", "addon", "helper")]}
-        (self.pack / "library/loaded-mods.json").write_text(json.dumps(inventory))
+        self.write_inventory(["base", "addon", "helper"])
+        self.content["visibleModIds"] = ["addon"]
+        self.content["modGroups"] = [{"title": "Добавленные", "modIds": ["addon"]}]
+        self.write_content()
         with zipfile.ZipFile(io.BytesIO(build_library(self.pack, "r1"))) as archive:
             mods = json.loads(archive.read("library.json"))["mods"]
         self.assertEqual({"base", "addon", "helper"}, {mod["id"] for mod in mods})
