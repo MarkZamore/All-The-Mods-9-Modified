@@ -1,4 +1,4 @@
-# All the Mods 9 Modified
+# All The Mods 9 Modified
 
 Отдельная чистая производная от оригинальной **ATM9 1.1.1**, **Minecraft 1.20.1**, **Forge 47.4.0**. ID: `all-the-mods-9-modified`; папка установки: `All the Mods 9 Modified`. Оригинальная ATM9 остаётся самостоятельным профилем. Для Modified подготовлены [собственный источник](https://github.com/MarkZamore/All-The-Mods-9-Modified) и профиль поставки `pack-latest`; прежние наработки Modified не служат входом для этой сборки.
 
