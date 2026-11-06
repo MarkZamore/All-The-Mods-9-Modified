@@ -39,7 +39,7 @@ class ModifiedCompositionTests(unittest.TestCase):
         self.write("tools/upstream-lock.json", upstream)
         self.write("tools/base-mod-ids.json", {"modIds": ["base_mod"]})
         self.write("portable-pack.json", {"schemaVersion": 1, "minecraftVersion": "1.20.1",
-                   "loader": {"type": "forge", "version": "47.4.0"}, "clientJar": client.name})
+                   "loader": {"type": "forge", "version": "47.4.0"}, "clientJar": ""})
         ownership = self.pack / "launcher/pack-owned.txt"
         ownership.parent.mkdir()
         ownership.write_text("config/**\n", encoding="utf-8")

@@ -28,7 +28,7 @@ class ModifiedFixture:
         self.f.upstream['pack'].update(minecraftVersion='1.20.1',loader={'type':'forge','version':'47.5-fixture'})
         self.rebuild_native_rows()
         self.f.write('tools/base-mod-ids.json',js({'modIds':['base_mod']}))
-        self.f.write('portable-pack.json',js({'schemaVersion':1,'minecraftVersion':'1.20.1','loader':self.f.upstream['pack']['loader'],'clientJar':'minecraft-client.jar'}))
+        self.f.write('portable-pack.json',js({'schemaVersion':1,'minecraftVersion':'1.20.1','loader':self.f.upstream['pack']['loader'],'clientJar':''}))
         self.f.write('launcher/pack-owned.txt',b'mods\nconfig\nkubejs\n')
         for name in ['import_upstream.py','verify_modified.py','restore_modified.py','pack_library.py','atm9_quest_profile.py','atm9_quest_restore.py','atm9_base_jar_overrides.py']:
             self.f.write('tools/'+name,(HERE/name).read_bytes())

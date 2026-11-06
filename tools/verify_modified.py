@@ -441,8 +441,8 @@ def load_plan(pack: Path) -> dict:
         target_path(pack, row["path"])
     platform = read_json(target_path(pack, "portable-pack.json"))
     require(platform.get("minecraftVersion") == upstream["pack"]["minecraftVersion"] and
-            platform.get("loader") == upstream["pack"]["loader"] and
-            platform.get("clientJar") == upstream["client"]["path"], "Platform differs from the frozen author base")
+            platform.get("loader") == upstream["pack"]["loader"], "Platform differs from the frozen author base")
+    require(platform.get("clientJar", "") == "", "The published pack must use the official Minecraft client download")
     return {"pack": pack, "lock": lock, "upstream": upstream, "baseRows": base_rows,
             "originalBaseRows": original_base_rows, "questLocalization": quest_profile, "baseReplacements": replacements,
             "questBaseRows": quest_base_rows, "baseJarOverrides": jar_overrides,
