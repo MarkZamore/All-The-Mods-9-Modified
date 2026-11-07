@@ -1838,12 +1838,13 @@
     {
       "name": "The One Who Watches",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-one-who-watches",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "the_one_who_watches"
       ],
       "version": "1.4.4",
-      "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696"
+      "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696",
+      "reason": "User explicitly requested complete removal on 2026-11-07 after investigation of creative-flight ability resynchronization. No controlled runtime flight-fix acceptance is claimed."
     },
     {
       "name": "The Onlooker",
@@ -2011,7 +2012,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 66,
+  "selectedRequestedProjects": 65,
   "dependencyJars": 17,
   "authorCompatibilitySelections": [
     {
@@ -2255,7 +2256,7 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_USER_REMOVAL_RUNTIME_PENDING",
+    "status": "SOURCE_USER_REMOVAL_RUNTIME_NOT_RUN",
     "freshNativeObservationClaimed": false
   },
   "previousSingleplayerContentAcceptanceBeforeShootingStar151": {
@@ -3144,9 +3145,9 @@
       "Дополнительные"
     ],
     "displayedOriginalCount": 361,
-    "displayedModifiedCount": 429,
-    "visibleAddedModsAndAddons": 68,
-    "visibleAddedRoots": 67,
+    "displayedModifiedCount": 428,
+    "visibleAddedModsAndAddons": 67,
+    "visibleAddedRoots": 66,
     "counterScope": "all",
     "sourceFileProvenanceCountsAreNotDisplayRoles": true,
     "normalStandaloneDependencyIds": [
@@ -3202,6 +3203,39 @@
     "retainedDependencyJars": 17,
     "orphanDependencyRemoved": false,
     "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. No retained strict script/gamerule references or shipped standalone config. Shared libraries have other consumers.",
+    "oldWorldContentRegistryLossExpected": true,
+    "newRuntimeOrFlightFixClaimed": false
+  },
+  "theOneWhoWatchesRemoval": {
+    "userAuthorizedIds": [
+      "the_one_who_watches"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "TheOneWhoWatches-V1.4.4-1.20.1.jar",
+        "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696",
+        "sizeBytes": 5493144,
+        "sourceUrl": "https://edge.forgecdn.net/files/7608/035/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+        "projectId": 940557,
+        "fileId": 7608035,
+        "path": "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+        "kind": "requested",
+        "version": "1.4.4",
+        "modIds": [
+          "the_one_who_watches"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-one-who-watches",
+        "name": "The One Who Watches"
+      }
+    ],
+    "removedKeyNames": [],
+    "retainedSourceJars": 513,
+    "retainedProjectedPackModIds": 538,
+    "retainedPresetNames": 554,
+    "retainedRequestedJars": 65,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. Retained mandatory dependencies, strict script/gamerule references and shipped standalone configs are checked independently. Shared libraries remain required by other mods.",
     "oldWorldContentRegistryLossExpected": true,
     "newRuntimeOrFlightFixClaimed": false
   }

@@ -5835,6 +5835,11 @@
     "sha256": "c12e16b9e925554fbd54c46d482c27b52461b5d6fb6388b7784c249738485fd2"
   },
   {
+    "path": "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+    "sizeBytes": 5493144,
+    "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696"
+  },
+  {
     "path": "mods/The_Graveyard_3.1_(FORGE)_for_1.20.1.jar",
     "sizeBytes": 10298153,
     "sha256": "f26aace5460890b9a46094586530708517b58fc1e8752055882fd4f03912f07d"

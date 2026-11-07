@@ -140,7 +140,6 @@
     "TerraBlender-forge-1.20.1-3.0.1.10.jar": "c109016f46ca9bdae69976bf080bbf2e8e5968cb66c0a78845f8ca6af5dbbeb1",
     "Terralith_1.20.x_v2.5.4.jar": "8f65f309d8f2723754bf4b60c7b5763d3ab6ed04b01c172109ba6564e981b95f",
     "The-Hordes-1.20.1-1.6.3i-all.jar": "f3f7cb25540cb0b86eb5ccea220b8684953e56fea3764b0dcd7678aadd4276c7",
-    "TheOneWhoWatches-V1.4.4-1.20.1.jar": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696",
     "The_Undergarden-1.20.1-0.8.14.jar": "43029e388ab455f8c9bcfc8653b9a57a3eb1ff6b435cf6e58722d2d4c50d2444",
     "ThermalExtra-3.2.7-1.20.1.jar": "7cb593cbff905d715cfe8cc5a7b9f12d89703b50e0d0f848a00e7277816b0096",
     "ToastControl-1.20.1-8.0.3.jar": "e9923900cabbc12ffde7cc36113936f24b773bb33b22c19e4109cca52fc55ad6",
@@ -10284,6 +10283,39 @@
     "retainedDependencyJars": 17,
     "orphanDependencyRemoved": false,
     "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. No retained strict script/gamerule references or shipped standalone config. Shared libraries have other consumers.",
+    "oldWorldContentRegistryLossExpected": true,
+    "newRuntimeOrFlightFixClaimed": false
+  },
+  "theOneWhoWatchesRemovalProjection": {
+    "userAuthorizedIds": [
+      "the_one_who_watches"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "TheOneWhoWatches-V1.4.4-1.20.1.jar",
+        "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696",
+        "sizeBytes": 5493144,
+        "sourceUrl": "https://edge.forgecdn.net/files/7608/035/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+        "projectId": 940557,
+        "fileId": 7608035,
+        "path": "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+        "kind": "requested",
+        "version": "1.4.4",
+        "modIds": [
+          "the_one_who_watches"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-one-who-watches",
+        "name": "The One Who Watches"
+      }
+    ],
+    "removedKeyNames": [],
+    "retainedSourceJars": 513,
+    "retainedProjectedPackModIds": 538,
+    "retainedPresetNames": 554,
+    "retainedRequestedJars": 65,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. Retained mandatory dependencies, strict script/gamerule references and shipped standalone configs are checked independently. Shared libraries remain required by other mods.",
     "oldWorldContentRegistryLossExpected": true,
     "newRuntimeOrFlightFixClaimed": false
   }

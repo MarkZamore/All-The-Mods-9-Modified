@@ -387,7 +387,8 @@
   ],
   "removedModIds": [
     "antlers",
-    "midnightlurker"
+    "midnightlurker",
+    "the_one_who_watches"
   ],
   "originalSharedContentExcludedFromAdded": [
     "derenderpatcher"
@@ -450,7 +451,6 @@
     "tanya_demo",
     "the_after",
     "the_backwoods",
-    "the_one_who_watches",
     "themimic_er",
     "ultimate_elemental_swords",
     "verity",
@@ -524,7 +524,6 @@
         "sounds_of_the_forest",
         "the_after",
         "the_backwoods",
-        "the_one_who_watches",
         "themimic_er",
         "verity",
         "whisperwoods",
@@ -560,13 +559,13 @@
   ],
   "countsForProjectionVerification": {
     "originalRenderedModsAndAddons": 361,
-    "modifiedAllNormalModsAndAddons": 429,
-    "addedVisibleModsAndAddons": 68,
-    "addedTreeRootRows": 67,
-    "sourceJarCount": 514,
+    "modifiedAllNormalModsAndAddons": 428,
+    "addedVisibleModsAndAddons": 67,
+    "addedTreeRootRows": 66,
+    "sourceJarCount": 513,
     "nativeLoadedOriginal": 453,
-    "nativeLoadedModified": 539,
-    "requestedManualFiles": 66,
+    "nativeLoadedModified": 538,
+    "requestedManualFiles": 65,
     "dependencyProvenanceFiles": 17
   }
 }

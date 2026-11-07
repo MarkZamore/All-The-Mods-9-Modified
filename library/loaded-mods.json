@@ -457,7 +457,6 @@
     "mods/The_Undergarden-1.20.1-0.8.14.jar": "43029e388ab455f8c9bcfc8653b9a57a3eb1ff6b435cf6e58722d2d4c50d2444",
     "mods/thefinalgoatman-4.3.0.jar": "62fa70d78a265d6d162062a746f3c0f0e3391cd6db194dcb19f784d1fa2ed748",
     "mods/themimic_er-1.20.1-1.7.0.jar": "88516636609e3c84212c510a9e1d478e5f8affa2171d04165e34090c01843d7f",
-    "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696",
     "mods/theonlooker-forge-1.20.1-4.7.1-alpha.jar": "e037615bde9810e139bd3cf7e73070c1417d094f87074aff2e8373d0c22d72c0",
     "mods/thermal_cultivation-1.20.1-11.0.1.24.jar": "6d8fb94fab048954144a81d14b95a5917ac5bfc5d277695dc4dda3bcecd6c03a",
     "mods/thermal_dynamics-1.20.1-11.0.1.23.jar": "1eb755e77b8bbdf5fef16c1b725002d2b47520b544e49f1274724986ab677ca0",
@@ -2920,11 +2919,6 @@
       "version": "1.6.0"
     },
     {
-      "id": "the_one_who_watches",
-      "name": "The One Who Watches",
-      "version": "1.4.4"
-    },
-    {
       "id": "themimic_er",
       "name": "themimic_er",
       "version": "1.7.0"
@@ -3244,7 +3238,8 @@
       "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
       "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
       "mods/antlers-1.0.0.jar": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
-      "mods/the_midnight_lurker_3.3.7.jar": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9"
+      "mods/the_midnight_lurker_3.3.7.jar": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
+      "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696"
     },
     "removedModIds": [
       "dandadan",
@@ -3264,9 +3259,10 @@
       "presencefootsteps",
       "sound_physics_remastered",
       "antlers",
-      "midnightlurker"
+      "midnightlurker",
+      "the_one_who_watches"
     ],
     "freshNativeObservationClaimed": false,
-    "scope": "Direct exact subtraction of removed NEW mod/library IDs from historical native snapshot. Retained539 IDs/514 JARs source-projected. No fresh native observation claimed."
+    "scope": "Direct exact subtraction of removed NEW mod/library IDs from historical native snapshot. Retained538 IDs/513 JARs source-projected. No fresh native observation claimed."
   }
 }

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "parentSourceRevision": "089597d0693ed316cc96dfecff62d3ee0252d758",
+  "parentSourceLockSha256": "6d987013ad4998e72c509a30d3a49db93dbbf828260bbf7f83a49045700c0295",
+  "userAuthorizedIds": [
+    "the_one_who_watches"
+  ],
+  "removedFiles": [
+    {
+      "fileName": "TheOneWhoWatches-V1.4.4-1.20.1.jar",
+      "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696",
+      "sizeBytes": 5493144,
+      "sourceUrl": "https://edge.forgecdn.net/files/7608/035/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+      "projectId": 940557,
+      "fileId": 7608035,
+      "path": "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+      "kind": "requested",
+      "version": "1.4.4",
+      "modIds": [
+        "the_one_who_watches"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-one-who-watches",
+      "name": "The One Who Watches"
+    }
+  ],
+  "removedKeyNames": [],
+  "retainedSourceJars": 513,
+  "retainedProjectedPackModIds": 538,
+  "retainedPresetNames": 554,
+  "retainedRequestedJars": 65,
+  "retainedDependencyJars": 17,
+  "orphanDependencyRemoved": false,
+  "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. Retained mandatory dependencies, strict script/gamerule references and shipped standalone configs are checked independently. Shared libraries remain required by other mods.",
+  "oldWorldContentRegistryLossExpected": true,
+  "newRuntimeOrFlightFixClaimed": false,
+  "sourceTests": {
+    "passed": 258,
+    "failed": 0,
+    "skipped": 0
+  },
+  "keyPreset": {
+    "rows": 554,
+    "independentConflicts": 0
+  },
+  "retainedMandatoryDependencyOnRemovedMod": false,
+  "strictRetainedScriptOrGameruleReferences": [],
+  "shippedOrphanConfigs": [],
+  "sharedGeckoLibRetained": true,
+  "fullClientRun": "NOT_RUN: user game is active and this task is coordinated with live diagnostics. No new full-client or two-player acceptance is claimed."
+}

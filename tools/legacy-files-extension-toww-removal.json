@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "priorSourceRevision": "089597d0693ed316cc96dfecff62d3ee0252d758",
+  "priorUnionSha256": "6d77afe6c9795cd91fc97d546b381329005ac69cb951fe7bb3bb6fe9b42b32b4",
+  "currentUnionSha256": "434d891b92e8483c389de5434620205b0cca229dcebefe3fb5e1798da21dc7ff",
+  "addedExactRows": [
+    {
+      "path": "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar",
+      "sizeBytes": 5493144,
+      "sha256": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696"
+    }
+  ],
+  "userRemovedIds": [
+    "the_one_who_watches"
+  ],
+  "unknownPersonalFilesDeletionClaimed": false
+}
