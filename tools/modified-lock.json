@@ -2054,22 +2054,6 @@
       "name": "The Backwoods"
     },
     {
-      "fileName": "the_midnight_lurker_3.3.7.jar",
-      "sha256": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
-      "sizeBytes": 19812085,
-      "sourceUrl": "https://edge.forgecdn.net/files/5775/477/the_midnight_lurker_3.3.7.jar",
-      "projectId": 923133,
-      "fileId": 5775477,
-      "path": "mods/the_midnight_lurker_3.3.7.jar",
-      "kind": "requested",
-      "version": "3.3.7",
-      "modIds": [
-        "midnightlurker"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-midnight-lurker",
-      "name": "The Midnight Lurker"
-    },
-    {
       "fileName": "thefinalgoatman-4.3.0.jar",
       "sha256": "62fa70d78a265d6d162062a746f3c0f0e3391cd6db194dcb19f784d1fa2ed748",
       "sizeBytes": 3055634,

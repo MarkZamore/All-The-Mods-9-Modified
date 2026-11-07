@@ -475,7 +475,6 @@
     "the-shooting-star-demo-1.5.1-forge.jar": "9a547738e3971b79f0e501fb3311e4abb74e48547acab6c921db9c8c3b1dd4f5",
     "the_after-0.1.2-forge-1.20.1.jar": "f43700d5c7e2e55c59f42954fa4e67be057b5de97369b36efee73bf253217d6e",
     "the_backwoods-1.6.0-forge-1.20.1.jar": "9f24cecad4e4467aca091a8b148e6fe47576e5ec812098b68b5d910ecdae97e6",
-    "the_midnight_lurker_3.3.7.jar": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
     "thefinalgoatman-4.3.0.jar": "62fa70d78a265d6d162062a746f3c0f0e3391cd6db194dcb19f784d1fa2ed748",
     "themimic_er-1.20.1-1.7.0.jar": "88516636609e3c84212c510a9e1d478e5f8affa2171d04165e34090c01843d7f",
     "theonlooker-forge-1.20.1-4.7.1-alpha.jar": "e037615bde9810e139bd3cf7e73070c1417d094f87074aff2e8373d0c22d72c0",
@@ -10254,5 +10253,38 @@
     "retainedPresetNames": 554,
     "retainedPresetValuesChanged": false,
     "currentNativeRecaptureVerified": false
+  },
+  "midnightLurkerRemovalProjection": {
+    "userAuthorizedIds": [
+      "midnightlurker"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "the_midnight_lurker_3.3.7.jar",
+        "sha256": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
+        "sizeBytes": 19812085,
+        "sourceUrl": "https://edge.forgecdn.net/files/5775/477/the_midnight_lurker_3.3.7.jar",
+        "projectId": 923133,
+        "fileId": 5775477,
+        "path": "mods/the_midnight_lurker_3.3.7.jar",
+        "kind": "requested",
+        "version": "3.3.7",
+        "modIds": [
+          "midnightlurker"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-midnight-lurker",
+        "name": "The Midnight Lurker"
+      }
+    ],
+    "removedKeyNames": [],
+    "retainedSourceJars": 514,
+    "retainedProjectedPackModIds": 539,
+    "retainedPresetNames": 554,
+    "retainedRequestedJars": 66,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. No retained strict script/gamerule references or shipped standalone config. Shared libraries have other consumers.",
+    "oldWorldContentRegistryLossExpected": true,
+    "newRuntimeOrFlightFixClaimed": false
   }
 }

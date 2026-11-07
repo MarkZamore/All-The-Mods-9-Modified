@@ -1806,12 +1806,13 @@
     {
       "name": "The Midnight Lurker",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-midnight-lurker",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "midnightlurker"
       ],
       "version": "3.3.7",
-      "sha256": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9"
+      "sha256": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
+      "reason": "User explicitly requested complete removal on 2026-11-07 of The Midnight Lurker and its insanity HUD."
     },
     {
       "name": "The Mimicer",
@@ -2010,7 +2011,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 67,
+  "selectedRequestedProjects": 66,
   "dependencyJars": 17,
   "authorCompatibilitySelections": [
     {
@@ -2254,12 +2255,8 @@
     }
   },
   "currentSingleplayerContentAcceptance": {
-    "status": "SOURCE_USER_REMOVAL_NO_NEW_GAME_OR_PEER_ACCEPTANCE",
-    "sourceLockSha256": "f08db611b1584c181c1f8390a9f61d0434e88e2c657aeb4973095203629e4418",
-    "historicalNativeReceipt": "tools/qa/native-source-acceptance.json",
-    "freshNativeObservationClaimed": false,
-    "realPeerJoinVerified": false,
-    "networkFixClaimed": false
+    "status": "SOURCE_USER_REMOVAL_RUNTIME_PENDING",
+    "freshNativeObservationClaimed": false
   },
   "previousSingleplayerContentAcceptanceBeforeShootingStar151": {
     "receipt": {
@@ -3147,9 +3144,9 @@
       "Дополнительные"
     ],
     "displayedOriginalCount": 361,
-    "displayedModifiedCount": 430,
-    "visibleAddedModsAndAddons": 69,
-    "visibleAddedRoots": 68,
+    "displayedModifiedCount": 429,
+    "visibleAddedModsAndAddons": 68,
+    "visibleAddedRoots": 67,
     "counterScope": "all",
     "sourceFileProvenanceCountsAreNotDisplayRoles": true,
     "normalStandaloneDependencyIds": [
@@ -3174,5 +3171,38 @@
     "receipt": "tools/qa/steam-network-435-acceptance.json",
     "temporaryDiagnosticsRetired": true,
     "fullTwoAccountMatrixClaimed": false
+  },
+  "midnightLurkerRemoval": {
+    "userAuthorizedIds": [
+      "midnightlurker"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "the_midnight_lurker_3.3.7.jar",
+        "sha256": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
+        "sizeBytes": 19812085,
+        "sourceUrl": "https://edge.forgecdn.net/files/5775/477/the_midnight_lurker_3.3.7.jar",
+        "projectId": 923133,
+        "fileId": 5775477,
+        "path": "mods/the_midnight_lurker_3.3.7.jar",
+        "kind": "requested",
+        "version": "3.3.7",
+        "modIds": [
+          "midnightlurker"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-midnight-lurker",
+        "name": "The Midnight Lurker"
+      }
+    ],
+    "removedKeyNames": [],
+    "retainedSourceJars": 514,
+    "retainedProjectedPackModIds": 539,
+    "retainedPresetNames": 554,
+    "retainedRequestedJars": 66,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. No retained strict script/gamerule references or shipped standalone config. Shared libraries have other consumers.",
+    "oldWorldContentRegistryLossExpected": true,
+    "newRuntimeOrFlightFixClaimed": false
   }
 }

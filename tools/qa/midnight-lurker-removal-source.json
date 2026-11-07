@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "parentSourceRevision": "845b19a90556bf5b2c7ace8e1fa7bdcd93254ba5",
+  "parentSourceLockSha256": "3ec0a4a956cc30d88697248832c3bdb817f1f58cc91dfa1725a3e6ea4552b7d3",
+  "userAuthorizedIds": [
+    "midnightlurker"
+  ],
+  "removedFiles": [
+    {
+      "fileName": "the_midnight_lurker_3.3.7.jar",
+      "sha256": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
+      "sizeBytes": 19812085,
+      "sourceUrl": "https://edge.forgecdn.net/files/5775/477/the_midnight_lurker_3.3.7.jar",
+      "projectId": 923133,
+      "fileId": 5775477,
+      "path": "mods/the_midnight_lurker_3.3.7.jar",
+      "kind": "requested",
+      "version": "3.3.7",
+      "modIds": [
+        "midnightlurker"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/the-midnight-lurker",
+      "name": "The Midnight Lurker"
+    }
+  ],
+  "removedKeyNames": [],
+  "retainedSourceJars": 514,
+  "retainedProjectedPackModIds": 539,
+  "retainedPresetNames": 554,
+  "retainedRequestedJars": 66,
+  "retainedDependencyJars": 17,
+  "orphanDependencyRemoved": false,
+  "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. No retained strict script/gamerule references or shipped standalone config. Shared libraries have other consumers.",
+  "oldWorldContentRegistryLossExpected": true,
+  "newRuntimeOrFlightFixClaimed": false,
+  "sourceTests": {
+    "passed": 258,
+    "failed": 0,
+    "skipped": 0
+  },
+  "keyPreset": {
+    "rows": 554,
+    "independentConflicts": 0
+  },
+  "retainedDependencyOnRemovedMod": false,
+  "fullClientRun": "NOT_RUN: user game active, approximately 4 GiB physical memory free. No post-removal runtime acceptance claimed.",
+  "initialQaPreparation": "Harness rejected QA-only original client JAR in source copy before client launch. Release has empty clientJar and excludes this QA-only file."
+}

@@ -386,7 +386,8 @@
     "cryptic_registry"
   ],
   "removedModIds": [
-    "antlers"
+    "antlers",
+    "midnightlurker"
   ],
   "originalSharedContentExcludedFromAdded": [
     "derenderpatcher"
@@ -429,7 +430,6 @@
     "lucent",
     "mbackrooms",
     "midnight",
-    "midnightlurker",
     "netherman",
     "nostalgia",
     "nyctophobia",
@@ -512,7 +512,6 @@
         "liminality",
         "mbackrooms",
         "midnight",
-        "midnightlurker",
         "netherman",
         "nostalgia",
         "nyctophobia",
@@ -561,13 +560,13 @@
   ],
   "countsForProjectionVerification": {
     "originalRenderedModsAndAddons": 361,
-    "modifiedAllNormalModsAndAddons": 430,
-    "addedVisibleModsAndAddons": 69,
-    "addedTreeRootRows": 68,
-    "sourceJarCount": 515,
+    "modifiedAllNormalModsAndAddons": 429,
+    "addedVisibleModsAndAddons": 68,
+    "addedTreeRootRows": 67,
+    "sourceJarCount": 514,
     "nativeLoadedOriginal": 453,
-    "nativeLoadedModified": 540,
-    "requestedManualFiles": 67,
+    "nativeLoadedModified": 539,
+    "requestedManualFiles": 66,
     "dependencyProvenanceFiles": 17
   }
 }

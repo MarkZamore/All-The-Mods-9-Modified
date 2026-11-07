@@ -454,7 +454,6 @@
     "mods/the-shooting-star-demo-1.5.1-forge.jar": "9a547738e3971b79f0e501fb3311e4abb74e48547acab6c921db9c8c3b1dd4f5",
     "mods/the_after-0.1.2-forge-1.20.1.jar": "f43700d5c7e2e55c59f42954fa4e67be057b5de97369b36efee73bf253217d6e",
     "mods/the_backwoods-1.6.0-forge-1.20.1.jar": "9f24cecad4e4467aca091a8b148e6fe47576e5ec812098b68b5d910ecdae97e6",
-    "mods/the_midnight_lurker_3.3.7.jar": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
     "mods/The_Undergarden-1.20.1-0.8.14.jar": "43029e388ab455f8c9bcfc8653b9a57a3eb1ff6b435cf6e58722d2d4c50d2444",
     "mods/thefinalgoatman-4.3.0.jar": "62fa70d78a265d6d162062a746f3c0f0e3391cd6db194dcb19f784d1fa2ed748",
     "mods/themimic_er-1.20.1-1.7.0.jar": "88516636609e3c84212c510a9e1d478e5f8affa2171d04165e34090c01843d7f",
@@ -2196,11 +2195,6 @@
       "version": "0.6.7"
     },
     {
-      "id": "midnightlurker",
-      "name": "The Midnight Lurker",
-      "version": "3.3.7"
-    },
-    {
       "id": "minecolonies",
       "name": "MineColonies",
       "version": "1.20.1-1.1.1065-snapshot"
@@ -3249,7 +3243,8 @@
       "mods/hsrphainon-1.2.3.jar": "2e8a04cd1e534bef81ce922df4b28c3dabd8b65e8e0f52ea89398b8d874199a1",
       "mods/PresenceFootsteps-1.20.1-1.9.1-beta.1.jar": "447dd543e178a9454ccf3bf0d9d7bd7957b1af6da9d74f2cd3d9b5fbe8548e98",
       "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
-      "mods/antlers-1.0.0.jar": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b"
+      "mods/antlers-1.0.0.jar": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
+      "mods/the_midnight_lurker_3.3.7.jar": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9"
     },
     "removedModIds": [
       "dandadan",
@@ -3268,9 +3263,10 @@
       "hsrphainon",
       "presencefootsteps",
       "sound_physics_remastered",
-      "antlers"
+      "antlers",
+      "midnightlurker"
     ],
     "freshNativeObservationClaimed": false,
-    "scope": "Direct exact subtraction of17 removed NEW mod/library IDs from actual557ID/532JAR parent. Retained540 IDs/515JARs source-projected; no fresh native/full-game acceptance claimed."
+    "scope": "Direct exact subtraction of removed NEW mod/library IDs from historical native snapshot. Retained539 IDs/514 JARs source-projected. No fresh native observation claimed."
   }
 }
