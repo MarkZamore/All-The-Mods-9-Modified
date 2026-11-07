@@ -75,6 +75,9 @@ jobs:
           python -m unittest discover -s tools -p "test_*.py"
           python tools/generate_manifest.py --pack . --out dist --verify-all
 
+      - name: Require reviewed Steam-only automatic server lists
+        run: python tools/public_server_policy.py --pack . --manifest dist/pack-manifest.json
+
       - name: Publish pack-latest release
         env:
           GH_TOKEN: ${{ github.token }}

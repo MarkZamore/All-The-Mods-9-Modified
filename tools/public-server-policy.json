@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "policy": "steam-only-automatic-server-list-v1",
+  "reviewedInventorySha256": "849868378215cf5122a9297d0b4d3e33a32572e3feb07b1fe763ce555e08b6ca",
+  "reviewedManifestRevision": "536ed95aac3a2701f005a0c2373d986278f31792",
+  "reviewedManifestSha256": "ff69112d8ed797febd4932b61ca661cb3083f34dc5c144f4339d157aa06e18dc",
+  "scope": "Exact current delivery, no shipped NBT seeds, reviewed text menus and automatic-list selectors. New binary/config/script/resource input requires explicit re-audit before publication.",
+  "personalServerLists": "Never read or rewritten; manually saved addresses are preserved.",
+  "autoRepin": false,
+  "checkerSource": "https://github.com/MarkZamore/LANMinecraft/blob/940a5629a231eb608bad3b0772df0a5c8623966f/tools/PackData/ServerPolicy/public_server_policy.py"
+}
