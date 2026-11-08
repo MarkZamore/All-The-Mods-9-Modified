@@ -1,0 +1,22 @@
+{
+  "releaseNumber": 487,
+  "commitSha": "62f7dfba2e71fdc719c31d344a570c4309e738cf",
+  "sha256": "6686cf65517795d578fafb1d1b62cbb43a41794e3addba604a2d78661f995b47",
+  "sizeBytes": 157978624,
+  "downloadVerified": true,
+  "executableRun": false,
+  "fileVersion": "1.0.487.0",
+  "productVersion": "1.0.487+62f7dfba2e71fdc719c31d344a570c4309e738cf",
+  "localValidation": {
+    "passed": 708,
+    "skipped": 0
+  },
+  "ciValidation": {
+    "passed": 634,
+    "skipped": 0,
+    "runUrl": "https://github.com/MarkZamore/LANMinecraft/actions/runs/42490880976",
+    "attempt": 2
+  },
+  "implementationCommit": "c0d49f34fa88f0784daf46e192296518d4f9f580",
+  "remoteComputerRetested": false
+}
