@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "verifiedUtc": "2026-11-08T16:12:51.072332+00:00",
+  "sourceRevision": "7921575cfdc453091b44e6e3e74a880de4db6e03",
+  "workflowUrl": "https://github.com/MarkZamore/All-The-Mods-9-Modified/actions/runs/42498360069",
+  "workflowConclusion": "success",
+  "publicManifestUrl": "https://github.com/MarkZamore/All-The-Mods-9-Modified/releases/download/pack-latest/pack-manifest.json",
+  "publicManifestSha256": "727d475524fbdc3bb3734364a945396ba5ecce9398d8bbc77057458a99499f0e",
+  "publicLibrary": {
+    "name": "library-19143c59efd0eb96334d9cd8b1be5f4d0d2a866bb59239d02da8844f2c454d5e.zip",
+    "sizeBytes": 209218,
+    "sha256": "19143c59efd0eb96334d9cd8b1be5f4d0d2a866bb59239d02da8844f2c454d5e",
+    "revision": "7921575cfdc453091b44e6e3e74a880de4db6e03"
+  },
+  "nostalgiaAbsentFromRuntimeFiles": true,
+  "nostalgiaAbsentFromPublicLibrary": true,
+  "exactRetirementPresent": true,
+  "retainedRuntimeFiles": 1896,
+  "changedRetainedRuntimeFiles": 0,
+  "sourceJars": 512,
+  "projectedModIds": 537,
+  "displayedModsAndAddons": 427,
+  "addedModsAndAddons": 66,
+  "presetNames": 554,
+  "sourceTestsPassed": 258,
+  "sourceTestsFailed": 0,
+  "sourceTestsSkipped": 0,
+  "fullClientRun": "NOT_RUN",
+  "dedicatedServerRun": "NOT_RUN",
+  "oldWorldMigration": "NOT_RUN",
+  "launcherImplementationChanges": false,
+  "newLauncherAppliedExceptions": []
+}
