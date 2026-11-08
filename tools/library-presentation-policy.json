@@ -388,7 +388,8 @@
   "removedModIds": [
     "antlers",
     "midnightlurker",
-    "the_one_who_watches"
+    "the_one_who_watches",
+    "nostalgia"
   ],
   "originalSharedContentExcludedFromAdded": [
     "derenderpatcher"
@@ -432,7 +433,6 @@
     "mbackrooms",
     "midnight",
     "netherman",
-    "nostalgia",
     "nyctophobia",
     "nyfsspiders",
     "orbital_railgun",
@@ -513,7 +513,6 @@
         "mbackrooms",
         "midnight",
         "netherman",
-        "nostalgia",
         "nyctophobia",
         "retail",
         "rolling_giant_oldest_view",
@@ -559,13 +558,13 @@
   ],
   "countsForProjectionVerification": {
     "originalRenderedModsAndAddons": 361,
-    "modifiedAllNormalModsAndAddons": 428,
-    "addedVisibleModsAndAddons": 67,
-    "addedTreeRootRows": 66,
-    "sourceJarCount": 513,
+    "modifiedAllNormalModsAndAddons": 427,
+    "addedVisibleModsAndAddons": 66,
+    "addedTreeRootRows": 65,
+    "sourceJarCount": 512,
     "nativeLoadedOriginal": 453,
-    "nativeLoadedModified": 538,
-    "requestedManualFiles": 65,
+    "nativeLoadedModified": 537,
+    "requestedManualFiles": 64,
     "dependencyProvenanceFiles": 17
   }
 }

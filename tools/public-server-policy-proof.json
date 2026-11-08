@@ -1,12 +1,24 @@
 {
   "repository": "All-The-Mods-9-Modified",
-  "revision": "536ed95aac3a2701f005a0c2373d986278f31792",
+  "revision": "source-nostalgia-removal-20261108",
   "status": "PASS",
   "policy": "steam-only-automatic-server-list-v1",
-  "reviewedInventorySha256": "849868378215cf5122a9297d0b4d3e33a32572e3feb07b1fe763ce555e08b6ca",
-  "files": 1897,
+  "reviewedInventorySha256": "b960d2102f48c9dbdfe21838bd3c909317287a3ef4af3c51d2bf04a6d1898a11",
+  "files": 1896,
   "textFilesChecked": 872,
   "personalServerListsModified": false,
-  "checks": "Five common regression tests passed; full reviewed text inventory checked against published SHA; no new gameplay run.",
-  "payloadChanges": []
+  "previousReviewedInventorySha256": "849868378215cf5122a9297d0b4d3e33a32572e3feb07b1fe763ce555e08b6ca",
+  "reviewedParentManifestRevision": "e25811ce67649b67005908b839278afcd4242fff",
+  "reviewedParentManifestSha256": "44b1bbac8aba61efe3a84cccbda12ddbabb4590fb27231b7d50dbefd6c1599dd",
+  "checks": "Explicit removal-only re-audit. All retained runtime path/size/SHA256 rows equal the previous reviewed delivery. Full retained text inventory checked; no shipped NBT seeds or public-server menu/AddedServerlist selectors. Removed JAR has no ServerList/ServerData/MultiplayerScreen/servers.dat/addServer refs, nested JAR, JNI or Steam hooks. Existing native hooks are unchanged. No new gameplay run.",
+  "payloadChanges": [
+    {
+      "operation": "remove",
+      "path": "mods/nostalgia-1.2.0-forge-1.20.1.jar",
+      "sizeBytes": 949977,
+      "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2"
+    }
+  ],
+  "autoRepin": false,
+  "nativeHooksChanged": false
 }

@@ -1,11 +1,13 @@
 {
   "schemaVersion": 1,
   "policy": "steam-only-automatic-server-list-v1",
-  "reviewedInventorySha256": "849868378215cf5122a9297d0b4d3e33a32572e3feb07b1fe763ce555e08b6ca",
-  "reviewedManifestRevision": "536ed95aac3a2701f005a0c2373d986278f31792",
-  "reviewedManifestSha256": "ff69112d8ed797febd4932b61ca661cb3083f34dc5c144f4339d157aa06e18dc",
+  "reviewedInventorySha256": "b960d2102f48c9dbdfe21838bd3c909317287a3ef4af3c51d2bf04a6d1898a11",
   "scope": "Exact current delivery, no shipped NBT seeds, reviewed text menus and automatic-list selectors. New binary/config/script/resource input requires explicit re-audit before publication.",
   "personalServerLists": "Never read or rewritten; manually saved addresses are preserved.",
   "autoRepin": false,
-  "checkerSource": "https://github.com/MarkZamore/LANMinecraft/blob/940a5629a231eb608bad3b0772df0a5c8623966f/tools/PackData/ServerPolicy/public_server_policy.py"
+  "checkerSource": "https://github.com/MarkZamore/LANMinecraft/blob/940a5629a231eb608bad3b0772df0a5c8623966f/tools/PackData/ServerPolicy/public_server_policy.py",
+  "reviewedParentManifestRevision": "e25811ce67649b67005908b839278afcd4242fff",
+  "reviewedParentManifestSha256": "44b1bbac8aba61efe3a84cccbda12ddbabb4590fb27231b7d50dbefd6c1599dd",
+  "reviewProof": "tools/public-server-policy-proof.json",
+  "reviewedSourceParentRevision": "e88766c81cad980351c24f2bf501d91813fd4368"
 }

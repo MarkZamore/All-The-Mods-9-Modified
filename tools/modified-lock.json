@@ -1686,22 +1686,6 @@
       "name": "The Midnight"
     },
     {
-      "fileName": "nostalgia-1.2.0-forge-1.20.1.jar",
-      "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2",
-      "sizeBytes": 949977,
-      "sourceUrl": "https://edge.forgecdn.net/files/7886/256/nostalgia-1.2.0-forge-1.20.1.jar",
-      "projectId": 1424197,
-      "fileId": 7886256,
-      "path": "mods/nostalgia-1.2.0-forge-1.20.1.jar",
-      "kind": "requested",
-      "version": "1.2.0",
-      "modIds": [
-        "nostalgia"
-      ],
-      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/nostalgia-liminal-spaces",
-      "name": "Nostalgia"
-    },
-    {
       "fileName": "nyctophobia-forge-mc1.20.1-2.0.0.jar",
       "sha256": "34a5fa7d9a4da18bc38e6a4281ff393f35a3e1039a38110da2efd4989631a11b",
       "sizeBytes": 352252,

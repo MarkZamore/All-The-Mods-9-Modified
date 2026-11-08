@@ -1469,12 +1469,13 @@
     {
       "name": "Nostalgia",
       "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/nostalgia-liminal-spaces",
-      "status": "selected",
+      "status": "excluded-by-user",
       "modIds": [
         "nostalgia"
       ],
       "version": "1.2.0",
-      "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2"
+      "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2",
+      "reason": "User explicitly requested complete removal on 2026-11-08. Old Nostalgia dimensions and registered content become unavailable; personal worlds and claims are not rewritten."
     },
     {
       "name": "Null Presence",
@@ -2012,7 +2013,7 @@
       "status": "selected"
     }
   ],
-  "selectedRequestedProjects": 65,
+  "selectedRequestedProjects": 64,
   "dependencyJars": 17,
   "authorCompatibilitySelections": [
     {
@@ -3145,9 +3146,9 @@
       "Дополнительные"
     ],
     "displayedOriginalCount": 361,
-    "displayedModifiedCount": 428,
-    "visibleAddedModsAndAddons": 67,
-    "visibleAddedRoots": 66,
+    "displayedModifiedCount": 427,
+    "visibleAddedModsAndAddons": 66,
+    "visibleAddedRoots": 65,
     "counterScope": "all",
     "sourceFileProvenanceCountsAreNotDisplayRoles": true,
     "normalStandaloneDependencyIds": [
@@ -3238,5 +3239,37 @@
     "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. Retained mandatory dependencies, strict script/gamerule references and shipped standalone configs are checked independently. Shared libraries remain required by other mods.",
     "oldWorldContentRegistryLossExpected": true,
     "newRuntimeOrFlightFixClaimed": false
+  },
+  "nostalgiaRemoval": {
+    "userAuthorizedIds": [
+      "nostalgia"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "nostalgia-1.2.0-forge-1.20.1.jar",
+        "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2",
+        "sizeBytes": 949977,
+        "sourceUrl": "https://edge.forgecdn.net/files/7886/256/nostalgia-1.2.0-forge-1.20.1.jar",
+        "projectId": 1424197,
+        "fileId": 7886256,
+        "path": "mods/nostalgia-1.2.0-forge-1.20.1.jar",
+        "kind": "requested",
+        "version": "1.2.0",
+        "modIds": [
+          "nostalgia"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/nostalgia-liminal-spaces",
+        "name": "Nostalgia"
+      }
+    ],
+    "removedKeyNames": [],
+    "retainedSourceJars": 512,
+    "retainedProjectedPackModIds": 537,
+    "retainedPresetNames": 554,
+    "retainedRequestedJars": 64,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "oldWorldContentRegistryLossExpected": true,
+    "newRuntimeOrNetworkFixClaimed": false
   }
 }

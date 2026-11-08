@@ -396,7 +396,6 @@
     "netherportalfix-forge-1.20-13.0.1.jar": "06f1354664aee53d4c32c83f76ed94bb72426a75b7e0eb8e415abfba3634cf4e",
     "nethersdelight-1.20.1-4.0.jar": "28b072bc5c09ee889468546676c9bf0268eaa415865704bbeeb33f6a37005a30",
     "noflyzone-1.20.1-1.1.0.jar": "5813cfdb52e880073607b5c452033a21c5ce252c986de2d89898c63b6d1ed840",
-    "nostalgia-1.2.0-forge-1.20.1.jar": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2",
     "notrample-1.20.1-1.0.1.jar": "022acf970473176ba0134c49f4e6f36302b1faedcdde55bcfd7a9f40deb1447c",
     "novillagerdm-1.20.1-5.0.0.jar": "5e70333d6809827876f89ed36859b3bd1561a6533844318867fb842b3b07ebcd",
     "nyctophobia-forge-mc1.20.1-2.0.0.jar": "34a5fa7d9a4da18bc38e6a4281ff393f35a3e1039a38110da2efd4989631a11b",
@@ -10318,5 +10317,37 @@
     "safetyReason": "Removal introduces no new world mutation paths. No custom Safety exists. Retained mandatory dependencies, strict script/gamerule references and shipped standalone configs are checked independently. Shared libraries remain required by other mods.",
     "oldWorldContentRegistryLossExpected": true,
     "newRuntimeOrFlightFixClaimed": false
+  },
+  "nostalgiaRemovalProjection": {
+    "userAuthorizedIds": [
+      "nostalgia"
+    ],
+    "removedFiles": [
+      {
+        "fileName": "nostalgia-1.2.0-forge-1.20.1.jar",
+        "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2",
+        "sizeBytes": 949977,
+        "sourceUrl": "https://edge.forgecdn.net/files/7886/256/nostalgia-1.2.0-forge-1.20.1.jar",
+        "projectId": 1424197,
+        "fileId": 7886256,
+        "path": "mods/nostalgia-1.2.0-forge-1.20.1.jar",
+        "kind": "requested",
+        "version": "1.2.0",
+        "modIds": [
+          "nostalgia"
+        ],
+        "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/nostalgia-liminal-spaces",
+        "name": "Nostalgia"
+      }
+    ],
+    "removedKeyNames": [],
+    "retainedSourceJars": 512,
+    "retainedProjectedPackModIds": 537,
+    "retainedPresetNames": 554,
+    "retainedRequestedJars": 64,
+    "retainedDependencyJars": 17,
+    "orphanDependencyRemoved": false,
+    "oldWorldContentRegistryLossExpected": true,
+    "newRuntimeOrNetworkFixClaimed": false
   }
 }

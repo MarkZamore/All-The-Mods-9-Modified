@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "parentSourceRevision": "e88766c81cad980351c24f2bf501d91813fd4368",
+  "parentSourceLockSha256": "5b92d59944256eb421710f0272b777c58f6cb50b1f4a9cee5fbe9a119b42280b",
+  "userAuthorizedIds": [
+    "nostalgia"
+  ],
+  "removedFiles": [
+    {
+      "fileName": "nostalgia-1.2.0-forge-1.20.1.jar",
+      "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2",
+      "sizeBytes": 949977,
+      "sourceUrl": "https://edge.forgecdn.net/files/7886/256/nostalgia-1.2.0-forge-1.20.1.jar",
+      "projectId": 1424197,
+      "fileId": 7886256,
+      "path": "mods/nostalgia-1.2.0-forge-1.20.1.jar",
+      "kind": "requested",
+      "version": "1.2.0",
+      "modIds": [
+        "nostalgia"
+      ],
+      "websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/nostalgia-liminal-spaces",
+      "name": "Nostalgia"
+    }
+  ],
+  "removedKeyNames": [],
+  "retainedSourceJars": 512,
+  "retainedProjectedPackModIds": 537,
+  "retainedPresetNames": 554,
+  "retainedRequestedJars": 64,
+  "retainedDependencyJars": 17,
+  "orphanDependencyRemoved": false,
+  "oldWorldContentRegistryLossExpected": true,
+  "newRuntimeOrNetworkFixClaimed": false,
+  "legacyRetirement": {
+    "alreadyPresent": true,
+    "exactJar": {
+      "path": "mods/nostalgia-1.2.0-forge-1.20.1.jar",
+      "sizeBytes": 949977,
+      "sha256": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2"
+    },
+    "unknownPersonalFilesDeletionClaimed": false
+  },
+  "fullClientRun": "NOT_RUN",
+  "dedicatedServerRun": "NOT_RUN",
+  "oldWorldMigration": "NOT_RUN; leave Nostalgia dimensions and back up before update; no player/world/claim NBT rewritten.",
+  "officialFilePage": "https://www.curseforge.com/minecraft/mc-mods/nostalgia-liminal-spaces/files/7886256",
+  "officialAuthor": "Redyrus",
+  "metadata": {
+    "loader": "javafml [47,)",
+    "minecraft": "[1.20.1]",
+    "mandatoryDependencySide": "BOTH",
+    "thirdPartyDependencies": []
+  },
+  "retainedMandatoryDependencyOnRemovedMod": false,
+  "strictRetainedScriptOrGameruleReferences": [],
+  "shippedOrphanConfigs": [],
+  "removedDimensions": [
+    "nostalgia:island",
+    "nostalgia:screen_saver",
+    "nostalgia:skyblock",
+    "nostalgia:strip_mines",
+    "nostalgia:stronghold",
+    "nostalgia:village"
+  ],
+  "claims": "No personal world, dimension directory, spawnpoint or FTB Chunks data rewritten. Removed dimension references may become unresolved.",
+  "publicServerPolicy": {
+    "status": "PASS",
+    "policy": "steam-only-automatic-server-list-v1",
+    "reviewedInventorySha256": "b960d2102f48c9dbdfe21838bd3c909317287a3ef4af3c51d2bf04a6d1898a11",
+    "files": 1896,
+    "textFilesChecked": 872,
+    "personalServerListsModified": false
+  },
+  "temporaryDataCleaned": true,
+  "sourceTests": {
+    "passed": 258,
+    "failed": 0,
+    "skipped": 0
+  },
+  "keyPreset": {
+    "rows": 554,
+    "enabled": 146,
+    "unbound": 408,
+    "independentConflicts": 0
+  },
+  "retainedRuntimeFiles": 1896,
+  "changedRetainedRuntimeFiles": 0,
+  "library": {
+    "loadedIds": 537,
+    "base": 361,
+    "added": 66,
+    "total": 427,
+    "summaryAndDescriptionPreserved": true
+  },
+  "sourceChecksComplete": true,
+  "temporarySourceFilesRemoved": 510,
+  "temporarySourceBytesRemoved": 2217997416
+}

@@ -345,7 +345,6 @@
     "mods/nethersdelight-1.20.1-4.0.jar": "28b072bc5c09ee889468546676c9bf0268eaa415865704bbeeb33f6a37005a30",
     "mods/NoChatReports-FORGE-1.20.1-v2.2.2.jar": "ef7fa5096dfd492c3d3ae7228888ca4b92ce07d9b8e302297ceb2ceb1f8d238c",
     "mods/noflyzone-1.20.1-1.1.0.jar": "5813cfdb52e880073607b5c452033a21c5ce252c986de2d89898c63b6d1ed840",
-    "mods/nostalgia-1.2.0-forge-1.20.1.jar": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2",
     "mods/notrample-1.20.1-1.0.1.jar": "022acf970473176ba0134c49f4e6f36302b1faedcdde55bcfd7a9f40deb1447c",
     "mods/novillagerdm-1.20.1-5.0.0.jar": "5e70333d6809827876f89ed36859b3bd1561a6533844318867fb842b3b07ebcd",
     "mods/nyctophobia-forge-mc1.20.1-2.0.0.jar": "34a5fa7d9a4da18bc38e6a4281ff393f35a3e1039a38110da2efd4989631a11b",
@@ -2339,11 +2338,6 @@
       "version": "1.20.1-1.1.0"
     },
     {
-      "id": "nostalgia",
-      "name": "Nostalgia",
-      "version": "1.2.0"
-    },
-    {
       "id": "notrample",
       "name": "No Trample",
       "version": "1.20.1-1.0.1"
@@ -3239,7 +3233,8 @@
       "mods/sound-physics-remastered-forge-1.20.1-1.4.10.jar": "57ce3c7d5abe724d9fb82f3d068b7717a56b94b7d3ea98f90a2f9ca61c8f57b1",
       "mods/antlers-1.0.0.jar": "cb02e0523c1e580d169865300c69ee8ce3f45f939cf4e836a8636a6c0e210c6b",
       "mods/the_midnight_lurker_3.3.7.jar": "d937481fa165e807c673fcad83db01a48a64afecb0d18a7d97f617a4d5efeea9",
-      "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696"
+      "mods/TheOneWhoWatches-V1.4.4-1.20.1.jar": "a89f57dff16495d49ac2c355f02e7533a89d9bd3c392772c142ba60c26a40696",
+      "mods/nostalgia-1.2.0-forge-1.20.1.jar": "ec7be2036256a9b3440aecf742da0979242b830367a7f269d1c424360a6ae3e2"
     },
     "removedModIds": [
       "dandadan",
@@ -3260,9 +3255,10 @@
       "sound_physics_remastered",
       "antlers",
       "midnightlurker",
-      "the_one_who_watches"
+      "the_one_who_watches",
+      "nostalgia"
     ],
     "freshNativeObservationClaimed": false,
-    "scope": "Direct exact subtraction of removed NEW mod/library IDs from historical native snapshot. Retained538 IDs/513 JARs source-projected. No fresh native observation claimed."
+    "scope": "Direct exact subtraction of removed NEW mod/library IDs from historical native snapshot. Retained537 IDs/512 JARs source-projected. No fresh native observation claimed."
   }
 }
