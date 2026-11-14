@@ -15,7 +15,7 @@ spec.loader.exec_module(policy_tool)
 class ClientPolicyTests(unittest.TestCase):
     def test_early_memory_patch_is_exact_reversible_and_refuses_drift(self):
         memory = policy_tool.memory_warning_policy
-        original = (ROOT / memory.CONFIG).read_bytes()
+        source_config = (ROOT / memory.CONFIG).read_bytes()
         author_lock = json.loads((ROOT / "tools/upstream-lock.json").read_bytes())
         records = [*author_lock["overrides"], *author_lock["files"]]
         with tempfile.TemporaryDirectory() as directory:
@@ -25,17 +25,26 @@ class ClientPolicyTests(unittest.TestCase):
             policy_file.write_bytes((ROOT / "tools/client-policy/policy.json").read_bytes())
             config = root / memory.CONFIG
             config.parent.mkdir()
-            config.write_bytes(original)
+            config.write_bytes(source_config)
             warning = memory.load(root, records, policy_tool.target)
+            # CI runs after restore has already applied the memory policy.
+            # A source checkout supplies the same config in its author form.
+            warning.normalize()
+            original = config.read_bytes()
+            self.assertEqual(json.loads(original)["minimumClient"]["minimumClient"], warning.original_minimum)
             with self.assertRaisesRegex(ValueError, "advisory policy is missing"):
                 warning.verify()
-            warning.apply()
-            warning.verify()
-            self.assertEqual(config.read_bytes(), original.replace(b'"minimumClient": 8192', b'"minimumClient": 0'))
-            warning.apply()
-            warning.normalize()
-            self.assertEqual(config.read_bytes(), original)
-            changed = original.replace(b'"maximumClient": 14336', b'"maximumClient": 16000')
+            effective = memory.set_minimum(original, 0)
+            self.assertEqual(memory.sha(effective), warning.effective["sha256"])
+            for initial in (original, effective):
+                with self.subTest(initial_minimum=json.loads(initial)["minimumClient"]["minimumClient"]):
+                    config.write_bytes(initial)
+                    warning.apply()
+                    warning.verify()
+                    self.assertEqual(config.read_bytes(), effective)
+                    warning.normalize()
+                    self.assertEqual(config.read_bytes(), original)
+            changed = b" " + original
             config.write_bytes(changed)
             with self.assertRaisesRegex(ValueError, "review the author update"):
                 warning.apply()
