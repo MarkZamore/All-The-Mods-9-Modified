@@ -22,6 +22,7 @@ import zipfile
 import pack_library
 import atm9_base_jar_overrides
 import carpets_recipe_policy
+import memory_warning_policy
 import waypoint_source_policy
 
 CONTENT_ROOTS = {"mods", "config", "kubejs", "scripts", "defaultconfigs", "data",
@@ -406,6 +407,10 @@ def load_plan(pack: Path) -> dict:
     quest_base_rows = base_rows
     jar_overrides, base_rows = atm9_base_jar_overrides.validate(
         pack, lock.get("baseJarOverrides", []), upstream, base_rows, set(base_ids), __import__(__name__))
+    memory_warning = memory_warning_policy.load(pack, original_base_rows, target_path)
+    if memory_warning is not None:
+        base_rows = [memory_warning.effective if row["path"] == memory_warning_policy.CONFIG else row
+                     for row in base_rows]
     for row in base_rows:
         seen.add(row["path"].casefold())
     files, support = lock.get("files"), lock.get("supportFiles", [])
@@ -445,6 +450,7 @@ def load_plan(pack: Path) -> dict:
     require(platform.get("clientJar", "") == "", "The published pack must use the official Minecraft client download")
     return {"pack": pack, "lock": lock, "upstream": upstream, "baseRows": base_rows,
             "originalBaseRows": original_base_rows, "questLocalization": quest_profile, "baseReplacements": replacements,
+            "memoryWarningPolicy": memory_warning,
             "questBaseRows": quest_base_rows, "baseJarOverrides": jar_overrides,
             "files": files, "supportFiles": support, "baseIds": set(base_ids), "platform": platform}
 
@@ -474,6 +480,8 @@ def jar_metadata(path: Path) -> list[dict]:
 
 def verify(pack: Path, *, require_loaded_inventory=False) -> dict:
     plan = load_plan(pack)
+    if plan.get("memoryWarningPolicy") is not None:
+        plan["memoryWarningPolicy"].verify()
     rows = [*plan["baseRows"], *plan["files"], *plan["supportFiles"]]
     base_paths = {x["path"] for x in plan["baseRows"]}
     for row in rows:

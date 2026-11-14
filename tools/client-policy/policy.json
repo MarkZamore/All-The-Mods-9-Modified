@@ -1,6 +1,12 @@
 {
   "schemaVersion": 1,
   "kind": "pack-owned-native-client-policy",
+  "earlyClientWarning": {
+    "originalMinimum": 8192,
+    "effectiveSizeBytes": 1818,
+    "effectiveSha256": "4eedcade179d1ff0520ae500c2996fd6e21df95ddec1f669185b253760e91c6b",
+    "nativeJarSha256": "90c2d5093da73a2dbffcf3981f02303444fbbf8371184ca9103a4d438246f2ee"
+  },
   "scripts": [
     {
       "path": "kubejs/client_scripts/lanmc_memory_warning_policy.js",

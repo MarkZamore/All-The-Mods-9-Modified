@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
   "policy": "steam-only-automatic-server-list-v1",
-  "reviewedInventorySha256": "b960d2102f48c9dbdfe21838bd3c909317287a3ef4af3c51d2bf04a6d1898a11",
+  "reviewedInventorySha256": "4bad54f95f65f7d088df1a346838aa3c918f200270c7368f254c4f1190647af5",
   "scope": "Exact current delivery, no shipped NBT seeds, reviewed text menus and automatic-list selectors. New binary/config/script/resource input requires explicit re-audit before publication.",
   "personalServerLists": "Never read or rewritten; manually saved addresses are preserved.",
   "autoRepin": false,
   "checkerSource": "https://github.com/MarkZamore/LANMinecraft/blob/940a5629a231eb608bad3b0772df0a5c8623966f/tools/PackData/ServerPolicy/public_server_policy.py",
-  "reviewedParentManifestRevision": "e25811ce67649b67005908b839278afcd4242fff",
-  "reviewedParentManifestSha256": "44b1bbac8aba61efe3a84cccbda12ddbabb4590fb27231b7d50dbefd6c1599dd",
-  "reviewProof": "tools/public-server-policy-proof.json",
-  "reviewedSourceParentRevision": "e88766c81cad980351c24f2bf501d91813fd4368"
+  "reviewedParentManifestRevision": "445eced8707cd2c8b1a15d4728ed6a7f60fe66c2",
+  "reviewedParentManifestSha256": "f2fd8eaccd970f56bdb693a82f380bae05453c4841287c214f9c5ca67ef951c4",
+  "reviewedPayloadChange": "Only config/memorysettings.json minimumClient.minimumClient changed from 8192 to 0."
 }

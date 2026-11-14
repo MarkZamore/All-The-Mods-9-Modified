@@ -128,6 +128,7 @@ def prevalidate_base_inputs(pack: Path, plan: dict):
     effective = {row["path"]: row for row in plan["questBaseRows"]}
     overrides = {row["original"]["path"]: row for row in plan["baseJarOverrides"]}
     committed_overrides = {row["path"] for row in plan["upstream"]["overrides"]}
+    memory_warning = plan.get("memoryWarningPolicy")
     for original in plan["originalBaseRows"]:
         path = verifier.target_path(pack, original["path"])
         if not path.exists():
@@ -135,6 +136,10 @@ def prevalidate_base_inputs(pack: Path, plan: dict):
                              "Missing upstream override: " + original["path"] + "; restore the checkout or run a full import")
             continue  # The unmodified author importer restores absent originals.
         override = overrides.get(original["path"])
+        if memory_warning is not None and original["path"] == memory_warning.author["path"]:
+            verifier.require(memory_warning.accepts(path.read_bytes()),
+                             "Unknown Memory Settings configuration; review the author update")
+            continue
         if (matches(path, original) or plan["questLocalization"] and matches(path, effective[original["path"]]) or
                 override and override["replacement"]["path"] == original["path"] and matches(path, override["replacement"])):
             continue
@@ -244,6 +249,9 @@ def restore(pack: Path, cache: Path) -> dict:
     # All downloads/derivations have passed before the first source write.
     normalize_base_jars(pack, prepared_base_jars)
     run_quest_localization(pack, plan, "normalize")
+    memory_warning = plan.get("memoryWarningPolicy")
+    if memory_warning is not None:
+        memory_warning.normalize()
     # This validates every existing baseline byte first and refuses modified
     # author configs/scripts/JARs. Extra Modified files are intentionally not
     # deleted by the original importer; the combined verifier accounts for them.
@@ -261,6 +269,8 @@ def restore(pack: Path, cache: Path) -> dict:
     installed = sum(install(source, pack, row) for source, row in payloads)
     apply_base_jars(pack, prepared_base_jars)
     run_quest_localization(pack, plan, "apply")
+    if memory_warning is not None:
+        memory_warning.apply()
     result = verifier.verify(pack)
     result.update({"restoredAdditionalJars": installed, "downloadedAdditionalJars": downloaded,
                    "baseRestore": "import_upstream --restore-locked-files", "personalInstallationsTouched": False,

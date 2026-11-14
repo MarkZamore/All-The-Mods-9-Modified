@@ -13,6 +13,34 @@ spec.loader.exec_module(policy_tool)
 
 
 class ClientPolicyTests(unittest.TestCase):
+    def test_early_memory_patch_is_exact_reversible_and_refuses_drift(self):
+        memory = policy_tool.memory_warning_policy
+        original = (ROOT / memory.CONFIG).read_bytes()
+        author_lock = json.loads((ROOT / "tools/upstream-lock.json").read_bytes())
+        records = [*author_lock["overrides"], *author_lock["files"]]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            policy_file = root / "tools/client-policy/policy.json"
+            policy_file.parent.mkdir(parents=True)
+            policy_file.write_bytes((ROOT / "tools/client-policy/policy.json").read_bytes())
+            config = root / memory.CONFIG
+            config.parent.mkdir()
+            config.write_bytes(original)
+            warning = memory.load(root, records, policy_tool.target)
+            with self.assertRaisesRegex(ValueError, "advisory policy is missing"):
+                warning.verify()
+            warning.apply()
+            warning.verify()
+            self.assertEqual(config.read_bytes(), original.replace(b'"minimumClient": 8192', b'"minimumClient": 0'))
+            warning.apply()
+            warning.normalize()
+            self.assertEqual(config.read_bytes(), original)
+            changed = original.replace(b'"maximumClient": 14336', b'"maximumClient": 16000')
+            config.write_bytes(changed)
+            with self.assertRaisesRegex(ValueError, "review the author update"):
+                warning.apply()
+            self.assertEqual(config.read_bytes(), changed)
+
     def test_current_author_public_apis_and_owned_scripts(self):
         report = policy_tool.prepare(ROOT)
         self.assertEqual(report["status"], "PASS")

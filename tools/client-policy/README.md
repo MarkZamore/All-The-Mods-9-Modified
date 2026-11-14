@@ -1,17 +1,29 @@
-# Native upper-memory warning policy
+# Native memory recommendation policy
 
 `kubejs/client_scripts/lanmc_memory_warning_policy.js` uses the native Memory
 Settings config API to set only the loaded `disableWarnings=true` option before
 the initial game-menu panel check. It prevents the upper-memory panel when the
-launcher-selected heap exceeds the author's 14336 MB recommendation. It imposes
-no heap or rendering limit and never rewrites the player's memorysettings.json.
-Every other native option and the original author JSON bytes are preserved.
+launcher-selected heap exceeds the author's 14336 MB recommendation.
 
 Memory Settings 5.9's ClienModLoaderMixin checks this loaded flag at
 ClientModLoader.completeModLoading RETURN. KubeJS 2001 constructs its client
 manager and calls PROXY.init/reloadClientScripts before that loading-complete
-screen. The earlier low-heap Swing dialog and constructor warning log remain
-outside this client-stage policy. This is not a global suppression of log errors.
+screen.
+
+The existing pack restore applies the early client policy from `policy.json`
+after verifying the author overrides. Only
+`minimumClient.minimumClient` changes, from 8192 to 0. Memory Settings
+5.9 reads the integer without clamping and compares the heap to that
+recommendation before showing its early Swing dialog. The source lock keeps
+the original author bytes and the pack policy verifies the derived bytes.
+Launcher memory recommendations, the 32-bit Java check and Crash Assistant
+hardware-capacity warnings still operate. The file follows the pack's
+existing `config/**` ownership and conflict-backup behavior.
+
+When the author updates the config or Memory Settings, verify the new source
+against its lock, review the native check, and update the policy pins using
+the new author bytes. Preserve its other settings and keep the client script
+for the menu warning.
 
 After an author import retain this source-owned directory and run:
 

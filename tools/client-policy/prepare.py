@@ -8,7 +8,11 @@ import argparse
 import hashlib
 import json
 import struct
+import sys
 import zipfile
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import memory_warning_policy
 
 HERE = Path(__file__).resolve().parent
 
@@ -130,6 +134,13 @@ def prepare(pack, apply=False, templates_only=False):
     require(policy["schemaVersion"] == 1 and policy["kind"] == "pack-owned-native-client-policy", "Unsupported client policy")
     require(not templates_only or apply, "Templates-only preparation requires --apply")
     providers = [] if templates_only else verify_apis(pack, policy)
+    if not templates_only and "earlyClientWarning" in policy:
+        upstream = json.loads(target(pack, "tools/upstream-lock.json").read_bytes())
+        warning = memory_warning_policy.load(pack, [*upstream["files"], *upstream["overrides"]], target)
+        warning.verify()
+        if not any(row["class"] == "com/memorysettings/config/CommonConfiguration.class"
+                   and row["jarSha256"] == policy["earlyClientWarning"]["nativeJarSha256"] for row in providers):
+            raise ValueError("Unexpected native provider for the early Memory Settings advisory")
     restored = prepare_outputs(pack, tool, policy, apply)
     if templates_only:
         return {"status": "SOURCE_SCRIPTS_READY_NATIVE_API_NOT_CHECKED",
